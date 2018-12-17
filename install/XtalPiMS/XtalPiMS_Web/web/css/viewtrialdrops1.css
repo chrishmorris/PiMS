@@ -1,0 +1,39 @@
+/* suspected obsolete */
+.drops_search_results {
+    position: absolute; top: 81px; left: 0px; width: 420px;
+}
+
+.player_active {
+    border: 0pt none ; padding-right: 3px; padding-left: 3px; vertical-align: text-bottom;
+    
+}
+.player_inactive {
+    border: 0pt none ; padding-right: 3px; padding-left: 3px; vertical-align: text-bottom; display: none;
+}
+
+.slider_control {
+    border:0; padding-right: 1px; padding-left: 2px; vertical-align: text-bottom;
+}
+.slider_bg {
+    position:absolute;left:352px;background:url(../xtal/images/16x16/sliderbg.gif) 5px 0 repeat-x;height:16px;width:46px;
+}
+.image_list {
+    background-color: #CCCCCC; max-height:255px; overflow:auto;
+}
+.well_info {
+    position: absolute; top: 359px; left: 0px; width: 420px;overflow: hidden;
+}
+.well_info_table {
+    width:420px;
+    empty-cells:show;
+    border:0;
+}
+.image_content_div {
+    position: absolute; top: 81px; left: 420px; max-width: 800px;
+}
+.image_content1 {
+    position: relative; top:0px;left:0px;max-width: 800px;max-height:800px;overflow:auto;
+}
+.image_content2 {
+    position: relative; top:0px;left:0px;max-width: 800px;max-height:800px;
+}

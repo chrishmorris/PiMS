@@ -1,0 +1,203 @@
+<!-- 
+
+Builds the job to import images from Formulatrix.
+
+-->
+<project default="importer.jar" name="pims Formulatrix interface" basedir="."
+	xmlns:ora="antlib:net.sf.incanto"
+	>
+
+    <!-- Properties -->
+    <property file="build.properties"/>
+
+    <!-- log -->
+    <property name="log.dir" location="${basedir}/log" />
+
+    <!-- jars directory -->
+    <property name="importer.file" value="${basedir}/build/pims-Formulatrix-importer.jar" />
+    <property name="jars" value="../../current/jars" />
+
+
+    <!-- web -->
+	<property name="keystore" value="${basedir}/conf/.keystore" />
+
+    <!-- java -->
+    <property name="java.src" location="${basedir}/src" />
+    <property name="test.src" location="${basedir}/test" />
+    <property name="classes" location="${basedir}/bin" />
+    <property name="testClasses" location="${basedir}/testClasses" />
+    <property name="lib.path" location="${basedir}/lib" />
+    
+
+
+    <!-- ............................................................ -->
+    <!-- java classpaths.                                             -->
+    <!-- ............................................................ -->
+
+    <!-- First, the production classes -->
+    <path id="instrument.classpath">
+        <pathelement location="${classes}" />
+    </path>
+
+    <!-- add libraries -->
+    <path id="project.classpath">
+        <path refid="instrument.classpath" />
+
+    	<pathelement location="${basedir}/conf" />
+        <fileset dir="../../pims-model/lib" >
+           <include name="*.jar"/>
+        </fileset>
+        <fileset dir="../../jars/" >
+           <include name="pims-model.jar"/>
+        </fileset>
+
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <!-- add test classes -->
+    <path id="test.classpath">
+        <path refid="project.classpath" />
+        <pathelement location="${testClasses}" />
+    </path>
+    <property name="ant.reuse.loader" value="true" /> 
+    
+    
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+    <!-- Compile web application -->
+    <target name="compile" depends="clean">
+        
+        <!-- compile the command line tools -->
+        <javac srcdir="${basedir}/src" destdir="${classes}" target="1.6" source="1.6" debug="on" encoding="UTF-8"
+        >
+            <classpath refid="project.classpath" />
+        </javac>
+    </target>
+	
+   
+    
+    <!-- ============================================================ -->
+    <!-- Test case tasks.                                             -->
+    <!-- ============================================================ -->
+    <target name="compileTest" depends="compile">
+        <javac srcdir="${test.src}" destdir="${testClasses}" target="1.5" source="1.5" deprecation="false" debug="on" encoding="UTF-8">
+            <classpath refid="test.classpath" />
+        </javac>
+    </target>
+
+    <target name="test" depends="compileTest">
+        <emma enabled="true">
+            <instr instrpathref="instrument.classpath" mode="overwrite" metadatafile="${instr.dir}/metadata.emma" merge="true">
+                <!--
+                    Could have <filter value="${emma.filter}" />
+                -->
+            </instr>
+        </emma>
+        <junit haltonfailure="true" haltonerror="true" fork="true" dir="${basedir}" forkmode="once">
+            <jvmarg value="-server" />
+            <jvmarg value="-enableassertions" />
+            <jvmarg value="-Xms512m" />
+            <jvmarg value="-Xmx512m" />
+            <jvmarg value="-Demma.coverage.out.file=${instr.dir}/coverage.emma" />
+            <jvmarg value="-Demma.coverage.out.merge=false" />
+            <classpath refid="test.classpath" />
+            <formatter type="brief" usefile="false" />
+            <test name="org.pimslims.AllToolsTests" />
+            <sysproperty key="TestingDataPath" value="${data.src}"/>
+        </junit>
+        
+    </target>
+
+   
+	
+     <target name="importer.jar">
+     	<jar jarfile="${importer.file}" basedir="${classes}" excludes="META-INF/*.SF" 
+     		filesetmanifest="mergewithoutmain"
+     		> 
+        
+            
+
+            <zipfileset src="${basedir}\lib\commons-io-1.4-ivy.jar" />
+            <zipfileset src="${basedir}\lib\jtds-1.2.5.jar" />
+            <zipfileset src="${basedir}\lib\xtalPiMS_API.jar" />
+            <zipfileset src="${basedir}\lib\xtalPiMS_PiMSImpl.jar" />
+            <zipfileset src="${basedir}\lib\pims-model.jar" />
+            
+            <!--  Really? Five JARs to spit out some JSON? -->
+            <zipfileset src="${basedir}\lib\commons-beanutils-1.8.3.jar" />
+            <zipfileset src="${basedir}\lib\commons-logging-1.1.1-ivy.jar" />
+            <zipfileset src="${basedir}\lib\commons-lang-2.5.jar" />
+            <zipfileset src="${basedir}\lib\json-lib-2.2.1-jdk15.jar" />
+            <zipfileset src="${basedir}\lib\ezmorph-1.0.6-ivy.jar" />
+            		
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\antlr-2.7.6.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\asm-3.1.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\c3p0-0.9.1.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\cglib-2.2.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\commons-collections-3.2.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\dom4j-1.6.1.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\ehcache-core-2.4.3.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\hibernate-c3p0-3.6.8.Final.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\hibernate-commons-annotations-3.2.0.Final.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\hibernate-core-3.6.8.Final.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\hibernate-entitymanager-3.6.8.Final.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\hibernate-jpa-2.0-api-1.0.1.Final.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\javassist-3.12.0.GA.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\jta-1.1.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\postgresql-9.1-901.jdbc3.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\slf4j-api-1.6.1.jar" />
+            <zipfileset src="${basedir}\..\..\pims-model\lib\runtime\slf4j-jdk14-1.6.1.jar" />
+            <zipfileset src="${basedir}\..\..\XtalPiMS\lib\log4j-1.2.11.jar" />
+<!--            <zipfileset src="${basedir}/lib/build/junit-3.8.1.jar" />     		
+    --> 		
+     		<!-- These ones may be needed to run under Java 1.5 
+            <zipfileset src="${basedir}\lib\jaxp-api.jar" />
+            <zipfileset src="${basedir}\lib\jaxp-ri.jar" />
+            <zipfileset src="${basedir}\lib\jaxb-api.jar" />
+            <zipfileset src="${basedir}\lib\activation.jar" />
+            <zipfileset src="${basedir}\lib\jaxb-impl.jar" /> -->
+     		
+     	    <manifest>
+     	      <attribute name="Main-Class"
+     	            value="org.pimslims.formulatrix.command.OuluImporter"/>
+     	    </manifest>
+
+        </jar>
+        
+   	  <!-- <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../jars/pims-Formulatrix-importer.jar" /> -->
+        
+    </target>
+    
+    <target name="oradump">   
+        <ora:expdp 
+            failOnError="true" logon="${db.username}/${db.passwordd}"          
+            >
+            <![CDATA[
+            schemas=pimsadmin
+            directory=data_pump_dir
+            dumpfile=pims-database-withrefdata.ora.dmp
+         ]]>
+        </ora:expdp>
+    </target>
+    
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+    <!-- Clean temp directories -->
+    <target name="clean">
+        <delete dir="${classes}" />
+        <mkdir dir="${classes}" />
+        <delete dir="${testClasses}" />
+        <mkdir dir="${testClasses}" />
+    </target>
+	
+    <target name="cleanLog" description="Clean log dirrectory.">
+        <delete dir="${log.dir}" />
+        <mkdir dir="${log.dir}" />
+    </target>
+
+    <!-- TODO commit, deploy, install conf/Properties  -->
+</project>

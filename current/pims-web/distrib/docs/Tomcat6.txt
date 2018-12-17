@@ -1,0 +1,73 @@
+RUNNING PiMS ON TOMCAT 6
+
+You can stop Tomcat by entering:
+    /etc/init.d/tomcat stop
+This usually works, but not always. To check whether it has worked:
+    ps ax | grep tomcat
+This should list only one process, running the command itself.
+If it lists another, that is the tomcat process. You should 
+carefully copy its process number into a "kill -9" command.
+
+You can start tomcat by entering:
+    /etc/init.d/tomcat start
+    
+We do not recommend using Tomcat's web interface to deploy PiMS.
+For Tomcat6, we recommend making a pims.xml file 
+that points to the war file - see README.txt.
+    
+
+The traditional configuration of Tomcat put all the components in a single directory,
+and put the location of that directory in the environment variable CATALINA_HOME.
+These notes are written on that assumption. However, some distributions now use 
+a lot of soft links. Here are some directories that parts of the installation may be in:
+    /srv/tomcat6
+    /var/cache/tomcat6
+    /etc/tomcat6
+
+It is better to set autoDeploy="false" in the Host element in:
+    $CATALINA_HOME/conf/server.xml
+This avoids unexpected behaviour when the machine is rebooted.
+
+The tools that PIMS uses can fill up Java's "Permanent Generation" of memory.
+To prevent this, before starting Tomcat specify:
+
+export JAVA_OPTS="-Xmx1024m -enableassertions -server -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC
+-XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true"
+
+Alternatively, you can edit this into tomcat6.conf. This file is usually at /etc/tomcat6/tomcat6.conf.
+
+Tomcat has a memory leak where large JSP page requests can fill up memory. 
+To avoid this, create $CATALINA_HOME/bin/setenv.sh and set:
+
+export CATALINA_OPTS="$CATALINA_OPTS -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true"
+
+or on Windows, edit bin\setenv.bat and set:
+
+set CATALINA_OPTS=%CATALINA_OPTS% -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+
+- Thanks to Atlassian for documenting this workaround
+http://www.atlassian.com/
+
+When you install a new release of PiMS, Tomcat keeps files from
+the previous release. You also need to:
+    rm -rf $CATALINA_HOME/webapps/pims
+There is also a work directory that must be deleted, e.g.:
+    rm -rf $CATALINA_HOME/work/Catalina/localhost/pims
+or in some distros:
+    /var/cache/tomcat6/Catalina/localhost/pims/ 
+    
+Tomcat nicely rolls its own log files, but messages from PiMS all go into the file
+    ${CATALINA_HOME}/logs/catalina.out
+    
+ The simplest way to ensure this rolls is to add to your crontab something like: 
+00 03 * * * cp /usr/local/apache-tomcat-6.0.18/logs/catalina.out /usr/local/apache-tomcat-6.0.18/logs/console-`date +%Y-%m-%d`.out
+
+You can speed up the page load for your users by editing conf/server.xml
+to replace the <Connector> element with:
+    <Connector port="8080" protocol="HTTP/1.1" 
+               connectionTimeout="20000" 
+               compressableMimeType="text/html,text/xml,text/plain,text/javascript,text/css,application/javascript,application/x-javascript"
+               compression="2048"
+               noCompressionUserAgents="gozilla, traviata"
+               redirectPort="8443" />
+    

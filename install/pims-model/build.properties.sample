@@ -1,0 +1,38 @@
+<!-- ================================================== -->
+<!-- For installing & testing a new data model          -->
+<!-- Database configuration
+
+Note that you must have lines like this in your pg_hba.conf:
+
+host    all     pimsadmin   127.0.0.1/32          trust
+host    all     pimsadmin   ::1/128               trust
+-->
+<!-- ================================================== -->
+dbname                 = test
+dbuserid             = pimsadmin
+dbpasswd             =  
+# cannot be used for postgresql, since ant can't do "expect"
+
+#postgres jar version
+postgresjar = postgresql-9.1-901.jdbc3.jar
+
+<!-- ================================================== -->
+<!-- For publishing new jar & install.sql               -->
+<!-- Revision number configuration                      -->
+<!-- ================================================== -->
+author                = morris
+pimsrelease            = 4_4
+
+<!-- ================================================== -->
+<!-- For creating new database users                    -->
+<!-- Database pims users                                -->
+<!-- ================================================== -->
+dbuser-view         = pimsview
+dbuser-update         = pimsupdate
+dbuser-admin         = pimsadmin
+
+# Currently required if actually using java1.8
+build.compiler=javac1.7
+
+# To use Eclipse compiler, this does not seem to work:
+# could build.compiler=org.eclipse.jdt.core.JDTCompilerAdapter

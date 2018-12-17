@@ -1,0 +1,12 @@
+Note that the userid pimsadmin must have these permissions:
+
+creat user pimsadmin identified by *password*;
+creat user pimsupdate identified by *password*;
+creat user pimsview identified by *password*;
+GRANT CREATE SESSION TO PIMSADMIN;
+GRANT CREATE sequence TO PIMSADMIN;
+GRANT UNLIMITED TABLESPACE TO PIMSADMIN;
+GRANT CREATE TABLE TO PIMSADMIN;
+GRANT CREATE PUBLIC SYNONYM TO PIMSADMIN;
+GRANT DROP PUBLIC SYNONYM TO PIMSADMIN;
+GRANT READ, WRITE ON DIRECTORY data_pump_dir to PIMSADMIN;

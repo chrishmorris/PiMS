@@ -1,0 +1,17 @@
+<!-- CS Concentration protocol xml as flat file -->
+<protocol name="CS Concentration" objective="Concentration of Target Protein" creationDate="23-05-08" remarks="Based on Lab activities requirements from OPPF" details="Purification of Target Protein">
+ <experimentType>Concentration</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Concentrated protein" name="Concentrated protein" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="PCT Result" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Initial Concentration" parameterType="String" />
+  <parameterDefinition id="3" name="Final Concentration" parameterType="String" />
+ </parameterDefinitions>
+
+</protocol>

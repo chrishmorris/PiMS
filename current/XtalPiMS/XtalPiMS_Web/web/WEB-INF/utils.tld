@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+    
+  <description>Utility functions</description>
+  <display-name>Utility functions</display-name>
+  <tlib-version>0.1</tlib-version>
+  <short-name>utils</short-name>
+<!--
+  <uri>http://java.sun.com/jsp/jstl/functions</uri>
+-->
+<!-- obsolete
+  <tag>
+    <name>option</name>
+    <tag-class>org.pimslims.servlet.tag.Option</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>label</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>selectedValue</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag> -->
+
+  <function>
+    <description>Makes a token for validating a submission to prevent CSRF</description>
+    <name>csrfToken</name>
+    <function-class>org.pimslims.servlet.tag.Utils</function-class>
+    <function-signature>java.lang.String csrfToken(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
+    <example>
+      &lt;c:out value="${utils:escapeJS(theString)}" />
+    </example>
+  </function>
+  
+  <function>
+    <description>Escapes a string for inclusion in Javascript</description>
+    <name>escapeJS</name>
+    <function-class>org.pimslims.servlet.tag.Utils</function-class>
+    <function-signature>java.lang.String escapeJS(java.lang.String)</function-signature>
+    <example>
+      &lt;c:out value="${utils:escapeJS(theString)}" />
+    </example>
+  </function>
+  
+  
+  
+  <function>
+    <description>Changes a multi-word string in java-like "camel case" to normal words with spaces</description>
+    <name>deCamelCase</name>
+    <function-class>org.pimslims.servlet.tag.Utils</function-class>
+    <function-signature>java.lang.String deCamelCase(java.lang.String)</function-signature>
+    <example>
+      alias="${utils:deCamelCase(element.name)}"
+    </example>
+  </function>
+
+  <function>
+    <description>Replaces a part of a string with another string. Equivalent to java.lang.String.replace(target, replacement)</description>
+    <name>replace</name>
+    <function-class>org.pimslims.servlet.tag.Utils</function-class>
+    <function-signature>java.lang.String replace(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+    <example>
+      &lt;c:out value="${utils:replace(theString,target,replacement)}" />
+    </example>
+  </function>
+
+  <function>
+    <description>Truncates a string if its length is greater than the specified value. 
+                 The last three characters of a truncated string will be "..." - truncating
+                 at 50 will give you 47 characters plus "...". If you specify a maximum 
+                 lenght of 3 or less, "..." will be returned.
+    </description>
+    <name>truncate</name>
+    <function-class>org.pimslims.servlet.tag.Utils</function-class>
+    <function-signature>java.lang.String truncate(java.lang.String,int)</function-signature>
+    <example>
+      &lt;c:out value="${utils:truncate(theString,maxLength)}" />
+    </example>
+  </function>
+
+
+</taglib>

@@ -1,0 +1,33 @@
+MEASURING THE PERFORMANCE OF PiMS
+
+If the performance of your PiMS installation is unsatisfactory, then you may wish to run some of these tests to work out what exactly is slow. 
+The components involved are: your client machine, the network, the database, and Tomcat.
+
+* Visit:
+     http://pimstrak1.dl.ac.uk:8080/demo/View/org.pimslims.model.experiment.ExperimentGroup:87410 
+(username "demo", password "demo")
+It should take around takes 6 seconds to render after a Control-F5. 
+If that is what you get, the problem is not your client machine.
+
+* Visit a plate experiment on your PiMS. How long does that take? 
+If it is much longer, then there is a problem. 
+
+* Visit a help page on your PiMS. If that is slow, the problem is not the database.
+
+
+* SSH to your server, and run a script like the one below. You will need to replace the number 85294 with the dbid for the plate experiment you visited before,
+and replace the username and password.
+
+  curl -c login.curl 'http://localhost:8080/pims/Login' 1>/dev/null; sleep 1
+  curl   --location  -b login.curl -e'http://localhost:8080/pims/Login' \
+     -d'j_username=demo&j_password=demo' \
+     'http://localhost:8080/pims/j_security_check' 1>/dev/null
+  date +%s
+  curl -b login.curl 'http://localhost:8080/pims/View/org.pimslims.model.experiment.ExperimentGroup:85294' 1>/dev/null 
+  date +%s
+
+If this is slow, the problem is not the network.
+
+
+If you still have a problem, then please send the results of these tests to pims-defects@dl.ac.uk
+

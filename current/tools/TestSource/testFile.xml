@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE target SYSTEM "target.dtd">
+<targets>
+<target>
+ <ID>XMTB00002</ID>
+ <exprc>HASH</exprc>
+ <expry>HASH</expry>
+ <xtalc>HASH</xtalc>
+ <project id='4'>
+  <experiment>
+    <clond></clond>
+    <exprc></exprc>
+    <exprv>pETM-11</exprv>
+    <exprs></exprs>
+    <xtalc></xtalc>
+    <expry></expry>
+  </experiment>
+  <status>
+    <contact>?</contact>
+    <task>Cloned</task>
+    <labID>Box 3, F3</labID>
+    <lab>EMBL Hamburg</lab>
+    <funding-project></funding-project>
+    <url></url>
+    <PI>Matthias Wilmanns</PI>
+    <remarks></remarks>
+  </status>
+  <access>Public</access>
+  <description>? (41-296)</description>
+ </project>
+ <orf id='1'>
+  <specie>Mycobacterium tuberculosis</specie>
+  <taxoid></taxoid>
+  <sequence>(protein sequence)</sequence>
+  <name>DNA gyrase subunit B </name>
+  <dbaccnum>?</dbaccnum>
+  <dbname>Swissprot</dbname>
+ </orf>
+ <exprs>HASH</exprs>
+ <project id='3'>
+  <experiment>
+    <clond></clond>
+    <exprc></exprc>
+    <exprv>pETM-11</exprv>
+    <exprs>Rosetta(DE3)pLysS</exprs>
+    <xtalc></xtalc>
+    <expry>20mg/ml</expry>
+  </experiment>
+  <status>
+    <contact>?</contact>
+    <task>Purified</task>
+    <labID>Box 3, F2</labID>
+    <lab>EMBL Hamburg</lab>
+    <funding-project></funding-project>
+    <url></url>
+    <PI>Matthias Wilmanns</PI>
+    <remarks></remarks>
+  </status>
+  <access>Public</access>
+  <description>? (1-468)</description>
+ </project>
+ <exprv>HASH</exprv>
+ <project id='1'>
+  <experiment>
+    <clond></clond>
+    <exprc></exprc>
+    <exprv>pET151d</exprv>
+    <exprs>Rosetta(DE3)pLysS</exprs>
+    <xtalc></xtalc>
+    <expry>20mg/ml</expry>
+  </experiment>
+  <status>
+    <contact>?</contact>
+    <task>Purified</task>
+    <labID>Box 3, E9</labID>
+    <lab>EMBL Hamburg</lab>
+    <funding-project></funding-project>
+    <url></url>
+    <PI>Matthias Wilmanns</PI>
+    <remarks></remarks>
+  </status>
+  <access>Public</access>
+  <description>? (1-714)</description>
+ </project>
+ <project id='5'>
+  <experiment>
+    <clond></clond>
+    <exprc></exprc>
+    <exprv>pETM-11</exprv>
+    <exprs>Rosetta(DE3)pLysS</exprs>
+    <xtalc></xtalc>
+    <expry>20mg/ml</expry>
+  </experiment>
+  <status>
+    <contact>?</contact>
+    <task>Purified</task>
+    <labID>Box 3, F4</labID>
+    <lab>EMBL Hamburg</lab>
+    <funding-project></funding-project>
+    <url></url>
+    <PI>Matthias Wilmanns</PI>
+    <remarks></remarks>
+  </status>
+  <access>Public</access>
+  <description>? (41-468)</description>
+ </project>
+ <description>Rv0005</description>
+ <project id='2'>
+  <experiment>
+    <clond></clond>
+    <exprc></exprc>
+    <exprv>pETM-11</exprv>
+    <exprs>Rosetta(DE3)pLysS</exprs>
+    <xtalc></xtalc>
+    <expry>20mg/ml</expry>
+  </experiment>
+  <status>
+    <contact>?</contact>
+    <task>Purified</task>
+    <labID>Box 3, F1</labID>
+    <lab>EMBL Hamburg</lab>
+    <funding-project></funding-project>
+    <url></url>
+    <PI>Matthias Wilmanns</PI>
+    <remarks></remarks>
+  </status>
+  <access>Public</access>
+  <description>? (1-296)</description>
+ </project>
+ <clond>HASH</clond>
+ <project id='6'>
+  <experiment>
+    <clond></clond>
+    <exprc></exprc>
+    <exprv>pET16b</exprv>
+    <exprs>B121(DE3)</exprs>
+    <xtalc></xtalc>
+    <expry>50mg/ml</expry>
+  </experiment>
+  <status>
+    <contact>?</contact>
+    <task>Purified</task>
+    <labID>Box 3, F5</labID>
+    <lab>EMBL Hamburg</lab>
+    <funding-project></funding-project>
+    <url></url>
+    <PI>Matthias Wilmanns</PI>
+    <remarks></remarks>
+  </status>
+  <access>Public</access>
+  <description>? (61-294)</description>
+ </project>
+ <workpackage>EMBL2 non MPI-IB targets</workpackage>
+ <annotationUrl>(gene sequence)</annotationUrl>
+</target>
+</targets>

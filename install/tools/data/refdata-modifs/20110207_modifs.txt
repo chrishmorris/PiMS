@@ -1,0 +1,13 @@
+/tools/data/Default-protocols/PiMS_Synthetic_gene.xml
+Changed:
+Parameter definitions:
+Modified:
+OLD:  <parameterDefinition id="3" name="Optimized for expression in:" label="Expression host the sequence has been optimized for" parameterType="String" isMandatory="false" />
+New:  <parameterDefinition id="4" name="Optimized for expression in:" label="Expression host the sequence has been optimized for" parameterType="String" isMandatory="false" />
+
+Added:
+    <parameterDefinition id="3" name="Vector resistances" label="Vector's antibiotic resistance markers" parameterType="String" isMandatory="false" />
+
+/tools/data/Default-protocols/
+Removed:
+PiMS_Test_Diffraction.xml

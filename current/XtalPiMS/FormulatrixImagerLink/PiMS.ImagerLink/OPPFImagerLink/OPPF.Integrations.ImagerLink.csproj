@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCB66153-CE22-4D73-8308-3BA330F9709F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>OPPF.Integrations.ImagerLink</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OPPF.Integrations.ImagerLink</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/OPPFImagerLink/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Formulatrix.Common, Version=2.0.5.35, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ImagerLink\v2.2.0.86\bin\Formulatrix.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Formulatrix.Integrations.ImagerLink, Version=2.0.2.40, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ImagerLink\v2.2.0.86\bin\Formulatrix.Integrations.ImagerLink.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net-1.2.10\bin\net\2.0\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\ImageProcessor2ProviderNew.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\PlateInfoProviderNew.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\PlateInfoCacheNew.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\DummyPlateInfoCache.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\DummyPlateInfoProvider.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\CapturePoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\CapturePointList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\CaptureProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\CaptureProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\CaptureProvider203.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\CaptureInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\DummyImageProcessor2Provider.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\ImageProcessor2.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\ImageProcessor2Provider.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\FocalPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\ImageInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\ImageProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\ImageProcessorProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Imaging\Processing\ProcessingInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\PlateInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\PlateInfoCache.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\PlateInfoProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\PlateType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Property.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Robot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\ImagingTaskProvider204New.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\ImagingTaskProviderNew.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\DummyImagingTaskProvider.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\DummyImagingTaskProvider204.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\ImagingTaskProvider204.cs" />
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\ImagingTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\ImagingTaskProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Integrations\ImagerLink\Scheduling\ScheduleSyncPoint.cs" />
+    <Compile Include="OPPF\Proxies2\WSPlate.cs" />
+    <Compile Include="OPPF\Proxies\WSPlate.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Utilities\Caching\Cache.cs" />
+    <Compile Include="OPPF\Utilities\Caching\CacheBacker.cs" />
+    <Compile Include="OPPF\Utilities\Caching\CacheItemExpiredEventArgs.cs" />
+    <Compile Include="OPPF\Utilities\Caching\FetchItemEventArgs.cs" />
+    <Compile Include="OPPF\Utilities\Robot2Utils.cs" />
+    <Compile Include="OPPF\Utilities\FileUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Utilities\Imaging\ImageUtils.cs" />
+    <Compile Include="OPPF\Utilities\Imaging\PropertyItemUtils.cs" />
+    <Compile Include="OPPF\Utilities\OPPFConfigXML.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Utilities\RobotUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OPPF\Utilities\WSPlateFactory.cs" />
+    <Compile Include="OPPF\XML\Config.cs">
+      <DependentUpon>Config.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OPPF\XML\ImageInfo.cs">
+      <DependentUpon>ImageInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Khalid%27s Commentary.txt" />
+    <Content Include="OPPFImagerLinkConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OPPFImagingConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OPPFlogger.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OPPFImagingConfig.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="OPPF\Utilities\TraceLog4NetConfig.xml" />
+    <None Include="OPPFImagerLinkConfig.xml.sample" />
+    <None Include="OPPFImagingConfig.xsx">
+      <DependentUpon>OPPFImagingConfig.xsd</DependentUpon>
+    </None>
+    <None Include="OPPF\XML\ImageInfo.xsx">
+      <DependentUpon>ImageInfo.xsd</DependentUpon>
+    </None>
+    <None Include="OPPF\XML\Config.xsx">
+      <DependentUpon>Config.xsd</DependentUpon>
+    </None>
+    <Content Include="OPPF\Proxies2\RegenerateWSPlate.txt" />
+    <Content Include="OPPF\Proxies\RegenerateWSPlate.txt" />
+    <Content Include="OPPF\XML\Config.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OPPF\XML\ImageInfo.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OPPF\XML\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

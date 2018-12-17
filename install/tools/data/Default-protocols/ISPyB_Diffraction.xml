@@ -1,0 +1,131 @@
+<!-- PiMS Diffraction Test protocol xml as flat file -->
+<protocol name="ISPyB Diffraction" 
+objective="Save in PiMS details of data collected at beamline" 
+creationDate="03-10-11" remarks="Default set of protocols for PiMS" 
+details="The details of these experiments will be filled in automatically, using the ISPyB web services. The following details are currently not used: imageDirectory, imagePrefix, imageSuffix, fileTemplate xtalSnapshotFullPath1, xtalSnapshotFullPath2, xtalSnapshotFullPath3, xtalSnapshotFullPath4" 
+>
+ <experimentType>Diffraction</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Mounted Crystal" />
+</inputSamples>
+
+ 
+<parameterDefinitions> 
+<parameterDefinition   name="Processing Level"   parameterType="String"   defaultValue="Collect"    isMandatory="false"       
+possibleValues="Collect;Collect and Process"
+   />
+<parameterDefinition   name="Anneal?"   parameterType="Boolean"   defaultValue="no"    isMandatory="false"       />
+<parameterDefinition   name="Anomalous Scatterer"   parameterType="String"   defaultValue="[NONE]"    isMandatory="false"       
+possibleValues="[NONE];Ar;Au;Ba;Br;Ca;Cd;Co;Cu;Dy;Eu;Fe;Gd;Hg;Ho;I;Ir;Kr;Mg;Mn;Na;Ni;Os;P;Pb;Pt;S;Se;Sm;Sr;Ta;Tb;Te;U;W;Xe;Y;Zn"
+   />
+<parameterDefinition   name="Energy Scan: Temperature"   parameterType="Float"     displayUnit="K"   minValue="0"   
+   isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Exposure Time"   parameterType="Float"     displayUnit="s"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: End Energy"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Transmission Factor"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Synchrotron Current"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Peak F Prime"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Peakf Double Prime"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Inflection Energy"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Inflection F Prime"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Inflection F Double Prime"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Xray Dose"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Element"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Fluorescence Detector"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Peak Energy"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Session: Comments"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Session: Session Id"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Session: Site"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Session: Beam Line Name"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Session: Beam Line Operator"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Session: Nb Shifts"   parameterType="Float"    isMandatory="false"   
+    />
+<parameterDefinition   name="Session: Scheduled"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Session: Source Type"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: Morphology"   parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: A"   parameterType="Float"     displayUnit="A"   minValue="0"   
+   isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: Alpha"   label="Unit cell angle" 
+  parameterType="Float"     displayUnit="degrees"    isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: B"   label="Unit cell dimension" 
+  parameterType="Float"     displayUnit="A"   minValue="0"   
+   isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: Beta"   label="Unit cell angle" 
+  parameterType="Float"     displayUnit="degrees"    isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: C"   label="Unit cell dimension" 
+  parameterType="Float"     displayUnit="A"   minValue="0"   
+   isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: Color"   label="colour of crystal" 
+  parameterType="String"    isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: Resolution"   parameterType="Float"     displayUnit="A"    isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: Gamma"   label="Unit cell angle" 
+  parameterType="Float"     displayUnit="degrees"    isMandatory="false"   
+    />
+<parameterDefinition   name="Crystal Form: Spacegroup"   label="hypothesized space group of these samples" 
+  parameterType="String"   defaultValue="C2"    isMandatory="false"   
+    
+possibleValues="Undefined;C2;C222;C2221;F222;F23;F4132;F432;I212121;I213;I222;I23;I4;I41;I4122;I422;I432;P1;P2;P21;P21212;P212121;P213;P222;P2221;P23;P3;P31;P3112;P312;P3121;P32;P321;P3212;P3221;P4;P41;P41212;P4122;P4132;P42;P4212;P4222;P4232;P43;P432;P43212;P4322;P4332;P6;P61;P6122;P62;P622;P6222;P63;P6322;P64;P6422;P65;P6522;R3;R32"
+   />
+<parameterDefinition   name="Data Collection: Experiment Type"   parameterType="String"   defaultValue="OSC"    isMandatory="false"       
+possibleValues="MAD;SAD;MR;Ligand binding;Refinement;OSC;SAD - Inverse Beam;MAD - Inverse Beam"
+   />
+<parameterDefinition   name="Data Collection: Resolution"   parameterType="Float"     displayUnit="A"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Comments"   parameterType="String"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Phi Start"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Wavelength"   parameterType="Float"     displayUnit="A"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Data Collection Number"   parameterType="Int"   minValue="0"    
+   isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Run Status"   parameterType="String"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Rotation Axis"   parameterType="String"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Kappa Start"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Omega Start"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Axis End"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Axis Range"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Axis Start"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Overlap"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Number Of Images"   parameterType="Int"   minValue="0"    
+   isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Start Image Number"   parameterType="Int"   minValue="0"    
+   isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Number Of Passes"   parameterType="Int"   minValue="1"    
+   isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Exposure Time"   parameterType="Float"     displayUnit="s"   minValue="0"       isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Detector Distance"   parameterType="Float"     displayUnit="mm"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Detector2 Theta"   parameterType="Float"     displayUnit="degrees"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: xBeam"   parameterType="Float"     displayUnit="um"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: yBeam"   parameterType="Float"     displayUnit="um"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Beam Size At Sample X"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Beam Size At Sample X"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Beam Size At Sample Y"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Beam Size Horizontal"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Beam Size Vertical"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Transmission"   parameterType="Float"     displayUnit="%"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Synchrotron Mode"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Centering Method"   parameterType="String"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Machine Message"   parameterType="String"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Printable For Report"   parameterType="Boolean"   defaultValue="yes"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Collection Temperature"   parameterType="Float"     displayUnit="K"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: X Beam"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Y Beam"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Energy Scan: Start Energy"   parameterType="Float"    isMandatory="false"       />
+<parameterDefinition   name="Data Collection: Crystal Class"   parameterType="String"    isMandatory="false"       />
+</parameterDefinitions>
+
+</protocol>
+

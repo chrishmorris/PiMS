@@ -1,0 +1,7 @@
+Data
+Reagents.csv
+Updated: RefSamples for KOD HiFi DNA Polymerase
+Old: KOD HiFi DNA Polymerase,includes buffers & dNTPs,Enzyme -polymerase,PCR,71085,Novagen,http://www.merckbiosciences.co.uk/product/71085
+New: KOD DNA Polymerase,Formerly KOD HiFi DNA Polymerase -includes buffers & dNTPs,Enzyme -polymerase,PCR,71085,Novagen,http://www.merckbiosciences.co.uk/product/71085
+Old: KOD HiFi DNA Polymerase,includes buffers & dNTPs,Enzyme -polymerase,PCR,71087,Novagen,http://www.merckbiosciences.co.uk/product/71087
+New: KOD XL DNA Polymerase,includes buffers & dNTPs,Enzyme -polymerase,PCR,71087,Novagen,http://www.merckbiosciences.co.uk/product/71087

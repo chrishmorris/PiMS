@@ -1,0 +1,59 @@
+ID   Q762B6_HUMAN            Unreviewed;       274 AA.
+AC   Q762B6;
+DT   05-JUL-2004, integrated into UniProtKB/TrEMBL.
+DT   05-JUL-2004, sequence version 1.
+DT   22-JAN-2014, entry version 63.
+DE   SubName: Full=ATP7A protein;
+GN   Name=ATP7A;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE.
+RA   Ueta A., Ito T., Sumi S., Ohkubo Y., Yamazaki D., Hironou T., Ban K.,
+RA   Togari H.;
+RT   "Novel mutation of ATP7A (Menkes disease), (819-820 del TA in exon 4,
+RT   which cause frameshift and termination codon).";
+RL   Submitted (AUG-2003) to the EMBL/GenBank/DDBJ databases.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AB117973; BAC82353.1; -; mRNA.
+DR   RefSeq; NP_000043.4; NM_000052.6.
+DR   RefSeq; NP_001269153.1; NM_001282224.1.
+DR   UniGene; Hs.496414; -.
+DR   UniGene; Hs.733232; -.
+DR   ProteinModelPortal; Q762B6; -.
+DR   SMR; Q762B6; 1-272.
+DR   PRIDE; Q762B6; -.
+DR   DNASU; 538; -.
+DR   GeneID; 538; -.
+DR   KEGG; hsa:538; -.
+DR   CTD; 538; -.
+DR   PharmGKB; PA72; -.
+DR   HOVERGEN; HBG065948; -.
+DR   KO; K17686; -.
+DR   ChiTaRS; ATP7A; human.
+DR   GenomeRNAi; 538; -.
+DR   NextBio; 2231; -.
+DR   GO; GO:0005507; F:copper ion binding; IEA:InterPro.
+DR   GO; GO:0006825; P:copper ion transport; IEA:InterPro.
+DR   InterPro; IPR017969; Heavy-metal-associated_CS.
+DR   InterPro; IPR006121; HeavyMe-assoc_HMA.
+DR   InterPro; IPR006122; HMA_Cu_ion-bd.
+DR   Pfam; PF00403; HMA; 2.
+DR   SUPFAM; SSF55008; SSF55008; 2.
+DR   TIGRFAMs; TIGR00003; TIGR00003; 2.
+DR   PROSITE; PS01047; HMA_1; 2.
+DR   PROSITE; PS50846; HMA_2; 2.
+PE   2: Evidence at transcript level;
+SQ   SEQUENCE   274 AA;  30124 MW;  1233AE33CD302122 CRC64;
+     MDPSMGVNSV TISVEGMTCN SCVWTIEQQI GKVNGVHHIK VSLEEKNATI IYDPKLQTPK
+     TLQEAIDDMG FDAVIHNPDP LPVLTDTLFL TVTASLTLPW DHIQSTLLKT KGVTDIKIYP
+     QKRTVAVTII PSIVNANQIK ELVPELSLDT GTLEKKSGAC EDHSMAQAGE VVLKMKVEGM
+     TCHSCTSTIE GKIGKLQGVQ RIKVSLDNQE ATIVYQPHLI SVEEMKKQIE AMGFPAFVKK
+     QPKYLKLGAI DVERLKNTPV KSSEGSQQRS PSYQ
+//

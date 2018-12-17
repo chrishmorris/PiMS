@@ -1,0 +1,33 @@
+<!-- Generic Culture protocol xml as flat file 
+
+must_be_one_of(Float,Int,String,Boolean,DateTime,Interval)
+
+-->
+<protocol name="Generic fermenter culture" objective="Recording fermentation batches" creationDate="02-06-08" remarks="Used by specific UI for recording Leeds fermentation batches"  >
+ <experimentType>Fermenter culture</experimentType>
+ 
+			<outputSample name="Tube 1" amount="0.05" displayUnit="g" unit="kg" refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+			<outputSample name="Tube 2" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+			<outputSample name="Tube 3" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+			<outputSample name="Tube 4" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+  		<outputSample name="Tube 5" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+	  	<outputSample name="Tube 6" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+		  <outputSample name="Tube 7" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" /> 
+		  <outputSample name="Tube 8" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+		  <outputSample name="Tube 9" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+		  <outputSample name="Tube 10" amount="0.05" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+
+ <parameterDefinitions>
+  		<parameterDefinition id="1" name="Batch" parameterType="String" defaultValue=""/>
+  		<parameterDefinition id="2" name="Culture Type" parameterType="String"  possibleValues="Induction Batch; AutoInduction Batch; Fed Batch; Optimization" defaultValue="AutoInduction Batch"/>
+   		<parameterDefinition id="3" name="Culture Volume" parameterType="Int" defaultValue="10"/>
+ </parameterDefinitions>
+	<inputSamples>
+      <inputSample sampleCatName="Plasmid" amount="0" unit="L" displayUnit="uL" refSample="Construct" name="Construct" sampleCatNamingSys="default" />
+      <inputSample sampleCatName="Antibiotic" amount="0" unit="L" displayUnit="uL" refSample="Antibiotic" name="Antibiotic A" sampleCatNamingSys="default" />
+      <inputSample sampleCatName="Antibiotic" amount="0" unit="L" displayUnit="uL" refSample="Antibiotic" name="Antibiotic B" sampleCatNamingSys="default" />
+      <inputSample sampleCatName="Antibiotic" amount="0" unit="L" displayUnit="uL" refSample="Antibiotic" name="Antibiotic C" sampleCatNamingSys="default" />
+      <inputSample sampleCatName="Transformed cells" amount="0" unit="L" displayUnit="mL" refSample="Cells" name="Culture" sampleCatNamingSys="default" />
+	</inputSamples>
+	
+</protocol>

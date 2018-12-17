@@ -1,0 +1,33 @@
+# properties for the data model
+# Copy this to a file called "Properties".
+# You are advised to set a password.
+
+#Copy "Properties" to WebConent/WEB-INF/conf, if you want to use it with Tomcat.
+
+db.className = org.postgresql.Driver
+db.url = jdbc:postgresql://localhost/pims
+db.name = pims
+db.username = pimsupdate
+db.password = 
+
+
+# uploadDirectory for Windows:
+#uploadDirectory = C:\\pimsUploads
+
+# uploadDirectory for Linux:
+uploadDirectory = $CATALINA_HOME/pimsUploads
+
+# HTTP proxy, if you need one:
+#http.proxyHost = 
+#http.proxyPort = 8080
+#http.nonProxyHosts = localhost
+
+
+# the name of the memops project for the PIMS data
+project = chemcomp
+
+#Enabled perspective List
+#-Available perspectives: standard,SSPF,Leeds,OPPF,admin,expert
+#-Default perspective is first one in the list.
+#-If this list is not defined, all perspectives will be enabled and default perspective is: standard
+customization.perspective = standard,SSPF,Leeds,OPPF,admin,expert

@@ -1,0 +1,365 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.experiment.Experiment" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="580" y="392" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.ExperimentGroup" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/ExperimentGroup.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="987" y="525" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.InputSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/InputSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1014" y="368" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.OutputSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/OutputSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1013" y="227" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.Parameter" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Parameter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="818" y="638" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.protocol.RefOutputSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/protocol/RefOutputSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1281" y="26" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.Sample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1351" y="284" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.protocol.RefInputSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/protocol/RefInputSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1291" y="545" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.protocol.ParameterDefinition" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/protocol/ParameterDefinition.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="825" y="883" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.ResearchObjective" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="870" y="-5" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.ExperimentType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/ExperimentType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="100" y="195" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.Instrument" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="109" y="399" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.Group" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Group.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="124" y="24" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.Method" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Method.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="127" y="646" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.Milestone" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/Milestone.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="824" y="213" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.protocol.Protocol" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/protocol/Protocol.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="302" y="883" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.accessControl.User" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="494" y="5" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="milestones"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Milestone" 
+      file="/pims-model/src/java/org/pimslims/model/target/Milestone.java" binary="false">      
+      <attribute name="experiment"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.people.Group" 
+      file="/pims-model/src/java/org/pimslims/model/people/Group.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="group"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Method" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Method.java" binary="false">      
+      <attribute name="instrument"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.Instrument" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false">      
+      <attribute name="methods"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.ExperimentGroup" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/ExperimentGroup.java" binary="false">      
+      <attribute name="experiments"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="experimentGroup"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Instrument" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="instrument"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="inputSamples"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.InputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/InputSample.java" binary="false">      
+      <attribute name="experiment"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjective" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false">      
+      <attribute name="experiments"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="researchObjective"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.experiment.InputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/InputSample.java" binary="false">      
+      <attribute name="refInputSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.protocol.RefInputSample" 
+      file="/pims-model/src/java/org/pimslims/model/protocol/RefInputSample.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="experimentType"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.ExperimentType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/ExperimentType.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Parameter" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Parameter.java" binary="false">      
+      <attribute name="experiment"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="parameters"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.protocol.Protocol" 
+      file="/pims-model/src/java/org/pimslims/model/protocol/Protocol.java" binary="false">      
+      <attribute name="parameterDefinitions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.protocol.ParameterDefinition" 
+      file="/pims-model/src/java/org/pimslims/model/protocol/ParameterDefinition.java" binary="false">      
+      <attribute name="protocol"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="operator"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="protocol"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.protocol.Protocol" 
+      file="/pims-model/src/java/org/pimslims/model/protocol/Protocol.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.experiment.Parameter" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Parameter.java" binary="false">      
+      <attribute name="parameterDefinition"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.protocol.ParameterDefinition" 
+      file="/pims-model/src/java/org/pimslims/model/protocol/ParameterDefinition.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Method" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Method.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="method"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="outputSamples"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.OutputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/OutputSample.java" binary="false">      
+      <attribute name="experiment"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="outputSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.OutputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/OutputSample.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.InputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/InputSample.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="inputSamples"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.experiment.OutputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/OutputSample.java" binary="false">      
+      <attribute name="refOutputSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.protocol.RefOutputSample" 
+      file="/pims-model/src/java/org/pimslims/model/protocol/RefOutputSample.java" binary="false"/>  
+  </association>
+</class-diagram>

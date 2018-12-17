@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<protocol details="" remarks="" creationDate="05-11-13" objective="" name="Freeze">
+<experimentType>Crystal Treatment</experimentType>
+<inputSamples>
+	<inputSample name="Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+</inputSamples>
+<outputSample name="Treated Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+<parameterDefinitions>
+	<parameterDefinition id="1" name="Duration" parameterType="Int" defaultValue="0" minValue="0" maxValue="" isMandatory="true" label=""/>
+</parameterDefinitions>
+</protocol>

@@ -1,0 +1,8 @@
+Data
+
+Extensions.csv
+Removed:
+STOP_KpnI_pHLsecF,CGCGGTACCCTA,Forward Extension
+
+ExtensionsPlus290309.csv
+Added, to replace detaisl in EXtensions.csv with extra data for Extensions

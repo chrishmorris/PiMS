@@ -1,0 +1,6 @@
+Data
+
+PiMS_VerificationPCR.xml
+Changed:
+OLD:  <parameterDefinition id="4" name="__SCORE" label="Correct size PCR product?" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored" />
+New:  <parameterDefinition id="4" name="__SCORE" label="Correct size PCR product?" parameterType="String" defaultValue="Unscored" possibleValues="Unscored,No,Maybe,Yes" />

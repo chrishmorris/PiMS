@@ -1,0 +1,5 @@
+Data
+Suppliers: /data/Suppliers.csv
+Changed e.mail address to remove odd character:
+Old: Supplier,Agencourt Bioscience Corporation,500 Cummings Center,Suite 2450,Beverly ,,,MA 1915,USA,800-361-7780,978-867-2601,� websales@agencourt.com,http://www.agencourt.com
+New: Supplier,Agencourt Bioscience Corporation,500 Cummings Center,Suite 2450,Beverly ,,,MA 1915,USA,800-361-7780,978-867-2601,websales@agencourt.com,http://www.agencourt.com

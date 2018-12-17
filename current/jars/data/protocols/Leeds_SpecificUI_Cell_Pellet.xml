@@ -1,0 +1,19 @@
+<!-- Generic Culture protocol xml as flat file 
+
+must_be_one_of(Float,Int,String,Boolean,DateTime,Interval)
+
+-->
+<protocol name="Generic Cell Pellet" objective="Splitting cells coming from Leeds generic fermentation culture experiment into tubes" creationDate="02-07-08" remarks="Used by specific UI for recording Leeds fermentation batches"  >
+ <experimentType>Fermenter culture</experimentType>
+ 
+			<outputSample name="Pellet 1" amount="0.01" displayUnit="g" unit="kg" refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+			<outputSample name="Pellet 2" amount="0.01" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+			<outputSample name="Pellet 3" amount="0.01" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+			<outputSample name="Pellet 4" amount="0.01" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+  		<outputSample name="Pellet 5" amount="0.01" displayUnit="g" unit="kg"  refSample="Cells" sampleCatName="Transformed cells" sampleCatNamingSys="default" />
+
+	<inputSamples>
+      <inputSample sampleCatName="Transformed cells" amount="0.01" unit="kg" displayUnit="g" refSample="Cells" name="Cells" sampleCatNamingSys="default" />
+	</inputSamples>
+	
+</protocol>

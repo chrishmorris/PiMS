@@ -1,0 +1,97 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.schedule.ScheduledTask" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/schedule/ScheduledTask.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="159" y="124" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.schedule.SchedulePlan" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="405" y="87" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.schedule.SchedulePlanOffset" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlanOffset.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="254" y="-37" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HolderType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="604" y="288" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.Holder" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="132" y="354" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false">      
+      <attribute name="scheduledTasks"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.schedule.ScheduledTask" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/ScheduledTask.java" binary="false">      
+      <attribute name="holder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.schedule.ScheduledTask" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/ScheduledTask.java" binary="false">      
+      <attribute name="schedulePlanOffset"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.schedule.SchedulePlanOffset" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlanOffset.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.HolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false">      
+      <attribute name="defaultSchedulePlan"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.schedule.SchedulePlan" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlan.java" binary="false">      
+      <attribute name="holderTypes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.schedule.SchedulePlanOffset" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlanOffset.java" binary="false">      
+      <attribute name="schedulePlan"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.schedule.SchedulePlan" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlan.java" binary="false">      
+      <attribute name="schedulePlanOffsets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>
+</class-diagram>

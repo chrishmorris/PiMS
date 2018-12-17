@@ -1,0 +1,38 @@
+DATA MODEL CHANGES 26
+
+--------------------------------------------------------------------------------
+-- PiMS CORE
+--------------------------------------------------------------------------------
+- PIMS-434: Experiment.Parameter.value should be within Protocol.ParameterDefinition.possibleValues (for string only)
+x PIMS-512: ParameterDefinition.ParamType default to String (was already mandatory)
+x PIMS-121: ParamDefType change permitted values to ('Int', 'Float', 'String', 'Boolean', 'DateTime', 'Interval')
+            remove 'Double', 'Long', 'InputSample', 'OutputSample', 'Instrument' and 'Filename' from the list
+x PIMS-471: Organisation.name should be mandatory and unique - remove serial
+x PIMS-777: Protocol.name should be mandatory and unique - remove serial
+x PIMS-497: Experiment.name should be mandatory and unique - remove serial
+
+
+--------------------------------------------------------------------------------
+-- PiMS CRYSTALLIZATION
+--------------------------------------------------------------------------------
+x Add link one-to-many between ccp.Sample.Sample and ccp.Crystallization.Image
+x Add link between ccp.Crystallization.Image and ccp.Instrument.Instrument
+x Add link between ccp.People.Person and ccp.Crystallization.Image
+
+
+--------------------------------------------------------------------------------
+-- DEFERED
+--------------------------------------------------------------------------------
+- PIMS-258: replace all Target name attributes: commonName, systematicName, localName by name?
+     - remove serial
+     - remove commonName, systematicName and localName
+     - remove proteinName
+     - replace commonName by name and make it a unique key: The name of the target used to uniquely identify the target. It is its uniprot entry name, e.g. CAIC_ECOLI.
+     - add attr aliases 0..*: The list of the other target names: localName, proteinName,...  
+     - keep geneName 0..1 The official name of the gene for this target. e.g. 'fcy1'.
+     - keep protein.name 1..1 The name of the MolComponent used to describe the Target protein
+- PIMS-568: change data type of Target.name to avoid odd characters
+- PIMS-419: change role Target.protein and Target.status to unchangeable??? (setProtein() will not exist if link unchangeable.)
+- PIMS-287: ComponentCategory???
+- PIMS-441: add method getHome(Person person) 
+

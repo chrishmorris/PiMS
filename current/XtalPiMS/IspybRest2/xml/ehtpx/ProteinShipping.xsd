@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: ProteinShipping.xsd,v 1.4 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="DeliveryAgent.xsd"/>
+	<xs:complexType name="ProteinShipping">
+		<xs:annotation>
+			<xs:documentation>Information about the Shipping of a Protein sent by the user to the Crystallisation center. The Protein has been previously submitted to the Crystallisation center for Safety and accepted.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="projectUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier of the project to ensure the consistency for all the transactions between the different partners.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="personUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier of the person who ships the protein. The person and laboraory details have been previously sent during the safety procedure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="proteinUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier for the protein sent to the crystallisation centre.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryAgent" type="tns:DeliveryAgent"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="proteinShipping" type="tns:ProteinShipping"/>
+</xs:schema>

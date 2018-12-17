@@ -1,0 +1,1 @@
+This project contains code that maps the beans for the Ispyb web services to the PiMS database.

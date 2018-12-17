@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by XML (XML) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Person.xsd,v 1.5 2007/01/18 13:28:49 lxl Exp $">
+	<xs:complexType name="Person">
+		<xs:annotation>
+			<xs:documentation>Information about the Person who sends the data.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="personUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier for this Person.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Family name ('last name' for western names).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="givenName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Given name ('first name' for western names).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="firstInitial" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First initial.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="middleInitials" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Middle initials (including first one).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="familyTitle" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Family title (e.g. Jr.)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Jr."/>
+						<xs:enumeration value="Sr."/>
+						<xs:enumeration value="III"/>
+						<xs:enumeration value="IV"/>
+						<xs:enumeration value="V"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="title" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Title, 'Mr.', 'Mrs.', 'Ms.', 'Dr.', 'Professor',...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="position" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Job position.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mailingAddress" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Mailing address of the person.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emailAddress" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Email address of the person.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phoneNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Telephone number of the person.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="faxNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Fax number of the person.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

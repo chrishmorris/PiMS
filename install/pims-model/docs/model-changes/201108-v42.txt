@@ -1,0 +1,3 @@
+PIMS-3166 User needs "supervised by" association
+
+PIMS-3618 Instrument needs "file path" attribute, containing the URL where the output files are kept.

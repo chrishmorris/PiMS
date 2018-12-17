@@ -1,0 +1,300 @@
+﻿PIMS Experiments
+
+Experiment.Experiment
+Mandatory Attributes: startDate, endDate, experimentType
+Attributes
+*startDate
+*endDate
+lastEditedDate
+*experimentType
+status
+isLocked
+details
+
+Link attributes
+Attribute	Description
+creator		The person who is in charge for this experiment or who created this experiment.
+expBlueprint	The trial on which this experiment is done.
+experimentGroup
+group		Group where experiment was carried out
+instrument	Instrument (e.g. robot, spectrometer) used for Experiment.
+lastEditor	Person who last modified Experiment.
+method
+next
+outputSamples	(Child link)
+previous
+project	(	Parent link)
+parent		synonym for project
+protocol
+sampleIos	(Child link)
+annotations
+
+
+experimentType
+'PCR', 'DNA purification', 'digest', 'recombination', 'transformation', 'ligation', 'dish culture', 'culture', 'miniprep', 'cloning', 'protein expression', 'cell free expression', 'protein purification', 'lysis', 'proteolysis', 'fractionation', 'chromatography', 'proteolysis', 'refold', 'concentration', 'drop setup', 'drop imaging', 'drop scoring', 'mount crystal', 'NMR', 'characterisation', 'light scattering', 'OD measurement', 'mass spectrometry', 'gel', 'import sample'
+
+Problems:
+-endDate is mandatory –can’t use status ‘In process’
+-no ‘Dialysis’ experiment
+- is link attribute ‘Method’ for instruments?
+what is sampleIos –deprecated??
+
+
+
+
+Example for a PCR Experiment
+use Mark Fogg’s example
+
+Input samples need to be defined as reagents
+Output samples as ‘samples’
+?ExpBlueprint?
+
+An experiment is defined by a protocol
+How do we record a protocol in PIMS???
+PCR protocol Mark Fogg’s using KOD HS Polymerase
+PCR primers resuspended at 100 pmol/μl (100μM) stocks.  Dilute 1:5 for 20μM working dilution
+
+total volume 50 μl
+
+input samples: samples in bold are specific to this protocol
+NB.  all of these will need to be defined as reagents
+-Template DNA (50ng/μl)	~1μl (depends on source/genome size, cDNA)
+-PCR primer –sense		1μl (0.4μM in 50 μl reaction)
+-PCR primer –antisense	1μl (0.4μM in 50 μl reaction)
+-dNTPs				5μl (Novagen, typically 2mM stock of
+					all 4 dNTPs in mix i.e. each dNTP is
+					at 2mM.  Final concentration is 200uM)
+-Polymerase			1μl (1U/ul Novagen Hot start KOD)
+-MgSO4				2μl (25mM stock Novagen, final conc.
+					1mM, this is variable)
+-10x PCR buffer		5μl (200 mM Tris-HCl (pH 7.5), 80 mM
+					MgCl2, 5 mM DTT, 500 mg/ml BSA)
+-H2O					50 – 15.5 μl (volume varies), sterile
+					 deionised? water
+
+Protocol will have 5 procedures each with a number of steps:
+Procedure 1 = setting up, 1 cycle, 6 steps (adding components)
+Procedure 2 = initial denaturation, 1 cycle, 2 steps (temperature and wait)
+Procedure 3 = thermocycling, 35 cycles, 6 steps (temperature, wait, temperature, wait, temperature and wait)
+Procedure 4 = final extension, 1 cycle 1 steps (wait)
+Procedure 5 = hold, 1 cycle, 2 steps (temperature and wait)
+
+* = mandatory attributes
+Protocol
+*name = PCR KOD hot start
+protocolType = PCR
+objective = amplify target DNA
+creationDate = 
+lastEditedDate
+remarks = PCR using Novagen KOD hot start polymerase
+details = 
+	Procedure 1
+	name = setting up
+	role = setting up reactions
+	numCycle = 1
+	remarks = only use dNTPs, MgSO4 and 10 x buffer appropriate for KOD Hot start polymerase
+	details = 
+		AddStep
+		name = add template
+		duration = 
+		durationDisplayUnit = 
+		role = setting up
+		amount = 1
+		amountUnit = m3
+		amountDisplayUnit = μl
+		details = amount depends on template
+			*Material
+			RefSample
+			*name
+
+		AddStep
+		name = add forward primer
+		duration = 
+		durationDisplayUnit = 
+		role = setting up
+		amount = 1
+		amountUnit = m3
+		amountDisplayUnit = μl
+		details = 1μl of 20 μMworking dilution (0.4μM in 50 μl reaction)
+			*Material
+			RefSample
+			*name
+
+		AddStep
+		name = add reverse primer
+	duration = 
+	durationDisplayUnit = 
+	role = setting up
+	amount = 1
+	amountUnit = m3
+	amountDisplayUnit = μl
+	details = 1μl of 20μM working dilution (0.4μM in 50μl reaction)
+			*Material
+			RefSample
+			*name
+
+		AddStep
+		name = add dNTPs
+		duration = 
+		durationDisplayUnit = 
+		role = setting up
+		amount = 5
+		amountUnit = m3
+		amountDisplayUnit = μl
+		details = 2mM stock of all 4 dNTPs in mix, 10x dilution for 200 μM final in reaction
+			*Material
+			RefSample
+			*name
+
+		AddStep
+		name = add polymerase
+		duration = 
+		durationDisplayUnit = 
+		role = setting up
+		amount = 1
+		amountUnit = m3
+		amountDisplayUnit = μl
+		details = 1U / μl
+			*Material
+			RefSample
+			*name
+
+		AddStep
+		name = add 10x PCR buffer
+		duration = 
+		durationDisplayUnit = 
+		role = setting up
+		amount = 5
+		amountUnit = m3
+		amountDisplayUnit = μl
+		details = 
+			*Material
+			RefSample
+			*name
+
+		AddStep
+		name = add H2O
+		duration = 
+		durationDisplayUnit = 
+		role = setting up
+		amount = 
+		amountUnit = m3
+		amountDisplayUnit = μl
+		details = 
+			*Material
+			RefSample
+			*name
+
+	Procedure 2
+	name = initial denaturation
+	role = inactivate nucleases, separate strands
+	numCycle = 1
+	remarks = 
+	details = 
+		TemperatureStep
+		name = heating
+		duration = 
+		durationDisplayUnit = 
+		role = heat reaction
+		*initialTemperature = 20
+		*finaltemperature = 94
+		tempDisplayUnit = C
+		details
+
+		WaitStep
+		name = hold
+		duration = 2
+		durationDisplayUnit = min
+		role = denature strands
+		temperature = 94
+		tempDisplayUnit = C
+		location = thermocycler
+		details = 
+
+	Procedure 3
+	name = thermocycling
+	role = amplify DNA
+	numCycle =35
+	remarks = duration of extension step depends on length of DNA to be amplified
+	details = 
+		TemperatureStep
+		name = cooling
+		duration = 
+		durationDisplayUnit = 
+		role = heat reaction
+		*initialTemperature = 94
+		*finaltemperature = 45
+		tempDisplayUnit = C
+		details
+
+		WaitStep
+		name = annealing
+		duration = 30
+		durationDisplayUnit = sec
+		role = anneal primers
+		temperature = 45
+		tempDisplayUnit = C
+		location = thermocycler
+		details = 
+
+		TemperatureStep
+		name = heating
+		duration = 
+		durationDisplayUnit = 
+		role = heat reaction
+		*initialTemperature = 45
+		*finaltemperature = 72
+		tempDisplayUnit = C
+		details
+
+		WaitStep
+		name = extension
+		duration = 30
+		durationDisplayUnit = sec
+		role = incorporate nucleotides to synthesize DNA
+		temperature = 72
+		tempDisplayUnit = C
+		location = thermocycler
+		details = 
+
+	Procedure 4
+	name = final extension
+	role = complete synthsis of full length PCR products
+	numCycle = 1
+	remarks = 
+	details = 
+		WaitStep
+		name = hold
+		duration = 3
+		durationDisplayUnit = min
+		role = extend strands
+		temperature = 72
+		tempDisplayUnit = C
+		location = thermocycler
+		details = 
+
+	Procedure 5
+	name = hold
+	role = prevent strand degradation
+	numCycle = 1
+	remarks = duration is variable, remove samples as soon as possible
+	details = 
+		TemperatureStep
+		name = cooling
+		duration = 
+		durationDisplayUnit = 
+		role = cool reactions
+		*initialTemperature = 72
+		*finaltemperature = 4
+		tempDisplayUnit = C
+		details
+
+		WaitStep
+		name = hold
+		duration = 
+		durationDisplayUnit = 
+		role = denature strands
+		temperature = 4
+		tempDisplayUnit = C
+		location = thermocycler
+		details = 

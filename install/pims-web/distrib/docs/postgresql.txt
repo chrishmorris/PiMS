@@ -1,0 +1,67 @@
+In order to allow connections to postgresql, 
+you must not only create the database user, 
+you must also ensure there is an appropriate entry in a file called pg_hba.conf.
+On Windows is it at: 
+   C:\Program Files\PostgreSQL\8.1\data\pg_hba.conf
+On other Linux systems it can be at a variety of places e.g.
+On most redhat systems, it is at:
+    /var/lib/pgsql/data/pg_hba.conf
+On A SUSE system it is often at:
+    /home/pgsql/data
+You can find the directory it is in by reading the output of:
+   ps ax | grep sql
+
+A simple way to check that PiMS will be able to connect to the database
+it is to type on the command line:
+   psql -d test -h ::1 -U pimsupdate
+The "-h ::1" specifies an IPv6 connection - Java applications including PiMS
+will use IPv6 if it is available. 
+
+The simplest way to allow PiMS to connect is:
+
+# IPv4 local connections:
+    host    all         all         127.0.0.1/32          md5
+
+On Linux, it is simpler to add:
+    # IPv6 local connections:
+    host    all         all         ::1/128               md5
+since PiMS uses a Java connection, which defaults to IPv6 if that is available.
+However, if you add this line for a Windows machine which does not have IPv6,
+then Postgres will not start.
+
+If you decide to run the database on a different machine to Tomcat,
+you must make an appropriate entry in pg_hba.conf. 
+You will also have to edit postgresql.conf to add
+    listen_addresses='*'
+or the IP address for the database server (NOT for the web server).
+
+Only one of these are required, but it isn't always easy to find out which.
+
+If you are running untrusted code on the same machine you may prefer:
+
+host    pims         pimsupdate         127.0.0.1/32          md5
+# IPv6 local connections:
+host    pims         pimsupdate         ::1/128               md5
+
+Then stop and restart postgresql. The safe way to do this is:
+    sudo sudo -u postgres pg_ctl -m fast -D /var/lib/pgsql/data restart
+    
+PiMS is not a CPU intensive application, so it is satisfactory
+to run Tomcat and Postgresql on the same machine. 
+    
+BACKUP
+
+You should periodically, e.g. every night:
+    vacuumdb --analyze -d pims -U postgres
+    pg_dump --format=c --no-owner -U postgres -f /backup/pims.sql pims 
+    tar -czf /backup/pimsUploads.tar.gz /var/pims/pimsUploads 
+It is not necessary to stop PiMS to run these commands.   
+
+You can restore your backup by:
+    dropdb -U postgres pims
+    createdb -U postgres --encoding UTF-8 pims
+    pg_restore  -U postgres --disable-triggers -d pims /backup/pims.sql 
+
+TIME ZONE
+
+When PiMS uses times, it specifies the time zone, so it does not matter what time zone the database expects as default. 

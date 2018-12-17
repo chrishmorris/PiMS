@@ -1,0 +1,25 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF ScaleUp Expression" objective="Large Scale Expression of Target Protein" creationDate="02-02-07" remarks="Based on Lab activities requirements from OPPF" details="Large Scale Expression of Target Protein">
+ <experimentType>Production scale expression</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Induction Temperature" parameterType="Int" defaultValue="25" />
+  <parameterDefinition id="2" name="Induction time/hr" parameterType="Int" defaultValue="22" />
+  <parameterDefinition id="3" name="Expression level" parameterType="Int" />
+  <parameterDefinition id="4" name="Weight of Pellet" parameterType="Int" />
+  <parameterDefinition id="5" name="Expression Notes" parameterType="String" />
+  <parameterDefinition id="6" name="Soluble/Insoluble" parameterType="String" defaultValue="Soluble" />
+  <parameterDefinition id="7" name="Selenomethionine Labelled" parameterType="Boolean" defaultValue="false" />
+ </parameterDefinitions>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000001" unit="L" displayUnit="uL" refSample="Purified plasmid" name="Purified plasmid" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="1.0" unit="L" displayUnit="L" refSample="Luria broth (LB)" name="Culture media" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.001" unit="L" displayUnit="mL" refSample="Carbenicillin" name="Antibiotic A"/>
+	<inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.001" unit="L" displayUnit="mL" refSample="Chloramphenicol" name="Antibiotic B"/>
+	<inputSample sampleCatNamingSys="default" sampleCatName="Competent cells" amount="" unit="number" displayUnit="colonies" refSample="Competent cells" name="Strain"/>
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="0.00008" unit="kg" displayUnit="g" refSample="Culture" name="Culture"/>
+
+</protocol>

@@ -1,0 +1,17 @@
+<!-- Layout of Plates protocol xml as flat file -->
+<protocol name="Caliper Characterisation" objective="Record Caliper results" creationDate="29-05-07" remarks="Based on Lab activities requirements from OPPF" details="Record Caliper results" >
+ <experimentType>Characterisation</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Caliper Characterisation" parameterType="String" /> 
+  <parameterDefinition id="2" name="__SCORE" label="Caliper result" parameterType="String" defaultValue="Unscored" possibleValues="Unscored,No,Maybe,Yes"/>
+  <parameterDefinition id="3" name="Bases from vector" label="Number of nucleotides that will be added to target sequence" parameterType="Int" defaultValue="0" />
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.00005" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000003" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR Product" />
+ 
+</protocol>

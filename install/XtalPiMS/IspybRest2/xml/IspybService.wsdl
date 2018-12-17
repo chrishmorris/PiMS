@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl2:description 
+  xmlns:wsdl2="http://www.w3.org/ns/wsdl" 
+  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" 
+  xmlns:tns="http://www.pims-lims.org/services/ispyb" 
+  xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" 
+  xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" 
+  xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:whttp="http://www.w3.org/ns/wsdl/http" 
+  targetNamespace="http://www.pims-lims.org/services/ispyb">
+
+    <wsdl2:documentation>IspybService</wsdl2:documentation>
+
+    <wsdl2:types>
+      <xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb" >       
+          <xs:include schemaLocation="IspybService.xsd" />  
+      </xs:schema>
+    </wsdl2:types>
+    
+    <wsdl2:interface name="ServiceInterface">
+        <wsdl2:fault name="BadDataException" element="tns:BadDataException"/>
+        <wsdl2:fault name="IllegalStateException" element="tns:IllegalStateException"/>        
+        
+        <wsdl2:operation name="authenticate" pattern="http://www.w3.org/ns/wsdl/in-out">
+            <!-- TODO shouldn't this be xs:string? -->
+            <wsdl2:input element="#none" />
+            <wsdl2:output element="#none" wsaw:Action="urn:authenticateResponse" />
+        </wsdl2:operation>
+        
+        <!-- <wsdl2:operation name="deleteShipment" pattern="http://www.w3.org/ns/wsdl/robust-in-only">
+            <wsdl2:input element="tns:deleteShipment" wsaw:Action="urn:deleteShipment"/>
+            <wsdl2:outfault ref="tns:BadDataException" wsaw:Action="urn:deleteShipmentBadDataException"/>
+        </wsdl2:operation> -->
+        
+        <wsdl2:operation name="crystalShipping"  pattern="http://www.w3.org/ns/wsdl/in-out">
+            <wsdl2:input element="tns:crystalShipping" wsaw:Action="urn:crystalShipping"/>
+            <wsdl2:output element="tns:crystalShippingResponse" wsaw:Action="urn:crystalShippingResponse"/>
+            <wsdl2:outfault ref="tns:BadDataException" wsaw:Action="urn:crystalShippingBadDataException"/>
+        </wsdl2:operation>
+        
+        <wsdl2:operation name="getDeliveryStatus"  pattern="http://www.w3.org/ns/wsdl/in-out">
+            <wsdl2:input element="tns:getDeliveryStatus" wsaw:Action="urn:getDeliveryStatus"/>
+            <wsdl2:output element="tns:getDeliveryStatusResponse" wsaw:Action="urn:getDeliveryStatusResponse"/>
+            <wsdl2:outfault ref="tns:BadDataException" wsaw:Action="urn:BadDataException"/>
+        </wsdl2:operation>
+        
+        
+        <wsdl2:operation name="getResults"   pattern="http://www.w3.org/ns/wsdl/in-out">
+            <wsdl2:input element="tns:getResults" wsaw:Action="urn:getResults"/>
+            <wsdl2:output element="tns:beamlineExportedInformation" wsaw:Action="urn:beamlineExportedInformation"/>             
+            <wsdl2:outfault ref="tns:BadDataException" wsaw:Action="urn:BadDataException"/>
+        </wsdl2:operation>
+        
+      
+        <wsdl2:operation name="getReturnShipment"   pattern="http://www.w3.org/ns/wsdl/in-out">
+            <wsdl2:input element="tns:getReturnShipment" wsaw:Action="urn:getReturnShipment"/>
+            <wsdl2:output element="tns:getReturnShipmentResponse" wsaw:Action="urn:getReturnShipmentResponse"/>
+            <wsdl2:outfault ref="tns:BadDataException" wsaw:Action="urn:BadDataException"/>
+        </wsdl2:operation>
+        
+        <!-- <wsdl2:operation name="getShipments" pattern="http://www.w3.org/ns/wsdl/in-out">
+            <wsdl2:input element="#none" wsaw:Action="urn:getShipments"/>
+            <wsdl2:output element="tns:getShipmentsResponse" wsaw:Action="urn:getShipmentsResponse"/>
+        </wsdl2:operation> -->
+    </wsdl2:interface>
+    
+    
+    
+    <wsdl2:binding name="IspybServiceHttpBinding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/http">
+        <wsdl2:fault ref="tns:IllegalStateException"/>
+        <wsdl2:fault ref="tns:BadDataException"/>
+        
+        <wsdl2:operation ref="tns:crystalShipping" whttp:location="shipment/{name}" whttp:method="PUT">
+            <wsdl2:outfault ref="tns:BadDataException"/>
+        </wsdl2:operation>
+        
+        <wsdl2:operation ref="tns:getDeliveryStatus" whttp:location="deliveryStatus/{name}" whttp:method="GET">
+        <!-- TODO <wsdl2:infault ref="tns:NotFoundException"/> 
+        -->
+            <wsdl2:outfault ref="tns:BadDataException"/>
+        </wsdl2:operation>
+        
+        
+        <wsdl2:operation ref="tns:getResults" whttp:location="results/{name}" whttp:method="GET">
+        <!-- TODO <wsdl2:infault ref="tns:NotFoundException"/> 
+                  <wsdl2:infault ref="tns:IllegalStateException"/>
+        -->
+            <wsdl2:outfault ref="tns:BadDataException"/>
+        </wsdl2:operation>
+        
+        <wsdl2:operation ref="tns:getReturnShipment" whttp:location="returnShipment/{name}" whttp:method="GET">
+        <!-- TODO <wsdl2:infault ref="tns:NotFoundException"/> 
+                  <wsdl2:infault ref="tns:IllegalStateException"/>
+        -->
+            <wsdl2:outfault ref="tns:BadDataException"/>
+        </wsdl2:operation>
+        
+        <!-- <wsdl2:operation ref="tns:deleteShipment" whttp:location="shipment/{name}" whttp:method="DELETE">
+            <wsdl2:outfault ref="tns:BadDataException"/>
+        </wsdl2:operation> -->
+        <!-- <wsdl2:operation ref="tns:getShipments" whttp:location="shipments" whttp:method="GET"/> -->
+    </wsdl2:binding>
+        
+    <wsdl2:binding name="IspybServiceSoap11Binding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/soap" wsoap:version="1.1">
+        <wsdl2:operation ref="tns:authenticate" />
+        <wsdl2:operation ref="tns:getResults" />
+        <wsdl2:operation ref="tns:crystalShipping" />
+        <wsdl2:operation ref="tns:getReturnShipment" />
+        <wsdl2:operation ref="tns:getDeliveryStatus" />
+    </wsdl2:binding>
+    
+    <wsdl2:binding name="IspybServiceSoap12Binding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/soap" wsoap:version="1.2">
+        <wsdl2:operation ref="tns:authenticate" />
+        <wsdl2:operation ref="tns:getResults" />
+        <wsdl2:operation ref="tns:crystalShipping" />
+        <wsdl2:operation ref="tns:getReturnShipment" />
+        <wsdl2:operation ref="tns:getDeliveryStatus" />
+    </wsdl2:binding>
+    
+    <!-- Address -->
+    <wsdl2:service name="IspybService" interface="tns:ServiceInterface">
+        <wsdl2:endpoint 
+          name="IspybServiceHttpSoap12Endpoint" 
+          binding="tns:IspybServiceSoap12Binding" 
+          address="http://172.23.136.15:8080/axis2/services/IspybService.IspybServiceHttpSoap12Endpoint/" />
+        <wsdl2:endpoint name="IspybServiceHttpSoap11Endpoint" 
+          binding="tns:IspybServiceSoap11Binding" 
+          address="http://172.23.136.15:8080/axis2/services/IspybService.IspybServiceHttpSoap11Endpoint/" />
+        <wsdl2:endpoint 
+          name="IspybServiceHttpEndpoint" 
+          binding="tns:IspybServiceHttpBinding" 
+          address="http://172.23.136.15:8080/axis2/services/IspybService.IspybServiceHttpEndpoint/" />
+    </wsdl2:service>
+    
+</wsdl2:description>

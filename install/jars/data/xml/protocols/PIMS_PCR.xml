@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<protocol>
+    <name>PiMS PCR - xml new format</name>
+    <experimentType>PCR</experimentType>
+    <objective>Amplify target DNA</objective>
+    <method></method>
+    <remarks></remarks>
+    <details></details>
+    <exportDate>2009-02-09T19:55:16.671Z</exportDate>
+    <parameterDefinitions>
+        <parameterDefinition>
+            <name>A. Annealing temperature</name>
+            <label></label>
+            <paramType>Float</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue>45</defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+        <parameterDefinition>
+            <name>B. Number of cycles</name>
+            <label></label>
+            <paramType>Int</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue>35</defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+        <parameterDefinition>
+            <name>C. Thermocycling conditions</name>
+            <label></label>
+            <paramType>String</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue>Anneal 30 sec at 45C,    Extend 30 sec at 72C,    Denature 30 sec at 94C</defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+        <parameterDefinition>
+            <name>D. Primer concentration uM</name>
+            <label></label>
+            <paramType>Float</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue>100</defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+        <parameterDefinition>
+            <name>E. Template concentration ng/ul</name>
+            <label></label>
+            <paramType>Float</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue>50</defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+    </parameterDefinitions>
+    <inputSamples>
+        <inputSample>
+            <sampleCategory>Forward Primer</sampleCategory>
+            <name>Forward primer</name>
+            <amount>1.0E-6</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </inputSample>
+        <inputSample>
+            <sampleCategory>Reverse Primer</sampleCategory>
+            <name>Reverse primer</name>
+            <amount>1.0E-6</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </inputSample>
+        <inputSample>
+            <sampleCategory>Nucleic acid</sampleCategory>
+            <name>Template</name>
+            <amount>5.0E-7</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </inputSample>
+        <inputSample>
+            <sampleCategory>Solvent</sampleCategory>
+            <name>Water</name>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </inputSample>
+        <inputSample>
+            <sampleCategory>Buffer</sampleCategory>
+            <name>Buffer</name>
+            <amount>5.0E-6</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </inputSample>
+        <inputSample>
+            <sampleCategory>Enzyme -polymerase</sampleCategory>
+            <name>Polymerase</name>
+            <amount>1.0E-6</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </inputSample>
+        <inputSample>
+            <sampleCategory>Nucleotide</sampleCategory>
+            <name>dNTPs</name>
+            <amount>5.0E-6</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </inputSample>
+    </inputSamples>
+    <outputSamples>
+        <outputSample>
+            <sampleCategory>Nucleic acid</sampleCategory>
+            <name>PCR product</name>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </outputSample>
+    </outputSamples>
+</protocol>

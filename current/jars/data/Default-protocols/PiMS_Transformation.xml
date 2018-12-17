@@ -1,0 +1,20 @@
+<!-- PiMS Heat-shock Transformation protocol xml as flat file -->
+<protocol name="PiMS Transformation" objective="Transform E.coli with plasmid, generic heat shock protocol" creationDate="04-03-09" remarks="Default set of protocols for PiMS" details="">
+ <experimentType>Transformation</experimentType>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.000002" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+ </inputSamples>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Transformed cells" name="Transformed cells" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Competent cells" label="Competent cells used for Transformation" parameterType="String" defaultValue="Nova Blue Giga Singles" /> 
+  <parameterDefinition id="2" name="Heat shock conditions" label="Details of the heat shock" parameterType="String" 
+  defaultValue="5 min on ice, 30 sec at 42C, 5 min on ice" />
+  <parameterDefinition id="3" name="Media" label="Growth medium used after heat shock" parameterType="String" defaultValue="Luria broth (LB), Kanamycin 30mg/ml" />
+  <parameterDefinition id="4" name="Incubation conditions" label="Details of grow-up" parameterType="String" defaultValue="Incubate 60 min at 37C with shaking" />
+  <parameterDefinition id="5" name="__SCORE" label="Any colonies?" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored" /> 
+ </parameterDefinitions>
+
+</protocol>

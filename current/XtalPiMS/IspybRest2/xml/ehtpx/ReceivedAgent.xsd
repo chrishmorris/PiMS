@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="ReceivedAgent">
+		<xs:annotation>
+			<xs:documentation>Information about the Received Agent for the reception of a protein or Dewar shipment.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="receivedDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Date on which the shipment was received.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="agentName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the shipping company e.g. 'FedEx'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="agentCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Code defined by the shipping company for this shipment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

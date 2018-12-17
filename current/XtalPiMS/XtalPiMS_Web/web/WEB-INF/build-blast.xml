@@ -1,0 +1,59 @@
+<!-- Ant build file to run scheduled Blast searches 291007 -->
+
+
+<project default="SearchPDB" name="BlastSearch" basedir=".">
+	
+
+    <!-- Import Properties -->
+    <property file="${basedir}/conf/Properties" />
+
+    <property name="propertyfile" value="${basedir}/conf/Properties" />
+
+   
+    <property name="classes" location="${basedir}/classes" />
+    <property name="lib.path" location="${basedir}/lib" />
+
+    <!-- java classpaths -->
+
+    <!-- add libraries -->
+    <path id="project.classpath">
+
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+	<fileset dir="${tomcat.lib.path}">
+            <include name="*.jar" />
+        </fileset>
+	<pathelement location="${classes}" />
+    </path>
+	
+	<target name="test">
+		<echo>Base directory: ${basedir}</echo>
+	    <echo>Email address: ${email}</echo>
+	</target>
+
+
+    <target name="SearchTargetDB" description="Blast Search">
+        <java classname="org.pimslims.presentation.bioinf.BlastMultiple" fork="true">
+	    <assertions>
+                <enable />
+            </assertions>
+            <classpath refid="project.classpath" />
+            <arg value="${propertyfile}" />
+	    <arg value="TargetDB" />
+	    <arg value="${email}" />
+        </java>
+    </target>
+
+    <target name="SearchPDB" description="Blast Search">
+        <java classname="org.pimslims.presentation.bioinf.BlastMultiple" fork="true">
+	    <assertions>
+                <enable />
+            </assertions>
+            <classpath refid="project.classpath" />
+            <arg value="${propertyfile}" />
+	    <arg value="PDB" />
+	    <arg value="${email}" />
+        </java>
+    </target>
+</project>

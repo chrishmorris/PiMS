@@ -1,0 +1,147 @@
+<!--
+
+    Context configuration file for the working copy of PIMS
+
+-->
+<Context docBase="/root/pims.war"
+         privileged="true" antiResourceLocking="false" antiJARLocking="false"
+         useHttpOnly="true"
+         xmlBlockExternal="false"
+         >
+
+  <!-- Postgresql database connection -->
+  <Environment name="db.className" 
+  	value="org.postgresql.Driver" type="java.lang.String" />
+  <Environment name="db.url" 
+  	value="jdbc:postgresql://localhost/pims"  type="java.lang.String" />
+  
+  
+  <!-- Database user name and password -->
+  <Environment name="db.username" 
+  	value="pimsupdate" type="java.lang.String" />
+  <Environment name="db.password" 
+  	value="****" type="java.lang.String"/>
+  	
+  <!-- the directory PiMS is to use for uploaded files.
+     User "tomcat" must have write permission for this
+  -->
+  <Environment name="uploadDirectory" 
+  	value="/var/pims/uploads" type="java.lang.String" />
+  	
+  <!-- Set these if you use an HTTP proxy, so PiMS can access genomic databases
+      <Environment name="http.proxyHost" 
+  			value="proxy.your.domain.ac.uk" type="java.lang.String"/>
+  	  <Environment name="http.proxyPort" 
+  			value="8080" type="java.lang.String" />
+   	  <Environment name="http.nonProxyHosts" 
+  			value="localhost" type="java.lang.String" />
+  -->
+  
+  <!-- Path to Graphviz executable. For Linux, probably:
+      <Environment name="dot_path" value="/usr/bin/dot" type="java.lang.String"/>
+   For Windows, something like:
+       <Environment name="dot_path" value="C:\\Program Files\\Graphviz2.26\\bin\\dot.exe" type="java.lang.String"/>   
+  -->
+  
+  <Environment name="dot_path" value="dot" type="java.lang.String"/>
+    
+  <!-- Enabled perspective List, 
+        -Current available perspectives: standard,SSPF,Leeds,OPPF,admin,expert 
+        -Default perspective is first one in the list
+        -If this list is not defined, all perspectives will be enabled and default perspective is: standard
+  -->
+  
+  <Environment name="customization.perspective" 
+    value="standard,xtal" type="java.lang.String"/>
+    
+<!-- Authentication method -->
+<ResourceLink name="UserDatabase"
+            global="UserDatabase"
+            type="org.apache.catalina.UserDatabase" />
+   
+<!-- Note that CombinedRealm is part of Tomcat7, and Tomcat6 from 6.0.20.
+Please contact pims-defects@dl.ac.uk if you need to install PiMS on early Tomcat6 .
+ -->         
+<Realm className="org.apache.catalina.realm.CombinedRealm" >  
+
+  
+    <!-- Use tomcat-users.xml to store the administrator's password -->    
+        <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+               resourceName="UserDatabase"/>
+               
+               
+    <!-- And/Or use PiMS database 
+    Note that you must copy file
+        WEB-INF/lib/postgresql-9.1-901.jdbc3.jar 
+    to $CATALINA_HOME/lib/.
+    You may need to change the connectionURL, connectionName, and connectionPassword.
+    
+        <Realm className="org.apache.catalina.realm.JDBCRealm"
+              driverName="org.postgresql.Driver"              
+              userTable="ACCO_USER" userNameCol="NAME" userCredCol="DIGESTEDPASSWORD"
+              userRoleTable="TOMCATROLE" roleNameCol="ROLE"
+              digest="SHA-512"  digestEncoding="UTF8"
+              allRolesMode="strict"
+              
+              connectionURL="jdbc:postgresql://localhost/pims"
+              connectionName="pimsview"
+              connectionPassword=""
+        />
+    -->
+      
+      <!-- And/Or like this for Active Directory or any other LDAP database.
+      The directory should contain a groupOfNames with CN=pims-users 
+      For more information see:
+      http://tomcat.apache.org/tomcat-7.0-doc/realm-howto.html
+      
+            <Realm className="org.apache.catalina.realm.JNDIRealm" debug="99"   
+        connectionName="cn=Manager,dc=maxcrc,dc=com"    
+        connectionPassword="****"  
+       connectionURL="ldap://localhost:389"
+       userBase="ou=people,dc=maxcrc,dc=com"  
+       roleBase="ou=groups,dc=maxcrc,dc=com"   
+       userSearch="cn={0}"
+       roleName="cn"
+       roleSearch="(member={0})"
+       />   -->
+       
+</Realm> 
+  	
+  <!--  Ajax Validation 
+ 	Regular expression patterns used to validate data by the servlet AjaxValidate
+ 	Note, the absence of any pattern will switch off any validation
+ 	The java pattern to match with plate experiment name
+  
+  <Environment name="plate_name_pattern" value="PCR\d\d\d.*" type="java.lang.String" /> 
+  -->
+  
+  <!-- local strategy for constructing the experiment name
+  
+  <Environment name="Experiment.Name.Factory" 
+  	value="org.pimslims.presentation.experiment.OPPFExperimentName" type="java.lang.String"/>
+  	<Environment name="Plate.Name.Factory"
+            value="org.pimslims.presentation.plateExperiment.OPPFPlateName" type="java.lang.String"/>
+  -->
+  	
+  <!-- Order form for preferred supplier of oligos:
+  
+        <Environment name="PrimerOrderTemplate"
+            value="/var/pims/PrimerOrderTemplate.xlt" type="java.lang.String" />
+  
+  -->
+  	
+  <!-- Use this to keep a log of the use of your PiMS.
+       The PiMS team would be grateful for a copy of the log
+       from a typical day's activity. For Tomcat6:
+   <Valve className="org.apache.catalina.valves.FastCommonAccessLogValve"
+                 directory="logs"  prefix="localhost_access_log." suffix=".txt"
+                 pattern="common" resolveHosts="false"/>
+   or for Tomcat7:
+    <Valve className="org.apache.catalina.valves.AccessLogValve"
+                 directory="logs"  prefix="localhost_access_log." suffix=".txt"
+                 pattern="common" />
+  -->  	
+  <!-- use this filter for testing securely 
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+    allow="127.0.0.1"/> -->
+</Context>

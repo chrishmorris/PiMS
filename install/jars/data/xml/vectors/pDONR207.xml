@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pDONR207 Vector</name>
+    <details>Gateway[TM] Entry vector</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="11803-012"
+        dataPageUrl="http://products.invitrogen.com/ivgn/en/US/adirect/invitrogen"
+        supplier="Invitrogen" />
+    <sampleComponent name="pDONR207" componentCategory="Vector"
+        details="5585" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>E.coli Entry Vector -no longer available
+        </function>
+        <resistanceDetails name="Gentamycin" startSeq="4061"
+            endSeq="3528" />
+        <markerDetails name="attP1 site" startSeq="332"
+            endSeq="506" featureType="recombination site" />
+        <markerDetails name="Chloramphenicol resistance gene (CmR)"
+            startSeq="1606" endSeq="2265" featureType="antibiotic resistance" />
+        <markerDetails name="ccdB gene" startSeq="959"
+            endSeq="1264" featureType="selectable marker"
+            details="bacterial death gene, exchanged for 
+                gene of interest in the entry clone" />
+        <markerDetails name="attP2 site" startSeq="2513"
+            endSeq="2744" featureType="recombination site" />
+        <markerDetails name="pUC origin" startSeq="4909"
+            endSeq="5582" featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Propagation: One Shot[TM] ccdB Survival[TM] 2 T1R; Non-expression: TOP10, OmniMAX[TM] 2-T1R"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

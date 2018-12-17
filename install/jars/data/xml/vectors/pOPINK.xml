@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINK Vector</name>
+    <details>Derived from pET28a/Kanamycin, combined cleavable
+        N-Term His Tag with GST fusion</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINK" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA">
+        <function>In-Fusion[TM] E.coli Expression Vector
+        </function>
+        <resistanceDetails name="Kanamycin" />
+        <markerDetails
+            name="N-Term cleavable His Tag with GST fusion sequence"
+            details="MGSSHHHHHHSSGLEVLFQ|GP" featureType="Tag" status="not cleaved" />
+    </sampleComponent>
+</vector>

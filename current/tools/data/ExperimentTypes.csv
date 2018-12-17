@@ -1,0 +1,81 @@
+namingSystem,name,previousName,topExperimentType,details
+default,SPOTConstructDesign,,,Primer-design details for new construct
+default,Entry clone,,,Gateway Entry clone design
+default,Deep-Frozen culture,,Cloning,Deep-Frozen culture stock recording
+default,PCR,,"PCR, Characterisation",Polymerase chain reaction
+default,Cloning,,,Replication of DNA in a foreign host
+default,Digest,,"Cloning, Characterisation",Restriction enzyme digest of DNA
+default,Recombination,,Cloning,Recombinational cloning e.g. Gateway&reg; technology
+default,LIC annealing,,Cloning,Ligation-independent cloning - annealing reaction
+default,LIC polymerase reaction,,Cloning,Ligation-independent cloning - polymerase reaction
+default,Transformation,,Cloning,Introduction of DNA into cells
+default,Ligation,,Cloning,Enzymatic joining of DNA fragments
+default,Cloning design,,Cloning,
+default,Primer design,,Cloning,
+default,Optic Construct Design,,Cloning,
+default,Expression,,,Production of a recombinant protein from a cloned gene
+default,Small scale expression,,Expression,Small scale expression e.g. trials
+default,Production scale expression,,Expression,Large scale expression
+default,Purification,,,
+default,DNA purification,,"Cloning, Purification",Purify DNA of interest
+default,Mini prep,,"Cloning, Purification",Small scale purification of plasmid DNA
+default,Plasmid prep,,"Cloning, Purification, Preparative experiment",Purification of plasmid DNA
+default,Protein purification,,Purification,Purify protein of interest
+default,Chromatography,,Purification,"Chromatographic separation techniques e.g. HPLC, TLC, Gel filtration "
+default,Proteolysis,,Purification,Enzymatic digestion of proteins
+default,Refold,,Purification,Enabling a denatured or unfolded protein to adopt its native conformation 
+default,Dialysis,,Purification,Buffer exchange through a membrane
+default,Concentration,,Purification,Reduce the volume of a solution
+default,Fractionation,,Purification,Separation of a mixture into its component parts
+default,Lysis,,Purification,Cell disruption
+default,Protein production summary,Protein production,Purification,Summary of expression and purification details
+default,Membrane preparation,,Purification,Preparation of cell membranes
+default,Crystallogenesis,,,Crystallization experiment
+default,Drop set-up,,Crystallogenesis,Set up a crystallization experiment
+default,Native trials,,Crystallogenesis,Crystallization trials with native protein
+default,Selmet trials,,Crystallogenesis,Crystallization trials with Seleneomethionine-labelled protein
+default,Trials,,Crystallogenesis,Crystallization trials
+default,Drop scoring,,"Characterisation, Crystallogenesis",User-defined score from a crystallization experiment
+default,Drop imaging,,"Characterisation, Crystallogenesis",Imaging of a crystallization experiment
+default,Native crystal,,Crystallogenesis,Crystallization experiment with native protein
+default,Selmet crystal,,Crystallogenesis,Crystallization experiment with Seleneomethionine-labelled protein
+default,Crystal,,Crystallogenesis,Record crystallization success
+default,Native optimization,,Crystallogenesis,Crystallization optimization with native protein
+default,Selmet optimization,,Crystallogenesis,Crystallization optimization with Seleneomethionine-labelled protein
+default,Mount crystal,,"Crystallogenesis, Preparative experiment",Crystal mounting e.g. in a loop or capllary
+default,Crystallization plate inspection,,Crystallogenesis,Viewing a crystallization plate
+default,Crystallography,,,
+default,Diffraction,,Crystallography,Obtain diffraction data for crystal
+default,Native diffraction,,Crystallography,Obtain diffraction data for native protein crystal
+default,Selmet diffraction,,Crystallography,Obtain diffraction data for Seleneomethionine-labelled protein crystal
+default,Data set,,Crystallography,Obtain diffraction data set
+default,Crystal Structure,,Crystallography,Obtain crystal structure
+default,NMR,,,
+default,Preparative experiment,,,
+default,Buffer prep,,Preparative experiment,Preparation of a buffer
+default,Solution prep,,Preparative experiment,Preparation of a solution
+default,Culture,,Preparative experiment,Growth of cells in liquid media
+default,Import sample,,Preparative experiment,Import of a reagent or sample into PiMS
+default,Fermentation,,Preparative experiment,Large scale culture under controlled conditions
+default,Characterisation,,,"Protein characterisation e.g. SDS-PAGE, DLS, CD, etc."
+default,Gel,,Characterisation,"Gel Electrophoresis e.g. SDS-PAGE, agarose gel"
+default,OD measurement,,Characterisation,Optical density or absorbance measurement
+default,Light scattering,,Characterisation,"Dynamic light scattering, DLS"
+default,Mass spec,,Characterisation,Mass spectrometry analysis
+default,Dish culture,,Characterisation,"Growth of cells on a solid support, e.g. agar plate"
+default,Other,,,
+default,Annotation,,Other,
+default,Information,,Other,
+default,PDB,,Other,Record deposition of crystal coordinates in PDB
+default,Plate check,,Other,Test of transformation by growth on solid support
+default,Unspecified,,,Unspecified experiment type
+default,Order,,,Order samples
+default,Fermenter culture,,Expression,Fermentation experiments
+default,Cleavage,,,
+default,Sequencing order,,Characterisation,
+default,Sequencing,,Characterisation,
+default,Complexation,,Complexation,Mixing of protein samples to form a complex
+default,Cell stock,,Preparative experiment,Recording a cell stock
+default,Plasmid stock,,Preparative experiment,Recording a plasmid stock
+default,Synthetic gene,,,Details for a Synthetic gene
+default,NMR,,,Nuclear Magnetic Resonance spectroscopy

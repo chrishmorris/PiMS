@@ -1,0 +1,71 @@
+
+/*
+ * CSS styles for this layout, applicable to all browsers.
+ * To ensure effects are confined to this layout only, prefix each rule 
+ * with "body.CLASSNAME " - this ensures that matched items are descendants
+ * of the correct class of body.
+ */
+body.bricks  { }
+
+body.bricks div#content { position:relative; top:0.5em; height:29.5em; }
+
+body.bricks .brick, body.bricks .emptybrick
+                   { position:absolute; height:6.5em; width:31%;
+					 font-family:arial,helvetica,sans-serif;
+                     overflow:hidden;
+                     -moz-border-radius:0em; -webkit-border-radius:0em; }
+body.bricks .brick      { border:1px solid #999; -webkit-box-shadow: 0 8px 6px -6px #b4b4b4 ; -moz-box-shadow: 0 8px 6px -6px #b4b4b4 ;
+                                box-shadow: 0 8px 6px -6px #b4b4b4 ; background-color:white;  -moz-border-radius:0 0em 0 0em;
+                             -webkit-border-top-right-radius:0em; -webkit-border-bottom-left-radius:0em;
+                             -webkit-border-top-left-radius:0em; -webkit-border-bottom-right-radius:0em; }
+body.bricks .emptybrick { border:1px solid #999; color:#999; background-color:#fff; }
+
+body.bricks .brick h3 { background:#999;
+                        color:#FFF; margin:0; 
+                        border-bottom:1px solid #999; padding-top:0.20em; padding-bottom: 0.1em; padding-left: 0.8em; 
+                        -moz-border-radius:0 0.6em 0 0; -webkit-border-top-right-radius:0em; }
+body.bricks .emptybrick h3 { color:#999; margin-top:3.5em;
+						line-height:100%; text-align:center;
+						background:transparent; border:0;
+                        font-size:80%; }
+
+body.bricks .brick .brickcontent { font-size:90%; }
+
+body.bricks .brick ul { padding:0.5em; margin:0;  }
+body.bricks .brick li { list-style:none; }
+
+body.bricks .brick p { text-align:left; margin: 0.4em 0.55em; color: #000; }
+
+body.bricks table.bricklist { table-layout:fixed; width:100%; border-collapse:collapse; margin-left: .3em; }
+body.bricks table.bricklist tr { height:1em; padding:0; margin:0; }
+/*body.bricks table.bricklist th, body.bricks table.bricklist td 
+                         { border-bottom:1px solid #99f; }*/
+body.bricks table.bricklist th { text-align:left; }
+body.bricks table.bricklist td { height:1em; padding:0 0 0.1em 0.2em; margin:0; }
+
+div.brick table.cal th { color: black; }
+div.brick table.cal td a { color: black; }
+div.brick table.cal td.weekend a, table.cal th.weekend { color: red; }
+
+body.bricks div.brick form { width:auto;background-color:transparent; padding:0.5em }
+
+body.bricks .row0 { top:0.5em;   }
+body.bricks .row1 { top:8em;     }
+body.bricks .row2 { top:15.5em;  }
+body.bricks .row3 { top:23em;    }
+
+body.bricks .col0 { left:1.5%;    }
+body.bricks .col1 { left:34.5%; }
+body.bricks .col2 { right:1.5%;   }
+
+body.bricks .doublewidth  { width:64%;  }
+body.bricks .doubleheight { height:14em; }
+body.bricks .tripleheight { height:21.5em; }
+body.bricks .quadheight { height:29em; }
+
+body.bricks .brick span.linkwithicon { white-space:normal; }
+
+body.bricks #activetargetsbrick li { width:48%; float:left; margin:0.1em 0;}
+body.bricks #activetargetsbrick {}
+body.bricks .brick input[type="submit"] {background-color: #000; border: 0px solid; color: #fff; cursor: pointer; padding: 3px 15px; font-size: 80%;}
+

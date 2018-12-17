@@ -1,0 +1,11 @@
+Data
+
+Chemicals.csv
+Added:
+PGA-LM,poly-gamma-glutamic acid sodium salt,Precipitant,[CO(CH2)2CH(CO2H)NH]n,30811-79-1,400000,MolComp,other,Y,,,,,,,PGA-LM,Chemical/Biochemical
+
+Default-protocols
+Added:
+PiMS_TrypFluorescence_Quenching.xml
+PiMS_ITC.xml
+PiMS_CD.xml

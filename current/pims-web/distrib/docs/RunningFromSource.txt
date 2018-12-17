@@ -1,0 +1,62 @@
+A normal deployment of PiMS uses a war file, 
+which is compressed and does not contain the java source code. 
+This page explains the alternative, running from a working copy of the source.
+There are two reasons for doing this:
+- you are developing new features, and want to test them quickly
+- you are running a PiMS service for many users, and want to introduce patches easily.
+
+================================================================================
+GETTING PiMS
+================================================================================
+mkdir /git
+cd /git
+git clone https://bitbucket.org/pimsmaster/svn-migrate
+git checkout master
+git checkout -b mybranch
+git push origin mybranch
+cd current/pims-web
+
+================================================================================
+CONFIGURING TOMCAT
+================================================================================
+Install Tomcat and create a file
+   $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+with the contents:
+
+<?xml version='1.0' encoding='utf-8'?>
+<Context docBase="/git/current/pims-web/WebContent" path="/pims">
+</Context>
+
+See README.txt for the <Environment> elements you should put in that <Context>.
+There is a model context file in:
+   distrib/docs/context.xml.example
+
+Also edit $CATALINA_HOME/conf/tomcat-users.xml
+as described in distrib/docs/README.txt.
+
+It is also useful to set autoDeploy="false" in the Host element in:
+   $CATALINA_HOME/conf/server.xml
+
+Then you should be able to start Tomcat, and visit
+   http://localhost:8080/pims/
+and log on as "administrator".
+
+================================================================================
+DEPLOYING UPDATES
+================================================================================
+
+If you are developing in Eclipse, it provides tools to pull updates and compile them.
+Tomcat caches compiled JSPs and tags, usually in
+    $CATALINA_HOME/work/Catalina/localhost/pims
+If you don't see an update, you may need to delete this directory.
+
+If you are not using Eclipse, this script will update your PiMS service:
+
+git fetch origin
+sudo /etc/init.d/tomcat7 stop
+rm -rf $CATALINA_HOME/work/Catalina/localhost/pims # deleted compiled JSPs
+git checkout mybranch
+git merge origin/mybranch
+ant -f pims-web/build.xml compile
+sudo /etc/init.d/tomcat7 start
+

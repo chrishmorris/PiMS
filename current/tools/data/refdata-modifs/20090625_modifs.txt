@@ -1,0 +1,9 @@
+Data
+Chemicals.csv
+Changed:Na2NO3 to NaNO3
+OLD:sodium nitrate,Chile salpeter,Salt,Na2NO3,7631-99-4,84.99,MolComp,other,Y,,Y,,"R8,R22,R36/37/38","S17,S26,S27,S36/37/39","O,Xn",Sodium nitrate,Chemical/Biochemical
+New:sodium nitrate,Chile salpeter,Salt,NaNO3,7631-99-4,84.99,MolComp,other,Y,,Y,,"R8,R22,R36/37/38","S17,S26,S27,S36/37/39","O,Xn",Sodium nitrate,Chemical/Biochemical
+
+NaturalSources.csv
+Added:
+"Mycobacterium tuberculosis H37Rv",83332

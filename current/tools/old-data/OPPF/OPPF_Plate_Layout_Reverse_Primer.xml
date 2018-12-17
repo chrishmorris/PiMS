@@ -1,0 +1,15 @@
+<!-- Layout of Plates protocol xml as flat file -->
+<protocol name="OPPF Plate Layout - Reverse Primers" objective="Design Plate Layout" creationDate="29-05-07" remarks="Based on Lab activities requirements from OPPF" details="The plate is a physival plate that will be kept in fridge" >
+ <experimentType>Import sample</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Reverse Primer Layout Notes" parameterType="String" /> 
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+ 
+</protocol>

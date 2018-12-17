@@ -1,0 +1,782 @@
+ <screen>
+  <screenName>Qiagen AmSO4 screen</screenName>
+  <screenSupplier>Qiagen</screenSupplier>
+  <screenCatNum>130905</screenCatNum>
+  <screenDetails>96 precisely defined chemical solutions.  First set of solutions containaing Ammonium sulphate (1-48, A1-D12) in combination with 48 different salts.  A second set (49-72, E1-F12) containing different concentrations of Ammonium sulphate in combination with various pH conditions.  A third set (73-96, G1-H12) different combinations of co-precipitant, salts and buffers which have proved successful for other proteins.</screenDetails>
+  <screenReference />
+  <screenNumberOfSolutions>96</screenNumberOfSolutions>
+  <solutions>
+   <solution>
+    <solutionId>1</solutionId>
+    <localNum>A01</localNum>
+    <components>
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2</solutionId>
+    <localNum>A02</localNum>
+    <components>
+     <component name="Ammonium Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>3</solutionId>
+    <localNum>A03</localNum>
+    <components>
+     <component name="Ammonium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>4</solutionId>
+    <localNum>A04</localNum>
+    <components>
+     <component name="Ammonium di-Hydrogen Phosphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>5</solutionId>
+    <localNum>A05</localNum>
+    <components>
+     <component name="Ammonium Fluoride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>6</solutionId>
+    <localNum>A06</localNum>
+    <components>
+     <component name="Ammonium Formate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>7</solutionId>
+    <localNum>A07</localNum>
+    <components>
+     <component name="tri-Ammonium Citrate" type="salt" concentration="0.18" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>8</solutionId>
+    <localNum>A08</localNum>
+    <components>
+     <component name="di-Ammonium Hydrogen Phosphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>9</solutionId>
+    <localNum>A09</localNum>
+    <components>
+     <component name="Ammonium Iodide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>10</solutionId>
+    <localNum>A10</localNum>
+    <components>
+     <component name="Ammonium Nitrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>11</solutionId>
+    <localNum>A11</localNum>
+    <components>
+     <component name="di-Ammonium Tartrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>12</solutionId>
+    <localNum>A12</localNum>
+    <components>
+     <component name="Cadmium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>13</solutionId>
+    <localNum>B01</localNum>
+    <components>
+     <component name="Cadmium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>14</solutionId>
+    <localNum>B02</localNum>
+    <components>
+     <component name="Caesium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>15</solutionId>
+    <localNum>B03</localNum>
+    <components>
+     <component name="Caesium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>16</solutionId>
+    <localNum>B04</localNum>
+    <components>
+     <component name="Ammonium Bromide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>17</solutionId>
+    <localNum>B05</localNum>
+    <components>
+     <component name="Lithium Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>18</solutionId>
+    <localNum>B06</localNum>
+    <components>
+     <component name="Lithium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>19</solutionId>
+    <localNum>B07</localNum>
+    <components>
+     <component name="tri-Lithium Citrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>20</solutionId>
+    <localNum>B08</localNum>
+    <components>
+     <component name="Lithium Nitrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>21</solutionId>
+    <localNum>B09</localNum>
+    <components>
+     <component name="Lithium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>22</solutionId>
+    <localNum>B10</localNum>
+    <components>
+     <component name="Potassium Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>23</solutionId>
+    <localNum>B11</localNum>
+    <components>
+     <component name="Potassium Bromide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>24</solutionId>
+    <localNum>B12</localNum>
+    <components>
+     <component name="Potassium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>25</solutionId>
+    <localNum>C01</localNum>
+    <components>
+     <component name="tri-Potassium Citrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>26</solutionId>
+    <localNum>C02</localNum>
+    <components>
+     <component name="Potassium di-Hydrogen Phosphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>27</solutionId>
+    <localNum>C03</localNum>
+    <components>
+     <component name="Potassium Fluoride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>28</solutionId>
+    <localNum>C04</localNum>
+    <components>
+     <component name="Potassium Formate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>29</solutionId>
+    <localNum>C05</localNum>
+    <components>
+     <component name="di-Potassium Hydrogen Phosphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>30</solutionId>
+    <localNum>C06</localNum>
+    <components>
+     <component name="Potassium Iodide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>31</solutionId>
+    <localNum>C07</localNum>
+    <components>
+     <component name="Potassium Nitrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>32</solutionId>
+    <localNum>C08</localNum>
+    <components>
+     <component name="Potassium Sodium Tartrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>33</solutionId>
+    <localNum>C09</localNum>
+    <components>
+     <component name="Potassium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>34</solutionId>
+    <localNum>C10</localNum>
+    <components>
+     <component name="Potassium Thiocyanate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>35</solutionId>
+    <localNum>C11</localNum>
+    <components>
+     <component name="Sodium Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>36</solutionId>
+    <localNum>C12</localNum>
+    <components>
+     <component name="Sodium Bromide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>37</solutionId>
+    <localNum>D01</localNum>
+    <components>
+     <component name="Sodium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>38</solutionId>
+    <localNum>D02</localNum>
+    <components>
+     <component name="tri-Sodium Citrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>39</solutionId>
+    <localNum>D03</localNum>
+    <components>
+     <component name="Sodium di-Hydrogen Phosphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>40</solutionId>
+    <localNum>D04</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>41</solutionId>
+    <localNum>D05</localNum>
+    <components>
+     <component name="Sodium Formate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>42</solutionId>
+    <localNum>D06</localNum>
+    <components>
+     <component name="di-Sodium Hydrogen Phosphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>43</solutionId>
+    <localNum>D07</localNum>
+    <components>
+     <component name="Sodium Iodide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>44</solutionId>
+    <localNum>D08</localNum>
+    <components>
+     <component name="Sodium Malonate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>45</solutionId>
+    <localNum>D09</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>46</solutionId>
+    <localNum>D10</localNum>
+    <components>
+     <component name="Sodium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>47</solutionId>
+    <localNum>D11</localNum>
+    <components>
+     <component name="di-Sodium Tartrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>48</solutionId>
+    <localNum>D12</localNum>
+    <components>
+     <component name="Sodium Thiocyanate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>49</solutionId>
+    <localNum>E01</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="4" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>50</solutionId>
+    <localNum>E02</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>51</solutionId>
+    <localNum>E03</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>52</solutionId>
+    <localNum>E04</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>53</solutionId>
+    <localNum>E05</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>54</solutionId>
+    <localNum>E06</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>55</solutionId>
+    <localNum>E07</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="4" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>56</solutionId>
+    <localNum>E08</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>57</solutionId>
+    <localNum>E09</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>58</solutionId>
+    <localNum>E10</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>59</solutionId>
+    <localNum>E11</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>60</solutionId>
+    <localNum>E12</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>61</solutionId>
+    <localNum>F01</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="4" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.4" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>62</solutionId>
+    <localNum>F02</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.4" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>63</solutionId>
+    <localNum>F03</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.4" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>64</solutionId>
+    <localNum>F04</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.4" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>65</solutionId>
+    <localNum>F05</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.4" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>66</solutionId>
+    <localNum>F06</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.4" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>67</solutionId>
+    <localNum>F07</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="4" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>68</solutionId>
+    <localNum>F08</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>69</solutionId>
+    <localNum>F09</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>70</solutionId>
+    <localNum>F10</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>71</solutionId>
+    <localNum>F11</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>72</solutionId>
+    <localNum>F12</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>73</solutionId>
+    <localNum>G01</localNum>
+    <components>
+     <component name="tri-Sodium Citrate" type="salt" concentration="0.1" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="0.5" concentrationUnits="M" />
+     <component name="Lithium sulphate" type="precipitant" concentration="1.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>74</solutionId>
+    <localNum>G02</localNum>
+    <components>
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>75</solutionId>
+    <localNum>G03</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>76</solutionId>
+    <localNum>G04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.0" concentrationUnits="M" />
+     <component name="Polyethylene Glycol 400" type="precipitant" concentration="2.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>77</solutionId>
+    <localNum>G05</localNum>
+    <components>
+     <component name="Tris-HCl" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>78</solutionId>
+    <localNum>G06</localNum>
+    <components>
+     <component name="tri-Sodium Citrate" type="salt" concentration="0.05" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.2" concentrationUnits="M" />
+     <component name="2-propanol" type="precipitant" concentration="3" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>79</solutionId>
+    <localNum>G07</localNum>
+    <components>
+     <component name="Tris-HCl" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.5" concentrationUnits="M" />
+     <component name="Glycerol" type="precipitant" concentration="15" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>80</solutionId>
+    <localNum>G08</localNum>
+    <components>
+     <component name="Lithium Chloride" type="salt" concentration="0.5" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>81</solutionId>
+    <localNum>G09</localNum>
+    <components>
+     <component name="Lithium Sulphate" type="salt" concentration="1.0" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>82</solutionId>
+    <localNum>G10</localNum>
+    <components>
+     <component name="Sodium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>83</solutionId>
+    <localNum>G11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+     <component name="Polyethylene Glycol 1000" type="precipitant" concentration="2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>84</solutionId>
+    <localNum>G12</localNum>
+    <components>
+     <component name="MES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="1.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>85</solutionId>
+    <localNum>H01</localNum>
+    <components>
+     <component name="Sodium Chloride" type="salt" concentration="2.0" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>86</solutionId>
+    <localNum>H02</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>87</solutionId>
+    <localNum>H03</localNum>
+    <components>
+     <component name="MES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.0" concentrationUnits="M" />
+     <component name="Polyethylene Glycol 400" type="precipitant" concentration="5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>88</solutionId>
+    <localNum>H04</localNum>
+    <components>
+     <component name="Tris-HCl" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>89</solutionId>
+    <localNum>H05</localNum>
+    <components>
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>90</solutionId>
+    <localNum>H06</localNum>
+    <components>
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.2" concentrationUnits="M" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>91</solutionId>
+    <localNum>H07</localNum>
+    <components>
+     <component name="tri-Sodium Citrate" type="salt" concentration="0.1" concentrationUnits="M" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="2.4" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>92</solutionId>
+    <localNum>H08</localNum>
+    <components>
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.0" concentrationUnits="M" />
+     <component name="2-Methyl-2,4-pentanediol" type="precipitant" concentration="1" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>93</solutionId>
+    <localNum>H09</localNum>
+    <components>
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.0" concentrationUnits="M" />
+     <component name="Glycerol" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>94</solutionId>
+    <localNum>H10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.5" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>95</solutionId>
+    <localNum>H11</localNum>
+    <components>
+     <component name="MES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.5" concentrationUnits="M" />
+     <component name="2-Methyl-2,4-pentanediol" type="precipitant" concentration="1" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>96</solutionId>
+    <localNum>H12</localNum>
+    <components>
+     <component name="Ammonium sulphate" type="precipitant" concentration="3.5" concentrationUnits="M" />
+    </components>
+   </solution>
+  </solutions>
+ </screen> 

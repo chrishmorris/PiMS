@@ -1,0 +1,30 @@
+From:	Jon Diprose <jon@strubi.ox.ac.uk>
+Sent:	26 January 2011 16:57
+To:	Morris, Chris (STFC,DL,CSE)
+Subject:	Re: xtalPiMS_WS client code?
+Attachments:	ImageUploader.cs; ImagingTaskProviderNew.cs
+
+Follow Up Flag:	Follow up
+Due By:	27 January 2011 16:00
+Flag Status:	Flagged
+
+Categories:	Important
+
+Hi Chris,
+
+Its .NET, which probably isn't quite what you were after, but its not too dissimilar to Java.
+
+I've attached two classes.
+
+ImagingTaskProviderNew.cs forms part of the extension DLL that RockImager loads. The 
+IImagingTaskProvider.ImagingPlate method is probably most relevant to your needs, as this is the 
+method that calls the imagingPlate method on the web service, which in turn creates the 
+PlateInspection.
+
+ImageUploader.cs is the vast majority of a separate app that tells PiMS about the images. At the point 
+that this code runs, the images themselves have already been written to a web-served folder and the 
+image details written to an xml file. This allows a local image server and remote pims, which I will do 
+if/when Strubi's imagers go to pims.
+
+Jon
+

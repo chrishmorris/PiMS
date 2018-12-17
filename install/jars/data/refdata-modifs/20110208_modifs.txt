@@ -1,0 +1,6 @@
+/tools/data/Default-protocols/PiMS_Diffraction.xml
+Changed:
+OutputSample:
+Modified:
+OLD:  <outputSample sampleCatNamingSys="default" sampleCatName="Post data collection Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Mounted Crystal" />
+New:  <outputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Post data collection Crystal" />

@@ -1,0 +1,4 @@
+WebContent/WEB-INF/classes/*
+test.pdf
+conf/Properties
+pims-web.jar

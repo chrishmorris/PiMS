@@ -1,0 +1,22 @@
+<!-- LIC Transformation protocol xml as flat file -->
+<protocol name="PiMS LIC transformation" objective="Transform E.coli with LIC annealing product, heat shock protocol" creationDate="14-11-06" remarks="Edit protocol for specific cells" details="">
+ <experimentType>Transformation</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Transformed cells" name="Cells" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Incubation conditions" parameterType="String" defaultValue="Incubate 5 min on ice,
+  Heat shock 30 sec,
+  Incubate a further 5 min on ice" />
+  <parameterDefinition id="2" name="Heat shock temperature" parameterType="Float" defaultValue="42" /> 
+  <parameterDefinition id="3" name="Culture conditions" parameterType="String" defaultValue="Incubate 60 min at 37C"/>
+  <parameterDefinition id="4" name="Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Competent cells" amount="0.00005" unit="L" displayUnit="uL" refSample="Nova Blue Singles" name="Competent cells" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="Annealing reaction product" name="LIC-product" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="0.0001" unit="L" displayUnit="uL" refSample="SOC medium" name="Culture media" />
+ </inputSamples>
+
+</protocol>

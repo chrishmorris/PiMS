@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Precipitant.xsd,v 1.3 2006/11/02 08:34:59 lxl Exp $">
+	<xs:complexType name="Precipitant">
+		<xs:annotation>
+			<xs:documentation>Precipitant used in the Crystallisation screen.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of the Precipitant e.g. '2-Methyl-2,4-pentanediol'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="concentration" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>Concentration of the Precipitant in %v/v.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

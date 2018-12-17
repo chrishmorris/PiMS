@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pET-11c Vector</name>
+    <details>N-terminal T7-Tag sequence</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="69436-3"
+        dataPageUrl="http://www.merck-chemicals.com/life-science-research/EMD_BIO-69436/p_uuid"
+        supplier="Novagen" />
+    <sampleComponent name="pET11c" componentCategory="Vector"
+        details="5675bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="5467"
+            endSeq="4607" />
+        <promoterDetails name="T7 Promoter" startSeq="446"
+            endSeq="428" />
+        <markerDetails name="T7-Tag coding sequence" details="MASMTGGQQMG"
+            startSeq="358" endSeq="326" featureType="Tag" />
+        <markerDetails name="Cloning site BamHI"
+            details="BamHI" startSeq="319" endSeq="324"
+            featureType="MCS" />
+        <markerDetails name="pBR322 origin" startSeq="4452" endSeq="3833"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression:NovaBlue[TM], JM109, DH5alpha; Expression: BL21(DE3), and BL21(DE3)pLysS"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

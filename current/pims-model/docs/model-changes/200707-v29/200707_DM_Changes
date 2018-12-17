@@ -1,0 +1,48 @@
+DATA MODEL CHANGES 29
+
+--------------------------------------------------------------------------------
+-- PiMS CORE
+--------------------------------------------------------------------------------
+- PIMS-466 HolderType must have link to supplier
+- Remove Procedure and Step and subclasses of Step in Protocol pkg
+- parameterDefinitions, resultDefinitions, refInputSamples & refOutputSamples must be an ordered list
+- Add derived method hasExperiments() in Protocol
+
+
+--------------------------------------------------------------------------------
+-- PiMS SCHEMA SIMPLIFICATION
+--------------------------------------------------------------------------------
+- Merge ExperimentType / Status / Scoreboard
+- Remove namingSystem attribute in reference data classes
+- Remove unused classes in Holder pkg (see datamodel/docs/sql-review/DBUse_CountReport_Summary.txt)
+  - hold_holdertypeposition
+  - hold_pintype
+  - hold_refsampleposition
+- Remove attribute name in Parameter and make link mandatory between Experiment & Protocol
+- Remove WorkflowItem and add many-to-many link between ExperimentType and Status
+
+--------------------------------------------------------------------------------
+-- PiMS ACCESS CONTROL
+--------------------------------------------------------------------------------
+- Permission table has three columns not in use:
+   permissionclass
+   rolename
+   permission (always TRUE in our database)
+  > Can we drop them?
+
+- value in Permission.optype is always one of these value:
+   "create", "read", "update",  "delete"
+  > Would it be better to have four columns containing either 0 or 1?
+    Then (accessid, usergroupid) could become a key to the table.
+
+--------------------------------------------------------------------------------
+-- DEFERED
+--------------------------------------------------------------------------------
+- PIMS-743 Add a one-to-many link between ExperimentalData and Annotation 
+  - remove link between Annotation and Experiment
+  - remove link between Annotation and ExperimentGroup
+  - remove link between Annotation and Protocol
+  - remove link between Annotation and Target.Project
+  - remove link between Annotation and TargetGroup
+  - remove link between Annotation and Target
+  

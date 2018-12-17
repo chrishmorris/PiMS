@@ -1,0 +1,51 @@
+Protocols
+Changed:
+sampleCatName from "Target -contaiing sample" to "Purified protein"
+/Glasgow/protocols/GLASGOW_Purification.xml
+Old: <outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" name="Protein" amount="" unit="L" displayUnit="mL" refSample=""/>
+New: <outputSample sampleCatNamingSys="default" sampleCatName="Purified protein" name="Protein" amount="" unit="L" displayUnit="mL" refSample=""/>
+
+Changed:
+ExperimentType from Protein purification to Proteolysis or Concentration or Dialysis or Protein production summary
+/Glasgow/protocols/GLASGOW_Cleavage_Reaction.xml
+Old: <experimentType>Protein purification</experimentType>
+New: <experimentType>Proteolysis</experimentType>
+
+/Glasgow/protocols/GLASGOW_Concentrating.xml
+Old: <experimentType>Protein purification</experimentType>
+New: <experimentType>Concentration</experimentType>
+
+/Glasgow/protocols/GLASGOW_Dialysis
+Old: <experimentType>Protein purification</experimentType>
+New: <experimentType>Dialysis</experimentType>
+
+/Glasgow/protocols/GLASGOW_Purification_Overall_results.xml
+Old: <experimentType>Protein purification</experimentType>
+New: <experimentType>Protein production summary</experimentType>
+
+Changed:
+sampleCatName from Primer to "Forward Primer" or "Reverse Primer"
+/OPPF/protocols/OPPF_Verification.xml
+Old:
+  <inputSample sampleCatNamingSys="default" sampleCatName="Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+New:      
+  <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+
+Changed:
+sampleCatName and refSample from Primer to "Forward Primer" or "Reverse Primer"
+
+/SSPF/protocols/PIMS_Hamilton_PCR.xml
+Old:
+  <inputSample sampleCatNamingSys="default" sampleCatName="Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Primer" name="Forward primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Primer" name="Reverse primer" />
+New:
+  <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse primer" />
+  
+Changed:
+protocols/SPOT_Construct_Primer_Design.xml
+remove 4 parameters:
+"Forward Primer", "Reverse Primer", "Forward Primer Tm","Reverse Primer Tm"
+  

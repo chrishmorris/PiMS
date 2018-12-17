@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Crystal.xsd"/>
+	<xs:complexType name="CrystalDetails">
+		<xs:sequence>
+			<xs:element name="projectUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier of the project to ensure the consistency for all the transactions between the different partners.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="crystal" type="tns:Crystal"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="crystalDetails" type="tns:CrystalDetails">
+		<xs:annotation>
+			<xs:documentation>Sequence of CrystalDetails to be submitted before the Shipping</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- added to handle new submitCrystalDetails method -->
+	<xs:element name="submitCrystalDetails" type="tns:CrystalDetails"/>
+</xs:schema>

@@ -1,0 +1,31 @@
+1, Staying up to date:
+All ref-data changes (add, remove, update) should be equally done in standard re-data package (/Data directory under web project), no matter it is created at runtime or not.
+
+2, Logging:
+- All changes should be briefly logged in Data/RefData.log  which as least included following information:
+  Time, for which version, by who, what's changed, which task to apply this change for existed DB	
+  If needed, the full details of the change should be logged in /data/refdata-modifs
+		eg: http://cselnx4.dl.ac.uk/svn/pims/current/pims-web/data/refdata-modifs/20071012_modifs.txt
+
+3, Ref-data loader
+In principle, the loader should handle all the changes when reloading the ref-data file WITHOUT a merge file.
+
+This loader is implemented on demand. Here is the guide for implementation of the loader:
+- it must not create duplicated records when loader is executed more than once. 
+- All ref-data should be recognized by NAME if it is unique (in most cases).
+- After recognized by NAME, it should compare and update all details automatically (not just check the record with same name existed)
+- If the name is changed, the previous names should be added into column/element, "previousName", separated by ';'. (Not fully implemented)
+- If the record is deleted, put "REMOVED" into column/element, "action". (Not implemented)
+- If a record is merged to another record, put "MERGED" into column/element, "action". And put the name of the other record into column/element, "merged to". 
+
+(If you have difficulties to implement a loader please contact Bill.)
+
+4, Other Suggestions:
+- Do not create ref-data with same name but different case. Also, we should add a tool to check this problem in upgrader.
+- Do not create ref-data during runtime  
+- If the function you are writing is rely on certain ref-data, log it in Data/RefData.log as well.
+
+5, Suggested Functions in the future (Again, these will be implemented on demand)
+- Ref-data checking which compare existed ref-data with standard one.
+- Web based ref-data loader and comparer
+- Unified format for ref-data file

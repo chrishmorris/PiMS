@@ -1,0 +1,16 @@
+naming system,id,Instrument,details
+default,ID1,Thermocycler,PIMS template instrument
+default,ID2,Centrifuge,PIMS template instrument
+default,ID3,Water bath,PIMS template instrument
+default,ID4,Heating block,PIMS template instrument
+default,ID5,Shaker,PIMS template instrument
+default,ID6,Gel rig,PIMS template instrument
+default,ID7,Column,PIMS template instrument
+default,ID8,French pressure cell,PIMS template instrument
+default,ID9,Sonicator,PIMS template instrument
+default,ID10,Mass spectrometer,PIMS template instrument
+default,ID11,Light scattering spectrometer,PIMS template instrument
+default,ID12,Spectrophotometer,PIMS template instrument
+default,ID13,High performance cell disruptor,PIMS template instrument
+default,ID14,Concentrator,PIMS template instrument
+default,ID15,Incubator,PIMS template instrument

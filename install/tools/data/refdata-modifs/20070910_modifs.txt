@@ -1,0 +1,12 @@
+ExperimentTypes.csv
+Added: default,Protein production,Purification,Summary of expression and purification details
+Modified: old: default,Crystallization plate inspection,Viewing a crystallization plate
+          new: default,Crystallization plate inspection,Crystallogenesis,Viewing a crystallization plate
+          
+MergedExperimentTypes.csv
+        Added: ,,NEW,default,Protein production,Purification,Summary of expression and purification details
+Modified: old: ,,NEW,default,Crystallization plate inspection,",Viewing a crystallization plate"
+          new: ,,NEW,default,Crystallization plate inspection,Crystallogenesis,Viewing a crystallization plate
+
+StatusToExperimentTypes.csv
+Addded: Protein production,Purified         

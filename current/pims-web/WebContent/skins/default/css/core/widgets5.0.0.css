@@ -1,0 +1,120 @@
+div.collapsiblebox { border:1px solid ##999; background:#999  no-repeat -80px 0px; 
+			margin-bottom:0.75em; margin-top: 0.75em; padding-top: 0.15em; -moz-border-radius:0 0em 0 0em; -webkit-border-top-right-radius:0em; -webkit-border-bottom-left-radius:0em; }
+div.boxheader { padding-bottom: .2em; padding-top: .2em; }
+div.boxheader span.linkwithicon a { color: white; font-weight: normal; }
+div.boxheader span.linkwithicon a:hover { color: #B1D0DF; font-weight: normal; }
+div.collapsiblebox h3 { display:inline; cursor:pointer; padding-left:1.25em; margin:0 1em 0 0.5em; 
+            background:url(../../images/icons/closebox.png) no-repeat 0 1px; color:#fff;
+			-moz-user-select:none; }
+div.collapsiblebox span.extraheader { font-family:verdana,arial,helvetica,sans-serif; font-size:80%; color: white; }
+div.collapsiblebox span.extraheader a { color: white; }
+div.collapsiblebox span.extraheader a[tabindex="1"] { color: black; background-color: yellow }
+div.collapsiblebox span.pagelinks { padding-left: 1.7em; }
+div.collapsiblebox span.pagelinks strong { color: black; }
+div.collapsiblebox span.pagebanner { padding-left: 1.7em; }
+div.collapsiblebox span.paddingless { padding: 0; }
+
+div.collapsiblebox p.empty_parameters { margin:0; padding-left:1.9em; padding-bottom: 0.2em; padding-top: 0.2em; border-bottom:1px solid #999; }
+
+div.collapsiblebox div.boxcontent { font-family:verdana,arial,helvetica,sans-serif; border:1px solid #999;
+                                -webkit-box-shadow: 0 8px 6px -6px #b4b4b4 ; -moz-box-shadow: 0 8px 6px -6px #b4b4b4 ;
+                                box-shadow: 0 8px 6px -6px #b4b4b4 ;
+                                background:white; margin-bottom:0.5em; }
+div.boxcontent label { color: black; font-weight: bold; font-size: 95%;}
+div.containstable { border-top:1px solid #009; border-bottom:1px solid #009; background:white; margin-bottom:0.5em; overflow:scroll; }
+div.fixedbox h3 { background-image:url(../../images/icons/fixedbox.png); cursor:default; }
+div.closedbox h3 { background-image:url(../../images/icons/openbox.png); }
+div.closedbox div.boxcontent { display:none; }
+div.padded div.boxcontent { padding:0.5em; } 
+div.narrowbox { width:58%; }
+div.boxcontent {overflow:auto; }
+div.boxcontent ul { list-style-type: none; margin: 0; padding: 1em 1.2em; }
+div.boxcontent li { margin-bottom: 0.3em; padding: 0; }
+div.boxcontent h4 { padding: 0; margin:0; padding-bottom: .1em; padding-top: .3em; }
+
+div.noscroll div.boxcontent { overflow:visible }
+
+div.collapsiblebox table { width:100%; border:0; border-collapse:collapse }
+div.collapsiblebox table th   { text-align: left; padding-left: 1.9em; padding-bottom: .4em; padding-top: .4em; color: black; border-right:0px solid #999; }
+div.collapsiblebox table td   { text-align: left; padding-left: 1.9em; padding-bottom: .4em; padding-top: .4em; border-right:0px solid #999; }
+div.collapsiblebox table span.linkwithicon { padding: 0; }
+div.collapsiblebox table tr+tr td,
+div.collapsiblebox table tr+tr th	{ border-top: 1px solid #999; }
+div.collapsiblebox table tr th   { border-top: 0px solid #999; }
+div.collapsiblebox table td+td,
+div.collapsiblebox table th+th,
+div.collapsiblebox table th+td		{ border-left:1px solid #999; }
+div.collapsiblebox table tr.latestMilestone td { font-weight:bold; }
+div.collapsiblebox table tr.blastali td, div.collapsiblebox table tr.blastali th {border-top:2px solid #999; }
+
+#externalDbLinks table td+td+td+td+td { padding-left: 2em;}
+#attachments table td+td+td { padding-left: 3.5em;}
+
+div.pagetitle {  left:0; /* was height: 143px; */
+				font-family:helvetica,sans-serif; 
+				background-color:#999999; margin-bottom:0; margin-top: 0.75em; }
+div.pagetitle img.pagetype {  top:5px; left:70px; }
+div.pagetitletext { margin-left:105px; }
+div.pagetitle div.breadcrumbs { font-weight:inherit; color:#fff; margin:0;padding:0.9em 0 0 0; }
+div.pagetitletext div.breadcrumbs a { color:#fff; }
+div.pagetitletext div.breadcrumbs a:hover { color:#B1D0DF; }
+div.pagetitle h1 { font-size: 300%; color:#fff; margin:0.05em 0em 0.05em 0; font-weight: lighter; }
+div.pagetitle .mainicon { float:left; padding-top: 0.45em; padding-left: 1.45em; padding-right: 1.45em; padding-bottom: 0.45em; height: 100% }
+div.pagetitle .actions { font-size:90%; font-weight:normal; }
+div.pagetitle .actions a { color:white; }
+div.pagetitle .actions a[tabindex="1"] { color: black; background-color: yellow }
+div.pagetitle .actions a:hover { color: #B1D0DF; }
+
+span.linkwithicon { white-space:pre; padding-left: .4em;}
+span.linkwithicon img.icon { border:0; padding-right:0.2em; position:relative; top:2px; }
+span.greyedout a { color:#666; text-decoration:none; cursor:default }
+
+img.thumbnail {border:1; height:300px; margin-right: 10px}
+
+/* Calendar widget - NB separate and distinct from pop-up Javascript calendar */
+
+table.cal { font-family:verdana,arial,helvetica,sans-serif; font-size:80%; margin-left: 1.6em; border-collapse:collapse; }
+div.brick table.cal { margin: 0.5em auto; font-size:80%}
+table.cal img { border:0; position:relative;top:1px}
+table.cal td,
+table.cal th { color: white; text-align:center; padding: 0.18em; }
+table.cal td a { width:1.5em; color: white; display:block; text-decoration:none;}
+table.cal td a:hover { background-color:#ccc; text-decoration:underline; }
+table.cal td.weekend a,
+table.cal th.weekend { color:red; }
+table.cal td.today a { background-color: #AAD28C; }
+table.cal .calendar_last { float:left; margin-right:2px; }
+table.cal .calendar_next { float:right; margin-left:2px; }
+
+/*container for calendar in title block*/
+#titlecalendar { font-size:85%;position:relative;top:0em;
+				 background-color:#636363; height: 142px; width: 180px; float:right; }
+
+table.orderplate td { width:8%; }
+
+hr.feature_list { height: 1px; color: #ccf; background-color: #ccf;
+				  clear:both; width:90%; }
+
+
+div.collapsiblebox table.pw_plate, table.pw_plate { width:auto; margin:0.2em; background-color:#fff; border-collapse:collapse; border:1px solid #006; font-family:verdana,arial,helvetica,sans-serif;  -moz-user-select:none; }
+div.collapsiblebox table.pw_plate th, table.pw_plate th { border:none; padding:0.2em; }
+div.collapsiblebox table.pw_plate td, table.pw_plate td { border:1px solid #666; cursor:pointer; }
+div.collapsiblebox table.pw_plate td.selected, table.pw_plate td.selected { background-color:#ff0; }
+div.collapsiblebox table.pw_plate tr.bottom, table.pw_plate tr.bottom { font-size:50%; }
+
+div.threecolumnlist {  }
+div.threecolumnlist div.column {  float:left; width:30%; }
+div.threecolumnlist div.column span.linkwithicon {  display:block; padding: 0em; }
+div.threecolumnlist div.overrideblocklinks span.linkwithicon {  display:inline; }
+
+div.shim { font-size:0; color:transparent; clear:both; }
+
+/* TODO can the content overflow that height? */
+.pw_tabset { width:100%; height:500px;  position:relative;top:0; background-color:#ccf; border:1px solid #006; margin-top:2em; -moz-border-radius:0 0 0.25em 0; -webkit-border-bottom-right-radius:0.25em; }
+.pw_tabset h3.pw_tab { z-index:0; cursor:pointer; float:left; position:relative;top:-1.75em; left:0.5em; background:#ccf url(../../images/widget/boxtopbackground.png) no-repeat -80px 0px; border:1px solid #006; margin:0; padding:0 0.5em; -moz-border-radius:0.25em 0.25em 0 0; -webkit-border-top-left-radius:0.25em; -webkit-border-top-right-radius:0.25em; }
+.pw_tabset .pw_tabbody { z-index:1; width:100%; height:500px; border:1px solid #006; background-color:white; position:absolute; top:-0.5em; left:-5000px; overflow:auto; }
+.pw_tabset .pw_tabbodyInner { padding:1em; }
+.pw_tabset h3.current { background:#006; color:white; cursor:default; }
+.pw_tabset h3.current+div.pw_tabbody { left:-1px; }
+
+*[tabindex=1] {background-color: yellow; font-weight: bold; border: 5px solid #f00; color:black} 

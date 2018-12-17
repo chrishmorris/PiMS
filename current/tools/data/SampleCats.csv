@@ -1,0 +1,60 @@
+namingSystem,name,details
+default,Amphiphile,"Compound with both hydrophilic and hydrophobic groups. e.g. sufactant, detergent, phospholipid"
+default,Antibiotic,Substance which inhibits the growth of a micro-organism
+default,Antibody,Immunoglobulin with defined specificity
+default,Buffer,Buffer for crystallogenesis / purification / etc
+default,Chemical/Biochemical,A Chemical or Biochemical
+default,Chromatography,Reagent for use in chromatography experiments
+default,Cloning kit,Commercial kit for cloning experiments
+default,Crystal,
+default,Competent cells,Cell or cells capable of DNA uptake
+default,Culture media,Liquid or solid substance used for the growth of cells
+default,Detergent,Substance with polar (water soluble) and non-polar(hydrophobic) domains
+default,Electrophoresis,Reagent for use in electrophoresis experiments
+default,Enzyme -restriction,Restriction enzyme
+default,Enzyme -modifying,"Modifying enzyme e.g. kinase, phosphatase, etc."
+default,Enzyme -polymerase,"Polymerase enzyme e.g. Taq, Pfu, Reverse transcriptase, etc. "
+default,Enzyme -ligase,Ligase enzyme
+default,Enzyme -protease, Protease enzyme e.g. TEV
+default,Forward Primer,Used in combination with a Reverse Primer in PCR
+default,Glycerol Stock,Transformed cells preserved for freezing
+default,Growth factor,Protein which stimulates cellular proliferation
+default,Heavy atom reagent,Reagent used for preparing heavy-atom derivatives of protein crystals
+default,Hormone,Substance which regulates celluar functions
+default,Inhibitor,Substance which inhibits the activity of a molecule
+default,InSoluble Protein Sample,
+default,Lipid,"Hydrocarbon containing organic compound, insoluble in water"
+default,Marker,Size standards used in elctrophoreis
+default,Membrane,
+default,Microparticle,"Latex beads, magnetic beads etc."
+default,Microscopy,Reagents for use in microscopy
+default,Mounted Crystal,
+default,Nucleic acid,"DNA, RNA etc."
+default,Nucleic acid purification kit,"Commercial kit for nucleic acid purification"""
+default,Nucleic acid modification kit,"Commercial kit for modifying nucleic acids"""
+default,Nucleotide,"Nucleotide compounds and solutions e.g.dATP, NADP, etc."
+default,Plasmid,A recombinant or insert-containing vector
+default,Primer,e.g. PCR-primer
+default,Pharmacopeia,Drugs and pharmaceuticals
+default,Polyamino acid,Amino acid polymer
+default,Purified protein,"Purified protein, ready for crystallogenesis or further analysis"
+default,Radiochemical,Chemical prepared using a radioactive element
+default,Recombinant Cells,Cells with Target
+default,Reverse Primer,Used in combination with a Forward Primer in PCR
+default,Screen,PIMS default category
+default,Screen solution,Crystallization screen
+default,Solubilised Membrane,
+default,Soluble Protein Sample,
+default,Solution,Solution
+default,Solvent,Solvent
+default,Stains and Dyes,Stains and Dyes
+default,Strain,A strain of an organism
+default,Substrate,Substance acted on by an enzyme
+default,Synthetic gene,A synthesized gene
+default,Vector,"Expression vector, cloning vector, etc."
+default,Vitamins and Derivatives,Vitamins and Derivatives
+default,Transformed cells,Cell or cells which have been modified to contain foreign DNA such as a plasmid: e.g. E.coli transformed with pDEST17
+default,TrialDrop,A drop on a crystallogenesis plate
+default,Kit,Commercial kit
+default,Affinity Resin,Affinity Resin
+default,Standard Sequencing Primer,Standard Primer for Sequencing 

@@ -1,0 +1,18 @@
+<!-- PiMS miniprep protocol xml as flat file -->
+<protocol name="PiMS Miniprep" objective="Purify plasmid from small volume culture" creationDate="11-03-09" remarks="Default set of protocols for PiMS" details="based on use of Qiagen Plasmid mini kit Cat. 12123" >
+ <experimentType>Mini prep</experimentType>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Transformed cells" name="Transformed cells" />
+ </inputSamples>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Purified plasmid" name="Purified plasmid"/>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Culture details" parameterType="String" />
+  <parameterDefinition id="2" name="Kit name" parameterType="String" defaultValue="Qiagen Plasmid midi kit Cat.12123" />
+  <parameterDefinition id="3" name="Yield" parameterType="Float" />
+  <parameterDefinition id="4" name="Concentration ug/ml" parameterType="Float" />
+ </parameterDefinitions>
+ 
+</protocol>

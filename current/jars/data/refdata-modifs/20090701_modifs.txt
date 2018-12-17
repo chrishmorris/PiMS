@@ -1,0 +1,5 @@
+Data
+ExperimentTypes.csv
+Added:
+default,Cell stock,,Preparative experiment,Recording a cell stock
+default,Plasmid stock,,Preparative experiment,Recording a plasmid stock

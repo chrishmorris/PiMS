@@ -1,0 +1,51 @@
+================================================================================
+PiMS RELEASE v3.3-1
+DATABASE REVISION NUMBER 39.
+PURPOSE: Add indexes
+================================================================================
+
+PIMS-2805   Model Changes for 3.3
+    
+--------------------------------------------------------------------------------    
+IMPLEMENTED (x) TODO (-) DEFERED (#)
+--------------------------------------------------------------------------------    
+x Rename table TRAG_RESEARCHOBJECTIVEELEMENT to TARG_RESEARCHOBJECTIVEELEMENT
+
+- PIMS-2811   UserGroup.members should be dropped
+  > Rename UserGroup.memberUsers to members (see TODO comment)
+  
+- PIMS-2887 Change attribute name supHolder to parentHolder in AbstractHolder
+  > confusing with subHolders (see TODO comment)
+  
+- PIMS-2807 Link between RefSampleSource and RefHolder is inappropriate
+  > remove link between RefSample and RefHolder
+  > add new RefHolderSource class in holder package to link RefHolder and Organisation
+
+- PIMS-1506 Order of Input Samples
+
+- PIMS-2851   RefSampleSource should require RefSample    
+
+- PIMS-2775   Odd constructor for org.pimslims.model.molecule.Construct   
+
+- PIMS-2728   Need to record the target and the Construct on Experiment view 
+
+INDEXES
+- PIMS-2886 Clean indexes in example database
+- PIMS-2834   no index on M-M table            
+
+PERSON
+- PIMS-2527   Merge Person and User    
+- PIMS-238 Person records need a uniqueness constraint (old defect326)
+  > add emailAddress attribute as the unique identifier of Person
+- PIMS-1151   People who are not users should be handled differently 
+
+PERMISSION
+- PIMS-2810   Class Permission can be simplified
+  > remove current attributes permissionClass, opType, roleName and permission
+  > add boolean attributes create, read, update and delete
+  > add uniqueness constraint on (accessId, usergroupId)
+  see discussion http://www.dl.ac.uk/list-archive-public/data-model-change/msg00490.html
+
+    
+
+    

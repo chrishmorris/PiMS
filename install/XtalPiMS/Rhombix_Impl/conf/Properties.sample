@@ -1,0 +1,27 @@
+# properties for the data model
+# Copy this to a file called "Properties".
+# You are advised to set a password.
+
+
+# Rhombix connection
+# Note that port is usually 1521
+# The line below was for a tunnel made with Putty
+#  L5521 xxx.xxx.xxx.xxx:1521
+
+rh.url = jdbc:oracle:thin:@localhost:5521/Rhombix
+
+# There are standard values for most Rhombix installations:
+rh.className = oracle.jdbc.driver.OracleDriver
+rh.service = Rhombix
+rh.username =  
+rh.password =  
+# Ask ThermoElectron or chris.morris@stfc.ac.uk for username and password
+
+# PiMS connection
+db.className = org.postgresql.Driver
+db.url = jdbc:postgresql://localhost/V4_2
+#db.url = jdbc:postgresql://localhost/test
+db.name = test
+db.username = postgres
+db.password = 
+

@@ -1,0 +1,24 @@
+<!-- CS Eukaryotic Cloning protocol xml as flat file -->
+<protocol name="CS Eukaryotic Cloning" objective="Clone PCR products" creationDate="02-02-07" >
+ <experimentType>Cloning</experimentType>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.0" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="0.000001" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -restriction" amount="0.0000004" unit="L" displayUnit="uL" refSample="Enzyme -restriction" name="Restriction Enzyme PCR 5'" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -restriction" amount="0.0000004" unit="L" displayUnit="uL" refSample="Enzyme -restriction" name="Restriction Enzyme PCR 3'" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -restriction" amount="0.0000004" unit="L" displayUnit="uL" refSample="Enzyme -restriction" name="Restriction Enzyme Vector 1" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -restriction" amount="0.0000004" unit="L" displayUnit="uL" refSample="Enzyme -restriction" name="Restriction Enzyme Vector 2" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.0" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Plasmid Map" parameterType="String" />
+  <parameterDefinition id="1" name="__SEQUENCE" label="Sequencing Result" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+ </parameterDefinitions>
+ 
+</protocol>
+

@@ -1,0 +1,450 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.upgrader.DatabaseUpdater" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/DatabaseUpdater.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="279" y="1275" width="275" height="874"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.DataFixer" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/DataFixer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="610" y="37" width="260" height="202"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.DebugMessageHandler" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/DebugMessageHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="227" y="37" width="131" height="122"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Messages" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Messages.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="2005" y="37" width="103" height="58"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.upgrader.ModelUpdateVersion" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/ModelUpdateVersion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="45" y="1275" width="194" height="154"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.upgrader.ModelUpdateVersionImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/ModelUpdateVersionImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="45" y="681" width="332" height="554"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.RefDataTool" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/RefDataTool.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="418" y="37" width="152" height="90"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.RevisionNumber" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/RevisionNumber.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="67" y="37" width="99" height="138"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="2561" y="37" width="211" height="74"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1787" y="279" width="171" height="122"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList.update_v12" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="3182" y="681" width="152" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList.Update_v20" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="2367" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList.Update_v23" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="2800" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList.update_v10" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="2175" y="681" width="152" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList.update_v9" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="2994" y="681" width="148" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.SpecialUpgraderList.updateTableName_v_test" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="2561" y="681" width="199" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v24" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v24.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1205" y="681" width="154" height="138"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v26" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v26.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1787" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v27" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v27.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="805" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v28" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v28.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="417" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v29" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v29.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1981" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v30" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v30.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1399" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v31" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v31.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="611" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v32_33" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v32_33.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="999" y="681" width="166" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v32_33.PDComparator" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v32_33.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="999" y="1275" width="117" height="58"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v34" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v34.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1593" y="681" width="154" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Update_v34.PDComparator" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Update_v34.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1593" y="1275" width="117" height="58"/>  
+  </class>  
+  <class language="java" name="org.pimslims.upgrader.Upgrader" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/upgrader/Upgrader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1322" y="37" width="231" height="106"/>  
+  </class>  
+  <class language="java" name="org.pimslims.dao.AbstractModel" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="514" y="279" width="258" height="362"/>  
+  </class>  
+  <class language="java" name="org.pimslims.dao.WritableVersionImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/WritableVersionImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="45" y="279" width="295" height="346"/>  
+  </class>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v30" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v30.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.update_v9" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <bendpoint x="2787" y="279"/>  
+  </nesting>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v34" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v34.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.Update_v34.PDComparator" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v34.java" binary="false"/>  
+  </nesting>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v26" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v26.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.update_v10" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v32_33" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v32_33.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false">      
+      <attribute name="muv"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.upgrader.ModelUpdateVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/upgrader/ModelUpdateVersionImpl.java" binary="false"/>  
+  </association>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.update_v10" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <bendpoint x="2377" y="279"/>  
+  </nesting>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v24" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v24.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.Update_v23" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <bendpoint x="2689" y="279"/>  
+  </nesting>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.upgrader.RefDataTool" 
+      file="/pims-model/src/java/org/pimslims/upgrader/RefDataTool.java" binary="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.AbstractModel" 
+      file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false"/>  
+  </association>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.update_v12" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <bendpoint x="2880" y="279"/>  
+  </nesting>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.updateTableName_v_test" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <bendpoint x="2570" y="279"/>  
+  </nesting>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.upgrader.ModelUpdateVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/upgrader/ModelUpdateVersionImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.ModelUpdateVersion" 
+      file="/pims-model/src/java/org/pimslims/upgrader/ModelUpdateVersion.java" binary="false"/>  
+  </realization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v29" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v29.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.Update_v20" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <bendpoint x="2473" y="279"/>  
+  </nesting>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.Update_v23" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v28" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v28.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v34" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v34.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.update_v9" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.upgrader.DataFixer" 
+      file="/pims-model/src/java/org/pimslims/upgrader/DataFixer.java" binary="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.AbstractModel" 
+      file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false"/>  
+  </association>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v32_33" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v32_33.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.Update_v32_33.PDComparator" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v32_33.java" binary="false"/>  
+  </nesting>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.Update_v20" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.upgrader.ModelUpdateVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/upgrader/ModelUpdateVersionImpl.java" binary="false">      
+      <attribute name="dbUpdater"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.upgrader.DatabaseUpdater" 
+      file="/pims-model/src/java/org/pimslims/upgrader/DatabaseUpdater.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v27" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v27.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.updateTableName_v_test" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.Update_v31" 
+      file="/pims-model/src/java/org/pimslims/upgrader/Update_v31.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.update_v12" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.upgrader.ModelUpdateVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/upgrader/ModelUpdateVersionImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.WritableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/WritableVersionImpl.java" binary="false"/>  
+  </generalization>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.upgrader.SpecialUpgraderList.SpecialUpgrader" 
+      file="/pims-model/src/java/org/pimslims/upgrader/SpecialUpgraderList.java" binary="false"/>  
+  </nesting>
+</class-diagram>

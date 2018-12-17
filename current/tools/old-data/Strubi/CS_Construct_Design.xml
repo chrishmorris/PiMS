@@ -1,0 +1,16 @@
+<!-- CS Construct Primer Design protocol xml as flat file -->
+<protocol name="CS Construct Design" objective="" creationDate="02-02-07" >
+ <experimentType>Optic Construct Design</experimentType>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.0" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Forward Site" parameterType="String" />
+  <parameterDefinition id="2" name="Forward Annealing Temp" parameterType="Float" />
+  <parameterDefinition id="3" name="Reverse Site" parameterType="String" />
+  <parameterDefinition id="4" name="Reverse Annealing Temp" parameterType="Float" />
+ </parameterDefinitions>
+ 
+</protocol>

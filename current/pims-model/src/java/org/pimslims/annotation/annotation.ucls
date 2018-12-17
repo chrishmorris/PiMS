@@ -1,0 +1,32 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <annotation language="java" name="org.pimslims.annotation.Attribute" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/annotation/Attribute.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="322" y="212" width="105" height="170"/>  
+  </annotation>  
+  <annotation language="java" name="org.pimslims.annotation.MetaClass" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/annotation/MetaClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="171" y="212" width="111" height="122"/>  
+  </annotation>  
+  <annotation language="java" name="org.pimslims.annotation.Role" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/annotation/Role.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="467" y="212" width="116" height="186"/>  
+  </annotation>
+</class-diagram>

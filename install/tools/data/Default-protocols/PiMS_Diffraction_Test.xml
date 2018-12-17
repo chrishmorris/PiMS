@@ -1,0 +1,26 @@
+<!-- PiMS Diffraction Test protocol xml as flat file -->
+<protocol name="PiMS Diffraction Test" objective="Collect test diffraction images of crystal" creationDate="03-02-11" remarks="Default set of protocols for PiMS" details="Test crystal quality before visiting beamline" >
+ <experimentType>Diffraction</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Mounted Crystal" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Mounted Crystal" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Quality" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Space group" parameterType="String" isMandatory="false" label="Indication of the space group for the crystal" />  
+  <parameterDefinition id="3" name="a " parameterType="Float" isMandatory="false" displayUnit="Angstroms" label="Unit cell axis a" />
+  <parameterDefinition id="4" name="b " parameterType="Float" isMandatory="false" displayUnit="Angstroms" label="Unit cell axis b" />
+  <parameterDefinition id="5" name="c " parameterType="Float" isMandatory="false" displayUnit="Angstroms" label="Unit cell axis c" />
+  <parameterDefinition id="6" name="alpha" parameterType="Float" isMandatory="false" label="Unit cell inclination angle alpha" />
+  <parameterDefinition id="7" name="beta" parameterType="Float" isMandatory="false" label="Unit cell inclination angle beta" />
+  <parameterDefinition id="8" name="gamma" parameterType="Float" isMandatory="false" label="Unit cell inclination angle gamma" />
+  <parameterDefinition id="9" name="x" parameterType="Float" isMandatory="false" label="Rotation axis x" />
+  <parameterDefinition id="10" name="y" parameterType="Float" isMandatory="false" label="Rotation axis y" />
+  <parameterDefinition id="11" name="z" parameterType="Float" isMandatory="false" label="Rotation axis z" />
+ </parameterDefinitions>
+
+</protocol>
+

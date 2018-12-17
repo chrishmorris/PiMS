@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPING-Hygro Vector</name>
+    <details>Derived from pTriEx2/Ampicillin, N-Term cleavable
+        secretion leader sequence, C-Term His Tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource supplier="OPPF" />
+    <sampleComponent name="pOPING-Hygro"
+        componentCategory="Vector" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>In-Fusion[TM] Multisystem Expression
+            Vector</function>
+        <resistanceDetails name="Ampicillin" />
+        <resistanceDetails name="Hygromycin" />
+        <markerDetails name="N-Term cleavable secretion leader sequence"
+            details="MGILPSPGMPALLSLVSLLSVLLMGCVA|ETG" featureType="Leader sequence"
+            status="not cleaved" />
+        <markerDetails name="C-Term His Tag sequence"
+            details="KHHHHHH" featureType="Tag" />
+    </sampleComponent>
+</vector>

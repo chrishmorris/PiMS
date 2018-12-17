@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Protein.xsd,v 1.7 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="Laboratory.xsd"/>
+	<xs:include schemaLocation="SafetyHazards.xsd"/>
+	<xs:include schemaLocation="Polymer.xsd"/>
+	<xs:include schemaLocation="NonPolymer.xsd"/>
+	<xs:complexType name="Protein">
+		<xs:annotation>
+			<xs:documentation>Information about the Safety and content of a Protein, sent by the user to the Crystallisation center. If the Crystallisation center accepts to receive this Protein, a Shipping XML file will be sent later.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="proteinUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier for this Protein.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>A human-readable name for this Protein e.g. 'Protein X - Native'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="acronym" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>An acronym for the protein e.g. 'FCY1'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="volume" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Volume of the protein in microliter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="safetyHazards" type="tns:SafetyHazards" minOccurs="0"/>
+			<xs:element name="polymer" type="tns:Polymer" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="nonPolymer" type="tns:NonPolymer" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="protein" type="tns:Protein"/>
+</xs:schema>

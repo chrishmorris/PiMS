@@ -1,0 +1,31 @@
+/* suspected obsolete */
+/* 
+   This CSS file is used to disable forms.
+   It is loaded after forms.css by Header.jspf 
+   if the user does not have permission to edit the object on display
+*/
+
+.required { color:red; }
+.requiredlegend { color:#006 }
+
+img.icon { border:0 } 
+
+form { background-color:#fff; color:#006; width:35em; padding-bottom:0.5em; } 
+
+form.singlebutton       { display:none;   }
+form.cancel             { display:none;  }
+form.cancel input       { display:none;  }
+form.abandon            { display:none;  }
+form.abandon input      { display:none;  }
+
+/* Form input fields and labels */
+
+input {border: none}
+textarea {border: none; background-color:#ccf;}
+
+input.submit              { display:none;}
+input.exp_submitall_button {display:none;}
+img.dateSelector          { display:none;}
+			   
+
+form.searchform {  display: block; }

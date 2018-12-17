@@ -1,0 +1,259 @@
+================================================================================
+Changes Re-Design
+================================================================================
+List of last changes to implement for 2.3 - reviewed with Bill on Tue 30/09/2008 - prioritized by Chris on Wed 01/10/2008
+================================================================================
+Changes agreed for implementation. [this week]
+================================================================================
+Annotation.
+- add mimeType attribute
+- add title & legend attribute
+
+Access.
+- mv AccessObject link from BaseClass to LabBookEntry
+
+Reference.
+- rm Scoreboard
+- mark problem many-to-many methods as deprecated
+
+ApplicationData.
+- put back.
+
+Other changes.
+- mv Instrument to experiment
+- mv Method to experiment
+- rename package refSampleComponent to Molecule
+- rename MolCompFeature into MoleculeFeature
+- rm in protocol pkg Procedure, Step, WaitStep, TemperatureStep
+- merge target & expBlueprint packages
+- rename TargetProject into Project
+- rename ExpBlueprint into ResearchObjective
+
+================================================================================
+Other changes. [November]
+================================================================================
+Reference.
+- implement change from many-to-many links to one-to-many one way link
+  HolderCategory/AbstractHolder, SampleCategory/AbstractSample, InstrumentType/{Procedure, Instrument}, ComponentCategory/AbstractComponent
+- add Chemical in reference
+- rm @Deprecated
+
+Access Control.
+- simplify Permission
+   - remove current attributes permissionClass, opType, roleName and permission
+   - add boolean attributes create, read, update and delete
+   - add uniqueness constraint on (accessId, usergroupId)
+- restricted access: provide guarantees to “Harry Lyons” or confidentiality; support more complicated permissions as at MPL
+
+MostRecentEntry.
+- implement
+
+User configuration.
+- propose new model
+
+Other changes.
+- rename Annotation to File
+- merge AbstractComponent & MolComponent into Molecule
+- rm link between Milestone & ExpBlueprint
+
+================================================================================
+Team Discussion Thur 28/08/2008.
+================================================================================
+- report MostRecentEntry & HomePage
+   - MostRecentEntry: remove FK to LabBookEntry in order to be able to delete LabBookEntry without dependency on HistoryEntry or ...
+- think of merging Person & User
+- implement reference model changes
+    - rename NaturalSource to Organism
+    - merge Scoreboard and TargetStatus
+    - classification class not needed
+    - make links to reference package only one way (no need to getSamples from SampleCategory)
+- put back application data
+- implement access control model changes
+- change Annotation.description to TEXT to be able to store legend of image including line breaks
+
+
+PublicEntry.
+see picture model-reference.png
+
+MostRecentEntry.
+see picture model-core.png
+
+ResearchObjective.
+see pictures model-target.png
+
+================================================================================
+List of changes.
+================================================================================
+Core changes (to be implemented next week 18-22 August 2008).
+Focus on 01 to 08 first: simplification of implementation package, deletion of Project, renaming of MemopsBaseClass into BaseClass and creation of name and details properties in BaseClass and removing them from subclasses.
+
+Package.
+-01- rename implementation to core
+-02- rm ApplicationData & subclasses
+-03- rm ContentStored, DataLocation, Storage, NormalStorage, ContentStorage
+-04- rm AbstractStorage & Project
+-05- rm Url
+
+BaseClass & LabBookEntry.
+-06- rename MemopsBaseClass to BaseClass
+-07- add property name & details in BaseClass
+-08- rm all name & details properties in subclasses of BaseClass
+-09- add link between User & LabBookEntry called author
+-10- rm links Experiment.creator, Protocol.creator, DropAnnotation.annotator, ExpBlueprint.owner, Image.creator, Sample.assignTo, Target.creator, Annotation.author
+-11- add link between User & LabBookEntry called lastEditor & add lastEditedDate
+-12- rm Protocol.lastEditor, Protocol.lastEditedDate, Experiment.lastEditor, Experiment.lastEditedDate
+-13- rm all project property in subclasses of BaseClass
+-14- create LabBookEntry in core
+-15- change extends BaseClass to LabBookEntry for most of the classes (except future reference classes)
+-16- create AttachmentEntry with date and author property as subclass of BaseClass
+-17- add one-to-many parent link between LabBookEntry and AttachementEntry.
+-18- add extra methods in LabBookEntry for getAnnotations(), getNotes(), getCitations() & getExternalDbLinks() and also addAnnotation(), addNote(), addCitation() & add ExternalDbLink()
+
+Annotation.
+-19- mv Annotation to core - extends AttachmentEntry
+-20- rm Annotation links to ExperimentGroup, Experiment, TargetGroup, TargetProject, Target, Protocol. Replace by link to LabBookEntry
+-21- rm Annotation.date
+
+Citation.
+-22- mv Citation to core & subclasses - extends AttachmentEntry
+-23- rm Citation links to Person (change to String), Method, Protocol, Software, Target. Replace by link to LabBookEntry
+-24- rm in Citation attr casAbstractCode, doi, medlineUiCode, pubMedId. >>> ??? do we need these ??? <<<
+-25- rm Citation.keywords
+
+DbRef.
+-26- mv DbRef to core and rename to ExternalDbLink - extends AttachmentEntry
+-27- rm ExternalDbLink links to TargetGroup, Target. Replace by link to LabBookEntry
+
+Note.
+-28- create Note class with relatedEnties link to LabBookEntry - extends AttachmentEntry
+
+Access.
+-29- simplify Permission
+-30- mv AccessObject link from BaseClass to LabBookEntry
+
+
+Reference changes.
+- create package reference
+- mv DbName to reference
+- rm dbRef package
+- mv HolderCategory, InstrumentType, ComponentCategory, ExperimentType, HazardPhrase, SampleCategory, Scoreboard, Status (rename TargetStatus), NaturalSource into reference
+- rm riskAssessment package
+- rm taxonomy package
+- create PublicEntry in reference
+- mv WorkflowItem into reference
+- rm namingSystem attribute (not normalised) in reference package
+- add Classification & link to PublicEntry
+- rm HazardPhrase.classification
+- add Chemical in reference
+
+Other changes.
+- mv Instrument to experiment
+- mv Method to experiment
+- rename package refSampleComponent to Molecule
+- merge AbstractComponent & MolComponent into Molecule
+- rename MolCompFeature into MoleculeFeature
+- rm Procedure, Step, WaitStep, TemperatureStep
+- merge target & expBlueprint packages
+- rename TargetProject into Project
+- rm link between Milestone & ExpBlueprint
+
+todo: holder, location, schedule & crystallization package
+new model located here: https://www.pims-lims.org/svn/pims/developers/pajon/pims-model/new/
+
+================================================================================
+Team Discussion Fri 15/08/2008.
+================================================================================
+- Note/Annotation discussion
+    - discussion on cardinality of the link between Annotation & LabBookEntry: one-to-many or many-to-many?
+    - discussion on inheritance tree of Note, Citation & Annotation: investigate if could be grouped under AttachmentEntry?
+
+================================================================================
+Team Discussion Thu 14/08/2008.
+================================================================================
+- Finalize draft on full model with list of changes - send it around
+- If changes agreed tomorrow, may implement them next week.
+
+================================================================================
+Team Discussion Wed 13/08/2008.
+================================================================================
+- Note/Annotation - no need to be under access control because their parents are LabBookEntry
+>>> group Note & Annotation
+
+- Citation - do we need it? problem with list of Authors that cluttered Person table
+>>> now just stored as a single string
+
+- Modification (Audit trail)/LabBookEntry
+>>> add link
+Each time a sample concentration is changed - how to do this?
+Modification should be one record per transaction
+Last edit date in LabBookEntry should be good enough for now
+Look at postgresql package to have log of changes
+Useful to know who's done what - so need maybe more than postgresql log
+To keep track of changes in Protocol or Experiment
+Maybe useful to have something like subversion in future for PiMS in order to go back to last week stage
+
+- External database link
+>>> rename to ExternalDbLink
+
+- PublicEntry is fine but should be used carefully
+>>> put DbName, Chemicals, SampleCategory, ExperimentType,...
+
+New diagrams needed
+- Experiment Group
+>>> Simple experiment is a group experiment of one. Link protocol to experiment group
+
+- Full model included draft proposed changes to see impact
+
+- Customization - storing home page & history
+>>> deferred to next code camp
+
+================================================================================
+Team Discussion Tue 12/08/2008.
+================================================================================
+- Person/User
+>>> replace Person by User
+
+- Note should not subclass BaseClass
+
+- Image can inherit from Attachment or maybe group them together
+
+- Access control lonked to LabBookEntry
+
+- ToDo - not needed yet
+
+More drawings needed
+
+
+Changes.
+Associate file
+- add a many-to-many link between Annotation to current MemopsBaseClass and remove current links to individual classes Target, TargetProject, TargetGroup, Experiment, ExperimentGroup and Protocol.
+
+Citation
+- having Citation that extends Annotation (File, DbRef, Text extends Annotation)
+
+Annotation
+- make Citation and DbRef subclasses of Annotation (Annotation can be free text, file, citation, or external database)
+
+Target
+- remove link between Milestone and ExpBlueprint and create an helper method getMilestones in ExpBlueprint
+
+Reference data
+- remove namingSystem attribute in all type/category classes as it is not normalized (in packages: Holder, Instrument, Protocol, SampleComponent, Sample, Target)
+
+Application Data
+- remove
+
+Access Control
+- remove current attributes permissionClass, opType, roleName and permission
+- add boolean attributes create, read, update and delete
+- add uniqueness constraint on (accessId, usergroupId)
+
+Implementation/core
+- remove in org.pimslims.model.implementation NormalStorage, Storage, AbstractStorage, ContentStore, ContentStorage, DataLocation
+- remove org.pimslims.model.implementation.Project [never being used - always being set to ChemComp!]
+- rename MemopsBaseClass into BaseClass
+- add LabEntry and PublicEntry as subclasses of BaseClass
+- add attributes description, details and createDate in LabEntry
+- remove attributes description, details and createDate in subclasses of LabEntry
+- add links from LabEntry to Annotation (many-to-many) and Person (many-to-one for creator)
+- remove links to Annotation and Person in subclasses of LabEntry

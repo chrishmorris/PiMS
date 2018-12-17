@@ -1,0 +1,6 @@
+Data
+Chemicals.csv
+Changed: Sample category for ampicillin (sodium)carbenicillin
+
+Old: ampicillin (sodium),,Antibiotic,C16H18N3NaO4S,69-52-3,371.4,MolComp,other,Y,,Y,3,"R36/37/38,R42/43","S22,S26,S36/37","Xn",Ampicillin (sodium),Chemical/Biochemical
+New: ampicillin (sodium),,Antibiotic,C16H18N3NaO4S,69-52-3,371.4,MolComp,other,Y,,Y,3,"R36/37/38,R42/43","S22,S26,S36/37","Xn",Ampicillin (sodium),Antibiotic

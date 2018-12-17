@@ -1,0 +1,23 @@
+Data
+NaturalSources.csv
+Added: Natural sources for model organisms and tutorial organisms
+"Arabidopsis thaliana",3702
+"Caenorhabditis elegans",6239
+"Danio rerio",7955
+"Dictyostelium discoideum",44689
+"Drosophila melanogaster",7227
+"Homo sapiens",9606
+"Mus musculus",10090
+"Mycoplasma pneumoniae",2104
+"Oryza sativa",4530
+"Plasmodium falciparum",5833
+"Pongo pygmaeus",9600
+"Pseudomonas aeruginosa",287
+"Rattus norvegicus",10116
+"Saccharomyces cerevisiae",4932
+"Salmonella typhimurium LT2",99287
+"Schizosaccharomyces pombe",4896
+"Staphylococcus aureus",1280
+"Thermotoga maritima",2336
+"Xenopus laevis",8355
+"Zea mays",4577

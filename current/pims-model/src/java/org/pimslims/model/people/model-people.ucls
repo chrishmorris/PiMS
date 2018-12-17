@@ -1,0 +1,146 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.people.Group" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Group.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="468" y="571" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.Organisation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Organisation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="729" y="551" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.Person" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="342" y="277" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.PersonInGroup" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/PersonInGroup.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="133" y="592" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.accessControl.User" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="301" y="73" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.ResearchObjective" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="726" y="172" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.Sample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="4" y="296" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false">      
+      <attribute name="users"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false">      
+      <attribute name="person"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.people.PersonInGroup" 
+      file="/pims-model/src/java/org/pimslims/model/people/PersonInGroup.java" binary="false">      
+      <attribute name="group"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Group" 
+      file="/pims-model/src/java/org/pimslims/model/people/Group.java" binary="false">      
+      <attribute name="personInGroups"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="assignTo"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false">      
+      <attribute name="currentGroup"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Group" 
+      file="/pims-model/src/java/org/pimslims/model/people/Group.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.people.Group" 
+      file="/pims-model/src/java/org/pimslims/model/people/Group.java" binary="false">      
+      <attribute name="organisation"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Organisation" 
+      file="/pims-model/src/java/org/pimslims/model/people/Organisation.java" binary="false">      
+      <attribute name="groups"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.people.PersonInGroup" 
+      file="/pims-model/src/java/org/pimslims/model/people/PersonInGroup.java" binary="false">      
+      <attribute name="person"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false">      
+      <attribute name="personInGroups"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.target.ResearchObjective" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false">      
+      <attribute name="owner"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false"/>  
+  </association>
+</class-diagram>

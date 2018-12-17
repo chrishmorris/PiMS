@@ -1,0 +1,96 @@
+Hi Jon,
+
+I'd be happy to help you in any way I can. Please feel free to ring my cell
+phone anytime with questions or shoot me an email directly.
+
+In terms of providing written documentation, I could probably focus on that
+next week or two. Would it be ok if I answered your questions over the phone
+until that time?
+
+I've tried to answer your questions from your email below.
+
+Hopefully talk to you soon,
+-Khalid
+
+Of the five providers, you only have to implement four (one is implemented
+by a RockImager dll for optional use by you). Of the four Provider
+interfaces, different sets are required for our two apps: RockImager which
+collects the images from the camera, and the RockImagerProcessor (RIP)
+stores all of the images in your database/imagestore.
+
+
+RockImager uses:
+IPlateInfoProvider - Provides container specs and user displayed plate info.
+IImagingTaskProvider - Provides and tracks the schedule to image each plate.
+ICaptureProvider - (Optional) Provides the override settings for imaging.
+
+RockImagerProcessor uses:
+IPlateInfoProvider - Provides user displayable plate info. (See above.)
+IImageProcessorProvider - Factory for biz objects that can save images.
+
+(Optional) Used by your RockMaker equivalent:
+ICaptureProfileControlProvider - Implemented by RockImager and used by your
+application, provides a control that can be used by an admin user to create
+Capture Profiles: overrides optics/camera settings.
+
+
+Each application has to be configured to use the implementation of each
+Provider using settings in the file "<app>\Extensions.config". The apps try
+to call System.Reflection.Assembly.LoadFrom() on each dll in the
+"<app>\Extensions" directory, so you can spread your providers across
+multiple dll's if you'd like.
+
+RockImager and the RIP generally pull information about plates and
+schedules, and as much as possible will try to fill in the blanks. The apps
+push back information about when a scheduling was satisfied, the images,
+optics/camera settings used during a capture, etc.
+
+The methods of IPlateInfoProvider are required to display information to the
+user about the plate. You should provide as much detail of the plate as
+possible. If you don't have a field, let me know and we may be able to
+figure out a value you can substitute for the user instead: for example, our
+other customer simply returns the barcode for GetPlateID().
+
+The methods of IImagingTaskProvider are required to get schedule
+information. FYI, the ImagingID you create is returned later in the RIP. If
+your IImageProcessorProvider doesn't use ImagingID, we can work out
+something for this value as well.
+
+The ICaptureProvider must be implemented, but can be rendered relatively
+inert by returning <null> the methods. For example, if you don't specify the
+list of drops to image by returning an ICapturePointList, RockImager will
+simply use the IPlateInfoProvider to lookup the plate definition and image
+all drops in the plate.
+
+The RIP uses the IImageProcessorProvider slightly differently. The RIP
+basically informs the Provider that the RIP has a stack of images for a
+Region (some X/Y in space) and a specific Profile (a set of optics/camera
+settings). The IImageProcessorProvider then returns a new IImageProcessor,
+upon which the RIP then calls SetCaptureInfo() once, and SetImageInfo() for
+however many images there are. Afterwards, IImageProcessor.Dispose() is
+called if you'd like to do any cleanup.
+
+The frequency of plugin use varies. For example, the containers are only
+retrieved on startup of RockImager. The plate information is retrieved the
+first time RockImager "sees" the plate, so it could be on startup or during
+a barcode scan of the plate. The RIP retrieves plate information for every
+region/profile, but we could cache that information if the load is too much
+for your database.
+
+The schedule information is retrieved quite often, including: for all plates
+shortly after startup, the first time a plate is seen, whenever a user opens
+a plate's schedule popup, whenever a plate is imaged, and on a low priority
+background thread in a semi-roundrobin fashion. This thread is currently set
+to- Run, Sleep 5 seconds, then Loop- but the sleep time could be configured
+to whatever you want.
+
+The ICaptureProfileControlProvider is probably the most complicated Provider
+to use since it is consumed by your .exe. If you'd like to discuss
+implementing user configurable optics/camera settings, we can work on this
+together. We may want to get basic communication running first, since we can
+always plug that in as a next step.
+
+Sorry, that's the latest version of the "docs". I'll document the extension
+more, however please call me in the short term if you need more detail than
+the answers above.
+

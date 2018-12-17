@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE MetaInformation [
+<!-- obsolete -->
+<!ELEMENT TITLE (#PCDATA)>
+
+<!ELEMENT HELPTEXT (#PCDATA)>
+
+<!ELEMENT RoleName EMPTY>
+<!ATTLIST RoleName
+	name CDATA #REQUIRED
+	alias CDATA "">
+
+<!ELEMENT MetaRoles ((HIDDEN)?,(RENAMED)?)>
+
+<!ELEMENT RENAMED  (RoleName)+>
+
+<!ELEMENT HIDDEN ((RoleName)*,(MetaAttribute)*)>
+<!ATTLIST HIDDEN all CDATA "">
+
+<!ELEMENT ExampleValue (#PCDATA)>
+
+<!ELEMENT alias (#PCDATA)>
+
+<!ELEMENT DefaultValue (#PCDATA)>
+<!ATTLIST DefaultValue type CDATA "">
+
+<!ELEMENT HelpText (#PCDATA)>
+
+<!ELEMENT MetaAttribute ((alias)?,(ExampleValue)?,(HelpText)?,(DefaultValue)?,(HelpText)?)>
+<!ATTLIST MetaAttribute
+	name CDATA #REQUIRED
+	mandatory CDATA ""
+	derived CDATA ""
+	isChangeable CDATA "">
+
+<!ELEMENT MetaAttributes ((HIDDEN)?,(MetaAttribute)*)>
+
+<!ELEMENT METACLASS ((alias)?,(TITLE)?,(HELPTEXT)?,(MetaRoles)?,(MetaAttributes)?)>
+<!ATTLIST METACLASS name CDATA #REQUIRED>
+
+<!ELEMENT METACLASSES (METACLASS)+>
+
+<!ELEMENT MetaInformation (METACLASSES)>
+
+]>
+<MetaInformation><!-- obsolete -->
+	<METACLASSES>
+
+		<!--1. No MetaAttributes defined, MetaRole hidden partly, one MetaRole renamed -->
+		<METACLASS name="org.pimslims.model.sample.Sample">
+			<MetaRoles>
+				<HIDDEN>
+					<RoleName name="crystalSample" />
+					<RoleName name="localRiskPhrases" />
+					<RoleName name="rPhrases" />
+				</HIDDEN>
+				<RENAMED>
+					<RoleName alias="reagent specification"
+						name="conformsTo" />
+				</RENAMED>
+			</MetaRoles>
+		</METACLASS>
+	
+		<!--2. No hidden metaroles, 4 renamed, Metaclass renamed, help text redefined
+			no MetaAttributes defined -->
+		<METACLASS name="org.pimslims.model.sample.RefSample">
+			<alias>Reagent Reference Information</alias>
+			<HELPTEXT>several
+			 lines help 
+			 help help 
+			 text
+			 </HELPTEXT>
+			<MetaRoles>
+				<RENAMED>
+					<RoleName alias="conforming samples"
+						name="conforming" />
+					<RoleName alias="catalogue entries"
+						name="refSampleSources" />
+				</RENAMED>
+			</MetaRoles>
+		</METACLASS>
+
+		<!--3. No MetaRoles redefined, one Attribute hidden, two renamed  -->
+		<METACLASS name="org.pimslims.model.experiment.ImportSample">
+			<MetaAttributes>
+				<HIDDEN>
+					<MetaAttribute name="lastEditedDate" />
+				</HIDDEN>
+				<MetaAttribute name="details" mandatory="false">
+					<alias>new details</alias>
+					<HelpText>This should be the gene name of the protein</HelpText>
+				</MetaAttribute>
+				<MetaAttribute name="status" mandatory="true">
+					<alias>renamed status</alias>
+					<ExampleValue>TestValue</ExampleValue>
+				</MetaAttribute>
+				<MetaAttribute name="startDate" mandatory="false" derived="true" isChangeable="false">
+					<alias>renamed start Date</alias>
+					<ExampleValue>TestValue</ExampleValue>
+  				 <DefaultValue type="String">123456</DefaultValue>
+				</MetaAttribute>
+			</MetaAttributes>
+		</METACLASS>
+
+		<!--4. All roles hidden. Some renamed but this should not counts in the Create -->
+		<METACLASS name="org.pimslims.model.protocol.Protocol">
+			<MetaRoles>
+				<HIDDEN all="true"/>
+				<RENAMED>
+					<RoleName name="experimentType" alias="sdjkfhsdjfh"/>
+				</RENAMED>
+			</MetaRoles>
+		</METACLASS>
+	
+		<!--5. No Roles section, one attribute renamed -->
+		<METACLASS name="org.pimslims.model.protocol.WaitStep">
+			<MetaAttributes>
+				<HIDDEN>
+					<MetaAttribute name="stepNumber" />
+				</HIDDEN>
+			</MetaAttributes>
+		</METACLASS>
+
+	</METACLASSES>
+</MetaInformation>
+

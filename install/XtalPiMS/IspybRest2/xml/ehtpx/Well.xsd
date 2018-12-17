@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+                
+    <xs:include schemaLocation="Crystal.xsd"/>
+    <xs:include schemaLocation="Protein.xsd"/>                
+    
+    <xs:element name="well" type="tns:Well"/>
+    
+    <xs:complexType name="Well">
+        <xs:sequence>
+            <xs:element name="wellId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="classification" type="xs:string" minOccurs="0"/>
+            <xs:element name="rowPosition" type="xs:int" minOccurs="0"/>
+            <xs:element name="colPosition" type="xs:int" minOccurs="0"/>
+            <xs:element name="subPosition" type="xs:int" minOccurs="0"/>
+            <xs:element name="createDate" type="xs:date" minOccurs="0"/>
+            <xs:element name="url" type="xs:string" minOccurs="0"/>
+            <xs:element name="protein" type="tns:Protein" minOccurs="0"/>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="crystals" type="tns:Crystal"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:complexType>            
+</xs:schema>

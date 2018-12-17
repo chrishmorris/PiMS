@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vector" type="vectorType" />
+    
+    <!-- Complex defined types -->
+    <xs:complexType name="vectorType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="1" />
+            <xs:element name="details" type="xs:string" minOccurs="0" />
+            <xs:element name="sampleCategory" type="xs:string" minOccurs="1" />
+            <xs:element name="refSampleSource" minOccurs="0">
+                <xs:complexType>
+                    <xs:attribute name="supplier" type="xs:string" use="required" />
+                    <xs:attribute name="catalogNum" type="xs:string"/>
+                    <xs:attribute name="dataPageUrl" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sampleComponent" type="sampleComponentType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="creationDate" type="xs:dateTime" minOccurs="0" />
+            <xs:element name="exportDate" type="xs:dateTime" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="sampleComponentType">
+        <xs:sequence>
+            <xs:element name="function" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="resistanceDetails" type="moleculeFeatureType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="promoterDetails" type="moleculeFeatureType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="markerDetails" type="moleculeFeatureType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="componentCategory" type="xs:string" use="required" />
+        <xs:attribute name="details" type="xs:string" />
+        <xs:attribute name="molType" type="xs:string" use="required" />
+        <xs:attribute name="sequenceType" type="xs:string" use="required" />
+        <xs:attribute name="constructStatus" type="xs:string" />
+    </xs:complexType>
+    
+    <xs:complexType name="moleculeFeatureType">
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="startSeq" type="xs:int" />
+            <xs:attribute name="endSeq" type="xs:int" />
+            <xs:attribute name="featureType" type="xs:string"/>
+            <xs:attribute name="status" type="xs:string"/>
+            <xs:attribute name="details" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

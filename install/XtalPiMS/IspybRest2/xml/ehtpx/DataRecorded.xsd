@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="SweepInformation.xsd"/>
+	<xs:element name="dataRecorded" type="tns:DataRecorded">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="DataRecorded">
+		<xs:sequence>
+			<xs:element name="template" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>For instance foo_bar_1_###.img</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="directory" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Directory where the data was recorded. This may well be an SRB address</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jpegThumbnailURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL to the thumbnail jpeg image</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jpegURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL to the jpeg image</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="tns:sweepInformation"  minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

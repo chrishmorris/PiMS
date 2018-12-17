@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- Generate beans. I'm not clear whether DLS use this or not __Chris -->
+<project name="CodegenExample" default="main" basedir=".">	
+
+    <property name="wsdl" location="${basedir}/xml" />
+    <property name="generated" location="${basedir}/generated/" />
+    <property name="lib.path" location="${basedir}/lib" />
+    <property name="lib.web.path" location="${basedir}/WebContent/WEB-INF/lib" />
+	
+<path id="classpath">
+	<pathelement location="${basedir}/build/classes"/> 
+  <fileset dir="${lib.path}">
+        <include name="*.jar" />
+  </fileset>
+  <fileset dir="${lib.web.path}">
+        <include name="*.jar" />
+  </fileset>
+</path>
+    
+<target name="declare" >
+  <taskdef name="codegen"
+     classname="org.apache.axis2.tool.ant.AntCodegenTask"
+     classpathref="classpath"/>
+</target>
+	
+<target name="clean">
+	        <delete dir="${generated}" />
+	        <mkdir dir="${generated}" />
+</target>
+   
+<target name="main" depends="declare, clean">
+	<!-- TODO databindingName=xmlbeans, , ,targetSourceFolderLocation  -->
+<codegen
+  wsdlfilename="${basedir}/xml/IspybService.wsdl"
+  output="${generated}"
+  serverSide="true"
+  generateAllClasses="true"
+  serversideinterface="true"	
+  wsdlVersion="2"
+  packageName="org.pimslims.ispyb.generated"
+	
+  syncOnly="true"
+  testcase="true"
+	generateservicexml="true"
+  />
+</target>
+	
+</project>

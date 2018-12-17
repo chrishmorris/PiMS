@@ -1,0 +1,22 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="Entry clone" objective="Gateway Entry Clone design" creationDate="07-02-07" remarks="Used by construct management"  >
+ <experimentType>Entry clone</experimentType>
+
+ <outputSamples>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="sample1"/>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="sample2"/>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Clone Saver"/>
+ </outputSamples>
+  <parameterDefinitions>
+  <!-- <parameterDefinition id="1" name="Marker" parameterType="String" defaultValue="" /> -->
+  <parameterDefinition id="1" name="Antibiotic resistances" parameterType="String" defaultValue="" />
+  <parameterDefinition id="2" name="Restriction sites" parameterType="String" defaultValue=""/>
+ </parameterDefinitions>
+
+<inputSamples>
+	<inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="" unit="L" displayUnit="uL" refSample="Reverse primer" name="Reverse Primer" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" unit="L" displayUnit="uL" refSample="Forward primer" name="Forward Primer" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL"  name="Vector" />
+</inputSamples>
+
+</protocol>

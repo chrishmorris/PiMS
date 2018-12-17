@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Crystal.xsd,v 1.8 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="CrystallisationSolution.xsd"/>
+	<xs:include schemaLocation="Protein.xsd"/>
+	<xs:complexType name="Crystal">
+		<xs:annotation>
+			<xs:documentation>The Crystal type contains information about the Crystal physical properties : dimensions, color,... but also information about its content : Polymer, Non-Polymer.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="crystalUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The globally unique code of the Crystal ensures a correct identification between the different partners. It could be defined by the crystallisation centre. Thus, contrary to a Polymer 'id' for instance, this code is not only unique within this XML file !</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>A human-readable name for this Crystal e.g. 'Protein X - Native'</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spacegroup" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The spacegroup number. Symmetry operator
+          information can be looked up from this number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Undefined"/>
+						<xs:enumeration value="P1"/>
+						<xs:enumeration value="P2"/>
+						<xs:enumeration value="P21"/>
+						<xs:enumeration value="C2"/>
+						<xs:enumeration value="P222"/>
+						<xs:enumeration value="P2221"/>
+						<xs:enumeration value="P21212"/>
+						<xs:enumeration value="P212121"/>
+						<xs:enumeration value="C222"/>
+						<xs:enumeration value="C2221"/>
+						<xs:enumeration value="F222"/>
+						<xs:enumeration value="I222"/>
+						<xs:enumeration value="I212121"/>
+						<xs:enumeration value="P4"/>
+						<xs:enumeration value="P41"/>
+						<xs:enumeration value="P42"/>
+						<xs:enumeration value="P43"/>
+						<xs:enumeration value="P422"/>
+						<xs:enumeration value="P4212"/>
+						<xs:enumeration value="P4122"/>
+						<xs:enumeration value="P41212"/>
+						<xs:enumeration value="P4222"/>
+						<xs:enumeration value="P42212"/>
+						<xs:enumeration value="P4322"/>
+						<xs:enumeration value="P43212"/>
+						<xs:enumeration value="I4"/>
+						<xs:enumeration value="I41"/>
+						<xs:enumeration value="I422"/>
+						<xs:enumeration value="I4122"/>
+						<xs:enumeration value="P3"/>
+						<xs:enumeration value="P31"/>
+						<xs:enumeration value="P32"/>
+						<xs:enumeration value="P312"/>
+						<xs:enumeration value="P321"/>
+						<xs:enumeration value="P3112"/>
+						<xs:enumeration value="P3121"/>
+						<xs:enumeration value="P3212"/>
+						<xs:enumeration value="P3221"/>
+						<xs:enumeration value="P6"/>
+						<xs:enumeration value="P61"/>
+						<xs:enumeration value="P65"/>
+						<xs:enumeration value="P62"/>
+						<xs:enumeration value="P64"/>
+						<xs:enumeration value="P63"/>
+						<xs:enumeration value="P622"/>
+						<xs:enumeration value="P6122"/>
+						<xs:enumeration value="P6522"/>
+						<xs:enumeration value="P6222"/>
+						<xs:enumeration value="P6422"/>
+						<xs:enumeration value="P6322"/>
+						<xs:enumeration value="R3"/>
+						<xs:enumeration value="R32"/>
+						<xs:enumeration value="P23"/>
+						<xs:enumeration value="P213"/>
+						<xs:enumeration value="P432"/>
+						<xs:enumeration value="P4232"/>
+						<xs:enumeration value="P4332"/>
+						<xs:enumeration value="P4132"/>
+						<xs:enumeration value="F23"/>
+						<xs:enumeration value="F432"/>
+						<xs:enumeration value="F4132"/>
+						<xs:enumeration value="I23"/>
+						<xs:enumeration value="I213"/>
+						<xs:enumeration value="I432"/>
+						<xs:enumeration value="I4132"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="morphology" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the shape of the crystal e.g. 'Hexagon'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="color" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the colour of the crystal. May be
+          useful for assessing crystal deterioration, or perhaps
+          something like redox state.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="imageUrl" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Url to an image of the crystal provided by the crystallisation centre.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="x" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of x dimension of crystal in millimeter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="y" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of y dimension of crystal in millimeter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="z" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of z dimension of crystal in millimeter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="a" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of Cell axis a in angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="b" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of Cell axis b in angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="c" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of Cell axis c in angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="alpha" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Angle between Cell axis b and c in degree.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="beta" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Angle between Cell axis a and c in degree.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gamma" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Angle between Cell axis a and b in degree.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resolution" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The crystal reolution if known.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="protein" type="tns:Protein"/>
+			<xs:element name="crystallisationSolution" type="tns:CrystallisationSolution" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

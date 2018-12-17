@@ -1,0 +1,30 @@
+================================================================================
+PiMS RELEASE v3.0-1
+DATABASE REVISION NUMBER 35.
+PURPOSE: Using JPA without HB mappings and hbGetter/Setter
+================================================================================
+
+Changes needed for moving mapping information from hibernate mapping files to JPA 
+
+- scheduledtime       
+  sche_scheduledtask's scheduledtime vchar to timestamptz  
+
+- order_ int8 to int4     
+  order_ int8 to int4 in cita_citation, cryz_parade_possva, meth_software_tasks, 
+  peop_orga_addresses, peop_persingr_phonnu, peop_person_middin, prot_parade_possva, 
+  prot_protocol_remarks, refs_abstco_keywords, refs_abstco_synonyms, targ_target_aliases 
+
+- drop serials & drop uniqueConstraints   
+  uniqueConstraints in anno_annotation, cita_citation, cryz_parameter, cryz_parameterdefinition,
+  dbr_dbref, expb_blueprintcomponent, expb_expblueprint, expe_experimentgroup, expe_inputsample,
+  expe_outputsample, serial, hold_holderlocation, hold_holdertypeposition, impl_applicationdata,
+  impl_datalocation, impl_storage, impl_url, inst_instrument, loca_location, meth_method, 
+  meth_parameter, peop_group, peop_person, peop_personingroup, prot_procedure, prot_refinputsample,
+  prot_refoutputsample, prot_step, prot_workflowitem, refs_molcompfeature, sam_samplecomponent,
+  targ_milestone, targ_project, taxo_naturalsource, impl_storage
+    
+- rename classes 
+  To avoid same class short name, rename classes: 
+  org.pimslims.model.crystallization.Parameter ->CyParameter 
+  org.pimslims.model.crystallization.ParameterDefinition->CyParameterDefinition 
+  org.pimslims.model.method.Parameter->MethodParameter  

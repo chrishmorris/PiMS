@@ -1,0 +1,119 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.exception.AbortedException" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/exception/AbortedException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="71" y="167" width="205" height="90"/>  
+  </class>  
+  <class language="java" name="org.pimslims.exception.AccessException" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/exception/AccessException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="316" y="167" width="151" height="90"/>  
+  </class>  
+  <class language="java" name="org.pimslims.exception.ConstraintException" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/exception/ConstraintException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="507" y="167" width="245" height="170"/>  
+  </class>  
+  <class language="java" name="org.pimslims.exception.DuplicateKeyConstraintException" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/exception/DuplicateKeyConstraintException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="680" y="377" width="290" height="90"/>  
+  </class>  
+  <class language="java" name="org.pimslims.exception.ModelException" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/exception/ModelException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="316" y="37" width="140" height="90"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.dao.ReadableVersion" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="45" y="377" width="252" height="650"/>  
+  </interface>  
+  <interface language="java" name="org.pimslims.metamodel.ModelObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/ModelObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="337" y="377" width="303" height="442"/>  
+  </interface>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.exception.AbortedException" 
+      file="/pims-model/src/java/org/pimslims/exception/AbortedException.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.exception.ModelException" 
+      file="/pims-model/src/java/org/pimslims/exception/ModelException.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.exception.ConstraintException" 
+      file="/pims-model/src/java/org/pimslims/exception/ConstraintException.java" binary="false">      
+      <attribute name="object"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.ModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/ModelObject.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.exception.DuplicateKeyConstraintException" 
+      file="/pims-model/src/java/org/pimslims/exception/DuplicateKeyConstraintException.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.exception.ConstraintException" 
+      file="/pims-model/src/java/org/pimslims/exception/ConstraintException.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.exception.AccessException" 
+      file="/pims-model/src/java/org/pimslims/exception/AccessException.java" binary="false">      
+      <attribute name="object"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.ModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/ModelObject.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.exception.ConstraintException" 
+      file="/pims-model/src/java/org/pimslims/exception/ConstraintException.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.exception.ModelException" 
+      file="/pims-model/src/java/org/pimslims/exception/ModelException.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.exception.AccessException" 
+      file="/pims-model/src/java/org/pimslims/exception/AccessException.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.exception.ModelException" 
+      file="/pims-model/src/java/org/pimslims/exception/ModelException.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.exception.AbortedException" 
+      file="/pims-model/src/java/org/pimslims/exception/AbortedException.java" binary="false">      
+      <attribute name="version"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.ReadableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false"/>  
+  </association>
+</class-diagram>

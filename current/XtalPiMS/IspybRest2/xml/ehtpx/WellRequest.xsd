@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="wellRequest" type="tns:WellRequest"/>
+    
+    <xs:complexType name="WellRequest">
+        <xs:sequence>
+            <xs:element name="trayId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="rowPos" type="xs:int" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="colPos" type="xs:int" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="subPosition" type="xs:int" minOccurs="1" maxOccurs="1"/>            
+        </xs:sequence>
+    </xs:complexType>     
+
+</xs:schema>

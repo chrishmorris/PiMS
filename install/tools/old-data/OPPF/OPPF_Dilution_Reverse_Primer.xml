@@ -1,0 +1,16 @@
+<!-- Layout of Plates protocol xml as flat file -->
+<protocol name="OPPF Dilution - Reverse Primer" objective="Dilute Primer for PCR" creationDate="29-05-07" remarks="Based on Lab activities requirements from OPPF" details="Dilute the primers before PCR" >
+ <experimentType>Preparative experiment</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Reverse Dilution Notes" parameterType="String" /> 
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000010" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" amount="0.000090" unit="L" displayUnit="uL" refSample="Buffer" name="Buffer" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+ 
+</protocol>

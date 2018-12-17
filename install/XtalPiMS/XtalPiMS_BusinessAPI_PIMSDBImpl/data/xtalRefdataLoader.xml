@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<project name="FatJar RefDataLoader.jar " default="xtalRefDataLoader.jar" basedir=".">
+    <!-- this file was created by Fat-Jar Eclipse Plug-in -->
+    <!-- the ANT-Export is in a very early stage, so this -->
+    <!-- is only experimental, ANT 1.6 or above is        -->
+    <!-- required, feedback is always welcome:            -->
+    <!--       http://sourceforge.net/projects/fjep       -->
+
+    <property name="jar.dir" 	value="${basedir}" />
+    
+     <target name="xtalRefDataLoader.jar">
+        <fatjar.build onejar="true" output="${jar.dir}\xtalRefDataLoader.jar">
+            <fatjar.manifest mainclass="org.pimslims.crystallization.refdata.RefDataInserter"/>
+            <fatjar.filesource path="${basedir}\..\bin" relpath="">
+            </fatjar.filesource>
+             <fatjar.jarsource file="${basedir}\..\lib\xtalPiMS_API.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\pims-web.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\pims-tools.jar" relpath=""/>
+	
+        	<fatjar.jarsource file="${basedir}\..\lib\pims-model.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\antlr-2.7.6rc1.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\asm.jar" relpath=""/>
+
+            <fatjar.jarsource file="${basedir}\..\lib\cglib-2.1.3.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\commons-collections-3.0.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\commons-logging-1.0.4.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\dom4j-1.6.1.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\ehcache-1.2.3.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\hibernate3.jar" relpath=""/>
+          	<fatjar.jarsource file="${basedir}\..\lib\hibernate-annotations.jar" relpath=""/>
+           	<fatjar.jarsource file="${basedir}\..\lib\ejb3-persistence.jar" relpath=""/>
+         	<fatjar.jarsource file="${basedir}\..\lib\jdom.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\log4j-1.2.11.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\postgresql-8.1-405.jdbc3.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\jta.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\c3p0-0.9.1.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\javassist.jar" relpath=""/>
+            <fatjar.jarsource file="${basedir}\..\lib\hibernate-entitymanager.jar" relpath=""/>
+ 			<fatjar.jarsource file="${basedir}\..\lib\hibernate-commons-annotations.jar" relpath=""/>
+        </fatjar.build>
+    </target>
+    
+      <target name="Load xtalRefData1_0(From Jar)" description="Run xtalRefDataLoader  by using Jar" depends="xtalRefDataLoader.jar">
+		<exec  failOnError="true" executable="java">
+			<arg line="-jar -enableassertions -Xms64m -Xmx256m ${jar.dir}\xtalRefDataLoader.jar ${basedir}\..\conf\Properties ${basedir}\" />
+		</exec>
+	</target>
+	
+
+</project>

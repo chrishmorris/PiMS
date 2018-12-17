@@ -1,0 +1,17 @@
+<!-- CS Prokaryotic Expression Trial protocol xml as flat file -->
+<protocol name="CS Prokaryotic Expression Trial" objective="Small Scale Expression of Target Protein" creationDate="02-02-07" >
+ <experimentType>Small scale expression</experimentType>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.0" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="0.0" unit="L" displayUnit="uL" refSample="Protein" name="Protein" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="__MW" label="Soluble Expression Level" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="2" name="__IMW" label="InSoluble Expression Level" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="3" name="Observer Molecular Weight (kDa)" parameterType="Int" defaultValue="" isMandatory="false" />
+ </parameterDefinitions>
+ 
+</protocol>

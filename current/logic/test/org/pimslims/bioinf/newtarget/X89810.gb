@@ -1,0 +1,290 @@
+LOCUS       X89810                  6811 bp    DNA     linear   BCT 18-APR-2005
+DEFINITION  B.subtilis DNA for araABDLMNPQ-abfA operon.
+ACCESSION   X89810 REGION: complement(1..6811)
+VERSION     X89810.1  GI:1913925
+KEYWORDS    abfA gene; alpha-L-arabinofuranosidase; araL gene; araM gene; araN
+            gene; araP gene; araQ gene; integral membrane protein;
+            sugar-binding protein; terminator.
+SOURCE      Bacillus subtilis
+  ORGANISM  Bacillus subtilis
+            Bacteria; Firmicutes; Bacillales; Bacillaceae; Bacillus.
+REFERENCE   1
+  AUTHORS   Sa-Nogueira,I., Nogueira,T.V., Soares,S. and de Lencastre,H.
+  TITLE     The Bacillus subtilis L-arabinose (ara) operon: nucleotide
+            sequence, genetic organization and expression
+  JOURNAL   Microbiology (Reading, Engl.) 143 (PT 3), 957-969 (1997)
+   PUBMED   9084180
+REFERENCE   2  (bases 1 to 6811)
+  AUTHORS   Sa-Nogueira,I.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (19-JUL-1995) I. Sa-Nogueira, Instituto de Teconologia
+            Quimica e Biologica, Rua da Quinta Grande n. 6, Apt 127, P- 2780
+            Oeiras Codex, PORTUGAL
+COMMENT     Related sequence X89408.
+FEATURES             Location/Qualifiers
+     source          1..6811
+                     /organism="Bacillus subtilis"
+                     /mol_type="genomic DNA"
+                     /strain="168T+"
+                     /db_xref="taxon:1423"
+                     /map="256 degrees"
+     terminator      complement(75..94)
+                     /note="putative"
+     terminator      complement(107..144)
+                     /note="putative"
+     gene            complement(145..1663)
+                     /gene="abfA"
+     CDS             complement(145..1647)
+                     /gene="abfA"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative alpha-L-arabinofuranosidase"
+                     /protein_id="CAA61937.1"
+                     /db_xref="GI:1913931"
+                     /db_xref="GOA:P94531"
+                     /db_xref="InterPro:IPR010720"
+                     /db_xref="InterPro:IPR013781"
+                     /db_xref="InterPro:IPR017853"
+                     /db_xref="UniProtKB/Swiss-Prot:P94531"
+                     /translation="MKKARMIVDKEYKIGEVDKRIYGSFIEHMGRAVYEGIYEPDHPE
+                     ADEDGFRKDVQSLIKELQVPIIRYPGGNFLSGYNWEDGVGPVENRPRRLDLAWQTTET
+                     NEVGTNEFLSWAKKVNTEVNMAVNLGTRGIDAARNLVEYCNHPKGSYWSDLRRSHGYE
+                     QPYGIKTWCLGNEMDGPWQIGHKTADEYGRLAAETAKVMKWVDPSIELVACGSSNSGM
+                     PTFIDWEAKVLEHTYEHVDYISLHTYYGNRDNNLPNYLARSMDLDHFIKSVAATCDYV
+                     KAKTRSKKTINLSLDEWNVWYHSNEADKKVEPWITARPILEDIYNFEDALLVGSLLIT
+                     MLQHADRVKIACLAQLVNVIAPIMTEKGGEAWRQPIFYPYMHASVYGRGESLKPLISS
+                     PKYDCSDFTDVPYVDAAVVYSEEEETLTIFAVNKAEDQMETEISLRGFESYQIAEHIV
+                     LEHQDIKATNQHNRKNVVPHSNGSSSVSENGLTAHFTPLSWNVIRLKKQS"
+     RBS             complement(1660..1663)
+                     /gene="abfA"
+     gene            complement(1666..2511)
+                     /gene="araQ"
+     CDS             complement(1666..2511)
+                     /gene="araQ"
+                     /function="component of a high affinity transport system
+                     for L-arabinose and/or L-arabinose oligomers"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative integral protein"
+                     /protein_id="CAA61936.1"
+                     /db_xref="GI:1913930"
+                     /db_xref="GOA:P94530"
+                     /db_xref="InterPro:IPR000515"
+                     /db_xref="UniProtKB/Swiss-Prot:P94530"
+                     /translation="MLRHSPQFSVYRIALTLFFMMLSLLYLFPIFCLLLGSLKPSSEL
+                     LRVGLNLDIDPKVMSFDNYTFLFNGGSIYFKWFFNSLVLGLFTTVLTLFFSSMIGYGL
+                     AVYDFKGRNIIFVLVLIIMMVPLEVMMLPLFKLTVGLHLIDSYTGVILPFIVSPVAVF
+                     FFRQYALGLPRDLLDSARMDGCTEFGIFFRIMAPLMKPAFGAMIILQSLNSWNNFLWP
+                     LIVLRSKEMFTLPIGLSSLLSPYGNNYDMLISGSVFAILPVIIIFLFFQKYFISGLTV
+                     GGVKG"
+     gene            complement(order(2512..3453,3461..3463))
+                     /gene="araP"
+     CDS             complement(2512..3453)
+                     /gene="araP"
+                     /function="component of a high affinity transport system
+                     for L-arabinose and/or L-arabinose oligomers"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative integral membrane protein"
+                     /protein_id="CAA61935.1"
+                     /db_xref="GI:1913929"
+                     /db_xref="GOA:P94529"
+                     /db_xref="InterPro:IPR000515"
+                     /db_xref="UniProtKB/Swiss-Prot:P94529"
+                     /translation="MKPVKTGTVHPVPSAAKQSGWRDLFYSKKAAPYLFTAPFVLSFL
+                     VFFLYPIISVFIMSFQRILPGEVSFVGLSNYTALNNPTFYTALWNTLEYTFWTLIVLI
+                     PVPLLLAIFLNSKLVKFRNIFKSALFIPALTSTIVAGIIFRLIFGEMETSLANSILLK
+                     LGFSPQNWMNNEHTGMFLMVLLASWKWMGINILYFLAGLQNVPKELYEAADIDGANTM
+                     KKFLHITLPFLKPVTVYVLTISIIGGFRMFEESYVLWQNNSPGNIGLTLVGYLYQQGL
+                     AYNEMGYGAAIGIVLLIVILVVSLISLKLSGSFKGEG"
+     gene            complement(2524..2526)
+                     /gene="araQ"
+     RBS             complement(2524..2526)
+                     /gene="araQ"
+     RBS             complement(3461..3463)
+                     /gene="araP"
+     gene            complement(3489..4804)
+                     /gene="araN"
+     CDS             complement(3489..4790)
+                     /gene="araN"
+                     /function="component of a high affinity transport system
+                     for L-arabinose and/or L-arabinose oligomers"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative sugar-binding protein"
+                     /protein_id="CAA61934.1"
+                     /db_xref="GI:1913928"
+                     /db_xref="GOA:P94528"
+                     /db_xref="InterPro:IPR006059"
+                     /db_xref="UniProtKB/Swiss-Prot:P94528"
+                     /translation="MKKMTVCFLVLMMLLTLVIAGCSAEKSSGKSGETELTFWTFNGL
+                     HEQFYVEMVKEWNKKYPDRKIKLNTVVYPYGQMHDNLSISLIAGEGVPDIADVELARF
+                     SNFLKGSDIPLADLTPLIEKDRDKFVEARLTLYSKNGKLYGLDTHVGTTVMFYNMDVM
+                     KKAGVNPDDIKTWDDYHKAGQKVRKVTGKPMGTVETNDSATFLSMISQQNSGYFDKNG
+                     KLILNNDTNVKTLQYLKDMINDKTMIPAPGGGHHSEEYYGFMNQGGAASVLMPIWYMG
+                     RFIDYMPDLKGKIAIRPLPAWKEGGDRSAGLGGTATVVPKQSKHVELAKEFLAFAKGS
+                     EEGNKKLWSVLGFDPLRWDVWSSKELKEKNKYTDYFQNGTGIFSVLLDIKDEINPIYL
+                     HEDFAKASDLVNRSVLFDALKSQQKTPKQALDRAAGELKQK"
+     RBS             complement(4802..4804)
+                     /gene="araN"
+     gene            complement(4821..6005)
+                     /gene="araM"
+     CDS             complement(4821..6005)
+                     /gene="araM"
+                     /function="unknown"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="AraM protein"
+                     /protein_id="CAA61933.1"
+                     /db_xref="GI:1913927"
+                     /db_xref="GOA:P94527"
+                     /db_xref="InterPro:IPR002658"
+                     /db_xref="InterPro:IPR023003"
+                     /db_xref="UniProtKB/Swiss-Prot:P94527"
+                     /translation="MNRIAADVQRAFENAGEKTLPIKVEEIVLGKQAADSLLDYVKRK
+                     NNQHIVLVCDANTHRIAGIDLENRLNQEGFQAECLIIPENEAGDVTADERSLIHVLIH
+                     TKQPTDVMIAVGSGTIHDIVRFAAFQRDLPFISYPTAPSVDGFTSAGAPIILYGTKTT
+                     IQTKAPSALFADLDLLKAAPQSMVAAGFGDMLGKITSLADWEISRHLAGEPYSPAGAK
+                     IVQEALAACIEHTEDIAMKTETGIRVLMESLLVSGLVMLALDHSRPASGGEHHISHWI
+                     EMELMEKKRPQILHGAKVGCAAVLLTDTYRKLAQDDGLNEFSPSRREAIQSAYQTLPR
+                     GEVLADWLRSAGGPADFDEIGVGQDSVKNAFRHAHTLRDRCTGLRIINENKTLINHGL
+                     YE"
+     gene            complement(6002..6811)
+                     /gene="araL"
+     CDS             complement(6002..6811)
+                     /gene="araL"
+                     /function="unknown"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="AraL protein"
+                     /protein_id="CAA61932.1"
+                     /db_xref="GI:1913926"
+                     /db_xref="GOA:P94526"
+                     /db_xref="InterPro:IPR005834"
+                     /db_xref="InterPro:IPR006357"
+                     /db_xref="UniProtKB/Swiss-Prot:P94526"
+                     /translation="MASHDTPVSPAGILIDLDGTVFRGNELIEGAREAIKTLRRMGKK
+                     IVFLSNRGNISRAMCRKKLLGAGIETDVNDIVLSSSVTAAFLKKHYRFSKVWVLGEQG
+                     LVDELRLAGVQNASEPKEADWLVISLHETLTYDDLNQAFQAAAGGARIIATNKDRSFP
+                     NEDGNAIDVAGMIGAIETSAQAKTELVVGKPSWLMAEAACTAMGLSAHECMIIGDSIE
+                     SDIAMGKLYGMKSALVLTGSAKQGEQRLYTPDYVLDSIKDVTKLAEEGILI"
+     gene            complement(6016..6021)
+                     /gene="araM"
+     RBS             complement(6016..6021)
+                     /gene="araM"
+ORIGIN      
+        1 catccccttt tctgtttttc ataaatatat cataatttca tggtgaaaag cggtcatttt
+       61 ttcctataca aaaagccggc tggaatgggc cggctcgtgg cagttgaaag acaagccgga
+      121 gagaaatctc cggctttgct attcttatga ctgttttttc aggcggatca cattccagga
+      181 aagcggcgtg aaatgagcag ttaagccgtt ttcgctgaca gacgatgatc cgttggaatg
+      241 cggaacgaca ttttttctgt tatgctggtt tgttgctttg atatcctgat gctcaagtac
+      301 gatgtgctct gcgatttggt aggattcaaa gcctctgagc gaaatctccg tctccatctg
+      361 atcctcagcc ttgtttaccg caaaaatagt gagtgtttct tcctcttcag agtacacaac
+      421 agcagcatca acatatggca catcagtgaa atcagaacaa tcgtacttag gagaagaaat
+      481 aagcggtttc agtgactcgc cccttccgta aacagaagca tgcatgtatg gatagaaaat
+      541 cggctgtctc catgcttctc cgcctttttc cgtcatgatc ggcgcgatga cattaacaag
+      601 ctgtgcaaga cacgcaattt tcacacggtc tgcgtgctgc agcatcgtaa tgagcagaga
+      661 gccgactaat aaggcatctt caaaattgta aatatcctct aaaatcggac gcgcagtgat
+      721 ccacggctcg acttttttat cagcctcatt tgagtggtac cagacgttcc attcatccag
+      781 agagagattg atagttttct tgctgcgtgt ttttgctttt acatagtcac aggtcgcagc
+      841 gactgatttg ataaaatgat ccaaatccat agaacgtgcc aagtagtttg gcagattgtt
+      901 atcccggttt ccgtagtaag tgtgaagaga gatatagtcg acatgctcat acgtatgctc
+      961 aagcaccttc gcttcccaat cgataaaggt cggcataccg ctgtttgagc tgccgcaggc
+     1021 aacgagttca attgatgggt caacccactt catgaccttt gctgtctctg cggcaagccg
+     1081 tccgtattca tcagctgttt tgtggccgat ctgccatggt ccatccattt cgtttcctaa
+     1141 gcaccatgtt ttgatgccat acggctgttc atagccatgc gatcttctta aatcactcca
+     1201 gtaagagcct ttcggatggt tgcaatattc aacgagatta cgggcggcat ctatgcctct
+     1261 tgtgccaagg ttgacggcca tattgacctc agtgttcacc ttttttgccc aagataaaaa
+     1321 ttcatttgtt cccacttcat tggtttctgt cgtttgccat gccaagtcaa gccgtctcgg
+     1381 gcggttttcg actggtccga caccgtcctc ccagttgtat ccggataaaa agtttccgcc
+     1441 cggatagcgg atgatgggaa cctgtaattc tttgatcagc gactggacat cttttctaaa
+     1501 tccatcttca tccgcttcag ggtgatcagg ctcgtatatg ccttcatata ccgcacgacc
+     1561 catatgttcg ataaacgagc cataaatccg tttatctact tcaccgattt tatattcttt
+     1621 gtctacaatc attcgcgctt ttttcatcac acgtttcctc cttcattaac ctttgactcc
+     1681 ccctaccgtc aggccggaga taaagtactt ttggaaaaac aagaaaatga taatcaccgg
+     1741 caaaatcgca aatactgagc cggatataag catgtcgtaa ttatttccat aagggctcag
+     1801 caagctggac agccctattg gaagcgtaaa catttctttc gaccgaagca caatcagcgg
+     1861 ccacaagaag ttgttccagc tgtttaagga ctgaaggata atcatcgcac cgaaagccgg
+     1921 tttcatcagc ggtgccataa tcctgaaaaa gatgccgaat tccgtacagc cgtccatcct
+     1981 tgcagagtcc agcagatctc ttggaaggcc aagagcatat tgcctgaaaa agaaaacagc
+     2041 aacaggtgaa acgataaacg gcaatatgac acccgtatat gaatcgatca agtgcagtcc
+     2101 gacagtaagt ttaaacagag gaagcatcat cacttccagc ggaaccatca taataatcag
+     2161 cacaagaaca aagatgatat ttctgccctt aaaatcataa accgcaagcc cgtacccgat
+     2221 catcgaagaa aaaaacagag tgagcacagt cgtaaaaagt ccgagtacaa gactgttaaa
+     2281 aaaccatttg aaataaatgc tgccgccatt aaacagaaat gtgtagttat caaaactcat
+     2341 cacttttgga tcaatatcaa gattcagccc cacacgcaaa agctcagatg acggctttaa
+     2401 tgatcctaaa agcaaacaga aaatcggaaa aagatacaat aggctcagca tcataaaaaa
+     2461 cagggtcagc gcaattctat aaacgctaaa ctgaggactg tgccgcaaca tttatccctc
+     2521 ccccttaaac gagcctgaca gctttaatga aatcaggctg acaacaagga tcacaatcaa
+     2581 aagcacaatg ccgatggccg ctccgtatcc catttcattg taggcaagtc cctgctgata
+     2641 caaatatccg acaagcgtca gaccaatatt acccggggaa ttattctgcc aaaggacgta
+     2701 gctttcctca aacatcctga agccgccgat gatgctgatg gtcagcacat atacggttac
+     2761 aggcttgaga aacggcagcg tgatgtgcag aaattttttc attgtattcg cgccgtctat
+     2821 atcagcggct tcgtacagct ctttcggcac attttgcaaa cctgctaaaa agtaaaggat
+     2881 gttgattccc atccatttcc atgaagcaag cagcaccatc aaaaacatgc cggtatgttc
+     2941 attgttcatc cagttctgag gtgaaaagcc gagtttaagt aggatggaat tggccagaga
+     3001 cgtttccatt tctccgaaga tcagccgaaa aatgatcccc gcgacaatgg ttgaggtcaa
+     3061 tgccgggata aataatgctg atttaaatat atttctaaat ttgaccagct ttgaattcag
+     3121 gaatatggcc agaagcaatg gaacaggaat cagcacgatc agcgtccaaa aggtgtattc
+     3181 cagcgtattc caaagggcgg tatagaacgt cgggttgttt agcgctgtat aattagacaa
+     3241 tccgacaaag gacacctctc ccggcaaaat tctttggaag ctcatgatga agacactaat
+     3301 gatggggtat agaaaaaata cgagaaagga taaaacgaat ggcgctgtaa acagataggg
+     3361 cgccgctttt tttgaataaa acagatctcg ccagcctgat tgtttcgcag ctgaaggaac
+     3421 gggatgaacc gttcccgttt tcacaggttt catgagaacc tccccgcttt cactttttga
+     3481 atgggattct atttctgttt cagttcacct gccgctctgt ccaaggcttg tttaggcgtt
+     3541 ttttgctgag atttaagcgc gtcgaacaat acgcttctgt tgacaaggtc tgaagccttg
+     3601 gcaaaatcct catgtaaata aattggattg atttcatcct tgatatcgag cagcacagaa
+     3661 aaaatgcctg ttccgttttg gaagtaatcc gtgtatttgt ttttctcttt caattccttg
+     3721 gagctccaaa catcccagcg aagcgggtca aagccgagta cgctccagag ttttttattt
+     3781 ccttcttcag agcccttcgc aaaggccaaa aactcttttg ctaactcaac atgcttggat
+     3841 tgcttcggta caacagttgc cgtaccgccc aaacctgccg agcggtcgcc cccctctttc
+     3901 catgccggga gcggtctgat ggcaatcttc cctttcagat caggcatata atcgataaat
+     3961 cttcccatat accaaatcgg catgagaact gaagcagctc ctccttggtt cataaagccg
+     4021 tagtattctt cactgtgatg cccgccgccc ggcgcaggaa tcatcgtttt atcattgatc
+     4081 atgtctttta aatattgaag tgtttttacg ttggtgtcat tattgaggat cagcttgccg
+     4141 tttttatcaa aatagcctga gttttgctgt gaaatcatag ataagaacgt tgcggaatca
+     4201 tttgtttcca ccgttcccat cggcttcccg gtcactttgc gcactttctg tccggcttta
+     4261 tggtaatcat cccatgtttt aatatcgtca ggattgacgc cggctttttt catcacatcc
+     4321 atgttataaa acatgaccgt tgtccctaca tgtgtatcga gtccgtaaag ctttccgttt
+     4381 ttgctgtaca atgtcagccg cgcctcaacg aatttatcgc gatccttttc aatcagcgga
+     4441 gtcaagtcgg caagcggtat gtcagagccc ttcaaaaagt ttgaaaaacg ggccaattcg
+     4501 acatctgcaa tatcaggaac gccttctccc gctattaggg agatagataa gttatcgtgc
+     4561 atttgtccat atggataaac gaccgtattc agcttaattt tgcggtcagg atattttttg
+     4621 ttccattcct tcaccatttc cacatagaac tgctcatgaa gcccgttaaa tgtccaaaag
+     4681 gtcagctcag tttcacccga tttgccggat gatttttctg ctgaacaccc ggcaatgact
+     4741 aatgtcagca acatcatgag cacaagaaaa cagacagtca tttttttcat ctgcgttacc
+     4801 ccttccattc gaggtgcggg ctattcatat agaccatggt tgatcagcgt tttgttttca
+     4861 ttgatgattc ttaatccggt gcatcggtct cttaaggtgt gcgcgtgtct gaaggcattt
+     4921 ttgacggaat cctgcccgac accgatttcg tcaaaatcag cagggcctcc ggctgatctc
+     4981 agccaatcag ccagcacttc tcctctcggg agtgtttgat aagccgattg gatggcttcc
+     5041 cggcggcttg gtgaaaattc gttcagcccg tcatcctgag cgagctttct gtatgtgtca
+     5101 gttaataaaa cagcggcaca gcccaccttt gccccatgaa gaatctgagg ccgttttttc
+     5161 tccattaact ccatttcaat ccaatgtgaa atatgatgct cgccgcctga tgccggtcgg
+     5221 gaatgatcta aagccagcat gacaagcccc gatacaagta aagactccat caaaacccgt
+     5281 atgccagttt ccgttttcat cgcaatgtct tctgtgtgtt caatgcaggc agcaagcgcc
+     5341 tcctgaacga tcttagctcc tgcaggcgaa taaggctcac cggcaagatg ccgggatatt
+     5401 tcccaatctg ctaaagacgt gattttaccg agcatgtcac caaagccagc cgccaccatt
+     5461 gactgcggtg ccgcttttaa tagatccaga tcagcgaaca gcgcagatgg ggccttcgtt
+     5521 tgaatggttg ttttcgtgcc gtataaaata atcggcgcac cggctgatgt aaaaccgtct
+     5581 acagatggag cagtcggata agaaataaac ggcaaatctc tttgaaacgc cgcaaagcgg
+     5641 acgatatcat gaatcgtgcc cgaaccgact gcgatcatga catccgttgg ttgtttcgta
+     5701 tggatcagca catgaatgag cgatcgttca tcagctgtca catctccggc ttcattttct
+     5761 ggaatgatca ggcactcggc ctgaaatcct tcttgattca gtcggttttc taaatcaatt
+     5821 cctgcaatgc ggtgtgtatt cgcgtcgcag acaaggacaa tatgttgatt gttttttcgt
+     5881 tttacataat ccaaaagcga atcagctgct tgcttaccga gaacaatttc ttcaactttt
+     5941 ataggcaacg tcttttctcc ggcgttttca aaagcacgct gaacgtcagc tgcgatacga
+     6001 ttcatatcag aatcccctcc tcagccaatt tggttacatc cttaatagaa tccagcacat
+     6061 aatccggcgt gtacaaacgc tgttcaccct gtttcgcaga accagttagc actaaggcgc
+     6121 ttttcatgcc ataaagcttc cccatcgcaa tgtcagattc aatgctgtct cctataatca
+     6181 tgcattcatg tgcggacagc cccattgccg tacaggcagc ctccgccatc agccatgacg
+     6241 gttttccgac aacaagttca gtcttcgctt gtgcagaagt ctcaattgcc ccgatcattc
+     6301 cggccacatc aatggcattt ccgtcttcgt tcggaaaaga gcggtctttg tttgtagcga
+     6361 taatacgagc gccgccggca gccgcttgaa aggcttgatt taaatcgtcg tacgtgagcg
+     6421 tttcatgaag ggagatcacg agccaatccg cttccttcgg ttcgctcgcg ttctgcacac
+     6481 cggccagcct cagctcgtca accaagcctt gctccccaag cacccatacc tttgaaaaac
+     6541 gataatgttt tttcagaaaa gccgctgtca cgcttgatga cagaacaatg tcgtttacgt
+     6601 ccgtttcaat ccccgcgcca agaagttttt ttctgcacat ggcacgggag atattccccc
+     6661 ggttgcttaa aaagacgatt ttctttccca ttctcctaag cgttttgatc gcttctcttg
+     6721 ctccttcgat caactcattt cctctgaata cagtaccgtc caagtcaatc agaatgccag
+     6781 ccggtgacac aggcgtatca tgactggcca t
+//

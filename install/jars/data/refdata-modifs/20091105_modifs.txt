@@ -1,0 +1,33 @@
+Data
+Vectors: /data/xml/Vectors
+Updated corrected spelling of Chloramphenicol and Kanamycin:
+pDONR221.xml
+pET-26b.xml
+pET-28a.xml
+pOPINA.xml
+pOPINB.xml
+pOPINK.xml
+pOPINS.xml
+
+Protocols: /data/Default-protocols
+Updated:
+PiMS_Plasmid_stock.xml
+Removed: Parameters
+  <parameterDefinition id="3" name="Initials" parameterType="String" />
+  <parameterDefinition id="4" name="Description" parameterType="String" />
+  <parameterDefinition id="5" name="Plasmid name" parameterType="String" />
+  <parameterDefinition id="8" name="Vector name" parameterType="String" />
+  <parameterDefinition id="9" name="Rack" parameterType="String" />
+  
+Updated Parameters:
+Old: <parameterDefinition id="1" name="Concentration (ug/ul)" parameterType="Float" defaultValue="0.0" />
+New: <parameterDefinition id="1" name="Concentration (ug/ul)" parameterType="Float" defaultValue="0.0" isMandatory="false" />
+
+Old: <parameterDefinition id="2" name="Antibiotic resistances" parameterType="String" />
+New: <parameterDefinition id="2" name="Antibiotic resistances" parameterType="String" isMandatory="false" />
+
+Old:  <parameterDefinition id="6" name="Rack position" parameterType="String" />
+New:  <parameterDefinition id="3" name="Rack position" parameterType="String" isMandatory="false" />
+
+Old:  <parameterDefinition id="7" name="Strain prepared from" parameterType="String" />
+New:  <parameterDefinition id="4" name="Strain prepared from" parameterType="String" isMandatory="false" />

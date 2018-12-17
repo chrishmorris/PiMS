@@ -1,0 +1,5 @@
+# obsolete ERROR MESSAGES for the SERVLETS 
+
+# CANNOT.CONVERT.VALUE = Unexpected value.
+STRING.LENGTH.OUTSIDE.THE.BORDER = Length of the value is greater than its allowed.
+DATE.IS.WRONG = The date is incorrect format

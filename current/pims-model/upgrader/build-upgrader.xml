@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<project name="db-upgrader" default="upgrade" basedir="..">
+
+    <!-- ============================================================ -->
+    <!-- Properties                                                   -->
+    <!-- ============================================================ -->
+	
+	
+    <property file="${basedir}/conf/Properties" />
+    <property name="jars.dir" value="../jars/" />
+    <property name="example-database.file" value="${jars.dir}/install-example.sql" />
+
+    <property name="log.dir" value="${basedir}/log" />
+    <property name="pimsweb.dir" value="../pims-web/upgrader" />
+
+    <property name="jar.dir" value="${basedir}/upgrader" />
+    <property name="upgrader.jar.name" value="upgrader.jar" />
+    <property name="jar.property" value="${basedir}/conf/Properties" />
+
+    <property name="ant.reuse.loader" value="true" /> 
+    
+    <!-- ============================================================ -->
+    <!-- Upgrader tasks.                                              -->
+    <!-- ============================================================ -->
+    <target name="upgrade" description="Database upgrader ${version}" depends="build" >
+    	<record name="${basedir}/upgrader/upgrader.out" action="start"/>
+		<exec failOnError="true" executable="java">
+			<arg line="-jar -enableassertions -Xms64m -Xmx256m ${jar.dir}/${upgrader.jar.name} ${jar.property}" />
+		</exec>
+		<record name="${basedir}/upgrader/upgrader.out" action="stop"/>
+	</target>
+
+	<!-- TODO no, deliver this as pms-model.jar with a suitable classpath -->
+	   <target name="build" description="generate a single jar file containing all classes needed to run the upgrader">
+	            <jar index="true" destfile="${jar.dir}/${upgrader.jar.name}" 
+	            	basedir="${basedir}/classes"
+	            	 excludes="Properties"
+	            	> 
+	            <manifest>
+	               <attribute name="Main-Class" value="org.pimslims.upgrader.Upgrader"/>
+                </manifest>            	
+
+	                <zipfileset src="${basedir}/lib/runtime/antlr-2.7.6.jar" />
+	                <zipfileset src="${basedir}/lib/runtime/asm-3.1.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/c3p0-0.9.1.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/cglib-2.2.jar" />
+	                <zipfileset src="${basedir}/lib/runtime/commons-collections-3.2.jar" />
+	                <zipfileset src="${basedir}/lib/runtime/dom4j-1.6.1.jar" />
+	                <zipfileset src="${basedir}/lib/runtime/ehcache-core-2.4.3.jar" />
+	                <zipfileset src="${basedir}/lib/runtime/hibernate-c3p0-3.6.8.Final.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/hibernate-commons-annotations-3.2.0.Final.jar" />
+	                <zipfileset src="${basedir}/lib/runtime/hibernate-core-3.6.8.Final.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/hibernate-entitymanager-3.6.8.Final.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/hibernate-jpa-2.0-api-1.0.1.Final.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/javassist-3.12.0.GA.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/jta-1.1.jar" />
+	                <zipfileset src="${basedir}/lib/runtime/postgresql-9.1-901.jdbc3.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/slf4j-api-1.6.1.jar" />
+                    <zipfileset src="${basedir}/lib/runtime/slf4j-jdk14-1.6.1.jar" />
+	<!-- TODO include licencing info -->
+	            </jar>
+                <echo>Build jar: ${jar.dir}/${upgrader.jar.name}</echo>
+	<!-- could 
+	            <signjar destdir="${jars}/signed"
+	                alias="pims"
+	                keystore="${keystore}"
+	                storepass="secret">
+	              <path>
+	                <fileset dir="${jars}" includes="pims-lib.jar" />
+	              </path>
+	              <flattenmapper />
+	            </signjar> -->
+
+	        </target>
+
+
+    <!-- ============================================================ -->
+    <!-- Copy tasks.      TODO move to ../../build.xml                                            -->
+    <!-- ============================================================ -->
+    <target name="copyFilesToJars" description="Copies upgrader into jars" depends="build">
+        <copy overwrite="true" verbose="true" file="${jar.dir}/${upgrader.jar.name}" tofile="${jars.dir}/${upgrader.jar.name}" />
+    </target>
+
+
+
+    <!-- ============================================================ -->
+    <!-- Database tasks.                                              -->
+    <!-- ============================================================ -->
+    <target name="dropdb" description="Drops the database.">
+        <echo>dropdb -U ${db.username} '${db.name}'</echo>
+        <exec failOnError="false" executable="dropdb"><arg line="-U ${db.username} '${db.name}'" /></exec>
+    </target>
+
+    <target name="createdb" description="Creates the database." depends="">
+        <exec failOnError="true" executable="createdb">
+            <arg line="-U ${db.username} '${db.name}' -E UTF8" />
+        </exec>
+    </target>
+
+    <target name="installexampledb" description="Install example data">
+        <antcall target="dropdb"/>
+        <antcall target="createdb"/>
+        <exec output="${log.dir}/install-example-db.out" failOnError="true" executable="psql">
+            <arg line="-q -U ${db.username} -d ${db.name} -f ${example-database.file}"/>
+        </exec>
+    </target>
+
+    <target name="dumpexampledb" description="Dump db into install-example.sql." depends="">
+        <exec failOnError="true" executable="pg_dump">
+            <arg line="-U ${db.username} --no-owner -f ${example-database.file} ${db.name}" />
+        </exec>
+    </target>
+
+</project>

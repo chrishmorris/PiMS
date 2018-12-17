@@ -1,0 +1,407 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.metamodel.AbstractMetaProperty" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/AbstractMetaProperty.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="840" y="679" width="215" height="330"/>  
+  </class>  
+  <class language="java" name="org.pimslims.metamodel.AbstractModelObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/AbstractModelObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1280" y="1090" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.metamodel.IDGenerator" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/IDGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="651" y="37" width="137" height="58"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.metamodel.Invariant" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/Invariant.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="865" y="37" width="152" height="74"/>  
+  </interface>  
+  <interface language="java" name="org.pimslims.metamodel.MetaAttribute" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaAttribute.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="975" y="2076" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.metamodel.MetaAttributeImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaAttributeImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="51" y="1593" width="202" height="330"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.metamodel.MetaClass" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1550" y="2308" width="205" height="282"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.metamodel.MetaClassImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1095" y="1593" width="491" height="665"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.metamodel.MetaElement" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaElement.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1638" y="679" width="117" height="138"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.metamodel.MetamodelUtil" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetamodelUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="368" y="37" width="207" height="122"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.metamodel.MetaProperty" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaProperty.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="912" y="1593" width="143" height="106"/>  
+  </interface>  
+  <interface language="java" name="org.pimslims.metamodel.MetaRole" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaRole.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="655" y="2308" width="236" height="426"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.metamodel.MetaRoleImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaRoleImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="293" y="1593" width="236" height="602"/>  
+  </class>  
+  <class language="java" name="org.pimslims.metamodel.MetaUtils" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaUtils.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="86" y="37" width="206" height="602"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.metamodel.ModelObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/ModelObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="569" y="1593" width="303" height="442"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.metamodel.ReflectiveModelObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/ReflectiveModelObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1095" y="37" width="236" height="426"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.dao.ReadableVersion" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="636" y="548" width="-1" height="-1"/>  
+  </interface>  
+  <annotation language="java" name="org.pimslims.annotation.Role" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/annotation/Role.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="437" y="2308" width="116" height="186"/>  
+  </annotation>  
+  <annotation language="java" name="org.pimslims.annotation.Attribute" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/annotation/Attribute.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="292" y="2308" width="105" height="170"/>  
+  </annotation>  
+  <interface language="java" name="org.pimslims.constraint.Constraint" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="51" y="2308" width="201" height="138"/>  
+  </interface>  
+  <annotation language="java" name="org.pimslims.annotation.MetaClass" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/annotation/MetaClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1159" y="2437" width="-1" height="-1"/>  
+  </annotation>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="ignoredRoles"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaRole" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRole.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaAttributeImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttributeImpl.java" binary="false">      
+      <attribute name="annotation"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.annotation.Attribute" 
+      file="/pims-model/src/java/org/pimslims/annotation/Attribute.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaAttributeImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttributeImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.AbstractMetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/AbstractMetaProperty.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaClass" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaElement" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaElement.java" binary="false"/>    
+    <bendpoint x="1647" y="1593"/>  
+  </generalization>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.metamodel.AbstractModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/AbstractModelObject.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.ModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/ModelObject.java" binary="false"/>  
+  </realization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaRole" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRole.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaProperty.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="CLASSES"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaRoleImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRoleImpl.java" binary="false">      
+      <attribute name="ROLES"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaRole" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRole.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="annotation"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.annotation.MetaClass" 
+      file="/pims-model/src/java/org/pimslims/annotation/MetaClass.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.AbstractModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/AbstractModelObject.java" binary="false">      
+      <attribute name="metaClass"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="attributes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaAttribute" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttribute.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="MODEL_OBJECT"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaClass" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="subtypes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaClass" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false"/>  
+  </association>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaAttributeImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttributeImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaAttribute" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttribute.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaAttributeImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttributeImpl.java" binary="false">      
+      <attribute name="constraint"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaProperty.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaElement" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaElement.java" binary="false"/>  
+  </generalization>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaClass" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false"/>  
+  </realization>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaRoleImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRoleImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaRole" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRole.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="ignoredAttributes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaAttribute" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttribute.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaRoleImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRoleImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.AbstractMetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/AbstractMetaProperty.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaClassImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClassImpl.java" binary="false">      
+      <attribute name="roles"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaRole" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRole.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.AbstractMetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/AbstractMetaProperty.java" binary="false">      
+      <attribute name="metaClass"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaClass" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false"/>    
+    <bendpoint x="1626" y="1593"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.metamodel.AbstractModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/AbstractModelObject.java" binary="false">      
+      <attribute name="genericObject"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.ReflectiveModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/ReflectiveModelObject.java" binary="false">      
+      <attribute name="specificObject"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.metamodel.AbstractMetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/AbstractMetaProperty.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaProperty.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.MetaRoleImpl" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaRoleImpl.java" binary="false">      
+      <attribute name="annotation"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.annotation.Role" 
+      file="/pims-model/src/java/org/pimslims/annotation/Role.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.metamodel.MetaAttribute" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaAttribute.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.metamodel.MetaProperty" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaProperty.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.metamodel.ReflectiveModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/ReflectiveModelObject.java" binary="false">      
+      <attribute name="version"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.ReadableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false"/>  
+  </association>
+</class-diagram>

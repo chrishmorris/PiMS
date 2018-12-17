@@ -1,0 +1,21 @@
+<!-- Generic Plate culture protocol xml as flat file -->
+<!-- Don't know how to record agar plate -->
+<protocol name="PiMS Plate culture" objective="Growth of isolated colonies" creationDate="14-11-06" remarks="use appropriate pre-warmed selective agar support" details="Parameter number of isolated colonies defined for output from protocol">
+ <experimentType>Dish culture</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="" displayUnit="" refSample="Cells" name="Colonies" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Number of colonies" parameterType="Int" minValue="0" />
+  <parameterDefinition id="2" name="Is the culture labelled?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="3" name="Growth conditions" parameterType="String" defaultValue=
+  "Incubate overnight at 37C" />
+  <parameterDefinition id="4" name="Plate type" parameterType="String" />
+  
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="0.00015" unit="L" displayUnit="uL" refSample="Cells" name="Cells" />
+ </inputSamples>
+
+</protocol>

@@ -1,0 +1,26 @@
+Data
+SampleCats.csv
+Added: Buffering Agent
+default,Buffering Agent,The weak acid or weak base that would comprise a Buffer or Buffer Solution
+
+Chemicals.csv
+Updated: added missing SampleCategories or replaced added "Buffering Agent"
+Updated: added synonyms to C12E18
+Old:C12E8,dodecyl octaethylene glycol ether,Detergent,C28H58O9,3055-98-9,538.75,MolComp,other,,,,,,,,C12E8,Detergent,
+New:C12E8,"dodecyl octaethylene glycol ether;dodecyloctaglycol;polyoxyethylene (8) lauryl ether",Detergent,C28H58O9,3055-98-9,538.75,MolComp,other,,,,,,,,C12E8,Detergent,
+Updated benzamidine hydrochloride hydrate -odd characters in chemical formula
+Old:benzamidine hydrochloride hydrate,amidinobenzene hydrochloride; benzamidinium chloride; benzenecarboximidamide hydrochloride,"Inhibitor,Additive",C6H5C(=NH)NH2 ï¿½ HCl ï¿½ xH2O,206752-36-5,156.61,MolComp,other,Y,,Y,2,R36/37/38,"S26,S36",Xi,Benzamidine hydrochloride hydrate,"Inhibitor,Chemical/Biochemical"
+New:benzamidine hydrochloride hydrate,amidinobenzene hydrochloride; benzamidinium chloride; benzenecarboximidamide hydrochloride,"Inhibitor,Additive",C6H5C(=NH)NH2.HCl.xH2O,206752-36-5,156.61,MolComp,other,Y,,Y,2,R36/37/38,"S26,S36",Xi,Benzamidine hydrochloride hydrate,"Inhibitor,Chemical/Biochemical"
+Updated benzamidine hydrochloride -Is hazard to Y
+Old:benzamidine hydrochloride,,Additive,C6H5C(=NH)NH2.HCl,1669-14-0,157.61,MolComp,other,Y,,,,R36/37/38,"S26,S36",Xi,Benzamidine hydrochloride,Chemical/Biochemical
+New:benzamidine hydrochloride,,Additive,C6H5C(=NH)NH2.HCl,1669-14-0,157.61,MolComp,other,Y,,Y,,R36/37/38,"S26,S36",Xi,Benzamidine hydrochloride,"Inhibitor,Chemical/Biochemical"
+Updated bis(hexamethylene)triamine and 1,10 phenanthroline -added Chelator to MolComponents
+Old:bis(hexamethylene)triamine,"6,6'-iminodihexylamine; bis(6-aminohexyl)amine",Inhibitor,NH2(CH2)6NH(CH2)6NH2,143-23-7,215.38,MolComp,other,Y,,Y,3,"R22,R34","S26,S36/37/39,S45",C,Bis(hexamethylene)triamine,Chemical/Biochemical
+New:bis(hexamethylene)triamine,"6,6'-iminodihexylamine; bis(6-aminohexyl)amine","Inhibitor,Chelator",NH2(CH2)6NH(CH2)6NH2,143-23-7,215.38,MolComp,other,Y,,Y,3,"R22,R34","S26,S36/37/39,S45",C,Bis(hexamethylene)triamine,Chemical/Biochemical
+Old:"1,10 phenanthroline",,Inhibitor,C12N2D8,90412-47-8,1988.25,MolComp,other,Y,,Y,3,"R25,R20/21/22","S45,S24,S26,S36",T,"1,10 Phenanthroline",Inhibitor
+New:"1,10 phenanthroline",,"Inhibitor,Chelator",C12N2D8,90412-47-8,1988.25,MolComp,other,Y,,Y,3,"R25,R20/21/22","S45,S24,S26,S36",T,"1,10 Phenanthroline","Inhibitor,Chemical/Biochemical"
+
+Updated PCMB -added 4-chloromercuribenzoate to synonyms
+Old:PCMB,p-chloromercuribenzoate; p-chloromercuribenzoic acid,"Heavy atom compound,Modifying agent,Inhibitor",C7H5ClHgO2,59-85-8,357.156,MolComp,other,Y,,Y,,"R26/27/28,R33 ","S13,S28,S36,S45",T,PCMB,"Inhibitor,Chemical/Biochemical,Heavy atom reagent"
+New:PCMB,p-chloromercuribenzoate; p-chloromercuribenzoic acid; 4-chloromercuribenzoate,"Heavy atom compound,Modifying agent,Inhibitor",C7H5ClHgO2,59-85-8,357.156,MolComp,other,Y,,Y,,"R26/27/28,R33 ","S13,S28,S36,S45",T,PCMB,"Inhibitor,Chemical/Biochemical,Heavy atom reagent"
+ 

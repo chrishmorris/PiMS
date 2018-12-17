@@ -1,0 +1,16 @@
+# #############################################################################
+# Properties file for the data model
+# Copy this to a file called "Properties".
+# You are advised to set a password.
+# #############################################################################
+
+db.url = jdbc:oracle:thin:@localhost:1521:pims
+db.username = pimsuser
+db.password = ****
+
+
+# uploadDirectory for Windows:
+uploadDirectory = C:\\pimsUploads
+
+# uploadDirectory for Linux:
+#uploadDirectory = $CATALINA_HOME/pimsUploads

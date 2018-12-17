@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pBAD/gIII A Vector</name>
+    <details>Regulated expression of Secreted protein with C-term c-myc epitope tag and 
+        C-terminal His-Tag </details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="V450-01"
+        dataPageUrl="http://products.invitrogen.com/ivgn/product/V45001"
+        supplier="InVitrogen" />
+    <sampleComponent name="pBAD/gIII A" componentCategory="Vector"
+        details="4145bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="1032"
+            endSeq="1892" />
+        <promoterDetails name="araBAD (pBAD) promoter" startSeq="4"
+            endSeq="276" />
+        <markerDetails name="araC ORF (opposite strand)" startSeq="3241" endSeq="4139"
+            featureType="regulator" />
+        <markerDetails
+            name="Gene III secretion signal"
+            startSeq="319" endSeq="373" details="MKKLLFAIPLVVPFYSHS"
+            featureType="Signal sequence" />
+        <markerDetails name="Multiple Cloning sites NcoII-XbaI"
+            details="NcoI-Ecl136II-XhoI-BglII-PstI-PvuII-KpnI-EcoRI-BstBI-HindIII-XbaI" startSeq="374"
+            endSeq="428" featureType="MCS" />
+        <markerDetails name="C-term myc epitope"
+            details="EQKLISEEDL" startSeq="427" endSeq="456" featureType="Tag" />
+        <markerDetails name="C-Term His Tag coding sequence"
+            startSeq="472" endSeq="489" details="HHHHHH" featureType="Tag" />
+        <markerDetails name="pBR322 origin" startSeq="2037" endSeq="2710"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression: TOP10, DH5alpha; Expression: TOP10, LMG194"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

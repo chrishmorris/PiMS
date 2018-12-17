@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINE Vector</name>
+    <details>Derived from pTriEx2/Ampicillin, C-Term His Tag
+    </details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINE" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA"
+        details="GenbankID EF372397">
+        <function>In-Fusion[TM] Multisystem Expression
+            Vector</function>
+        <resistanceDetails name="Ampicillin" />
+        <markerDetails name="C-Term His Tag sequence"
+            details="KHHHHHH" featureType="Tag" />
+    </sampleComponent>
+</vector>

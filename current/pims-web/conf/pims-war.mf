@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: Protein Information Management System Web Application
+Implementation-Version: 0.5
+Implementation-Vendor: the PIMS team
+Implementation-URL: http://www.pims-lims.org
+Specification-Title: http://www.pims-lims.org/project/use-case-suite.html
+Specification-Version: 0.5

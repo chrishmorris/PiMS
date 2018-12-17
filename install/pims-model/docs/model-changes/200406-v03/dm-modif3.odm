@@ -1,0 +1,1823 @@
+ObjectDomain_Model 15
+{-heu8j0_-kr8_dhajlrcd_-p8b 0
+}[objectdomain.uml.core.TypeExpression $21
+objectdomain.uml.view.CommentView-owns $7
+objectdomain.uml.mechanisms.UmlPackage-owns $8
+objectdomain.uml.core.UmlComment-owns $13
+objectdomain.uml.core.Generalization-owns $14
+objectdomain.uml.core.Projection $19
+objectdomain.uml.core.UmlAttribute-features $10
+objectdomain.uml.core.UmlAssociationEnd-connections $12
+objectdomain.uml.view.style.BaseViewElementStyle-owns $18
+objectdomain.uml.view.ClassView-owns $4
+objectdomain.uml.core.UmlAssociation-owns $11
+objectdomain.uml.view.Diagram-owns $3
+objectdomain.domain.ModelEnvironment-owns $2
+objectdomain.uml.mechanisms.StylePackage-owns $17
+objectdomain.uml.mechanisms.StereotypePackage-owns $15
+objectdomain.uml.view.GeneralizationView-owns $6
+objectdomain.uml.core.UmlMultiplicity $20
+objectdomain.uml.core.UmlClass-owns $9
+objectdomain.domain.DomainLockObject $22
+objectdomain.uml.view.AssociationView-owns $5
+objectdomain.uml.mechanisms.UmlModel-models $1
+objectdomain.uml.core.Stereotype-owns $16
+]
+($1 1 > -heu8j0_-kr8_dhajlrcd_-p8b 0
+(name "Model"
+)
+(namespaceRoot true)
+(uid "-heu8j0_-kr8_dhajlrcd_-p8b"))
+($2 2 < -na6y1h_7ca_dta9yr6w_-p98 "ModelEnvironment" 1
+(uid "-na6y1h_7ca_dta9yr6w_-p98"))
+($8 78 < -na6y1h_7ca_dta9yr6w_-p97 "Logical" 1
+(name "Logical"
+)
+(namespaceRoot true)
+(uid "-na6y1h_7ca_dta9yr6w_-p97"))
+($3 3 < -na6y1h_7ca_dta9yr6w_-p5w "Crystallisation" 78
+(name "Crystallisation"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p5w")
+(diagramType "class"))
+($4 4 < -na6y1h_7ca_dta9yr6w_-p5s "Experiment" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_7ca_dta9yr6w_-p5s")
+(bbx 50 200 80 30))
+($4 5 < -na6y1h_7ca_dta9yr6w_-p5j "DropVisualisation" 3
+(uid "-na6y1h_7ca_dta9yr6w_-p5j")
+(bbx 50 340 120 140))
+($4 6 < -na6y1h_-168_ductkfjs_-p7w "Sample" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(showAttributeStereotype false)
+(uid "-na6y1h_-168_ductkfjs_-p7w")
+(bbx 470 200 60 30))
+($4 7 < -na6y1h_-168_ductkfjs_-p7v "Crystal" 3
+(uid "-na6y1h_-168_ductkfjs_-p7v")
+(bbx 470 330 100 290))
+($5 8 < -na6y1h_-168_ductkfjs_-p7u "" 3
+(toMultiplicityPosition 475 310)
+(uid "-na6y1h_-168_ductkfjs_-p7u")
+(points 510 230 510 330)
+(fromMultiplicityPosition 525 245))
+($5 9 < -na6y1h_-168_ductkfjs_-p7t "" 3
+(toMultiplicityPosition 450 230)
+(uid "-na6y1h_-168_ductkfjs_-p7t")
+(points 130 215 470 215)
+(fromMultiplicityPosition 145 185))
+($4 10 < -na6y1h_-168_ductkfjs_-p7s "InputSample" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_-168_ductkfjs_-p7s")
+(bbx 220 250 90 30))
+($5 11 < -na6y1h_-168_ductkfjs_-p7r "" 3
+(toMultiplicityPosition 210 270)
+(uid "-na6y1h_-168_ductkfjs_-p7r")
+(points 90 230 90 265 220 265)
+(fromMultiplicityPosition 105 245))
+($5 12 < -na6y1h_-168_ductkfjs_-p7q "" 3
+(toMultiplicityPosition 315 270)
+(uid "-na6y1h_-168_ductkfjs_-p7q")
+(points 480 230 480 265 310 265)
+(fromMultiplicityPosition 495 245))
+($4 13 < -na6y1h_-168_ductkfjs_-p7p "MountCrystal" 3
+(uid "-na6y1h_-168_ductkfjs_-p7p")
+(bbx 190 340 100 80))
+($4 14 < -na6y1h_-168_ductkfjs_-p7o "RefContainer" 3
+(uid "-na6y1h_-168_ductkfjs_-p7o")
+(bbx 710 100 100 170))
+($5 15 < -na6y1h_-168_ductkfjs_-p7n "" 3
+(toMultiplicityPosition 675 145)
+(uid "-na6y1h_-168_ductkfjs_-p7n")
+(points 520 200 520 165 710 165)
+(fromMultiplicityPosition 505 175))
+($6 16 < -na6y1h_-168_ductkfjs_-p7m "" 3
+(uid "-na6y1h_-168_ductkfjs_-p7m")
+(points 65 340 65 230))
+($6 17 < -na6y1h_-168_ductkfjs_-p7l "" 3
+(uid "-na6y1h_-168_ductkfjs_-p7l")
+(points 235 340 235 320 65 320 65 230))
+($4 18 < -na6y1h_ju4_dvkzlzdf_-p8i "SafetyHazards" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8i")
+(bbx 590 240 100 30))
+($5 19 < -na6y1h_ju4_dvkzlzdf_-p8g "" 3
+(uid "-na6y1h_ju4_dvkzlzdf_-p8g")
+(points 530 215 640 215 640 240)
+(fromMultiplicityPosition 545 185))
+($4 20 < -na6y1h_ju4_dvkzlzdf_-p8c "DeliveryDetails" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8c")
+(bbx 210 80 110 30))
+($4 21 < -na6y1h_ju4_dvkzlzdf_-p8b "DiffractionPlan" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8b")
+(bbx 310 340 110 30))
+($6 22 < -na6y1h_ju4_dvkzlzdf_-p87 "" 3
+(uid "-na6y1h_ju4_dvkzlzdf_-p87")
+(points 360 340 360 320 65 320 65 230))
+($4 23 < -na6y1h_ju4_dvkzlzdf_-p88 "Holder" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_ju4_dvkzlzdf_-p88")
+(bbx 450 80 50 30))
+($5 24 < -na6y1h_ju4_dvkzlzdf_-p83 "" 3
+(toMultiplicityPosition 460 170)
+(uid "-na6y1h_ju4_dvkzlzdf_-p83")
+(points 480 110 480 200)
+(fromMultiplicityPosition 490 115))
+($5 25 < -na6y1h_ju4_dvkzlzdf_-p7z "" 3
+(toMultiplicityPosition 435 110)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7z")
+(points 320 95 450 95)
+(fromMultiplicityPosition 330 70))
+($4 26 < -na6y1h_ju4_dvkzlzdf_-p7p "Annotation" 3
+(uid "-na6y1h_ju4_dvkzlzdf_-p7p")
+(bbx 50 10 90 130))
+($5 27 < -na6y1h_ju4_dvkzlzdf_-p7o "" 3
+(toMultiplicityPosition 75 180)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7o")
+(points 90 140 90 200)
+(fromMultiplicityPosition 100 150))
+($4 28 < -na6y1h_ju4_dvkzlzdf_-p7m "Person" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7m")
+(bbx 240 10 50 30))
+($5 29 < -na6y1h_ju4_dvkzlzdf_-p7i "" 3
+(toMultiplicityPosition 230 30)
+(toRolePosition 180 30)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7i")
+(points 140 25 240 25)
+(fromMultiplicityPosition 145 5))
+($3 30 < -na6y1h_7ca_dta9yr6w_-p3p "AccessControl" 78
+(name "AccessControl"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p3p")
+(diagramType "class"))
+($4 31 < -na6y1h_7ca_dta9yr6w_-p3o "Project" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3o")
+(bbx 130 110 100 90))
+($4 32 < -na6y1h_7ca_dta9yr6w_-p3n "ccp.People.Person" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3n")
+(bbx 130 310 120 110))
+($4 33 < -na6y1h_7ca_dta9yr6w_-p3m "RegularRole" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3m")
+(bbx 620 210 90 60))
+($4 34 < -na6y1h_7ca_dta9yr6w_-p3l "AdminRole" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3l")
+(bbx 620 460 80 60))
+($4 35 < -na6y1h_7ca_dta9yr6w_-p3k "Operation" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3k")
+(bbx 810 340 70 60))
+($4 36 < -na6y1h_7ca_dta9yr6w_-p3j "RegularObject" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3j")
+(bbx 840 90 100 60))
+($4 37 < -na6y1h_7ca_dta9yr6w_-p3i "Condition" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3i")
+(bbx 900 340 70 60))
+($7 38 < -na6y1h_7ca_dta9yr6w_-p3h "Comment5" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3h")
+(bbx 410 580 390 70))
+($4 39 < -na6y1h_7ca_dta9yr6w_-p3g "AdminObject" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3g")
+(bbx 850 590 90 60))
+($4 40 < -na6y1h_7ca_dta9yr6w_-p3f "Title" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3f")
+(bbx 440 350 60 60))
+($5 41 < -na6y1h_7ca_dta9yr6w_-p3e "" 30
+(toMultiplicityPosition 155 285)
+(toRolePosition 135 265)
+(uid "-na6y1h_7ca_dta9yr6w_-p3e")
+(points 170 200 170 310))
+($5 42 < -na6y1h_7ca_dta9yr6w_-p3d "" 30
+(toMultiplicityPosition 430 390)
+(uid "-na6y1h_7ca_dta9yr6w_-p3d")
+(points 250 385 440 385)
+(fromMultiplicityPosition 260 360))
+($4 43 < -na6y1h_7ca_dta9yr6w_-p3c "PersonProjectTitle" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p3c")
+(bbx 270 240 120 50))
+($5 44 < -na6y1h_7ca_dta9yr6w_-p3b "" 30
+(toMultiplicityPosition 255 275)
+(uid "-na6y1h_7ca_dta9yr6w_-p3b")
+(points 200 310 200 265 270 265)
+(fromMultiplicityPosition 185 290))
+($5 45 < -na6y1h_7ca_dta9yr6w_-p3a "" 30
+(toMultiplicityPosition 395 270)
+(uid "-na6y1h_7ca_dta9yr6w_-p3a")
+(points 470 350 470 265 390 265)
+(fromRolePosition 485 105)
+(fromMultiplicityPosition 475 325))
+($4 46 < -na6y1h_7ca_dta9yr6w_-p39 "PersonGroupTitle" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p39")
+(bbx 270 460 120 50))
+($4 47 < -na6y1h_7ca_dta9yr6w_-p38 "Group" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p38")
+(bbx 300 590 60 60))
+($5 48 < -na6y1h_7ca_dta9yr6w_-p37 "" 30
+(toMultiplicityPosition 260 500)
+(uid "-na6y1h_7ca_dta9yr6w_-p37")
+(points 190 420 190 490 270 490)
+(fromMultiplicityPosition 195 430))
+($5 49 < -na6y1h_7ca_dta9yr6w_-p36 "" 30
+(toMultiplicityPosition 335 515)
+(uid "-na6y1h_7ca_dta9yr6w_-p36")
+(points 330 590 330 510)
+(fromMultiplicityPosition 315 565))
+($5 50 < -na6y1h_7ca_dta9yr6w_-p35 "" 30
+(toMultiplicityPosition 395 495)
+(uid "-na6y1h_7ca_dta9yr6w_-p35")
+(points 470 410 470 490 390 490)
+(fromMultiplicityPosition 475 420))
+($4 51 < -na6y1h_7ca_dta9yr6w_-p34 "RegularPermission" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p34")
+(bbx 830 220 130 50))
+($4 52 < -na6y1h_7ca_dta9yr6w_-p33 "AdminPermission" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p33")
+(bbx 830 480 120 50))
+($5 53 < -na6y1h_7ca_dta9yr6w_-p32 "" 30
+(toMultiplicityPosition 810 260)
+(uid "-na6y1h_7ca_dta9yr6w_-p32")
+(points 710 245 830 245)
+(fromMultiplicityPosition 725 210))
+($5 54 < -na6y1h_7ca_dta9yr6w_-p31 "" 30
+(toMultiplicityPosition 820 510)
+(uid "-na6y1h_7ca_dta9yr6w_-p31")
+(points 700 500 830 500)
+(fromMultiplicityPosition 705 470))
+($5 55 < -na6y1h_7ca_dta9yr6w_-p30 "" 30
+(toMultiplicityPosition 870 160)
+(uid "-na6y1h_7ca_dta9yr6w_-p30")
+(points 890 220 890 150)
+(fromMultiplicityPosition 895 200))
+($5 56 < -na6y1h_7ca_dta9yr6w_-p2z "" 30
+(toMultiplicityPosition 880 565)
+(uid "-na6y1h_7ca_dta9yr6w_-p2z")
+(points 900 530 900 590)
+(fromMultiplicityPosition 905 535))
+($5 57 < -na6y1h_7ca_dta9yr6w_-p2y "" 30
+(toMultiplicityPosition 670 275)
+(uid "-na6y1h_7ca_dta9yr6w_-p2y")
+(points 500 370 660 370 660 270)
+(fromMultiplicityPosition 505 345))
+($5 58 < -na6y1h_7ca_dta9yr6w_-p2x "" 30
+(toMultiplicityPosition 670 440)
+(uid "-na6y1h_7ca_dta9yr6w_-p2x")
+(points 500 390 660 390 660 460)
+(fromMultiplicityPosition 505 395))
+($5 59 < -na6y1h_7ca_dta9yr6w_-p2w "" 30
+(toMultiplicityPosition 830 320)
+(uid "-na6y1h_7ca_dta9yr6w_-p2w")
+(points 845 270 845 340)
+(fromMultiplicityPosition 855 275))
+($5 60 < -na6y1h_7ca_dta9yr6w_-p2v "" 30
+(toMultiplicityPosition 915 320)
+(uid "-na6y1h_7ca_dta9yr6w_-p2v")
+(points 930 270 930 340)
+(fromMultiplicityPosition 935 280))
+($5 61 < -na6y1h_7ca_dta9yr6w_-p2u "" 30
+(toMultiplicityPosition 940 460)
+(uid "-na6y1h_7ca_dta9yr6w_-p2u")
+(points 930 400 930 480)
+(fromMultiplicityPosition 915 405))
+($5 62 < -na6y1h_7ca_dta9yr6w_-p2t "" 30
+(toMultiplicityPosition 825 405)
+(uid "-na6y1h_7ca_dta9yr6w_-p2t")
+(points 845 480 845 400)
+(fromMultiplicityPosition 855 460))
+($5 63 < -na6y1h_7ca_dta9yr6w_-p2s "" 30
+(toMultiplicityPosition 315 220)
+(uid "-na6y1h_7ca_dta9yr6w_-p2s")
+(points 230 160 330 160 330 240)
+(fromMultiplicityPosition 235 135))
+($4 64 < -na6y1h_7ca_dta9yr6w_-p2r "ProjectGroup" 30
+(uid "-na6y1h_7ca_dta9yr6w_-p2r")
+(bbx 90 590 100 60))
+($5 65 < -na6y1h_7ca_dta9yr6w_-p2q "" 30
+(toMultiplicityPosition 275 640)
+(uid "-na6y1h_7ca_dta9yr6w_-p2q")
+(points 190 625 300 625)
+(fromMultiplicityPosition 205 595))
+($5 66 < -na6y1h_7ca_dta9yr6w_-p2p "" 30
+(toMultiplicityPosition 120 135)
+(uid "-na6y1h_7ca_dta9yr6w_-p2p")
+(points 100 590 100 160 130 160)
+(fromMultiplicityPosition 110 570))
+($4 67 < -na6y1h_-168_dupj2963_-p8v "memops.Implementation.Project" 30
+(uid "-na6y1h_-168_dupj2963_-p8v")
+(bbx 380 30 210 50))
+($5 68 < -na6y1h_-168_dupj2963_-p8u "" 30
+(uid "-na6y1h_-168_dupj2963_-p8u")
+(points 380 55 180 55 180 110))
+($5 69 < -na6y1h_-168_dupj2963_-p8t "" 30
+(uid "-na6y1h_-168_dupj2963_-p8t")
+(points 590 55 895 55 895 90))
+($5 70 < -na6y1h_-168_dupj2963_-p8s "" 30
+(uid "-na6y1h_-168_dupj2963_-p8s")
+(points 590 55 990 55 990 610 940 610))
+($5 71 < -na6y1h_-168_dupj2963_-p8r "" 30
+(uid "-na6y1h_-168_dupj2963_-p8r")
+(points 590 55 990 55 990 360 970 360))
+($5 72 < -na6y1h_-168_dupj2963_-p8q "" 30
+(uid "-na6y1h_-168_dupj2963_-p8q")
+(points 590 55 660 55 660 210))
+($5 73 < -na6y1h_-168_dupj2963_-p8p "" 30
+(uid "-na6y1h_-168_dupj2963_-p8p")
+(points 590 55 690 55 690 460))
+($5 74 < -na6y1h_-168_dupj2963_-p8o "" 30
+(uid "-na6y1h_-168_dupj2963_-p8o")
+(points 590 55 990 55 990 390 880 390))
+($5 75 < -na6y1h_-168_dupj2963_-p8n "" 30
+(uid "-na6y1h_-168_dupj2963_-p8n")
+(points 490 80 490 350))
+($5 76 < -na6y1h_-168_dupj2963_-p8m "" 30
+(uid "-na6y1h_-168_dupj2963_-p8m")
+(points 380 55 60 55 60 670 330 670 330 650))
+($5 77 < -na6y1h_-168_dupj2963_-p8l "" 30
+(uid "-na6y1h_-168_dupj2963_-p8l")
+(points 380 55 60 55 60 340 130 340))
+($9 79 < -na6y1h_7ca_dta9yr6w_-p1r "Project" 78
+(name "Project"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1r"))
+($10 80 < -na6y1h_7ca_dta9yr6w_-p1q "projectId" 79
+(name "projectId"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1q"))
+($10 81 < -na6y1h_7ca_dta9yr6w_-p1p "projectName" 79
+(name "projectName"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1p"))
+($10 82 < -na6y1h_7ca_dta9yr6w_-p1o "startDate" 79
+(name "startDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1o"))
+($11 83 < -na6y1h_7ca_dta9yr6w_-p1e "#<anon> (Project, ccp.People.Person)" 79
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-p1e"))
+($12 84 < -na6y1h_7ca_dta9yr6w_-p1d "#0" 83
+(uid "-na6y1h_7ca_dta9yr6w_-p1d")
+(isNavigable false))
+($12 85 < -na6y1h_7ca_dta9yr6w_-p1c "creator#1" 83
+(name "creator"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1c")
+(multiplicity "1"))
+($11 86 < -na6y1h_7ca_dta9yr6w_-p1b "#<anon> (Project, PersonProjectTitle)" 79
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-p1b"))
+($12 87 < -na6y1h_7ca_dta9yr6w_-p1a "#0" 86
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-p1a")
+(multiplicity "1"))
+($12 88 < -na6y1h_7ca_dta9yr6w_-p19 "#1" 86
+(uid "-na6y1h_7ca_dta9yr6w_-p19")
+(multiplicity "*"))
+($9 89 < -na6y1h_7ca_dta9yr6w_-p13 "Experiment" 78
+(name "Experiment"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p13"))
+($10 90 < -na6y1h_7ca_dta9yr6w_-p12 "status" 89
+(name "status"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p12"))
+($10 91 < -na6y1h_7ca_dta9yr6w_-p11 "startDate" 89
+(name "startDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p11"))
+($10 92 < -na6y1h_7ca_dta9yr6w_-p10 "endDate" 89
+(name "endDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p10"))
+($10 93 < -na6y1h_7ca_dta9yr6w_-p0z "lastEditDate" 89
+(name "lastEditDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p0z"))
+($10 94 < -na6y1h_7ca_dta9yr6w_-p0y "isLocked" 89
+(name "isLocked"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p0y"))
+($11 95 < -na6y1h_-168_ductkfjs_-p8p "#<anon> (Experiment, Sample)" 89
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8p"))
+($12 96 < -na6y1h_-168_ductkfjs_-p8l "#0" 95
+(uid "-na6y1h_-168_ductkfjs_-p8l")
+(multiplicity "1"))
+($12 97 < -na6y1h_-168_ductkfjs_-p8k "#1" 95
+(uid "-na6y1h_-168_ductkfjs_-p8k")
+(multiplicity "*"))
+($11 98 < -na6y1h_-168_ductkfjs_-p8n "#<anon> (Experiment, InputSample)" 89
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8n"))
+($12 99 < -na6y1h_-168_ductkfjs_-p8j "#0" 98
+(uid "-na6y1h_-168_ductkfjs_-p8j")
+(multiplicity "1"))
+($12 100 < -na6y1h_-168_ductkfjs_-p8i "#1" 98
+(uid "-na6y1h_-168_ductkfjs_-p8i")
+(multiplicity "*"))
+($9 101 < -na6y1h_7ca_dta9yr6w_-oy6 "ccp.People.Person" 78
+(name "ccp.People.Person"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy6"))
+($10 102 < -na6y1h_7ca_dta9yr6w_-oy5 "name" 101
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy5"))
+($10 103 < -na6y1h_7ca_dta9yr6w_-oy4 "telephone" 101
+(name "telephone"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy4"))
+($10 104 < -na6y1h_7ca_dta9yr6w_-oy3 "address" 101
+(name "address"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy3"))
+($10 105 < -na6y1h_7ca_dta9yr6w_-oy2 "password" 101
+(name "password"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy2"))
+($11 106 < -na6y1h_7ca_dta9yr6w_-oxs "#<anon> (ccp.People.Person, Title)" 101
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-oxs"))
+($12 107 < -na6y1h_7ca_dta9yr6w_-oxr "#0" 106
+(uid "-na6y1h_7ca_dta9yr6w_-oxr")
+(multiplicity "*"))
+($12 108 < -na6y1h_7ca_dta9yr6w_-oxq "#1" 106
+(uid "-na6y1h_7ca_dta9yr6w_-oxq")
+(multiplicity "*"))
+($11 109 < -na6y1h_7ca_dta9yr6w_-oxp "#<anon> (ccp.People.Person, PersonProjectTitle)" 101
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-oxp"))
+($12 110 < -na6y1h_7ca_dta9yr6w_-oxo "#0" 109
+(uid "-na6y1h_7ca_dta9yr6w_-oxo")
+(multiplicity "1"))
+($12 111 < -na6y1h_7ca_dta9yr6w_-oxn "#1" 109
+(uid "-na6y1h_7ca_dta9yr6w_-oxn")
+(multiplicity "*"))
+($11 112 < -na6y1h_7ca_dta9yr6w_-oxm "#<anon> (ccp.People.Person, PersonGroupTitle)" 101
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-oxm"))
+($12 113 < -na6y1h_7ca_dta9yr6w_-oxl "#0" 112
+(uid "-na6y1h_7ca_dta9yr6w_-oxl")
+(multiplicity "1"))
+($12 114 < -na6y1h_7ca_dta9yr6w_-oxk "#1" 112
+(uid "-na6y1h_7ca_dta9yr6w_-oxk")
+(multiplicity "*"))
+($9 115 < -na6y1h_7ca_dta9yr6w_-ox8 "RegularRole" 78
+(name "RegularRole"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ox8"))
+($10 116 < -na6y1h_7ca_dta9yr6w_-ox7 "name" 115
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ox7"))
+($11 117 < -na6y1h_7ca_dta9yr6w_-ox5 "#<anon> (RegularRole, RegularPermission)" 115
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ox5"))
+($12 118 < -na6y1h_7ca_dta9yr6w_-ox4 "#0" 117
+(uid "-na6y1h_7ca_dta9yr6w_-ox4")
+(multiplicity "*"))
+($12 119 < -na6y1h_7ca_dta9yr6w_-ox3 "#1" 117
+(uid "-na6y1h_7ca_dta9yr6w_-ox3")
+(multiplicity "*"))
+($9 120 < -na6y1h_7ca_dta9yr6w_-ox2 "AdminRole" 78
+(name "AdminRole"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ox2"))
+($10 121 < -na6y1h_7ca_dta9yr6w_-ox1 "name" 120
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ox1"))
+($11 122 < -na6y1h_7ca_dta9yr6w_-owz "#<anon> (AdminRole, AdminPermission)" 120
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-owz"))
+($12 123 < -na6y1h_7ca_dta9yr6w_-owy "#0" 122
+(uid "-na6y1h_7ca_dta9yr6w_-owy")
+(multiplicity "*"))
+($12 124 < -na6y1h_7ca_dta9yr6w_-owx "#1" 122
+(uid "-na6y1h_7ca_dta9yr6w_-owx")
+(multiplicity "*"))
+($9 125 < -na6y1h_7ca_dta9yr6w_-owm "Operation" 78
+(name "Operation"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owm"))
+($10 126 < -na6y1h_7ca_dta9yr6w_-owl "name" 125
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owl"))
+($9 127 < -na6y1h_7ca_dta9yr6w_-owk "RegularObject" 78
+(name "RegularObject"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owk"))
+($10 128 < -na6y1h_7ca_dta9yr6w_-owj "name" 127
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owj"))
+($9 129 < -na6y1h_7ca_dta9yr6w_-owh "Condition" 78
+(name "Condition"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owh"))
+($10 130 < -na6y1h_7ca_dta9yr6w_-owg "name" 129
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owg"))
+($11 131 < -na6y1h_7ca_dta9yr6w_-owf "#<anon> (Condition, AdminPermission)" 129
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-owf"))
+($12 132 < -na6y1h_7ca_dta9yr6w_-owe "#0" 131
+(uid "-na6y1h_7ca_dta9yr6w_-owe")
+(multiplicity "1"))
+($12 133 < -na6y1h_7ca_dta9yr6w_-owd "#1" 131
+(uid "-na6y1h_7ca_dta9yr6w_-owd")
+(multiplicity "*"))
+($13 134 < -na6y1h_7ca_dta9yr6w_-owc "Comment5" 78
+(name "Comment5"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owc")
+(body "- operations: read, insert, update, setLock and delete"
+"- objects are the table names"
+"- condition is the constraint for a specific operation to be performed on a specific object"
+))
+($9 135 < -na6y1h_7ca_dta9yr6w_-ovo "AdminObject" 78
+(name "AdminObject"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ovo"))
+($10 136 < -na6y1h_7ca_dta9yr6w_-ovn "name" 135
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ovn"))
+($9 137 < -na6y1h_7ca_dta9yr6w_-ovl "Title" 78
+(name "Title"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ovl"))
+($10 138 < -na6y1h_7ca_dta9yr6w_-ovk "name" 137
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ovk"))
+($11 139 < -na6y1h_7ca_dta9yr6w_-ovd "#<anon> (Title, PersonProjectTitle)" 137
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ovd"))
+($12 140 < -na6y1h_7ca_dta9yr6w_-ovc "#0" 139
+(uid "-na6y1h_7ca_dta9yr6w_-ovc")
+(multiplicity "1"))
+($12 141 < -na6y1h_7ca_dta9yr6w_-ovb "#1" 139
+(uid "-na6y1h_7ca_dta9yr6w_-ovb")
+(multiplicity "*"))
+($11 142 < -na6y1h_7ca_dta9yr6w_-ova "#<anon> (Title, PersonGroupTitle)" 137
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ova"))
+($12 143 < -na6y1h_7ca_dta9yr6w_-ov9 "#0" 142
+(uid "-na6y1h_7ca_dta9yr6w_-ov9")
+(multiplicity "1"))
+($12 144 < -na6y1h_7ca_dta9yr6w_-ov8 "#1" 142
+(uid "-na6y1h_7ca_dta9yr6w_-ov8")
+(multiplicity "*"))
+($11 145 < -na6y1h_7ca_dta9yr6w_-ov7 "#<anon> (Title, RegularRole)" 137
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ov7"))
+($12 146 < -na6y1h_7ca_dta9yr6w_-ov6 "#0" 145
+(uid "-na6y1h_7ca_dta9yr6w_-ov6")
+(multiplicity "*"))
+($12 147 < -na6y1h_7ca_dta9yr6w_-ov5 "#1" 145
+(uid "-na6y1h_7ca_dta9yr6w_-ov5")
+(multiplicity "*"))
+($11 148 < -na6y1h_7ca_dta9yr6w_-ov4 "#<anon> (Title, AdminRole)" 137
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ov4"))
+($12 149 < -na6y1h_7ca_dta9yr6w_-ov3 "#0" 148
+(uid "-na6y1h_7ca_dta9yr6w_-ov3")
+(multiplicity "*"))
+($12 150 < -na6y1h_7ca_dta9yr6w_-ov2 "#1" 148
+(uid "-na6y1h_7ca_dta9yr6w_-ov2")
+(multiplicity "*"))
+($9 151 < -na6y1h_7ca_dta9yr6w_-our "DropVisualisation" 78
+(name "DropVisualisation"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-our"))
+($10 152 < -na6y1h_7ca_dta9yr6w_-ouq "color" 151
+(name "color"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ouq"))
+($10 153 < -na6y1h_7ca_dta9yr6w_-oup "size" 151
+(name "size"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oup"))
+($10 154 < -na6y1h_-168_ductkfjs_-p8f "score" 151
+(name "score"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8f"))
+($10 155 < -na6y1h_7ca_dta9yr6w_-ouo "imageFiles" 151
+(name "imageFiles"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ouo"))
+($10 156 < -na6y1h_-168_ductkfjs_-p8e "observation" 151
+(name "observation"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8e"))
+($10 157 < -na6y1h_-168_ductkfjs_-p8d "observationType" 151
+(name "observationType"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8d"))
+($14 158 < -na6y1h_-168_ductkfjs_-p7y "#<anon> (DropVisualisation, Experiment)" 151
+(uid "-na6y1h_-168_ductkfjs_-p7y"))
+($9 159 < -na6y1h_7ca_dta9yr6w_-osy "PersonProjectTitle" 78
+(name "PersonProjectTitle"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osy"))
+($9 160 < -na6y1h_7ca_dta9yr6w_-osx "PersonGroupTitle" 78
+(name "PersonGroupTitle"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osx"))
+($9 161 < -na6y1h_7ca_dta9yr6w_-osw "Group" 78
+(name "Group"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osw"))
+($10 162 < -na6y1h_7ca_dta9yr6w_-osv "name" 161
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osv"))
+($11 163 < -na6y1h_7ca_dta9yr6w_-osu "#<anon> (Group, PersonGroupTitle)" 161
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osu"))
+($12 164 < -na6y1h_7ca_dta9yr6w_-ost "#0" 163
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-ost")
+(multiplicity "1"))
+($12 165 < -na6y1h_7ca_dta9yr6w_-oss "#1" 163
+(uid "-na6y1h_7ca_dta9yr6w_-oss")
+(multiplicity "*"))
+($9 166 < -na6y1h_7ca_dta9yr6w_-osr "RegularPermission" 78
+(name "RegularPermission"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osr"))
+($11 167 < -na6y1h_7ca_dta9yr6w_-osq "#<anon> (RegularPermission, RegularObject)" 166
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osq"))
+($12 168 < -na6y1h_7ca_dta9yr6w_-osp "#0" 167
+(uid "-na6y1h_7ca_dta9yr6w_-osp")
+(multiplicity "*"))
+($12 169 < -na6y1h_7ca_dta9yr6w_-oso "#1" 167
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-oso")
+(multiplicity "1"))
+($11 170 < -na6y1h_7ca_dta9yr6w_-osn "#<anon> (RegularPermission, Operation)" 166
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osn"))
+($12 171 < -na6y1h_7ca_dta9yr6w_-osm "#0" 170
+(uid "-na6y1h_7ca_dta9yr6w_-osm")
+(multiplicity "*"))
+($12 172 < -na6y1h_7ca_dta9yr6w_-osl "#1" 170
+(uid "-na6y1h_7ca_dta9yr6w_-osl")
+(multiplicity "1"))
+($11 173 < -na6y1h_7ca_dta9yr6w_-osk "#<anon> (RegularPermission, Condition)" 166
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osk"))
+($12 174 < -na6y1h_7ca_dta9yr6w_-osj "#0" 173
+(uid "-na6y1h_7ca_dta9yr6w_-osj")
+(multiplicity "*"))
+($12 175 < -na6y1h_7ca_dta9yr6w_-osi "#1" 173
+(uid "-na6y1h_7ca_dta9yr6w_-osi")
+(multiplicity "1"))
+($9 176 < -na6y1h_7ca_dta9yr6w_-osh "AdminPermission" 78
+(name "AdminPermission"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osh"))
+($11 177 < -na6y1h_7ca_dta9yr6w_-osg "#<anon> (AdminPermission, AdminObject)" 176
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osg"))
+($12 178 < -na6y1h_7ca_dta9yr6w_-osf "#0" 177
+(uid "-na6y1h_7ca_dta9yr6w_-osf")
+(multiplicity "*"))
+($12 179 < -na6y1h_7ca_dta9yr6w_-ose "#1" 177
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-ose")
+(multiplicity "1"))
+($11 180 < -na6y1h_7ca_dta9yr6w_-osd "#<anon> (AdminPermission, Operation)" 176
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osd"))
+($12 181 < -na6y1h_7ca_dta9yr6w_-osc "#0" 180
+(uid "-na6y1h_7ca_dta9yr6w_-osc")
+(multiplicity "*"))
+($12 182 < -na6y1h_7ca_dta9yr6w_-osb "#1" 180
+(uid "-na6y1h_7ca_dta9yr6w_-osb")
+(multiplicity "1"))
+($9 183 < -na6y1h_7ca_dta9yr6w_-osa "ProjectGroup" 78
+(name "ProjectGroup"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osa"))
+($10 184 < -na6y1h_7ca_dta9yr6w_-os9 "hostOrGuest" 183
+(name "hostOrGuest"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-os9"))
+($11 185 < -na6y1h_7ca_dta9yr6w_-os8 "#<anon> (ProjectGroup, Group)" 183
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-os8"))
+($12 186 < -na6y1h_7ca_dta9yr6w_-os7 "#0" 185
+(uid "-na6y1h_7ca_dta9yr6w_-os7")
+(multiplicity "*"))
+($12 187 < -na6y1h_7ca_dta9yr6w_-os6 "#1" 185
+(uid "-na6y1h_7ca_dta9yr6w_-os6")
+(multiplicity "1"))
+($11 188 < -na6y1h_7ca_dta9yr6w_-os5 "#<anon> (ProjectGroup, Project)" 183
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-os5"))
+($12 189 < -na6y1h_7ca_dta9yr6w_-os4 "#0" 188
+(uid "-na6y1h_7ca_dta9yr6w_-os4")
+(multiplicity "*"))
+($12 190 < -na6y1h_7ca_dta9yr6w_-os3 "#1" 188
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-os3")
+(multiplicity "1"))
+($9 191 < -na6y1h_-168_ductkfjs_-p98 "Sample" 78
+(name "Sample"
+)
+(uid "-na6y1h_-168_ductkfjs_-p98"))
+($11 192 < -na6y1h_-168_ductkfjs_-p8s "#<anon> (Sample, Crystal)" 191
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8s"))
+($12 193 < -na6y1h_-168_ductkfjs_-p8r "#0" 192
+(uid "-na6y1h_-168_ductkfjs_-p8r")
+(multiplicity "1"))
+($12 194 < -na6y1h_-168_ductkfjs_-p8q "#1" 192
+(uid "-na6y1h_-168_ductkfjs_-p8q")
+(multiplicity "0..1"))
+($11 195 < -na6y1h_-168_ductkfjs_-p8m "#<anon> (Sample, InputSample)" 191
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8m"))
+($12 196 < -na6y1h_-168_ductkfjs_-p8h "#0" 195
+(uid "-na6y1h_-168_ductkfjs_-p8h")
+(multiplicity "1"))
+($12 197 < -na6y1h_-168_ductkfjs_-p8g "#1" 195
+(uid "-na6y1h_-168_ductkfjs_-p8g")
+(multiplicity "*"))
+($11 198 < -na6y1h_-168_ductkfjs_-p82 "#<anon> (Sample, RefContainer)" 191
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p82"))
+($12 199 < -na6y1h_-168_ductkfjs_-p81 "#0" 198
+(uid "-na6y1h_-168_ductkfjs_-p81")
+(isNavigable false)
+(multiplicity "*"))
+($12 200 < -na6y1h_-168_ductkfjs_-p80 "#1" 198
+(uid "-na6y1h_-168_ductkfjs_-p80")
+(multiplicity "0..1"))
+($11 201 < -na6y1h_ju4_dvkzlzdf_-p8j "#<anon> (Sample, SafetyHazards)" 191
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p8j"))
+($12 202 < -na6y1h_ju4_dvkzlzdf_-p8h "#0" 201
+(uid "-na6y1h_ju4_dvkzlzdf_-p8h")
+(isNavigable false)
+(multiplicity "1"))
+($12 203 < -na6y1h_ju4_dvkzlzdf_-p8f "#1" 201
+(uid "-na6y1h_ju4_dvkzlzdf_-p8f"))
+($9 204 < -na6y1h_-168_ductkfjs_-p97 "Crystal" 78
+(name "Crystal"
+)
+(uid "-na6y1h_-168_ductkfjs_-p97"))
+($10 205 < -na6y1h_-168_ductkfjs_-p96 "code" 204
+(name "code"
+)
+(uid "-na6y1h_-168_ductkfjs_-p96"))
+($10 206 < -na6y1h_-168_ductkfjs_-p95 "name" 204
+(name "name"
+)
+(uid "-na6y1h_-168_ductkfjs_-p95"))
+($10 207 < -na6y1h_-168_ductkfjs_-p94 "spaceGroup" 204
+(name "spaceGroup"
+)
+(uid "-na6y1h_-168_ductkfjs_-p94"))
+($10 208 < -na6y1h_-168_ductkfjs_-p93 "morphology" 204
+(name "morphology"
+)
+(uid "-na6y1h_-168_ductkfjs_-p93"))
+($10 209 < -na6y1h_-168_ductkfjs_-p8a "crystalType" 204
+(name "crystalType"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8a"))
+($10 210 < -na6y1h_-168_ductkfjs_-p92 "color" 204
+(name "color"
+)
+(uid "-na6y1h_-168_ductkfjs_-p92"))
+($10 211 < -na6y1h_-168_ductkfjs_-p91 "x" 204
+(name "x"
+)
+(uid "-na6y1h_-168_ductkfjs_-p91"))
+($10 212 < -na6y1h_-168_ductkfjs_-p90 "y" 204
+(name "y"
+)
+(uid "-na6y1h_-168_ductkfjs_-p90"))
+($10 213 < -na6y1h_-168_ductkfjs_-p8z "z" 204
+(name "z"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8z"))
+($10 214 < -na6y1h_-168_ductkfjs_-p8y "a" 204
+(name "a"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8y"))
+($10 215 < -na6y1h_-168_ductkfjs_-p8x "b" 204
+(name "b"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8x"))
+($10 216 < -na6y1h_-168_ductkfjs_-p8w "c" 204
+(name "c"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8w"))
+($10 217 < -na6y1h_-168_ductkfjs_-p8v "alpha" 204
+(name "alpha"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8v"))
+($10 218 < -na6y1h_-168_ductkfjs_-p8u "beta" 204
+(name "beta"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8u"))
+($10 219 < -na6y1h_-168_ductkfjs_-p8t "gamma" 204
+(name "gamma"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8t"))
+($9 220 < -na6y1h_-168_ductkfjs_-p8o "InputSample" 78
+(name "InputSample"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8o"))
+($9 221 < -na6y1h_-168_ductkfjs_-p8c "MountCrystal" 78
+(name "MountCrystal"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8c"))
+($10 222 < -na6y1h_-168_ductkfjs_-p8b "crystalNum" 221
+(name "crystalNum"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8b"))
+($10 223 < -na6y1h_-168_ductkfjs_-p7z "cryoMethod" 221
+(name "cryoMethod"
+)
+(uid "-na6y1h_-168_ductkfjs_-p7z"))
+($14 224 < -na6y1h_-168_ductkfjs_-p7x "#<anon> (MountCrystal, Experiment)" 221
+(uid "-na6y1h_-168_ductkfjs_-p7x"))
+($9 225 < -na6y1h_-168_ductkfjs_-p89 "RefContainer" 78
+(name "RefContainer"
+)
+(uid "-na6y1h_-168_ductkfjs_-p89"))
+($10 226 < -na6y1h_-168_ductkfjs_-p88 "name" 225
+(name "name"
+)
+(uid "-na6y1h_-168_ductkfjs_-p88"))
+($10 227 < -na6y1h_-168_ductkfjs_-p87 "volume" 225
+(name "volume"
+)
+(uid "-na6y1h_-168_ductkfjs_-p87"))
+($10 228 < -na6y1h_ju4_dvkzlzdf_-p8m "length" 225
+(name "length"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8m"))
+($10 229 < -na6y1h_-168_ductkfjs_-p86 "loopType" 225
+(name "loopType"
+)
+(uid "-na6y1h_-168_ductkfjs_-p86"))
+($10 230 < -na6y1h_-168_ductkfjs_-p85 "loopLength" 225
+(name "loopLength"
+)
+(uid "-na6y1h_-168_ductkfjs_-p85"))
+($10 231 < -na6y1h_ju4_dvkzlzdf_-p8l "wireWidth" 225
+(name "wireWidth"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8l"))
+($10 232 < -na6y1h_-168_ductkfjs_-p84 "vendorName" 225
+(name "vendorName"
+)
+(uid "-na6y1h_-168_ductkfjs_-p84"))
+($10 233 < -na6y1h_-168_ductkfjs_-p83 "details" 225
+(name "details"
+)
+(uid "-na6y1h_-168_ductkfjs_-p83"))
+($9 234 < -na6y1h_-168_dupj2963_-p98 "memops.Implementation.Project" 78
+(name "memops.Implementation.Project"
+)
+(uid "-na6y1h_-168_dupj2963_-p98"))
+($11 235 < -na6y1h_-168_dupj2963_-p97 "#<anon> (memops.Implementation.Project, Project)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p97"))
+($12 236 < -na6y1h_-168_dupj2963_-p8k "#0" 235
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8k"))
+($12 237 < -na6y1h_-168_dupj2963_-p8j "#1" 235
+(uid "-na6y1h_-168_dupj2963_-p8j"))
+($11 238 < -na6y1h_-168_dupj2963_-p96 "#<anon> (memops.Implementation.Project, RegularObject)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p96"))
+($12 239 < -na6y1h_-168_dupj2963_-p8i "#0" 238
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8i"))
+($12 240 < -na6y1h_-168_dupj2963_-p8h "#1" 238
+(uid "-na6y1h_-168_dupj2963_-p8h"))
+($11 241 < -na6y1h_-168_dupj2963_-p93 "#<anon> (memops.Implementation.Project, AdminObject)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p93"))
+($12 242 < -na6y1h_-168_dupj2963_-p8g "#0" 241
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8g"))
+($12 243 < -na6y1h_-168_dupj2963_-p8f "#1" 241
+(uid "-na6y1h_-168_dupj2963_-p8f"))
+($11 244 < -na6y1h_-168_dupj2963_-p92 "#<anon> (memops.Implementation.Project, Condition)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p92"))
+($12 245 < -na6y1h_-168_dupj2963_-p8e "#0" 244
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8e"))
+($12 246 < -na6y1h_-168_dupj2963_-p8d "#1" 244
+(uid "-na6y1h_-168_dupj2963_-p8d"))
+($11 247 < -na6y1h_-168_dupj2963_-p91 "#<anon> (memops.Implementation.Project, RegularRole)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p91"))
+($12 248 < -na6y1h_-168_dupj2963_-p8c "#0" 247
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8c"))
+($12 249 < -na6y1h_-168_dupj2963_-p8b "#1" 247
+(uid "-na6y1h_-168_dupj2963_-p8b"))
+($11 250 < -na6y1h_-168_dupj2963_-p90 "#<anon> (memops.Implementation.Project, AdminRole)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p90"))
+($12 251 < -na6y1h_-168_dupj2963_-p8a "#0" 250
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8a"))
+($12 252 < -na6y1h_-168_dupj2963_-p89 "#1" 250
+(uid "-na6y1h_-168_dupj2963_-p89"))
+($11 253 < -na6y1h_-168_dupj2963_-p8z "#<anon> (memops.Implementation.Project, Operation)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8z"))
+($12 254 < -na6y1h_-168_dupj2963_-p88 "#0" 253
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p88"))
+($12 255 < -na6y1h_-168_dupj2963_-p87 "#1" 253
+(uid "-na6y1h_-168_dupj2963_-p87"))
+($11 256 < -na6y1h_-168_dupj2963_-p8y "#<anon> (memops.Implementation.Project, Title)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8y"))
+($12 257 < -na6y1h_-168_dupj2963_-p86 "#0" 256
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p86"))
+($12 258 < -na6y1h_-168_dupj2963_-p85 "#1" 256
+(uid "-na6y1h_-168_dupj2963_-p85"))
+($11 259 < -na6y1h_-168_dupj2963_-p8x "#<anon> (memops.Implementation.Project, Group)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8x"))
+($12 260 < -na6y1h_-168_dupj2963_-p84 "#0" 259
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p84"))
+($12 261 < -na6y1h_-168_dupj2963_-p83 "#1" 259
+(uid "-na6y1h_-168_dupj2963_-p83"))
+($11 262 < -na6y1h_-168_dupj2963_-p8w "#<anon> (memops.Implementation.Project, ccp.People.Person)" 234
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8w"))
+($12 263 < -na6y1h_-168_dupj2963_-p82 "#0" 262
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p82"))
+($12 264 < -na6y1h_-168_dupj2963_-p81 "#1" 262
+(uid "-na6y1h_-168_dupj2963_-p81"))
+($9 265 < -na6y1h_ju4_dvkzlzdf_-p8k "SafetyHazards" 78
+(name "SafetyHazards"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8k"))
+($9 266 < -na6y1h_ju4_dvkzlzdf_-p8e "DeliveryDetails" 78
+(name "DeliveryDetails"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8e"))
+($11 267 < -na6y1h_ju4_dvkzlzdf_-p82 "#<anon> (DeliveryDetails, Holder)" 266
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p82"))
+($12 268 < -na6y1h_ju4_dvkzlzdf_-p81 "#0" 267
+(uid "-na6y1h_ju4_dvkzlzdf_-p81")
+(multiplicity "0..1"))
+($12 269 < -na6y1h_ju4_dvkzlzdf_-p80 "#1" 267
+(uid "-na6y1h_ju4_dvkzlzdf_-p80")
+(multiplicity "*"))
+($9 270 < -na6y1h_ju4_dvkzlzdf_-p8d "DiffractionPlan" 78
+(name "DiffractionPlan"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8d"))
+($14 271 < -na6y1h_ju4_dvkzlzdf_-p8a "#<anon> (DiffractionPlan, Experiment)" 270
+(uid "-na6y1h_ju4_dvkzlzdf_-p8a"))
+($9 272 < -na6y1h_ju4_dvkzlzdf_-p89 "Holder" 78
+(name "Holder"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p89"))
+($11 273 < -na6y1h_ju4_dvkzlzdf_-p86 "#<anon> (Holder, Sample)" 272
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p86"))
+($12 274 < -na6y1h_ju4_dvkzlzdf_-p85 "#0" 273
+(uid "-na6y1h_ju4_dvkzlzdf_-p85")
+(multiplicity "0..1"))
+($12 275 < -na6y1h_ju4_dvkzlzdf_-p84 "#1" 273
+(uid "-na6y1h_ju4_dvkzlzdf_-p84")
+(multiplicity "*"))
+($9 276 < -na6y1h_ju4_dvkzlzdf_-p7y "Annotation" 78
+(name "Annotation"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7y"))
+($10 277 < -na6y1h_ju4_dvkzlzdf_-p7x "description" 276
+(name "description"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7x"))
+($10 278 < -na6y1h_ju4_dvkzlzdf_-p7w "fileName" 276
+(name "fileName"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7w"))
+($10 279 < -na6y1h_ju4_dvkzlzdf_-p7v "url" 276
+(name "url"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7v"))
+($10 280 < -na6y1h_ju4_dvkzlzdf_-p7u "date" 276
+(name "date"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7u"))
+($10 281 < -na6y1h_ju4_dvkzlzdf_-p7t "details" 276
+(name "details"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7t"))
+($11 282 < -na6y1h_ju4_dvkzlzdf_-p7s "#<anon> (Annotation, Experiment)" 276
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p7s"))
+($12 283 < -na6y1h_ju4_dvkzlzdf_-p7r "#0" 282
+(uid "-na6y1h_ju4_dvkzlzdf_-p7r")
+(multiplicity "*"))
+($12 284 < -na6y1h_ju4_dvkzlzdf_-p7q "#1" 282
+(uid "-na6y1h_ju4_dvkzlzdf_-p7q")
+(multiplicity "*"))
+($11 285 < -na6y1h_ju4_dvkzlzdf_-p7l "#<anon> (Annotation, Person)" 276
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p7l"))
+($12 286 < -na6y1h_ju4_dvkzlzdf_-p7k "#0" 285
+(uid "-na6y1h_ju4_dvkzlzdf_-p7k")
+(isNavigable false)
+(multiplicity "*"))
+($12 287 < -na6y1h_ju4_dvkzlzdf_-p7j "author#1" 285
+(name "author"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7j")
+(multiplicity "1"))
+($9 288 < -na6y1h_ju4_dvkzlzdf_-p7n "Person" 78
+(name "Person"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7n"))
+($15 289 < -na6y1h_7ca_dta9yr6w_-os2 "stereotypes" 1
+(uid "-na6y1h_7ca_dta9yr6w_-os2"))
+($16 290 < -na6y1h_7ca_dta9yr6w_-os1 "_odPackage" 289
+(name "_odPackage"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-os1")
+(baseClass "Package"))
+($16 291 < -na6y1h_7ca_dta9yr6w_-os0 "odStub" 289
+(name "odStub"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-os0"))
+($16 292 < -na6y1h_7ca_dta9yr6w_-orz "access" 289
+(name "access"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orz")
+(baseClass "Dependency"))
+($16 293 < -na6y1h_7ca_dta9yr6w_-ory "association" 289
+(name "association"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ory")
+(baseClass "AssociationEnd"))
+($16 294 < -na6y1h_7ca_dta9yr6w_-orx "create" 289
+(name "create"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orx")
+(baseClass "BehavioralFeature"))
+($16 295 < -na6y1h_7ca_dta9yr6w_-orw "destroy" 289
+(name "destroy"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orw")
+(baseClass "BehavioralFeature"))
+($16 296 < -na6y1h_7ca_dta9yr6w_-orv "document" 289
+(name "document"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orv")
+(baseClass "Component"))
+($16 297 < -na6y1h_7ca_dta9yr6w_-oru "executable" 289
+(name "executable"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oru")
+(baseClass "Component"))
+($16 298 < -na6y1h_7ca_dta9yr6w_-ort "extend" 289
+(name "extend"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ort")
+(baseClass "Dependency"))
+($16 299 < -na6y1h_7ca_dta9yr6w_-ors "facade" 289
+(name "facade"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ors")
+(baseClass "Package"))
+($16 300 < -na6y1h_7ca_dta9yr6w_-orr "file" 289
+(name "file"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orr")
+(baseClass "Component"))
+($16 301 < -na6y1h_7ca_dta9yr6w_-orq "framework" 289
+(name "framework"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orq")
+(baseClass "Package"))
+($16 302 < -na6y1h_7ca_dta9yr6w_-orp "friend" 289
+(name "friend"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orp")
+(baseClass "Dependency"))
+($16 303 < -na6y1h_7ca_dta9yr6w_-oro "global" 289
+(name "global"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oro")
+(baseClass "AssociationEnd"))
+($16 304 < -na6y1h_7ca_dta9yr6w_-orn "implementation" 289
+(name "implementation"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orn")
+(baseClass "Generalization"))
+($16 305 < -na6y1h_7ca_dta9yr6w_-orm "implementationClass" 289
+(name "implementationClass"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orm")
+(baseClass "Class"))
+($16 306 < -na6y1h_7ca_dta9yr6w_-orl "import" 289
+(name "import"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orl")
+(baseClass "Dependency"))
+($16 307 < -na6y1h_7ca_dta9yr6w_-ork "include" 289
+(name "include"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ork")
+(baseClass "Dependency"))
+($16 308 < -na6y1h_7ca_dta9yr6w_-orj "invariant" 289
+(name "invariant"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orj")
+(baseClass "Constraint"))
+($16 309 < -na6y1h_7ca_dta9yr6w_-ori "library" 289
+(name "library"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ori")
+(baseClass "Component"))
+($16 310 < -na6y1h_7ca_dta9yr6w_-orh "local" 289
+(name "local"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orh")
+(baseClass "AssociationEnd"))
+($16 311 < -na6y1h_7ca_dta9yr6w_-org "metaclass" 289
+(name "metaclass"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-org")
+(baseClass "Classifier"))
+($16 312 < -na6y1h_7ca_dta9yr6w_-orf "metamodel" 289
+(name "metamodel"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orf")
+(baseClass "Package"))
+($16 313 < -na6y1h_7ca_dta9yr6w_-ore "parameter" 289
+(name "parameter"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ore")
+(baseClass "AssociationEnd"))
+($16 314 < -na6y1h_7ca_dta9yr6w_-ord "postcondition" 289
+(name "postcondition"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ord")
+(baseClass "Constraint"))
+($16 315 < -na6y1h_7ca_dta9yr6w_-orc "powertype" 289
+(name "powertype"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orc")
+(baseClass "Classifier"))
+($16 316 < -na6y1h_7ca_dta9yr6w_-orb "precondition" 289
+(name "precondition"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-orb")
+(baseClass "Constraint"))
+($16 317 < -na6y1h_7ca_dta9yr6w_-ora "process" 289
+(name "process"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ora")
+(baseClass "Classifier"))
+($16 318 < -na6y1h_7ca_dta9yr6w_-or9 "requirement" 289
+(name "requirement"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or9")
+(baseClass "Comment"))
+($16 319 < -na6y1h_7ca_dta9yr6w_-or8 "responsibility" 289
+(name "responsibility"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or8")
+(baseClass "Comment"))
+($16 320 < -na6y1h_7ca_dta9yr6w_-or7 "self" 289
+(name "self"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or7")
+(baseClass "AssociationEnd"))
+($16 321 < -na6y1h_7ca_dta9yr6w_-or6 "stub" 289
+(name "stub"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or6")
+(baseClass "Package"))
+($16 322 < -na6y1h_7ca_dta9yr6w_-or5 "systemModel" 289
+(name "systemModel"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or5")
+(baseClass "Package"))
+($16 323 < -na6y1h_7ca_dta9yr6w_-or4 "table" 289
+(name "table"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or4")
+(baseClass "Component"))
+($16 324 < -na6y1h_7ca_dta9yr6w_-or3 "thread" 289
+(name "thread"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or3")
+(baseClass "Classifier"))
+($16 325 < -na6y1h_7ca_dta9yr6w_-or2 "topLevel" 289
+(name "topLevel"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or2")
+(baseClass "Package"))
+($16 326 < -na6y1h_7ca_dta9yr6w_-or1 "type" 289
+(name "type"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or1")
+(baseClass "Class"))
+($16 327 < -na6y1h_7ca_dta9yr6w_-or0 "utility" 289
+(name "utility"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-or0")
+(baseClass "Classifier"))
+($16 328 < -na6y1h_7ca_dta9yr6w_-oqz "boundary" 289
+(smallImageFile stereotype/image/small/boundary.gif)
+(name "boundary"
+)
+(defaultIconWidth 65)
+(iconFile stereotype/icon/boundary.wmf)
+(uid "-na6y1h_7ca_dta9yr6w_-oqz")
+(baseClass "Class"))
+($16 329 < -na6y1h_7ca_dta9yr6w_-oqy "entity" 289
+(smallImageFile stereotype/image/small/entity.gif)
+(name "entity"
+)
+(iconFile stereotype/icon/entity.wmf)
+(uid "-na6y1h_7ca_dta9yr6w_-oqy")
+(baseClass "Class"))
+($16 330 < -na6y1h_7ca_dta9yr6w_-oqx "control" 289
+(smallImageFile stereotype/image/small/control.gif)
+(name "control"
+)
+(defaultIconWidth 60)
+(iconFile stereotype/icon/control.wmf)
+(uid "-na6y1h_7ca_dta9yr6w_-oqx")
+(defaultIconHeight 60)
+(baseClass "Class"))
+($16 331 < -na6y1h_7ca_dta9yr6w_-oqw "interface" 289
+(name "interface"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oqw")
+(baseClass "Class"))
+($16 332 < -na6y1h_7ca_dta9yr6w_-oqv "body" 289
+(name "body"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oqv")
+(baseClass "Component"))
+($17 333 < -na6y1h_7ca_dta9yr6w_-oqu "styles" 1
+(uid "-na6y1h_7ca_dta9yr6w_-oqu"))
+($18 334 < -na6y1h_7ca_dta9yr6w_-oqt "experiment" 333
+(fillColor 255 153 0)
+(name "experiment"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqt"))
+($18 335 < -na6y1h_7ca_dta9yr6w_-oqs "trial" 333
+(fillColor 102 153 255)
+(name "trial"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqs"))
+($18 336 < -na6y1h_7ca_dta9yr6w_-oqr "molecule" 333
+(fillColor 153 204 205)
+(name "molecule"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqr"))
+($18 337 < -na6y1h_7ca_dta9yr6w_-oqq "sampleComponent" 333
+(fillColor 153 255 153)
+(name "sampleComponent"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqq"))
+($18 338 < -na6y1h_7ca_dta9yr6w_-oqp "sample" 333
+(fillColor 0 204 51)
+(name "sample"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqp"))
+($18 339 < -na6y1h_7ca_dta9yr6w_-oqo "crystallisation" 333
+(fillColor 255 255 51)
+(name "crystallisation"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqo"))
+($8 340 < -na6y1h_7ca_dta9yr6w_-oqn "Component" 1
+(name "Component"
+)
+(namespaceRoot true)
+(uid "-na6y1h_7ca_dta9yr6w_-oqn"))
+($8 341 < -na6y1h_7ca_dta9yr6w_-oqm "Usecase" 1
+(name "Usecase"
+)
+(namespaceRoot true)
+(uid "-na6y1h_7ca_dta9yr6w_-oqm"))
+($8 342 < -na6y1h_7ca_dta9yr6w_-oql "Deployment" 1
+(name "Deployment"
+)
+(namespaceRoot true)
+(uid "-na6y1h_7ca_dta9yr6w_-oql"))
+($19 343)
+($21 344)
+($21 345)
+($21 346)
+($19 347)
+($21 348)
+($19 349)
+($19 350)
+($19 351)
+($19 352)
+($19 353)
+($19 354)
+($19 355)
+($19 356)
+($19 357)
+($19 358)
+($19 359)
+($19 360)
+($19 361)
+($19 362)
+($19 363)
+($19 364)
+($19 365)
+($19 366)
+($19 367)
+($19 368)
+($19 369)
+($19 370)
+($19 371)
+($19 372)
+($19 373)
+($21 374)
+($19 375)
+($19 376)
+($19 377)
+($19 378)
+($19 379)
+($19 380)
+($19 381)
+($19 382)
+($19 383)
+($19 384)
+($19 385)
+($19 386)
+($19 387)
+($19 388)
+($19 389)
+($19 390)
+($19 391)
+($19 392)
+($19 393)
+($19 394)
+($19 395)
+($19 396)
+($19 397)
+($19 398)
+($19 399)
+($19 400)
+($19 401)
+($19 402)
+($19 403)
+($19 404)
+($19 405)
+($19 406)
+($19 407)
+($21 408)
+($19 409)
+($19 410)
+($19 411)
+($19 412)
+($19 413)
+($19 414)
+($19 415)
+($19 416)
+($19 417)
+($19 418)
+($19 419)
+($19 420)
+($19 421)
+($22 422
+(name "DomainLockObject"
+)
+(uid "64m3b9_4p5_bqjok6kd_-p8j"))
+(typeAssn 96 89)
+(assocEndAssn 89 96)
+(typeAssn 99 89)
+(assocEndAssn 89 99)
+(typeAssn 284 89)
+(assocEndAssn 89 284)
+(typeExpression 90 344)
+(typeExpression 91 344)
+(typeExpression 92 344)
+(typeExpression 93 344)
+(typeExpression 94 344)
+(typeAssn 193 191)
+(assocEndAssn 191 193)
+(assocEndAssn 191 97)
+(typeAssn 196 191)
+(assocEndAssn 191 196)
+(typeAssn 199 191)
+(assocEndAssn 191 199)
+(typeAssn 202 191)
+(assocEndAssn 191 202)
+(typeAssn 275 191)
+(assocEndAssn 191 275)
+(assocEndAssn 204 194)
+(typeExpression 205 345)
+(typeExpression 206 345)
+(typeExpression 207 345)
+(typeExpression 208 345)
+(typeExpression 209 345)
+(typeExpression 210 345)
+(typeExpression 211 345)
+(typeExpression 212 345)
+(typeExpression 213 345)
+(typeExpression 214 345)
+(typeExpression 215 345)
+(typeExpression 216 345)
+(typeExpression 217 345)
+(typeExpression 218 345)
+(typeExpression 219 345)
+(typeAssn 194 204)
+(typeAssn 100 220)
+(assocEndAssn 220 100)
+(assocEndAssn 220 197)
+(typeAssn 197 220)
+(assocEndAssn 225 200)
+(typeExpression 226 345)
+(typeExpression 227 345)
+(typeExpression 228 346)
+(typeExpression 229 345)
+(typeExpression 230 345)
+(typeExpression 231 346)
+(typeExpression 232 345)
+(typeExpression 233 345)
+(typeAssn 200 225)
+(assocEndAssn 265 203)
+(typeAssn 203 265)
+(typeAssn 97 191)
+(projectionAssn 4 89 343)
+(subtypeAssn 158 151)
+(supertypeAssn 158 89)
+(generalizationAssn 151 158)
+(typeExpression 152 348)
+(typeExpression 153 348)
+(typeExpression 154 345)
+(typeExpression 155 348)
+(typeExpression 156 345)
+(typeExpression 157 345)
+(projectionAssn 5 151 347)
+(projectionAssn 6 191 349)
+(projectionAssn 7 204 350)
+(to 8 7)
+(from 8 6)
+(projectionAssn 8 192 351)
+(to 9 6)
+(from 9 4)
+(projectionAssn 9 95 352)
+(projectionAssn 10 220 353)
+(to 11 10)
+(from 11 4)
+(projectionAssn 11 98 354)
+(to 12 10)
+(from 12 6)
+(projectionAssn 12 195 355)
+(subtypeAssn 224 221)
+(supertypeAssn 224 89)
+(generalizationAssn 221 224)
+(typeExpression 222 345)
+(typeExpression 223 345)
+(projectionAssn 13 221 356)
+(projectionAssn 14 225 357)
+(to 15 14)
+(from 15 6)
+(projectionAssn 15 198 358)
+(to 16 4)
+(from 16 5)
+(projectionAssn 16 158 359)
+(to 17 4)
+(from 17 13)
+(projectionAssn 17 224 360)
+(projectionAssn 18 265 361)
+(to 19 18)
+(from 19 6)
+(projectionAssn 19 201 362)
+(typeAssn 268 266)
+(assocEndAssn 266 268)
+(typeAssn 274 272)
+(assocEndAssn 272 274)
+(assocEndAssn 272 269)
+(typeAssn 269 272)
+(projectionAssn 20 266 363)
+(subtypeAssn 271 270)
+(supertypeAssn 271 89)
+(generalizationAssn 270 271)
+(projectionAssn 21 270 364)
+(to 22 4)
+(from 22 21)
+(projectionAssn 22 271 365)
+(projectionAssn 23 272 366)
+(to 24 6)
+(from 24 23)
+(projectionAssn 24 273 367)
+(to 25 23)
+(from 25 20)
+(projectionAssn 25 267 368)
+(typeAssn 283 276)
+(assocEndAssn 276 283)
+(typeAssn 286 276)
+(assocEndAssn 276 286)
+(typeExpression 277 346)
+(typeExpression 278 346)
+(typeExpression 279 346)
+(typeExpression 280 346)
+(typeExpression 281 346)
+(assocEndAssn 288 287)
+(typeAssn 287 288)
+(projectionAssn 26 276 369)
+(to 27 4)
+(from 27 26)
+(projectionAssn 27 282 370)
+(projectionAssn 28 288 371)
+(to 29 28)
+(from 29 26)
+(projectionAssn 29 285 372)
+(openDiagrams 2 3)
+(typeAssn 84 79)
+(assocEndAssn 79 84)
+(typeAssn 87 79)
+(assocEndAssn 79 87)
+(typeAssn 190 79)
+(assocEndAssn 79 190)
+(typeAssn 237 79)
+(assocEndAssn 79 237)
+(typeExpression 80 344)
+(typeExpression 81 344)
+(typeExpression 82 344)
+(assocEndAssn 101 85)
+(typeAssn 107 101)
+(assocEndAssn 101 107)
+(typeAssn 110 101)
+(assocEndAssn 101 110)
+(typeAssn 113 101)
+(assocEndAssn 101 113)
+(typeAssn 264 101)
+(assocEndAssn 101 264)
+(typeExpression 102 344)
+(typeExpression 103 344)
+(typeExpression 104 344)
+(typeExpression 105 344)
+(assocEndAssn 137 108)
+(typeAssn 140 137)
+(assocEndAssn 137 140)
+(typeAssn 143 137)
+(assocEndAssn 137 143)
+(typeAssn 146 137)
+(assocEndAssn 137 146)
+(typeAssn 149 137)
+(assocEndAssn 137 149)
+(typeAssn 258 137)
+(assocEndAssn 137 258)
+(typeExpression 138 344)
+(typeAssn 111 159)
+(assocEndAssn 159 111)
+(assocEndAssn 159 141)
+(typeAssn 88 159)
+(assocEndAssn 159 88)
+(typeAssn 141 159)
+(typeAssn 114 160)
+(assocEndAssn 160 114)
+(typeAssn 165 160)
+(assocEndAssn 160 165)
+(assocEndAssn 160 144)
+(typeAssn 144 160)
+(typeAssn 118 115)
+(assocEndAssn 115 118)
+(assocEndAssn 115 147)
+(typeAssn 249 115)
+(assocEndAssn 115 249)
+(typeExpression 116 374)
+(assocEndAssn 166 119)
+(typeAssn 168 166)
+(assocEndAssn 166 168)
+(typeAssn 171 166)
+(assocEndAssn 166 171)
+(typeAssn 174 166)
+(assocEndAssn 166 174)
+(assocEndAssn 127 169)
+(typeAssn 240 127)
+(assocEndAssn 127 240)
+(typeExpression 128 374)
+(typeAssn 169 127)
+(assocEndAssn 125 172)
+(typeAssn 182 125)
+(assocEndAssn 125 182)
+(typeAssn 255 125)
+(assocEndAssn 125 255)
+(typeExpression 126 344)
+(typeAssn 172 125)
+(assocEndAssn 129 175)
+(typeAssn 132 129)
+(assocEndAssn 129 132)
+(typeAssn 246 129)
+(assocEndAssn 129 246)
+(typeExpression 130 344)
+(typeAssn 124 176)
+(assocEndAssn 176 124)
+(typeAssn 178 176)
+(assocEndAssn 176 178)
+(assocEndAssn 176 133)
+(typeAssn 181 176)
+(assocEndAssn 176 181)
+(assocEndAssn 135 179)
+(typeAssn 243 135)
+(assocEndAssn 135 243)
+(typeExpression 136 374)
+(typeAssn 179 135)
+(typeAssn 133 176)
+(typeAssn 175 129)
+(typeAssn 119 166)
+(typeAssn 147 115)
+(typeAssn 123 120)
+(assocEndAssn 120 123)
+(assocEndAssn 120 150)
+(typeAssn 252 120)
+(assocEndAssn 120 252)
+(typeExpression 121 374)
+(typeAssn 150 120)
+(typeAssn 108 137)
+(typeAssn 85 101)
+(projectionAssn 31 79 373)
+(projectionAssn 32 101 375)
+(projectionAssn 33 115 376)
+(projectionAssn 34 120 377)
+(projectionAssn 35 125 378)
+(projectionAssn 36 127 379)
+(projectionAssn 37 129 380)
+(projectionAssn 38 134 381)
+(projectionAssn 39 135 382)
+(projectionAssn 40 137 383)
+(to 41 32)
+(from 41 31)
+(projectionAssn 41 83 384)
+(to 42 40)
+(from 42 32)
+(projectionAssn 42 106 385)
+(projectionAssn 43 159 386)
+(to 44 43)
+(from 44 32)
+(projectionAssn 44 109 387)
+(to 45 43)
+(from 45 40)
+(projectionAssn 45 139 388)
+(projectionAssn 46 160 389)
+(typeAssn 164 161)
+(assocEndAssn 161 164)
+(typeAssn 187 161)
+(assocEndAssn 161 187)
+(typeAssn 261 161)
+(assocEndAssn 161 261)
+(typeExpression 162 374)
+(projectionAssn 47 161 390)
+(to 48 46)
+(from 48 32)
+(projectionAssn 48 112 391)
+(to 49 46)
+(from 49 47)
+(projectionAssn 49 163 392)
+(to 50 46)
+(from 50 40)
+(projectionAssn 50 142 393)
+(projectionAssn 51 166 394)
+(projectionAssn 52 176 395)
+(to 53 51)
+(from 53 33)
+(projectionAssn 53 117 396)
+(to 54 52)
+(from 54 34)
+(projectionAssn 54 122 397)
+(to 55 36)
+(from 55 51)
+(projectionAssn 55 167 398)
+(to 56 39)
+(from 56 52)
+(projectionAssn 56 177 399)
+(to 57 33)
+(from 57 40)
+(projectionAssn 57 145 400)
+(to 58 34)
+(from 58 40)
+(projectionAssn 58 148 401)
+(to 59 35)
+(from 59 51)
+(projectionAssn 59 170 402)
+(to 60 37)
+(from 60 51)
+(projectionAssn 60 173 403)
+(to 61 52)
+(from 61 37)
+(projectionAssn 61 131 404)
+(to 62 35)
+(from 62 52)
+(projectionAssn 62 180 405)
+(to 63 43)
+(from 63 31)
+(projectionAssn 63 86 406)
+(typeAssn 186 183)
+(assocEndAssn 183 186)
+(typeAssn 189 183)
+(assocEndAssn 183 189)
+(typeExpression 184 408)
+(projectionAssn 64 183 407)
+(to 65 47)
+(from 65 64)
+(projectionAssn 65 185 409)
+(to 66 31)
+(from 66 64)
+(projectionAssn 66 188 410)
+(typeAssn 236 234)
+(assocEndAssn 234 236)
+(typeAssn 239 234)
+(assocEndAssn 234 239)
+(typeAssn 242 234)
+(assocEndAssn 234 242)
+(typeAssn 245 234)
+(assocEndAssn 234 245)
+(typeAssn 248 234)
+(assocEndAssn 234 248)
+(typeAssn 251 234)
+(assocEndAssn 234 251)
+(typeAssn 254 234)
+(assocEndAssn 234 254)
+(typeAssn 257 234)
+(assocEndAssn 234 257)
+(typeAssn 260 234)
+(assocEndAssn 234 260)
+(typeAssn 263 234)
+(assocEndAssn 234 263)
+(projectionAssn 67 234 411)
+(to 68 31)
+(from 68 67)
+(projectionAssn 68 235 412)
+(to 69 36)
+(from 69 67)
+(projectionAssn 69 238 413)
+(to 70 39)
+(from 70 67)
+(projectionAssn 70 241 414)
+(to 71 37)
+(from 71 67)
+(projectionAssn 71 244 415)
+(to 72 33)
+(from 72 67)
+(projectionAssn 72 247 416)
+(to 73 34)
+(from 73 67)
+(projectionAssn 73 250 417)
+(to 74 35)
+(from 74 67)
+(projectionAssn 74 253 418)
+(to 75 40)
+(from 75 67)
+(projectionAssn 75 256 419)
+(to 76 47)
+(from 76 67)
+(projectionAssn 76 259 420)
+(to 77 32)
+(from 77 67)
+(projectionAssn 77 262 421)
+(openDiagrams 2 30)
+(lockedBy 290 422)
+(stereotypeAssn 78 290)
+(lockedBy 78 422)
+(lockedBy 289 422)
+(lockedBy 333 422)
+(stereotypeAssn 340 290)
+(lockedBy 340 422)
+(stereotypeAssn 341 290)
+(lockedBy 341 422)
+(stereotypeAssn 342 290)
+(lockedBy 342 422)
+(lockedBy 1 422)

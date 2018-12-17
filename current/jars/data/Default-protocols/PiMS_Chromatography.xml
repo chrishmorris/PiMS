@@ -1,0 +1,23 @@
+<!-- PiMS Chromatography protocol xml as flat file -->
+<protocol name="PiMS Chromatography" objective="Purification of Target Protein" creationDate="11-03-09" remarks="Default set of protocols for PiMS" details="Purification of Target Protein">
+ <experimentType>Chromatography</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Pool 1 1" />
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Pool 2" />
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Pool 3" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Separation method" parameterType="String" defaultValue="Size exclusion" possibleVlaues="Size exclusion;Ion exchange;Affinity purification" />
+  <parameterDefinition id="1" name="Column used" parameterType="String" possibleValues="" defaultValue=""/>
+  <parameterDefinition id="2" name="Protocol used" parameterType="String" />
+  <parameterDefinition id="3" name="Pool 1 Fractions" parameterType="String" />
+  <parameterDefinition id="4" name="Pool 2 Fractions" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="5" name="Pool 3 Fractions" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>
+

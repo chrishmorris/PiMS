@@ -1,0 +1,132 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+   version="1.0">
+   <persistence-unit name="pims">
+	  <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>org.pimslims.model.core.SystemClass</class>
+        <class>org.pimslims.model.accessControl.UserGroup</class>
+        <class>org.pimslims.model.accessControl.User</class>
+        <class>org.pimslims.model.accessControl.Permission</class>
+        <class>org.pimslims.model.core.AccessObject</class>
+        <class>org.pimslims.model.core.LabBookEntry</class>
+        <class>org.pimslims.model.crystallization.CyParameterDefinition</class>
+        <class>org.pimslims.model.crystallization.Image</class>
+        <class>org.pimslims.model.crystallization.CyParameter</class>
+        <class>org.pimslims.model.crystallization.DropAnnotation</class>
+        <class>org.pimslims.model.crystallization.Score</class>
+        <class>org.pimslims.model.crystallization.ScoringScheme</class>
+        <class>org.pimslims.model.experiment.ExperimentGroup</class>
+        <class>org.pimslims.model.experiment.Experiment</class>
+        <class>org.pimslims.model.experiment.InputSample</class>
+        <class>org.pimslims.model.experiment.Parameter</class>
+        <class>org.pimslims.model.experiment.OutputSample</class>
+        <class>org.pimslims.model.experiment.Software</class>
+        <class>org.pimslims.model.experiment.Method</class>
+        <class>org.pimslims.model.experiment.MethodParameter</class>
+        <class>org.pimslims.model.experiment.Instrument</class>
+        <class>org.pimslims.model.holder.AbstractHolder</class>
+        <class>org.pimslims.model.holder.Holder</class>
+        <class>org.pimslims.model.holder.RefHolder</class>
+        <class>org.pimslims.model.holder.HolderLocation</class>
+        <class>org.pimslims.model.holder.RefSamplePosition</class>
+        <class>org.pimslims.model.holder.HolderTypePosition</class>
+        <class>org.pimslims.model.holder.RefHolderOffset</class>
+        <class>org.pimslims.model.location.Location</class>
+        <class>org.pimslims.model.molecule.MoleculeFeature</class>
+        <class>org.pimslims.model.molecule.AbstractComponent</class>
+        <class>org.pimslims.model.molecule.Molecule</class>
+        <class>org.pimslims.model.molecule.Construct</class>
+        <class>org.pimslims.model.molecule.Primer</class>
+        <class>org.pimslims.model.molecule.Extension</class>
+        <class>org.pimslims.model.molecule.Host</class>
+        <class>org.pimslims.model.people.Group</class>
+        <class>org.pimslims.model.people.PersonInGroup</class>
+        <class>org.pimslims.model.people.Organisation</class>
+        <class>org.pimslims.model.people.Person</class>
+        <class>org.pimslims.model.protocol.Protocol</class>
+        <class>org.pimslims.model.protocol.RefOutputSample</class>
+        <class>org.pimslims.model.protocol.RefInputSample</class>
+        <class>org.pimslims.model.protocol.ParameterDefinition</class>
+        <class>org.pimslims.model.sample.SampleComponent</class>
+        <class>org.pimslims.model.sample.AbstractSample</class>
+        <class>org.pimslims.model.sample.Sample</class>
+        <class>org.pimslims.model.sample.CrystalSample</class><!-- obsolete -->
+        <class>org.pimslims.model.sample.RefSample</class>
+        <class>org.pimslims.model.sample.RefSampleSource</class>
+        <class>org.pimslims.model.schedule.SchedulePlanOffset</class>
+        <class>org.pimslims.model.schedule.SchedulePlan</class>
+        <class>org.pimslims.model.schedule.ScheduledTask</class>
+        <class>org.pimslims.model.target.Target</class>
+        <class>org.pimslims.model.target.Alias</class>
+        <class>org.pimslims.model.target.Milestone</class>
+        <class>org.pimslims.model.target.TargetGroup</class>
+        <class>org.pimslims.model.target.Project</class>
+        <class>org.pimslims.model.target.ResearchObjectiveElement</class>
+        <class>org.pimslims.model.target.ResearchObjective</class>
+        <class>org.pimslims.model.target.SimilarityHit</class>
+        <class>org.pimslims.model.reference.PublicEntry</class>
+        <class>org.pimslims.model.reference.DbName</class>
+        <class>org.pimslims.model.reference.ExperimentType</class>
+        <class>org.pimslims.model.reference.AbstractHolderType</class>
+        <class>org.pimslims.model.reference.PinType</class>
+        <class>org.pimslims.model.reference.HolderType</class>
+        <class>org.pimslims.model.reference.CrystalType</class>
+        <class>org.pimslims.model.reference.HolderTypeSource</class>
+        <class>org.pimslims.model.reference.HazardPhrase</class>
+        <class>org.pimslims.model.reference.InstrumentType</class>
+        <class>org.pimslims.model.reference.TargetStatus</class>
+        <class>org.pimslims.model.reference.ComponentCategory</class>
+        <class>org.pimslims.model.reference.HolderCategory</class>
+        <class>org.pimslims.model.reference.WorkflowItem</class>
+        <class>org.pimslims.model.reference.SampleCategory</class>
+        <class>org.pimslims.model.reference.ImageType</class>
+        <class>org.pimslims.model.reference.Organism</class>
+        <class>org.pimslims.model.core.Attachment</class>
+        <class>org.pimslims.model.core.ExternalDbLink</class>
+        <class>org.pimslims.model.core.Annotation</class>
+        <class>org.pimslims.model.core.Citation</class>
+        <class>org.pimslims.model.core.JournalCitation</class>
+        <class>org.pimslims.model.core.BookCitation</class>
+        <class>org.pimslims.model.core.ConferenceCitation</class>
+        <class>org.pimslims.model.core.ThesisCitation</class>
+        <class>org.pimslims.model.core.Note</class>
+        <class>org.pimslims.model.core.ApplicationData</class>
+      <properties>
+        <property name="hibernate.archive.autodetection" value="class"/>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle9Dialect"/>
+        <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="hibernate.connection.url" value="db.url = jdbc:oracle:thin:@localhost:1521:pims"/>
+        <property name="hibernate.connection.username" value="postgres"/>
+
+         <!-- Set your DB passwd here -->
+        <property name="hibernate.connection.password" value="****"/>
+
+        <!-- 2nd level cache provider -->
+        <property name="hibernate.cache.provider_class" value="org.hibernate.cache.EhCacheProvider"/>
+        <!-- 2nd level cache for query -->
+        <property name="hibernate.cache.use_query_cache" value="true"/>
+        <!-- hibernate statistics -->
+         <property name="hibernate.generate_statistics" value="true" />
+
+
+
+        <!-- Use the C3P0 connection pool provider -->
+        <property name="hibernate.c3p0.min_size" value="3"/>
+        <property name="hibernate.c3p0.max_size" value="20"/>
+        <property name="hibernate.c3p0.timeout" value="60000"/>
+        <property name="hibernate.c3p0.max_statements" value="0"/>
+        <property name="hibernate.c3p0.idle_test_period" value="6000"/>
+
+        <!-- Show and print nice SQL on stdout -->
+        <property name="show_sql" value="false"/>
+        <property name="format_sql" value="true"/>
+
+         <!-- hibernate hbm2ddl none|validate | update | create | create-drop-->
+         <property name="hibernate.hbm2ddl.auto" value="none" />
+
+
+      </properties>
+   </persistence-unit>
+</persistence>

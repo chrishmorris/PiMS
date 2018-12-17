@@ -1,0 +1,21 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF ScaleUp Concentration" objective="Concentration of Target Protein" creationDate="02-02-07" remarks="Based on Lab activities requirements from OPPF" details="Concentration of Target Protein">
+ <experimentType>Concentration</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Concentrator type" parameterType="String" />
+  <parameterDefinition id="2" name="Concentrator speed (g)" parameterType="Int" />
+  <parameterDefinition id="3" name="Output volume" parameterType="Int" />
+  <parameterDefinition id="4" name="Output concentration" parameterType="Int" />
+  <parameterDefinition id="5" name="Output yield" parameterType="Int" />
+  <parameterDefinition id="6" name="Concentrator Notes" parameterType="String" />
+ </parameterDefinitions>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="" unit="L" displayUnit="uL" refSample="Purified Protein" name="Purified Protein" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Purified protein" amount="0.00008" unit="L" displayUnit="uL" refSample="Concentrated Protein" name="Concentrated Protein"/>
+ <!-- not sure if there is an output sample -->
+
+</protocol>

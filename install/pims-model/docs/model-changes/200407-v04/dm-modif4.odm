@@ -1,0 +1,3696 @@
+ObjectDomain_Model 15
+{-na6y1h_-168_dt198clw_-p97 0
+}[objectdomain.uml.core.TypeExpression $21
+objectdomain.uml.view.CommentView-owns $7
+objectdomain.uml.mechanisms.UmlPackage-owns $8
+objectdomain.uml.core.UmlComment-owns $13
+objectdomain.uml.core.Generalization-owns $14
+objectdomain.uml.core.Projection $19
+objectdomain.uml.core.UmlAttribute-features $10
+objectdomain.uml.core.UmlAssociationEnd-connections $12
+objectdomain.uml.view.style.BaseViewElementStyle-owns $18
+objectdomain.uml.view.ClassView-owns $4
+objectdomain.uml.core.UmlAssociation-owns $11
+objectdomain.uml.view.Diagram-owns $3
+objectdomain.domain.ModelEnvironment-owns $2
+objectdomain.uml.mechanisms.StylePackage-owns $17
+objectdomain.uml.mechanisms.StereotypePackage-owns $15
+objectdomain.uml.view.GeneralizationView-owns $6
+objectdomain.uml.core.UmlMultiplicity $20
+objectdomain.uml.core.UmlClass-owns $9
+objectdomain.domain.DomainLockObject $22
+objectdomain.uml.view.AssociationView-owns $5
+objectdomain.uml.mechanisms.UmlModel-models $1
+objectdomain.uml.core.Stereotype-owns $16
+]
+($1 1 > -na6y1h_-168_dt198clw_-p97 0
+(name "Model"
+)
+(namespaceRoot true)
+(uid "-na6y1h_-168_dt198clw_-p97"))
+($2 2 < -na6y1h_-168_dt4fzhe4_-p4h "ModelEnvironment" 1
+(uid "-na6y1h_-168_dt4fzhe4_-p4h"))
+($8 171 < -na6y1h_-168_dt4fzhe4_-p4g "Logical" 1
+(name "Logical"
+)
+(namespaceRoot true)
+(uid "-na6y1h_-168_dt4fzhe4_-p4g"))
+($3 3 < -na6y1h_7ca_dta9yr6w_-p5w "Crystallisation" 171
+(name "Crystallisation"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p5w")
+(diagramType "class"))
+($4 4 < -na6y1h_7ca_dta9yr6w_-p5s "ccp.Experiment.Experiment" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_7ca_dta9yr6w_-p5s")
+(bbx 260 70 180 30))
+($4 5 < -na6y1h_7ca_dta9yr6w_-p5j "ccp.Experiment.DropImaging" 3
+(uid "-na6y1h_7ca_dta9yr6w_-p5j")
+(bbx 200 350 190 50))
+($4 6 < -na6y1h_-168_ductkfjs_-p7w "ccp.Sample.Sample" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(showAttributeStereotype false)
+(uid "-na6y1h_-168_ductkfjs_-p7w")
+(showOperationSignature false)
+(bbx 810 70 130 30))
+($4 7 < -na6y1h_-168_ductkfjs_-p7v "ccp.Xtal.Crystal" 3
+(uid "-na6y1h_-168_ductkfjs_-p7v")
+(bbx 850 210 110 290))
+($5 8 < -na6y1h_-168_ductkfjs_-p7u "" 3
+(toMultiplicityPosition 895 190)
+(uid "-na6y1h_-168_ductkfjs_-p7u")
+(points 930 100 930 210)
+(fromMultiplicityPosition 945 115))
+($5 9 < -na6y1h_-168_ductkfjs_-p7t "" 3
+(toMultiplicityPosition 790 100)
+(toRolePosition 705 55)
+(uid "-na6y1h_-168_ductkfjs_-p7t")
+(points 440 85 810 85)
+(fromMultiplicityPosition 455 55))
+($4 10 < -na6y1h_-168_ductkfjs_-p7s "ccp.Experiment.InputSample" 3
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_-168_ductkfjs_-p7s")
+(bbx 480 120 190 30))
+($5 11 < -na6y1h_-168_ductkfjs_-p7r "" 3
+(toMultiplicityPosition 470 140)
+(uid "-na6y1h_-168_ductkfjs_-p7r")
+(points 350 100 350 135 480 135)
+(fromMultiplicityPosition 365 115))
+($5 12 < -na6y1h_-168_ductkfjs_-p7q "" 3
+(toMultiplicityPosition 675 140)
+(uid "-na6y1h_-168_ductkfjs_-p7q")
+(points 855 100 855 135 670 135)
+(fromMultiplicityPosition 870 115))
+($4 13 < -na6y1h_-168_ductkfjs_-p7p "ccp.Experiment.MountCrystal" 3
+(uid "-na6y1h_-168_ductkfjs_-p7p")
+(bbx 510 210 190 80))
+($6 14 < -na6y1h_-168_ductkfjs_-p7m "" 3
+(uid "-na6y1h_-168_ductkfjs_-p7m")
+(points 345 350 345 180 295 180 295 100))
+($6 15 < -na6y1h_-168_ductkfjs_-p7l "" 3
+(uid "-na6y1h_-168_ductkfjs_-p7l")
+(points 600 210 600 180 295 180 295 100))
+($4 16 < -na6y1h_g5u_dwageltr_-p83 "ccp.Experiment.DropSetup" 3
+(uid "-na6y1h_g5u_dwageltr_-p83")
+(bbx 100 210 170 110))
+($6 17 < -na6y1h_g5u_dwageltr_-p6u "" 3
+(uid "-na6y1h_g5u_dwageltr_-p6u")
+(points 180 210 180 180 295 180 295 100))
+($4 18 < -na6y1h_g5u_dwageltr_-p6c "ccp.Experiment.DropScoring" 3
+(uid "-na6y1h_g5u_dwageltr_-p6c")
+(bbx 440 350 190 90))
+($4 19 < -na6y1h_g5u_dwageltr_-p6b "ccp.Experiment.DropImageFile" 3
+(uid "-na6y1h_g5u_dwageltr_-p6b")
+(bbx 200 480 200 60))
+($5 20 < -na6y1h_g5u_dwageltr_-p6a "" 3
+(toMultiplicityPosition 270 450)
+(uid "-na6y1h_g5u_dwageltr_-p6a")
+(points 290 400 290 480)
+(fromMultiplicityPosition 305 415))
+($6 21 < -na6y1h_g5u_dwageltr_-p69 "" 3
+(uid "-na6y1h_g5u_dwageltr_-p69")
+(points 480 350 480 180 295 180 295 100))
+($5 22 < -na6y1h_g5u_dwageltr_-p68 "" 3
+(toMultiplicityPosition 405 470)
+(toRolePosition 435 470)
+(uid "-na6y1h_g5u_dwageltr_-p68")
+(points 525 440 525 495 400 495)
+(fromMultiplicityPosition 540 455))
+($4 23 < z8kflt_-6m3_dwopjkkj_-p96 "memops.Implementation.Url" 3
+(showAttributeCompartment false)
+(autoSizeToFit true)
+(showOperationCompartment false)
+(uid "z8kflt_-6m3_dwopjkkj_-p96")
+(bbx 570 520 190 30))
+($5 24 < z8kflt_-6m3_dwopjkkj_-p92 "" 3
+(autoSizeToFit true)
+(toMultiplicityPosition 530 555)
+(uid "z8kflt_-6m3_dwopjkkj_-p92")
+(points 400 540 570 540)
+(fromMultiplicityPosition 415 510))
+($3 25 < -na6y1h_7ca_dta9yr6w_-p3p "AccessControl" 171
+(name "AccessControl"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p3p")
+(diagramType "class"))
+($4 26 < -na6y1h_7ca_dta9yr6w_-p3o "ccp.Target.Project" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3o")
+(bbx 130 100 120 110))
+($4 27 < -na6y1h_7ca_dta9yr6w_-p3n "ccp.People.Person" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3n")
+(bbx 130 310 120 160))
+($4 28 < -na6y1h_7ca_dta9yr6w_-p3m "Role" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3m")
+(bbx 620 210 70 80))
+($4 29 < -na6y1h_7ca_dta9yr6w_-p3k "Operation" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3k")
+(bbx 850 440 70 60))
+($4 30 < -na6y1h_7ca_dta9yr6w_-p3j "Object" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3j")
+(bbx 840 90 70 80))
+($4 31 < -na6y1h_7ca_dta9yr6w_-p3i "Condition" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3i")
+(bbx 880 340 70 60))
+($7 32 < -na6y1h_7ca_dta9yr6w_-p3h "Comment5" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3h")
+(bbx 450 520 550 60))
+($4 33 < -na6y1h_7ca_dta9yr6w_-p3f "Title" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3f")
+(bbx 440 350 60 60))
+($5 34 < -na6y1h_7ca_dta9yr6w_-p3e "" 25
+(toMultiplicityPosition 165 285)
+(toRolePosition 145 265)
+(uid "-na6y1h_7ca_dta9yr6w_-p3e")
+(points 180 210 180 310))
+($5 35 < -na6y1h_7ca_dta9yr6w_-p3d "" 25
+(toMultiplicityPosition 430 390)
+(uid "-na6y1h_7ca_dta9yr6w_-p3d")
+(points 250 385 440 385)
+(fromMultiplicityPosition 260 360))
+($4 36 < -na6y1h_7ca_dta9yr6w_-p3c "PersonProjectTitle" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p3c")
+(bbx 270 240 120 50))
+($5 37 < -na6y1h_7ca_dta9yr6w_-p3b "" 25
+(toMultiplicityPosition 255 275)
+(uid "-na6y1h_7ca_dta9yr6w_-p3b")
+(points 200 310 200 265 270 265)
+(fromMultiplicityPosition 185 290))
+($5 38 < -na6y1h_7ca_dta9yr6w_-p3a "" 25
+(toMultiplicityPosition 395 270)
+(uid "-na6y1h_7ca_dta9yr6w_-p3a")
+(points 470 350 470 265 390 265)
+(fromRolePosition 485 105)
+(fromMultiplicityPosition 475 325))
+($4 39 < -na6y1h_7ca_dta9yr6w_-p39 "PersonGroupTitle" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p39")
+(bbx 270 460 120 50))
+($4 40 < -na6y1h_7ca_dta9yr6w_-p38 "Group" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p38")
+(bbx 300 590 60 60))
+($5 41 < -na6y1h_7ca_dta9yr6w_-p37 "" 25
+(toMultiplicityPosition 260 500)
+(uid "-na6y1h_7ca_dta9yr6w_-p37")
+(points 190 470 190 490 270 490)
+(fromMultiplicityPosition 175 475))
+($5 42 < -na6y1h_7ca_dta9yr6w_-p36 "" 25
+(toMultiplicityPosition 335 515)
+(uid "-na6y1h_7ca_dta9yr6w_-p36")
+(points 330 590 330 510)
+(fromMultiplicityPosition 315 565))
+($5 43 < -na6y1h_7ca_dta9yr6w_-p35 "" 25
+(toMultiplicityPosition 395 495)
+(uid "-na6y1h_7ca_dta9yr6w_-p35")
+(points 470 410 470 490 390 490)
+(fromMultiplicityPosition 475 420))
+($4 44 < -na6y1h_7ca_dta9yr6w_-p34 "Permission" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p34")
+(bbx 830 220 80 60))
+($5 45 < -na6y1h_7ca_dta9yr6w_-p32 "" 25
+(toMultiplicityPosition 810 260)
+(uid "-na6y1h_7ca_dta9yr6w_-p32")
+(points 690 245 830 245)
+(fromMultiplicityPosition 705 210))
+($5 46 < -na6y1h_7ca_dta9yr6w_-p30 "" 25
+(toMultiplicityPosition 855 180)
+(uid "-na6y1h_7ca_dta9yr6w_-p30")
+(points 875 220 875 170)
+(fromMultiplicityPosition 880 200))
+($5 47 < -na6y1h_7ca_dta9yr6w_-p2y "" 25
+(toMultiplicityPosition 670 295)
+(uid "-na6y1h_7ca_dta9yr6w_-p2y")
+(points 500 370 660 370 660 290)
+(fromMultiplicityPosition 505 345))
+($5 48 < -na6y1h_7ca_dta9yr6w_-p2w "" 25
+(toMultiplicityPosition 845 420)
+(uid "-na6y1h_7ca_dta9yr6w_-p2w")
+(points 860 280 860 440)
+(fromMultiplicityPosition 840 275))
+($5 49 < -na6y1h_7ca_dta9yr6w_-p2v "" 25
+(toMultiplicityPosition 870 320)
+(uid "-na6y1h_7ca_dta9yr6w_-p2v")
+(points 885 280 885 340)
+(fromMultiplicityPosition 890 290))
+($5 50 < -na6y1h_7ca_dta9yr6w_-p2s "" 25
+(toMultiplicityPosition 315 220)
+(uid "-na6y1h_7ca_dta9yr6w_-p2s")
+(points 250 160 330 160 330 240)
+(fromMultiplicityPosition 255 135))
+($4 51 < -na6y1h_7ca_dta9yr6w_-p2r "ProjectGroup" 25
+(uid "-na6y1h_7ca_dta9yr6w_-p2r")
+(bbx 90 590 100 60))
+($5 52 < -na6y1h_7ca_dta9yr6w_-p2q "" 25
+(toMultiplicityPosition 275 640)
+(uid "-na6y1h_7ca_dta9yr6w_-p2q")
+(points 190 625 300 625)
+(fromMultiplicityPosition 205 595))
+($5 53 < -na6y1h_7ca_dta9yr6w_-p2p "" 25
+(toMultiplicityPosition 120 135)
+(uid "-na6y1h_7ca_dta9yr6w_-p2p")
+(points 100 590 100 160 130 160)
+(fromMultiplicityPosition 110 570))
+($4 54 < -na6y1h_-168_dupj2963_-p8v "memops.Implementation.Project" 25
+(uid "-na6y1h_-168_dupj2963_-p8v")
+(bbx 380 30 210 50))
+($5 55 < -na6y1h_-168_dupj2963_-p8u "" 25
+(uid "-na6y1h_-168_dupj2963_-p8u")
+(points 380 55 190 55 190 100))
+($5 56 < -na6y1h_-168_dupj2963_-p8t "" 25
+(uid "-na6y1h_-168_dupj2963_-p8t")
+(points 590 55 875 55 875 90))
+($5 57 < -na6y1h_-168_dupj2963_-p8r "" 25
+(uid "-na6y1h_-168_dupj2963_-p8r")
+(points 590 55 990 55 990 360 950 360))
+($5 58 < -na6y1h_-168_dupj2963_-p8q "" 25
+(uid "-na6y1h_-168_dupj2963_-p8q")
+(points 590 55 660 55 660 210))
+($5 59 < -na6y1h_-168_dupj2963_-p8o "" 25
+(uid "-na6y1h_-168_dupj2963_-p8o")
+(points 590 55 990 55 990 490 920 490))
+($5 60 < -na6y1h_-168_dupj2963_-p8n "" 25
+(uid "-na6y1h_-168_dupj2963_-p8n")
+(points 490 80 490 350))
+($5 61 < -na6y1h_-168_dupj2963_-p8m "" 25
+(uid "-na6y1h_-168_dupj2963_-p8m")
+(points 380 55 60 55 60 670 330 670 330 650))
+($5 62 < -na6y1h_-168_dupj2963_-p8l "" 25
+(uid "-na6y1h_-168_dupj2963_-p8l")
+(points 380 55 60 55 60 340 130 340))
+($3 63 < -na6y1h_g5u_dwageltr_-p8f "People" 171
+(name "People"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8f")
+(diagramType "class"))
+($4 64 < -na6y1h_g5u_dwageltr_-p8e "ccp.People.Person" 63
+(uid "-na6y1h_g5u_dwageltr_-p8e")
+(bbx 20 90 120 160))
+($4 65 < -na6y1h_g5u_dwageltr_-p8d "ccp.People.Group" 63
+(uid "-na6y1h_g5u_dwageltr_-p8d")
+(bbx 410 90 120 90))
+($4 66 < -na6y1h_g5u_dwageltr_-p8c "ccp.People.ContactData" 63
+(autoSizeToFit true)
+(uid "-na6y1h_g5u_dwageltr_-p8c")
+(bbx 190 350 160 160))
+($5 67 < -na6y1h_g5u_dwageltr_-p8b "" 63
+(toMultiplicityPosition 170 465)
+(uid "-na6y1h_g5u_dwageltr_-p8b")
+(points 80 250 80 450 190 450)
+(fromMultiplicityPosition 95 265))
+($5 68 < -na6y1h_g5u_dwageltr_-p8a "" 63
+(toMultiplicityPosition 490 195)
+(uid "-na6y1h_g5u_dwageltr_-p8a")
+(points 350 450 475 450 475 180)
+(fromMultiplicityPosition 365 420))
+($5 69 < -na6y1h_g5u_dwageltr_-p89 "" 63
+(toMultiplicityPosition 385 150)
+(toRolePosition 290 150)
+(uid "-na6y1h_g5u_dwageltr_-p89")
+(points 140 135 410 135))
+($4 70 < -na6y1h_g5u_dwageltr_-p56 "ccp.People.Organisation" 63
+(uid "-na6y1h_g5u_dwageltr_-p56")
+(bbx 630 90 160 140))
+($5 71 < -na6y1h_g5u_dwageltr_-p55 "" 63
+(toMultiplicityPosition 545 110)
+(uid "-na6y1h_g5u_dwageltr_-p55")
+(points 630 140 530 140)
+(fromMultiplicityPosition 605 155))
+($4 72 < -na6y1h_g5u_dwageltr_-p4i "ccp.Sample.Sample" 63
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwageltr_-p4i")
+(bbx 550 310 130 30))
+($4 73 < -na6y1h_g5u_dwageltr_-p4h "ccp.RefContainer.RefContainer" 63
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwageltr_-p4h")
+(bbx 670 370 200 30))
+($4 74 < -na6y1h_g5u_dwageltr_-p4g "ccp.RefContainer.RefHolder" 63
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwageltr_-p4g")
+(bbx 690 410 180 30))
+($4 75 < -na6y1h_g5u_dwageltr_-p4f "ccp.RefSampleComponent.AbstractComponent" 63
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwageltr_-p4f")
+(bbx 570 450 300 30))
+($4 76 < -na6y1h_g5u_dwageltr_-p4y "ccp.Instrument.AbstractInstrument" 63
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwageltr_-p4y")
+(bbx 640 490 230 30))
+($5 77 < -na6y1h_g5u_dwageltr_-p4e "" 63
+(toMultiplicityPosition 805 90)
+(toRolePosition 840 90)
+(uid "-na6y1h_g5u_dwageltr_-p4e")
+(points 870 505 950 505 950 110 790 110)
+(fromMultiplicityPosition 875 485))
+($5 78 < -na6y1h_g5u_dwageltr_-p4d "" 63
+(toMultiplicityPosition 785 245)
+(toRolePosition 815 245)
+(uid "-na6y1h_g5u_dwageltr_-p4d")
+(points 770 370 770 230)
+(fromMultiplicityPosition 750 340))
+($5 79 < -na6y1h_g5u_dwageltr_-p4c "" 63
+(toMultiplicityPosition 805 190)
+(toRolePosition 835 190)
+(uid "-na6y1h_g5u_dwageltr_-p4c")
+(points 870 425 910 425 910 220 790 220)
+(fromMultiplicityPosition 875 400))
+($5 80 < -na6y1h_g5u_dwageltr_-p4b "" 63
+(toMultiplicityPosition 805 135)
+(toRolePosition 840 135)
+(uid "-na6y1h_g5u_dwageltr_-p4b")
+(points 870 465 930 465 930 165 790 165)
+(fromMultiplicityPosition 875 440))
+($5 81 < -na6y1h_g5u_dwageltr_-p4a "" 63
+(toMultiplicityPosition 630 280)
+(uid "-na6y1h_g5u_dwageltr_-p4a")
+(points 650 230 650 310)
+(fromRolePosition 695 245)
+(fromMultiplicityPosition 665 245))
+($3 82 < -na6y1h_g5u_dwageltr_-p82 "Experiment" 171
+(name "Experiment"
+)
+(uid "-na6y1h_g5u_dwageltr_-p82")
+(diagramType "class"))
+($4 83 < -na6y1h_g5u_dwageltr_-p81 "ccp.Experiment.Experiment" 82
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwageltr_-p81")
+(bbx 280 250 180 30))
+($4 84 < -na6y1h_g5u_dwageltr_-p7f "ccp.Annotation.Annotation" 82
+(uid "-na6y1h_g5u_dwageltr_-p7f")
+(bbx 20 170 180 140))
+($5 85 < -na6y1h_g5u_dwageltr_-p7e "" 82
+(toMultiplicityPosition 270 280)
+(uid "-na6y1h_g5u_dwageltr_-p7e")
+(points 200 270 280 270)
+(fromMultiplicityPosition 210 245))
+($4 86 < -na6y1h_g5u_dwageltr_-p7d "ccp.People.Person" 82
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwageltr_-p7d")
+(bbx 300 180 120 30))
+($5 87 < -na6y1h_g5u_dwageltr_-p7c "" 82
+(toMultiplicityPosition 290 200)
+(toRolePosition 240 200)
+(uid "-na6y1h_g5u_dwageltr_-p7c")
+(points 200 195 300 195)
+(fromMultiplicityPosition 205 175))
+($4 88 < -na6y1h_g5u_dwageltr_-p5m "ccp.Method.Method" 82
+(uid "-na6y1h_g5u_dwageltr_-p5m")
+(bbx 250 410 130 130))
+($4 89 < -na6y1h_g5u_dwageltr_-p5l "ccp.Method.Parameter" 82
+(uid "-na6y1h_g5u_dwageltr_-p5l")
+(bbx 20 410 150 130))
+($5 90 < -na6y1h_g5u_dwageltr_-p5k "" 82
+(toMultiplicityPosition 185 435)
+(uid "-na6y1h_g5u_dwageltr_-p5k")
+(points 250 465 170 465)
+(fromMultiplicityPosition 225 480))
+($4 91 < -na6y1h_g5u_dwageltr_-p5j "ccp.api.Instrument" 82
+(uid "-na6y1h_g5u_dwageltr_-p5j")
+(bbx 500 450 130 50))
+($5 92 < -na6y1h_g5u_dwageltr_-p5i "" 82
+(toMultiplicityPosition 290 385)
+(uid "-na6y1h_g5u_dwageltr_-p5i")
+(points 320 280 320 410)
+(fromMultiplicityPosition 335 295))
+($5 93 < -na6y1h_g5u_dwageltr_-p5h "" 82
+(toMultiplicityPosition 475 510)
+(uid "-na6y1h_g5u_dwageltr_-p5h")
+(points 380 495 500 495)
+(fromMultiplicityPosition 390 470))
+($4 94 < -na6y1h_g5u_dwbuqhc5_-p7d "ccp.Experiment.ParameterDefinition" 82
+(uid "-na6y1h_g5u_dwbuqhc5_-p7d")
+(bbx 780 350 230 110))
+($4 95 < -na6y1h_g5u_dwbuqhc5_-p7c "ccp.Experiment.Parameter" 82
+(autoSizeToFit true)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7c")
+(bbx 530 350 170 60))
+($5 96 < -na6y1h_g5u_dwbuqhc5_-p7b "" 82
+(toMultiplicityPosition 510 400)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7b")
+(points 430 280 430 385 530 385)
+(fromMultiplicityPosition 415 295))
+($5 97 < -na6y1h_g5u_dwbuqhc5_-p7a "" 82
+(toMultiplicityPosition 765 390)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7a")
+(points 700 380 780 380)
+(fromMultiplicityPosition 705 355))
+($5 98 < -na6y1h_-eew_dwki75wu_-p8w "" 82
+(toMultiplicityPosition 470 435)
+(uid "-na6y1h_-eew_dwki75wu_-p8w")
+(points 400 280 400 460 500 460)
+(fromMultiplicityPosition 385 295))
+($4 99 < z8kflt_-6m3_dwopjkkj_-p8t "Protocol" 82
+(autoSizeToFit true)
+(uid "z8kflt_-6m3_dwopjkkj_-p8t")
+(bbx 910 110 100 160))
+($5 100 < z8kflt_-6m3_dwopjkkj_-p8y "" 82
+(autoSizeToFit true)
+(toMultiplicityPosition 425 170)
+(toRolePosition 440 170)
+(uid "z8kflt_-6m3_dwopjkkj_-p8y")
+(points 910 190 420 190)
+(fromMultiplicityPosition 890 200))
+($5 101 < z8kflt_-6m3_dwopjkkj_-p8s "" 82
+(autoSizeToFit true)
+(toMultiplicityPosition 890 230)
+(uid "z8kflt_-6m3_dwopjkkj_-p8s")
+(points 460 260 910 260)
+(fromMultiplicityPosition 435 225))
+($5 102 < z8kflt_-6m3_dwopjkkj_-p8r "" 82
+(autoSizeToFit true)
+(toMultiplicityPosition 925 320)
+(uid "z8kflt_-6m3_dwopjkkj_-p8r")
+(points 945 270 945 350)
+(fromMultiplicityPosition 960 285))
+($3 103 < -na6y1h_-168_dt4fzhe4_-p4f "Protocol" 171
+(name "Protocol"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p4f")
+(diagramType "class"))
+($4 104 < -na6y1h_-168_dt4fzhe4_-p4d "Protocol" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p4d")
+(bbx 60 290 100 160))
+($4 105 < -na6y1h_-168_dt4fzhe4_-p4c "Step" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p4c")
+(bbx 60 680 70 110))
+($4 106 < -na6y1h_-168_dt4fzhe4_-p4b "TemperatureStep" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p4b")
+(bbx 1040 710 130 80))
+($4 107 < -na6y1h_-168_dt4fzhe4_-p4a "SonicationStep" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p4a")
+(bbx 910 680 120 110))
+($4 108 < -na6y1h_-168_dt4fzhe4_-p49 "ProtocolSample" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p49")
+(bbx 410 440 110 80))
+($4 109 < -na6y1h_-168_dt4fzhe4_-p46 "Material" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p46")
+(bbx 210 440 70 80))
+($6 110 < -na6y1h_-168_dt4fzhe4_-p45 "" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p45")
+(points 1110 790 1110 810 100 810 100 790))
+($6 111 < -na6y1h_-168_dt4fzhe4_-p44 "" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p44")
+(points 970 790 970 810 100 810 100 790))
+($5 112 < -na6y1h_-168_dt4fzhe4_-p43 "" 103
+(toMultiplicityPosition 190 495)
+(uid "-na6y1h_-168_dt4fzhe4_-p43")
+(points 130 450 130 480 210 480)
+(fromMultiplicityPosition 145 460))
+($5 113 < -na6y1h_-168_dt4fzhe4_-p42 "" 103
+(toMultiplicityPosition 395 485)
+(uid "-na6y1h_-168_dt4fzhe4_-p42")
+(points 280 480 410 480)
+(fromMultiplicityPosition 290 460))
+($4 114 < -na6y1h_-168_dt4fzhe4_-p3w "FlowStep" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3w")
+(bbx 770 680 130 110))
+($6 115 < -na6y1h_-168_dt4fzhe4_-p3v "" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3v")
+(points 840 790 840 810 100 810 100 790))
+($4 116 < -na6y1h_-168_dt4fzhe4_-p3s "Procedure" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3s")
+(bbx 60 500 80 130))
+($5 117 < -na6y1h_-168_dt4fzhe4_-p3r "" 103
+(toMultiplicityPosition 60 480)
+(uid "-na6y1h_-168_dt4fzhe4_-p3r")
+(points 80 450 80 500)
+(fromMultiplicityPosition 95 455))
+($5 118 < -na6y1h_-168_dt4fzhe4_-p3q "" 103
+(toMultiplicityPosition 65 660)
+(uid "-na6y1h_-168_dt4fzhe4_-p3q")
+(points 80 630 80 680)
+(fromMultiplicityPosition 95 635))
+($4 119 < -na6y1h_-168_dt4fzhe4_-p3p "CentrifugationStep" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3p")
+(bbx 630 710 130 80))
+($6 120 < -na6y1h_-168_dt4fzhe4_-p3o "" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3o")
+(points 690 790 690 810 100 810 100 790))
+($4 121 < -na6y1h_-168_dt4fzhe4_-p3n "FiltrationStep" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3n")
+(bbx 500 680 120 110))
+($6 122 < -na6y1h_-168_dt4fzhe4_-p3m "" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3m")
+(points 560 790 560 810 100 810 100 790))
+($4 123 < -na6y1h_-168_dt4fzhe4_-p3i "ccp.Experiment.Recombination" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3i")
+(bbx 740 40 200 60))
+($4 124 < -na6y1h_-168_dt4fzhe4_-p3h "ccp.Experiment.Transformation" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3h")
+(bbx 740 120 210 60))
+($4 125 < -na6y1h_-168_dt4fzhe4_-p3e "ccp.Experiment.DishCulture" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3e")
+(bbx 740 200 180 80))
+($4 126 < -na6y1h_-168_dt4fzhe4_-p3d "ccp.Experiment.Culture" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p3d")
+(bbx 740 300 150 80))
+($4 127 < -na6y1h_-168_dt4fzhe4_-p39 "ccp.Citation.Citation" 103
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_-168_dt4fzhe4_-p39")
+(bbx 330 310 140 30))
+($5 128 < -na6y1h_-168_dt4fzhe4_-p38 "" 103
+(toMultiplicityPosition 175 290)
+(uid "-na6y1h_-168_dt4fzhe4_-p38")
+(points 330 320 160 320)
+(fromRolePosition 235 325)
+(fromMultiplicityPosition 315 330))
+($4 129 < -na6y1h_-168_dt4fzhe4_-p37 "AddStep" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p37")
+(bbx 200 730 70 60))
+($6 130 < -na6y1h_-168_dt4fzhe4_-p36 "" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p36")
+(points 235 790 235 810 100 810 100 790))
+($5 131 < -na6y1h_-168_dt4fzhe4_-p35 "" 103
+(toMultiplicityPosition 195 700)
+(uid "-na6y1h_-168_dt4fzhe4_-p35")
+(points 220 520 220 730)
+(fromMultiplicityPosition 235 535))
+($4 132 < -na6y1h_-168_dt4fzhe4_-p2z "ccp.Experiment.Proteolysis" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p2z")
+(bbx 960 80 180 60))
+($4 133 < -na6y1h_-168_dt4fzhe4_-p2x "ccp.Experiment.Concentration" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p2x")
+(bbx 960 170 200 60))
+($4 134 < -na6y1h_-168_dt4fzhe4_-p2h "ccp.Experiment.ImportSample" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p2h")
+(bbx 960 260 200 50))
+($7 135 < -na6y1h_-168_dt4fzhe4_-p24 "Comment" 103
+(showStereotypeLabel false)
+(stereotypeGraphic "none")
+(uid "-na6y1h_-168_dt4fzhe4_-p24")
+(bbx 1100 10 270 30)
+(drawBox false))
+($7 136 < -na6y1h_-168_dt4fzhe4_-p23 "Comment1" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p23")
+(bbx 810 10 210 30)
+(drawBox false))
+($4 137 < -na6y1h_-168_dt4fzhe4_-p22 "ccp.Experiment.Gel" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p22")
+(bbx 1190 50 130 80))
+($4 138 < -na6y1h_-168_dt4fzhe4_-p21 "ccp.Experiment.GelResult" 103
+(uid "-na6y1h_-168_dt4fzhe4_-p21")
+(bbx 1180 200 170 110))
+($5 139 < -na6y1h_-168_dt4fzhe4_-p20 "" 103
+(toMultiplicityPosition 1220 170)
+(uid "-na6y1h_-168_dt4fzhe4_-p20")
+(points 1240 130 1240 200)
+(fromMultiplicityPosition 1255 145))
+($4 140 < -na6y1h_-168_dt4fzhe4_-p1z "ccp.Sample.SampleComponent" 103
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_-168_dt4fzhe4_-p1z")
+(bbx 1160 520 200 30))
+($5 141 < -na6y1h_-168_dt4fzhe4_-p1y "" 103
+(toMultiplicityPosition 1200 490)
+(uid "-na6y1h_-168_dt4fzhe4_-p1y")
+(points 1240 310 1240 520)
+(fromMultiplicityPosition 1255 325))
+($4 142 < -na6y1h_ju4_dvkzlzdf_-p8u "WaitStep" 103
+(uid "-na6y1h_ju4_dvkzlzdf_-p8u")
+(bbx 280 710 100 80))
+($6 143 < -na6y1h_ju4_dvkzlzdf_-p8t "" 103
+(uid "-na6y1h_ju4_dvkzlzdf_-p8t")
+(points 330 790 330 810 100 810 100 790))
+($4 144 < -na6y1h_ju4_dvkzlzdf_-p8o "PressStep" 103
+(uid "-na6y1h_ju4_dvkzlzdf_-p8o")
+(bbx 390 710 100 80))
+($6 145 < -na6y1h_ju4_dvkzlzdf_-p8n "" 103
+(uid "-na6y1h_ju4_dvkzlzdf_-p8n")
+(points 440 790 440 810 100 810 100 790))
+($4 146 < -na6y1h_g5u_dwbuqhc5_-p98 "ccp.People.Person" 103
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwbuqhc5_-p98")
+(bbx 350 360 120 30))
+($5 147 < -na6y1h_g5u_dwbuqhc5_-p94 "" 103
+(toMultiplicityPosition 325 380)
+(toRolePosition 270 380)
+(uid "-na6y1h_g5u_dwbuqhc5_-p94")
+(points 160 370 350 370)
+(fromMultiplicityPosition 175 340))
+($4 148 < -na6y1h_g5u_dwbuqhc5_-p8n "ccp.Experiment.InputSample" 103
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(uid "-na6y1h_g5u_dwbuqhc5_-p8n")
+(bbx 270 230 190 30))
+($4 149 < -na6y1h_g5u_dwbuqhc5_-p92 "ccp.Experiment.Experiment" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p92")
+(bbx 430 20 180 160))
+($4 150 < -na6y1h_g5u_dwbuqhc5_-p8m "ccp.Sample.Sample" 103
+(showAttributeCompartment false)
+(showOperationCompartment false)
+(showAttributeStereotype false)
+(uid "-na6y1h_g5u_dwbuqhc5_-p8m")
+(showOperationSignature false)
+(bbx 580 230 130 30))
+($5 151 < -na6y1h_g5u_dwbuqhc5_-p8l "" 103
+(toMultiplicityPosition 435 210)
+(uid "-na6y1h_g5u_dwbuqhc5_-p8l")
+(points 445 180 445 230)
+(fromMultiplicityPosition 455 185))
+($5 152 < -na6y1h_g5u_dwbuqhc5_-p8k "" 103
+(toMultiplicityPosition 465 220)
+(uid "-na6y1h_g5u_dwbuqhc5_-p8k")
+(points 580 240 460 240)
+(fromMultiplicityPosition 560 250))
+($5 153 < -na6y1h_g5u_dwbuqhc5_-p93 "" 103
+(toMultiplicityPosition 590 210)
+(toRolePosition 495 210)
+(uid "-na6y1h_g5u_dwbuqhc5_-p93")
+(points 605 180 605 230)
+(fromMultiplicityPosition 615 180))
+($7 154 < -na6y1h_g5u_dwbuqhc5_-p8j "Comment2" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8j")
+(bbx 20 10 400 140))
+($4 155 < -na6y1h_g5u_dwbuqhc5_-p8i "ccp.People.Organisation" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8i")
+(bbx 930 370 160 140))
+($5 156 < -na6y1h_g5u_dwbuqhc5_-p8x "" 103
+(toMultiplicityPosition 670 265)
+(uid "-na6y1h_g5u_dwbuqhc5_-p8x")
+(points 930 430 690 430 690 260)
+(fromRolePosition 825 440)
+(fromMultiplicityPosition 890 440))
+($5 157 < -na6y1h_g5u_dwbuqhc5_-p8h "" 103
+(toMultiplicityPosition 1035 340)
+(uid "-na6y1h_g5u_dwbuqhc5_-p8h")
+(points 1060 310 1060 370)
+(fromMultiplicityPosition 1075 325))
+($6 158 < -na6y1h_g5u_dwbuqhc5_-p8g "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8g")
+(points 740 80 610 80))
+($6 159 < -na6y1h_g5u_dwbuqhc5_-p8f "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8f")
+(points 740 140 720 140 720 80 610 80))
+($6 160 < -na6y1h_g5u_dwbuqhc5_-p8e "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8e")
+(points 960 110 720 110 720 80 610 80))
+($6 161 < -na6y1h_g5u_dwbuqhc5_-p8d "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8d")
+(points 960 190 720 190 720 80 610 80))
+($6 162 < -na6y1h_g5u_dwbuqhc5_-p8c "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8c")
+(points 740 220 720 220 720 80 610 80))
+($6 163 < -na6y1h_g5u_dwbuqhc5_-p8b "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8b")
+(points 740 320 720 320 720 80 610 80))
+($6 164 < -na6y1h_g5u_dwbuqhc5_-p8a "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p8a")
+(points 960 290 720 290 720 80 610 80))
+($6 165 < -na6y1h_g5u_dwbuqhc5_-p88 "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p88")
+(points 1250 50 1250 30 610 30))
+($6 166 < -na6y1h_g5u_dwbuqhc5_-p86 "" 103
+(uid "-na6y1h_g5u_dwbuqhc5_-p86")
+(points 520 460 620 460 620 260))
+($5 167 < -na6y1h_g5u_dwbuqhc5_-p7x "" 103
+(toMultiplicityPosition 1140 550)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7x")
+(points 640 260 640 535 1160 535)
+(fromMultiplicityPosition 655 275))
+($5 168 < -na6y1h_g5u_dwbuqhc5_-p7w "" 103
+(toMultiplicityPosition 85 260)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7w")
+(points 430 170 110 170 110 290)
+(fromMultiplicityPosition 410 185))
+($5 169 < -na6y1h_-eew_dwki75wu_-p91 "" 103
+(toMultiplicityPosition 845 650)
+(toRolePosition 845 625)
+(uid "-na6y1h_-eew_dwki75wu_-p91")
+(points 280 520 280 560 865 560 865 680)
+(fromMultiplicityPosition 295 535))
+($5 170 < -na6y1h_-eew_dwki75wu_-p90 "" 103
+(toMultiplicityPosition 785 650)
+(toRolePosition 770 625)
+(uid "-na6y1h_-eew_dwki75wu_-p90")
+(points 250 520 250 590 805 590 805 680)
+(fromMultiplicityPosition 265 535))
+($9 172 < -na6y1h_7ca_dta9yr6w_-p1r "ccp.Target.Project" 171
+(name "ccp.Target.Project"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1r"))
+($10 173 < -na6y1h_g5u_dwbuqhc5_-p7s "serial" 172
+(name "serial"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7s"))
+($10 174 < -na6y1h_7ca_dta9yr6w_-p1p "shortName" 172
+(name "shortName"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1p"))
+($10 175 < -na6y1h_g5u_dwbuqhc5_-p7r "completeName" 172
+(name "completeName"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7r"))
+($10 176 < -na6y1h_7ca_dta9yr6w_-p1o "startDate" 172
+(name "startDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1o"))
+($11 177 < -na6y1h_7ca_dta9yr6w_-p1e "#<anon> (ccp.Target.Project, ccp.People.Person)" 172
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-p1e"))
+($12 178 < -na6y1h_7ca_dta9yr6w_-p1d "#0" 177
+(uid "-na6y1h_7ca_dta9yr6w_-p1d")
+(isNavigable false))
+($12 179 < -na6y1h_7ca_dta9yr6w_-p1c "creator#1" 177
+(name "creator"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p1c")
+(multiplicity "1"))
+($11 180 < -na6y1h_7ca_dta9yr6w_-p1b "#<anon> (ccp.Target.Project, PersonProjectTitle)" 172
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-p1b"))
+($12 181 < -na6y1h_7ca_dta9yr6w_-p1a "#0" 180
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-p1a")
+(multiplicity "1"))
+($12 182 < -na6y1h_7ca_dta9yr6w_-p19 "#1" 180
+(uid "-na6y1h_7ca_dta9yr6w_-p19")
+(multiplicity "*"))
+($9 183 < -na6y1h_7ca_dta9yr6w_-p13 "ccp.Experiment.Experiment" 171
+(name "ccp.Experiment.Experiment"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p13"))
+($10 184 < -na6y1h_7ca_dta9yr6w_-p11 "startDate" 183
+(name "startDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p11"))
+($10 185 < -na6y1h_7ca_dta9yr6w_-p10 "endDate" 183
+(name "endDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p10"))
+($10 186 < -na6y1h_7ca_dta9yr6w_-p0z "lastEditedDate" 183
+(name "lastEditedDate"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p0z"))
+($10 187 < -na6y1h_g5u_dwbuqhc5_-p91 "experimentType" 183
+(name "experimentType"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p91"))
+($10 188 < -na6y1h_7ca_dta9yr6w_-p12 "status" 183
+(name "status"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p12"))
+($10 189 < -na6y1h_7ca_dta9yr6w_-p0y "isLocked" 183
+(name "isLocked"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-p0y"))
+($10 190 < -na6y1h_g5u_dwbuqhc5_-p90 "details" 183
+(name "details"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p90"))
+($11 191 < -na6y1h_-168_ductkfjs_-p8p "#<anon> (ccp.Experiment.Experiment, ccp.Sample.Sample)" 183
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8p"))
+($12 192 < -na6y1h_-168_ductkfjs_-p8l "#0" 191
+(uid "-na6y1h_-168_ductkfjs_-p8l")
+(multiplicity "0..1"))
+($12 193 < -na6y1h_-168_ductkfjs_-p8k "outputSample#1" 191
+(name "outputSample"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8k")
+(multiplicity "*"))
+($11 194 < -na6y1h_-168_ductkfjs_-p8n "#<anon> (ccp.Experiment.Experiment, ccp.Experiment.InputSample)" 183
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8n"))
+($12 195 < -na6y1h_-168_ductkfjs_-p8j "#0" 194
+(aggregation "composite")
+(uid "-na6y1h_-168_ductkfjs_-p8j")
+(multiplicity "1"))
+($12 196 < -na6y1h_-168_ductkfjs_-p8i "#1" 194
+(uid "-na6y1h_-168_ductkfjs_-p8i")
+(multiplicity "*"))
+($11 197 < -na6y1h_g5u_dwageltr_-p5s "#<anon> (ccp.Experiment.Experiment, ccp.Method.Method)" 183
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p5s"))
+($12 198 < -na6y1h_g5u_dwageltr_-p5q "#0" 197
+(uid "-na6y1h_g5u_dwageltr_-p5q")
+(multiplicity "*"))
+($12 199 < -na6y1h_g5u_dwageltr_-p5p "#1" 197
+(uid "-na6y1h_g5u_dwageltr_-p5p")
+(multiplicity "0..1"))
+($11 200 < -na6y1h_g5u_dwbuqhc5_-p80 "#<anon> (ccp.Experiment.Experiment, Protocol)" 183
+(name "")
+(uid "-na6y1h_g5u_dwbuqhc5_-p80"))
+($12 201 < -na6y1h_g5u_dwbuqhc5_-p7z "#0" 200
+(uid "-na6y1h_g5u_dwbuqhc5_-p7z")
+(isNavigable false)
+(multiplicity "*"))
+($12 202 < -na6y1h_g5u_dwbuqhc5_-p7y "#1" 200
+(uid "-na6y1h_g5u_dwbuqhc5_-p7y")
+(multiplicity "1"))
+($11 203 < -na6y1h_g5u_dwbuqhc5_-p7j "#<anon> (ccp.Experiment.Experiment, ccp.Experiment.Parameter)" 183
+(name "")
+(uid "-na6y1h_g5u_dwbuqhc5_-p7j"))
+($12 204 < -na6y1h_g5u_dwbuqhc5_-p7i "#0" 203
+(aggregation "composite")
+(uid "-na6y1h_g5u_dwbuqhc5_-p7i")
+(multiplicity "1"))
+($12 205 < -na6y1h_g5u_dwbuqhc5_-p7h "#1" 203
+(uid "-na6y1h_g5u_dwbuqhc5_-p7h")
+(multiplicity "*"))
+($11 206 < -na6y1h_-eew_dwki75wu_-p8z "#<anon> (ccp.Experiment.Experiment, ccp.api.Instrument)" 183
+(name "")
+(uid "-na6y1h_-eew_dwki75wu_-p8z"))
+($12 207 < -na6y1h_-eew_dwki75wu_-p8y "#0" 206
+(uid "-na6y1h_-eew_dwki75wu_-p8y")
+(multiplicity "*"))
+($12 208 < -na6y1h_-eew_dwki75wu_-p8x "#1" 206
+(uid "-na6y1h_-eew_dwki75wu_-p8x")
+(multiplicity "0..1"))
+($9 209 < -na6y1h_ju4_dvkzlzdf_-p7n "ccp.People.Person" 171
+(name "ccp.People.Person"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7n"))
+($10 210 < -na6y1h_7ca_dta9yr6w_-oy5 "serial" 209
+(name "serial"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy5"))
+($10 211 < -na6y1h_7ca_dta9yr6w_-oy4 "familyName" 209
+(name "familyName"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy4"))
+($10 212 < -na6y1h_7ca_dta9yr6w_-oy3 "givenName" 209
+(name "givenName"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy3"))
+($10 213 < -na6y1h_7ca_dta9yr6w_-oy2 "firstInitial" 209
+(name "firstInitial"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-oy2"))
+($10 214 < -na6y1h_g5u_dwageltr_-p96 "middleInitials" 209
+(name "middleInitials"
+)
+(uid "-na6y1h_g5u_dwageltr_-p96"))
+($10 215 < -na6y1h_g5u_dwageltr_-p95 "familyTitle" 209
+(name "familyTitle"
+)
+(uid "-na6y1h_g5u_dwageltr_-p95"))
+($10 216 < -na6y1h_g5u_dwageltr_-p94 "title" 209
+(name "title"
+)
+(uid "-na6y1h_g5u_dwageltr_-p94"))
+($11 217 < -na6y1h_7ca_dta9yr6w_-oxs "#<anon> (ccp.People.Person, Title)" 209
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-oxs"))
+($12 218 < -na6y1h_7ca_dta9yr6w_-oxr "#0" 217
+(uid "-na6y1h_7ca_dta9yr6w_-oxr")
+(multiplicity "*"))
+($12 219 < -na6y1h_7ca_dta9yr6w_-oxq "#1" 217
+(uid "-na6y1h_7ca_dta9yr6w_-oxq")
+(multiplicity "*"))
+($11 220 < -na6y1h_7ca_dta9yr6w_-oxp "#<anon> (ccp.People.Person, PersonProjectTitle)" 209
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-oxp"))
+($12 221 < -na6y1h_7ca_dta9yr6w_-oxo "#0" 220
+(uid "-na6y1h_7ca_dta9yr6w_-oxo")
+(multiplicity "1"))
+($12 222 < -na6y1h_7ca_dta9yr6w_-oxn "#1" 220
+(uid "-na6y1h_7ca_dta9yr6w_-oxn")
+(multiplicity "*"))
+($11 223 < -na6y1h_7ca_dta9yr6w_-oxm "#<anon> (ccp.People.Person, PersonGroupTitle)" 209
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-oxm"))
+($12 224 < -na6y1h_7ca_dta9yr6w_-oxl "#0" 223
+(uid "-na6y1h_7ca_dta9yr6w_-oxl")
+(multiplicity "1"))
+($12 225 < -na6y1h_7ca_dta9yr6w_-oxk "#1" 223
+(uid "-na6y1h_7ca_dta9yr6w_-oxk")
+(multiplicity "*"))
+($11 226 < -na6y1h_g5u_dwageltr_-p8o "#<anon> (ccp.People.Person, ccp.People.ContactData)" 209
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p8o"))
+($12 227 < -na6y1h_g5u_dwageltr_-p8l "#0" 226
+(aggregation "composite")
+(uid "-na6y1h_g5u_dwageltr_-p8l")
+(multiplicity "1"))
+($12 228 < -na6y1h_g5u_dwageltr_-p8k "#1" 226
+(uid "-na6y1h_g5u_dwageltr_-p8k")
+(multiplicity "*"))
+($11 229 < -na6y1h_g5u_dwageltr_-p8m "#<anon> (ccp.People.Person, ccp.People.Group)" 209
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p8m"))
+($12 230 < -na6y1h_g5u_dwageltr_-p8h "#0" 229
+(uid "-na6y1h_g5u_dwageltr_-p8h")
+(isNavigable false))
+($12 231 < -na6y1h_g5u_dwageltr_-p8g "currentGroup#1" 229
+(name "currentGroup"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8g")
+(multiplicity "1"))
+($9 232 < -na6y1h_7ca_dta9yr6w_-ox8 "Role" 171
+(name "Role"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ox8"))
+($10 233 < -na6y1h_7ca_dta9yr6w_-ox7 "name" 232
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ox7"))
+($10 234 < -na6y1h_g5u_dwbuqhc5_-p7v "isAdmin" 232
+(name "isAdmin"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7v"))
+($11 235 < -na6y1h_7ca_dta9yr6w_-ox5 "#<anon> (Role, Permission)" 232
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ox5"))
+($12 236 < -na6y1h_7ca_dta9yr6w_-ox4 "#0" 235
+(uid "-na6y1h_7ca_dta9yr6w_-ox4")
+(multiplicity "*"))
+($12 237 < -na6y1h_7ca_dta9yr6w_-ox3 "#1" 235
+(uid "-na6y1h_7ca_dta9yr6w_-ox3")
+(multiplicity "*"))
+($9 238 < -na6y1h_7ca_dta9yr6w_-owm "Operation" 171
+(name "Operation"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owm"))
+($10 239 < -na6y1h_7ca_dta9yr6w_-owl "name" 238
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owl"))
+($9 240 < -na6y1h_7ca_dta9yr6w_-owk "Object" 171
+(name "Object"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owk"))
+($10 241 < -na6y1h_7ca_dta9yr6w_-owj "name" 240
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owj"))
+($10 242 < -na6y1h_g5u_dwbuqhc5_-p7u "isAdmin" 240
+(name "isAdmin"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7u"))
+($9 243 < -na6y1h_7ca_dta9yr6w_-owh "Condition" 171
+(name "Condition"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owh"))
+($10 244 < -na6y1h_7ca_dta9yr6w_-owg "name" 243
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owg"))
+($13 245 < -na6y1h_7ca_dta9yr6w_-owc "Comment5" 171
+(name "Comment5"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-owc")
+(body "- operations: read, create, modify, setLock and delete"
+"- objects are the table names"
+"- condition is the constraint for a specific operation to be performed on a specific object"
+))
+($9 246 < -na6y1h_7ca_dta9yr6w_-ovl "Title" 171
+(name "Title"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ovl"))
+($10 247 < -na6y1h_7ca_dta9yr6w_-ovk "name" 246
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-ovk"))
+($11 248 < -na6y1h_7ca_dta9yr6w_-ovd "#<anon> (Title, PersonProjectTitle)" 246
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ovd"))
+($12 249 < -na6y1h_7ca_dta9yr6w_-ovc "#0" 248
+(uid "-na6y1h_7ca_dta9yr6w_-ovc")
+(multiplicity "1"))
+($12 250 < -na6y1h_7ca_dta9yr6w_-ovb "#1" 248
+(uid "-na6y1h_7ca_dta9yr6w_-ovb")
+(multiplicity "*"))
+($11 251 < -na6y1h_7ca_dta9yr6w_-ova "#<anon> (Title, PersonGroupTitle)" 246
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ova"))
+($12 252 < -na6y1h_7ca_dta9yr6w_-ov9 "#0" 251
+(uid "-na6y1h_7ca_dta9yr6w_-ov9")
+(multiplicity "1"))
+($12 253 < -na6y1h_7ca_dta9yr6w_-ov8 "#1" 251
+(uid "-na6y1h_7ca_dta9yr6w_-ov8")
+(multiplicity "*"))
+($11 254 < -na6y1h_7ca_dta9yr6w_-ov7 "#<anon> (Title, Role)" 246
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-ov7"))
+($12 255 < -na6y1h_7ca_dta9yr6w_-ov6 "#0" 254
+(uid "-na6y1h_7ca_dta9yr6w_-ov6")
+(multiplicity "*"))
+($12 256 < -na6y1h_7ca_dta9yr6w_-ov5 "#1" 254
+(uid "-na6y1h_7ca_dta9yr6w_-ov5")
+(multiplicity "*"))
+($9 257 < -na6y1h_7ca_dta9yr6w_-our "ccp.Experiment.DropImaging" 171
+(name "ccp.Experiment.DropImaging"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-our"))
+($14 258 < -na6y1h_-168_ductkfjs_-p7y "#<anon> (ccp.Experiment.DropImaging, ccp.Experiment.Experiment)" 257
+(uid "-na6y1h_-168_ductkfjs_-p7y"))
+($11 259 < -na6y1h_g5u_dwageltr_-p6j "#<anon> (ccp.Experiment.DropImaging, ccp.Experiment.DropImageFile)" 257
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p6j"))
+($12 260 < -na6y1h_g5u_dwageltr_-p6e "#0" 259
+(aggregation "composite")
+(uid "-na6y1h_g5u_dwageltr_-p6e")
+(multiplicity "1"))
+($12 261 < -na6y1h_g5u_dwageltr_-p6d "#1" 259
+(uid "-na6y1h_g5u_dwageltr_-p6d")
+(multiplicity "*"))
+($9 262 < -na6y1h_7ca_dta9yr6w_-osy "PersonProjectTitle" 171
+(name "PersonProjectTitle"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osy"))
+($9 263 < -na6y1h_7ca_dta9yr6w_-osx "PersonGroupTitle" 171
+(name "PersonGroupTitle"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osx"))
+($9 264 < -na6y1h_7ca_dta9yr6w_-osw "Group" 171
+(name "Group"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osw"))
+($10 265 < -na6y1h_7ca_dta9yr6w_-osv "name" 264
+(name "name"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osv"))
+($11 266 < -na6y1h_7ca_dta9yr6w_-osu "#<anon> (Group, PersonGroupTitle)" 264
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osu"))
+($12 267 < -na6y1h_7ca_dta9yr6w_-ost "#0" 266
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-ost")
+(multiplicity "1"))
+($12 268 < -na6y1h_7ca_dta9yr6w_-oss "#1" 266
+(uid "-na6y1h_7ca_dta9yr6w_-oss")
+(multiplicity "*"))
+($9 269 < -na6y1h_7ca_dta9yr6w_-osr "Permission" 171
+(name "Permission"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osr"))
+($10 270 < -na6y1h_g5u_dwbuqhc5_-p7t "isAdmin" 269
+(name "isAdmin"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7t"))
+($11 271 < -na6y1h_7ca_dta9yr6w_-osq "#<anon> (Permission, Object)" 269
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osq"))
+($12 272 < -na6y1h_7ca_dta9yr6w_-osp "#0" 271
+(uid "-na6y1h_7ca_dta9yr6w_-osp")
+(multiplicity "*"))
+($12 273 < -na6y1h_7ca_dta9yr6w_-oso "#1" 271
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-oso")
+(multiplicity "1"))
+($11 274 < -na6y1h_7ca_dta9yr6w_-osn "#<anon> (Permission, Operation)" 269
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osn"))
+($12 275 < -na6y1h_7ca_dta9yr6w_-osm "#0" 274
+(uid "-na6y1h_7ca_dta9yr6w_-osm")
+(multiplicity "*"))
+($12 276 < -na6y1h_7ca_dta9yr6w_-osl "#1" 274
+(uid "-na6y1h_7ca_dta9yr6w_-osl")
+(multiplicity "1"))
+($11 277 < -na6y1h_7ca_dta9yr6w_-osk "#<anon> (Permission, Condition)" 269
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-osk"))
+($12 278 < -na6y1h_7ca_dta9yr6w_-osj "#0" 277
+(uid "-na6y1h_7ca_dta9yr6w_-osj")
+(multiplicity "*"))
+($12 279 < -na6y1h_7ca_dta9yr6w_-osi "#1" 277
+(uid "-na6y1h_7ca_dta9yr6w_-osi")
+(multiplicity "1"))
+($9 280 < -na6y1h_7ca_dta9yr6w_-osa "ProjectGroup" 171
+(name "ProjectGroup"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-osa"))
+($10 281 < -na6y1h_7ca_dta9yr6w_-os9 "hostOrGuest" 280
+(name "hostOrGuest"
+)
+(uid "-na6y1h_7ca_dta9yr6w_-os9"))
+($11 282 < -na6y1h_7ca_dta9yr6w_-os8 "#<anon> (ProjectGroup, Group)" 280
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-os8"))
+($12 283 < -na6y1h_7ca_dta9yr6w_-os7 "#0" 282
+(uid "-na6y1h_7ca_dta9yr6w_-os7")
+(multiplicity "*"))
+($12 284 < -na6y1h_7ca_dta9yr6w_-os6 "#1" 282
+(uid "-na6y1h_7ca_dta9yr6w_-os6")
+(multiplicity "1"))
+($11 285 < -na6y1h_7ca_dta9yr6w_-os5 "#<anon> (ProjectGroup, ccp.Target.Project)" 280
+(name "")
+(uid "-na6y1h_7ca_dta9yr6w_-os5"))
+($12 286 < -na6y1h_7ca_dta9yr6w_-os4 "#0" 285
+(uid "-na6y1h_7ca_dta9yr6w_-os4")
+(multiplicity "*"))
+($12 287 < -na6y1h_7ca_dta9yr6w_-os3 "#1" 285
+(aggregation "composite")
+(uid "-na6y1h_7ca_dta9yr6w_-os3")
+(multiplicity "1"))
+($9 288 < -na6y1h_g5u_dwageltr_-p53 "ccp.Sample.Sample" 171
+(name "ccp.Sample.Sample"
+)
+(uid "-na6y1h_g5u_dwageltr_-p53"))
+($11 289 < -na6y1h_-168_ductkfjs_-p8s "#<anon> (ccp.Sample.Sample, ccp.Xtal.Crystal)" 288
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8s"))
+($12 290 < -na6y1h_-168_ductkfjs_-p8r "#0" 289
+(uid "-na6y1h_-168_ductkfjs_-p8r")
+(multiplicity "1"))
+($12 291 < -na6y1h_-168_ductkfjs_-p8q "#1" 289
+(uid "-na6y1h_-168_ductkfjs_-p8q")
+(multiplicity "0..1"))
+($11 292 < -na6y1h_-168_ductkfjs_-p8m "#<anon> (ccp.Sample.Sample, ccp.Experiment.InputSample)" 288
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p8m"))
+($12 293 < -na6y1h_-168_ductkfjs_-p8h "#0" 292
+(uid "-na6y1h_-168_ductkfjs_-p8h")
+(multiplicity "1"))
+($12 294 < -na6y1h_-168_ductkfjs_-p8g "#1" 292
+(uid "-na6y1h_-168_ductkfjs_-p8g")
+(multiplicity "*"))
+($11 295 < -na6y1h_-168_ductkfjs_-p82 "#<anon> (ccp.Sample.Sample, RefContainer)" 288
+(name "")
+(uid "-na6y1h_-168_ductkfjs_-p82"))
+($12 296 < -na6y1h_-168_ductkfjs_-p81 "#0" 295
+(uid "-na6y1h_-168_ductkfjs_-p81")
+(isNavigable false)
+(multiplicity "*"))
+($12 297 < -na6y1h_-168_ductkfjs_-p80 "#1" 295
+(uid "-na6y1h_-168_ductkfjs_-p80")
+(multiplicity "0..1"))
+($11 298 < -na6y1h_ju4_dvkzlzdf_-p8j "#<anon> (ccp.Sample.Sample, SafetyHazards)" 288
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p8j"))
+($12 299 < -na6y1h_ju4_dvkzlzdf_-p8h "#0" 298
+(uid "-na6y1h_ju4_dvkzlzdf_-p8h")
+(isNavigable false)
+(multiplicity "1"))
+($12 300 < -na6y1h_ju4_dvkzlzdf_-p8f "#1" 298
+(uid "-na6y1h_ju4_dvkzlzdf_-p8f"))
+($11 301 < -na6y1h_g5u_dwbuqhc5_-p83 "#<anon> (ccp.Sample.Sample, ccp.Sample.SampleComponent)" 288
+(name "")
+(uid "-na6y1h_g5u_dwbuqhc5_-p83"))
+($12 302 < -na6y1h_g5u_dwbuqhc5_-p82 "#0" 301
+(aggregation "composite")
+(uid "-na6y1h_g5u_dwbuqhc5_-p82")
+(multiplicity "1"))
+($12 303 < -na6y1h_g5u_dwbuqhc5_-p81 "#1" 301
+(uid "-na6y1h_g5u_dwbuqhc5_-p81")
+(multiplicity "*"))
+($9 304 < -na6y1h_-168_ductkfjs_-p97 "ccp.Xtal.Crystal" 171
+(name "ccp.Xtal.Crystal"
+)
+(uid "-na6y1h_-168_ductkfjs_-p97"))
+($10 305 < -na6y1h_-168_ductkfjs_-p96 "code" 304
+(name "code"
+)
+(uid "-na6y1h_-168_ductkfjs_-p96"))
+($10 306 < -na6y1h_-168_ductkfjs_-p95 "name" 304
+(name "name"
+)
+(uid "-na6y1h_-168_ductkfjs_-p95"))
+($10 307 < -na6y1h_-168_ductkfjs_-p94 "spaceGroup" 304
+(name "spaceGroup"
+)
+(uid "-na6y1h_-168_ductkfjs_-p94"))
+($10 308 < -na6y1h_-168_ductkfjs_-p93 "morphology" 304
+(name "morphology"
+)
+(uid "-na6y1h_-168_ductkfjs_-p93"))
+($10 309 < -na6y1h_-168_ductkfjs_-p8a "crystalType" 304
+(name "crystalType"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8a"))
+($10 310 < -na6y1h_-168_ductkfjs_-p92 "color" 304
+(name "color"
+)
+(uid "-na6y1h_-168_ductkfjs_-p92"))
+($10 311 < -na6y1h_-168_ductkfjs_-p91 "x" 304
+(name "x"
+)
+(uid "-na6y1h_-168_ductkfjs_-p91"))
+($10 312 < -na6y1h_-168_ductkfjs_-p90 "y" 304
+(name "y"
+)
+(uid "-na6y1h_-168_ductkfjs_-p90"))
+($10 313 < -na6y1h_-168_ductkfjs_-p8z "z" 304
+(name "z"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8z"))
+($10 314 < -na6y1h_-168_ductkfjs_-p8y "a" 304
+(name "a"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8y"))
+($10 315 < -na6y1h_-168_ductkfjs_-p8x "b" 304
+(name "b"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8x"))
+($10 316 < -na6y1h_-168_ductkfjs_-p8w "c" 304
+(name "c"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8w"))
+($10 317 < -na6y1h_-168_ductkfjs_-p8v "alpha" 304
+(name "alpha"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8v"))
+($10 318 < -na6y1h_-168_ductkfjs_-p8u "beta" 304
+(name "beta"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8u"))
+($10 319 < -na6y1h_-168_ductkfjs_-p8t "gamma" 304
+(name "gamma"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8t"))
+($9 320 < -na6y1h_-168_ductkfjs_-p8o "ccp.Experiment.InputSample" 171
+(name "ccp.Experiment.InputSample"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8o"))
+($9 321 < -na6y1h_-168_ductkfjs_-p8c "ccp.Experiment.MountCrystal" 171
+(name "ccp.Experiment.MountCrystal"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8c"))
+($10 322 < -na6y1h_-168_ductkfjs_-p8b "crystalNum" 321
+(name "crystalNum"
+)
+(uid "-na6y1h_-168_ductkfjs_-p8b"))
+($10 323 < -na6y1h_-168_ductkfjs_-p7z "cryoMethod" 321
+(name "cryoMethod"
+)
+(uid "-na6y1h_-168_ductkfjs_-p7z"))
+($14 324 < -na6y1h_-168_ductkfjs_-p7x "#<anon> (ccp.Experiment.MountCrystal, ccp.Experiment.Experiment)" 321
+(uid "-na6y1h_-168_ductkfjs_-p7x"))
+($9 325 < -na6y1h_-168_ductkfjs_-p89 "RefContainer" 171
+(name "RefContainer"
+)
+(uid "-na6y1h_-168_ductkfjs_-p89"))
+($10 326 < -na6y1h_-168_ductkfjs_-p88 "name" 325
+(name "name"
+)
+(uid "-na6y1h_-168_ductkfjs_-p88"))
+($10 327 < -na6y1h_-168_ductkfjs_-p87 "volume" 325
+(name "volume"
+)
+(uid "-na6y1h_-168_ductkfjs_-p87"))
+($10 328 < -na6y1h_ju4_dvkzlzdf_-p8m "length" 325
+(name "length"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8m"))
+($10 329 < -na6y1h_-168_ductkfjs_-p86 "loopType" 325
+(name "loopType"
+)
+(uid "-na6y1h_-168_ductkfjs_-p86"))
+($10 330 < -na6y1h_-168_ductkfjs_-p85 "loopLength" 325
+(name "loopLength"
+)
+(uid "-na6y1h_-168_ductkfjs_-p85"))
+($10 331 < -na6y1h_ju4_dvkzlzdf_-p8l "wireWidth" 325
+(name "wireWidth"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8l"))
+($10 332 < -na6y1h_-168_ductkfjs_-p84 "vendorName" 325
+(name "vendorName"
+)
+(uid "-na6y1h_-168_ductkfjs_-p84"))
+($10 333 < -na6y1h_-168_ductkfjs_-p83 "details" 325
+(name "details"
+)
+(uid "-na6y1h_-168_ductkfjs_-p83"))
+($9 334 < -na6y1h_-168_dupj2963_-p98 "memops.Implementation.Project" 171
+(name "memops.Implementation.Project"
+)
+(uid "-na6y1h_-168_dupj2963_-p98"))
+($11 335 < -na6y1h_-168_dupj2963_-p97 "#<anon> (memops.Implementation.Project, ccp.Target.Project)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p97"))
+($12 336 < -na6y1h_-168_dupj2963_-p8k "#0" 335
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8k"))
+($12 337 < -na6y1h_-168_dupj2963_-p8j "#1" 335
+(uid "-na6y1h_-168_dupj2963_-p8j"))
+($11 338 < -na6y1h_-168_dupj2963_-p96 "#<anon> (memops.Implementation.Project, Object)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p96"))
+($12 339 < -na6y1h_-168_dupj2963_-p8i "#0" 338
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8i"))
+($12 340 < -na6y1h_-168_dupj2963_-p8h "#1" 338
+(uid "-na6y1h_-168_dupj2963_-p8h"))
+($11 341 < -na6y1h_-168_dupj2963_-p92 "#<anon> (memops.Implementation.Project, Condition)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p92"))
+($12 342 < -na6y1h_-168_dupj2963_-p8e "#0" 341
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8e"))
+($12 343 < -na6y1h_-168_dupj2963_-p8d "#1" 341
+(uid "-na6y1h_-168_dupj2963_-p8d"))
+($11 344 < -na6y1h_-168_dupj2963_-p91 "#<anon> (memops.Implementation.Project, Role)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p91"))
+($12 345 < -na6y1h_-168_dupj2963_-p8c "#0" 344
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p8c"))
+($12 346 < -na6y1h_-168_dupj2963_-p8b "#1" 344
+(uid "-na6y1h_-168_dupj2963_-p8b"))
+($11 347 < -na6y1h_-168_dupj2963_-p8z "#<anon> (memops.Implementation.Project, Operation)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8z"))
+($12 348 < -na6y1h_-168_dupj2963_-p88 "#0" 347
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p88"))
+($12 349 < -na6y1h_-168_dupj2963_-p87 "#1" 347
+(uid "-na6y1h_-168_dupj2963_-p87"))
+($11 350 < -na6y1h_-168_dupj2963_-p8y "#<anon> (memops.Implementation.Project, Title)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8y"))
+($12 351 < -na6y1h_-168_dupj2963_-p86 "#0" 350
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p86"))
+($12 352 < -na6y1h_-168_dupj2963_-p85 "#1" 350
+(uid "-na6y1h_-168_dupj2963_-p85"))
+($11 353 < -na6y1h_-168_dupj2963_-p8x "#<anon> (memops.Implementation.Project, Group)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8x"))
+($12 354 < -na6y1h_-168_dupj2963_-p84 "#0" 353
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p84"))
+($12 355 < -na6y1h_-168_dupj2963_-p83 "#1" 353
+(uid "-na6y1h_-168_dupj2963_-p83"))
+($11 356 < -na6y1h_-168_dupj2963_-p8w "#<anon> (memops.Implementation.Project, ccp.People.Person)" 334
+(name "")
+(uid "-na6y1h_-168_dupj2963_-p8w"))
+($12 357 < -na6y1h_-168_dupj2963_-p82 "#0" 356
+(aggregation "composite")
+(uid "-na6y1h_-168_dupj2963_-p82"))
+($12 358 < -na6y1h_-168_dupj2963_-p81 "#1" 356
+(uid "-na6y1h_-168_dupj2963_-p81"))
+($9 359 < -na6y1h_ju4_dvkzlzdf_-p8k "SafetyHazards" 171
+(name "SafetyHazards"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8k"))
+($9 360 < -na6y1h_ju4_dvkzlzdf_-p8e "DeliveryDetails" 171
+(name "DeliveryDetails"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8e"))
+($11 361 < -na6y1h_ju4_dvkzlzdf_-p82 "#<anon> (DeliveryDetails, Holder)" 360
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p82"))
+($12 362 < -na6y1h_ju4_dvkzlzdf_-p81 "#0" 361
+(uid "-na6y1h_ju4_dvkzlzdf_-p81")
+(multiplicity "0..1"))
+($12 363 < -na6y1h_ju4_dvkzlzdf_-p80 "#1" 361
+(uid "-na6y1h_ju4_dvkzlzdf_-p80")
+(multiplicity "*"))
+($9 364 < -na6y1h_ju4_dvkzlzdf_-p8d "ccp.Xtal.DiffractionPlan" 171
+(name "ccp.Xtal.DiffractionPlan"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8d"))
+($10 365 < -na6y1h_g5u_dwageltr_-p7b "desiredResolution" 364
+(name "desiredResolution"
+)
+(uid "-na6y1h_g5u_dwageltr_-p7b"))
+($10 366 < -na6y1h_g5u_dwageltr_-p7a "requiredResolution" 364
+(name "requiredResolution"
+)
+(uid "-na6y1h_g5u_dwageltr_-p7a"))
+($10 367 < -na6y1h_g5u_dwageltr_-p79 "isAnomalousSignal" 364
+(name "isAnomalousSignal"
+)
+(uid "-na6y1h_g5u_dwageltr_-p79"))
+($10 368 < -na6y1h_g5u_dwageltr_-p78 "performFluorescenceScan" 364
+(name "performFluorescenceScan"
+)
+(uid "-na6y1h_g5u_dwageltr_-p78"))
+($10 369 < -na6y1h_g5u_dwageltr_-p77 "rankOrFirstCrystal" 364
+(name "rankOrFirstCrystal"
+)
+(uid "-na6y1h_g5u_dwageltr_-p77"))
+($10 370 < -na6y1h_g5u_dwageltr_-p76 "roomRemperatureOr100K" 364
+(name "roomRemperatureOr100K"
+)
+(uid "-na6y1h_g5u_dwageltr_-p76"))
+($10 371 < -na6y1h_g5u_dwageltr_-p75 "processingLevel" 364
+(name "processingLevel"
+)
+(uid "-na6y1h_g5u_dwageltr_-p75"))
+($10 372 < -na6y1h_g5u_dwageltr_-p74 "doseLimit" 364
+(name "doseLimit"
+)
+(uid "-na6y1h_g5u_dwageltr_-p74"))
+($10 373 < -na6y1h_g5u_dwageltr_-p73 "idealExposureTime" 364
+(name "idealExposureTime"
+)
+(uid "-na6y1h_g5u_dwageltr_-p73"))
+($10 374 < -na6y1h_g5u_dwageltr_-p72 "mergeLimit" 364
+(name "mergeLimit"
+)
+(uid "-na6y1h_g5u_dwageltr_-p72"))
+($10 375 < -na6y1h_g5u_dwageltr_-p71 "collectTwinnedData" 364
+(name "collectTwinnedData"
+)
+(uid "-na6y1h_g5u_dwageltr_-p71"))
+($10 376 < -na6y1h_g5u_dwageltr_-p70 "minimumMultiplicity" 364
+(name "minimumMultiplicity"
+)
+(uid "-na6y1h_g5u_dwageltr_-p70"))
+($10 377 < -na6y1h_g5u_dwageltr_-p6z "i_sigl" 364
+(name "i_sigl"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6z"))
+($10 378 < -na6y1h_g5u_dwageltr_-p6y "anisotropyLimit" 364
+(name "anisotropyLimit"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6y"))
+($10 379 < -na6y1h_g5u_dwageltr_-p6x "beamSize" 364
+(name "beamSize"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6x"))
+($9 380 < -na6y1h_ju4_dvkzlzdf_-p89 "Holder" 171
+(name "Holder"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p89"))
+($11 381 < -na6y1h_ju4_dvkzlzdf_-p86 "#<anon> (Holder, ccp.Sample.Sample)" 380
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p86"))
+($12 382 < -na6y1h_ju4_dvkzlzdf_-p85 "#0" 381
+(uid "-na6y1h_ju4_dvkzlzdf_-p85")
+(multiplicity "0..1"))
+($12 383 < -na6y1h_ju4_dvkzlzdf_-p84 "#1" 381
+(uid "-na6y1h_ju4_dvkzlzdf_-p84")
+(multiplicity "*"))
+($9 384 < -na6y1h_ju4_dvkzlzdf_-p7y "ccp.Annotation.Annotation" 171
+(name "ccp.Annotation.Annotation"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7y"))
+($10 385 < -na6y1h_g5u_dwageltr_-p5t "name" 384
+(name "name"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5t"))
+($10 386 < -na6y1h_ju4_dvkzlzdf_-p7x "description" 384
+(name "description"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7x"))
+($10 387 < -na6y1h_ju4_dvkzlzdf_-p7w "fileName" 384
+(name "fileName"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7w"))
+($10 388 < -na6y1h_ju4_dvkzlzdf_-p7v "url" 384
+(name "url"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7v"))
+($10 389 < -na6y1h_ju4_dvkzlzdf_-p7u "date" 384
+(name "date"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7u"))
+($10 390 < -na6y1h_ju4_dvkzlzdf_-p7t "details" 384
+(name "details"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7t"))
+($11 391 < -na6y1h_ju4_dvkzlzdf_-p7s "#<anon> (ccp.Annotation.Annotation, ccp.Experiment.Experiment)" 384
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p7s"))
+($12 392 < -na6y1h_ju4_dvkzlzdf_-p7r "#0" 391
+(uid "-na6y1h_ju4_dvkzlzdf_-p7r")
+(multiplicity "*"))
+($12 393 < -na6y1h_ju4_dvkzlzdf_-p7q "#1" 391
+(uid "-na6y1h_ju4_dvkzlzdf_-p7q")
+(multiplicity "*"))
+($11 394 < -na6y1h_ju4_dvkzlzdf_-p7l "#<anon> (ccp.Annotation.Annotation, ccp.People.Person)" 384
+(name "")
+(uid "-na6y1h_ju4_dvkzlzdf_-p7l"))
+($12 395 < -na6y1h_ju4_dvkzlzdf_-p7k "#0" 394
+(uid "-na6y1h_ju4_dvkzlzdf_-p7k")
+(isNavigable false)
+(multiplicity "*"))
+($12 396 < -na6y1h_ju4_dvkzlzdf_-p7j "author#1" 394
+(name "author"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p7j")
+(multiplicity "1"))
+($9 397 < -na6y1h_g5u_dwageltr_-p98 "ccp.People.Group" 171
+(name "ccp.People.Group"
+)
+(uid "-na6y1h_g5u_dwageltr_-p98"))
+($10 398 < -na6y1h_g5u_dwageltr_-p8y "serial" 397
+(name "serial"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8y"))
+($10 399 < -na6y1h_g5u_dwageltr_-p8x "name" 397
+(name "name"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8x"))
+($10 400 < -na6y1h_g5u_dwageltr_-p8s "url" 397
+(name "url"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8s"))
+($9 401 < -na6y1h_g5u_dwageltr_-p97 "ccp.People.ContactData" 171
+(name "ccp.People.ContactData"
+)
+(uid "-na6y1h_g5u_dwageltr_-p97"))
+($10 402 < -na6y1h_g5u_dwageltr_-p93 "position" 401
+(name "position"
+)
+(uid "-na6y1h_g5u_dwageltr_-p93"))
+($10 403 < -na6y1h_g5u_dwageltr_-p92 "mailingAddress" 401
+(name "mailingAddress"
+)
+(uid "-na6y1h_g5u_dwageltr_-p92"))
+($10 404 < -na6y1h_g5u_dwageltr_-p8r "deliveryAddress" 401
+(name "deliveryAddress"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8r"))
+($10 405 < -na6y1h_g5u_dwageltr_-p91 "emailAddress" 401
+(name "emailAddress"
+)
+(uid "-na6y1h_g5u_dwageltr_-p91"))
+($10 406 < -na6y1h_g5u_dwageltr_-p90 "phoneNumbers" 401
+(name "phoneNumbers"
+)
+(uid "-na6y1h_g5u_dwageltr_-p90")
+(multiplicity "0..*"))
+($10 407 < -na6y1h_g5u_dwageltr_-p8z "faxNumber" 401
+(name "faxNumber"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8z"))
+($10 408 < -na6y1h_g5u_dwageltr_-p8p "endDate" 401
+(name "endDate"
+)
+(uid "-na6y1h_g5u_dwageltr_-p8p"))
+($11 409 < -na6y1h_g5u_dwageltr_-p8n "#<anon> (ccp.People.ContactData, ccp.People.Group)" 401
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p8n"))
+($12 410 < -na6y1h_g5u_dwageltr_-p8j "#0" 409
+(uid "-na6y1h_g5u_dwageltr_-p8j")
+(multiplicity "*"))
+($12 411 < -na6y1h_g5u_dwageltr_-p8i "#1" 409
+(uid "-na6y1h_g5u_dwageltr_-p8i")
+(multiplicity "1"))
+($9 412 < -na6y1h_g5u_dwageltr_-p88 "ccp.Experiment.DropSetup" 171
+(name "ccp.Experiment.DropSetup"
+)
+(uid "-na6y1h_g5u_dwageltr_-p88"))
+($10 413 < -na6y1h_g5u_dwageltr_-p87 "dropShape" 412
+(name "dropShape"
+)
+(uid "-na6y1h_g5u_dwageltr_-p87"))
+($10 414 < -na6y1h_g5u_dwageltr_-p86 "dropType" 412
+(name "dropType"
+)
+(uid "-na6y1h_g5u_dwageltr_-p86"))
+($10 415 < -na6y1h_g5u_dwageltr_-p85 "Temperature" 412
+(name "Temperature"
+)
+(uid "-na6y1h_g5u_dwageltr_-p85"))
+($10 416 < -na6y1h_g5u_dwageltr_-p84 "relativeHumidity" 412
+(name "relativeHumidity"
+)
+(uid "-na6y1h_g5u_dwageltr_-p84"))
+($14 417 < -na6y1h_g5u_dwageltr_-p6v "#<anon> (ccp.Experiment.DropSetup, ccp.Experiment.Experiment)" 412
+(uid "-na6y1h_g5u_dwageltr_-p6v"))
+($9 418 < -na6y1h_g5u_dwageltr_-p6t "ccp.Experiment.DropScoring" 171
+(name "ccp.Experiment.DropScoring"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6t"))
+($10 419 < -na6y1h_g5u_dwageltr_-p6o "score" 418
+(name "score"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6o"))
+($10 420 < -na6y1h_g5u_dwageltr_-p6n "observation" 418
+(name "observation"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6n"))
+($10 421 < -na6y1h_g5u_dwageltr_-p6m "observationType" 418
+(name "observationType"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6m"))
+($14 422 < -na6y1h_g5u_dwageltr_-p6i "#<anon> (ccp.Experiment.DropScoring, ccp.Experiment.Experiment)" 418
+(uid "-na6y1h_g5u_dwageltr_-p6i"))
+($11 423 < -na6y1h_g5u_dwageltr_-p6h "#<anon> (ccp.Experiment.DropScoring, ccp.Experiment.DropImageFile)" 418
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p6h"))
+($12 424 < -na6y1h_g5u_dwageltr_-p6g "#0" 423
+(uid "-na6y1h_g5u_dwageltr_-p6g")
+(isNavigable false)
+(multiplicity "*"))
+($12 425 < -na6y1h_g5u_dwageltr_-p6f "imageFile#1" 423
+(name "imageFile"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6f")
+(multiplicity "0..1"))
+($9 426 < -na6y1h_g5u_dwageltr_-p6l "ccp.Experiment.DropImageFile" 171
+(name "ccp.Experiment.DropImageFile"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6l"))
+($10 427 < -na6y1h_g5u_dwageltr_-p6k "serial" 426
+(name "serial"
+)
+(uid "-na6y1h_g5u_dwageltr_-p6k"))
+($10 428 < z8kflt_-6m3_dwopjkkj_-p98 "path" 426
+(name "path"
+)
+(uid "z8kflt_-6m3_dwopjkkj_-p98"))
+($11 429 < z8kflt_-6m3_dwopjkkj_-p95 "#<anon> (ccp.Experiment.DropImageFile, memops.Implementation.Url)" 426
+(name "")
+(uid "z8kflt_-6m3_dwopjkkj_-p95"))
+($12 430 < z8kflt_-6m3_dwopjkkj_-p94 "#0" 429
+(uid "z8kflt_-6m3_dwopjkkj_-p94")
+(isNavigable false)
+(multiplicity "*"))
+($12 431 < z8kflt_-6m3_dwopjkkj_-p93 "#1" 429
+(uid "z8kflt_-6m3_dwopjkkj_-p93")
+(multiplicity "0..1"))
+($9 432 < -na6y1h_g5u_dwageltr_-p67 "ccp.Method.Method" 171
+(name "ccp.Method.Method"
+)
+(uid "-na6y1h_g5u_dwageltr_-p67"))
+($10 433 < -na6y1h_g5u_dwageltr_-p66 "serial" 432
+(name "serial"
+)
+(uid "-na6y1h_g5u_dwageltr_-p66"))
+($10 434 < -na6y1h_g5u_dwageltr_-p65 "name" 432
+(name "name"
+)
+(uid "-na6y1h_g5u_dwageltr_-p65"))
+($10 435 < -na6y1h_g5u_dwageltr_-p64 "task" 432
+(name "task"
+)
+(uid "-na6y1h_g5u_dwageltr_-p64"))
+($10 436 < -na6y1h_g5u_dwageltr_-p63 "details" 432
+(name "details"
+)
+(uid "-na6y1h_g5u_dwageltr_-p63"))
+($10 437 < -na6y1h_g5u_dwageltr_-p62 "procedure" 432
+(name "procedure"
+)
+(uid "-na6y1h_g5u_dwageltr_-p62"))
+($11 438 < -na6y1h_g5u_dwageltr_-p5x "#<anon> (ccp.Method.Method, ccp.Method.Parameter)" 432
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p5x"))
+($12 439 < -na6y1h_g5u_dwageltr_-p5w "#0" 438
+(aggregation "composite")
+(uid "-na6y1h_g5u_dwageltr_-p5w")
+(multiplicity "1"))
+($12 440 < -na6y1h_g5u_dwageltr_-p5v "#1" 438
+(uid "-na6y1h_g5u_dwageltr_-p5v")
+(multiplicity "*"))
+($11 441 < -na6y1h_g5u_dwageltr_-p5r "#<anon> (ccp.Method.Method, ccp.api.Instrument)" 432
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p5r"))
+($12 442 < -na6y1h_g5u_dwageltr_-p5o "#0" 441
+(uid "-na6y1h_g5u_dwageltr_-p5o")
+(multiplicity "*"))
+($12 443 < -na6y1h_g5u_dwageltr_-p5n "#1" 441
+(uid "-na6y1h_g5u_dwageltr_-p5n")
+(multiplicity "0..1"))
+($9 444 < -na6y1h_g5u_dwageltr_-p61 "ccp.Method.Parameter" 171
+(name "ccp.Method.Parameter"
+)
+(uid "-na6y1h_g5u_dwageltr_-p61"))
+($10 445 < -na6y1h_g5u_dwageltr_-p60 "serial" 444
+(name "serial"
+)
+(uid "-na6y1h_g5u_dwageltr_-p60"))
+($10 446 < -na6y1h_g5u_dwageltr_-p5z "name" 444
+(name "name"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5z"))
+($10 447 < z8kflt_-6m3_dwopjkkj_-p90 "paramType" 444
+(name "paramType"
+)
+(uid "z8kflt_-6m3_dwopjkkj_-p90"))
+($10 448 < z8kflt_-6m3_dwopjkkj_-p8z "unit" 444
+(name "unit"
+)
+(uid "z8kflt_-6m3_dwopjkkj_-p8z"))
+($10 449 < -na6y1h_g5u_dwageltr_-p5y "value" 444
+(name "value"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5y"))
+($9 450 < -na6y1h_g5u_dwageltr_-p5u "ccp.api.Instrument" 171
+(name "ccp.api.Instrument"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5u"))
+($9 451 < -na6y1h_g5u_dwageltr_-p5g "ccp.People.Organisation" 171
+(name "ccp.People.Organisation"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5g"))
+($10 452 < -na6y1h_g5u_dwageltr_-p5a "serial" 451
+(name "serial"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5a"))
+($10 453 < -na6y1h_g5u_dwageltr_-p5f "name" 451
+(name "name"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5f"))
+($10 454 < z8kflt_-6m3_dwopjkkj_-p91 "emailAddress" 451
+(name "emailAddress"
+)
+(uid "z8kflt_-6m3_dwopjkkj_-p91"))
+($10 455 < -na6y1h_g5u_dwageltr_-p5e "address" 451
+(name "address"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5e"))
+($10 456 < -na6y1h_g5u_dwageltr_-p5d "city" 451
+(name "city"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5d"))
+($10 457 < -na6y1h_g5u_dwageltr_-p5c "country" 451
+(name "country"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5c"))
+($10 458 < -na6y1h_g5u_dwageltr_-p5b "url" 451
+(name "url"
+)
+(uid "-na6y1h_g5u_dwageltr_-p5b"))
+($11 459 < -na6y1h_g5u_dwageltr_-p59 "#<anon> (ccp.People.Organisation, ccp.People.Group)" 451
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p59"))
+($12 460 < -na6y1h_g5u_dwageltr_-p58 "#0" 459
+(aggregation "composite")
+(uid "-na6y1h_g5u_dwageltr_-p58")
+(multiplicity "1"))
+($12 461 < -na6y1h_g5u_dwageltr_-p57 "#1" 459
+(uid "-na6y1h_g5u_dwageltr_-p57")
+(multiplicity "*"))
+($11 462 < -na6y1h_g5u_dwageltr_-p4l "#<anon> (ccp.People.Organisation, ccp.Sample.Sample)" 451
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p4l"))
+($12 463 < -na6y1h_g5u_dwageltr_-p4k "supplier#0" 462
+(name "supplier"
+)
+(uid "-na6y1h_g5u_dwageltr_-p4k")
+(multiplicity "0..1"))
+($12 464 < -na6y1h_g5u_dwageltr_-p4j "#1" 462
+(uid "-na6y1h_g5u_dwageltr_-p4j")
+(multiplicity "*"))
+($9 465 < -na6y1h_g5u_dwageltr_-p52 "ccp.RefContainer.RefContainer" 171
+(name "ccp.RefContainer.RefContainer"
+)
+(uid "-na6y1h_g5u_dwageltr_-p52"))
+($11 466 < -na6y1h_g5u_dwageltr_-p4u "#<anon> (ccp.RefContainer.RefContainer, ccp.People.Organisation)" 465
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p4u"))
+($12 467 < -na6y1h_g5u_dwageltr_-p4r "#0" 466
+(uid "-na6y1h_g5u_dwageltr_-p4r")
+(multiplicity "*"))
+($12 468 < -na6y1h_g5u_dwageltr_-p4q "supplier#1" 466
+(name "supplier"
+)
+(uid "-na6y1h_g5u_dwageltr_-p4q")
+(multiplicity "0..1"))
+($9 469 < -na6y1h_g5u_dwageltr_-p51 "ccp.RefContainer.RefHolder" 171
+(name "ccp.RefContainer.RefHolder"
+)
+(uid "-na6y1h_g5u_dwageltr_-p51"))
+($11 470 < -na6y1h_g5u_dwageltr_-p4t "#<anon> (ccp.RefContainer.RefHolder, ccp.People.Organisation)" 469
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p4t"))
+($12 471 < -na6y1h_g5u_dwageltr_-p4p "#0" 470
+(uid "-na6y1h_g5u_dwageltr_-p4p")
+(multiplicity "*"))
+($12 472 < -na6y1h_g5u_dwageltr_-p4o "supplier#1" 470
+(name "supplier"
+)
+(uid "-na6y1h_g5u_dwageltr_-p4o")
+(multiplicity "0..1"))
+($9 473 < -na6y1h_g5u_dwageltr_-p50 "ccp.RefSampleComponent.AbstractComponent" 171
+(name "ccp.RefSampleComponent.AbstractComponent"
+)
+(uid "-na6y1h_g5u_dwageltr_-p50"))
+($11 474 < -na6y1h_g5u_dwageltr_-p4s "#<anon> (ccp.RefSampleComponent.AbstractComponent, ccp.People.Organisation)" 473
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p4s"))
+($12 475 < -na6y1h_g5u_dwageltr_-p4n "#0" 474
+(uid "-na6y1h_g5u_dwageltr_-p4n")
+(multiplicity "*"))
+($12 476 < -na6y1h_g5u_dwageltr_-p4m "supplier#1" 474
+(name "supplier"
+)
+(uid "-na6y1h_g5u_dwageltr_-p4m")
+(multiplicity "0..1"))
+($9 477 < -na6y1h_g5u_dwageltr_-p4z "ccp.Instrument.AbstractInstrument" 171
+(name "ccp.Instrument.AbstractInstrument"
+)
+(uid "-na6y1h_g5u_dwageltr_-p4z"))
+($11 478 < -na6y1h_g5u_dwageltr_-p4x "#<anon> (ccp.Instrument.AbstractInstrument, ccp.People.Organisation)" 477
+(name "")
+(uid "-na6y1h_g5u_dwageltr_-p4x"))
+($12 479 < -na6y1h_g5u_dwageltr_-p4w "#0" 478
+(uid "-na6y1h_g5u_dwageltr_-p4w")
+(multiplicity "*"))
+($12 480 < -na6y1h_g5u_dwageltr_-p4v "manufacturer#1" 478
+(name "manufacturer"
+)
+(uid "-na6y1h_g5u_dwageltr_-p4v")
+(multiplicity "0..1"))
+($9 481 < -na6y1h_-168_dt4fzhe4_-p1m "Protocol" 171
+(name "Protocol"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1m"))
+($10 482 < -na6y1h_-168_dt4fzhe4_-p1l "name" 481
+(name "name"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1l"))
+($10 483 < -na6y1h_-168_dt4fzhe4_-p1k "protocolType" 481
+(name "protocolType"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1k"))
+($10 484 < -na6y1h_-168_dt4fzhe4_-p1j "objective" 481
+(name "objective"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1j"))
+($10 485 < -na6y1h_-168_dt4fzhe4_-p1i "versionDate" 481
+(name "versionDate"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1i"))
+($10 486 < -na6y1h_-168_dt4fzhe4_-p1h "lastUpdated" 481
+(name "lastUpdated"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1h"))
+($10 487 < -na6y1h_-168_dt4fzhe4_-p1g "remarks" 481
+(name "remarks"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1g")
+(multiplicity "*"))
+($10 488 < -na6y1h_-168_dt4fzhe4_-p1f "notes" 481
+(name "notes"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p1f")
+(multiplicity "*"))
+($11 489 < -na6y1h_-168_dt4fzhe4_-p1e "#<anon> (Protocol, Material)" 481
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-p1e"))
+($12 490 < -na6y1h_-168_dt4fzhe4_-p1d "#0" 489
+(aggregation "composite")
+(uid "-na6y1h_-168_dt4fzhe4_-p1d")
+(multiplicity "1"))
+($12 491 < -na6y1h_-168_dt4fzhe4_-p1c "#1" 489
+(uid "-na6y1h_-168_dt4fzhe4_-p1c")
+(multiplicity "*"))
+($11 492 < -na6y1h_-168_dt4fzhe4_-p18 "#<anon> (Protocol, Procedure)" 481
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-p18"))
+($12 493 < -na6y1h_-168_dt4fzhe4_-p17 "#0" 492
+(aggregation "composite")
+(uid "-na6y1h_-168_dt4fzhe4_-p17")
+(multiplicity "1"))
+($12 494 < -na6y1h_-168_dt4fzhe4_-p16 "#1" 492
+(uid "-na6y1h_-168_dt4fzhe4_-p16")
+(multiplicity "*"))
+($11 495 < -na6y1h_g5u_dwbuqhc5_-p97 "#<anon> (Protocol, ccp.People.Person)" 481
+(name "")
+(uid "-na6y1h_g5u_dwbuqhc5_-p97"))
+($12 496 < -na6y1h_g5u_dwbuqhc5_-p96 "#0" 495
+(uid "-na6y1h_g5u_dwbuqhc5_-p96")
+(multiplicity "*"))
+($12 497 < -na6y1h_g5u_dwbuqhc5_-p95 "author#1" 495
+(name "author"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p95")
+(multiplicity "1"))
+($11 498 < z8kflt_-6m3_dwopjkkj_-p8w "#<anon> (Protocol, ccp.Experiment.ParameterDefinition)" 481
+(name "")
+(uid "z8kflt_-6m3_dwopjkkj_-p8w"))
+($12 499 < z8kflt_-6m3_dwopjkkj_-p8v "#0" 498
+(aggregation "composite")
+(uid "z8kflt_-6m3_dwopjkkj_-p8v")
+(multiplicity "1"))
+($12 500 < z8kflt_-6m3_dwopjkkj_-p8u "#1" 498
+(uid "z8kflt_-6m3_dwopjkkj_-p8u")
+(multiplicity "*"))
+($9 501 < -na6y1h_-168_dt4fzhe4_-p12 "Step" 171
+(name "Step"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p12"))
+($10 502 < -na6y1h_-168_dt4fzhe4_-p11 "name" 501
+(name "name"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p11"))
+($10 503 < -na6y1h_ju4_dvkzlzdf_-p8w "duration" 501
+(name "duration"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8w"))
+($10 504 < -na6y1h_-168_dt4fzhe4_-p10 "order" 501
+(name "order"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p10"))
+($10 505 < -na6y1h_-168_dt4fzhe4_-p0z "details" 501
+(name "details"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0z"))
+($9 506 < -na6y1h_-168_dt4fzhe4_-p0y "TemperatureStep" 171
+(name "TemperatureStep"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0y"))
+($10 507 < -na6y1h_-168_dt4fzhe4_-p0w "initialTemperature" 506
+(name "initialTemperature"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0w"))
+($10 508 < -na6y1h_-168_dt4fzhe4_-p0v "finalTemperature" 506
+(name "finalTemperature"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0v"))
+($14 509 < -na6y1h_-168_dt4fzhe4_-p0u "#<anon> (TemperatureStep, Step)" 506
+(uid "-na6y1h_-168_dt4fzhe4_-p0u"))
+($9 510 < -na6y1h_-168_dt4fzhe4_-p0t "SonicationStep" 171
+(name "SonicationStep"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0t"))
+($10 511 < -na6y1h_-168_dt4fzhe4_-p0r "temperature?" 510
+(name "temperature?"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0r"))
+($10 512 < -na6y1h_-168_dt4fzhe4_-p0q "probeSize" 510
+(name "probeSize"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0q"))
+($10 513 < -na6y1h_-168_dt4fzhe4_-p0p "probePower" 510
+(name "probePower"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0p"))
+($10 514 < -na6y1h_-168_dt4fzhe4_-p0o "probePulseMode" 510
+(name "probePulseMode"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0o"))
+($14 515 < -na6y1h_-168_dt4fzhe4_-p0n "#<anon> (SonicationStep, Step)" 510
+(uid "-na6y1h_-168_dt4fzhe4_-p0n"))
+($9 516 < -na6y1h_-168_dt4fzhe4_-p0m "ProtocolSample" 171
+(name "ProtocolSample"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0m"))
+($10 517 < -na6y1h_ju4_dvkzlzdf_-p98 "kitName" 516
+(name "kitName"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p98"))
+($10 518 < -na6y1h_ju4_dvkzlzdf_-p97 "kitSupplier" 516
+(name "kitSupplier"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p97"))
+($14 519 < -na6y1h_g5u_dwbuqhc5_-p87 "#<anon> (ProtocolSample, ccp.Sample.Sample)" 516
+(uid "-na6y1h_g5u_dwbuqhc5_-p87"))
+($9 520 < -na6y1h_-168_dt4fzhe4_-p0e "Material" 171
+(name "Material"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0e"))
+($10 521 < -na6y1h_-168_dt4fzhe4_-p0d "amount" 520
+(name "amount"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0d"))
+($10 522 < -na6y1h_-168_dt4fzhe4_-p0c "role" 520
+(name "role"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p0c"))
+($11 523 < -na6y1h_-168_dt4fzhe4_-p0b "#<anon> (Material, ProtocolSample)" 520
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-p0b"))
+($12 524 < -na6y1h_-168_dt4fzhe4_-p0a "#0" 523
+(uid "-na6y1h_-168_dt4fzhe4_-p0a")
+(multiplicity "*"))
+($12 525 < -na6y1h_-168_dt4fzhe4_-p09 "#1" 523
+(uid "-na6y1h_-168_dt4fzhe4_-p09")
+(multiplicity "1"))
+($11 526 < -na6y1h_-168_dt4fzhe4_-p08 "#<anon> (Material, AddStep)" 520
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-p08"))
+($12 527 < -na6y1h_-168_dt4fzhe4_-p07 "#0" 526
+(uid "-na6y1h_-168_dt4fzhe4_-p07")
+(multiplicity "*"))
+($12 528 < -na6y1h_-168_dt4fzhe4_-p06 "#1" 526
+(uid "-na6y1h_-168_dt4fzhe4_-p06")
+(multiplicity "1"))
+($11 529 < -na6y1h_-eew_dwki75wu_-p97 "#<anon> (Material, FlowStep)" 520
+(name "")
+(uid "-na6y1h_-eew_dwki75wu_-p97"))
+($12 530 < -na6y1h_-eew_dwki75wu_-p93 "#0" 529
+(uid "-na6y1h_-eew_dwki75wu_-p93")
+(multiplicity "1"))
+($12 531 < -na6y1h_-eew_dwki75wu_-p92 "solutionB#1" 529
+(name "solutionB"
+)
+(uid "-na6y1h_-eew_dwki75wu_-p92")
+(multiplicity "*"))
+($11 532 < -na6y1h_-eew_dwki75wu_-p96 "#<anon> (Material, FlowStep)" 520
+(name "")
+(uid "-na6y1h_-eew_dwki75wu_-p96"))
+($12 533 < -na6y1h_-eew_dwki75wu_-p95 "#0" 532
+(uid "-na6y1h_-eew_dwki75wu_-p95")
+(multiplicity "1"))
+($12 534 < -na6y1h_-eew_dwki75wu_-p94 "solutionA#1" 532
+(name "solutionA"
+)
+(uid "-na6y1h_-eew_dwki75wu_-p94")
+(multiplicity "*"))
+($9 535 < -na6y1h_-168_dt4fzhe4_-p05 "FlowStep" 171
+(name "FlowStep"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p05"))
+($10 536 < -na6y1h_-168_dt4fzhe4_-p04 "type" 535
+(name "type"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p04"))
+($10 537 < -na6y1h_-168_dt4fzhe4_-p03 "flowrate" 535
+(name "flowrate"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-p03"))
+($10 538 < -na6y1h_-168_dt4fzhe4_-ozz "beginProportionA" 535
+(name "beginProportionA"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozz"))
+($10 539 < -na6y1h_-168_dt4fzhe4_-ozy "endProportionA" 535
+(name "endProportionA"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozy"))
+($14 540 < -na6y1h_-168_dt4fzhe4_-ozx "#<anon> (FlowStep, Step)" 535
+(uid "-na6y1h_-168_dt4fzhe4_-ozx"))
+($9 541 < -na6y1h_-168_dt4fzhe4_-ozs "Procedure" 171
+(name "Procedure"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozs"))
+($10 542 < -na6y1h_-168_dt4fzhe4_-ozr "name" 541
+(name "name"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozr"))
+($10 543 < -na6y1h_-168_dt4fzhe4_-ozq "order" 541
+(name "order"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozq"))
+($10 544 < -na6y1h_-168_dt4fzhe4_-ozp "cycleNum" 541
+(name "cycleNum"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozp"))
+($10 545 < -na6y1h_-168_dt4fzhe4_-ozo "remarks" 541
+(name "remarks"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozo"))
+($10 546 < -na6y1h_-168_dt4fzhe4_-ozn "notes" 541
+(name "notes"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozn"))
+($11 547 < -na6y1h_-168_dt4fzhe4_-ozm "#<anon> (Procedure, Step)" 541
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-ozm"))
+($12 548 < -na6y1h_-168_dt4fzhe4_-ozl "#0" 547
+(aggregation "composite")
+(uid "-na6y1h_-168_dt4fzhe4_-ozl")
+(multiplicity "1"))
+($12 549 < -na6y1h_-168_dt4fzhe4_-ozk "#1" 547
+(uid "-na6y1h_-168_dt4fzhe4_-ozk")
+(multiplicity "*"))
+($9 550 < -na6y1h_-168_dt4fzhe4_-ozj "CentrifugationStep" 171
+(name "CentrifugationStep"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozj"))
+($10 551 < -na6y1h_-168_dt4fzhe4_-ozh "temperature" 550
+(name "temperature"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozh"))
+($10 552 < -na6y1h_-168_dt4fzhe4_-ozg "rotationSpeed" 550
+(name "rotationSpeed"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozg"))
+($14 553 < -na6y1h_-168_dt4fzhe4_-ozf "#<anon> (CentrifugationStep, Step)" 550
+(uid "-na6y1h_-168_dt4fzhe4_-ozf"))
+($9 554 < -na6y1h_-168_dt4fzhe4_-oze "FiltrationStep" 171
+(name "FiltrationStep"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oze"))
+($10 555 < -na6y1h_-168_dt4fzhe4_-ozc "temperature" 554
+(name "temperature"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozc"))
+($10 556 < -na6y1h_-168_dt4fzhe4_-ozb "membraneName" 554
+(name "membraneName"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ozb"))
+($10 557 < -na6y1h_-168_dt4fzhe4_-oza "membraneCutoff" 554
+(name "membraneCutoff"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oza"))
+($10 558 < -na6y1h_-168_dt4fzhe4_-oz9 "methodName" 554
+(name "methodName"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oz9"))
+($14 559 < -na6y1h_-168_dt4fzhe4_-oz8 "#<anon> (FiltrationStep, Step)" 554
+(uid "-na6y1h_-168_dt4fzhe4_-oz8"))
+($9 560 < -na6y1h_-168_dt4fzhe4_-oz1 "ccp.Experiment.Recombination" 171
+(name "ccp.Experiment.Recombination"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oz1"))
+($10 561 < -na6y1h_-168_dt4fzhe4_-oz0 "system" 560
+(name "system"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oz0"))
+($14 562 < -na6y1h_g5u_dwbuqhc5_-p8u "#<anon> (ccp.Experiment.Recombination, ccp.Experiment.Experiment)" 560
+(uid "-na6y1h_g5u_dwbuqhc5_-p8u"))
+($9 563 < -na6y1h_-168_dt4fzhe4_-oyy "ccp.Experiment.Transformation" 171
+(name "ccp.Experiment.Transformation"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyy"))
+($10 564 < -na6y1h_-168_dt4fzhe4_-oyx "numTransformPlasmid" 563
+(name "numTransformPlasmid"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyx"))
+($14 565 < -na6y1h_g5u_dwbuqhc5_-p8t "#<anon> (ccp.Experiment.Transformation, ccp.Experiment.Experiment)" 563
+(uid "-na6y1h_g5u_dwbuqhc5_-p8t"))
+($9 566 < -na6y1h_-168_dt4fzhe4_-oyr "ccp.Experiment.DishCulture" 171
+(name "ccp.Experiment.DishCulture"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyr"))
+($10 567 < -na6y1h_-168_dt4fzhe4_-oyq "numIsolatedColonies" 566
+(name "numIsolatedColonies"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyq"))
+($10 568 < -na6y1h_-168_dt4fzhe4_-oyp "labellingType" 566
+(name "labellingType"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyp"))
+($14 569 < -na6y1h_g5u_dwbuqhc5_-p8q "#<anon> (ccp.Experiment.DishCulture, ccp.Experiment.Experiment)" 566
+(uid "-na6y1h_g5u_dwbuqhc5_-p8q"))
+($9 570 < -na6y1h_-168_dt4fzhe4_-oyn "ccp.Experiment.Culture" 171
+(name "ccp.Experiment.Culture"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyn"))
+($10 571 < -na6y1h_-168_dt4fzhe4_-oym "labellingType" 570
+(name "labellingType"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oym"))
+($10 572 < -na6y1h_-168_dt4fzhe4_-oyl "isStirred" 570
+(name "isStirred"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyl"))
+($14 573 < -na6y1h_g5u_dwbuqhc5_-p8p "#<anon> (ccp.Experiment.Culture, ccp.Experiment.Experiment)" 570
+(uid "-na6y1h_g5u_dwbuqhc5_-p8p"))
+($9 574 < -na6y1h_-168_dt4fzhe4_-oyg "ccp.Citation.Citation" 171
+(name "ccp.Citation.Citation"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyg"))
+($11 575 < -na6y1h_-168_dt4fzhe4_-oyf "#<anon> (ccp.Citation.Citation, Protocol)" 574
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-oyf"))
+($12 576 < -na6y1h_-168_dt4fzhe4_-oye "references#0" 575
+(name "references"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oye")
+(multiplicity "*"))
+($12 577 < -na6y1h_-168_dt4fzhe4_-oyd "#1" 575
+(uid "-na6y1h_-168_dt4fzhe4_-oyd")
+(multiplicity "*"))
+($9 578 < -na6y1h_-168_dt4fzhe4_-oyc "AddStep" 171
+(name "AddStep"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oyc"))
+($10 579 < -na6y1h_-eew_dwki75wu_-p98 "amount" 578
+(name "amount"
+)
+(uid "-na6y1h_-eew_dwki75wu_-p98"))
+($14 580 < -na6y1h_-168_dt4fzhe4_-oyb "#<anon> (AddStep, Step)" 578
+(uid "-na6y1h_-168_dt4fzhe4_-oyb"))
+($9 581 < -na6y1h_-168_dt4fzhe4_-oy0 "ccp.Experiment.Proteolysis" 171
+(name "ccp.Experiment.Proteolysis"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oy0"))
+($10 582 < -na6y1h_-168_dt4fzhe4_-oxz "proteinProteaseRatio" 581
+(name "proteinProteaseRatio"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxz"))
+($14 583 < -na6y1h_g5u_dwbuqhc5_-p8s "#<anon> (ccp.Experiment.Proteolysis, ccp.Experiment.Experiment)" 581
+(uid "-na6y1h_g5u_dwbuqhc5_-p8s"))
+($9 584 < -na6y1h_-168_dt4fzhe4_-oxv "ccp.Experiment.Concentration" 171
+(name "ccp.Experiment.Concentration"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxv"))
+($10 585 < -na6y1h_-168_dt4fzhe4_-oxu "recovery" 584
+(name "recovery"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxu"))
+($14 586 < -na6y1h_g5u_dwbuqhc5_-p8r "#<anon> (ccp.Experiment.Concentration, ccp.Experiment.Experiment)" 584
+(uid "-na6y1h_g5u_dwbuqhc5_-p8r"))
+($9 587 < -na6y1h_-168_dt4fzhe4_-oxk "ccp.Experiment.ImportSample" 171
+(name "ccp.Experiment.ImportSample"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxk"))
+($11 588 < -na6y1h_g5u_dwbuqhc5_-p8y "#<anon> (ccp.Experiment.ImportSample, ccp.People.Organisation)" 587
+(name "")
+(uid "-na6y1h_g5u_dwbuqhc5_-p8y"))
+($12 589 < -na6y1h_g5u_dwbuqhc5_-p8w "#0" 588
+(uid "-na6y1h_g5u_dwbuqhc5_-p8w")
+(multiplicity "*"))
+($12 590 < -na6y1h_g5u_dwbuqhc5_-p8v "#1" 588
+(uid "-na6y1h_g5u_dwbuqhc5_-p8v")
+(multiplicity "1"))
+($14 591 < -na6y1h_g5u_dwbuqhc5_-p8o "#<anon> (ccp.Experiment.ImportSample, ccp.Experiment.Experiment)" 587
+(uid "-na6y1h_g5u_dwbuqhc5_-p8o"))
+($13 592 < -na6y1h_-168_dt4fzhe4_-oxi "Comment" 171
+(name "Comment"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxi")
+(body "characterisation experiments (only new ones)"
+))
+($13 593 < -na6y1h_-168_dt4fzhe4_-oxh "Comment1" 171
+(name "Comment1"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxh")
+(body "protein production experiments (all)"
+))
+($9 594 < -na6y1h_-168_dt4fzhe4_-oxg "ccp.Experiment.Gel" 171
+(name "ccp.Experiment.Gel"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxg"))
+($10 595 < -na6y1h_-168_dt4fzhe4_-oxf "gelType" 594
+(name "gelType"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxf"))
+($10 596 < -na6y1h_-168_dt4fzhe4_-oxe "fileName" 594
+(name "fileName"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oxe"))
+($11 597 < -na6y1h_-168_dt4fzhe4_-oxd "#<anon> (ccp.Experiment.Gel, ccp.Experiment.GelResult)" 594
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-oxd"))
+($12 598 < -na6y1h_-168_dt4fzhe4_-oxc "#0" 597
+(aggregation "composite")
+(uid "-na6y1h_-168_dt4fzhe4_-oxc")
+(multiplicity "1"))
+($12 599 < -na6y1h_-168_dt4fzhe4_-oxb "#1" 597
+(uid "-na6y1h_-168_dt4fzhe4_-oxb")
+(multiplicity "*"))
+($14 600 < -na6y1h_g5u_dwbuqhc5_-p89 "#<anon> (ccp.Experiment.Gel, ccp.Experiment.Experiment)" 594
+(uid "-na6y1h_g5u_dwbuqhc5_-p89"))
+($9 601 < -na6y1h_-168_dt4fzhe4_-ox9 "ccp.Experiment.GelResult" 171
+(name "ccp.Experiment.GelResult"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ox9"))
+($10 602 < -na6y1h_-168_dt4fzhe4_-ox8 "result" 601
+(name "result"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ox8"))
+($10 603 < -na6y1h_-168_dt4fzhe4_-ox7 "expectedMolMass" 601
+(name "expectedMolMass"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ox7"))
+($10 604 < -na6y1h_-168_dt4fzhe4_-ox6 "measuredMolMass" 601
+(name "measuredMolMass"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ox6"))
+($10 605 < -na6y1h_-168_dt4fzhe4_-ox5 "details" 601
+(name "details"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ox5"))
+($11 606 < -na6y1h_-168_dt4fzhe4_-ox4 "#<anon> (ccp.Experiment.GelResult, ccp.Sample.SampleComponent)" 601
+(name "")
+(uid "-na6y1h_-168_dt4fzhe4_-ox4"))
+($12 607 < -na6y1h_-168_dt4fzhe4_-ox3 "#0" 606
+(uid "-na6y1h_-168_dt4fzhe4_-ox3")
+(isNavigable false)
+(multiplicity "*"))
+($12 608 < -na6y1h_-168_dt4fzhe4_-ox2 "#1" 606
+(uid "-na6y1h_-168_dt4fzhe4_-ox2")
+(multiplicity "0..1"))
+($9 609 < -na6y1h_-168_dt4fzhe4_-ox1 "ccp.Sample.SampleComponent" 171
+(name "ccp.Sample.SampleComponent"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ox1"))
+($9 610 < -na6y1h_ju4_dvkzlzdf_-p91 "WaitStep" 171
+(name "WaitStep"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p91"))
+($10 611 < -na6y1h_ju4_dvkzlzdf_-p90 "temperature" 610
+(name "temperature"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p90"))
+($10 612 < -na6y1h_ju4_dvkzlzdf_-p8y "location" 610
+(name "location"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8y"))
+($14 613 < -na6y1h_ju4_dvkzlzdf_-p8x "#<anon> (WaitStep, Step)" 610
+(uid "-na6y1h_ju4_dvkzlzdf_-p8x"))
+($9 614 < -na6y1h_ju4_dvkzlzdf_-p8s "PressStep" 171
+(name "PressStep"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8s"))
+($10 615 < -na6y1h_ju4_dvkzlzdf_-p8r "temperature" 614
+(name "temperature"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8r"))
+($10 616 < -na6y1h_ju4_dvkzlzdf_-p8q "pressure" 614
+(name "pressure"
+)
+(uid "-na6y1h_ju4_dvkzlzdf_-p8q"))
+($14 617 < -na6y1h_ju4_dvkzlzdf_-p8p "#<anon> (PressStep, Step)" 614
+(uid "-na6y1h_ju4_dvkzlzdf_-p8p"))
+($13 618 < -na6y1h_g5u_dwbuqhc5_-p8z "Comment2" 171
+(name "Comment2"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p8z")
+(body "experimentType is an open enumeration = {PCR, DNA Purification, Digest, Recombination, Transformation, Ligation, LIC Experiment, Dish Culture, Culture, Miniprep, Induction, Cell free expression, Lysis, Fractionation, Chromatography, Proteolysis, Refold, Concentration, Plasmid Preparation, Filtration, Dialysis, Mixing, Import Sample, OD measurement, Light scattering, Mass spectrometry, Gel, Characterisation, Drop setup, Drop Imaging, Drop scoring, Mount crystal, ...}"
+))
+($9 619 < -na6y1h_g5u_dwbuqhc5_-p7q "ccp.Experiment.ParameterDefinition" 171
+(name "ccp.Experiment.ParameterDefinition"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7q"))
+($10 620 < -na6y1h_g5u_dwbuqhc5_-p7p "name" 619
+(name "name"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7p"))
+($10 621 < -na6y1h_g5u_dwbuqhc5_-p7o "paramType" 619
+(name "paramType"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7o"))
+($10 622 < -na6y1h_g5u_dwbuqhc5_-p7n "unit" 619
+(name "unit"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7n"))
+($10 623 < -na6y1h_g5u_dwbuqhc5_-p7m "description" 619
+(name "description"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7m"))
+($9 624 < -na6y1h_g5u_dwbuqhc5_-p7l "ccp.Experiment.Parameter" 171
+(name "ccp.Experiment.Parameter"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7l"))
+($10 625 < -na6y1h_g5u_dwbuqhc5_-p7k "value" 624
+(name "value"
+)
+(uid "-na6y1h_g5u_dwbuqhc5_-p7k"))
+($11 626 < -na6y1h_g5u_dwbuqhc5_-p7g "#<anon> (ccp.Experiment.Parameter, ccp.Experiment.ParameterDefinition)" 624
+(name "")
+(uid "-na6y1h_g5u_dwbuqhc5_-p7g"))
+($12 627 < -na6y1h_g5u_dwbuqhc5_-p7f "#0" 626
+(uid "-na6y1h_g5u_dwbuqhc5_-p7f")
+(multiplicity "*"))
+($12 628 < -na6y1h_g5u_dwbuqhc5_-p7e "#1" 626
+(uid "-na6y1h_g5u_dwbuqhc5_-p7e")
+(multiplicity "1"))
+($9 629 < z8kflt_-6m3_dwopjkkj_-p97 "memops.Implementation.Url" 171
+(name "memops.Implementation.Url"
+)
+(uid "z8kflt_-6m3_dwopjkkj_-p97"))
+($15 630 < -na6y1h_-168_dt4fzhe4_-ox0 "stereotypes" 1
+(uid "-na6y1h_-168_dt4fzhe4_-ox0"))
+($16 631 < -na6y1h_-168_dt4fzhe4_-owz "_odPackage" 630
+(name "_odPackage"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owz")
+(baseClass "Package"))
+($16 632 < -na6y1h_-168_dt4fzhe4_-owy "odStub" 630
+(name "odStub"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owy"))
+($16 633 < -na6y1h_-168_dt4fzhe4_-owx "access" 630
+(name "access"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owx")
+(baseClass "Dependency"))
+($16 634 < -na6y1h_-168_dt4fzhe4_-oww "association" 630
+(name "association"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-oww")
+(baseClass "AssociationEnd"))
+($16 635 < -na6y1h_-168_dt4fzhe4_-owv "create" 630
+(name "create"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owv")
+(baseClass "BehavioralFeature"))
+($16 636 < -na6y1h_-168_dt4fzhe4_-owu "destroy" 630
+(name "destroy"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owu")
+(baseClass "BehavioralFeature"))
+($16 637 < -na6y1h_-168_dt4fzhe4_-owt "document" 630
+(name "document"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owt")
+(baseClass "Component"))
+($16 638 < -na6y1h_-168_dt4fzhe4_-ows "executable" 630
+(name "executable"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ows")
+(baseClass "Component"))
+($16 639 < -na6y1h_-168_dt4fzhe4_-owr "extend" 630
+(name "extend"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owr")
+(baseClass "Dependency"))
+($16 640 < -na6y1h_-168_dt4fzhe4_-owq "facade" 630
+(name "facade"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owq")
+(baseClass "Package"))
+($16 641 < -na6y1h_-168_dt4fzhe4_-owp "file" 630
+(name "file"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owp")
+(baseClass "Component"))
+($16 642 < -na6y1h_-168_dt4fzhe4_-owo "framework" 630
+(name "framework"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owo")
+(baseClass "Package"))
+($16 643 < -na6y1h_-168_dt4fzhe4_-own "friend" 630
+(name "friend"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-own")
+(baseClass "Dependency"))
+($16 644 < -na6y1h_-168_dt4fzhe4_-owm "global" 630
+(name "global"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owm")
+(baseClass "AssociationEnd"))
+($16 645 < -na6y1h_-168_dt4fzhe4_-owl "implementation" 630
+(name "implementation"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owl")
+(baseClass "Generalization"))
+($16 646 < -na6y1h_-168_dt4fzhe4_-owk "implementationClass" 630
+(name "implementationClass"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owk")
+(baseClass "Class"))
+($16 647 < -na6y1h_-168_dt4fzhe4_-owj "import" 630
+(name "import"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owj")
+(baseClass "Dependency"))
+($16 648 < -na6y1h_-168_dt4fzhe4_-owi "include" 630
+(name "include"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owi")
+(baseClass "Dependency"))
+($16 649 < -na6y1h_-168_dt4fzhe4_-owh "invariant" 630
+(name "invariant"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owh")
+(baseClass "Constraint"))
+($16 650 < -na6y1h_-168_dt4fzhe4_-owg "library" 630
+(name "library"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owg")
+(baseClass "Component"))
+($16 651 < -na6y1h_-168_dt4fzhe4_-owf "local" 630
+(name "local"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owf")
+(baseClass "AssociationEnd"))
+($16 652 < -na6y1h_-168_dt4fzhe4_-owe "metaclass" 630
+(name "metaclass"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owe")
+(baseClass "Classifier"))
+($16 653 < -na6y1h_-168_dt4fzhe4_-owd "metamodel" 630
+(name "metamodel"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owd")
+(baseClass "Package"))
+($16 654 < -na6y1h_-168_dt4fzhe4_-owc "parameter" 630
+(name "parameter"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owc")
+(baseClass "AssociationEnd"))
+($16 655 < -na6y1h_-168_dt4fzhe4_-owb "postcondition" 630
+(name "postcondition"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owb")
+(baseClass "Constraint"))
+($16 656 < -na6y1h_-168_dt4fzhe4_-owa "powertype" 630
+(name "powertype"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-owa")
+(baseClass "Classifier"))
+($16 657 < -na6y1h_-168_dt4fzhe4_-ow9 "precondition" 630
+(name "precondition"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow9")
+(baseClass "Constraint"))
+($16 658 < -na6y1h_-168_dt4fzhe4_-ow8 "process" 630
+(name "process"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow8")
+(baseClass "Classifier"))
+($16 659 < -na6y1h_-168_dt4fzhe4_-ow7 "requirement" 630
+(name "requirement"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow7")
+(baseClass "Comment"))
+($16 660 < -na6y1h_-168_dt4fzhe4_-ow6 "responsibility" 630
+(name "responsibility"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow6")
+(baseClass "Comment"))
+($16 661 < -na6y1h_-168_dt4fzhe4_-ow5 "self" 630
+(name "self"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow5")
+(baseClass "AssociationEnd"))
+($16 662 < -na6y1h_-168_dt4fzhe4_-ow4 "stub" 630
+(name "stub"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow4")
+(baseClass "Package"))
+($16 663 < -na6y1h_-168_dt4fzhe4_-ow3 "systemModel" 630
+(name "systemModel"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow3")
+(baseClass "Package"))
+($16 664 < -na6y1h_-168_dt4fzhe4_-ow2 "table" 630
+(name "table"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow2")
+(baseClass "Component"))
+($16 665 < -na6y1h_-168_dt4fzhe4_-ow1 "thread" 630
+(name "thread"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow1")
+(baseClass "Classifier"))
+($16 666 < -na6y1h_-168_dt4fzhe4_-ow0 "topLevel" 630
+(name "topLevel"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ow0")
+(baseClass "Package"))
+($16 667 < -na6y1h_-168_dt4fzhe4_-ovz "type" 630
+(name "type"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ovz")
+(baseClass "Class"))
+($16 668 < -na6y1h_-168_dt4fzhe4_-ovy "utility" 630
+(name "utility"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ovy")
+(baseClass "Classifier"))
+($16 669 < -na6y1h_-168_dt4fzhe4_-ovx "boundary" 630
+(smallImageFile stereotype/image/small/boundary.gif)
+(name "boundary"
+)
+(defaultIconWidth 65)
+(iconFile stereotype/icon/boundary.wmf)
+(uid "-na6y1h_-168_dt4fzhe4_-ovx")
+(baseClass "Class"))
+($16 670 < -na6y1h_-168_dt4fzhe4_-ovw "entity" 630
+(smallImageFile stereotype/image/small/entity.gif)
+(name "entity"
+)
+(iconFile stereotype/icon/entity.wmf)
+(uid "-na6y1h_-168_dt4fzhe4_-ovw")
+(baseClass "Class"))
+($16 671 < -na6y1h_-168_dt4fzhe4_-ovv "control" 630
+(smallImageFile stereotype/image/small/control.gif)
+(name "control"
+)
+(defaultIconWidth 60)
+(iconFile stereotype/icon/control.wmf)
+(uid "-na6y1h_-168_dt4fzhe4_-ovv")
+(defaultIconHeight 60)
+(baseClass "Class"))
+($16 672 < -na6y1h_-168_dt4fzhe4_-ovu "interface" 630
+(name "interface"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ovu")
+(baseClass "Class"))
+($16 673 < -na6y1h_-168_dt4fzhe4_-ovt "body" 630
+(name "body"
+)
+(uid "-na6y1h_-168_dt4fzhe4_-ovt")
+(baseClass "Component"))
+($17 674 < -na6y1h_-168_dt4fzhe4_-ovs "styles" 1
+(uid "-na6y1h_-168_dt4fzhe4_-ovs"))
+($18 675 < -na6y1h_7ca_dta9yr6w_-oqt "experiment" 674
+(fillColor 255 153 0)
+(name "experiment"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqt"))
+($18 676 < -na6y1h_7ca_dta9yr6w_-oqs "trial" 674
+(fillColor 102 153 255)
+(name "trial"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqs"))
+($18 677 < -na6y1h_7ca_dta9yr6w_-oqr "molecule" 674
+(fillColor 153 204 205)
+(name "molecule"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqr"))
+($18 678 < -na6y1h_7ca_dta9yr6w_-oqq "sampleComponent" 674
+(fillColor 153 255 153)
+(name "sampleComponent"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqq"))
+($18 679 < -na6y1h_7ca_dta9yr6w_-oqp "sample" 674
+(fillColor 0 204 51)
+(name "sample"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqp"))
+($18 680 < -na6y1h_7ca_dta9yr6w_-oqo "crystallisation" 674
+(fillColor 255 255 51)
+(name "crystallisation"
+)
+(font "SansSerif" 12 BOLD)
+(uid "-na6y1h_7ca_dta9yr6w_-oqo"))
+($8 681 < -na6y1h_-168_dt4fzhe4_-ovr "Component" 1
+(name "Component"
+)
+(namespaceRoot true)
+(uid "-na6y1h_-168_dt4fzhe4_-ovr"))
+($8 682 < -na6y1h_-168_dt4fzhe4_-ovq "Usecase" 1
+(name "Usecase"
+)
+(namespaceRoot true)
+(uid "-na6y1h_-168_dt4fzhe4_-ovq"))
+($8 683 < -na6y1h_-168_dt4fzhe4_-ovp "Deployment" 1
+(name "Deployment"
+)
+(namespaceRoot true)
+(uid "-na6y1h_-168_dt4fzhe4_-ovp"))
+($19 684)
+($21 685)
+($21 686)
+($21 687)
+($21 688)
+($21 689)
+($21 690)
+($21 691)
+($21 692)
+($21 693)
+($21 694)
+($21 695)
+($21 696)
+($19 697)
+($19 698)
+($19 699)
+($19 700)
+($19 701)
+($19 702)
+($19 703)
+($19 704)
+($19 705)
+($19 706)
+($19 707)
+($19 708)
+($19 709)
+($19 710)
+($19 711)
+($19 712)
+($19 713)
+($19 714)
+($19 715)
+($19 716)
+($19 717)
+($19 718)
+($19 719)
+($19 720)
+($19 721)
+($19 722)
+($19 723)
+($19 724)
+($19 725)
+($19 726)
+($19 727)
+($19 728)
+($19 729)
+($19 730)
+($19 731)
+($19 732)
+($19 733)
+($19 734)
+($19 735)
+($19 736)
+($19 737)
+($19 738)
+($19 739)
+($19 740)
+($19 741)
+($19 742)
+($21 743)
+($19 744)
+($19 745)
+($19 746)
+($19 747)
+($19 748)
+($19 749)
+($19 750)
+($19 751)
+($19 752)
+($19 753)
+($19 754)
+($19 755)
+($19 756)
+($19 757)
+($19 758)
+($19 759)
+($19 760)
+($19 761)
+($19 762)
+($19 763)
+($19 764)
+($19 765)
+($19 766)
+($19 767)
+($19 768)
+($19 769)
+($19 770)
+($19 771)
+($19 772)
+($19 773)
+($19 774)
+($19 775)
+($19 776)
+($19 777)
+($19 778)
+($19 779)
+($19 780)
+($19 781)
+($19 782)
+($19 783)
+($19 784)
+($19 785)
+($19 786)
+($19 787)
+($19 788)
+($19 789)
+($19 790)
+($19 791)
+($19 792)
+($19 793)
+($19 794)
+($19 795)
+($19 796)
+($19 797)
+($19 798)
+($19 799)
+($19 800)
+($19 801)
+($19 802)
+($19 803)
+($19 804)
+($19 805)
+($19 806)
+($19 807)
+($19 808)
+($19 809)
+($19 810)
+($19 811)
+($19 812)
+($19 813)
+($19 814)
+($19 815)
+($19 816)
+($19 817)
+($19 818)
+($19 819)
+($19 820)
+($19 821)
+($19 822)
+($19 823)
+($19 824)
+($19 825)
+($19 826)
+($19 827)
+($19 828)
+($19 829)
+($19 830)
+($19 831)
+($19 832)
+($19 833)
+($19 834)
+($19 835)
+($19 836)
+($19 837)
+($19 838)
+($19 839)
+($19 840)
+($19 841)
+($19 842)
+($19 843)
+($19 844)
+($19 845)
+($19 846)
+($19 847)
+($19 848)
+($19 849)
+($19 850)
+($19 851)
+($19 852)
+($19 853)
+($19 854)
+($19 855)
+($19 856)
+($19 857)
+($19 858)
+($19 859)
+($22 860
+(name "DomainLockObject"
+)
+(uid "64m3b9_4p5_bqjok6kd_-p8j"))
+(typeAssn 192 183)
+(assocEndAssn 183 192)
+(typeAssn 195 183)
+(assocEndAssn 183 195)
+(typeAssn 393 183)
+(assocEndAssn 183 393)
+(typeAssn 198 183)
+(assocEndAssn 183 198)
+(typeAssn 201 183)
+(assocEndAssn 183 201)
+(typeAssn 204 183)
+(assocEndAssn 183 204)
+(typeAssn 207 183)
+(assocEndAssn 183 207)
+(typeExpression 184 685)
+(typeExpression 185 685)
+(typeExpression 186 685)
+(typeExpression 187 686)
+(typeExpression 188 685)
+(typeExpression 189 685)
+(typeExpression 190 686)
+(typeAssn 290 288)
+(assocEndAssn 288 290)
+(assocEndAssn 288 193)
+(typeAssn 293 288)
+(assocEndAssn 288 293)
+(typeAssn 296 288)
+(assocEndAssn 288 296)
+(typeAssn 299 288)
+(assocEndAssn 288 299)
+(typeAssn 383 288)
+(assocEndAssn 288 383)
+(typeAssn 464 288)
+(assocEndAssn 288 464)
+(typeAssn 302 288)
+(assocEndAssn 288 302)
+(assocEndAssn 304 291)
+(typeExpression 305 687)
+(typeExpression 306 687)
+(typeExpression 307 687)
+(typeExpression 308 687)
+(typeExpression 309 687)
+(typeExpression 310 687)
+(typeExpression 311 687)
+(typeExpression 312 687)
+(typeExpression 313 687)
+(typeExpression 314 687)
+(typeExpression 315 687)
+(typeExpression 316 687)
+(typeExpression 317 687)
+(typeExpression 318 687)
+(typeExpression 319 687)
+(typeAssn 291 304)
+(typeAssn 196 320)
+(assocEndAssn 320 196)
+(assocEndAssn 320 294)
+(typeAssn 294 320)
+(assocEndAssn 325 297)
+(typeExpression 326 687)
+(typeExpression 327 687)
+(typeExpression 328 688)
+(typeExpression 329 687)
+(typeExpression 330 687)
+(typeExpression 331 688)
+(typeExpression 332 687)
+(typeExpression 333 687)
+(typeAssn 297 325)
+(assocEndAssn 359 300)
+(typeAssn 300 359)
+(typeAssn 608 609)
+(assocEndAssn 609 608)
+(assocEndAssn 609 303)
+(typeAssn 303 609)
+(typeAssn 193 288)
+(typeAssn 439 432)
+(assocEndAssn 432 439)
+(assocEndAssn 432 199)
+(typeAssn 442 432)
+(assocEndAssn 432 442)
+(typeExpression 433 689)
+(typeExpression 434 689)
+(typeExpression 435 689)
+(typeExpression 436 689)
+(typeExpression 437 689)
+(assocEndAssn 444 440)
+(typeExpression 445 689)
+(typeExpression 446 689)
+(typeExpression 447 690)
+(typeExpression 448 690)
+(typeExpression 449 689)
+(typeAssn 440 444)
+(assocEndAssn 450 443)
+(typeAssn 208 450)
+(assocEndAssn 450 208)
+(typeAssn 443 450)
+(typeAssn 199 432)
+(typeAssn 490 481)
+(assocEndAssn 481 490)
+(typeAssn 493 481)
+(assocEndAssn 481 493)
+(typeAssn 577 481)
+(assocEndAssn 481 577)
+(typeAssn 496 481)
+(assocEndAssn 481 496)
+(assocEndAssn 481 202)
+(typeAssn 499 481)
+(assocEndAssn 481 499)
+(typeExpression 482 691)
+(typeExpression 483 691)
+(typeExpression 484 692)
+(typeExpression 485 692)
+(typeExpression 486 692)
+(typeExpression 487 692)
+(typeExpression 488 692)
+(assocEndAssn 520 491)
+(typeAssn 524 520)
+(assocEndAssn 520 524)
+(typeAssn 527 520)
+(assocEndAssn 520 527)
+(typeAssn 530 520)
+(assocEndAssn 520 530)
+(typeAssn 533 520)
+(assocEndAssn 520 533)
+(typeExpression 521 691)
+(typeExpression 522 691)
+(assocEndAssn 516 525)
+(subtypeAssn 519 516)
+(supertypeAssn 519 288)
+(generalizationAssn 516 519)
+(typeExpression 517 693)
+(typeExpression 518 693)
+(typeAssn 525 516)
+(assocEndAssn 578 528)
+(subtypeAssn 580 578)
+(typeAssn 549 501)
+(assocEndAssn 501 549)
+(typeExpression 502 691)
+(typeExpression 503 693)
+(typeExpression 504 691)
+(typeExpression 505 691)
+(supertypeAssn 580 501)
+(generalizationAssn 578 580)
+(typeExpression 579 694)
+(typeAssn 528 578)
+(assocEndAssn 535 531)
+(typeAssn 534 535)
+(assocEndAssn 535 534)
+(subtypeAssn 540 535)
+(supertypeAssn 540 501)
+(generalizationAssn 535 540)
+(typeExpression 536 691)
+(typeExpression 537 691)
+(typeExpression 538 691)
+(typeExpression 539 691)
+(typeAssn 531 535)
+(typeAssn 491 520)
+(assocEndAssn 541 494)
+(typeAssn 548 541)
+(assocEndAssn 541 548)
+(typeExpression 542 691)
+(typeExpression 543 692)
+(typeExpression 544 691)
+(typeExpression 545 691)
+(typeExpression 546 692)
+(typeAssn 494 541)
+(typeAssn 179 209)
+(assocEndAssn 209 179)
+(typeAssn 218 209)
+(assocEndAssn 209 218)
+(typeAssn 221 209)
+(assocEndAssn 209 221)
+(typeAssn 224 209)
+(assocEndAssn 209 224)
+(typeAssn 358 209)
+(assocEndAssn 209 358)
+(typeAssn 227 209)
+(assocEndAssn 209 227)
+(typeAssn 230 209)
+(assocEndAssn 209 230)
+(typeAssn 396 209)
+(assocEndAssn 209 396)
+(assocEndAssn 209 497)
+(typeExpression 210 685)
+(typeExpression 211 685)
+(typeExpression 212 685)
+(typeExpression 213 685)
+(typeExpression 214 695)
+(typeExpression 215 695)
+(typeExpression 216 695)
+(assocEndAssn 246 219)
+(typeAssn 249 246)
+(assocEndAssn 246 249)
+(typeAssn 252 246)
+(assocEndAssn 246 252)
+(typeAssn 255 246)
+(assocEndAssn 246 255)
+(typeAssn 352 246)
+(assocEndAssn 246 352)
+(typeExpression 247 685)
+(typeAssn 222 262)
+(assocEndAssn 262 222)
+(assocEndAssn 262 250)
+(typeAssn 182 262)
+(assocEndAssn 262 182)
+(typeAssn 250 262)
+(typeAssn 225 263)
+(assocEndAssn 263 225)
+(typeAssn 268 263)
+(assocEndAssn 263 268)
+(assocEndAssn 263 253)
+(typeAssn 253 263)
+(typeAssn 236 232)
+(assocEndAssn 232 236)
+(assocEndAssn 232 256)
+(typeAssn 346 232)
+(assocEndAssn 232 346)
+(typeExpression 233 696)
+(typeExpression 234 686)
+(assocEndAssn 269 237)
+(typeAssn 272 269)
+(assocEndAssn 269 272)
+(typeAssn 275 269)
+(assocEndAssn 269 275)
+(typeAssn 278 269)
+(assocEndAssn 269 278)
+(typeExpression 270 686)
+(assocEndAssn 240 273)
+(typeAssn 340 240)
+(assocEndAssn 240 340)
+(typeExpression 241 696)
+(typeExpression 242 686)
+(typeAssn 273 240)
+(assocEndAssn 238 276)
+(typeAssn 349 238)
+(assocEndAssn 238 349)
+(typeExpression 239 685)
+(typeAssn 276 238)
+(assocEndAssn 243 279)
+(typeAssn 343 243)
+(assocEndAssn 243 343)
+(typeExpression 244 685)
+(typeAssn 279 243)
+(typeAssn 237 269)
+(typeAssn 256 232)
+(typeAssn 219 246)
+(assocEndAssn 401 228)
+(typeAssn 410 401)
+(assocEndAssn 401 410)
+(typeExpression 402 695)
+(typeExpression 403 695)
+(typeExpression 404 695)
+(typeExpression 405 695)
+(typeExpression 406 695)
+(typeExpression 407 695)
+(typeExpression 408 695)
+(assocEndAssn 397 411)
+(typeAssn 231 397)
+(assocEndAssn 397 231)
+(typeAssn 461 397)
+(assocEndAssn 397 461)
+(typeExpression 398 695)
+(typeExpression 399 695)
+(typeExpression 400 695)
+(typeAssn 411 397)
+(typeAssn 228 401)
+(typeAssn 497 209)
+(typeAssn 628 619)
+(assocEndAssn 619 628)
+(assocEndAssn 619 500)
+(typeExpression 620 686)
+(typeExpression 621 686)
+(typeExpression 622 686)
+(typeExpression 623 686)
+(typeAssn 500 619)
+(typeAssn 202 481)
+(assocEndAssn 624 205)
+(typeAssn 627 624)
+(assocEndAssn 624 627)
+(typeExpression 625 686)
+(typeAssn 205 624)
+(projectionAssn 4 183 684)
+(typeAssn 260 257)
+(assocEndAssn 257 260)
+(subtypeAssn 258 257)
+(supertypeAssn 258 183)
+(generalizationAssn 257 258)
+(assocEndAssn 426 261)
+(typeAssn 425 426)
+(assocEndAssn 426 425)
+(typeAssn 430 426)
+(assocEndAssn 426 430)
+(typeExpression 427 689)
+(typeExpression 428 690)
+(assocEndAssn 629 431)
+(typeAssn 431 629)
+(typeAssn 261 426)
+(projectionAssn 5 257 697)
+(projectionAssn 6 288 698)
+(projectionAssn 7 304 699)
+(to 8 7)
+(from 8 6)
+(projectionAssn 8 289 700)
+(to 9 6)
+(from 9 4)
+(projectionAssn 9 191 701)
+(projectionAssn 10 320 702)
+(to 11 10)
+(from 11 4)
+(projectionAssn 11 194 703)
+(to 12 10)
+(from 12 6)
+(projectionAssn 12 292 704)
+(subtypeAssn 324 321)
+(supertypeAssn 324 183)
+(generalizationAssn 321 324)
+(typeExpression 322 687)
+(typeExpression 323 687)
+(projectionAssn 13 321 705)
+(to 14 4)
+(from 14 5)
+(projectionAssn 14 258 706)
+(to 15 4)
+(from 15 13)
+(projectionAssn 15 324 707)
+(subtypeAssn 417 412)
+(supertypeAssn 417 183)
+(generalizationAssn 412 417)
+(typeExpression 413 689)
+(typeExpression 414 689)
+(typeExpression 415 689)
+(typeExpression 416 689)
+(projectionAssn 16 412 708)
+(to 17 4)
+(from 17 16)
+(projectionAssn 17 417 709)
+(typeAssn 424 418)
+(assocEndAssn 418 424)
+(subtypeAssn 422 418)
+(supertypeAssn 422 183)
+(generalizationAssn 418 422)
+(typeExpression 419 689)
+(typeExpression 420 689)
+(typeExpression 421 689)
+(projectionAssn 18 418 710)
+(projectionAssn 19 426 711)
+(to 20 19)
+(from 20 5)
+(projectionAssn 20 259 712)
+(to 21 4)
+(from 21 18)
+(projectionAssn 21 422 713)
+(to 22 19)
+(from 22 18)
+(projectionAssn 22 423 714)
+(projectionAssn 23 629 715)
+(to 24 23)
+(from 24 19)
+(projectionAssn 24 429 716)
+(openDiagrams 2 3)
+(typeAssn 178 172)
+(assocEndAssn 172 178)
+(typeAssn 181 172)
+(assocEndAssn 172 181)
+(typeAssn 287 172)
+(assocEndAssn 172 287)
+(typeAssn 337 172)
+(assocEndAssn 172 337)
+(typeExpression 173 686)
+(typeExpression 174 685)
+(typeExpression 175 686)
+(typeExpression 176 685)
+(projectionAssn 26 172 717)
+(projectionAssn 27 209 718)
+(projectionAssn 28 232 719)
+(projectionAssn 29 238 720)
+(projectionAssn 30 240 721)
+(projectionAssn 31 243 722)
+(projectionAssn 32 245 723)
+(projectionAssn 33 246 724)
+(to 34 27)
+(from 34 26)
+(projectionAssn 34 177 725)
+(to 35 33)
+(from 35 27)
+(projectionAssn 35 217 726)
+(projectionAssn 36 262 727)
+(to 37 36)
+(from 37 27)
+(projectionAssn 37 220 728)
+(to 38 36)
+(from 38 33)
+(projectionAssn 38 248 729)
+(projectionAssn 39 263 730)
+(typeAssn 267 264)
+(assocEndAssn 264 267)
+(typeAssn 284 264)
+(assocEndAssn 264 284)
+(typeAssn 355 264)
+(assocEndAssn 264 355)
+(typeExpression 265 696)
+(projectionAssn 40 264 731)
+(to 41 39)
+(from 41 27)
+(projectionAssn 41 223 732)
+(to 42 39)
+(from 42 40)
+(projectionAssn 42 266 733)
+(to 43 39)
+(from 43 33)
+(projectionAssn 43 251 734)
+(projectionAssn 44 269 735)
+(to 45 44)
+(from 45 28)
+(projectionAssn 45 235 736)
+(to 46 30)
+(from 46 44)
+(projectionAssn 46 271 737)
+(to 47 28)
+(from 47 33)
+(projectionAssn 47 254 738)
+(to 48 29)
+(from 48 44)
+(projectionAssn 48 274 739)
+(to 49 31)
+(from 49 44)
+(projectionAssn 49 277 740)
+(to 50 36)
+(from 50 26)
+(projectionAssn 50 180 741)
+(typeAssn 283 280)
+(assocEndAssn 280 283)
+(typeAssn 286 280)
+(assocEndAssn 280 286)
+(typeExpression 281 743)
+(projectionAssn 51 280 742)
+(to 52 40)
+(from 52 51)
+(projectionAssn 52 282 744)
+(to 53 26)
+(from 53 51)
+(projectionAssn 53 285 745)
+(typeAssn 336 334)
+(assocEndAssn 334 336)
+(typeAssn 339 334)
+(assocEndAssn 334 339)
+(typeAssn 342 334)
+(assocEndAssn 334 342)
+(typeAssn 345 334)
+(assocEndAssn 334 345)
+(typeAssn 348 334)
+(assocEndAssn 334 348)
+(typeAssn 351 334)
+(assocEndAssn 334 351)
+(typeAssn 354 334)
+(assocEndAssn 334 354)
+(typeAssn 357 334)
+(assocEndAssn 334 357)
+(projectionAssn 54 334 746)
+(to 55 26)
+(from 55 54)
+(projectionAssn 55 335 747)
+(to 56 30)
+(from 56 54)
+(projectionAssn 56 338 748)
+(to 57 31)
+(from 57 54)
+(projectionAssn 57 341 749)
+(to 58 28)
+(from 58 54)
+(projectionAssn 58 344 750)
+(to 59 29)
+(from 59 54)
+(projectionAssn 59 347 751)
+(to 60 33)
+(from 60 54)
+(projectionAssn 60 350 752)
+(to 61 40)
+(from 61 54)
+(projectionAssn 61 353 753)
+(to 62 27)
+(from 62 54)
+(projectionAssn 62 356 754)
+(openDiagrams 2 25)
+(projectionAssn 64 209 755)
+(projectionAssn 65 397 756)
+(projectionAssn 66 401 757)
+(to 67 66)
+(from 67 64)
+(projectionAssn 67 226 758)
+(to 68 65)
+(from 68 66)
+(projectionAssn 68 409 759)
+(to 69 65)
+(from 69 64)
+(projectionAssn 69 229 760)
+(typeAssn 460 451)
+(assocEndAssn 451 460)
+(typeAssn 480 451)
+(assocEndAssn 451 480)
+(typeAssn 468 451)
+(assocEndAssn 451 468)
+(typeAssn 472 451)
+(assocEndAssn 451 472)
+(typeAssn 476 451)
+(assocEndAssn 451 476)
+(typeAssn 463 451)
+(assocEndAssn 451 463)
+(typeAssn 590 451)
+(assocEndAssn 451 590)
+(typeExpression 452 689)
+(typeExpression 453 689)
+(typeExpression 454 690)
+(typeExpression 455 689)
+(typeExpression 456 689)
+(typeExpression 457 689)
+(typeExpression 458 689)
+(projectionAssn 70 451 761)
+(to 71 65)
+(from 71 70)
+(projectionAssn 71 459 762)
+(projectionAssn 72 288 763)
+(typeAssn 467 465)
+(assocEndAssn 465 467)
+(projectionAssn 73 465 764)
+(typeAssn 471 469)
+(assocEndAssn 469 471)
+(projectionAssn 74 469 765)
+(typeAssn 475 473)
+(assocEndAssn 473 475)
+(projectionAssn 75 473 766)
+(typeAssn 479 477)
+(assocEndAssn 477 479)
+(projectionAssn 76 477 767)
+(to 77 70)
+(from 77 76)
+(projectionAssn 77 478 768)
+(to 78 70)
+(from 78 73)
+(projectionAssn 78 466 769)
+(to 79 70)
+(from 79 74)
+(projectionAssn 79 470 770)
+(to 80 70)
+(from 80 75)
+(projectionAssn 80 474 771)
+(to 81 72)
+(from 81 70)
+(projectionAssn 81 462 772)
+(openDiagrams 2 63)
+(projectionAssn 83 183 773)
+(typeAssn 392 384)
+(assocEndAssn 384 392)
+(typeAssn 395 384)
+(assocEndAssn 384 395)
+(typeExpression 385 689)
+(typeExpression 386 688)
+(typeExpression 387 688)
+(typeExpression 388 688)
+(typeExpression 389 688)
+(typeExpression 390 688)
+(projectionAssn 84 384 774)
+(to 85 83)
+(from 85 84)
+(projectionAssn 85 391 775)
+(projectionAssn 86 209 776)
+(to 87 86)
+(from 87 84)
+(projectionAssn 87 394 777)
+(projectionAssn 88 432 778)
+(projectionAssn 89 444 779)
+(to 90 89)
+(from 90 88)
+(projectionAssn 90 438 780)
+(projectionAssn 91 450 781)
+(to 92 88)
+(from 92 83)
+(projectionAssn 92 197 782)
+(to 93 91)
+(from 93 88)
+(projectionAssn 93 441 783)
+(projectionAssn 94 619 784)
+(projectionAssn 95 624 785)
+(to 96 95)
+(from 96 83)
+(projectionAssn 96 203 786)
+(to 97 94)
+(from 97 95)
+(projectionAssn 97 626 787)
+(to 98 91)
+(from 98 83)
+(projectionAssn 98 206 788)
+(projectionAssn 99 481 789)
+(to 100 86)
+(from 100 99)
+(projectionAssn 100 495 790)
+(to 101 99)
+(from 101 83)
+(projectionAssn 101 200 791)
+(to 102 94)
+(from 102 99)
+(projectionAssn 102 498 792)
+(openDiagrams 2 82)
+(projectionAssn 104 481 793)
+(projectionAssn 105 501 794)
+(subtypeAssn 509 506)
+(supertypeAssn 509 501)
+(generalizationAssn 506 509)
+(typeExpression 507 691)
+(typeExpression 508 691)
+(projectionAssn 106 506 795)
+(subtypeAssn 515 510)
+(supertypeAssn 515 501)
+(generalizationAssn 510 515)
+(typeExpression 511 691)
+(typeExpression 512 691)
+(typeExpression 513 691)
+(typeExpression 514 691)
+(projectionAssn 107 510 796)
+(projectionAssn 108 516 797)
+(projectionAssn 109 520 798)
+(to 110 105)
+(from 110 106)
+(projectionAssn 110 509 799)
+(to 111 105)
+(from 111 107)
+(projectionAssn 111 515 800)
+(to 112 109)
+(from 112 104)
+(projectionAssn 112 489 801)
+(to 113 108)
+(from 113 109)
+(projectionAssn 113 523 802)
+(projectionAssn 114 535 803)
+(to 115 105)
+(from 115 114)
+(projectionAssn 115 540 804)
+(projectionAssn 116 541 805)
+(to 117 116)
+(from 117 104)
+(projectionAssn 117 492 806)
+(to 118 105)
+(from 118 116)
+(projectionAssn 118 547 807)
+(subtypeAssn 553 550)
+(supertypeAssn 553 501)
+(generalizationAssn 550 553)
+(typeExpression 551 691)
+(typeExpression 552 691)
+(projectionAssn 119 550 808)
+(to 120 105)
+(from 120 119)
+(projectionAssn 120 553 809)
+(subtypeAssn 559 554)
+(supertypeAssn 559 501)
+(generalizationAssn 554 559)
+(typeExpression 555 692)
+(typeExpression 556 692)
+(typeExpression 557 692)
+(typeExpression 558 692)
+(projectionAssn 121 554 810)
+(to 122 105)
+(from 122 121)
+(projectionAssn 122 559 811)
+(subtypeAssn 562 560)
+(supertypeAssn 562 183)
+(generalizationAssn 560 562)
+(typeExpression 561 692)
+(projectionAssn 123 560 812)
+(subtypeAssn 565 563)
+(supertypeAssn 565 183)
+(generalizationAssn 563 565)
+(typeExpression 564 692)
+(projectionAssn 124 563 813)
+(subtypeAssn 569 566)
+(supertypeAssn 569 183)
+(generalizationAssn 566 569)
+(typeExpression 567 692)
+(typeExpression 568 692)
+(projectionAssn 125 566 814)
+(subtypeAssn 573 570)
+(supertypeAssn 573 183)
+(generalizationAssn 570 573)
+(typeExpression 571 692)
+(typeExpression 572 692)
+(projectionAssn 126 570 815)
+(typeAssn 576 574)
+(assocEndAssn 574 576)
+(projectionAssn 127 574 816)
+(to 128 104)
+(from 128 127)
+(projectionAssn 128 575 817)
+(projectionAssn 129 578 818)
+(to 130 105)
+(from 130 129)
+(projectionAssn 130 580 819)
+(to 131 129)
+(from 131 109)
+(projectionAssn 131 526 820)
+(subtypeAssn 583 581)
+(supertypeAssn 583 183)
+(generalizationAssn 581 583)
+(typeExpression 582 692)
+(projectionAssn 132 581 821)
+(subtypeAssn 586 584)
+(supertypeAssn 586 183)
+(generalizationAssn 584 586)
+(typeExpression 585 692)
+(projectionAssn 133 584 822)
+(typeAssn 589 587)
+(assocEndAssn 587 589)
+(subtypeAssn 591 587)
+(supertypeAssn 591 183)
+(generalizationAssn 587 591)
+(projectionAssn 134 587 823)
+(projectionAssn 135 592 824)
+(projectionAssn 136 593 825)
+(typeAssn 598 594)
+(assocEndAssn 594 598)
+(subtypeAssn 600 594)
+(supertypeAssn 600 183)
+(generalizationAssn 594 600)
+(typeExpression 595 692)
+(typeExpression 596 692)
+(assocEndAssn 601 599)
+(typeAssn 607 601)
+(assocEndAssn 601 607)
+(typeExpression 602 692)
+(typeExpression 603 692)
+(typeExpression 604 692)
+(typeExpression 605 692)
+(typeAssn 599 601)
+(projectionAssn 137 594 826)
+(projectionAssn 138 601 827)
+(to 139 138)
+(from 139 137)
+(projectionAssn 139 597 828)
+(projectionAssn 140 609 829)
+(to 141 140)
+(from 141 138)
+(projectionAssn 141 606 830)
+(subtypeAssn 613 610)
+(supertypeAssn 613 501)
+(generalizationAssn 610 613)
+(typeExpression 611 693)
+(typeExpression 612 693)
+(projectionAssn 142 610 831)
+(to 143 105)
+(from 143 142)
+(projectionAssn 143 613 832)
+(subtypeAssn 617 614)
+(supertypeAssn 617 501)
+(generalizationAssn 614 617)
+(typeExpression 615 693)
+(typeExpression 616 693)
+(projectionAssn 144 614 833)
+(to 145 105)
+(from 145 144)
+(projectionAssn 145 617 834)
+(projectionAssn 146 209 835)
+(to 147 146)
+(from 147 104)
+(projectionAssn 147 495 836)
+(projectionAssn 148 320 837)
+(projectionAssn 149 183 838)
+(projectionAssn 150 288 839)
+(to 151 148)
+(from 151 149)
+(projectionAssn 151 194 840)
+(to 152 148)
+(from 152 150)
+(projectionAssn 152 292 841)
+(to 153 150)
+(from 153 149)
+(projectionAssn 153 191 842)
+(projectionAssn 154 618 843)
+(projectionAssn 155 451 844)
+(to 156 150)
+(from 156 155)
+(projectionAssn 156 462 845)
+(to 157 155)
+(from 157 134)
+(projectionAssn 157 588 846)
+(to 158 149)
+(from 158 123)
+(projectionAssn 158 562 847)
+(to 159 149)
+(from 159 124)
+(projectionAssn 159 565 848)
+(to 160 149)
+(from 160 132)
+(projectionAssn 160 583 849)
+(to 161 149)
+(from 161 133)
+(projectionAssn 161 586 850)
+(to 162 149)
+(from 162 125)
+(projectionAssn 162 569 851)
+(to 163 149)
+(from 163 126)
+(projectionAssn 163 573 852)
+(to 164 149)
+(from 164 134)
+(projectionAssn 164 591 853)
+(to 165 149)
+(from 165 137)
+(projectionAssn 165 600 854)
+(to 166 150)
+(from 166 108)
+(projectionAssn 166 519 855)
+(to 167 140)
+(from 167 150)
+(projectionAssn 167 301 856)
+(to 168 104)
+(from 168 149)
+(projectionAssn 168 200 857)
+(to 169 114)
+(from 169 109)
+(projectionAssn 169 529 858)
+(to 170 114)
+(from 170 109)
+(projectionAssn 170 532 859)
+(openDiagrams 2 103)
+(selection 2 102)
+(lockedBy 631 860)
+(stereotypeAssn 171 631)
+(typeAssn 362 360)
+(assocEndAssn 360 362)
+(typeAssn 382 380)
+(assocEndAssn 380 382)
+(assocEndAssn 380 363)
+(typeAssn 363 380)
+(typeExpression 365 689)
+(typeExpression 366 689)
+(typeExpression 367 689)
+(typeExpression 368 689)
+(typeExpression 369 689)
+(typeExpression 370 689)
+(typeExpression 371 689)
+(typeExpression 372 689)
+(typeExpression 373 689)
+(typeExpression 374 689)
+(typeExpression 375 689)
+(typeExpression 376 689)
+(typeExpression 377 689)
+(typeExpression 378 689)
+(typeExpression 379 689)
+(lockedBy 171 860)
+(lockedBy 630 860)
+(lockedBy 674 860)
+(stereotypeAssn 681 631)
+(lockedBy 681 860)
+(stereotypeAssn 682 631)
+(lockedBy 682 860)
+(stereotypeAssn 683 631)
+(lockedBy 683 860)
+(lockedBy 1 860)

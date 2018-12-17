@@ -1,0 +1,8 @@
+Data
+Vectors: /data/xml/Vectors
+Added:
+New vector file pCR[TM]2.1-TOPO.xml
+New vector file pGEM-T Easy.xml
+
+Updated:
+pUC57.xml

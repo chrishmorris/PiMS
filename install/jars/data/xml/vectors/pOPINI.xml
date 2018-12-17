@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINI Vector</name>
+    <details>Derived from pTriEx2/Ampicillin, N-Term His Tag
+    </details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINI" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA">
+        <function>In-Fusion[TM] Multisystem Expression
+            Vector</function>
+        <resistanceDetails name="Ampicillin" />
+        <markerDetails name="N-Term His Tag sequence"
+            details="MAHHHHHHSSG" featureType="Tag" />
+    </sampleComponent>
+</vector>

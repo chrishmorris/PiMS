@@ -1,0 +1,21 @@
+/* TODO make this svn:external */
+div.viewwrapper  { margin:0 0px 0 0px;  }
+div.viewattributeshead { background-color:#99f; margin-bottom:1px; font-weight:bold; color:#006; }
+div.viewattributeshead div.headerlinks { display:inline; width:auto; float:right; }
+div.viewrow { clear:both; background-color:#ccf; border-bottom:1px solid #fff; }
+div.viewrow div.label { width:12em; float:left; padding-left:0.5em; }
+div.viewrow div.value { margin-left:12.5em; }
+div.innerBox { background-color: #ccf; margin-top:1px; }
+div.roleBox { border:1px solid blue;  background-color: #9999FF; margin:2px 0 0 0; }
+
+a.headObjName, a.headObjName:visited { font-weight:bold; color:#003 }
+.roleName { font-weight:bold; color:#003 }
+div.roleBox a, div.roleBox a:visited { color:#006 }
+div.roleBox { padding:2px; }
+img.toggle { height:16px; width:16px; margin:2px 0 0 2px; float: left  }
+
+.indent {padding: 0 2em 0 1em; }
+
+
+.sequence { font-family:monospace; font-size:smaller } /* shrink it for IE */
+*>.sequence {font-size:105%; }						   /* put it back again in Firefox */

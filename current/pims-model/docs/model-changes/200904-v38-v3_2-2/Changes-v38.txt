@@ -1,0 +1,138 @@
+================================================================================
+PiMS RELEASE v3.2-2
+DATABASE REVISION NUMBER 38.
+PURPOSE: Close as many open issues as possible
+================================================================================
+--------------------------------------------------------------------------------    
+IMPLEMENTED (x) DEFERED (>)
+--------------------------------------------------------------------------------    
+x PIMS-2535   Naming System in Target Groups  
+  > removed attribute namingSystem
+  
+x PIMS-2492   Should Why Chosen be mandatory in New Complex   
+  > changed ResearchObjectiveElement.whyChoosen to non mandatory
+  
+x PIMS-2545   Can not attach a researchobjective to a complex if why chosen is null         
+  > duplicate of PIMS-2492
+  
+x PIMS-2519   Protein name should be derived attribute of Target      
+  > added derived attribute getProteinName()
+  
+x PIMS-2029   Organism Name need not be unique        
+  > added OrganismTester
+  
+x PIMS-2746   Primer.lengthOnGene should be int
+  > changed attribute type from String to Integer
+  
+x PIMS-2772   Attributes of target group look odd
+  > removed attribute completeName
+  > renamed attribute shortName to name and changed constraint
+  
+x PIMS-2775  Odd constructor for org.pimslims.model.molecule.Construct
+  > deprecated odd constructor and added new more appropriate one
+
+x PIMS-2764  Recording Host Strains
+  > added Host class (subclass of AbstractComponent)
+
+x remove all namingSystem in comments
+x fixe misspell "contraint" replace by "constraint"
+
+x PIMS-2788  New class for recording Extensions
+  > add Extension class (subclass of Molecule)
+
+x PIMS-466    Plate type must have supplier   
+  > add HolderTypeSource between AbstractHolderType and Organisation called supplier in reference pkg
+  > rise new issue (PIMS-): link between RefSampleSource and RefHolder is inadequate (RefSampleSource cannot be used for RefSample AND RefHolder). Is a link between RefHolder and Organisation needed? 
+
+x PIMS-2145   Improve documentation of Sample       
+  > add extra documentation in class for crystallization trial plates
+  
+x PIMS-2728   Need to record the target and the Construct on Experiment view
+  > send back to Susy for clarification
+  > assign to Marc
+  
+x PIMS-1506  Order of Input Samples
+  > change role name from experiment.Experiment.sampleIos to inputSamples 
+  > change Set to List for experiment.Experiment.inputSamples with an extra order_ column 
+
+x PIMS-2144   Link modification between Target & DbRef  
+  > add new class SimilarityHit between Target and ExternalDbLink - one way link only for the moment
+
+x PIMS-2811  UserGroup.members should be dropped
+  > remove UserGroup.members and User.legGroups
+  > rename UserGroup.leaders to memberUsers
+  
+x PIMS-2788  New class for recording Extensions
+  > add extra attribute isForUse
+
+> PIMS-2198   Can we have fields possibly in the Person class to represent account numbers or project codes for which this person has singing powers       
+  > send back to Peter for clarification
+  > for future
+
+> PIMS-1873   ERD diagrams        
+  > send back to Chris for clarification
+  > for Alan for 3.3
+
+x PIMS-2126   the result/SetupDefinitions of protocol need improvement and DM change       
+  > Already fixed
+  
+x PIMS-2124  Parameter definitions should be listed in Experiments in the order they appear in the Protocol
+  > Already fixed
+
+x PIMS-768    High cardinality links must be one way
+  > remove ComponentCategory.components & add derived method getComponents() based on findAll
+  > remove InstrumentType.instrument & add derived method getInstruments() based on findAll
+  (> remove HolderType.holderTypePositions & add derived method getHolderTypePositions() based on findAll
+  (> not sure of this one - need to check with Bill)
+  > remove SampleCategory.refInputSamples & add derived method getRefInputSamples() based on findAll
+  > remove SampleCategory.refOutputSamples & add derived method getRefOutputSamples() based on findAll
+  > remove Molecule.researchObjectiveElements & add derived method getResearchObjectiveElements() based on findAll
+  > remove Molecule.relatedResearchObjectiveElements & add derived method getRelatedResearchObjectiveElements() based on findAll
+  
+--------------------------------------------------------------------------------    
+--------------------------------------------------------------------------------    
+- PIMS-2807 Link between RefSampleSource and RefHolder is inappropriate
+  > remove link between RefSample and RefHolder
+  > add new RefHolderSource class in holder package to link RefHolder and Organisation
+
+UNIQUENESS CONSTRAINTS
+- PIMS-660    unique constrain in DB needs review
+- PIMS-2547   Uniqueness constraint failure sometimes badly reported    
+- PIMS-2675   Uniqueness constraints lead to information leakage     
+SCALABILITY
+HISTORY
+- PIMS-1101   persistent MRU
+PLATE EXPERIMENTS
+- PIMS-625    Plate experiment - setting some parameters do not make sense in the context of individual well, but a whole plate      
+PROTOCOL
+- PIMS-2551   Parameter definition of type "File"      
+- PIMS-2553   Parameter definition of type "External Link"    
+- PIMS-2636   Protocols should be marked as production / QA / recovery      
+PERSON
+- PIMS-2527   Merge Person and User    
+TARGET
+- PIMS-2101   No history item for a Complex but construct icon for 'generic' view       
+
+--------------------------------------------------------------------------------    
+AGREED
+- PIMS-625 Plate experiment - setting some parameters do not make sense in the context of individual well, but a whole plate
+>>> add extra GroupParameter class linked to ExperimentGroup and linked to ParameterDefinition where isGroupLevel is set to true
+>>> add documentation on ExperimentGroup - must contain experiments with same protocol
+
+UNDER DISCUSSION
+- PIMS-1101 persistent MRU
+==> Anne and Bill to correspond. Add extra class with no reference to others, just list of hooks per user. Bill to provide current design.
+
+- PIMS-768 High cardinality links must be one way
+>>> Links to Type and Category need to be changed to one-way links. Need to make the list.
+==> Bill and Jon to decide how to implement the change. Chris to prepare initial list of links affected by this. Anne to provide latest diagrams.
+
+- PIMS-660 unique constrain in DB needs review
+>>> add uniqueness key constraint on attribute name for all subclasses of MemopsBaseClass except those that are involved in a parent/child (black diamond on UML class diagrams) relationship, then their unique key will be (parentId, name).
+
+- PIMS-1515 Cant create Targets from two different organisms with the same protein name
+>>> MolComponent name is changeable but should be unique
+==> Could we use synonyms?
+    
+
+    

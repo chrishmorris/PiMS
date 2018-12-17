@@ -1,0 +1,18 @@
+<!-- PIMS Bicictronic Infusion protocol as flat file -->
+<protocol name="PIMS Bicistronic InFusion" objective="Capture PCR Product into pOPIN vectors" creationDate="02-02-07" remarks="Default set of protocols for PiMS" details="Capture PCR Product into vectors">
+ <experimentType>Cloning</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Reaction volume/uL" parameterType="Float" defaultValue="5" />
+  <parameterDefinition id="2" name="Infusion Notes" parameterType="String" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR Product A" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR Product B" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="0.000001" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Expression Vector" name="Vector" />
+
+</protocol>

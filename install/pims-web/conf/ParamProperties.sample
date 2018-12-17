@@ -1,0 +1,27 @@
+# other properties for PIMS (non-data model - related)
+# Copy this to a file called "ParamProperties".
+
+
+###############Graph-related parameters###################
+
+# full path to dot.exe - AT&T graph visualization software
+dot_path=dot
+
+# For Windows, if you do not add GraphViz to the path:
+dot_path=C:\\Program Files\\ATT\\Graphviz\\bin\\dot.exe
+
+# For Windows, if you do not add Primer3 to the path:
+primer3_path=C:\\temp\\primer3-1.1.0-beta\\src\\primer3_core.exe
+
+# For Windows, if you do not add oligoTm to the path:
+oligotm_path=C:\\temp\\primer3-1.1.0-beta\\src\\oligotm.exe
+
+
+#########################Error messages###################################
+error.graph.no_hook = there is no object in the system that can be accessed by this url
+error.graph.objectpath_null=object path is null or empty string
+error.graph.version_null =Can not find Readable Version
+error.graph.dotpath_null=Path to dot.exe is not specified in a servletContext.\nCheck that 'ParamProperties' file exists in WEF-INF/conf and propety 'dot_path' is set
+error.graph.empty_graph=Graph is empty
+
+###############End of Graph-related parameters########################

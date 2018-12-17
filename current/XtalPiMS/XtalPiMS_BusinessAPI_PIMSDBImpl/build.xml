@@ -1,0 +1,101 @@
+<project name="datamodel" default="jar and copy" basedir=".">
+
+
+
+    <!-- jar -->
+	<property name="jar.filename" value="xtalPiMS_PiMSImpl.jar" />
+	<property name="jar.file" value="${basedir}/${jar.filename}" />
+
+    <!-- java -->
+    <property name="lib.dir" value="${basedir}/lib" />
+    <property name="java.dir" value="${basedir}/src" />
+    <property name="test.dir" value="${basedir}/test" />
+    <property name="build.dir" value="${basedir}/bin" />
+
+	<!-- standard classpath lib -->
+	<path id="classpath.lib">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar" />
+        </fileset>
+        <fileset dir="../../pims-model/lib/runtime/">
+            <include name="*.jar" />
+        </fileset>
+	</path>
+
+    <!-- classpath for compile and run test -->
+    <path id="classpath.run">
+    	<path refid="classpath.lib" />
+        <pathelement path="${build.dir}" />
+        <pathelement path="${basedir}/../XtalPiMS_BusinessAPI/bin" />
+    </path>
+
+
+
+    <!-- ============================================================ -->
+    <!-- Install tasks.                                               -->
+    <!-- ============================================================ -->
+	
+	<target name="loadScreens" depends="compile">
+	  
+        <java  classname="org.pimslims.crystallization.refdata.ScreenUtility" fork="true" failonerror="yes" >
+            <classpath refid="classpath.run" />
+            <arg file="${basedir}/data/screens" />
+        </java>
+	
+	</target>
+	
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+	<target name="compile" depends="cleanCompiledJava" description="Compiles the java source tree."  >
+		<javac
+			failOnError="true"
+			sourcepath=""
+			srcdir="${java.dir}"
+			destdir="${build.dir}"
+			target="1.5" source="1.5" deprecation="false"
+            encoding="UTF-8"
+            debug="true"
+			includeantruntime="false"
+          >
+			<classpath refid="classpath.run" />
+		</javac>
+	</target>
+
+	    <!-- ============================================================ -->
+    <!-- Jar tasks                                                  -->
+    <!-- ============================================================ -->
+	<target name="jar" description="Make the ${jar.file} file.">
+		<echo>tar file: ${jar.file}</echo>
+		<jar index="true" destfile="${jar.file}">
+			<fileset dir="${build.dir}" >
+                <exclude name="java.util.logging.config.properties" />
+                <exclude name="Properties" />
+			</fileset>
+		</jar>
+	</target>
+ 	<target name="jar and copy" depends="jar" description="Make the ${jar.filename} and copy it to other xtalPiMS projects use it">
+		<copy overwrite="true" verbose="true" file="${jar.file}" tofile="../XtalPiMS_Web/web/WEB-INF/lib/${jar.filename}" />
+        <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../Formulatrix_Impl/lib/${jar.filename}" />
+        <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../Rhombix_Impl/lib/${jar.filename}" />
+		<!-- <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../OPPF Data Migration/lib/${jar.filename}" /> -->
+        <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../imageProcessor/lib/${jar.filename}" />
+ 		<!--
+        <copy overwrite="true" verbose="true" file="${lib.dir}/pims-model.jar" tofile="../XtalPiMS_Web/web/WEB-INF/lib/pims-model.jar" />
+        <copy overwrite="true" verbose="true" file="${lib.dir}/pims-model.jar" tofile="../OPPF Data Migration/lib/pims-model.jar" />
+        <copy overwrite="true" verbose="true" file="${lib.dir}/pims-model.jar" tofile="../imageProcessor/lib/pims-model.jar" />
+ 		-->
+ 	</target>
+
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+
+    <target name="cleanCompiledJava" description="Remove compiled java classes.">
+        <delete dir="${build.dir}" />
+        <mkdir dir="${build.dir}" />
+    </target>
+
+ 
+
+</project>

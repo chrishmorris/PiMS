@@ -1,0 +1,14 @@
+Data
+Protocols: /data/Default-protocols
+Updated:
+PiMS_Plasmid_stock.xml
+Added: new Input Sample
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+
+Changed: Output sample 'name' attribute
+Old: <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+New:  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid stock" />
+
+Added: new Parameters
+  <parameterDefinition id="8" name="Vector name" parameterType="String" />
+  <parameterDefinition id="9" name="Rack" parameterType="String" />

@@ -1,0 +1,415 @@
+--------------------------------------------------------------------------------
+-- DATA MODEL CHANGES :: JUNE 2005
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+-- 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+-- Sample package
+--------------------------------------------------------------------------------
+:: Classes definition
+Sample.AbstractSample
+NEW: General information on the sample or reagent.
+CURRENT: General information on the sample.
+
+Sample.RefSample
+NEW: Reference data to which a 'real' reagent conforms. This is a means to store details which are shared by instances of the same reagent but are supplier and batch independent
+CURRENT: The information on the sample that is used to describe the Material used for a protocol.
+
+Sample.RefSampleSource
+NEW: Defines examples of supplier details for this particular reagent to allow a link to be created to the product data page
+CURRENT: Information to define the RefSample from a particular supplier. The catalogue number and url for the product data page.
+
+Sample.Sample
+NEW: The information on the reagent or sample. The reagent conforms to a particular Reagent reference information. The sample is the container that has been used during an experiment that contains the sample components.
+CURRENT: The information on the sample or reagent. The sample is the container that has been used during an experiment that contains the sample components. The reagent conforms to a particular RefSample
+
+Sample.SampleComponent
+NEW: The information on the reagent or sample component. One component is one element of the contents of the sample or reagent.
+CURRENT: The information on the sample component. One sample component is one element of the contents of the sample.
+
+--------------------------------------------------------------------------------
+-- RefSampleComponent package
+--------------------------------------------------------------------------------
+:: Classes definition
+RefSampleComponent.AbstractComponent
+NEW: The abstract component is used to define the details which characterise all components, these are a name, any synonyms and a CASnumber. There are 4 subclasses of abstract component in PIMS: Molecular Component (MolComponent), Cell, Substance and Composite.
+CURRENT: The abstract component that is used as a reference can be involved in several sample components. The abstract component is context specific inside a lab. There are 4 subclasses of abstract component. Molecular Component (MolComponent), Cell, Substance and Composite
+
+RefSampleComponent.MolComponent
+NEW: One type of component defined in PIMS. A Molecular component (MolComponent) represents a pure component of known chemical structure. This includes most chemicals and also enzymes, constructs and primers. Restriction Enzymes, Primers and Constructs are subtypes of MolComponents with additional features recorded in PIMS.
+CURRENT: This is one of the abstract component. The abstract MolComponent is defined by the lab context and represents a pure component. Everything with a chemical structure should be of type MolComponent.
+
+RefSampleComponent.Construct
+NEW: This is a subtype of MolComponent. It is used to summarise information about a construct such as an expression vector plasmid.
+CURRENT: This is a subtype of MolComponent. It is used to summarise information about polymer construct like expression vector or expression plasmid.
+
+RefSampleComponent.RestrictionEnzyme
+This is a subtype of MolComponent. Restriction enzymes are known to cleave nucleic acid sequences at certain positions.
+
+RefSampleComponent.Primer
+NEW: This is a subtype of MolComponent. A specific oligonucleotide or primer such as a PCR-primer used to amplify nucleic acid fragments.
+CURRENT: This is a subtype of MolComponent. A specific oligonucleotide or a specific primer used to amplify nucleic acid fragments.
+
+RefSampleComponent.ComponentDbRef
+NEW: The link between a database reference (DbRef) and a component in PIMS.
+CURRENT: The link between the database reference and the abstract component.
+
+RefSampleComponent.ComponentCategory
+NEW: The category of the component as classified by a namingSystem. Different organisations can have their own categories. PIMS default categories include buffering agent, salt, inhibitor....
+CURRENT: The category of the component classified by namingSystem. Different organisations can have their own categories.
+
+--------------------------------------------------------------------------------
+-- DbRef package
+--------------------------------------------------------------------------------
+:: Classes definition
+DbRef.DbRef
+NEW: The information on a database reference. This is a reference to an element in an outside database.
+CURRENT: The information on the database reference. This is a reference to an element in an outside database.
+
+
+--------------------------------------------------------------------------------
+-- Instrument package
+--------------------------------------------------------------------------------
+It seems that the consensus is that items of small consumable equipment should be treated as instruments.
+
+:: New Instrument subclass
+batch (e.g. you might buy in a box of 100 concentrators)
+	+ maximumUsageCount 	= maximum number of times this instrument can be used. 
+	+ usageCount 		= number of times this instrument has been used. 
+	+ availableUsageCount (ie number of concentrators in cupboard) = maximumUsageCount - usageCount 
+
+
+Jon (see below) suggests the implementation of a RefInstument to monitor batches (e.g. you might buy in a box of 100 concentrators)
+Also a usage count system to monitor the number of units and their use - which can also be relevant to instruments in general. (see below)
+
+Would it be possible to do this?
+Also, for reagents, 'purchasing' involves Experiment.ImportSample, would we need something similar for these instruments?
+
+
+I prefer the second - the Instrument class. That is what they are - single use instruments. As all the instances of a specific model of concentrator are supposed to be identical, one could perhaps implement stock tracking via a usage count: 
+
+maximumUsageCount = maximum number of times this instrument can be used. 
+usageCount = number of times this instrument has been used. 
+
+availableUsageCount (ie number of concentrators in cupboard) = maximumUsageCount - usageCount 
+
+On receiving a new batch of 100 concentrators, you increase maximumUsageCount by 100. On using a concentrator you increase usageCount by one. On giving twenty to the lab next door you decrease maximumUsageCount by 20. 
+
+These attributes would also be useful for tracking how many times an instrument can be used before it needs recalibrating/washing/poking with a stick. 
+
+It gets a bit trickier if you want to be aware of different batches of concentrators. You would need a different "instrument" for each batch, so you'd probably want to implement a RefInstrument to make it easy to create a new batch. The user would then create an Instrument "concentrator_batch" from RefInstrument "concentrator" with concentrator_batch.maximumUsageCount of however many were in the box. 
+
+I see crystallisation plates differently. They are holders. Plates with stuff in are holders with samples. I'm not sure how one would differentiate unlabled holders - numberAvailable attribute on the RefHolder? 
+
+--------------------------------------------------------------------------------
+-- EXPERIMENTS & PROTOCOLS
+--------------------------------------------------------------------------------
+Remove all subclasses of Experiment
+
+Experiment.Experiment
+- endDate is mandatory – can’t use status ‘In process’
+- no ‘Dialysis’ experiment
+- is link attribute ‘Method’ for instruments?
+- what is sampleIos – deprecated??
+
+The procedures look good to me for general use but ability to modify for particularly difficult PCRs may be good in future (Such as touchdown PCR, where inital annealing temp is high but ramped down during successive cycles to get rid of less specific/unwanted products).
+
+-Need extra steps in the Protocol package:
+
+1. To allow recording of a dialysis experiment.
+Similar to FiltrationStep, perhaps this could just be re-named FiltrationOrDialysisStep?
+
+DialysisStep
+	+temperature: Float
+	+tempDisplayUnit: Word
+	+membraneName: Line
+	+membraneCutoff: Float
+	+memCutoffDisplayUnit
+	+method
+extra attributes are below but could they be add and wait steps?
+	+bufferVolume: Float -will need link to material
+	+bufferVolDisplayUnit: Word
+	+bufferChanges: Float
+
+2 OneShotDisruptor
+The data model Protocols can have French Press or Sonication steps, this is an alternative cell disruption method. May need a new step if there are unique parameters to record. Waiting for details from Scott in Dundee.
+
+
+--------------------------------------------------------------------------------
+-- ORGANISATION
+--------------------------------------------------------------------------------
+Organisation: added attributes
+- type with possible values
+	"home laboratory"
+	"other laboratory"
+	"reagent supplier"
+	"instrument supplier"
+
+- Changed attributes
+CURRENT:
+name         (input box) REQUIRED
+address      (textarea)
+city         (input box)
+country      (input box)
+emailAddress (input box)
+url          (textarea)		text
+
+NEW:
+name         (input box) REQUIRED
+addressLine1 (input box) REQUIRED
+addressLine2 (input box) 
+addressLine3 (input box) 
+addressLine4 (input box) 
+city         (input box) REQUIRED
+postalCode   (input box)
+country      (input box)
+emailAddress (input box)
+url          (input box)	line
+
+--------------------------------------------------------------------------------
+-- Citation 
+--------------------------------------------------------------------------------
+
+Keywords – in the help text should contain the information about which delimiters users should use. For instance keywords might be the following: Cell division; BarT protein location; BarT function description.
+
+Status – should be list of predefined values 
+casAbstractCode – should contain the example 
+medLineUiCode - should contain the example 
+pubMedId - should contain the example 
+isPrimary  - need more explanation of what it is. It is unclear has it some relation of the user point of view on importance of this citation or not. For instance if I am adding citation for the Target and think that this Citation is the most important one (the primary source of information on this Target) do I need to make it isPrimary=yes?  
+
+Authors – needs to be mandatory field. 
+
+--------------------------------------------------------------------------------
+-- Person 
+--------------------------------------------------------------------------------
+familyName – contains the mistyping in the help 
+familyTitle – should be the list of predefined values 
+title - should be the list of predefined values 
+Do we need them both? 
+
+
+--------------------------------------------------------------------------------
+-- CONTROLLED VOCABULARY
+--------------------------------------------------------------------------------
+Sample.RefSample.sampleRole the following is based on Kim's original suggestions and feedback from Steve Prince (MPSI):
+
+Buffer 
+Nucleic acid purification kits 
+Screen (crystallisation, additive) 
+Stock solution 
+Amphiphiles 
+Antibody 
+Antibiotic 
+Chemical/Biochemical 
+Chromatography 
+Competent cells 
+Culture media (microbial, cell and tissue culture) 
+Detergent 
+Electrophoresis 
+Enzyme (with types) 
+Growth Factor 
+Heavy atom reagents (+stains) 
+Hormone 
+Inhibitor 
+Lipid 
+Marker (DNA ladders, Protein ladders) 
+Microparticle 
+Microscopy 
+Nucleic acid 
+Oligo /Primer 
+Pharmacopeia (?covered in Chemicals/biochemicals) 
+PolyAmino acids (?covered in Chemicals/biochemicals) 
+Radiochemicals 
+Stains and Dyes 
+Substrate 
+Vector 
+Vitamins and Derivatives 
+
+RefSampleComponent.MolComponent.componentType
+This is already in the issue tracker -defect 37
+Protein 
+DNA 
+RNA 
+Other Polymer 
+DNA/RNA 
+Non Polymer
+ 
+.solubilityLevel
+suggestion in the api are:
+'soluble', 'partial', 'insoluble', 'others'
+
+There are a number of places in the data model where the value of an attribute usually comes from a list we can pre-define:
+- Person
+	familyTitle - should be a list of predefined values title 
+	Mrs
+        Mr
+        Dr
+        Professor
+
+- sampleRole - should be the limited number of choices with the ability to add the new choice.  
+	1.buffer
+	2.solution
+	3.salt 
+- MolComponent
+	7.componentType - should be predefined list 
+	8.solubilityLevel - should be predefined list
+	9....
+	10.componentType - should limit the number of  available "categories".
+- Holder
+	positionsOrder	 - should have some predefined values. The String is probably wrong type for this. 
+- InputSample
+	Role - There are should be predefined list with possibility to add the new values. 
+- Instrument
+	instrumentType - should be predefined list with possibility to add new values. 
+- Experiment
+	experimentType - should be a list of predefined values status - should be a list of predefined values
+
+
+For most such attributes, there will be occasional exceptions (e.g. Bishop).
+The data model refers to these as "open enumerations".
+
+Probably in some cases, the list should be configurable locally, e.g. reagent type in a lab which has some unique protocols.
+In addition, such lists should be internationalisable.
+
+Jon says that at OPPF the values for such lists are kept in a database table.
+An XML file is equally doable, and perhaps easier for users to customize.
+The alternative is that they are compiled in to the generated code.
+
+--------------------------------------------------------------------------------
+-- SAMPLE
+--------------------------------------------------------------------------------
+location should be a mandatory field
+
+The default location should really be configurable on a per-user basis - someone working in Goods In or Stores would have a different requirement to someone working in the lab.
+
+--------------------------------------------------------------------------------
+-- pH field
+--------------------------------------------------------------------------------
+Add constraint between 0 and 14
+
+--------------------------------------------------------------------------------
+-- SEPARATING CHEMICAL/BIOLOGICAL DATA IN THE MODEL
+--------------------------------------------------------------------------------
+
+1. Biological data is rarely seen as chemical one. This mean that nobody interested in the properties of the compounds as it is. The compounds are used only as a part of mixture that is more complex and in this case the concentration is gets the main characteristic of the compound.   
+Biological related data has quite different characteristics from chemical one, and visa-versa. 
+
+Of course, they are still chemical polymers in the same time, but from biological point of view, it is not important. The mechanism of working with the biological data is different from working with the chemical. For example in chemistry we are usually interested in the compounds by itself, e.g. they chemical properties – such as melting and boiling temperature, solubility, redox potential and so on. It is incorrect to apply many of these properties to the biological substances. It is inconvenient to mix chemical and biological substances information.
+
+MolComponent: (as part of the Model)
+It seems incorrect to inherit RestrictionEnzime, Construct, and Primer from the MolComponent. Of cause, it is possible to define the molecular mass of the restriction enzyme, but this information is not important and some times is quite hard to find.  Molecular mass in case of the construct does not make any sense. (This is a sequence length) Molecular mass of the primer probably can be calculated, but I think it is redundant information.  The solubility level does not make sense in case of restriction enzymes; they are available as a solution and cannot stay active in dry condition. In case of Construct and Primers solubility does not make sense too, because all this substances is a DNA molecular which has approximately the same hypothetical solubility. (They are not able to dissolve.) In addition, it is not needed to know what the solubility level of all these substances is. ImpiricalFormula – in this case is tricky and may be interpreted incorrectly. In case of restriction enzymes – which are in fact proteins, what is to put where? In case of constructs and primers – which are DNA molecular this does not make sense too.   
+
+-- I do not like this either. But what is the solution?
+I would prefer to have the Primer etc. as separate classes in a separate package, with a link to MolComponent. Just that no one has found a smart way of doing that yet. In that way, RefSampleComponent would contain information relevant for the composition of samples, but not for particular scientific fields.
+
+In case of inorganic compounds, the MolComponentFeature is redundant.  
+
+MolComponent includes link to the Molecular, which is not convenient way to store information about enzymes, construst and primers. Many of the Molecular fields do not make sense in this context. For example isAromatic, isParamagnetic, seqLength, calcIsoelectronicPoint, empiricalFormula etc… and so on.
+
+Construct: 
+function – for Construct is unclear. It is possible to say function for the gene or protein but not for the Construct. 
+All of the class fields need to be described. May be I just cannot find the description? Could somebody point me to the documentation, please?
+
+The same is true about RestrictionEnzime & Primer. 
+
+Cell:
+There are a number of incorrect class annotations in the documentation. 
+One of the examples is Cell class:
+Extract from the description of the Cell:
+Class: Cell from Package ccp.api.RefSampleComponent 
+	This is one of the abstract component. The information on the cell component. ....
+	Constructor: newObj = Cell( project,name=value, ... ) 
+In reality the constructor is protected, but there is a method Cell.getByKey(Project, List) which returns Cell object. Therefore, class is not abstract. 
+
+-- What is prresumably meant is that Cell is a subclass of AbstractComponent, which it is. But the english in that phrase does need improvement.
+
+Composite:
+Unfortunately, I cannot imagine one real example of this class, and therefore it is unclear for me what the real application for this class is. Could somebody produce the example of this, please?
+
+-- The way I thought it was supposed to work is the following (but the documentation does not say so):
+MolComponent is anything that has a molecular structure, whether you want to make use of it or not. NaCl is a MolComponent, so is lysozyme.
+A Cell is obvious
+A Composite is a non-covalent complex of any kind. E.g,.:
+A DNA duplex, a micelle, possibly containing other molecules. A protein with an inhibitor bound. A cell containing plasmids
+A Substance should be limited to cases that cannot be put under any of the others. Typically: bovine calf serum, light petroleum, wheat germ extract, algal hydrolysate.
+
+Target:
+Target part of the Model looks nice. There is only one question – we presume that Target is a protein, but in fact we have another class for representing the Protein, it is Molecular so, why we are going to use Target as a Protein? I think that this is a good point to divide these two. Target should be the Target and Protein should be the Protein.  All the staff concerning the Protein should be removed to the Protein class. MPSI Targets will travel from one location to another; there are should be the way to understand where the target comes from is.  In addition, the Targets will have their own database references and citation; these references will be quite different from the proteins one. 
+
+-- The idea was indeed to handle targets and proteins separately. The reason that e.g. seqString is in Target, is that we thought people might want to describe the sequence without having to create a Molecule instance, all the MolResidue instances etc. The alternative would be to force people to make a proper Molecule when they wanted to store the sequence. That would be better modeling, but harder on the users.
+
+NaturalSource: Create a NaturalSource: (http://www.pims-lims.org:8080/pims/Create?_type=ccp.api.Taxonomy.NaturalSource)
+
+I think it is better to subclass; the one of the possible variants is here: 
+
+Class: NaturalSource 
+organismName 
+ncbiTaxonomyId
+scientificName            
+genus               
+species                        
+organismAcronym       
+atccNumber                 
+ictvCode                      
+strain               
+cellLine                       
+cellType
+plasmid                       
+
+Class: Location (or NaturalLocation) as a subclass of NaturalSource
+fraction                        
+cellLocation                
+geneMnemonic            
+organ               
+organelle                     
+tissue               
+variant             
+subVariant                   
+secretion
+
+I suggest removing plasmidDetails and details. 
+If somebody could produce the example of “molecules” field, it helps to put it into the right place. As soon as some real data examples will appear, it gets simpler to propose the suitable variant. These classes should be used only with biological substances; they have nothing to do with chemical molecules. 
+
+-- The molecules are the molceules that arise from this particula natural source. This is the reverse link from the Molecule.naturalSource link.
+
+---- I agree with Rasmus that it would be better to have a sparate package for Pimer class etc.  and for PIMS, in the shorter term, it might be possible to avoid this with some careful manipulation at the user interface level ?? so that only the more relevant fields are displayed -perhaps with an option to enter additional information. 
+I don't think you should get rid of the isoelectric point attribute as this is often used as a criteria for target selection and might be important for future data mining.
+The construct class, as I understand it, is also used to describe vectors and so the 'function' attribute can be used to indicate the function of the vector e.g. expression.
+
+--------------------------------------------------------------------------------
+-- Molecule
+--------------------------------------------------------------------------------
+storing Extinction coefficient for proteins requested by SSPF. Currently not part of data model, I suggest this is added as an extra attribute for the molecule class. Ther is a definition of this on the PIMS website in the glossary.
+
+extinctionCoefficient : Float, The unit is M-1 cm-1
+
+--------------------------------------------------------------------------------
+-- MolCompFeature
+--------------------------------------------------------------------------------
+Move the MolCompFeature to the Molecule package -or make a link to it from the Molecule. It can be used describe features of the Target in this way.
+
+--------------------------------------------------------------------------------
+-- Target
+--------------------------------------------------------------------------------
+Request to be able to record if a Target is an orthologue or paralogue of another
+
+--------------------------------------------------------------------------------
+-- Instrument
+--------------------------------------------------------------------------------
+many-to-many link between Instrument and Protocol.
+
+Obviously some instruments will be completely unsuitable for a given type of experiment! But what about the case where, say, it could be used for some PCR protocols and not others? For example, if the protocol requires that the sample be held at 4C and the machine can't cool below room temperature.
+ 
+The way I see my user interface working (ignoring the reagents side for the moment) is:
+ 
+* Say what type of experiment to run, e.g., PCR
+* Select a PCR protocol
+* Select an Instrument capable of running that protocol
+ 
+Having determined that the chosen protocol has a temperature range of, say, +4C to +92C, I expect we'd then go through the Instruments suitable for PCR and only allow the user to select ones capable of providing both extremes of temperature. I'm not implementing this for the moment, just mocking up the UI, but I've had a look at the UML and the API Javadoc and can't find how we'd get at it. Is this information stored in Instrument?
+
+

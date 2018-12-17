@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINA Vector</name>
+    <details>Derived from pET28a/Kanamycin, C-Term His Tag
+    </details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINA" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA">
+        <function>In-Fusion[TM] E.coli Expression Vector
+        </function>
+        <resistanceDetails name="Kanamycin" />
+        <markerDetails name="C-Term His Tag sequence"
+            details="KHHHHHH" featureType="Tag" />
+    </sampleComponent>
+</vector>

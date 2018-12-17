@@ -1,0 +1,6 @@
+#
+# Needed for connecting from outside Diamond.
+# Within Diamond, no password is needed.
+#
+diamond.fedid=FED_ID
+diamond.password=PASSWORD

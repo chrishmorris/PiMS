@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pCR[TM]2.1-TOPO Vector</name>
+    <details>Cloning vector for PCR products</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="K4500-01"
+        dataPageUrl="http://products.invitrogen.com/ivgn/product/K450001?CID=Search-Product"
+        supplier="Invitrogen" />
+    <sampleComponent name="pCR[TM]2.1-TOPO"
+        componentCategory="Vector" details="3931" molType="DNA"
+        constructStatus="empty" sequenceType="DNA">
+        <function>PCR Cloning Vector for cloning of Taq polymerase-amplified PCR products</function>
+        <resistanceDetails name="Kanamycin" startSeq="1319"
+            endSeq="2113" />
+        <resistanceDetails name="Ampicillin" startSeq="2131"
+            endSeq="2991" />
+        <promoterDetails name="T7 Promoter" startSeq="400"
+            endSeq="419" />
+        <promoterDetails name="Lac Promoter Operator"
+            startSeq="364" endSeq="383" />
+        <markerDetails name="LacZ-alpha ORF" startSeq="1"
+            endSeq="547" featureType="selectable marker" />
+        <markerDetails name="Multiple Cloning sites HindIII-ApaI"
+            details="HindIII-KpnI-SacI-BamHI-SpeI-BstXI-EcoRI-EcoRI-EcoRV-BstXI-NotI-XhoI-NsiI-XbaI-ApaI"
+            startSeq="254" endSeq="357" featureType="MCS" />
+        <markerDetails name="pUC origin" startSeq="3136"
+            endSeq="3809" featureType="ori" />
+        <markerDetails name="Recommended Hosts" details="DH5-alpha-T1[R], Mach1[TM]-T1[R], TOP10, TOP10F'"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

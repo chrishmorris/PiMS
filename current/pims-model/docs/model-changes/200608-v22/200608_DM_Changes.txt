@@ -1,0 +1,11 @@
+DATA MODEL CHANGES 22
+
+EXPERIMENT PACKAGE
+x re-organise diagrams
+
+PROTOCOL PACKAGE
+x remove Material (replaced by RefOutputSample)
+x re-organise diagrams
+
+SAMPLE PACKAGE
+x add isActive in AbstractSample

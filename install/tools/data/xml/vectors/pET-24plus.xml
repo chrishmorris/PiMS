@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pET-24(+) Vector</name>
+    <details>C-terminal His-Tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="69772-3"
+        dataPageUrl="http://www.merck-chemicals.com/life-science-research/EMD_BIO-69772/p_uuid"
+        supplier="Novagen" />
+    <sampleComponent name="pET24(+)" componentCategory="Vector"
+        details="5200bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Kanamycin" startSeq="3862"
+            endSeq="4674" />
+        <promoterDetails name="T7 Promoter" startSeq="237"
+            endSeq="253" />
+        <markerDetails name="Multiple Cloning sites BamHI-XhoI"
+            details="BamHI-EcoRI-SacI-SalI-HindIII-NotI-XhoI" startSeq="158"
+            endSeq="203" featureType="MCS" />
+        <markerDetails name="C-Term His Tag coding sequence"
+            startSeq="140" endSeq="157" featureType="Tag" details="HHHHHH" />
+        <markerDetails name="pBR322 origin" startSeq="3151"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression: DH5alpha; Expression: BL21(DE3)"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

@@ -1,0 +1,383 @@
+--------------------------------------------------------------------------------
+-- DATA MODEL CHANGES :: JUNE 2005
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+-- Molecule package
+--------------------------------------------------------------------------------
+:: new attr in Molecule class
+	+ extinctionCoeff: Float (Unit M-1 cm-1)
+The (molar) extinction coefficient of a protein can be estimated from a knowledge of its amino acid composition. The calculation is based on the number of tyrosine, tryptophan and cystine residues it contains using the known molar extinction coefficients of these residues. The calculation forms part of the ExPASy ProtParam tool. E (protein) = no. Tyr x E (Tyr) + no. Trp x E(Trp) + no. Cys x E(Cys)
+
+
+--------------------------------------------------------------------------------
+-- Annotation package
+--------------------------------------------------------------------------------
+:: Rename MolFeature (linked to Molecule.MolResidue) to MolResFeature
+
+:: Move RefSampleComponent.MolCompFeature to Annotation.MolFeature and create a link to Molecule.Molecule that can then be used to describe features of the Target in this way and remove the link to RefSampleComponent.MolComponent.
+
+
+--------------------------------------------------------------------------------
+-- RefSampleComponent package
+--------------------------------------------------------------------------------
+:: Separating Biological/Chemical data in the data model
+It seems that the concensus is that it is incorrect to inherit RestrictionEnzime, Construct, and Primer from the MolComponent. So it means that it would be better to have RestrictionEnzime, Construct, and Primer as separate classes in a separate package, with a link to MolComponent. In that way, RefSampleComponent would contain only information relevant for the composition of samples, but not for particular scientific fields.
+
+- 1 - If we do that, it still means that each time there is going to be an enzime in a sample, there will be anyway the need to create a MolComponent. Would you really want to do that?  
+
+:: Classes definition
+RefSampleComponent.AbstractComponent
+NEW: The abstract component is used to define the details which characterise all components, these are a name, any synonyms and a CASnumber. There are 4 subclasses of abstract component in PIMS: Molecular Component (MolComponent), Cell, Substance and Composite.
+CURRENT: The abstract component that is used as a reference can be involved in several sample components. The abstract component is context specific inside a lab. There are 4 subclasses of abstract component. Molecular Component (MolComponent), Cell, Substance and Composite
+
+RefSampleComponent.MolComponent
+NEW: One type of component defined in PIMS. A Molecular component (MolComponent) represents a pure component of known molecular structure. This includes most chemicals, proteins, DNA, RNA, DNA/RNA and also enzymes, constructs and primers. Restriction Enzymes, Primers and Constructs are subtypes of MolComponents with additional features recorded in PIMS. NaCl is a MolComponent, so is lysozyme.
+CURRENT: This is one of the abstract component. The abstract MolComponent is defined by the lab context and represents a pure component. Everything with a chemical structure should be of type MolComponent.
+
+RefSampleComponent.Construct
+NEW: This is a subtype of MolComponent. It is used to summarise information about a construct such as an expression vector plasmid.
+CURRENT: This is a subtype of MolComponent. It is used to summarise information about polymer construct like expression vector or expression plasmid.
+
+RefSampleComponent.Construct.function
+NEW: The Construct class is also used to describe vectors and so the 'function' can be used to indicate the function of the vector e.g. expression.
+CURRENT: The primary function of the construct. This should be considered as a guideline only.
+
+RefSampleComponent.RestrictionEnzyme
+This is a subtype of MolComponent. Restriction enzymes are known to cleave nucleic acid sequences at certain positions.
+
+RefSampleComponent.Primer
+NEW: This is a subtype of MolComponent. A specific oligonucleotide or primer such as a PCR-primer used to amplify nucleic acid fragments.
+CURRENT: This is a subtype of MolComponent. A specific oligonucleotide or a specific primer used to amplify nucleic acid fragments.
+
+RefSampleComponent.Substance
+NEW: A Substance should be limited to cases that cannot be put under any of the others. Typically: bovine calf serum, light petroleum, wheat germ extract, algal hydrolysate.
+CURRENT: This is one of the abstract component. This is a component where no detailed chemical structure is provided (e.g. salt, phosphate,...). This is a simple way to describe not only complex mixtures but also components for which you do not want to create a molecule.
+
+RefSampleComponent.Composite
+NEW: Composite is a subclass of AbstractComponent. It is a non-covalent complex of any kind. E.g.: A DNA duplex, a micelle, possibly containing other molecules. A protein with an inhibitor bound. A cell containing plasmids.
+CURRENT: This is one of the abstract component: the composite component. That describes a group of components with specific association as enzyme and substrat or complex members or oligomers.
+
+RefSampleComponent.Cell
+NEW: Cell is a subclass of AbstractComponent. The information on the cell component.
+CURRENT: This is one of the abstract component. The information on the cell component.
+
+RefSampleComponent.ComponentDbRef
+NEW: The link between a database reference (DbRef) and a component in PIMS.
+CURRENT: The link between the database reference and the abstract component.
+
+RefSampleComponent.ComponentCategory
+NEW: The category of the component as classified by a namingSystem. Different organisations can have their own categories. PIMS default categories include buffering agent, salt, inhibitor....
+CURRENT: The category of the component classified by namingSystem. Different organisations can have their own categories.
+
+
+--------------------------------------------------------------------------------
+-- Target package
+--------------------------------------------------------------------------------
+There is only one question – we presume that Target is a protein, but in fact we have another class for representing the Protein, it is Molecule so, why we are going to use Target as a Protein? I think that this is a good point to divide these two. Target should be the Target and Protein should be the Protein.  All the staff concerning the Protein should be removed to the Protein class. MPSI Targets will travel from one location to another; there are should be the way to understand where the target comes from is.  In addition, the Targets will have their own database references and citation; these references will be quite different from the proteins one. 
+
+-- The idea was indeed to handle targets and proteins separately. The reason that e.g. seqString is in Target, is that we thought people might want to describe the sequence without having to create a Molecule instance, all the MolResidue instances etc. The alternative would be to force people to make a proper Molecule when they wanted to store the sequence. That would be better modeling, but harder on the users.
+
+
+--------------------------------------------------------------------------------
+-- DbRef package
+--------------------------------------------------------------------------------
+:: Classes definition
+DbRef.DbRef
+NEW: The information on a database reference. This is a reference to an element in an outside database.
+CURRENT: The information on the database reference. This is a reference to an element in an outside database.
+
+
+--------------------------------------------------------------------------------
+-- Instrument package
+--------------------------------------------------------------------------------
+It seems that the consensus is that items of small consumable equipment should be treated as instruments.
+To monitor the number of units and their use, I propose to create a new StockTraking package (see below).
+For reagents, 'purchasing' involves Experiment.ImportSample, because we need something similar for instruments, I suggest that can be handle by a generic ImportItem class.
+
+:: Rename Instrument RefIntrument
+
+:: New Instrument class
+	+ code = code or barcode specific to a consumable equipement
+
+:: select a Instrument capable of running a particular protocol.
+2 options: (1) new attribute usedInExpTypes in RefInstrument or/and (2) a many-to-may link between RefInstrument & Protocol
+
+
+--------------------------------------------------------------------------------
+-- StockTracking package                                 ** diagrams attached ** (200506-ItemTracking-details.gif & 200506-ItemTrackingRef-details.gif)
+--------------------------------------------------------------------------------
+Implementation of a stock tracking system via a usage count. This can be applied to track the stock of consumable equipment (Instrument), lab ware (Container, Holder, ...) and Sample.
+
+On receiving a new group of 100 identical items, you set purchasedNum to 100. On using an item you increase usedNum by one. On giving twenty to the lab next door you decrease currentNum by 20. These attributes would also be useful for tracking how many times an item can be used before it needs recalibrating/washing/poking with a stick. 
+
+
+:: RefItem
+	+ catalogNum
+	+ dataPageUrl
+	+ description
+	+ maxUsageNum = maximum number of times this instrument can be used (default = 1).
+	+ unitPrice
+
+:: Item
+	+ purchasedNum
+	+ currentNum = purchasedNum at the beginning.
+	+ usedNum = number of times this instrument has been used.
+	+ availabilityNum = (currentNum x maxUsageNum) - usedNum
+	+ unitPrice
+	+ amount = purchasedNum x unitPrice
+
+:: ImportItem
+	+ dateOfImport
+	+ subtotal = sum(Item.amount)
+	+ vat
+	+ total = subtotal + (subtotal x vat)
+
+
+--------------------------------------------------------------------------------
+-- Sample package
+--------------------------------------------------------------------------------
+:: Remove RefSampleSource: replaced by RefItem in StockTracking package.
+
+:: Change the cardinality of the link between Sample and SampleLocation, the location should be a mandatory. The default location should really be configurable on a per-user basis - someone working in Goods In or Stores would have a different requirement to someone working in the lab.
+
+:: AbstractSample.pH: Add constraint between 0 and 14
+
+:: Classes definition
+Sample.AbstractSample
+NEW: General information on the sample or reagent.
+CURRENT: General information on the sample.
+
+Sample.RefSample
+NEW: Reference data to which a 'real' reagent conforms. This is a means to store details which are shared by instances of the same reagent but are supplier and batch independent
+CURRENT: The information on the sample that is used to describe the Material used for a protocol.
+
+Sample.RefSampleSource
+NEW: Defines examples of supplier details for this particular reagent to allow a link to be created to the product data page
+CURRENT: Information to define the RefSample from a particular supplier. The catalogue number and url for the product data page.
+
+Sample.Sample
+NEW: The information on the reagent or sample. The reagent conforms to a particular Reagent reference information. The sample is the container that has been used during an experiment that contains the sample components.
+CURRENT: The information on the sample or reagent. The sample is the container that has been used during an experiment that contains the sample components. The reagent conforms to a particular RefSample
+
+Sample.SampleComponent
+NEW: The information on the reagent or sample component. One component is one element of the contents of the sample or reagent.
+CURRENT: The information on the sample component. One sample component is one element of the contents of the sample.
+
+
+--------------------------------------------------------------------------------
+-- RefContainer package
+--------------------------------------------------------------------------------
+:: New RefLabWare class involved in the link with RefItem
+	+ name
+	+ labWareType
+	+ capacity = number of subunits or volume
+	+ details
+
+:: Remove AbstractRefContainer, RefContainer, AbstractRefHolder & RefHolder
+
+:: Rename RefCrystalContainer to RefCrystalHolder
+
+
+--------------------------------------------------------------------------------
+-- Experiment package
+--------------------------------------------------------------------------------
+:: Remove all subclasses of Experiment
+
+:: in Experiment class
+	+ endDate is mandatory – can’t use status ‘In process’ so do I change it to non mandatory attr?
+
+:: answers
+- is link attribute ‘Method’ for instruments?
+Yes, there is a link between Instrument and Method to record the way for example a Instrument is loaded.
+
+- what is sampleIos – deprecated?
+Yes it is deprecated. There is no need for a SampleIo class because all the output sample belong only to one experiment. For the input one, you need a special class InputSample to specify the sample quantity used by an experiment. There are three classes involved: Experiment, InputSample and Sample.
+
+
+--------------------------------------------------------------------------------
+-- Protocol package
+--------------------------------------------------------------------------------
+:: Need of extra steps in the Protocol package:
+
+(1) To allow recording of a dialysis experiment.
+Similar to FiltrationStep, perhaps this could just be re-named FiltrationOrDialysisStep?
+
+DialysisStep
+	+temperature: Float
+	+tempDisplayUnit: Word
+	+membraneName: Line
+	+membraneCutoff: Float
+	+memCutoffDisplayUnit
+	+method
+extra attributes are below but could they be add and wait steps?
+	+bufferVolume: Float -will need link to material
+	+bufferVolDisplayUnit: Word
+	+bufferChanges: Float
+
+(2) OneShotDisruptor
+The data model Protocols can have French Press or Sonication steps, this is an alternative cell disruption method. May need a new step if there are unique parameters to record. Waiting for details from Scott in Dundee.
+
+
+--------------------------------------------------------------------------------
+-- People package
+--------------------------------------------------------------------------------
+:: Organisation: added attributes
+- type with possible values
+	"home laboratory"
+	"other laboratory"
+	"reagent supplier"
+	"instrument supplier"
+
+- Changed attributes
+CURRENT:
+name         (input box) REQUIRED
+address      (textarea)
+city         (input box)
+country      (input box)
+emailAddress (input box)
+url          (textarea)		text
+
+NEW:
+name         (input box) REQUIRED
+addressLine1 (input box) REQUIRED
+addressLine2 (input box) 
+addressLine3 (input box) 
+addressLine4 (input box) 
+city         (input box) REQUIRED
+postalCode   (input box)
+country      (input box)
+emailAddress (input box)
+url          (input box)	line
+
+Do we really want to store 4 lines for the address or a multiple line field would work?
+
+:: Person
+	+ familyName – contains the mistyping in the help 
+	+ familyTitle – should be the list of predefined values 
+	+ title - should be the list of predefined values = {Mrs, Mr, Dr, Professor}
+
+
+--------------------------------------------------------------------------------
+-- Citation package
+--------------------------------------------------------------------------------
+
+:: Citation
+	+ keywords – in the help text should contain the information about which delimiters users should use. For instance keywords might be the following: Cell division; BarT protein location; BarT function description.
+	+ status – should be list of predefined values 
+	+ casAbstractCode – should contain the example 
+	+ medLineUiCode - should contain the example 
+	+ pubMedId - should contain the example 
+	+ isPrimary  - need more explanation of what it is. It is unclear has it some relation of the user point of view on importance of this citation or not. For instance if I am adding citation for the Target and think that this Citation is the most important one (the primary source of information on this Target) do I need to make it isPrimary=yes? 
+
+
+--------------------------------------------------------------------------------
+-- Taxonomy package
+--------------------------------------------------------------------------------
+:: split NaturalSource into 2 class:
+(1) NaturalSource 
+	+ organismName 
+	+ ncbiTaxonomyId
+	+ scientificName            
+	+ genus               
+	+ species                        
+	+ organismAcronym       
+	+ atccNumber                 
+	+ ictvCode                      
+	+ strain               
+	+ cellLine                       
+	+ cellType
+	+ plasmid                       
+
+(2) Location (or NaturalLocation) as a subclass of NaturalSource
+	+ fraction                        
+	+ cellLocation                
+	+ geneMnemonic            
+	+ organ               
+	+ organelle                     
+	+ tissue               
+	+ variant             
+	+ subVariant                   
+	+ secretion
+
+Remove plasmidDetails and details. 
+
+
+--------------------------------------------------------------------------------
+-- CONTROLLED VOCABULARY ON ENUMERATION LIST
+--------------------------------------------------------------------------------
+There are a number of places in the data model where the value of an attribute usually comes from a list we can pre-define. These lists of pre-defined values should be:
+	- configurable locally
+	- internationalisable
+
+There are 3 options to handle them:
+	- values of such lists are kept in a database table
+	- values are stored in an XML file maybe it is easier for users to customize
+	- they are compiled into the generated code. I don't think it can work for open enumeration. How are you going to add new values to the list?
+
+I am in favour of storing the values of such lists in the database.
+
+:: Sample.RefSample.sampleRole the following is based on Kim's original suggestions and feedback from Steve Prince (MPSI):
+Buffer 
+Nucleic acid purification kits 
+Screen (crystallisation, additive) 
+Stock solution 
+Amphiphiles 
+Antibody 
+Antibiotic 
+Chemical/Biochemical 
+Chromatography 
+Competent cells 
+Culture media (microbial, cell and tissue culture) 
+Detergent 
+Electrophoresis 
+Enzyme (with types) 
+Growth Factor 
+Heavy atom reagents (+stains) 
+Hormone 
+Inhibitor 
+Lipid 
+Marker (DNA ladders, Protein ladders) 
+Microparticle 
+Microscopy 
+Nucleic acid 
+Oligo /Primer 
+Pharmacopeia (?covered in Chemicals/biochemicals) 
+PolyAmino acids (?covered in Chemicals/biochemicals) 
+Radiochemicals 
+Stains and Dyes 
+Substrate 
+Vector 
+Vitamins and Derivatives 
+
+:: RefSampleComponent.MolComponent.componentType (This is already in the issue tracker - defect 37)
+Protein 
+DNA 
+RNA 
+Other Polymer 
+DNA/RNA 
+Non Polymer
+ 
+:: RefSampleComponent.MolComponent.solubilityLevel suggestion are: {'soluble', 'partial', 'insoluble', 'others'}
+
+:: People.Person.familyTitle - should be a list of predefined values title = {Mrs, Mr, Dr, Professor, ...}
+
+:: Sample.Holder.positionsOrder	 - should have some predefined values. The String is probably wrong type for this. 
+
+:: Experiment.InputSample.role - There should be predefined list with possibility to add the new values. 
+
+:: Experiment.Experiment.experimentType - should be a list of predefined values 
+
+:: Experiment.Experiment.status - should be a list of predefined values 
+
+:: Instrument.Instrument.instrumentType - should be predefined list with possibility to add new values. 
+
+:: Citation.Citation.Status – should be list of predefined values 
+
+
+--------------------------------------------------------------------------------
+-- Other open questions
+--------------------------------------------------------------------------------
+:: Target: Request to be able to record if a Target is an orthologue or paralogue of another
+
+:: Workflow: How to link protocol together in order to build a workflow.

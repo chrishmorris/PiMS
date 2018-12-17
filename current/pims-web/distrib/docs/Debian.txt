@@ -1,0 +1,210 @@
+To Install PiMS on Ubuntu 9.(4 and 10) / Debian 5.0
+
+Required RAM memory for machine is at least 1Gb.
+
+--- You need admin access, either via 'root' or via 'sudo'.
+
+cd $HOME
+mkdir -p pims
+cd pims/
+
+--- Install necessary packages:
+For Ubuntu:
+
+    sudo apt-get install sun-java6-jdk sun-java6-plugin postgresql tomcat6 graphviz
+
+For Debian:
+    The Sun Java JDK is available in the Debian Lenny non-free repository, therefore you must modify /etc/apt/sources.list...
+
+        sudo nano /etc/apt/sources.list
+
+    and add non-free to the Debian Lenny repositories:
+
+        deb http://mirrors.kernel.org/debian/ lenny main non-free
+        deb-src http://mirrors.kernel.org/debian/ lenny main non-free
+
+        deb http://security.debian.org/ lenny/updates main non-free
+        deb-src http://security.debian.org/ lenny/updates main non-free
+
+    Run
+
+        sudo apt-get update
+
+    Install the Java JDK as follows:
+
+        sudo apt-get install sun-java6-jdk sun-java6-plugin
+
+    Make it available system wide (need only if you have others *java* flavours):
+
+        update-java-alternatives -s java-6-sun
+        echo 'JAVA_HOME="/usr/lib/jvm/java-6-sun"' | tee -a /etc/environment
+
+    Install others packages for PiMS:
+
+        sudo apt-get install postgresql tomcat6 graphviz
+
+# ----------------------------------------------------------
+#  TOMCAT
+# ----------------------------------------------------------
+
+
+* Usage: sudo /etc/init.d/tomcat6 {start|stop|restart|try-restart|force-reload|status}
+
+--- To deploy Tomcat ---
+
+See Installation.txt
+
+    wget -c http://www.pims-lims.org/download/docs/context.xml.example -O pims.xml
+    # /root/pims.war is not good in Debian/Ubuntu since only root can access this folder
+    sudo mkdir -p /var/pims/uploads; sudo chown tomcat6 /var/pims/uploads
+
+Edit 'pims.xml':
+    <Context docBase="_path_to_/pims.war"
+    (recommended: _path_to_/ = /etc/)
+    ...
+    <Environment name="db.password"   value="_your_password"
+
+Copy 'pims.xml' to /etc/tomcat6/Catalina/localhost/:
+
+  
+    sudo -u tomcat6 cp pims.xml /etc/tomcat6/Catalina/localhost/
+
+--- Defining Users and Access Rights ---
+
+Edit "/etc/tomcat6/tomcat-users.xml" by adding something like this. 
+You can choose the user names:
+  <role rolename="pims-user"/>
+  <role rolename="pims-administrator"/>
+  <role rolename="pims-view"/>
+  <user username="pims" password="_password_" roles="pims-user"/>
+  <user username="guest" password="guest" roles="pims-view"/>
+  <user username="administrator" password="_admin_password_" roles="pims-administrator,pims-user"/>
+
+Note that the webapp folder will be at:
+    /var/lib/tomcat6/webapps/pims/
+and the work folder will be at:
+    /var/cache/tomcat6/Catalina/localhost/pims/    
+
+
+--- Using Security Mode in Tomcat ---
+
+Security Manager for Tamcat is enabled by default in Debian and Ubuntu distributions.
+
+To disable it, edit '/etc/default/tomcat6' and set:
+
+    TOMCAT6_SECURITY=no
+
+To enable PiMS to work with Tomcat in security mode:
+
+Creat a file named '60pims.policy' with following content:
+
+//=== Policy for PiMS ===
+
+
+//mandatory block for tomcat6
+grant codeBase "file:${catalina.base}/webapps/pims/-" {
+        permission java.io.FilePermission ".${file.separator}conf${file.separator}*", "read, write, delete";
+        permission java.io.FilePermission ".${file.separator}conf${file.separator}Hibernate.log.txt", "read, write";
+        permission java.io.FilePermission ".${file.separator}conf${file.separator}pims_log4j.properties", "read";
+        // /var/pims/uploads is the folder defined in pims.xml for 'uploadDirectory'
+        permission java.io.FilePermission "/var/pims/uploads", "read, write";
+        permission java.io.FilePermission "/var/pims/uploads/*", "read, write";
+        permission java.io.FilePermission "<<ALL FILES>>", "execute";
+        permission java.io.FilePermission "${catalina.base}${file.separator}temp${file.separator}*", "read, write";
+        permission java.io.FilePermission "client-config.wsdd", "read, write";
+        permission java.lang.reflect.ReflectPermission "suppressAccessChecks","";
+        permission java.lang.RuntimePermission "accessClassInPackage.org.apache.coyote";
+        permission java.lang.RuntimePermission "accessClassInPackage.org.apache.jasper";
+        permission java.lang.RuntimePermission "accessClassInPackage.org.apache.jasper.security";
+        permission java.lang.RuntimePermission "accessClassInPackage.sun.net.www";
+        permission java.lang.RuntimePermission "accessDeclaredMembers";
+        permission java.lang.RuntimePermission "getClassLoader";
+        permission java.lang.RuntimePermission "getProtectionDomain";
+        permission java.net.SocketPermission "127.0.0.1:5432", "connect, resolve";
+        permission java.util.PropertyPermission "*", "read, write";
+        permission java.util.PropertyPermission "cglib.debugLocation", "read";
+        permission java.util.PropertyPermission "java.io.tmpdir", "read, write";
+        permission java.util.PropertyPermission "net.sf.ehcache.*", "read";
+        permission javax.management.MBeanPermission "*", "*";
+        permission javax.management.MBeanServerPermission "createMBeanServer";
+        permission javax.management.MBeanTrustPermission "register";
+        permission javax.servlet.jsp.JspException "*", "*";
+    };
+
+//end of file
+
+And copied to folder '/etc/tomcat6/policy.d/', e.g.:
+
+    
+    sudo cp 60pims.policy /etc/tomcat6/policy.d/
+
+--- Tweaking Tomcat for PiMS ---
+
+The tools that PiMS uses can fill up Java's "Permanent Generation" of memory.
+Besides Tomcat has a memory leak where large JSP page requests can fill up memory.
+To prevent all that, set in  '/etc/default/tomcat6':
+
+    JAVA_OPTS="-Xmx1024m -enableassertions -server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true"
+    # It does not work, see https://bugs.launchpad.net/ubuntu/+source/tomcat6/+bug/440685
+    # best shot so far is and I assume that Sun Java run in 'server' mode by default:
+    JAVA_OPTS="-Xmx1024m -ea -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true"
+
+--- To setup Tomcat as a Production Server, in order to avoid message in /var/log/tomcat6/catalina.out:
+    "INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path:"
+do this:
+    Edit Tomcat's file '/etc/tomcat6/server.xml' (not necessary in tomcat6).  Remove or comment out the line:
+        <Listener className="org.apache.catalina.core.AprLifecycleListener" />
+
+# ----------------------------------------------------------
+# POSTGRESQL
+# ----------------------------------------------------------
+
+* Depending which Ubuntu or Debian you're using, the default postgresql can be version 8.3 or 8.4
+  Modify below accordingly.
+
+* Usage: sudo /etc/init.d/postgresql-8.X {start|stop|restart|reload|force-reload|status|autovac-start|autovac-stop|autovac-restart}
+
+Edit '/etc/postgresql/8.X/main/pg_hba.conf' and put 'trust' instead of 'ident sameuser' for postgres user in order to enable it.
+
+    sudo /etc/init.d/postgresql-8.X restart
+
+--- To setup postgresql for PiMS:
+
+- Create the database and database users:
+
+    createdb -U postgres --encoding UTF-8 pims
+    createuser -U postgres -P pimsview
+    createuser -U postgres -P pimsupdate
+    createuser -U postgres -P pimsadmin
+
+    All three users only need the default privileges - answer no the three questions asked by createuser (superuser, create databases and create roles).
+
+- Download the database setup file for Postgresql:
+    wget -c  http://www.pims-lims.org/download/V4_2_0/jars/pims-db-withrefdata.sql
+
+- Install the data model and reference data:
+    psql -d pims -U postgres -f pims-db-withrefdata.sql
+
+#################################
+# STARTING PiMS
+#################################
+
+Restart tomcat ('sudo /etc/init.d/tomcat6 restart')
+and go to
+    http://localhost:8080/pims 
+Login as 'administrator', and create user 'pims'
+Password for user 'pims' (and everyone else) is set in tomcat-users.xml
+
+Done!
+
+OBS:
+- PiMS log is written in /var/log/syslog;
+- The $TOMCAT_HOME for Ubuntu is /var/lib/tomcat6/temp/ where ./conf/Hibernate.log.txt
+  and ./conf/pims_log4j.properties would be, but this folder is always recreated *empty*
+  when Tomcat is started. Fortunately, Tomcat Security Manager does not complaim about it,
+  as long as the permissions to ./conf/Hibernate.log.txt and ./conf/pims_log4j.properties
+  are granted;
+- It is possible to readdress ./conf/Hibernate.log.txt in
+  /var/lib/tomcat6/webapps/pims/WEB-INF/classes/pims_log4j.properties to, e.g.,
+  ${catalina.base}/logs/Hibernate.log.txt, modifying the the permission in
+  /etc/tomcat6/policy.d/03catalina.policy

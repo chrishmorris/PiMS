@@ -1,0 +1,167 @@
+<!-- Imports data model jar, runs test cases, and exports jars if successful
+
+The "install" tasks install a new database.
+To use these, the database user name you supply in the Properties file
+must be trusted. This means having an entry in the pg_hba.conf like:
+
+local   all         pimsadmin                         trust
+
+-->
+<project default="jar" name="pims-logic" basedir="."
+	>
+
+    <!-- Properties -->
+    <property file="build.properties"/>
+
+    <!-- log -->
+    <property name="log.dir" location="${basedir}/log" />
+
+    <!-- jars directory -->
+    <property name="pims-logic.file" value="pims-logic.jar" />
+    <property name="jars" value="../jars" />
+
+
+    <!-- java -->
+    <property name="java.src" location="${basedir}/src" />
+    <property name="test.src" location="${basedir}/test" />
+    <property name="classes" location="bin" />
+    <property name="testClasses" location="${basedir}/testClasses" />
+    <property name="lib.path" location="${basedir}/lib" />
+    
+	<taskdef resource="checkstyletask.properties" classpath="${lib.path}/checkstyle-all-4.3.jar"/>
+	
+    <!-- directory which emma report will be written to -->
+    <property name="instr.dir" value="${basedir}/emmainstr" />
+
+
+    <!-- ............................................................ -->
+    <!-- java classpaths.                                             -->
+    <!-- ............................................................ -->
+
+    <!-- First, the classes from JavaSource that Emma will instrument -->
+    <path id="instrument.classpath">
+        <pathelement location="${classes}" />
+    </path>
+
+    <!-- add libraries -->
+    <path id="project.classpath">
+        <path refid="instrument.classpath" />
+
+    	<pathelement location="${basedir}/conf" />
+        
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <!-- add test classes -->
+    <path id="test.classpath">
+        <path refid="project.classpath" />
+        <pathelement location="${testClasses}" />
+    </path>
+    <property name="ant.reuse.loader" value="true" /> 
+
+    <!-- emma -->
+    <path id="emma.lib">
+        <pathelement location="${basedir}/lib/emma.jar" />
+        <pathelement location="${basedir}/lib/emma_ant.jar" />
+    </path>
+    <taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+	
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+    <!-- Compile application   -->
+    <target name="compile" depends="clean" >
+        
+        <javac srcdir="${basedir}/src" destdir="${classes}" target="1.5" source="1.5" debug="on" encoding="UTF-8"
+        >
+            <classpath refid="project.classpath" />
+        </javac>
+    	<!-- note that this does NOT copy from conf/, especially it does not install the license -->
+    </target>
+	
+    <target name="checkstyle" >
+	    <checkstyle config="${checkstyle}"
+	    	maxErrors="15" maxWarnings="1000"
+	    	>
+	    	<fileset dir="${java.src}" includes="**/*.java" excludes="uk/ac/ebi/**" />
+            <classpath refid="project.classpath" />
+	    	<formatter toFile="${instr.dir}/duplicates.txt" />
+	    </checkstyle>
+    </target>
+
+    
+    <!-- ============================================================ -->
+    <!-- Test case tasks.                                             -->
+    <!-- ============================================================ -->
+    <target name="compileTest" depends="compile">
+        <javac srcdir="${test.src}" destdir="${testClasses}" target="1.5" source="1.5" deprecation="false" debug="on" encoding="UTF-8">
+            <classpath refid="test.classpath" />
+        </javac>
+    </target>
+
+    <target name="test" depends="compileTest">
+        <emma enabled="true">
+            <instr instrpathref="instrument.classpath" mode="overwrite" metadatafile="${instr.dir}/metadata.emma" merge="true">
+                <!--
+                    Could have <filter value="${emma.filter}" />
+                -->
+            </instr>
+        </emma>
+        <junit haltonfailure="true" haltonerror="true" fork="true" dir="${basedir}" forkmode="once">
+            <jvmarg value="-server" />
+            <jvmarg value="-enableassertions" />
+            <jvmarg value="-Xms512m" />
+            <jvmarg value="-Xmx512m" />
+            <jvmarg value="-Demma.coverage.out.file=${instr.dir}/coverage.emma" />
+            <jvmarg value="-Demma.coverage.out.merge=false" />
+            <classpath refid="test.classpath" />
+            <formatter type="brief" usefile="false" />
+            <test name="org.pimslims.AllToolsTests" />
+            <sysproperty key="TestingDataPath" value="${data.src}"/>
+        </junit>
+        <emma enabled="true">
+            <report sourcepath="${java.src}" sort="-block,-name,-method,-class" metrics="method:10,block:50,line:50,class:10">
+                <infileset dir="${instr.dir}" includes="*.em, *.ec, *.emma" />
+
+                <!-- for every type of report desired, configure a nested
+		             element; various report parameters
+		             can be inherited from the parent <report>
+		             and individually overridden for each report type:
+		        -->
+                <txt outfile="${instr.dir}/coverage.txt" depth="all" columns="line,name,class,method,block" metrics="method:0,block:0,line:0,class:0" />
+                <html outfile="${instr.dir}/coverage.html" depth="method" columns="name,class,method,block,line" />
+            </report>
+        </emma>
+    </target>
+
+    <target name="jar" depends="compile" description="Make the jar file ">
+        <echo>tar file: ${pims-logic.file}</echo>
+        <jar index="true" destfile="${pims-logic.file}">
+            <fileset dir="${classes}" >
+                    <exclude name="java.util.logging.config.properties" />
+                    <exclude name="Properties" />
+            </fileset>
+        </jar>
+     </target>
+
+    
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+    <!-- Clean temp directories -->
+    <target name="clean">
+        <delete dir="${classes}" />
+        <mkdir dir="${classes}" />
+        <delete dir="${testClasses}" />
+        <mkdir dir="${testClasses}" />
+    </target>
+	
+    <target name="cleanLog" description="Clean log dirrectory.">
+        <delete dir="${log.dir}" />
+        <mkdir dir="${log.dir}" />
+    </target>
+
+    <!-- TODO commit, deploy, install conf/Properties  -->
+</project>

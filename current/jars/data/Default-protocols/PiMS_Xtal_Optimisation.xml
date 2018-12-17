@@ -1,0 +1,19 @@
+<!-- PiMS Crystal Optimization protocol xml as flat file -->
+<protocol name="PiMS Crystal Optimization" objective="Optimization of crystallization screen" creationDate="16-03-05" remarks="Default set of protocols for PiMS" details="Crystallisation of Target Protein" >
+ <experimentType>Crystallogenesis</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Purified protein" name="Purified protein" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Crystal Hits" name="Crystal Hits" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Crystal Hits" name="Crystal Hits" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Protocol Description" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Temperature" parameterType="Float" isMandatory="false" />
+  <parameterDefinition id="3" name="Plate ID or Barcode" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="4" name="Well Number" parameterType="String" isMandatory="false" label="For source of crystal in the initial screen" />
+ </parameterDefinitions>
+
+</protocol>

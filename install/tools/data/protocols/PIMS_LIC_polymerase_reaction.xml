@@ -1,0 +1,24 @@
+<!-- Generic LIC polymerase reaction protocol xml as flat file -->
+<protocol name="PiMS LIC-polymerase reaction" objective="generate vector-compatible S/S overhangs" creationDate="14-11-06" >
+ <experimentType>LIC polymerase reaction</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="mL" refSample="LIC-prepared insert" name="LIC insert" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Insert concentration pmol/ul" parameterType="Float" />
+  <parameterDefinition id="2" name="Incubation conditions" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" unit="L" displayUnit="uL" details="use 0.2 pmol of insert" refSample="PCR Product" name="Insert" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" amount="0.000002" unit="L" displayUnit="uL" refSample="10x T4 polymerase buffer" name="Buffer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleotide" amount="0.000002" unit="L" displayUnit="uL" refSample="dATP 25mM" name="dATP" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000001" unit="L" displayUnit="uL" refSample="DTT 100mM" name="Reducing agent" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solvent" unit="L" displayUnit="uL" details="To 20ul final volume" refSample="Milli-Q water" name="Water" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -polymerase" amount="0.0000004" unit="L" displayUnit="uL" refSample="LIC qualfied T4 Polymerase" name="Polymerase"/>
+ </inputSamples>
+
+</protocol>
+

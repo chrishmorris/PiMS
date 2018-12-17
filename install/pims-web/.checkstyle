@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileset-config file-format-version="1.2.0" simple-config="false">
+    <local-check-config name="PiMS checkstyle rules" location="C:\current\pims-web\conf\checkstyle.xml" type="external" description="">
+        <additional-data name="protect-config-file" value="false"/>
+    </local-check-config>
+    <local-check-config name="SVN Copy PiMS checkstyle rules" location="conf/checkstyle.xml" type="project" description="">
+        <additional-data name="protect-config-file" value="false"/>
+    </local-check-config>
+    <fileset name="all" enabled="true" check-config-name="SVN Copy PiMS checkstyle rules" local="true">
+        <file-match-pattern match-pattern="." include-pattern="true"/>
+    </fileset>
+    <filter name="UnOpenedFiles" enabled="true"/>
+    <filter name="FilesFromPackage" enabled="true">
+        <filter-data value="JavaSource/uk/ac/ebi/webservices"/>
+        <filter-data value="JavaSource/uk/ac/ebi/www"/>
+    </filter>
+    <filter name="NonSrcDirs" enabled="true"/>
+</fileset-config>

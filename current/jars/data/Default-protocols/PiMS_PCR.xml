@@ -1,0 +1,27 @@
+<!-- PiMS default PCR protocol xml as flat file -->
+<protocol name="PiMS PCR" objective="Amplify target DNA" creationDate="03-03-09" remarks="Default set of protocols for PiMS" details="">
+ <experimentType>PCR</experimentType>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000001" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="A. Initial denaturation" label="Initial denaturation conditions" parameterType="String" defaultValue="5 min at 94C" />
+  <parameterDefinition id="2" name="B. Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="C. Thermocycling conditions" label="PCR cycle conditions" parameterType="String"
+  defaultValue="Anneal 30 sec at 60C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="D. Final extension" label="Conditions for the final extension" parameterType="String" defaultValue="2 min at 60C" />
+  <parameterDefinition id="5" name="E. Polymerase" label="Type of polymerase used" parameterType="String" defaultValue="KOD Hot Start DNA Polymerase (Novagen)" />
+  <parameterDefinition id="6" name="F. Comments" label="Any comments about the PCR product" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="7" name="__SCORE" label="PCR Product" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored" />
+ </parameterDefinitions>
+ 
+</protocol>
+

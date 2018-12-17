@@ -1,0 +1,11 @@
+<project name="pims-model-ivy" default="resolve" xmlns:ivy="antlib:org.apache.ivy.ant">
+    <ivy:settings file="ivysettings.xml"/>
+    <!-- ================================= 
+          target: resolve              
+         ================================= -->
+	<setproxy proxyhost="wwwcache.dl.ac.uk" proxyport="8080"/>
+    <target name="resolve" description="retrieve dependencies with ivy">
+    <ivy:retrieve sync="true"  type="jar" 
+        pattern="web/WEB-INF/lib/[artifact]-[revision]-ivy.[type]"/>
+    </target>
+</project>

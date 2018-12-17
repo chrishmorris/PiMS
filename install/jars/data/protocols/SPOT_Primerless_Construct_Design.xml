@@ -1,0 +1,22 @@
+<!-- PiMS Primerless Construct Design protocol as flat file -->
+<protocol name="SPOT Primerless Construct Design" objective="Record the details of a Construct" creationDate="27-11-09" remarks="Default set of protocols for PiMS" 
+details="Suitable for Synthetic genes, historical Constructs and Constructs from other sources -not made in home lab.">
+ <experimentType>SPOTConstructDesign</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Start" label="TODOStart residue in sequence" parameterType="Int" isMandatory="true" />
+  <parameterDefinition id="2" name="End" label="TODOEnd residue in sequence" parameterType="Int" isMandatory="true" />
+  <parameterDefinition id="3" name="Mutations" label="Details of any mutations e.g. E123A" parameterType="String" defaultValue="None (WT)" isMandatory="false" />
+  <parameterDefinition id="4" name="Insertions" label="Details of insertions e.g. E123_G124insQS" parameterType="String" defaultValue="None (WT)" isMandatory="false" />
+  <parameterDefinition id="5" name="Deletions" label="Details of deletions e.g. delta 45-59" parameterType="String" defaultValue="None (WT)" isMandatory="false" />
+  <parameterDefinition id="6" name="5'-site" label="Restriction enzyme site(s) at the 5'-end" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="7" name="3'-site" label="Restriction enzyme site(s) at the 3'-end" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+
+</protocol>

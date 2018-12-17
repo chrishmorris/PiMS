@@ -1,0 +1,22 @@
+
+#
+# Development PiMS database
+#
+db.className = org.postgresql.Driver
+db.url = jdbc:postgresql://localhost/pims
+db.name = pims
+db.username = postgres
+db.password = postgres
+
+#
+# Needed for connecting from outside Diamond.
+# Within Diamond, no password is needed.
+#
+diamond.fedid=ejd53
+diamond.password=!abc12345"
+
+#
+# Permissions to assign to "Visit" UserGroups
+# on LabNotebooks for protein acronyms.
+# Possible: create,read,update,delete,unlock
+diamond.visitpermissions=read,update

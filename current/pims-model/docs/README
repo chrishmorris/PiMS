@@ -1,0 +1,92 @@
+/*
+ * Created on 2005-07-13
+ * Updated on 2009-08-26
+ *
+ * @author Anne Pajon, pajon@ebi.ac.uk
+ * 
+ * Copyright (C) 2005
+ * EMBL - European Bioinformatics Institute - MSD Group                
+ * Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, UK       
+ */
+
+--------------------------------------------------------------------------------
+INSTALL A NEW DATA MODEL
+--------------------------------------------------------------------------------
+
+(0) CHECKOUT the project https://www.pims-lims.org/svn/pims/current/
+from pims subversion repository and go to pims-model/ directory.
+
+(1) You will need to install these TOOLS
+    - ant
+    - cvs
+    - svn
+    - postgresql
+    - ObjectAid elcipse plugin [http://www.objectaid.com/]
+    - Graphiz [http://www.graphviz.org/]
+    
+    For the build file to work, you need to have 
+    cvs, postgresql/bin on the path. 
+    For windows users, here's a way to set it up. C:\autoexec.bat is currently:
+
+	set ANT_HOME=C:\apache-ant-1.6.2
+	set JAVA_HOME=E:\Program Files\Java\jdk1.5.0_06\
+	set PATH=%JAVA_HOME%\bin;%ANT_HOME%\bin;C:\Program Files\unxUtils\usr\local\wbin;
+
+	If you prefer to point and click there are instructions at
+	http://www.cs.ucsb.edu/~teliot/Path_and_Classpath.htm
+
+(2) CREATE & CONFIGURE 
+
+  - copy build.properties.sample into build.properties
+  
+  	The dbuserid is the database user for creating database.
+	This user must have no password, because of limitations in Ant and postgresql.
+	For security, this user should only be able to connect from localhost. 
+	This needs a line in pg_hba.conf like:
+	local    all         install         127.0.0.1/32      trust
+  
+  - copy conf/Properties.post into conf/Properties
+  
+  - Configure the database
+    
+  
+(3) RUN ANT (main target)
+
+  ant installDatabase
+  ant test
+  ant installDoc
+
+--------------------------------------------------------------------------------
+DATA MODEL CHANGE
+--------------------------------------------------------------------------------
+
+(1) Document changes
+  docs/model-changes/YYYYMM-vXX-vY_Y/Changes-vXX.txt
+  
+(2) Implement changes into org.pimslims.model
+
+(3) Update release number
+  - in build.properties change pimsrelease number if necessary
+  - in /pims-model/src/java/org/pimslims/upgrader/RevisionNumber.java
+
+(4) Create and install new database 
+  > ant installDatabase
+
+(5) ant test 
+  or run test cases in eclipse pims-model/src/test/org/pimslims/AllModelTests.java
+
+(6) Update UML class diagrams
+  save new diagrams as *.png files
+  
+(7) Generate documentation
+  > ant installDoc
+  view it at /pims-model/docs/index.html
+  check for database anomalies at /pims-model/docs/dbdoc/anomalies.html
+  
+(8) Publish jar and sql into jars project
+  > ant copyFilesToJars
+
+
+Compare databases
+  * in SQLDeveloper (http://sqldeveloper.solyp.com/)
+  * in Db Solo 2.2 (http://www.dbsolo.com/)

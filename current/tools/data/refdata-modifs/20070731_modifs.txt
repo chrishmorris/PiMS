@@ -1,0 +1,15 @@
+Protocols
+  Added: new protocols from Glasgow.
+    data/Glasgow/protocols/*
+  todo: Check all protocols to make use of Recombinant Cells (with the target) and Cell Line (cell without target)
+  todo: GLASGOW_Growth_Conditions = expression experiement - to compare with SSPF & Oxford
+        => make it the default std PiMS expression protocol
+  todo: GLASGOW_Membrane_Preparation = lysis - to compare with other lysis protocols
+
+SampleCats.csv
+  Added: default,Enzyme -protease, Protease enzyme e.g. TEV
+  Added: default,Membrane,
+  Added: default,Solubilised Membrane,
+  Added: default,Recombinant Cells,Cells with Target
+  Modified: old: default,Cell,"Cell or cells: Bacterial, Yeast, Eukaryotic, etc."
+            new: default,Cell Line,"Cell or cells: Bacterial, Yeast, Eukaryotic, etc."

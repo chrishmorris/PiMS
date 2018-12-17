@@ -1,0 +1,175 @@
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by L_L (L_L) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:process="http://model.ehtpx.ac.uk" targetNamespace="http://model.ehtpx.ac.uk" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ProcessAdmin" type="process:ProcessAdmin"/>
+	<xs:complexType name="ProcessAdmin">
+		<xs:sequence>
+			<!-- user name is again not that useful -->
+			<xs:element name="username" type="xs:string"/>
+			<!-- password - not of much use in reality -->
+			<xs:element name="password" type="xs:string"/>
+			<!-- the user's uuid - this is important and will be needed as a
+     critical part of the security model -->
+			<xs:element name="user_uuid" type="xs:string"/>
+			<!-- email address of our user -->
+			<xs:element name="email" type="xs:string"/>
+			<!-- project name and uuid - again not really used but nice for
+     archiving -->
+			<xs:element name="project_name" type="xs:string"/>
+			<xs:element name="project_uuid" type="xs:string"/>
+			<!-- the uuid of the current sequence of operations - critical if you 
+     want "B" to follow "A" -->
+			<xs:element name="sequence_uuid" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- A generic status object - for returning from services for fetching 
+     results, including an optional job UUID if a process has just
+     been started -->
+	<xs:element name="Status" type="process:Status"/>
+	<xs:complexType name="Status">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="message" type="xs:string"/>
+			<xs:element name="job_uuid" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- crystallographic unit cell 
+     a, b, c angstroms
+     alpha, beta, gamma degrees -->
+	<xs:complexType name="Cell">
+		<xs:sequence>
+			<xs:element name="a" type="xs:double"/>
+			<xs:element name="alpha" type="xs:double"/>
+			<xs:element name="b" type="xs:double"/>
+			<xs:element name="beta" type="xs:double"/>
+			<xs:element name="c" type="xs:double"/>
+			<xs:element name="gamma" type="xs:double"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- a description of the lattice of the crystal - defined by the 
+     assigned spacegroup, the unit cell and the mosaic spread -->
+	<xs:complexType name="CrystalLattice">
+		<xs:sequence>
+			<xs:element name="cell" type="process:Cell"/>
+			<xs:element name="mosaic" type="xs:double"/>
+			<xs:element name="spacegroup_name" type="xs:string"/>
+			<xs:element name="spacegroup_number" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ImageID">
+		<xs:sequence>
+			<xs:element name="image" type="xs:string" minOccurs="0"/>
+			<xs:element name="template" type="xs:string" minOccurs="0"/>
+			<xs:element name="directory" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- all of the results from indexing an image -->
+	<xs:element name="IndexOutput" type="process:IndexOutput"/>
+	<xs:complexType name="IndexOutput">
+		<xs:sequence>
+			<xs:element name="crystal_lattice" type="process:CrystalLattice"/>
+			<xs:element name="resolution" type="xs:double"/>
+			<xs:element name="status" type="process:Status"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StrategySweep">
+		<xs:sequence>
+			<xs:element name="score" type="xs:double"/>
+			<xs:element name="anomalous" type="xs:boolean"/>
+			<xs:element name="completeness" type="xs:double"/>
+			<xs:element name="exposure_time" type="xs:double"/>
+			<xs:element name="multiplicity" type="xs:double"/>
+			<xs:element name="i_over_sigma" type="xs:double"/>
+			<xs:element name="oscillation_width" type="xs:double"/>
+			<xs:element name="phi_start" type="xs:double"/>
+			<xs:element name="phi_end" type="xs:double"/>
+			<xs:element name="resolution" type="xs:double"/>
+			<xs:element name="r_merge" type="xs:double"/>
+			<!-- xs:element name="spacegroup" type="xs:string"/ -->
+			<xs:element name="overloads" type="xs:double"/>
+			<xs:element name="max_overloads" type="xs:double"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="StrategyOutput" type="process:StrategyOutput"/>
+	<xs:complexType name="StrategyOutput">
+		<xs:sequence>
+			<xs:element name="strategy_sweep" type="process:StrategySweep"/>
+			<xs:element name="status" type="process:Status"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ScoreOutput" type="process:ScoreOutput"/>
+	<xs:complexType name="ScoreOutput">
+		<xs:sequence>
+			<xs:element name="score" type="xs:double"/>
+			<xs:element name="status" type="process:Status"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="StrategyInput" type="process:StrategyInput"/>
+	<xs:complexType name="StrategyInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="anomalous" type="xs:boolean"/>
+			<xs:element name="completeness" type="xs:double"/>
+			<xs:element name="multiplicity" type="xs:double"/>
+			<xs:element name="image_id" type="process:ImageID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ScoreInput" type="process:ScoreInput"/>
+	<xs:complexType name="ScoreInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="image_id" type="process:ImageID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="IndexInput" type="process:IndexInput"/>
+	<xs:complexType name="IndexInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="image_id" type="process:ImageID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- this is for getting the results of the above IndexInput -->
+	<!-- note that this is (GetIndex) Input -->
+	<xs:element name="GetIndexInput" type="process:GetIndexInput"/>
+	<xs:complexType name="GetIndexInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="job_uuid" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="GetStrategyInput" type="process:GetStrategyInput"/>
+	<xs:complexType name="GetStrategyInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="job_uuid" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="GetScoreInput" type="process:GetScoreInput"/>
+	<xs:complexType name="GetScoreInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="job_uuid" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="IntegrateScaleInput" type="process:IntegrateScaleInput"/>
+	<xs:complexType name="IntegrateScaleInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="image_id" type="process:ImageID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="GetIntegrateScaleInput" type="process:GetIntegrateScaleInput"/>
+	<xs:complexType name="GetIntegrateScaleInput">
+		<xs:sequence>
+			<xs:element name="process_admin" type="process:ProcessAdmin"/>
+			<xs:element name="job_uuid" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="IntegrateScaleOutput" type="process:IntegrateScaleOutput"/>
+	<xs:complexType name="IntegrateScaleOutput">
+		<xs:sequence>
+			<xs:element name="status" type="process:Status"/>
+			<xs:element name="log_file_url" type="xs:string" minOccurs="0"/>
+			<xs:element name="mtz_file_url" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

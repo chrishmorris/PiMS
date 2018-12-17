@@ -1,0 +1,418 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.sample.AbstractSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/AbstractSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="385" y="83" width="-1" height="-1"/>  
+  </class>  
+  
+  <!-- obsolete -->
+  <class language="java" name="org.pimslims.model.sample.CrystalSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/CrystalSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="704" y="926" width="-1" height="-1"/>  
+  </class> 
+   
+  <class language="java" name="org.pimslims.model.sample.RefSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/RefSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="837" y="256" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.RefSampleSource" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/RefSampleSource.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="809" y="68" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.Sample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="478" y="632" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.SampleCategory" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/SampleCategory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="12" y="81" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.RefSamplePosition" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/RefSamplePosition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="835" y="420" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.AbstractComponent" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/AbstractComponent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="-53" y="598" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HazardPhrase" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HazardPhrase.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="629" y="56" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.RefHolder" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1082" y="300" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.Organisation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Organisation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1114" y="106" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.OutputSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/OutputSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="850" y="571" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.InputSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/InputSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="848" y="744" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.Person" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="-49" y="809" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.crystallization.Image" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="474" y="950" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.Holder" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="590" y="291" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.crystallization.DropAnnotation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="196" y="936" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.ResearchObjectiveElement" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="-104" y="338" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.SampleComponent" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/SampleComponent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="239" y="357" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.RefSamplePosition" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefSamplePosition.java" binary="false">      
+      <attribute name="refHolder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false">      
+      <attribute name="refSamplePositions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.SampleComponent" 
+      file="/pims-model/src/java/org/pimslims/model/sample/SampleComponent.java" binary="false">      
+      <attribute name="researchObjectiveElement"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="sampleComponents"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.sample.AbstractSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/AbstractSample.java" binary="false">      
+      <attribute name="hazardPhrases"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.HazardPhrase" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HazardPhrase.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.sample.RefSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSample.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.sample.AbstractSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/AbstractSample.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.sample.CrystalSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/CrystalSample.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.RefSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSample.java" binary="false">      
+      <attribute name="refSamplePositions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefSamplePosition" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefSamplePosition.java" binary="false">      
+      <attribute name="refSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.Image" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false">      
+      <attribute name="dropAnnotations"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.crystallization.DropAnnotation" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false">      
+      <attribute name="image"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.Image" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="images"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="assignTo"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false">      
+      <attribute name="samples"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="refSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.RefSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSample.java" binary="false">      
+      <attribute name="conformings"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.InputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/InputSample.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="inputSamples"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.SampleComponent" 
+      file="/pims-model/src/java/org/pimslims/model/sample/SampleComponent.java" binary="false">      
+      <attribute name="container"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.SampleComponent" 
+      file="/pims-model/src/java/org/pimslims/model/sample/SampleComponent.java" binary="false">      
+      <attribute name="contents"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="outputSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.OutputSample" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/OutputSample.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.sample.AbstractSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/AbstractSample.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.DropAnnotation" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="dropAnnotations"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.sample.RefSampleSource" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSampleSource.java" binary="false">      
+      <attribute name="supplier"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Organisation" 
+      file="/pims-model/src/java/org/pimslims/model/people/Organisation.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false">      
+      <attribute name="samples"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="holder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.RefSampleSource" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSampleSource.java" binary="false">      
+      <attribute name="refSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.RefSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSample.java" binary="false">      
+      <attribute name="refSampleSources"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.sample.AbstractSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/AbstractSample.java" binary="false">      
+      <attribute name="sampleCategories"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.SampleCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/SampleCategory.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.RefSampleSource" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSampleSource.java" binary="false">      
+      <attribute name="refHolder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false">      
+      <attribute name="refSampleSources"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.sample.SampleComponent" 
+      file="/pims-model/src/java/org/pimslims/model/sample/SampleComponent.java" binary="false">      
+      <attribute name="refComponent"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.AbstractComponent" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/AbstractComponent.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.AbstractSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/AbstractSample.java" binary="false">      
+      <attribute name="sampleComponents"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.SampleComponent" 
+      file="/pims-model/src/java/org/pimslims/model/sample/SampleComponent.java" binary="false">      
+      <attribute name="abstractSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>
+</class-diagram>

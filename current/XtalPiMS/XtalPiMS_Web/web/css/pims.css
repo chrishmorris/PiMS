@@ -1,0 +1,70 @@
+/* suspected obsolete */
+div.collapsibleBox_opened,div.collapsibleBox_fixedopen,div.collapsibleBox_closed {
+    border: 1px solid #000066;
+    margin-bottom: 0.5em;
+    background-color: #000066;
+    -moz-border-radius: 0.5em
+}
+
+div.collapsibleBox_head {
+    background-color: #000066;
+    color: #FFFFFF
+}
+
+div.collapsibleBox_opened div.collapsibleBox_head {
+    -moz-border-radius: 0.5em 0.5em 0 0;
+}
+
+div.collapsibleBox_fixedopen div.collapsibleBox_head {
+    -moz-border-radius: 0.5em 0.5em 0 0;
+}
+
+div.collapsibleBox_closed div.collapsibleBox_head {
+    -moz-border-radius: 0.5em
+}
+
+div.collapsibleBox_head h3 {
+    padding: 0 0 0 1.5em;
+    margin: 0 1em 0 0em;
+    color: #FFFFFF;
+    display: inline;
+    background-repeat: no-repeat;
+    background-position: 0.25em 50%
+}
+
+div.collapsibleBox_head img.icon {
+    text-decoration: none;
+}
+
+div.collapsibleBox_opened div.collapsibleBox_head h3 {
+    background-image: url("../images/minus.png");
+    cursor: pointer;
+}
+
+div.collapsibleBox_closed div.collapsibleBox_head h3 {
+    background-image: url("../images/plus.png");
+    cursor: pointer;
+}
+
+div.collapsibleBox_fixedopen div.collapsibleBox_head h3 {
+    background-image: none;
+    cursor: default
+}
+
+div.collapsibleBox_body {
+    background-color: white;
+    color: #000066;
+    border-bottom: 1px solid #000066;
+    margin-bottom: 0.1em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+
+div.collapsibleBox_closed div.collapsibleBox_body {
+    display: none;
+}
+
+.collapsibleBox_content {
+    border-top: 1px solid #000066;
+    background-color: transparent;
+}

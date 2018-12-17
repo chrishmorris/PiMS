@@ -1,0 +1,17 @@
+Data
+Chemicals.csv
+Added: sodium phosphate dibasic
+sodium phosphate dibasic,sec-Sodium phosphate; Disodium hydrogen phosphate; Disodium phosphate; Sodium hydrogenphosphate,"Salt,Buffering agent",Na2HPO4,7558-79-4,141.96,MolComp,other,Y,,,1,,,,Sodium phosphate dibasic,Chemical/Biochemical
+
+ExperimentTypes.csv
+Added: Membrane preparation
+default,Membrane preparation,,Purification,Preparation of cell membranes
+
+StatusToExperimentTypes.csv
+Updated: added data for Membrane preparation
+Membrane preparation,Other
+
+ComponentCats.csv
+Added: Forward Extension & Reverse Extension
+default,Forward Extension,PIMS default category
+default,Reverse Extension,PIMS default category

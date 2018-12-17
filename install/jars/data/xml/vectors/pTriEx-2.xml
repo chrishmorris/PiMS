@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pTriEx-2 Vector</name>
+    <details>N-terminal fusion options: His-Tag, S-Tag.
+        C-terminal fusion options: HSV-Tag, His-Tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="70826-3"
+        dataPageUrl="http://www.merckbiosciences.co.uk/product/70826"
+        supplier="Novagen" />
+    <sampleComponent name="pTriEx-2" componentCategory="Vector"
+        details="5457bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Multisystem Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="4538"
+            endSeq="5395" />
+        <promoterDetails name="Chicken actin Promoter"
+            startSeq="1449" endSeq="1726" />
+        <promoterDetails name="T7 Promoter" startSeq="2150"
+            endSeq="2166" />
+        <promoterDetails name="p10 Promoter" startSeq="2205"
+            endSeq="2318" />
+        <markerDetails name="N-term His Tag coding sequence"
+            startSeq="2339" endSeq="2356" details="HHHHHH" featureType="Tag" />
+        <markerDetails name="N-term S-Tag coding sequence"
+            startSeq="2366" endSeq="2410" details="KETAAAKPGAQHMDS"
+            featureType="Tag" />
+        <markerDetails name="Multiple Cloning sites SmaI-DraIII"
+            details="SmaI-PshAI-BseRI-EcoRV-SacI-BamHI-EcoRI-BglII-AscI-PstI-Sse8387I-PinAI-KpnI-NspV-HindIII-NotI-PvuII-Bst1107I-PmlI-XhoI-DraIII"
+            startSeq="2333" endSeq="2668" featureType="MCS" />
+        <markerDetails name="NcoI cloning site for native expression -no tag"
+            details="C|CATGG" startSeq="2301" endSeq="2306" featureType="Cloning site" />
+        <markerDetails
+            name="PshAI cloning site for cleavable enterokinase tag"
+            details="GACAA|GAGTC" startSeq="2471" endSeq="2480"
+            featureType="Cloning site" />
+        <markerDetails name="SmaI cloning site for cleavable thrombin tag"
+            details="CCC|GGG" startSeq="2433" endSeq="2438" featureType="Cloning site" />
+        <markerDetails name="C-term HSV-Tag coding sequence"
+            startSeq="2597" endSeq="2632"
+            details="SerGlnProGluLeuAlaProGluAspProGluAsp" featureType="Tag" />
+        <markerDetails name="C-term His-Tag coding sequence"
+            startSeq="2639" endSeq="2662" details="HHHHHH" featureType="Tag" />
+        <markerDetails name="Thrombin cleavage site"
+            details="LVPA|GS" featureType="cleavage site" status="not cleaved" />
+        <markerDetails name="Enterokinase cleavage site"
+            details="DDDDK|" featureType="cleavage site" status="not cleaved" />
+        <markerDetails name="pUC origin" startSeq="3936"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression: NovaBlue[TM]; Expression: NovaBlue[TM] plus bacteriophage CE6, 
+            Origami[TM](DE3)pLacI, Origami 2(DE3)pLacI, Origami B(DE3)pLacI, Rosetta[TM](DE3)pLacI, Rosetta 2(DE3)pLacI,
+            Rosetta-gami[TM](DE3)pLacI, Rosetta-gami 2(DE3)pLacI, Rosetta-gami B(DE3)pLacI, RosettaBlue(DE3)pLacI, Tuner[TM](DE3)pLacI, 
+            TriEx Sf9, BHK"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

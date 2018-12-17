@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Do or don't automatically join one-to-one mappings with outer-join="auto" -->
+		<property name="hibernate.use_outer_join">true</property>
+		<!-- The driver to use to talk to the database -->
+		<property name="hibernate.connection.driver_class">
+			<!-- net.sourceforge.jtds.jdbc.Driver  -->
+            <!-- com.microsoft.sqlserver.jdbc.SQLServerDriver -->
+            org.postgresql.Driver
+		</property>
+		<!-- The URL used to locate the database -->
+		<property name="hibernate.connection.url">
+            <!-- jdbc:jtds:sqlserver://cletus:2433/latest_targets  -->
+            jdbc:postgresql://localhost/optic<!--  jdbc:sqlserver://cletus\latest_targets:2433  -->
+		</property>
+		<!-- Password to use when connecting to the database -->
+		<property name="hibernate.connection.password">sm1p<!--S18qiagen4 --></property>
+		<!-- Username to use when connecting to the database -->
+		<property name="hibernate.connection.username">pimsadmin<!--hibernate_user--></property>
+		<!-- Use thread for simple applications and 'jta' when a transaction manager is available. NB 'jta' requires lots of other settings too -->
+		
+		<!-- <property name="hibernate.current_session_context_class">thread</property> -->
+		
+		<!-- Dialect to use when constructing SQL statements -->
+				<property name="hibernate.dialect">
+			<!-- Incomplete for our purposes org.hibernate.dialect.SQLServerDialect -->
+			org.hibernate.dialect.PostgreSQLDialect<!--uk.ac.ox.oppf.optic.MySQLServerDialect-->
+		</property>
+		
+		<!-- Set to validate to check the schema on start-up - NB COMMENT OUT IN PRODUCTION VERSION! or set to "none" -->
+		<property name="hibernate.hbm2ddl.auto">none</property>
+		
+		<!-- Log the SQL statements. Moderately informative -->
+		<property name="hibernate.show_sql">false</property>
+		<!-- Transaction factory class to use with the thread current session context class defined above -->
+		<property name="hibernate.transaction.factory_class">
+			org.hibernate.transaction.JDBCTransactionFactory
+		</property>
+		<property name="hibernate.javassist.use_reflection_optimizer">false</property>
+		 
+        <!-- Use the C3P0 connection pool provider 
+        <property name="hibernate.c3p0.min_size">1</property>
+        <property name="hibernate.c3p0.max_size">10</property>
+        <property name="hibernate.c3p0.timeout">20</property>
+        <property name="hibernate.c3p0.max_statements">5</property>
+        <property name="hibernate.c3p0.idle_test_period">1</property> -->
+        
+		<!-- Mapping files for tables -->
+		<mapping resource="uk/ac/ox/oppf/optic/model/Annotation.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/AnnotationType.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/AnthraxTribe.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/BaseContent.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/BindBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/CandidateRelationship.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/CellularLocation.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Codon.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Complex.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Construct.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ConstructMilestone.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ConstructMilestoneFunder.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ConstructMilestoneLaboratory.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ConstructMilestonePerson.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ConstructMilestoneRemark.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Dtproperty.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/EmailsSent.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Expression.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Funder.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/FwdTag.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/GenbankInfo.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/GroupInfo.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Journal.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Laboratory.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/MgcBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Milestone.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/MouseMgcBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/MouseProteomeBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Netngly.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Netogly.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/NuclearSignal.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Oppf.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/OpticGroup.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/PdbBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Person.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/PondrResult.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Privilege.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Project.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ProjectMid.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ProjectSpineWp.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ProjectTop.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Protein.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ProteinCalculator.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ProteinFunction.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/PsiBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Reference.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/RevTag.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/RonnResult.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/RpsBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ScopBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/SecondaryStructure.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/ShortName.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/SignalP.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Species.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/SpineWp.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/SwissprotBlast.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/TargetAccess.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Targetdb.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/TargetProject.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Transmembrane.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Vector.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/VizOpticDetail.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/VizSpecies.hbm.xml" />
+		
+		<!-- Views -->
+		<!--
+		<mapping resource="uk/ac/ox/oppf/optic/model/AllTargetsView.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/AllTargetsViewAnthrax.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/AllTargetsViewNew.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/AllTargetsViewOld.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/AllTargetsViewSimple.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/PublicSpineProgressView.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Sysconstraint.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/Syssegment.hbm.xml" />
+		<mapping resource="uk/ac/ox/oppf/optic/model/VizierTarget.hbm.xml" />
+		-->
+	</session-factory>
+</hibernate-configuration>

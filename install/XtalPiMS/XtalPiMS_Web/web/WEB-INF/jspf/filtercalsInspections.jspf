@@ -1,0 +1,2 @@
+<div style="position:absolute;z-index:105;display:none;font-size:70%;background-color:white;" id="i_inspectionDateStartContainer" ></div>
+<div style="position:absolute;z-index:106;display:none;font-size:70%;background-color:white;" id="i_inspectionDateEndContainer"></div>

@@ -1,0 +1,126 @@
+USING SCORE PARAMETERS IN PROTOCOLS
+
+PiMS supports scoring of experiments, by means of specially-named protocol parameters. It also
+allows you to associate colours and icons with those scores, making it very easy to get an
+overview of a plate experiment's success (or otherwise).
+
+Because these score parameters are defined at the protocol level, you can have a different scoring
+system for each stage of your pipeline - even for different ways of doing the same stage, if you
+feel the need.
+
+Future versions of PiMS will have a better user interface for making score parameters, as well as 
+the ability to optimise from several parallel plate experiments based on scores.
+
+Until this improved interface is available, please follow this guide to creating score parameters 
+on your protocols. Note that each protocol may have at most one score parameter.
+
+----
+
+Create a new text parameter.
+
+----
+
+
+In the "Name" field, enter a name beginning with two underscore characters. This name must contain 
+no spaces or other punctuation, and the first character after the underscores must be a letter, not
+a number. For example:
+
+__score
+__expressionScore
+
+----
+
+In the "Description" field, enter the name that you want to be shown to the user, e.g.,
+
+Score
+Expression score
+
+----
+
+
+In "Default value", enter:
+
+unscored
+
+----
+
+
+In "Possible values", enter "unscored" and each possible score, in order from worst
+to best, separated by semicolons. For example:
+
+unscored;No;Maybe;Yes
+unscored;Terrible;Bad;Average;OK;Great
+
+NB The order is CRITICAL - this is the only way PiMS can know that "OK" is better than
+   "Terrible" when doing automated tasks that are based on the score.
+
+----
+
+
+Specify the options at the bottom of the form as follows:
+
+
+Must a value always be entered for this parameter?
+Yes
+
+Is this a result parameter?
+Yes
+
+Is this a group level parameter?
+No 
+
+----
+
+If you want to associate colours and icons with the new score parameter, this is done by editing
+CSS and by creating icons. 
+
+PiMS ships with CSS and icons already made for a parameter called __score, with three values 
+(e.g., "No", "Maybe", "Yes"). Use this as an example for setting up your own scoring system.
+
+
+ICONS
+
+Icons for scores should be placed in this directory:
+
+/skins/default/images/icons/scores/
+
+They should be 16x16 pixels or less (not too much less!), and ideally in PNG format. We recommend that 
+the icons have a transparent background, to allow any colours you associate with the score to show through.
+
+The name of the icons should be the name of the parameter (minus the leading underscores), followed by a
+number. For "unscored", this number is zero - in practice, you may not have an icon for "unscored". For 
+the next icon (which should be for the worst score, remembering that scores are ordered worst to best),
+this number is 1; the next-worst is 2, and so on. Lastly, the appropriate extension for the file type -
+we recommend PNG images, so ".png".
+
+Example: For a parameter called __expressionScore, with "unscored", "None", "Poor", "OK", and "Fantastic":
+
+expressionScore0.png - unscored (you probably don't want to bother with an icon)
+expressionScore1.png - None (maybe a very grumpy face)
+expressionScore2.png - Poor (sad face)
+expressionScore3.png - OK (happy face)
+expressionScore4.png - Fantastic (very happy face)
+
+
+CSS
+
+For your icons to show up in a plate experiment, you need to add some CSS rules to PiMS. At the same time, you
+can also specify background colours to further highlight the scores.
+
+There is a stylesheet dedicated to scores, located at:
+
+/skins/default/css/plates/scores.dcss
+
+CSS classes are already defined for the default "__score" parameter, as follows. You may want to cut/paste this
+and edit the copy for your new score:
+
+.score0 {  } /* unscored, no style */
+.score1 { background-image:url(${pageContext.request.contextPath}/skins/default/images/icons/scores/score1.png); background-color:#f99; }
+.score2 { background-image:url(${pageContext.request.contextPath}/skins/default/images/icons/scores/score2.png); background-color:#ff9; }
+.score3 { background-image:url(${pageContext.request.contextPath}/skins/default/images/icons/scores/score3.png); background-color:#9f9; }
+
+Create a CSS class for each score. The name of the class should be the name of the parameter, with
+the double underscore removed, followed by a number. For the first, which should be "unscored",
+this is zero. The number increases by one with each subsequent score - remember that scores should
+be ordered worst-first.
+

@@ -1,0 +1,25 @@
+/* xtalpims */
+
+.headerClass {
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	font-size: smaller;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	padding-top: 0.25em;
+	-moz-border-radius: 0 1em 0 0;
+	border: 2px solid #000066;
+	color: #ffffff;
+	background-color: #000066;
+}
+
+.bodyClass {
+	font-family: arial;
+	font-size: 10pt;
+	overflow: auto;
+	padding: 0.25em 0.5em;
+	border: 2px solid #000066;
+	color: #000066;
+	background-color: #ccccff;
+	-moz-border-radius: 0 0 0 1em;
+}

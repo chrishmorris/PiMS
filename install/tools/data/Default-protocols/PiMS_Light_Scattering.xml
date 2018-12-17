@@ -1,0 +1,17 @@
+<!-- PIMS Dynamic Light Scattering protocol xml as flat file -->
+<protocol name="PiMS Dynamic Light Scattering" objective="Characterisation of Target Protein" creationDate="11-03-05" remarks="Default set of protocols for PiMS" details="Characterisation of Target Protein" >
+ <experimentType>Light scattering</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Output Sample" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="DLS Trace" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Comments" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>
+

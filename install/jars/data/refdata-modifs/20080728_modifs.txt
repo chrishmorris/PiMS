@@ -1,0 +1,2 @@
+- added to SampleCats.csv "Affinity Resin"
+- added to ExperimentTypes.csv "Cleavage"

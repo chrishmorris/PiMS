@@ -1,0 +1,832 @@
+ <screen>
+  <screenName>Newcastle York screen</screenName>
+  <screenSupplier>Molecular Dimensions</screenSupplier>
+  <screenCatNum></screenCatNum>
+  <screenDetails>65 conditions making up the JCSG screen, the most successful solutions crystallizing T. maritima proteins after sampling various commercially available sparse matrix and grid screens. The remaining solutions up to 96 are various CSS1 and 2 conditions plus buffers chosen by Rick Lewis from his YSBL days. In the York version of this screen Peg2KMME is substituted for Peg 3350 where identical to Peg-ion screen 1 conditions. The screen could still be developed further as there are various conditions identical to several present in the H1 and 2 and AS screens</screenDetails>
+  <screenReference>Page et al, Acta Cryst (2003), D59, 1028-1037</screenReference>
+  <screenNumberOfSolutions>96</screenNumberOfSolutions>
+  <solutions>
+   <solution>
+    <solutionId>1</solutionId>    
+    <localNum>A01</localNum>
+    <components>
+     <component name="Sodium acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="5.1" />
+     <component name="Lithium sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 400" type="precipitant" concentration="50.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2</solutionId>    
+    <localNum>A02</localNum>
+    <components>
+     <component name="Sodium Citrate" type="buffer" concentration="0.1" concentrationUnits="M" pH="5.6" />
+     <component name="Polyethylene glycol 3000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>3</solutionId>    
+    <localNum>A03</localNum>
+    <components>
+     <component name="di-Ammonium Hydrogen Citrate" type="buffer" concentration="0.2" concentrationUnits="M" pH="5.0" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>4</solutionId>    
+    <localNum>A04</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Calcium Chloride" type="salt" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="30.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>5</solutionId>    
+    <localNum>A05</localNum>
+    <components>
+     <component name="Magnesium Formate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>6</solutionId>    
+    <localNum>A06</localNum>
+    <components>
+     <component name="Citrate-Phoshpate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.2" checkComposition="Check buffer formulation" />
+     <component name="Lithium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>7</solutionId>    
+    <localNum>A07</localNum>
+    <components>
+     <component name="CHES" type="buffer" concentration="0.1" concentrationUnits="M" pH="9.5" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>8</solutionId>    
+    <localNum>A08</localNum>
+    <components>
+     <component name="Ammonium Formate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>9</solutionId>    
+    <localNum>A09</localNum>
+    <components>
+     <component name="Ammonium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>10</solutionId>    
+    <localNum>A10</localNum>
+    <components>
+     <component name="Potasium Formate" type="salt" concentration="0.2" concentrationUnits="M" pH="7.3" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>11</solutionId>    
+    <localNum>A11</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Ammonium di-Hydrogen Phosphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="50.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>12</solutionId>    
+    <localNum>A12</localNum>
+    <components>
+     <component name="Potassium Nitrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>13</solutionId>
+    <localNum>B01</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.0" />
+     <component name="Ammonium Sulphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>14</solutionId>    
+    <localNum>B02</localNum>
+    <components>    
+     <component name="Sodium Thiocyanate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>15</solutionId>
+    <localNum>B03</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9.0" />
+     <component name="Polyethylene glycol 6000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>16</solutionId>
+    <localNum>B04</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="8.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>17</solutionId>
+    <localNum>B05</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="40.0" concentrationUnits="Percent v/v" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="5.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>18</solutionId>
+    <localNum>B06</localNum>
+    <components>
+     <component name="Citrate-Phosphate" type="buffer" concentration="0.1" concentrationUnits="M" pH="5.2" checkComposition="Check buffer formulation" />
+     <component name="Ethanol" type="precipitant" concentration="40.0" concentrationUnits="Percent v/v" />
+     <component name="Polyethylene glycol 1000" type="additive" concentration="5.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>19</solutionId>
+    <localNum>B07</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="8.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>20</solutionId>
+    <localNum>B08</localNum>
+    <components>
+     <component name="bis-Tris Propane" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" />
+     <component name="Magnesium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>21</solutionId>
+    <localNum>B09</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="5.0" />
+     <component name="Polyethylene glycol 6000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>22</solutionId>
+    <localNum>B10</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Magnesium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 200" type="precipitant" concentration="50.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>23</solutionId>
+    <localNum>B11</localNum>
+    <components>
+     <component name="tri-Sodium Citrate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>24</solutionId>
+    <localNum>B12</localNum>
+    <components>
+     <component name="tri-Potassium Citrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>25</solutionId>
+    <localNum>C01</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Calcium Chloride" type="salt" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="30.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution> 
+    <solutionId>26</solutionId>
+    <localNum>C02</localNum>
+    <components>
+     <component name="Citrate-Phosphate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.2" checkComposition="Check buffer formulation" />
+     <component name="Sodium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>27</solutionId>
+    <localNum>C03</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.0" />
+     <component name="Lithium Chloride" type="salt" concentration="1.0" concentrationUnits="M" />
+     <component name="Polyethylene glycol 6000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>28</solutionId>
+    <localNum>C04</localNum>
+    <components>
+     <component name="Ammonium Nitrate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene Glycol Monomethyl Ether 2000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>29</solutionId>
+    <localNum>C05</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" />
+     <component name="Polyethylene glycol 6000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>30</solutionId>
+    <localNum>C06</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="di-Potassium Hydrogen phosphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+     <component name="Sodium di-Hydrogen phosphate" type="precipitant" concentration="0.8" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>31</solutionId>
+    <localNum>C07</localNum>
+    <components>
+     <component name="Citrate-Phosphate" type="buffer" concentration="0.1" concentrationUnits="M" pH="5.2" checkComposition="Check buffer formulation" />
+     <component name="Sodium di-Hydrogen Phosphate" type="buffer" concentration="0.25" concentrationUnits="M" pH="5.2" />
+     <component name="Polyethylene glycol 300" type="precipitant" concentration="40.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>32</solutionId>
+    <localNum>C08</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Zinc Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 3000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>33</solutionId>
+    <localNum>C09</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Ethanol" type="precipitant" concentration="20.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>34</solutionId>
+    <localNum>C10</localNum>
+    <components>
+     <component name="Sodium-Potassium Phosphate" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" checkComposition="Check buffer formulation" />
+     <component name="1,2-Propanediol" type="precipitant" concentration="25.0" concentrationUnits="Percent v/v" />
+     <component name="Glycerol" type="precipitant" concentration="10.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>35</solutionId>
+    <localNum>C11</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9.0" />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+     <component name="Dioxane" type="precipitant" concentration="2.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>36</solutionId>
+    <localNum>C12</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Ammonium Sulphate" type="precipitant" concentration="2.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>37</solutionId>
+    <localNum>D01</localNum>
+    <components>
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>38</solutionId>
+    <localNum>D02</localNum>
+    <components>
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="24.0" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>39</solutionId>
+    <localNum>D03</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Magnesium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 400" type="precipitant" concentration="30.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>40</solutionId>
+    <localNum>D04</localNum>
+    <components>
+     <component name="Sodium-Potassium Phosphate" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" checkComposition="Check buffer formulation" />
+     <component name="Sodium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 200" type="precipitant" concentration="50.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>41</solutionId>
+    <localNum>D05</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Lithium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="30.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>42</solutionId>
+    <localNum>D06</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Magnesium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="70.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>43</solutionId>
+    <localNum>D07</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>44</solutionId>
+    <localNum>D08</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Lithium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 400" type="precipitant" concentration="40.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>45</solutionId>
+    <localNum>D09</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="40.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>46</solutionId>
+    <localNum>D10</localNum>
+    <components>
+     <component name="Ammonium Sulphate" type="salt" concentration="0.17" concentrationUnits="M" />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="25.5" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="15.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>47</solutionId>
+    <localNum>D11</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" />
+     <component name="Calcium Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 300" type="precipitant" concentration="40.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>48</solutionId>
+    <localNum>D12</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.07" concentrationUnits="M" pH="4.6" />
+     <component name="Calcium Chloride" type="salt" concentration="0.14" concentrationUnits="M" />
+     <component name="Glycerol" type="precipitant" concentration="30.0" concentrationUnits="Percent v/v" />
+     <component name="2-Propanol" type="precipitant" concentration="14.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>49</solutionId>
+    <localNum>E01</localNum>
+    <components>
+     <component name="Potassium di-Hydrogen Phosphate" type="salt" concentration="0.04" concentrationUnits="M" />
+     <component name="Glycerol" type="precipitant" concentration="20.0" concentrationUnits="Percent v/v" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="16.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>50</solutionId>
+    <localNum>E02</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Sodium Citrate" type="precipitant" concentration="1.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>51</solutionId>
+    <localNum>E03</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Sodium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="precipitant" concentration="2.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>52</solutionId>
+    <localNum>E04</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Sodium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="2-Propanol" type="precipitant" concentration="10.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>53</solutionId>
+    <localNum>E05</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Lithium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="precipitant" concentration="1.26" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>54</solutionId>
+    <localNum>E06</localNum>
+    <components>
+     <component name="CAPS (Sodium)" type="buffer" concentration="0.1" concentrationUnits="M" pH="10.1" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="40.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>55</solutionId>
+    <localNum>E07</localNum>
+    <components>
+     <component name="Imidazole" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="Zinc Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 3000" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>     
+   <solutionId>56</solutionId>
+    <localNum>E08</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Zinc Acetate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="2-Propanol" type="precipitant" concentration="10.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>    
+    <solutionId>57</solutionId>
+    <localNum>E09</localNum>
+    <components>
+     <component name="Sodium Acetate" type="salt" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="di-Ammonium Hydrogen Phosphate" type="precipitant" concentration="1.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>     
+    <solutionId>58</solutionId>
+    <localNum>E10</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Magnesium Sulphate" type="precipitant" concentration="1.6" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>59</solutionId>
+    <localNum>E11</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9.0" />
+     <component name="Polyethylene glycol 6000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>     
+    <solutionId>60</solutionId>
+    <localNum>E12</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.08" concentrationUnits="M" pH="6.5" />
+     <component name="Calcium Acetate" type="salt" concentration="0.16" concentrationUnits="M" />
+     <component name="Glycerol" type="precipitant" concentration="20.0" concentrationUnits="Percent v/v" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="14.4" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>     
+    <solutionId>61</solutionId>
+    <localNum>F01</localNum>
+    <components>
+     <component name="Imidazole" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>62</solutionId>
+    <localNum>F02</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Caesium Chloride" type="salt" concentration="0.05" concentrationUnits="M" />
+     <component name="Jeffamine M-600" type="precipitant" concentration="30.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution> 
+    <solutionId>63</solutionId>
+    <localNum>F03</localNum>
+    <components>
+     <component name="Citric Acid" type="buffer" concentration="0.1" concentrationUnits="M" pH="5.0" />
+     <component name="Ammonium Sulphate" type="precipitant" concentration="3.2" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>64</solutionId>
+    <localNum>F04</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="20.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>65</solutionId>
+    <localNum>F05</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Jeffamine M-600" type="precipitant" concentration="20.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>66</solutionId>
+    <localNum>F06</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Magnesium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="50.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>67</solutionId>
+    <localNum>F07</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9.0" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="10.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>68</solutionId>
+    <localNum>F08</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Ammonium sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 2000 MME" type="precipitant" concentration="30" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution> 
+    <solutionId>69</solutionId>
+    <localNum>F09</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Ammonium sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 5000 MME" type="precipitant" concentration="30" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution> 
+    <solutionId>70</solutionId>
+    <localNum>F10</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Zinc sulphate" type="salt" concentration="0.01" concentrationUnits="M" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>71</solutionId>
+    <localNum>F11</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Nickel (II) Chloride" type="salt" concentration="0.01" concentrationUnits="M" />
+     <component name="Polyethylene glycol 2000 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>72</solutionId>
+    <localNum>F12</localNum>
+    <components>
+     <component name="Bicine" type="buffer" concentration="0.1" concentrationUnits="M" pH="9.0" />
+     <component name="Sodium Chloride" type="salt" concentration="0.1" concentrationUnits="M" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>73</solutionId>
+    <localNum>G01</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.05" concentrationUnits="M" pH="7.0" />
+     <component name="Magnesium Chloride" type="salt" concentration="0.005" concentrationUnits="M" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>74</solutionId>
+    <localNum>G02</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.05" concentrationUnits="M" pH="7.5" />
+     <component name="Magnesium Chloride" type="salt" concentration="0.15" concentrationUnits="M" />
+     <component name="Potassium Chloride" type="salt" concentration="0.1" concentrationUnits="M" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>75</solutionId>
+    <localNum>G03</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.0" />
+     <component name="Lithium sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>76</solutionId>
+    <localNum>G04</localNum>
+    <components>
+     <component name="Imidazole" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="Sodium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Sodium Potassium Tartrate" type="precipitant"  concentration="1" concentrationUnits="M"/>
+    </components>
+   </solution>
+   <solution>
+    <solutionId>77</solutionId>
+    <localNum>G05</localNum>
+    <components>
+     <component name="Sodium Acetate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.5" />
+     <component name="1,4-Butanediol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>78</solutionId>
+    <localNum>G06</localNum>
+    <components>
+     <component name="CHES" type="buffer" concentration="0.1" concentrationUnits="M" pH="9.5" />
+     <component name="Lithium Sulphate" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Sodium Potassium Tartrate" type="precipitant"  concentration="1" concentrationUnits="M"/>
+    </components>
+   </solution>
+   <solution>
+    <solutionId>79</solutionId>
+    <localNum>G07</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" />
+     <component name="Ethoxyethanol" type="precipitant" concentration="35" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>80</solutionId>
+    <localNum>G08</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="2-Propanol" type="precipitant" concentration="35" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>81</solutionId>
+    <localNum>G09</localNum>
+    <components>
+     <component name="Sodium Formate" type="precipitant" concentration="3.5" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>82</solutionId>
+    <localNum>G10</localNum>
+    <components>
+     <component name="Succinic Acid" type="precipitant" concentration="0.8" concentrationUnits="M" pH="7.0" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>83</solutionId>
+    <localNum>G11</localNum>
+    <components>
+     <component name="DL-Malic Acid" type="precipitant" concentration="2.1" concentrationUnits="M" pH="7.0" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>84</solutionId>
+    <localNum>G12</localNum>
+    <components>
+     <component name="Sodium Malonate" type="precipitant" concentration="2.4" concentrationUnits="M" pH="7.0" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>85</solutionId>
+    <localNum>H01</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.05" concentrationUnits="M" pH="7.5" />
+     <component name="Potassium Chloride" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Pentaerythritol Propoxylate (5/4 PO/OH)" type="precipitant" concentration="35" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>86</solutionId>
+    <localNum>H02</localNum>
+    <components>
+     <component name="bis-Tris" type="buffer" concentration="0.05" concentrationUnits="M" pH="6.5" />
+     <component name="Ammonium Sulphate" type="salt" concentration="0.05" concentrationUnits="M" />
+     <component name="Pentaerythritol Ethoxylate (15/4 EO/OH)" type="precipitant" concentration="30" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>87</solutionId>
+    <localNum>H03</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Potassium Bromide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol monomethyl ether 2000" type="precipitant" concentration="25" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>88</solutionId>
+    <localNum>H04</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5" />
+     <component name="Potassium Bromide" type="salt" concentration="0.2" concentrationUnits="M" />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="8" concentrationUnits="Percent v/v" />
+     <component name="Polyethylene glycol monomethyl ether 550" type="precipitant" concentration="8" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>89</solutionId>
+    <localNum>H05</localNum>
+    <components>
+     <component name="Sodium Citrate" type="buffer" concentration="0.1" concentrationUnits="M" pH="4.6" />
+     <component name="Potassium di-Hydrogen Phosphate" type="salt" concentration="1.0" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>90</solutionId>
+    <localNum>H06</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.0" />
+     <component name="Potassium di-Hydrogen Phosphate" type="salt" concentration="0.5" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>91</solutionId>
+    <localNum>H07</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="Cadmium Chloride" type="salt" concentration="0.005" concentrationUnits="M" />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="20" concentrationUnits="Percent v/v" />   
+    </components>
+   </solution>
+   <solution>
+    <solutionId>92</solutionId>
+    <localNum>H08</localNum>
+    <components>
+     <component name="MES" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Nickel (II) Chloride" type="salt" concentration="0.005" concentrationUnits="M" />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="20" concentrationUnits="Percent v/v" />   
+    </components>
+   </solution>
+   <solution>
+    <solutionId>93</solutionId>
+    <localNum>H09</localNum>
+    <components>
+     <component name="Imidazole" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="Sodium Formate" type="salt" concentration="0.8" concentrationUnits="M" />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent v/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="10" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>94</solutionId>
+    <localNum>H10</localNum>
+    <components>
+     <component name="Sodium Cacodylate" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5" />
+     <component name="Cadmium Sulphate" type="salt" concentration="0.005" concentrationUnits="M" />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="15.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>95</solutionId>
+    <localNum>H11</localNum>
+    <components>
+     <component name="HEPES" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5" />
+     <component name="Cobalt (II) Chloride" type="salt" concentration="0.005" concentrationUnits="M" />
+     <component name="Polyethylene glycol 600" type="precipitant" concentration="20.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>      
+    <solutionId>96</solutionId>
+    <localNum>H12</localNum>
+    <components>
+     <component name="Tris" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.0" />
+     <component name="Ammonium Sulphate" type="precipitant" concentration="2.0" concentrationUnits="M" />
+     <component name="Jeffamine M-600" type="precipitant" concentration="10.0" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+  </solutions>
+ </screen>

@@ -1,0 +1,22 @@
+<!-- PiMS Trial Expression protocol xml as flat file -->
+<protocol name="PiMS Trial Expression" objective="Small Scale Expression of Target Protein" creationDate="04-03-09" remarks="Default set of protocols for PiMS" >
+ <experimentType>Small scale expression</experimentType>
+ 
+ <inputSamples>
+<!--   <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="0.0" unit="L" displayUnit="uL" refSample="Transformed cells" name="Transformed cells" /> -->
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.0" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Protein" name="Protein" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Autoinduction/IPTG" label="Induction method" parameterType="String" defaultValue="Autoinduction" possibleValues="Autoinduction;IPTG" />
+  <parameterDefinition id="2" name="Expression strain"  label="Bacterial strain used for expression" parameterType="String" defaultValue="BL21" possibleValues="BL21;BL21.DE3;Rosetta;BL*;B834"/>
+  <parameterDefinition id="3" name="Expression time and temp" label="Details of the duration and temperature for expression" parameterType="String" defaultValue="Overnight at 37C" />
+  <parameterDefinition id="4" name="Lysis method" label="Method used to lyse the cells" parameterType="String" defaultValue="Sonication" possibleValues="Sonication;French press" />
+  <parameterDefinition id="3" name="Observed Molecular Weight (kDa)" parameterType="Int" defaultValue="" isMandatory="false" />
+  <parameterDefinition id="1" name="__MW" label="Soluble Expression" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="2" name="__IMW" label="Insoluble Expression" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+ </parameterDefinitions>
+ 
+</protocol>

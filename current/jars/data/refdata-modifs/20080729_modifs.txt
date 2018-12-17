@@ -1,0 +1,4 @@
+Data
+NaturalSources.csv
+Added: Neisseria gonorrhoeae
+"Neisseria gonorrhoeae", 485

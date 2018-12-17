@@ -1,0 +1,809 @@
+<!-- Imports data model jar, runs test cases, and exports jars if successful
+
+The "install" tasks install a new database.
+To use these, the database user name you supply in the Properties file
+must be trusted. This means having an entry in the pg_hba.conf like:
+
+local   all         pimsadmin                         trust
+
+-->
+<project default="updateRefData" name="PiMS Reference Data" basedir="."
+	xmlns:ora="antlib:net.sf.incanto"
+	>
+
+    <!-- Properties -->
+    <property file="build.properties"/>
+
+    <!-- log -->
+    <property name="log.dir" location="${basedir}/log" />
+
+    <!-- jars directory -->
+    <property name="pims-tools.file" value="pims-tools.jar" />
+    <property name="jars" value="../jars" />
+    <property name="refDataJar.file" value="${jars}/RefDataLoader.jar" />
+
+    <!-- ref data -->
+    <property name="data.src" location="${basedir}/data" />
+
+    <!-- web -->
+	<property name="keystore" value="${basedir}/conf/.keystore" />
+
+    <!-- java -->
+    <property name="java.src" location="${basedir}/src" />
+    <property name="test.src" location="${basedir}/TestSource" />
+    <property name="classes" location="classes" />
+    <property name="testClasses" location="${basedir}/testClasses" />
+    <property name="resources" location="${basedir}/resources" />
+    <property name="lib.path" location="${basedir}/lib" />
+    <property name="checkstyle" location="${basedir}/conf/checkstyle-duplicate-code.xml" />
+    
+	<taskdef resource="checkstyletask.properties" classpath="${lib.path}/checkstyle-all-4.3.jar"/>
+	
+    <!-- directory which emma report will be written to -->
+    <property name="instr.dir" value="${basedir}/emmainstr" />
+
+    <!-- sql -->
+    <property name="sql.path" value="${jars}" />
+    <property name="sql.file.name" value="pims-database.sql" />
+    <property name="sql.file" value="${sql.path}/${sql.file.name}" />
+    <property name="sql.data.file.name" value="pims-db-withrefdata.sql" />
+    <property name="sql.data.file" value="${sql.path}/${sql.data.file.name}" />
+    <property name="sql.data.example.file.name" value="install-example.sql" />
+    <property name="sql.data.example.file" value="${sql.path}/${sql.data.example.file.name}" />
+
+    <!-- ............................................................ -->
+    <!-- java classpaths.                                             -->
+    <!-- ............................................................ -->
+
+    <!-- First, the classes from JavaSource that Emma will instrument -->
+    <path id="instrument.classpath">
+        <pathelement location="${classes}" />
+    </path>
+
+    <!-- add libraries -->
+    <path id="project.classpath">
+        <path refid="instrument.classpath" />
+
+    	<pathelement location="${basedir}/conf" />
+        
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <!-- add test classes -->
+    <path id="test.classpath">
+        <path refid="project.classpath" />
+        <pathelement location="${testClasses}" />
+    </path>
+    <property name="ant.reuse.loader" value="true" /> <!--
+    <path id="fjepPath" location="${basedir}/lib/fatjar.jar"/> 
+    <taskdef name="fatjar.build" classname="net.sf.fjep.anttask.FJBuildTask" classpathref="fjepPath" />
+    <typedef name="fatjar.manifest" classname="net.sf.fjep.anttask.FJManifestType" classpathref="fjepPath" />
+    <typedef name="fatjar.filesource" classname="net.sf.fjep.anttask.FJFileSourceType" classpathref="fjepPath" />
+    <typedef name="fatjar.jarsource" classname="net.sf.fjep.anttask.FJJarSourceType" classpathref="fjepPath" />
+    <typedef name="fatjar.exclude" classname="net.sf.fjep.anttask.FJExcludeType" classpathref="fjepPath" /> -->
+
+    <!-- emma -->
+    <path id="emma.lib">
+        <pathelement location="${basedir}/lib/emma.jar" />
+        <pathelement location="${basedir}/lib/emma_ant.jar" />
+    </path>
+    <taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+	
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+    <!-- Compile web application -->
+    <target name="compile" depends="clean">
+        
+        <!-- compile the command line tools -->
+        <javac srcdir="${basedir}/src" destdir="${classes}" target="1.6" source="1.6" debug="on" encoding="UTF-8"
+        >
+            <classpath refid="project.classpath" />
+        </javac>
+    </target>
+	
+    <target name="checkstyle" >
+	    <checkstyle config="${checkstyle}"
+	    	maxErrors="15" maxWarnings="1000"
+	    	>
+	    	<fileset dir="${java.src}" includes="**/*.java" excludes="uk/ac/ebi/**" />
+            <classpath refid="project.classpath" />
+	    	<formatter toFile="${instr.dir}/duplicates.txt" />
+	    </checkstyle>
+    </target>
+
+    
+    <!-- ============================================================ -->
+    <!-- Test case tasks.                                             -->
+    <!-- ============================================================ -->
+    <target name="compileTest" depends="compile">
+        <javac srcdir="${test.src}" destdir="${testClasses}" target="1.6" source="1.6" deprecation="false" debug="on" encoding="UTF-8">
+            <classpath refid="test.classpath" />
+        </javac>
+    </target>
+
+    <target name="test" depends="compileTest">
+        <emma enabled="true">
+            <instr instrpathref="instrument.classpath" mode="overwrite" metadatafile="${instr.dir}/metadata.emma" merge="true">
+                <!--
+                    Could have <filter value="${emma.filter}" />
+                -->
+            </instr>
+        </emma>
+        <junit haltonfailure="true" haltonerror="true" fork="true" dir="${basedir}" forkmode="once">
+            <jvmarg value="-server" />
+            <jvmarg value="-enableassertions" />
+            <jvmarg value="-Xms512m" />
+            <jvmarg value="-Xmx512m" />
+            <jvmarg value="-Demma.coverage.out.file=${instr.dir}/coverage.emma" />
+            <jvmarg value="-Demma.coverage.out.merge=false" />
+            <classpath refid="test.classpath" />
+            <formatter type="brief" usefile="false" />
+            <test name="org.pimslims.AllToolsTests" />
+            <sysproperty key="TestingDataPath" value="${data.src}"/>
+        </junit>
+        <emma enabled="true">
+            <report sourcepath="${java.src}" sort="-block,-name,-method,-class" metrics="method:10,block:50,line:50,class:10">
+                <infileset dir="${instr.dir}" includes="*.em, *.ec, *.emma" />
+
+                <!-- for every type of report desired, configure a nested
+		             element; various report parameters
+		             can be inherited from the parent <report>
+		             and individually overridden for each report type:
+		        -->
+                <txt outfile="${instr.dir}/coverage.txt" depth="all" columns="line,name,class,method,block" metrics="method:0,block:0,line:0,class:0" />
+                <html outfile="${instr.dir}/coverage.html" depth="method" columns="name,class,method,block,line" />
+            </report>
+        </emma>
+    </target>
+
+    <target name="jar" depends="compile" description="Make the jar file for pims-tools">
+        <echo>tar file: ${pims-tools.file}</echo>
+        <jar index="true" destfile="${pims-tools.file}">
+            <fileset dir="${classes}" />
+        </jar>
+     </target>
+
+	   
+	     <target name="OwnerChanger.jar">
+	        <jar index="true" jarfile="OwnerChanger.jar" basedir="${classes}" excludes="META-INF/SUN_MICR.*" 
+	            filesetmanifest="mergewithoutmain"
+	            > 
+	        
+	        	<zipfileset src="${basedir}\lib\pims-model.jar" />
+	            <zipfileset src="${basedir}\lib\jdom.jar" />
+            
+            <zipgroupfileset dir="${basedir}/../pims-model/lib/runtime/" >
+               <include name="*.jar" />
+            </zipgroupfileset> 
+
+	            <zipfileset src="${basedir}\lib\pims-model.jar" />
+	            <!-- These ones needed to run under Java 1.5 
+	            <zipfileset src="${basedir}\lib\jaxp-api.jar" />
+	            <zipfileset src="${basedir}\lib\jaxp-ri.jar" />
+	            <zipfileset src="${basedir}\lib\jaxb-api.jar" />
+	            <zipfileset src="${basedir}\lib\activation.jar" />
+	            <zipfileset src="${basedir}\lib\jaxb-impl.jar" /> -->
+	            
+	            <manifest>
+	              <attribute name="Main-Class"
+	                    value="org.pimslims.embl.OwnerChanger"/>
+	            </manifest>
+
+	        </jar>
+	    </target>
+	    
+	
+	
+	
+     <target name="RefDataLoader.jar">
+     	<jar index="true" jarfile="${refDataJar.file}" basedir="${classes}" excludes="META-INF/SUN_MICR.*" 
+     		filesetmanifest="mergewithoutmain"
+     		> 
+        
+            <fileset file="${basedir}/build.xml" />
+
+            <zipfileset src="${basedir}\lib\ant.jar" />
+            <zipfileset src="${basedir}\lib\jdom.jar" />
+            <zipfileset src="${basedir}\lib\ant-launcher.jar" />
+            <zipfileset src="${basedir}\lib\pims-model.jar" />
+        	
+            <zipgroupfileset dir="${basedir}/../pims-model/lib/runtime/" >
+               <include name="*.jar" />
+            </zipgroupfileset> 
+        	<!-- These ones needed to run under Java 1.5
+            <zipfileset src="${basedir}\lib\jaxp-api.jar" />
+            <zipfileset src="${basedir}\lib\jaxp-ri.jar" />
+            <zipfileset src="${basedir}\lib\jaxb-api.jar" />
+            <zipfileset src="${basedir}\lib\activation.jar" />
+            <zipfileset src="${basedir}\lib\jaxb-impl.jar" /> -->
+     		
+     	    <manifest>
+     	      <attribute name="Main-Class"
+     	            value="org.apache.tools.ant.launch.Launcher"/>
+     	    </manifest>
+
+        </jar>
+    </target>
+    
+
+    <!-- ============================================================ -->
+    <!-- Reference data tasks.                                        -->
+    <!-- ============================================================ -->
+    <target name="installRefData" description="Install ref data into an empty db and produce sql file">
+        <antcall target="install-emptydb" />
+        <antcall target="loadRefData" />
+        <antcall target="dump-db" />
+    </target>
+
+    <target name="installRefDataIntoExample" description="Install + merge ref data into example db and produce sql file">
+        <antcall target="installdbexample" />
+        <antcall target="mergeRefData" />
+        <antcall target="loadRefData" />
+        <antcall target="dumpdbexample" />
+    </target>
+
+    <target name="installRefDataIntoCurrentDB" description="Install + merge ref data into current DB">
+        <antcall target="mergeRefData" />
+        <antcall target="loadRefData" />
+    </target>
+
+    <!-- update the reference data that has changed in recent releases -->
+	<!-- TODO change this into an ant call to ../jars/build.xml -->
+	<target name="updateRefData" description="Loads new reference data.">
+            <antcall target="loadHolders" />
+	        <antcall target="loadExperimentTypes" />
+            <antcall target="loadSampleCategories" />
+		<!-- no change in 4.4
+	        <antcall target="loadTargetStatus" />
+	        <antcall target="loadComponentCategories" />
+        <antcall target="loadDbNames" />
+        <antcall target="loadNaturalSources" />
+		-->
+		<!-- no, see PIMS-3716
+	        <antcall target="loadExtensionData" />
+	        <antcall target="loadDefaultProtocols" />
+	        <antcall target="loadVectors" /> -->
+		
+<!-- needed for crystal handling -->
+        <antcall target="loadDefaultProtocols" />
+	</target>
+	
+<target name="loadLiteRefData" description="Populates an empty PiMS database.">
+     <antcall target="loadExperimentTypes" />
+     <antcall target="loadTargetStatus" />
+     <antcall target="loadSampleCategories" />
+     <antcall target="loadComponentCategories" />
+     <antcall target="loadHolders" />
+     <antcall target="loadExtensionData" />
+     <antcall target="xtal" />
+     <antcall target="loadDefaultProtocols" />
+     <antcall target="loadVectors" />
+     <antcall target="loadNaturalSources" />
+     <antcall target="loadDbNames" />
+</target>
+    
+	<!-- load all the reference data -->
+    <target name="loadRefData" description="Loads all the reference data.">
+
+        <antcall target="updateRefData" />
+    	
+        <!-- supplier (Organisation) -->
+        <antcall target="loadSuppliers" />
+        <!-- reagent (RefSample) -->
+        <antcall target="loadReagents" />
+        <!-- hazard phrase -->
+        <antcall target="loadHazardPhrases" />
+        <!-- chemicals -->
+        <antcall target="loadChemicals" />
+        <!-- protocols -->
+        <antcall target="loadExtraProtocols" />
+    </target>
+    
+    <!-- Extension Data -->
+    <target name="loadExtensionData" description="Loads the extension data">
+        <java output="${log.dir}/Extension.out" classname="org.pimslims.data.ExtensionsUtility" fork="true" failOnError="true" >
+            <classpath refid="project.classpath" />
+            <!-- <arg file="${data.src}/Extensions.csv" /> -->
+            <arg file="${data.src}/ExtensionsPlus290309.csv" /> 
+        </java>
+    </target>
+
+    <!-- Experiment Types -->
+    <target name="loadExperimentTypes" description="Loads the experiment types">
+        <java  classname="org.pimslims.data.ExperimentTypesUtility" fork="true" failOnError="true" >
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/ExperimentTypes.csv" />
+        </java>
+    </target>
+
+    <!-- Leeds sequencing dummy refcomponent recording -->
+    <target name="loadRefDataForLeedsSequencing" description="Create a refComponent and samples required for ExperimentWizardCreator functionality used by leeds sequencing etc..">
+        <java classname="org.pimslims.data.LSequencingRefDataLoader" fork="true" failOnError="true" >
+            <classpath refid="project.classpath" />
+        </java>
+    </target>
+
+    <!-- Extension Data -->
+    <target name="loadStandardSequencingPrimers" description="Loads the Standard Sequencing Primers data">
+        <java output="${log.dir}/StandardPrimers.out" classname="org.pimslims.data.StandardSequencingPrimersUtility" fork="true" failOnError="true" >
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/StandardPrimers.csv addnew" />
+            <arg value="addnew" />
+            <assertions><enable></enable></assertions>
+        </java>
+    </target>
+	
+    <!-- Target Status -->
+    <target name="loadTargetStatus" description="Loads the target status">
+        <!-- status/scoreboard link -->
+        <java  classname="org.pimslims.data.TargetStatusUtility" fork="true" failOnError="true" >
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/TargetStatus.csv" />
+        </java>
+        <!-- status/experimentType link -->
+        <java  classname="org.pimslims.data.StatusToExperimentTypesUtility" fork="true" failOnError="true" >
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/StatusToExperimentTypes.csv" />
+        </java>
+    </target>
+
+    <!-- Natural Sources -->
+    <target name="loadNaturalSources" description="Loads the natural source">
+        <java  failOnError="true" output="${log.dir}/naturalSources.out" classname="org.pimslims.data.NaturalSourceUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/NaturalSources.csv" />
+        </java>
+    </target>
+
+   
+    <!-- Sample Categories -->
+    <target name="loadSampleCategories" description="Loads the sample categories" >
+        <java  failOnError="true"  classname="org.pimslims.data.SampleCatsUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/SampleCats.csv" />
+        </java>
+    </target>
+
+    <!-- Component Categories -->
+    <target name="loadComponentCategories" description="Loads the component categories">
+        <java  failOnError="true" output="${log.dir}/componentCats.out" classname="org.pimslims.data.ComponentCatsUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/ComponentCats.csv" />
+        </java>
+    </target>
+
+    <!-- Suppliers -->
+    <target name="loadSuppliers" description="Loads the suppliers">
+        <java  failOnError="true" output="${log.dir}/suppliers.out" classname="org.pimslims.data.SupplierUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/Suppliers.csv" />
+        </java>
+    </target>
+
+    <!-- Reagents -->
+    <target name="loadReagents" description="Loads the reagents">
+        <java  failOnError="true" output="${log.dir}/reagents.out" classname="org.pimslims.data.ReagentUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/Reagents.csv" />
+        </java>
+    </target>
+
+    <!-- Hazard Phrases -->
+    <target name="loadHazardPhrases" description="Loads the hazard phrases">
+        <java  failOnError="true" output="${log.dir}/hazardPhrases.out" classname="org.pimslims.data.HazardPhraseUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/HazardPhrases.xml" />
+        </java>
+    </target>
+
+    <!-- Database Names -->
+    <target name="loadDbNames" description="Loads the database names">
+        <java  failOnError="true" output="${log.dir}/dbNames.out" classname="org.pimslims.data.DbNameUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/DbNames.csv" />
+        </java>
+    </target>
+
+    <!-- Chemicals -->
+    <target name="loadChemicals" description="Loads the chemicals and creates associated RefSamples">
+        <java  failOnError="true" output="${log.dir}/chemicals.out" classname="org.pimslims.data.ChemicalUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/Chemicals.csv" />
+        </java>
+    </target>
+
+    <!-- Holders -->
+    <target name="loadHolders" description="Loads holder reference data.">
+        <!-- holder category -->
+        <java  failOnError="true" output="${log.dir}/holderCats.out" classname="org.pimslims.data.HolderCatsUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/HolderCats.csv" />
+        </java>
+        <!-- holder type  output="${log.dir}/plateTypes.out" -->
+        <java  failOnError="true"  classname="org.pimslims.data.HolderTypeUtility" fork="true">
+            <classpath refid="project.classpath" />
+            <arg file="${data.src}/HolderTypes.csv" />
+        </java>
+        <!-- holder -->
+        <java failOnError="true" output="${log.dir}/holders.out" classname="org.pimslims.data.GenericRefLoader" fork="true">
+            <classpath refid="project.classpath" />
+            <arg value="org.pimslims.model.holder.Holder" />
+            <arg file="${data.src}/Holders.csv" />
+        </java>
+    </target>
+
+	<!-- Tables only used for xtalPiMS -->
+	<target name="xtal">
+        <java failOnError="true" output="${log.dir}/scoringScheme.out" classname="org.pimslims.data.GenericRefLoader" fork="true">
+            <classpath refid="project.classpath" />
+            <arg value="org.pimslims.model.crystallization.ScoringScheme" />
+            <arg file="${data.src}/crystallogenesis/ScoreScheme.csv" />
+        </java>
+        <java failOnError="true" output="${log.dir}/scores.out" classname="org.pimslims.data.GenericRefLoader" fork="true">
+                    <classpath refid="project.classpath" />
+            <arg value="org.pimslims.model.crystallization.Score" />
+            <arg file="${data.src}/Scores.csv" />
+        </java>
+		<!-- TODO ImageType, Instrument -->
+	</target>
+	
+
+    <!-- extra PiMS protocols -->
+    <target   name="loadExtraProtocols" description="Loads protocol reference data.">
+        <java  failOnError="true" classname="org.pimslims.data.ProtocolUtility" fork="true">
+            <assertions>
+                <enable />
+            </assertions>
+            <classpath refid="project.classpath" />
+        	
+
+            <arg value="${data.src}/Default-protocols/PiMS_LIC_annealing.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Import_Sample.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Produce_Sample.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_LIC_PlateCulture.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_LIC_polymerase_reaction.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_LIC_Transformation.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_LIC_VectorPrep.xml" /> 
+            <arg value="${data.src}/Default-protocols/PiMS_PlasmidPrep.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_PlateCulture.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Unspecified.xml" />
+   </java></target>
+	
+	<!-- default PiMS protocols -->
+	<target   name="loadDefaultProtocols" description="Loads protocol reference data.">
+	    <java  failOnError="true" classname="org.pimslims.data.ProtocolUtility" fork="true">
+	        <assertions>
+	            <enable />
+	        </assertions>
+	        <classpath refid="project.classpath" />
+	            
+	        <!-- required for construct management -->
+            <arg value="${data.src}/protocols/SPOT_Construct_Primer_Design.xml" />
+            <arg value="${data.src}/protocols/SPOT_Construct_SDM_Primer_Design.xml" />
+	        <arg value="${data.src}/protocols/Order_Primer_Plate.xml" /> 
+	        <arg value="${data.src}/protocols/PIMS_Plate_Layout_Forward_Primers.xml" />
+	        <arg value="${data.src}/protocols/PIMS_Plate_Layout_Reverse_Primers.xml" />
+            <arg value="${data.src}/protocols/SPOT_Primerless_Construct_Design.xml" />
+	        	
+            <!-- required for Caliper LabChip GX support -->
+            <arg value="${data.src}/protocols/PIMS_Caliper_Characterisation.xml" />
+	    	
+	        <!-- required for complexes -->
+            <arg value="${data.src}/Default-protocols/PIMS_Bicistronic_Infusion.xml" />
+            <arg value="${data.src}/Default-protocols/PIMS_Bitrans_Transformation.xml" />
+
+	        <arg value="${data.src}/Default-protocols/PiMS_Chromatography.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Complexation.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Concentration.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Diffraction.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Diffraction_Test.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Harvest_Crystal.xml" />	    	
+	    	<arg value="${data.src}/Default-protocols/PiMS_Import_Sample.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_LargeScale_Expression.xml" />
+            <arg value="${data.src}/Default-protocols/PIMS_Co_Concentration.xml" />
+	        	
+	        <arg value="${data.src}/Default-protocols/PiMS_Ligation.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Light_Scattering.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Mass_Spectrometry.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Miniprep.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_PCR.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_PCR_CleanUp.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_PCRProduct_Digest.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Plasmid_stock.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Cell_stock.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Size_Exclusion_Chromatography.xml" />
+	        <arg value="${data.src}/Default-protocols/PiMS_Solubilisation.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Synthetic_gene.xml" />  
+            <arg value="${data.src}/Default-protocols/PiMS_Tag_Cleavage.xml" />  
+            <arg value="${data.src}/Default-protocols/PiMS_Transformation.xml" /> 
+	        <arg value="${data.src}/Default-protocols/PiMS_Trial_Expression.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Vector_Digest.xml" /> 
+            <arg value="${data.src}/Default-protocols/PiMS_VerificationPCR.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_Xtal_Optimisation.xml" /> 
+            <arg value="${data.src}/Default-protocols/PiMS_Xtal_Screen.xml" /> 
+            <arg value="${data.src}/Default-protocols/PiMS_TrypFluorescence_Quenching.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_ITC.xml" />
+            <arg value="${data.src}/Default-protocols/PiMS_CD.xml" />
+	    	
+	    	<!-- For xtalPiMS -->
+            <arg value="${data.src}/Default-protocols/PIMS_CrystalTrial.xml" />
+            <arg value="${data.src}/Default-protocols/ISPyB_Diffraction.xml" />
+            <arg value="${data.src}/Default-protocols/Cryoprotect.xml" />
+            <arg value="${data.src}/Default-protocols/Custom.xml" />
+            <arg value="${data.src}/Default-protocols/Freeze.xml" />
+            <arg value="${data.src}/Default-protocols/Gradual_Cryoprotect.xml" />
+            <arg value="${data.src}/Default-protocols/Select_Crystal.xml" />
+			<arg value="${data.src}/Default-protocols/Soak.xml" />
+            <arg value="${data.src}/Default-protocols/Test_diffraction_and_ship.xml" />
+                        	    	
+	            
+	    </java>
+	</target>
+    
+    <!-- old PiMS protocols  
+    <target name="loadOldProtocols" description="Loads protocol reference data.">
+        <java classname="org.pimslims.data.ProtocolUtility" fork="true">
+            <assertions>
+                <enable />
+            </assertions>
+            <classpath refid="project.classpath" />
+        	
+            <arg value="${data.src}/protocols/SPOT_Construct_Primer_Design.xml" />
+            <arg value="${data.src}/protocols/Order_Primer_Plate.xml" /> 
+        	<arg value="${data.src}/protocols/PIMS_Plate_Layout_Forward_Primers.xml" />
+        	<arg value="${data.src}/protocols/PIMS_Plate_Layout_Reverse_Primers.xml" />
+        	
+            <arg value="${data.src}/protocols/PIMS_Culture.xml" />
+            <arg value="${data.src}/protocols/PIMS_LIC_annealing.xml" />
+            <arg value="${data.src}/protocols/PIMS_LIC_PlateCulture.xml" />
+            <arg value="${data.src}/protocols/PIMS_LIC_polymerase_reaction.xml" />
+            <arg value="${data.src}/protocols/PIMS_LIC_Transformation.xml" />
+            <arg value="${data.src}/protocols/PIMS_LIC_VectorPrep.xml" />
+            <arg value="${data.src}/protocols/PIMS_miniprep.xml" />
+            <arg value="${data.src}/protocols/PIMS_PCR.xml" />
+            <arg value="${data.src}/protocols/PIMS_PlasmidPrep.xml" />
+            <arg value="${data.src}/protocols/PIMS_PlateCulture.xml" />
+            <arg value="${data.src}/protocols/PIMS_Transformation.xml" />
+            <arg value="${data.src}/protocols/PIMS_TrialExpression.xml" />
+            <arg value="${data.src}/protocols/PIMS_Unspecified.xml" />
+        </java>
+    </target> -->
+
+    
+
+    <!-- OPPF Protocols -->
+    <target name="loadOPPFProtocols" description="Loads OPPF protocol reference data.">
+        <java classname="org.pimslims.data.ProtocolUtility" fork="true">
+            <assertions>
+                <enable />
+            </assertions>
+            <classpath refid="project.classpath" />
+        	
+            <arg value="${data.src}/protocols/SPOT_Construct_Primer_Design.xml" />
+            <arg value="${data.src}/OPPF/OPPF_Optic_Construct_Primer_Design.xml" />
+        	
+        </java>
+    </target>
+	
+	<!--  STRUBI Protocols   -->
+	    <target name="loadSTRUBIProtocols" description="Loads STRUBI protocol reference data.">
+	        <java classname="org.pimslims.data.ProtocolUtility" fork="true">
+	            <assertions>
+	                <enable />
+	            </assertions>
+	            <classpath refid="project.classpath" />
+	            
+	            <arg value="${data.src}/Strubi/CS_Chromatography.xml" />
+	            <arg value="${data.src}/Strubi/CS_Complexation.xml" />
+	            <arg value="${data.src}/Strubi/CS_Concentration.xml" />
+	            <arg value="${data.src}/Strubi/CS_Construct_Design.xml" />
+	            <arg value="${data.src}/Strubi/CS_Deglycosylation.xml" />
+	            <arg value="${data.src}/Strubi/CS_Diffraction.xml" />
+	            <arg value="${data.src}/Strubi/CS_Eukaryotic_Expression.xml" />
+	            <arg value="${data.src}/Strubi/CS_Eukaryotic_Expression_Trial.xml" />
+	            <arg value="${data.src}/Strubi/CS_IMAC.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Ligation.xml" />
+	        	<arg value="${data.src}/Strubi/CS_MALS.xml" />
+	        	<arg value="${data.src}/Strubi/CS_PCR.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Prokaryotic_Expression.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Prokaryotic_Expression_Trial.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Restriction_Digest_PCR.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Restriction_Digest_Vector.xml" />
+	            <arg value="${data.src}/Strubi/CS_Size_Exclusion_Chromatography.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Solubilisation.xml" />
+	            <arg value="${data.src}/Strubi/CS_Xtal_Harvest.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Xtal_Optimisation.xml" />
+	        	<arg value="${data.src}/Strubi/CS_Xtal_Screen.xml" />
+	        </java>
+	    </target>
+
+  
+
+
+
+
+	<!--mergeRefdata is dealing with old reference data-->
+	<target name="mergeRefData" description="Loads all the merged reference data to upgrade db." >
+		<!-- experiment type -->
+		<java output="${log.dir}/mergedExperimentTypes.out" classname="org.pimslims.data.ExperimentTypesUtility" fork="true">
+			<classpath refid="project.classpath" />
+			<arg line="-merge" /><arg file="${data.src}/MergedExperimentTypes.csv" />
+		</java>
+		<!-- natural source -->
+		<java output="${log.dir}/mergedNatutalSources.out" classname="org.pimslims.data.NaturalSourceUtility" fork="true">
+			<classpath refid="project.classpath" />
+			<arg line="-merge" /><arg file="${data.src}/MergedNaturalSources.csv" />
+		</java>
+		<!-- ScoreBoard -->
+		<java output="${log.dir}/mergedScoreboard.out" classname="org.pimslims.data.ScoreboardUtility" fork="true">
+			<classpath refid="project.classpath" />
+			<arg line="-merge" /><arg file="${data.src}/MergedScoreboard.csv" />
+		</java>
+		<!-- status  -->
+		<java output="${log.dir}/mergedStatus.out" classname="org.pimslims.data.StatusToScoreboardUtility" fork="true">
+			<classpath refid="project.classpath" />
+			<arg line="-merge" /><arg file="${data.src}/MergedStatus.csv" />
+		</java>
+	</target>
+
+
+
+
+	<!--data Fixers -->
+	<target name="fixAllData" description="run all data fixers" >
+		<!-- experiment type -->
+		<java classname="org.pimslims.command.DataUpdate.DataFixerList" fork="true">
+			<classpath refid="project.classpath" />
+		</java>
+	</target>
+    
+    <!--XML protocol converter -->
+    <target name="convertProtocol" description="Convert old XML protocol into new format." depends="compile">
+        <java classname="org.pimslims.xmlio.XmlTransformer" fork="true">
+            <assertions><enable /></assertions>
+            <classpath refid="project.classpath" />
+            <arg value="${data.src}/protocols/PIMS_PCR.xml" />
+            <arg value="${data.src}/xml/protocols/PIMS_PCR.xml" />
+        </java>
+    </target>
+    
+    <!-- New XML protocol loader -->
+    <target name="newLoadProtocols" description="Loads protocol reference data.">
+        <java classname="org.pimslims.xmlio.XmlLoader" fork="true">
+            <assertions><enable /></assertions>
+            <classpath refid="project.classpath" />
+            <arg value="${data.src}/xml/protocols/SPOT_Construct_Primer_Design.xml" />
+            <arg value="${data.src}/xml/protocols/PIMS_PCR.xml" />
+        </java>
+    </target>
+    
+    <!-- XML vector loader -->
+    <target name="loadVectors" description="Loads vector reference data.">
+        <java classname="org.pimslims.xmlio.VectorXmlLoader" fork="true">
+            <assertions><enable /></assertions>
+            <classpath refid="project.classpath" />
+            <arg value="${data.src}/xml/vectors/" />
+        </java>
+    </target>
+    <target name="RefDataLoader" description="run the refDataLoader3.3">
+        <java classname="org.pimslims.data.RefDataLoader" fork="true">
+            <assertions><enable /></assertions>
+            <classpath refid="project.classpath" />
+            <arg value="${basedir}/conf/Properties" />
+            <arg value="${basedir}/data" />
+        </java>
+    </target>
+	
+	
+
+    <target name="loadSequences" description="import sequences from Oracle dump">
+        <java classname="org.pimslims.command.port.FromOracle" fork="true">
+            <assertions><enable /></assertions>
+            <classpath refid="project.classpath" />
+            <arg value="${basedir}/data/sequences.txt" />
+        </java>
+    </target>
+
+    <!-- ============================================================ -->
+    <!-- Database tasks                                               -->
+    <!-- ============================================================ -->
+    <target name="createdb" description="Creates the database.">
+        <exec failOnError="true" executable="createdb"><arg line="--encoding UTF8 -U ${db.username} '${db.name}' " /></exec>
+    </target>
+
+    <target name="dropdb" description="Drops the database.">
+        <echo>dropdb -U ${db.username} '${db.name}'</echo>
+        <exec failOnError="false" executable="dropdb"><arg line="-U ${db.username} '${db.name}'" /></exec>
+    </target>
+
+    <target name="install-emptydb" description="Create new empty db by loading schema.">
+        <antcall target="dropdb"/>
+        <antcall target="createdb"/>
+        <antcall target="cleanLog"/>
+        <echo>Installing database with ${sql.file}, see ${log.dir}/install-emptydb.out</echo>
+        <exec output="${log.dir}/install-emptydb.out" failOnError="true" executable="psql"><arg line="-q -U ${db.username} -d ${db.name} -f ${sql.file}"/></exec>
+        <echo> >>> ${sql.file} loaded into DB ${db.name}</echo>
+    </target>
+
+    <target name="install-refdatadb" description="Install db with ref data." depends="">
+        <antcall target="dropdb" />
+        <antcall target="createdb" />
+        <mkdir dir="${log.dir}" />
+        <echo>Installing database with ${sql.data.file}, see ${log.dir}/install-refdatadb.out</echo>
+        <exec output="${log.dir}/install-refdatadb.out" failOnError="true" executable="psql">
+            <arg line="-q -U ${db.username} -d ${db.name} -f ${sql.data.file}" />
+        </exec>
+    </target>
+
+    <target name="installdbexample" description="Install example db." depends="">
+        <antcall target="dropdb" />
+        <antcall target="createdb" />
+        <mkdir dir="${log.dir}" />
+        <echo>Installing database with ${sql.data.example.file}, see ${log.dir}/install-db-example.out</echo>
+        <exec output="${log.dir}/install-db-example.out" failOnError="true" executable="psql">
+            <arg line="-q -U ${db.username} -d ${db.name} -f ${sql.data.example.file}" />
+        </exec>
+    </target>
+
+    <target name="dump-db" description="Dump db into install-hb-withrefdata.sql." depends="">
+        <exec failOnError="true" executable="pg_dump"><arg line="-U ${db.username} --no-owner -f ${sql.data.file} ${db.name}"/></exec>
+        <echo> >>> Database ${db.name} exported into ${sql.data.file}</echo>
+        <antcall target="install-refdatadb" />
+    </target>
+	
+
+    <target name="oradump">   
+        <ora:expdp 
+            failOnError="true" logon="${db.username}/${db.passwordd}"          
+            >
+            <![CDATA[
+            schemas=pimsadmin
+            directory=data_pump_dir
+            dumpfile=pims-database-withrefdata.ora.dmp
+         ]]>
+        </ora:expdp>
+    </target>
+
+    <target name="dumpdbexample" description="Dump db into install-example.sql." depends="">
+        <exec failOnError="true" executable="pg_dump">
+            <arg line="-U ${db.username} --no-owner -f ${sql.data.example.file} ${db.name}" />
+        </exec>
+        <antcall target="installdbexample" />
+    </target>
+    
+    <!-- ============================================================ -->
+    <!-- Import constructs                                              -->
+    <!-- ============================================================ -->
+    
+    <!-- -Dusername=administrator -Dplate=barcode -Dconstructs="C:\Users\cm65\Documents\PiMS community\AlbertEinstein\Copy of SAMS 0658-pSGC-His PROD.csv" -->
+    <!-- constructs, in format used by Albert Einstein College -->
+    <target name="importConstructs" description="Loads details of plasmids">
+        <java  classname="org.pimslims.einstein.Importer" fork="true" failOnError="true" >
+            <classpath refid="project.classpath" />
+            <arg value="${username}" />
+            <arg value="${plate}" />
+            <arg file="${constructs}" /> 
+        </java>
+    </target>
+    
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+    <!-- Clean temp directories -->
+    <target name="clean">
+        <delete dir="${classes}" />
+        <mkdir dir="${classes}" />
+        <delete dir="${testClasses}" />
+        <mkdir dir="${testClasses}" />
+    </target>
+	
+    <target name="cleanLog" description="Clean log dirrectory.">
+        <delete dir="${log.dir}" />
+        <mkdir dir="${log.dir}" />
+    </target>
+
+    <!-- TODO commit, deploy, install conf/Properties  -->
+</project>

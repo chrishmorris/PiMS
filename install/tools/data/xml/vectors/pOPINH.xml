@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINH Vector</name>
+    <details>Derived from pTriEx2/Ampicillin, N-Term cleavable
+        secretion leader and separate cleavable N-term His tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINH" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA">
+        <function>In-Fusion[TM] Multisystem Expression
+            Vector</function>
+        <resistanceDetails name="Ampicillin" />
+        <markerDetails
+            name="N-Term cleavable secretion leader and cleavable N-his tag"
+            details="MGILPSPGMPALLSLVSLLSVLLMGCVA|ETMAHHHHHHSSGLEVLFQ|GP"
+            featureType="Combined Leader sequence and Tag" status="not cleaved" />
+    </sampleComponent>
+</vector>

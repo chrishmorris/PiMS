@@ -1,0 +1,21 @@
+/tools/data/Default-protocols/PiMS_Harvest_Crystal.xml
+Changed:
+Parameter definitions:
+Modified:
+OLD:  <parameterDefinition id="4" name="Crystal size" parameterType="Float" isMandatory="false" displayUnit="mm" label="Size of the crystal" />
+New:  <parameterDefinition id="4" name="Size of crystal" parameterType="String" isMandatory="false" label="Dimensions of the crystal in microns" />
+
+Added:
+  <parameterDefinition id="7" name="Colour" parameterType="String" isMandatory="false" label="Colour of the crystal" />
+  <parameterDefinition id="8" name="Morphology" parameterType="String" isMandatory="false" label="Morphology of the crystal" />
+  <parameterDefinition id="9" name="Quality" parameterType="String" isMandatory="false" label="Crystal quality" />
+
+/tools/data/Default-protocols/PiMS_Diffraction.xml
+Changed:
+Output Sample:
+Added:
+    <outputSample sampleCatNamingSys="default" sampleCatName="Post data collection Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Mounted Crystal" />
+
+/tools/data/Default-protocols
+Added:
+ PiMS_Diffraction_Test.xml 

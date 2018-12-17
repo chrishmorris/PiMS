@@ -1,0 +1,51 @@
+/* for xtalPiMS tables */
+form.list { background-color:transparent; text-align:left; clear:both; width:auto }
+
+
+table.list { border-collapse:collapse; background-color:#ccc; color:#000; 
+    margin: 0px 0px 0px 0px; position:relative; top:0;left:0; }
+
+table.list th, table.list td {  border:1px solid #666666; padding: 2px 4px 2px 4px; 
+    text-align: left; vertical-align: top; color:#000;
+    font-family:arial,helvetica,sans-serif; font-size:95%; }
+
+table.list th { background-color: #999999; color: #000; }
+table.list th a {color: black}
+
+table.list tr.listodd td {
+    background-color: #fff;
+    color: #000;
+}
+table.list tr.listeven td {
+    background-color: #ccc; color: #000;
+}
+
+table.list td input.checkbox { float:right; } 
+
+
+table.list input { width:auto }
+table.list a.popup {font-weight:normal; font-size:85%; color:blue;}
+
+.myheader {
+    border:1px solid #6666ff; 
+    padding: 2px 0px 2px 0px; 
+    text-align: left; 
+    vertical-align: top; 
+    color:#000;
+    font-family:arial,helvetica,sans-serif; 
+    font-size:10pt;
+    font-weight:bold;
+    
+    background-color: #9999ff; 
+}
+
+.mycontent {
+    border:1px solid #6666ff; 
+    padding: 2px 4px 2px 4px; 
+    text-align: left; 
+    vertical-align: top; 
+    color:#000;
+    font-family:arial,helvetica,sans-serif; 
+    font-size:10pt;
+    background-color:#ccc;
+}

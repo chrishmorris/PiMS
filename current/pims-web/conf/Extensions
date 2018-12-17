@@ -1,0 +1,8 @@
+# Properties file containing the Primer extension tags
+forward_tags = \
+Novagen Ek/LIC-F: GACGACGACAAGAT;Novagen Xa/LIC-F: GGTATTGAGGGTCGC;Novagen 3C/LIC-F: CAGGGACCCGGT
+
+reverse_tags = \
+Novagen Ek/LIC-R: GAGGAGAAGCCCGGT;Novagen Xa/LIC-R: AGAGGAGAGTTAGAGCC;Novagen 3C/LIC-R: GGCACCAGAGCGTT
+
+        

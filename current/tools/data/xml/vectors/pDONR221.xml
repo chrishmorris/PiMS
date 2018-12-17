@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pDONR221 Vector</name>
+    <details>Gateway[TM] Entry vector</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="11803-012"
+        dataPageUrl="http://products.invitrogen.com/ivgn/en/US/adirect/invitrogen?cmd=catProductDetail&amp;productID=12536017"
+        supplier="Invitrogen" />
+    <sampleComponent name="pDONR221" componentCategory="Vector"
+        details="4762" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>E.coli Entry Vector</function>
+        <resistanceDetails name="Chloramphenicol"
+            startSeq="1847" endSeq="2506" />
+        <resistanceDetails name="Kanamycin" startSeq="3156"
+            endSeq="3965" />
+        <markerDetails name="attP1 site" startSeq="570"
+            endSeq="801" featureType="recombination site" />
+        <markerDetails name="Chloramphenicol resistance gene (CmR)"
+            startSeq="1606" endSeq="2265" featureType="antibiotic resistance" />
+        <markerDetails name="ccdB gene" startSeq="1197"
+            endSeq="1502" featureType="selectable marker"
+            details="bacterial death gene, exchanged for 
+                gene of interest in the entry clone" />
+        <markerDetails name="attP2 site" startSeq="2754"
+            endSeq="2985" featureType="recombination site" />
+        <markerDetails name="pUC origin" startSeq="4086"
+            endSeq="4759" featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Propagation: One Shot[TM] ccdB Survival[TM] 2 T1R; Non-expression: TOP10, OmniMAX[TM] 2-T1R"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

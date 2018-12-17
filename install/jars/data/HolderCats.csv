@@ -1,0 +1,23 @@
+namingSystem,name,details
+default,96 well plate,PIMS default category
+default,48 well plate,PIMS default category
+default,24 well plate,PIMS default category
+default,48 deep well plate,PIMS default category
+default,96 deep well plate,PIMS default category
+default,card,PIMS default category
+default,Box,PIMS default category
+default,Clone saver card,PIMS default category
+default,Fridge,PIMS default category
+default,Freezer,PIMS default category
+default,Shelf,PIMS default category
+default,Screen,PIMS default category for screen
+default,Additive,Sub category of screen
+default,Optimization,Sub category of screen
+default,SparseMatrix,Sub category of screen
+default,TrialPlate,PIMS default category for Crystal Trial
+default,Tube,"Contains one liquid sample, e.g. Eppendorf"
+default,Pin,Holds a crystal
+default,Location,e.g. a room
+default,Dewar,Contains pucks
+default,Puck,Contains pins
+Default,PCR Strip,Strip of tubes with caps

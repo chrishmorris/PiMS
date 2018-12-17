@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Joel Fillon (EMBL OUTSTATION THE EBI WELLCOME TRUST GENOME CAMPUS) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Polymer.xsd,v 1.5 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="Modification.xsd"/>
+	<xs:include schemaLocation="AnomalousScatterer.xsd"/>
+	<xs:complexType name="Polymer">
+		<xs:annotation>
+			<xs:documentation>Information about the Polymer components contained in the Crystal. A Polymer is characterized by its sequence of bases/residues.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of the Polymer e.g. 'Protein X'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="molecularMass" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>Molecular mass of the Polymer, in Dalton.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="concentration" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>Concentration of the Polymer, in M.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isoelectricPoint" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Isoelectric point (or pI) of the  Polymer i.e. pH at which the Polymer has an equal number of positive and negative charges.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sequence" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Sequence of one-letter code bases/residues, including the possible tags added at the extremities.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sequenceLength" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Number of bases/residues in the sequence, including the length of possible tags added at the extremities.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startTagLength" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of the tag added at the beginning of the sequence.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endTagLength" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Length of the tag added at the end of the sequence.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="modification" type="tns:Modification" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="anomalousScatterer" type="tns:AnomalousScatterer" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

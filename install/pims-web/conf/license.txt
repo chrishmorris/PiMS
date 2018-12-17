@@ -1,0 +1,13 @@
+# PiMS license file
+# only valid if it matches license.sig
+version = 4.5.0
+distribution = commercial
+#maxUsers = 20
+
+salt = sdyg3589jt4tbj663efbo05gbvde68uggw
+
+# TODO could check these, if supplied in license:
+#serverIP = 127.0.0.1
+#serverName = 
+#allow = 192.*.*.*
+#locale = en-us

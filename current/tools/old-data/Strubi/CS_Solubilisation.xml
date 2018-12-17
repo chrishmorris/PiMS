@@ -1,0 +1,14 @@
+<!-- CS Solubilisation protocol xml as flat file -->
+<protocol name="CS Solubilisation Expression" objective="" creationDate="02-02-07" >
+ <experimentType>Refold</experimentType>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="InSoluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="InSoluble Protein" name="Eukaryotic Pellet" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Eukaryotic Supernatant" />
+ 
+ <parameterDefinitions>
+ </parameterDefinitions>
+ 
+</protocol>

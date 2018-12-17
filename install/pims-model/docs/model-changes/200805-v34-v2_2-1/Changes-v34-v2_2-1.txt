@@ -1,0 +1,69 @@
+================================================================================
+v2.2-1
+DATA MODEL CHANGES 34
+Small changes from issue tracker (not involving roles)
+================================================================================
+DM Changes Agreed - Anne (implemented revision 14610)
+================================================================================
+x PIMS-1653 DbRef.code has limitation of 32 characters which is not sufficient to record some databases accessions
+>>> change data type from VARCHAR(32) to VARCHAR(80) for dbRef.DbRef.code
+
+x PIMS-1662 DM-level date/time
+>>> replace java.sql.Timestamp into java.util.Calendar to be able to add a timezone 
+>>> add timezone into timestamp in 42 places e.g. annotation.Annotation.date become annotation.Annotation.calendar
+>>> 21 matches in mapping files: Annotation; ConferenceCitation; DropAnnotation; 
+    Image; Experiment; ExperimentGroup; Holder; HolderLocation; PersonInGroup; Protocol
+    Sample; Milestone; Project
+
+x PIMS-1840 The person/creator of crystallization.Image should be nullable
+>>> change not-null="true" to not-null="false" for crystallization.Image.creator
+
+x PIMS-1996 the "why chosen" of target should not be mandatory
+>>> change not-null="true" to not-null="false" for target.Target.whyChosen
+
+x PIMS-1512 Experiment Status
+>>> add value "unknown" into the list of possible values of Experiment.experiment.status
+--> TODO: use null for unspecified in db and change getter to return empty string when null
+
+x PIMS-389 Reagent shelf life
+>>> add attribute useByDate into class sample.Sample of type Calendar
+
+x PIMS-1441 Constraint needed that start date is before end date
+>>> add constraint end_date_ge_start_date (ge = greater than or equals to) on experiment.Experiment.endDate
+
+x replace meta attribute contraints by constraints
+
+================================================================================
+Code Changes Agreed - Bill
+================================================================================
+x PIMS-1980 Improve performance by indexing foreign key relationships
+- PIMS-450 Convenience methods for ModelObject
+- PIMS-1116 seperate upgrader from DM project
+x PIMS-1687 Duplicates of sample components are displayed in ChooseForCreate search results when 'search in all fields' is used
+
+================================================================================
+Deferred - still under discussion
+================================================================================
+- PIMS-1417 Experiment.protocol should be required (2.2)
+>>> change not-null="false" to not-null="true" for experiment.Experiment.protocol
+look @ email discussion
+
+- PIMS-1559 Remove links to admin-only pages (2.2)
+>>> Need some more thought on reference data
+>>> Distinction can be made based on table populated or not when install PiMS e.g. chemical data
+>>> If reference data + referenced, should not be editable because has history data linked to it
+
+- PIMS-1956 the behaviours of hibernate cache should be reviewed (4.0)
+>>> 2 levels of cache - no performance problem is labPiMS
+>>> need to see the benefits because sometimes more troubles - get test setup to see the performance (Bill)
+
+- PIMS-536 MetaAttribute.getConstraint does not report uniqueness constraints (4.0)
+>>> need change in generation template
+
+- PIMS-571 role should have an bollean attribute to tell the access right should be check or not (3.0)
+>>> clear example needed e.g. link to AccessObject- Bill to provide
+
+
+--- Reviewed by video conference on Fri 16th May with Anne, Bill, Chris and Jon.
+
+[-] open; [x] resolved; [o] won't fix

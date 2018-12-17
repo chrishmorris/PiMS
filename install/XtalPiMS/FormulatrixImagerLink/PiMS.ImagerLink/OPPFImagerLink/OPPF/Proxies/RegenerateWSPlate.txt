@@ -1,0 +1,21 @@
+Generated WSPlate proxy code
+============================
+Jon Diprose, 15/08/2011
+
+NB THIS PACKAGE IS FOR THE OLD PLATEDB IMPLEMENTATION - DO NOT USE FOR PIMS!
+
+
+To regenerate OPPF/Proxies/WSPlate.cs wsdl from the webservice:
+
+wsdl /n:OPPF.Proxies http://localhost:8080/axis2/services/WSPlate?wsdl
+
+To regenerate OPPF/Proxies/WSPlate.cs wsdl from a local copy of the wsdl:
+
+wsdl /n:OPPF.Proxies WSPlate.wsdl
+
+
+To set up environment variables:
+"C:\Program Files\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat"
+
+Need to have the following assembly reference:
+System.Net.Services

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+Checkstyle-Configuration: SVN Copy PiMS checkstyle rules
+Description:
+
+-->
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN" "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">    
+    <module name="SuppressionFilter">
+        <property name="file" value="${basedir}/conf/checkstyleSuppressions.xml"/>
+    </module>
+    <module name="StrictDuplicateCode">
+        <property name="severity" value="error"/>
+    </module>
+</module>

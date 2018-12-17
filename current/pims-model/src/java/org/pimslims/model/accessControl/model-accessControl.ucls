@@ -1,0 +1,189 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.accessControl.Permission" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/accessControl/Permission.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="41" y="307" width="131" height="151"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.accessControl.User" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="41" y="37" width="119" height="103"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.accessControl.UserGroup" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/accessControl/UserGroup.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="41" y="180" width="119" height="87"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.Person" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="577" y="109" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.AccessObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="394" y="493" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.LabBookEntry" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="749" y="484" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.SystemClass" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="398" y="353" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.accessControl.UserGroup" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/UserGroup.java" binary="false">      
+      <attribute name="header"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>    
+    <bendpoint x="129" y="156"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.accessControl.Permission" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/Permission.java" binary="false">      
+      <attribute name="userGroup"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.UserGroup" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/UserGroup.java" binary="false">      
+      <attribute name="permissions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false">      
+      <attribute name="permissions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.Permission" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/Permission.java" binary="false">      
+      <attribute name="accessObject"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.SystemClass" 
+      file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false">      
+      <attribute name="person"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false">      
+      <attribute name="users"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false">      
+      <attribute name="lastEditor"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.SystemClass" 
+      file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.accessControl.UserGroup" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/UserGroup.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.SystemClass" 
+      file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.accessControl.Permission" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/Permission.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.SystemClass" 
+      file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false">      
+      <attribute name="access"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.people.Person" 
+      file="/pims-model/src/java/org/pimslims/model/people/Person.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.accessControl.UserGroup" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/UserGroup.java" binary="false">      
+      <attribute name="memberUsers"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false">      
+      <attribute name="userGroups"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>    
+    <bendpoint x="50" y="154"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false">      
+      <attribute name="creator"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>    
+    <bendpoint x="423" y="231"/>  
+  </association>
+</class-diagram>

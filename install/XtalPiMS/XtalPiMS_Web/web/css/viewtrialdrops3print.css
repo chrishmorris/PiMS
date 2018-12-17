@@ -1,0 +1,17 @@
+/* in use */
+
+.timecourseimage img { float:none; }
+.playericon { float:none; }
+#wells span { float:none; }
+* { float:none; }
+#infobar { position:static; float:none; width:100%; }
+#dropview { position:relative; margin:0; width:100%; overflow:visible; max-height:600px; }
+#dropview_im { max-width:99%; width:75%; height:75%; z-index:999; }
+#information { width:99%; }
+#navigation { display:none; }
+#timecoursebox { display:none;  }
+
+
+
+
+.noprint { display:none; }

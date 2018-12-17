@@ -1,0 +1,114 @@
+
+/*
+ * header.css
+ *
+ * Styles for the page header - everything from the menu bar up.
+ * DO NOT modify this file UNLESS you are modfying the page header
+ * - create another CSS file instead.
+ *
+ */
+ 
+html,body   { background-color: #fff; color: #000; margin: 0; padding: 0;
+              arial,helvetica,sans-serif; }
+a, a:link   { color:#ff5900; }
+a:hover   { color:#30bbff; }
+/*a:visited   { color:#000; }*/
+.error      { font-weight: bold; color: red }
+
+h2,h3,h4    { background-color:transparent; color:black; font-family:arial,helvetica,sans-serif; }
+h3          { font-size:1em; }
+  
+#header     { background-color:#AAD28C; color:#000; position:relative;top:0;z-index:50; border-bottom: 10px solid rgb(0,0,0);}
+
+form#perspective { margin-bottom:0px; /*background:url("../../images/header_background.png") no-repeat scroll 0 0 / 53% 105% #FFFFFF;*/ background-color: white; font-family:arial,helvetica,sans-serif;font-size: 0.8em; text-align: center;  } /* transparent overrides default */
+form#perspective select {width:auto;  font-size: 0.8em;}
+form#perspective img { vertical-align: middle; margin: 0 -50px 0 -500px;}
+#quicksearchlink { color:#000; font-weight:bold; text-decoration:none; }
+
+#contentWrapper { z-index:2; margin-left: .75em; margin-right: 0.75em; }
+#contentWrapper li {  }
+div#content     { z-index:0; margin: 0 0 1.6em; }
+
+
+/* Main menu styles */
+ul#menu                 { list-style:none; padding-bottom: 0.9em; z-index:9; text-align:center; margin-top:0}
+ul#menu li a:link, 
+ul#menu li a:visited    { color:#000;text-decoration:none; width:100%;  padding:.97em 1.1em .97em 1.1em; width:auto; }
+ul#menu li a:hover      { background-color:#6DB81E; color:#000; }
+ul#menu li              { font-family:arial,helvetica,sans-serif; display:inline; position:relative;top:15.5px; font-weight:bold; }
+
+/* Sub-menu styles */
+ul#menu li ul.submenu               { z-index:99; position:absolute; top:2.15em; left:0; display:none; min-width: 13em; background-color:#6DB81E; margin:0; padding:0;
+                                      border-bottom:0px solid #999; margin-bottom: 0.5em; }
+ul#menu li ul.submenu li            { display:block; width:100%; background-color:#6DB81E; margin:0; padding:0; } 
+ul#menu li ul.submenu li a, 
+ul#menu li ul.submenu li a:link, 
+ul#menu li ul.submenu li a:visited  { color:#000; border-left:4px solid #6DB81E; font-weight:normal;
+                                      display:block; margin:0; padding:1px 0 0 0.5em; text-align: left; } 
+ul#menu li ul.submenu li a:hover    { background-color:#AAD28B;color: #000; text-align: left; display:block; border-left:4px solid #547730; }
+ul#menu li ul.submenu li span.submenuitem 
+                                    { color:#666; display:block; padding:1px 0 1px 0.5em; width:auto; margin:0; }
+
+ul#menu li ul.submenu li span.linkwithicon { border-left:4px solid #6DB81E; font-weight:normal;
+                                      display: block; background-color:#6DB81E; color:#000; margin:0; padding:0; text-align: left; }
+/*ul#menu li ul.submenu li span.linkwithicon:hover { border-left:4px solid #547730; text-align: left; display:inline;
+                                                   background-color:#AAD28B; color:#003; } */
+ul#menu li ul.submenu li span.linkwithicon a:link, 
+ul#menu li ul.submenu li span.linkwithicon a:visited  { border-left:0; display:inline; width:auto; }
+ul#menu li ul.submenu li.lastinsection { border-bottom:1px solid #999;
+                                      margin-bottom:0.25em; padding-bottom:0.25em; }
+
+
+div.main_footer {clear:both; background-color:#AAD28C; border-top:10px solid #000; font-size:8pt; font-family:verdana,arial,helvetica,sans-serif;
+                 padding-top:1.5em; padding-bottom:1.5em; width:100%; text-align:center; }
+                 
+
+/*
+ * This div should not appear on the page unless attribute selectors fail.
+ * Such a failure is caused in IE7 when, e.g., content precedes the doctype.
+ */
+div#doctypesniffer { border:2px solid red; color:red; background-color:#fcc; text-align:center; font-weight:bold;  }
+div[id="doctypesniffer"] { display:none }
+
+
+/* Modal window and modal dialog - HTML is in footer, so CSS in headerfooter.css */
+#modalWindow_mask { display:none; z-index:98; height:100%; width:100%; position:absolute; top:0; left:0; background-color:#666; opacity:0.95; filter:alpha(opacity=95) }
+#modalWindow_window { display:none; z-index:99; height:90%; width:95%; position:absolute; top:5%; left:2.5%; opacity:1; filter:alpha(opacity=100) }
+#modalWindow_window div.boxheader { position:relative;top:0; }
+#modalWindow_window span.extraheader { position:absolute; right:0.5em; }
+#modalWindow_close { position:absolute; right:0; top:0; cursor:pointer; }
+#modalWindow_iframe_iframe { background-color:white; overflow:auto; border:0; }
+#modalWindow_dialog { display:none; z-index:99; width:30%; position:absolute; top:45%; left:35%; opacity:1; filter:alpha(opacity=100) }
+#modalWindow_dialog_body { padding:1em; text-align:center; font-weight:bold; font-family:arial,helvetica,sans-serif; }
+
+/* Quick search window */
+#quickSearch_window { display:none; z-index:99; height:15em; width:34.5%; position:absolute; top:5%; right:2.5%; opacity:1; filter:alpha(opacity=100) }
+#quickSearch_window div.boxheader {   }
+#quickSearch_window span.extraheader {   right:0.5em; }
+#quickSearch_close { position:absolute; right:0; top:0; cursor:pointer; }
+#quickSearch_iframe_iframe { background-color:white; overflow:auto; border:0; }
+
+form.quicksearch { margin:0em 0 0 0; padding:0; font-family:verdana,arial,helvetica,sans-serif; }
+form.quicksearch p { margin:0; text-align:center; }
+form.quicksearch ul { list-style-type:none; font-size:90%; padding:0; margin:0; }
+body.bricks form.quicksearch ul { list-style-type:none; }
+form.quicksearch li { width:49%; float:left; margin:0.1em 0;}
+form.quicksearch li img { position:relative; top:2px; }
+form.quicksearch #quicksearchfields { clear:both; padding-top:1em; padding-left: 1em; }
+
+
+/* Context menu styles */
+div.contextmenu { display:inline; overflow:visible; }
+div.contextmenu_menu { top:-2px; left:-2px; border:2px solid #006;
+                      background-color:white; width:10em; padding:0.25em;
+                      display:none; z-index:99 }
+div#contextmenu_real { display:none; position:absolute; z-index:99; top:50px; left:50px; max-width:200px;
+                       border: 1px solid #999999; box-shadow: 0 8px 6px -6px #B4B4B4; background-color:#fff;
+                       font-family:arial,helvetica,sans-serif; font-size:80%; padding-bottom: 0.5em; }
+div#contextmenu_real img { border:0; margin-right:5px; }
+div#contextmenu_real a {display:block; padding:0.1em 0.2em}
+div#contextmenu_real a:hover { background-color: #646464; }
+div#contextmenu_real .contextmenu_real_property { background-color: #646464; color: white; padding: 0.2em; }
+div#contextmenu_real hr { border: 0; }
+
+

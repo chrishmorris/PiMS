@@ -1,0 +1,4 @@
+- Change data type of Annotation.name from Word to Line
+- Change attr name pH to ph in Sample.Sample
+- Change attr name gNum to gnum in Protocol.CentrifugationStep
+- Add attr keywords in RefSampleComponent.AsbtractComponent

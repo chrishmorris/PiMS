@@ -1,0 +1,301 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.target.Milestone" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/Milestone.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="111" y="225" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.Target" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="381" y="191" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.TargetGroup" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/TargetGroup.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="638" y="68" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.Project" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/Project.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="829" y="172" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.ResearchObjectiveElement" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="749" y="648" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.Molecule" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="872" y="350" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.ResearchObjective" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="411" y="725" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.Experiment" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="109" y="549" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.Alias" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/Alias.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="184" y="93" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.SimilarityHit" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/SimilarityHit.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="328" y="418" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.ExternalDbLink" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/ExternalDbLink.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="507" y="502" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Project" 
+      file="/pims-model/src/java/org/pimslims/model/target/Project.java" binary="false">      
+      <attribute name="subProjects"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Project" 
+      file="/pims-model/src/java/org/pimslims/model/target/Project.java" binary="false">      
+      <attribute name="project"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="trialMolecules"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="relatedResearchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Alias" 
+      file="/pims-model/src/java/org/pimslims/model/target/Alias.java" binary="false">      
+      <attribute name="target"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="aliases"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.target.SimilarityHit" 
+      file="/pims-model/src/java/org/pimslims/model/target/SimilarityHit.java" binary="false">      
+      <attribute name="externalDbLink"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.ExternalDbLink" 
+      file="/pims-model/src/java/org/pimslims/model/core/ExternalDbLink.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="nucleicAcids"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="nucTargets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.target.SimilarityHit" 
+      file="/pims-model/src/java/org/pimslims/model/target/SimilarityHit.java" binary="false">      
+      <attribute name="target"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.TargetGroup" 
+      file="/pims-model/src/java/org/pimslims/model/target/TargetGroup.java" binary="false">      
+      <attribute name="subTargetGroups"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.TargetGroup" 
+      file="/pims-model/src/java/org/pimslims/model/target/TargetGroup.java" binary="false">      
+      <attribute name="targetGroup"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Milestone" 
+      file="/pims-model/src/java/org/pimslims/model/target/Milestone.java" binary="false">      
+      <attribute name="target"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="milestones"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="milestones"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Milestone" 
+      file="/pims-model/src/java/org/pimslims/model/target/Milestone.java" binary="false">      
+      <attribute name="experiment"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="molecule"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="researchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>    
+    <bendpoint x="983" y="561"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Project" 
+      file="/pims-model/src/java/org/pimslims/model/target/Project.java" binary="false">      
+      <attribute name="targets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="projects"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="researchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="target"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjective" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false">      
+      <attribute name="experiments"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.Experiment" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Experiment.java" binary="false">      
+      <attribute name="researchObjective"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="protein"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="protTargets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>    
+    <bendpoint x="585" y="323"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="targetGroups"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.TargetGroup" 
+      file="/pims-model/src/java/org/pimslims/model/target/TargetGroup.java" binary="false">      
+      <attribute name="targets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="researchObjective"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjective" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false">      
+      <attribute name="researchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>
+</class-diagram>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: CrystalShippingReceived.xsd,v 1.6 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="Laboratory.xsd"/>
+	<xs:include schemaLocation="ReceivedAgent.xsd"/>
+	<xs:complexType name="CrystalShippingReceived">
+		<xs:annotation>
+			<xs:documentation>Acknowledgment of the Protein reception sent by the Crystallisation center to the Web portal.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="receivedAgent" type="tns:ReceivedAgent"/>
+			<xs:element name="Status" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="crystalShippingReceived" type="tns:CrystalShippingReceived"/>
+</xs:schema>

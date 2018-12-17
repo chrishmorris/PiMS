@@ -1,0 +1,22 @@
+Data
+Reagents.csv
+Added: RefSamples used by OPPF
+
+New: BIO-X-ACT Short Mix,,Enzyme -polymerase,PCR,BIO-25025,Bioline,http://www.bioline.com/h_prod_detail.asp?user_prodname=BIO%2DX%2DACT%99+Short+Mix
+
+New: KOD Reaction Buffer 1,included in KOD HiFi Kit,Buffer,PCR,71085,Novagen,http://www.merckbiosciences.co.uk/product/71085
+New: KOD Reaction Buffer 2,included in KOD HiFi Kit,Buffer,PCR,71085,Novagen,http://www.merckbiosciences.co.uk/product/71085
+New: KOD Hot Start Buffer,included in KOD Hot Start Kit,Buffer,PCR,71086,Novagen,http://www.merckbiosciences.co.uk/product/71086
+New: BIO-X-ACT Buffer,,Buffer,PCR,BIO-25025,Bioline,http://www.bioline.com/h_prod_detail.asp?user_prodname=BIO%2DX%2DACT%99+Short+Mix
+
+New: KOD dNTP mix,included in KOD HiFi Kit,Nucleotide,PCR,71086,Novagen,http://www.merckbiosciences.co.uk/product/71086
+New: BIO-X-ACT dNTP Mix,,Nucleotide,PCR,BIO-39028,Bioline,http://www.bioline.com/h_prod_detail.asp?user_prodname=dNTP+Mix
+
+New: In-Fusion CF Dry-Down PCR Cloning Kit,,Cloning kit,Cloning / Ligation,639605,Clontech,http://www.clontech.com/products/detail.asp?product_id=10406&tabno=2
+
+New: TAM1 Competent E.Coli,,Competent cells,Transformation,11596,ActiveMotif,http://www.activemotif.com/catalog/transfect_expr/rapidtrans
+New: Multishot Stripwell OmniMAX,,Competent cells,Transformation,440011,Invitrogen,http://www.invitrogen.com
+
+New: Agencourt AMPure 60ml Kit,,Nucleic acid purification kit,DNA purification,000130,Agencourt Bioscience Corporation,http://www.agencourt.com/products/spri_reagents/ampure/
+
+New: Power Broth,,Culture media,Culture,MD12-106-6,Molecular Dimension Limited,http://www.moleculardimensions.com

@@ -1,0 +1,24 @@
+<!-- PiMS Harvest Crystal protocol xml as flat file -->
+<protocol name="PiMS Harvest Crystal" objective="Mounting a crystal onto a pin" creationDate="08-06-10" remarks="Default set of protocols for PiMS" details="Use output from xtalPiMS Plate" >
+ <experimentType>Mount crystal</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="TrialDrop" amount="0.0" unit="L" displayUnit="uL" refSample="Crystal" name="Crystal in drop" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Mounted Crystal" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Cryroprotectant" parameterType="String" isMandatory="false" label="Name of any cryoprotectant used" />
+  <parameterDefinition id="2" name="Cryoprotectant conc." parameterType="String" isMandatory="false" label="Concentration of the cryoprotectant" />
+  <parameterDefinition id="3" name="Cryosolution ice crystals?" parameterType="Boolean" defaultValue="false" isMandatory="false" label="Test cryo solution for ice crystals" />
+  <parameterDefinition id="4" name="Size of crystal" parameterType="String" isMandatory="false" label="Dimensions of the crystal in microns" />
+  <parameterDefinition id="5" name="Loop diameter" parameterType="Float" isMandatory="false" displayUnit="mm" label="Diameter of the loop" />
+  <parameterDefinition id="6" name="Other Additives" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="7" name="Colour" parameterType="String" isMandatory="false" label="Colour of the crystal" />
+  <parameterDefinition id="8" name="Morphology" parameterType="String" isMandatory="false" label="Morphology of the crystal" />
+  <parameterDefinition id="9" name="Quality" parameterType="String" isMandatory="false" label="Crystal quality" />
+ </parameterDefinitions>
+
+</protocol>
+

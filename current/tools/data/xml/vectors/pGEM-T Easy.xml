@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pGEM-T Easy Vector</name>
+    <details>TA cloning and inducible expression of PCR products</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="A1360"
+        dataPageUrl="http://www.promega.com/tbs/tm042/tm042.pdf"
+        supplier="Promega" />
+    <sampleComponent name="pGEM-T Easy" componentCategory="Vector"
+        details="3016bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>TA cloning vector for PCR products</function>
+        <resistanceDetails name="Ampicillin" startSeq="2198"
+            endSeq="1338" />
+        <promoterDetails name="T7 Promoter" startSeq="3000"
+            endSeq="2" />
+        <promoterDetails name="SP6 Promoter" startSeq="159"
+            endSeq="142" />
+        <markerDetails name="Multiple Cloning sites ApaI-NsiI"
+            details="ApaI-AatII-SphI-BstZI-NcoI-BstZI-NotI-SacI-EcoRI-SpeI-EcoRI-NotI-BstZI-PstI-SalI-NdeI-SacI-BstXI-NsiI" startSeq="10" endSeq="129"
+            featureType="MCS" />
+        <markerDetails name="pBR322 origin" startSeq="1183" endSeq="564"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="JM109"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

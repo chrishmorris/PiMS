@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: SVN Copy PiMS checkstyle rules
+    Description: none
+-->
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN" "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">
+    <property name="severity" value="warning"/>
+    <module name="TreeWalker">
+        <property name="charset" value="UTF-8"/>
+        <module name="FileContentsHolder"/>
+        <module name="ExecutableStatementCount">
+            <property name="max" value="100"/>
+            <property name="tokens" value="INSTANCE_INIT,STATIC_INIT,METHOD_DEF,CTOR_DEF"/>
+        </module>
+        <module name="FileLength"/>
+        <module name="MethodLength"/>
+        <module name="ParameterNumber">
+            <property name="tokens" value="METHOD_DEF"/>
+        </module>
+        <module name="EmptyBlock">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Usually an error"/>
+            <property name="severity" value="info"/>
+            <property name="tokens" value="LITERAL_CATCH"/>
+        </module>
+        <module name="EmptyBlock">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="a typo or worse"/>
+            <property name="tokens" value="LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_IF,LITERAL_FOR,LITERAL_TRY,LITERAL_WHILE,STATIC_INIT"/>
+        </module>
+        <module name="CovariantEquals"/>
+        <module name="DefaultComesLast"/>
+        <module name="DeclarationOrder">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="DoubleCheckedLocking"/>
+        <module name="EmptyStatement">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="EqualsHashCode">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ExplicitInitialization">
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="FallThrough">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="FinalLocalVariable">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Remove this one, it is 75% of our messages"/>
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
+            <property name="severity" value="ignore"/>
+            <property name="tokens" value="PARAMETER_DEF,VARIABLE_DEF"/>
+        </module>
+        <module name="HiddenField">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="a common idiom conflicts with this"/>
+            <property name="severity" value="info"/>
+            <property name="tokens" value="VARIABLE_DEF"/>
+        </module>
+        <module name="IllegalInstantiation"/>
+        <module name="IllegalCatch">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="IllegalThrows">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="IllegalToken">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
+            <property name="severity" value="ignore"/>
+            <property name="tokens" value="POST_INC,POST_DEC,LITERAL_SWITCH"/>
+        </module>
+        <module name="IllegalTokenText">
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="IllegalType">
+            <property name="severity" value="info"/>
+            <property name="tokens" value="METHOD_DEF,PARAMETER_DEF,VARIABLE_DEF"/>
+            <property name="format" value="^-*$"/>
+        </module>
+        <module name="InnerAssignment">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="JUnitTestCase">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Reinstate this, but only in TestSource"/>
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="MagicNumber">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="MissingCtor">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="MissingSwitchDefault"/>
+        <module name="ModifiedControlVariable">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="MultipleStringLiterals">
+            <property name="severity" value="info"/>
+            <property name="allowedDuplicates" value="3"/>
+            <property name="ignoreStringsRegexp" value="^&quot;test&quot;$|^&quot;&quot;$"/>
+        </module>
+        <module name="MultipleVariableDeclarations">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="NestedIfDepth">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="reinstate this later"/>
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="NestedTryDepth"/>
+        <module name="PackageDeclaration"/>
+        <module name="ParameterAssignment">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="RedundantThrows">
+            <property name="logLoadErrors" value="true"/>
+            <property name="suppressLoadErrors" value="true"/>
+        </module>
+        <module name="RequireThis">
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="ReturnCount">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="our doGet methods have many early returns after error checks"/>
+            <property name="severity" value="info"/>
+            <property name="max" value="7"/>
+        </module>
+        <module name="SimplifyBooleanExpression">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="SimplifyBooleanReturn">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="StringLiteralEquality">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="SuperClone">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="SuperFinalize">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ArrayTrailingComma">
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="UnnecessaryParentheses">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="DesignForExtension">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="FinalClass">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="HideUtilityClassConstructor">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="InterfaceIsType">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="MutableException">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="ThrowsCount">
+            <property name="max" value="6"/>
+        </module>
+        <module name="VisibilityModifier">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="unfortunately a common weakness in PiMS, too common to have a warning"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="BooleanExpressionComplexity">
+            <property name="max" value="10"/>
+        </module>
+        <module name="ClassDataAbstractionCoupling">
+            <property name="max" value="14"/>
+        </module>
+        <module name="ClassFanOutComplexity">
+            <property name="max" value="30"/>
+        </module>
+        <module name="CyclomaticComplexity">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="reduce this again later"/>
+            <property name="max" value="30"/>
+        </module>
+        <module name="JavaNCSS">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="reduce later"/>
+            <property name="methodMaximum" value="100"/>
+        </module>
+        <module name="NPathComplexity">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="change back down to 200 later"/>
+            <property name="max" value="2000"/>
+        </module>
+        <module name="FinalParameters">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="5000 errors, too many to be worth fixing"/>
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
+            <property name="severity" value="ignore"/>
+            <property name="tokens" value="METHOD_DEF,CTOR_DEF,LITERAL_CATCH"/>
+        </module>
+        <module name="GenericIllegalRegexp">
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="ImportOrder">
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="j2ee.FinalStatic">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Mutable statics are rarely a good idea, even for a cache."/>
+        </module>
+        <module name="ClassFanOutComplexity">
+            <property name="max" value="30"/>
+        </module>
+        <module name="DeclarationOrder">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="ModifiedControlVariable">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="ImportOrder">
+            <property name="severity" value="ignore"/>
+        </module>
+        <module name="TabCharacter">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="AnonInnerLength"/>
+        <module name="AvoidNestedBlocks">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="CyclomaticComplexity">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="later raise this to warning"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="JavaNCSS">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="later raise this to warning"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="NPathComplexity">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="later raise this to warning"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="ClassFanOutComplexity">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="later raise this to warning"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="UpperEll"/>
+        <module name="JavadocMethod">
+            <property name="severity" value="ignore"/>
+            <property name="scope" value="package"/>
+            <property name="logLoadErrors" value="true"/>
+            <property name="suppressLoadErrors" value="true"/>
+        </module>
+        <module name="NeedBraces">
+            <property name="severity" value="error"/>
+        </module>
+    </module>
+    <module name="StrictDuplicateCode">
+        <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="reduce the number of lines later"/>
+        <property name="severity" value="error"/>
+        <property name="min" value="40"/>
+        <property name="charset" value="UTF-8"/>
+    </module>
+    <module name="SuppressionFilter">
+        <property name="file" value="${basedir}/conf/checkstyleSuppressions.xml"/>
+    </module>
+    <module name="SuppressionCommentFilter"/>
+    <module name="StrictDuplicateCode">
+        <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="later raise this to warning"/>
+        <property name="severity" value="info"/>
+    </module>
+</module>

@@ -1,0 +1,13 @@
+Data
+
+SampleCats.csv
+Added:
+default,Synthetic gene,A synthesized gene
+
+ExperimentTypes.csv
+Added:
+default,Synthetic gene,,,Details for a Synthetic gene
+
+Default-protocols
+Added:
+PiMS_Synthetic_gene.xml

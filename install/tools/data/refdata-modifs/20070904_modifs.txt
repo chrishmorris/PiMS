@@ -1,0 +1,48 @@
+Protocols
+  Edited protocols to use Cell Line for 'native' or untransformed cells and Transformed 
+  cells for cells containing a plasmid
+  
+GLASGOW_Growth_Conditions.xml
+GLASGOW_HTP_Expression_Data_Collection.xml
+GLASGOW_Membrane_Preparation.xml
+GLASGOW_Plae_Culture.xml
+GLASGOW_Starter_Cultures.xml
+GLASGOW_Transformation.xml
+GLASGOW_Trial_Expression.xml
+OPPF_PlasmidPrep.xml
+OPPF_Transformation.xml
+SSPF_AutoInduction_Trial_Expression.xml
+SSPF_Inducible_Trial_Expression.xml
+SSPF_Large_Scale_Auto_Expression.xml
+SSPF_Large_Scale_Inducible_Expression.xml
+YSBL_Large_Scale_Expression1.xml
+YSBL_Purification1.xml
+YSBL_Purification2.xml
+YSBL_Purification3.xml
+PIMS_LIC_PlateCulture.xml
+PIMS_LIC_Transformation.xml
+PIMS_PlasmidPrep.xml
+PIMS_Transformation.xml
+PIMS_TrialExpression.xml
+PIMS_miniprep.xml
+PIMS_Culture.xml
+PIMS_PlateCulture.xml
+SSPF_Large_Scale_Expression1.xml
+SSPF_Purification1.xml
+
+Updated SampleCats.csv: edited description for Cell line and added Transformed cells
+
+SampleCats.csv
+Edited description for Cell line and added Transformed cells
+Added: default,Transformed cells,Cell or cells which have been modified to contain foreign DNA such as a plasmid: e.g. E.coli transformed with pDEST17
+Modified: old: default,Cell Line,"Cell or cells: Bacterial, Yeast, Eukaryotic, etc."
+          new: default,Cell Line,"Untransformed or native cell or cells: Bacterial, Yeast, Eukaryotic, etc."
+
+ExperimentTypes.csv
+Added: default,Crystallization plate inspection,Viewing a crystallization plate
+
+MergedExperimentTypes.csv
+Added: ,,NEW,default,Crystallization plate inspection,",Viewing a crystallization plate"
+
+StatusToExperimentTypes.csv
+Addded: Crystallization plate inspection,In Crystallization         

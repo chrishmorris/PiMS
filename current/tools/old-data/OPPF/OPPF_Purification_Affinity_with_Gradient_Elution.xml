@@ -1,0 +1,38 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF Purification Affinity with Gradient Elution" objective="Purification of Target Protein" creationDate="23-05-08" remarks="Based on Lab activities requirements from OPPF" details="Purification of Target Protein">
+ <experimentType>Protein purification</experimentType>
+ 
+ <parameterDefinitions>
+ 
+  <parameterDefinition id="16" name="A Column 1" parameterType="String" possibleValues="1ml HisTrap FF;1ml GSTrap FF"/>
+  <parameterDefinition id="18" name="B Purification Notes" parameterType="String" isMandatory="false" /> 
+  
+  <parameterDefinition id="1" name="C Fractions Pooled Pool 1" parameterType="String" />
+  <parameterDefinition id="2" name="D Volume of Pool Pool 1" parameterType="Float" displayUnit="mL" />
+  <parameterDefinition id="3" name="E [Protein of Pool] Pool 1" parameterType="Float" displayUnit="mg/ml" />
+  <parameterDefinition id="4" name="F Yield Pool 1" parameterType="Float" displayUnit="mg" />
+  <parameterDefinition id="5" name="G Oligomeric State Pool 1" parameterType="String" />
+  
+  <parameterDefinition id="6" name="H Fractions Pooled Pool 2" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="7" name="I Volume of Pool Pool 2" parameterType="Float" isMandatory="false" displayUnit="mL" />
+  <parameterDefinition id="8" name="J [Protein of Pool] Pool 2" parameterType="Float" isMandatory="false" displayUnit="mg/ml" />
+  <parameterDefinition id="9" name="K Yield Pool 2" parameterType="Float" isMandatory="false" displayUnit="mg" />
+  <parameterDefinition id="10" name="L Oligomeric State Pool 2" parameterType="String" isMandatory="false" />
+  
+  <parameterDefinition id="11" name="M Fractions Pooled Pool 3" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="12" name="N Volume of Pool Pool 3" parameterType="Float" isMandatory="false" displayUnit="mL" />
+  <parameterDefinition id="13" name="O [Protein of Pool] Pool 3" parameterType="Float" isMandatory="false" displayUnit="mg/ml" />
+  <parameterDefinition id="14" name="P Yield Pool 3" parameterType="Float" isMandatory="false" displayUnit="mg" />
+  <parameterDefinition id="15" name="Q Oligomeric State Pool 3" parameterType="String" isMandatory="false" />
+  
+ </parameterDefinitions>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" unit="L" displayUnit="mL" refSample="Buffer" name="Affinity Wash Buffer" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" unit="L" displayUnit="mL" refSample="Buffer" name="Affinity Elution Buffer" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="0.008" unit="L" displayUnit="mL" refSample="Supernatant" name="Supernatant"/>
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="0.00008" unit="L" displayUnit="mL" refSample="Purified Protein" name="Purified Protein"/>
+
+</protocol>

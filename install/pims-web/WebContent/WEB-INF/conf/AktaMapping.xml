@@ -1,0 +1,42 @@
+<!-- obsolete -->
+<AktaMapping>
+	<Parameter akta="Fractions" pool="1" >Sample1 Fractions</Parameter>
+	<Parameter akta="Fractions" pool="2" >Sample2 Fractions</Parameter>
+	<Parameter akta="Fractions" pool="3" >Sample3 Fractions</Parameter>
+
+	<Parameter akta="Fractions" pool="1" >Fractions Pooled Pool 1</Parameter>
+	<Parameter akta="Fractions" pool="2" >Fractions Pooled Pool 2</Parameter>
+	<Parameter akta="Fractions" pool="3" >Fractions Pooled Pool 3</Parameter>
+
+        <Parameter akta="Fractions" pool="1" >D Fractions Pooled Pool 1</Parameter>
+	<Parameter akta="Fractions" pool="2" >I Fractions Pooled Pool 2</Parameter>
+	<Parameter akta="Fractions" pool="3" >N Fractions Pooled Pool 3</Parameter>
+
+        <Parameter akta="Volume" pool="1" >Volume of Pool Pool 1</Parameter>
+	<Parameter akta="Volume" pool="2" >Volume of Pool Pool 2</Parameter>
+	<Parameter akta="Volume" pool="3" >Volume of Pool Pool 3</Parameter>
+
+        <Parameter akta="Volume" pool="1" >E Volume of Pool Pool 1</Parameter>
+	<Parameter akta="Volume" pool="2" >J Volume of Pool Pool 2</Parameter>
+	<Parameter akta="Volume" pool="3" >O Volume of Pool Pool 3</Parameter>
+
+	<Parameter akta="Yield" pool="1" >Yield Pool 1</Parameter>
+	<Parameter akta="Yield" pool="2" >Yield Pool 2</Parameter>
+	<Parameter akta="Yield" pool="3" >Yield Pool 3</Parameter>
+
+        <Parameter akta="Yield" pool="1" >G Yield Pool 1</Parameter>
+	<Parameter akta="Yield" pool="2" >L Yield Pool 2</Parameter>
+	<Parameter akta="Yield" pool="3" >Q Yield Pool 3</Parameter>
+
+        <Parameter akta="Protein" pool="1" >[Protein of Pool] Pool 1</Parameter>
+	<Parameter akta="Protein" pool="2" >[Protein of Pool] Pool 2</Parameter>
+	<Parameter akta="Protein" pool="3" >[Protein of Pool] Pool 3</Parameter>
+
+	<Parameter akta="Protein" pool="1" >F [Protein of Pool] Pool 1</Parameter>
+	<Parameter akta="Protein" pool="2" >K [Protein of Pool] Pool 2</Parameter>
+	<Parameter akta="Protein" pool="3" >P [Protein of Pool] Pool 3</Parameter>
+
+        <Parameter akta="Unicorn" >Purification Notes</Parameter>
+	<Parameter akta="Unicorn" >C Purification Notes</Parameter>
+
+</AktaMapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rockstarapps>
+    
+
+
+
+
+
+
+
+
+
+
+<file name="web/js/xpims/DataFilter.js">
+        <min>false</min>
+        <comp>true</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>false</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>false</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>true</removeLogs>
+        <oldFileNames>true</oldFileNames>
+        <dependencies>
+            <file>web/js/xpims/DataFilter.js</file>
+        </dependencies>
+        <properties/>
+    </file>
+</rockstarapps>

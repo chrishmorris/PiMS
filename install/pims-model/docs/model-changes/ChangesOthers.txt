@@ -1,0 +1,137 @@
+================================================================================
+Other Changes
+================================================================================
+--------------------------------------------------------------------------------
+Core
+--------------------------------------------------------------------------------
+ModelObject (MemopsBaseClass)
+Proposed changes.
+(1) rename MemopsBaseClass to BaseClass
+(2) add attributes name, details, createDate
+
+Implementation
+2 hierarchies: Inheritance impl_memopsbaseclass & XML compatibility impl_project
+
+Proposed changes.
+(1) remove impl_project
+
+Application data.
+Multiple tables per type
+
+--------------------------------------------------------------------------------
+Sample
+--------------------------------------------------------------------------------
+refSampleComponent package
+- remove empty tables like RestrictionEnzyme, Construct, Primer and add type in MolComponent that must be specific, with constraint and mandatory
+- remove empty tables like SpecificLabelGroup and IsotopLabel
+- generalise MolCompFeature to handle in one table SpecificLabelGroup, RestrictionEnzyme, Primer and Construct like remarks, notes, features or characteristics.
+
+ComponentCategory
+issue raised by having namingSystem inside the category that adds an extra level of classification in the same table: (i) create constraint to avoid duplicate name with different namingSystem or (ii) remove namingSystem attribute
+2 possibles solutions for reference data:
+(1) curate reference data because you allow data entry with new reference data or
+(2) stop the process if you don't have the reference data and wait until the admin person create the ref data
+need to identify the reference data tables and define the process to decide what to do in case the data is not already there.
+
+AbstractComponent
+merge AbstractComponent with MolComponent and connect ComponentCategory to MolComponent
+Can we just link MolComponent to NaturalSource and remove it from Target?
+
+Synonyms
+AbstractComponent.synonyms should be mandatory
+remove white spaces at the beginning and end of name and synonyms
+need clean up into the synonyms: some have comma, some have white spaces
+how to maintain and synchronise them? If a component name is A with synonym Z, what's happen if I create a component with name Z?
+If there is no specific use of synonyms, then just use keywords and qualified keywords in an extra table RelatedInfo with a type {keyword, synonym, ...}. But if the system automatically recognise synonyms when you enter a new MolComponent, then you need to keep synonyms.
+
+Keywords
+AbstractComponent.keywords
+need clean up: keywords are separated by ;. It needs to be relational.
+
+Person
+Need to have two tables: Author and User.
+
+DbRef
+Need to choose where to link DbRef with
+(A) Target,
+(B) ExpBlueprint,
+(C) MolComponent or
+(D) any combination of two but not three
+
+SampleComponent
+remove recursive cycle on SampleComponent
+
+Vocabulary issue
+replace Sample by Mixture? Would that solve the problem between Sample and Solution?
+
+--------------------------------------------------------------------------------
+Target
+--------------------------------------------------------------------------------
+Annotation
+Empty columns: no use of url and filename
+Badly populated: data in name and not in path
+Many m-n relationships: Too many-to-many relationships at different levels - need to reduce the scope of what really need annotation. Similar problem found for Citation, Taxonomy,...
+The same “service” at different level of the hierarchy: Annotation at the level of Target should be enough. Should be changed to a one-to-many relationship from Target to Annotation.
+
+Proposed changes.
+(1.1) Remove link to Url from Annotation
+(1.2) Remove links to Project and TargetGroup from Annotation
+(1.3) Change many-to-many link between Target and Annotation to one-to-many
+(1.4) Rename some columns
+
+Project
+two projects coexist Implementation.Project and Target.Project
+need only one as the head, merge the two
+
+Proposed changes.
+(2.1) Remove Implementation.Project
+
+TargetGroup
+more a classification than a grouping
+Rename the class to make it more obvious that you can have many different classifications. Keep the tree (with link onto itself) but add into the documentation that target should be assigned to the last leave of the tree.
+Infinite possibilities for grouping
+Need reduce the scope
+
+Proposed changes.
+(3.1) Merge Project and TargetGroup
+
+DbRef
+many-to-many link is not in used and make the model with too many functionalities that are not in used.
+
+Proposed changes.
+(4.1) Change many-to-many link between Target and DbRef to one-to-many
+
+Scoreboard/Status
+it is three tables that do nothing.
+
+Proposed changes.
+(5.1) Merge Scoreboard and Status
+
+NaturalSource
+There is already a link between MolComponent and NaturalSource, do we really need the redundancy at the level of Target? Avoid redundancy information and circle relationship, except if there is a need to know the taxonomy of the target all the time.
+
+Proposed changes.
+(6.1) Remove link between Target and NaturalSource
+
+Loop formed by Target / MolComponent / BlueprintComponent and ExpBlueprint
+sub-sequences stored in BlueprintComponent not directly related to their main sequence
+no constraint to force the update of the many-to-many relationship between Target and MolComponent when sub-sequences created
+Do we really need to be able to have little molecule within an ExpBlueprint that is not related to a Target?
+    split BlueprintComponent into two: BlueprintComponent link to Target and ExtraBlueprintComponent link to MolComponent
+    change the link between BlueprintComponent and MolComponent to BlueprintComponent and target2nuclac and create a constraint on the FKs in BlueprintComponent that it should be targetid not null or target2nuclacid not null
+
+Status / Target / Milestone / Experiment / ExpBlueprint
+necessity to have Status only attached to ExpBlueprint (Kim)
+Delete relationship between Milestone and Target
+Make mandatory the relation between Experiment and ExpBlueprint
+
+--------------------------------------------------------------------------------
+Experiment
+--------------------------------------------------------------------------------
+Parameter/ParameterDefinition.
+Cycle problem
+    in general create problem or produce inconsistency
+    difficult to search data
+All data stored as String
+    Solution can be to have 3 columns in Parameter for number, varchar and date
+        Assignment to the column should be control with ParameterDefinition

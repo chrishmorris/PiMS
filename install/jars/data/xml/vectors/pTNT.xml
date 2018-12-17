@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pTNT Vector</name>
+    <details>Expression vector</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="L5610"
+        dataPageUrl="http://www.promega.com/tbs/tb304/tb304.pdf"
+        supplier="Promega" />
+    <sampleComponent name="pTNT" componentCategory="Vector"
+        details="5675bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="1179"
+            endSeq="2039" />
+        <promoterDetails name="T7 Promoter" startSeq="16"
+            endSeq="34" />
+        <promoterDetails name="SP6 Promoter" startSeq="39"
+            endSeq="56" />
+        <markerDetails name="5'-beta globin leader sequence" details="MASMTGGQQMG"
+            startSeq="57" endSeq="83" featureType="Leader sequence" />
+        <markerDetails name="Synthetic poly(A)30 sequence"
+            startSeq="131" endSeq="160" />
+        <markerDetails name="Multiple Cloning sites XhoI-BstZI"
+            details="XhoI-EcoRI-MluI-KpnI-XbaI-SalI/AccI-SmaI-NotI-BstZI" startSeq="84" endSeq="130"
+            featureType="MCS" />
+        <markerDetails name="pBR322 origin" startSeq="2194" endSeq="2813"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression:JM109, HB101; Expression: BL21(DE3)pLysS"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

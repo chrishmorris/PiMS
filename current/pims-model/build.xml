@@ -1,0 +1,509 @@
+<project name="datamodel" default="compile" basedir="." xmlns:ora="antlib:net.sf.incanto">
+	<taskdef uri="antlib:net.sf.incanto"
+	            resource="net/sf/incanto/antlib.xml"
+	            classpath="lib/build/incanto-0.2.4.jar"/>
+
+
+    <property file="build.properties"/>
+
+    <!-- log -->
+    <property name="log.dir" value="${basedir}/log" />
+
+    <!-- dirs -->
+    <property name="pimsweb.dir" value="../pims-web/" />
+    <property name="xtalpims.dir" value="../../xtalPiMS/current/" />
+    <property name="jars.dir" value="../jars/" />
+
+    <!-- jar -->
+
+    <property name="dmjar.filename" value="pims-model.jar" />
+
+    <property name="dmjar.file" value="${basedir}/${dmjar.filename}" />
+
+    <!-- java -->
+    <property name="conf.dir" value="${basedir}/conf" />
+    <property name="toolslib.dir" value="${basedir}/lib/build" />
+    <property name="lib.dir" value="${basedir}/lib/runtime" />
+    <property name="src.dir" value="${basedir}/src" />
+    <property name="java.dir" value="${src.dir}/java" />
+    <property name="test.dir" value="${src.dir}/test" />
+    <property name="build.dir" value="${basedir}/classes" />
+
+
+    <property name="debug.flag" value="true" />
+    <property name="upgraderMsgProperties" value="org/pimslims/upgrader/messages.properties" />
+
+
+    <!-- java for generated classes -->
+    <property name="java-gen.dir" value="${src.dir}/java-gen" />
+
+    <!-- doc -->
+    <property name="doc.dir" value="${basedir}/docs" />
+
+    <property name="doc.dir.java" value="${doc.dir}/javadoc/" />
+
+    <property name="doc.dir.hbm" value="${doc.dir}/hbmdoc" />
+    <property name="doc.dir.db" value="${doc.dir}/dbdoc" />
+
+
+    <!-- hibernate tools template -->
+    <property name ="template.dir" value="${basedir}/templates" />
+
+    <!-- sql -->
+	<!-- TODO move generated files to build directory -->
+    <property name="sql.dir" value="${src.dir}/sql"/>
+    <property name="ddl.filename" value="pims.ddl"/>    
+    <property name="ddl.ora.filename" value="pims.ora.ddl"/> 
+    <property name="ddl.all.ora.file" value="${jars.dir}/pims-database.ora.dmp"/>	
+    <property name="ddl.ora.dropfilename" value="drop.ora.sql"/>		
+    <property name="ddl.file" value="${sql.dir}/${ddl.filename}"/>
+    <property name="grant.filename" value="grant.ddl"/>
+    <property name="grant.orafilename" value="grant.ora.sql"/>
+    <property name="grant.file" value="${sql.dir}/${grant.filename}"/>
+    <property name="ddl.all.filename" value="pims-database.sql"/>
+    <property name="ddl.all.file" value="${sql.dir}/${ddl.all.filename}"/>
+
+
+    <!-- standard classpath lib -->
+    <path id="classpath.lib">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+	<!-- FIXME ${postgresjar} does not appear to be defined -->
+    <property name="jar.postgres" value="${lib.dir}/${postgresjar}" />
+
+    <!-- classpath for compile and run test -->
+    <path id="classpath.run">
+        <path refid="classpath.lib" />
+        <pathelement path="${build.dir}" />
+        <pathelement path="${conf.dir}" />
+    	<fileset dir="${toolslib.dir}">
+    	    <include name="junit-3.8.1.jar" />
+    	</fileset>
+    </path>
+
+    <!-- classpath for hibernate tools -->
+    <path id="classpath.toolslib">
+        <pathelement path="${build.dir}" />
+        <pathelement path="${conf.dir}" />
+        <path refid="classpath.lib" />
+        <fileset dir="${toolslib.dir}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+
+    <!-- ============================================================ -->
+    <!-- Install tasks.                                               -->
+    <!-- ============================================================ -->
+    <target name="installDoc" description="Generate all PiMS model documentations into top directory docs/.">
+
+        <antcall target="cleanDoc" />
+
+        <antcall target="javadoc" />
+        <antcall target="hbm2doc" />
+        <antcall target="dbdoc" />
+
+    </target>
+
+	
+	<target name="normalUpgrader" description="compares database to java, updates it to match" >
+        <java  classname="org.pimslims.upgrader.Upgrader" fork="true" failonerror="yes" >
+            <classpath refid="classpath.run" />
+        </java>
+	</target>
+	
+
+    <target name="installOracleDatabase" description="Create new db and install schema from generated DDL file.">
+        <antcall target="hbm2oradrop"/>
+        <antcall target="hbm2oraddl"/>
+        <echo>Creating tables in ${dbuserid}/${dbpasswd}</echo>
+        <ora:sqlplus failOnError="true" logon="${dbuserid}/${dbpasswd}" start="${sql.dir}/${ddl.ora.filename}" 
+            	failOnSpoolMatch=".*ORA-[0-9]{5}.*|.*LRM-[0-9]{5}.*"
+        />
+        <antcall target="hbm2oragrant"/>
+        <ora:sqlplus failOnError="true" logon="${dbuserid}/${dbpasswd}" start="${sql.dir}/${grant.orafilename}" 
+                failOnSpoolMatch=".*ORA-[0-9]{5}.*|.*LRM-[0-9]{5}.*"
+        />
+    	
+    	<ora:sqlplus failOnError="true" logon="${dbuserid}/${dbpasswd}" ><![CDATA[
+    		/* sql*plus commands go here */
+    	      EXIT
+    	]]></ora:sqlplus> 
+
+        <ora:sqlplus failOnError="true" logon="${dbuserid}/${dbpasswd}" 
+            failOnSpoolMatch=".*ORA-[0-9]{5}.*|.*LRM-[0-9]{5}.*"
+            start="${sql.dir}/extra.ora.sql" 
+        />
+        <echo> >>> ${sql.dir}/extra.ora.sql loaded into DB ${dbname}</echo>
+        <ora:sqlplus failOnError="true" logon="${dbuserid}/${dbpasswd}" 
+            failOnSpoolMatch=".*ORA-[0-9]{5}.*|.*LRM-[0-9]{5}.*"
+            start="${sql.dir}/install-revision.sql" 
+        />
+        <echo> >>> ${sql.dir}/install-revision.sql loaded into DB ${dbname}</echo> 
+
+        <antcall target="normalUpgrader"/> 
+    	<!-- TODO test that this sets the revision number -->
+        <antcall target="oradump"/> 
+    </target>
+	
+	<target name="oradump">   
+        <ora:expdp 
+            failOnError="true" logon="${dbuserid}/${dbpasswd}"         	
+            >
+            <![CDATA[
+        	schemas=pimsadmin
+        	directory=data_pump_dir
+            dumpfile=pims-database.ora.dmp
+         ]]>
+        </ora:expdp> 
+	</target>
+
+    <target name="installDatabase" description="Create new db and install schema from generated DDL file.">
+        <antcall target="dropdb"/>
+        <antcall target="createdb"/>
+        <antcall target="cleanDDL"/>
+        <antcall target="hbm2ddl"/>
+        <antcall target="hbm2grant"/>
+        <antcall target="cleanLog"/>
+        <exec output="${log.dir}/install-ddl.out" failOnError="true" executable="psql"><arg line="-q -U ${dbuserid} -d ${dbname} -f ${ddl.file}"/></exec>
+        <echo> >>> ${ddl.file} loaded into DB ${dbname}</echo>
+        <exec output="${log.dir}/grant-ddl.out" failOnError="true" executable="psql"><arg line="-q -U ${dbuserid} -d ${dbname} -f ${grant.file}"/></exec>
+        <echo> >>> ${grant.file} loaded into DB ${dbname}</echo>
+        <exec output="${log.dir}/install-extra.out" failOnError="true" executable="psql"><arg line="-q -U ${dbuserid} -d ${dbname} -f ${sql.dir}/extra.sql"/></exec>
+        <echo> >>> ${sql.dir}/extra.sql loaded into DB ${dbname}</echo>
+        <exec output="${log.dir}/install-revision.out" failOnError="true" executable="psql"><arg line="-q -U ${dbuserid} -d ${dbname} -f ${sql.dir}/install-revision.sql"/></exec>
+        <echo> >>> ${sql.dir}/install-revision.sql loaded into DB ${dbname}</echo>
+
+    	<antcall target="normalUpgrader"/>
+        
+    	
+        <exec failOnError="true" executable="pg_dump"><arg line="-U ${dbuserid} --no-owner -f ${ddl.all.file} ${dbname}"/></exec>
+        <echo> >>> All DB ${dbname} exported into ${ddl.all.file}</echo>
+
+
+
+    </target>
+
+
+    <!-- ============================================================ -->
+
+    <!-- Documentation tasks.                                         -->
+
+    <!-- ============================================================ -->
+
+    <target name="javadoc" description="Generate the javadoc of the PiMS model." depends="cleanDoc">
+
+        <mkdir dir="${doc.dir.java}" />
+        <tstamp>
+            <format property="TODAY_UK" pattern="d-MMMM-yyyy hh:mm aa" locale="en,UK"/>
+        </tstamp>
+
+
+        <javadoc
+
+             sourcepath=""
+
+            additionalparam="-quiet -source 1.6 -tag precondition:cm:&quot;Precondition:&quot; -tag depend:t:&quot;Depends on:&quot; -tag composed:X -tag has:X"
+
+             defaultexcludes="yes"
+
+             destdir="${doc.dir.java}"
+
+             author="true"
+
+             version="true"
+
+             use="true"
+
+             windowtitle="PiMS Model Java API"
+
+            encoding="UTF-8"
+
+            maxmemory="200m"
+            private="true">
+
+            <classpath refid="classpath.lib" />
+
+
+
+            <fileset dir="${java.dir}" >
+
+                <exclude name="**/*.ucls" />
+
+                <exclude name="**/*.png" />
+                <exclude name="**/package.html" />
+
+                <exclude name="**/*.properties" />
+                <exclude name="org/pimslims/testmodel/**" />
+
+            </fileset>
+
+            <doctitle><![CDATA[<h1>PiMS model Java API</h1>]]></doctitle>
+            <bottom><![CDATA[<i>PiMS model javadoc generated on ${TODAY_UK}</i>]]></bottom>
+
+
+        </javadoc>
+        <copy todir="${doc.dir.java}">
+        <fileset dir="${java.dir}">
+            <exclude name="**/*.java"/>
+            <exclude name="**/*.ucls"/>
+        </fileset>
+        </copy>
+    </target>
+
+    <target name="hbm2doc" description="Generate the hibernate documentation."   >
+        <taskdef name="hibernatetool"
+                 classname="org.hibernate.tool.ant.HibernateToolTask"
+                 classpathref="classpath.toolslib" />
+        <hibernatetool destdir="${doc.dir.hbm}" templatepath="${template.dir}" >
+            <jpaconfiguration persistenceunit="pims" />
+            <classpath><path location="${build.dir}" /></classpath>
+            <hbm2doc />
+        </hibernatetool>
+    </target>
+
+    <target name="dbdoc" description="Generate the db documentation.">
+        <mkdir dir="${doc.dir.db}" />
+        <java jar="${toolslib.dir}/schemaspy-5.0.0.jar" fork="true" failonerror="true">
+            <arg line="-t pgsql -dp ${jar.postgres} -db ${dbname} -host localhost -s public -u ${dbuserid} -o ${doc.dir.db} "/>
+        </java>
+    </target>
+
+
+    <!-- ============================================================ -->
+    <!-- Hibernate tool tasks                                         -->
+    <!-- ============================================================ -->
+    <taskdef name="hibernatetool"
+             classname="org.hibernate.tool.ant.HibernateToolTask"
+             classpathref="classpath.toolslib" />
+
+    <target name="hbm2java" description="Generate simple java classes for design." depends="cleanJavaGen" >
+        <hibernatetool destdir="${java-gen.dir}" templatepath="${template.dir}" >
+            <jpaconfiguration persistenceunit="pims" />
+            <classpath><path location="${build.dir}" /></classpath>
+            <hbmtemplate templateprefix="pojo/" template="pojo/SimpleJava.ftl" filepattern="{package-name}/{class-name}.java">
+                <property key="jdk5" value="true" />
+            </hbmtemplate>
+        </hibernatetool>
+        <echo> >>> Generated simple java classes into: ${java-gen.dir}</echo>
+    </target>
+
+    <target name="hbm2ddl" description="Generate database schema."  >
+        <hibernatetool destdir="${sql.dir}" >
+            <jpaconfiguration persistenceunit="pims" />
+            <classpath><path location="${build.dir}" /></classpath>
+            <property key="hibernate.dialect"
+            value="org.hibernate.dialect.PostgreSQLDialect"/> 
+            <hbm2ddl export="false" outputfilename="${ddl.filename}" haltonerror="true"  />
+        </hibernatetool>
+        <echo> >>> Export database schema: ${ddl.file}</echo>
+    </target>
+	
+    <target name="hbm2oraddl" description="Generate database schema for Oracle."  >
+        <hibernatetool destdir="${sql.dir}">
+            <jpaconfiguration persistenceunit="pims" />
+            <classpath><path location="${build.dir}" /></classpath>
+            <property key="hibernate.dialect"
+                value="org.hibernate.dialect.Oracle10gDialect"/> <!-- or org.hibernate.dialect.OracleDialect -->
+            <hbm2ddl export="false" outputfilename="${ddl.ora.filename}"/>
+        </hibernatetool>
+    	<!-- fix defects in generated ddl 
+    	     TODO simplify this by deleting some columnDefinitions
+    	-->
+    	<replace file="${sql.dir}/${ddl.ora.filename}" summary="true"  >
+            <replacefilter token="int8" value="INTEGER" />
+            <replacefilter token="int4" value="INTEGER" />
+            <replacefilter token="TIMESTAMPTZ" value="TIMESTAMP WITH TIME ZONE" />
+            <replacefilter token="FLOAT8" value="FLOAT" />
+            <replacefilter token="BOOLEAN" value="NUMERIC(1,0)" />
+    		<!-- For Molecule -->
+            <replacefilter token="SEQSTRING TEXT" value="SEQSTRING CLOB" />
+            <replacefilter token="TEXT" value="VARCHAR2(4000)" />
+    	</replace>
+        <echo> >>> Export database schema: ${ddl.ora.filename}</echo>
+    </target>
+	
+
+    <target name="hbm2oradrop" description="Generate drop commands for Oracle."  >
+        <hibernatetool destdir="${sql.dir}" templatepath="${template.dir}" >
+            <jpaconfiguration persistenceunit="pims" />
+            <classpath><path location="${build.dir}" /></classpath>
+            <hbmtemplate templateprefix="sql/" template="sql/drop.ftl" filepattern="${ddl.ora.dropfilename}" />
+        </hibernatetool>
+        <echo> >>> Export drop commands schema: ${ddl.ora.dropfilename}</echo>
+        <echo>Dropping tables from ${dbuserid}/${dbpasswd} hmm</echo>
+        <ora:sqlplus failOnError="true" logon="${dbuserid}/${dbpasswd}" 
+            start="${sql.dir}/${ddl.ora.dropfilename}"
+    	failOnSpoolMatch=".*ORA-02449.*"
+        />
+    </target>
+
+    <target name="hbm2grant" description="Generate grant for all tables."    >
+        <hibernatetool destdir="${sql.dir}" templatepath="${template.dir}"  >
+            <jpaconfiguration persistenceunit="pims" />
+            <classpath><path location="${build.dir}" /></classpath>
+            <hbmtemplate templateprefix="sql/" template="sql/table-list.ftl" filepattern="${grant.filename}" />
+        </hibernatetool>
+        <echo> >>> Create grant for all tables: ${grant.file}</echo>
+    </target>
+
+    <target name="hbm2oragrant" description="Generate grant for all tables."   >
+        <hibernatetool destdir="${sql.dir}" templatepath="${template.dir}" >
+            <jpaconfiguration persistenceunit="pims" />
+            <classpath><path location="${build.dir}" /></classpath>
+            <hbmtemplate templateprefix="sql/" template="sql/table-list.ora.ftl" filepattern="${grant.orafilename}" />
+        </hibernatetool>
+        <echo> >>> Create grant for all tables: ${grant.file}</echo>
+    </target>
+
+
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+    <target name="compile" depends="cleanCompiledJava" description="Compiles the java source tree.">
+        <javac
+            failOnError="true"
+            sourcepath=""
+            srcdir="${java.dir}:${conf.dir}"
+            excludes="org/pimslims/testmodel/**"
+            destdir="${build.dir}"
+            target="1.6" source="1.6" deprecation="false"
+            encoding="UTF-8"
+            debug="${debug.flag}"
+          >
+            <classpath refid="classpath.run" />
+        </javac>
+
+        <copy file="${java.dir}/${upgraderMsgProperties}" tofile="${build.dir}/${upgraderMsgProperties}" />
+        <copy todir="${build.dir}">
+            <fileset dir="${conf.dir}">
+                <exclude name="**/*.readme"/>
+                <exclude name="**/*.sample"/>
+                <exclude name="**/checkstyle*"/>
+                <exclude name="**/codetemplates*"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compileTest" depends="compile" description="Compiles the test cases.">
+        <javac
+            failOnError="true"
+            sourcepath=""
+            srcdir="${java.dir}:${test.dir}:${conf.dir}"
+            excludes="org/pimslims/testmodel/**"
+            destdir="${build.dir}"
+            target="1.6" source="1.6" deprecation="false"
+            encoding="UTF-8"
+            debug="${debug.flag}"
+        >
+            <classpath refid="classpath.run" />
+        </javac>
+    </target>
+
+    <target name="test"  depends="compileTest" description="Runs the test cases.">
+    	<taskdef name="junit"
+    	  classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask">
+    	  <classpath refid="classpath.toolslib"/>
+    	</taskdef>
+        <junit haltonfailure="true" haltonerror="true" fork="true" dir="${basedir}">
+            <classpath refid="classpath.run" />
+            <formatter type="brief" usefile="false" />
+            <test name="org.pimslims.AllModelTests" />
+        </junit>
+    </target>
+
+
+
+    <!-- ============================================================ -->
+
+    <!-- Jar tasks                                                  -->
+
+    <!-- ============================================================ -->
+
+    <target name="jar" depends="compile" description="Make the ${dmjar.filename} file.">
+
+        <echo>tar file: ${dmjar.file}</echo>
+
+        <jar destfile="${dmjar.file}" index="true" >
+            <fileset dir="${build.dir}" >
+                <exclude name="logging.properties" />
+                <exclude name="log4j.properties" />
+                <exclude name="Properties" />
+            </fileset>
+        	<manifest>
+        		 <attribute name="Main-Class" value="org.pimslims.upgrader.Upgrader"/>
+        	</manifest>  
+        </jar>
+
+    </target>
+
+
+<!-- TODO move to ../build.xml -->
+    <target name="copyFilesToXtalPiMS" description="Publishes ${dmjar.filename} to xtalPiMS project" depends="jar">
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/XtalPiMS_BusinessAPI_PIMSDBImpl/lib/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/XtalPiMS_Web/web/WEB-INF/lib/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/OPPF Data Migration/lib/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/ImageProcessor/lib/${dmjar.filename}" />
+    </target>
+
+
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+    <target name="cleanDDL" description="Remove generated DDL files.">
+        <delete file="${ddl.file}" />
+        <delete file="${ddl.all.file}" />
+        <delete file="${grant.file}" />
+    </target>
+
+
+    <target name="cleanCompiledJava" description="Remove compiled java classes.">
+        <delete dir="${build.dir}" />
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    <target name="cleanJavaGen" description="Remove generated java classes.">
+        <delete dir="${java-gen.dir}" />
+        <mkdir dir="${java-gen.dir}" />
+    </target>
+
+    <target name="cleanLog" description="Clean log dirrectory.">
+        <delete dir="${log.dir}" />
+        <mkdir dir="${log.dir}" />
+    </target>
+
+    <target name="cleanDoc" description="Remove directories for clean build.">
+
+        <delete dir="${doc.dir.java}" />
+
+        <delete dir="${doc.dir.hbm}" />
+        <delete dir="${doc.dir.db}" />
+
+    </target>
+
+
+    <!-- ============================================================ -->
+    <!-- Database tasks.                                              -->
+    <!-- ============================================================ -->
+    <target name="createdb" description="Creates the database.">
+        <exec failOnError="true" executable="createdb"><arg line="-U ${dbuserid}  --encoding UTF8 '${dbname}'" /></exec>
+    </target>
+
+    <target name="dropdb" description="Drops the database.">
+        <echo>dropdb -U ${dbuserid} '${dbname}'</echo>
+		<exec failOnError="false" executable="dropdb"><arg line="-U ${dbuserid} '${dbname}'" /></exec>
+	</target>
+	
+
+    <target name="dumpdb" description="Dump db into pims-database.sql." depends="">
+        <exec failOnError="true" executable="pg_dump">
+            <arg line="-U ${db.username} --no-owner -f ${ddl.all.file} ${db.name}" />
+        </exec>
+        <antcall target="installdbexample" />
+    </target>
+    
+
+</project>

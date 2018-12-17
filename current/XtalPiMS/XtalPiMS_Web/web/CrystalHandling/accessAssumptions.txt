@@ -1,0 +1,38 @@
+Some notes on how the access rights work around crystal handling.
+
+In Oulu, we import images from the Formulatrix robots without importing either 
+conditions or ownership data.
+
+A user "formulatrix" is the owner of all plates, recording them into a 
+"Formulatrix" lab notebook. This user has full (CRUD) permissions on this LN,
+and no permissions on any other.
+
+We have a user "fxview" who has read-only permission on the "Formulatrix" LN; 
+this means that anyone with the password can view all crystallization images 
+from our imagers without needing a PiMS account.
+
+This is OK; there is no information about conditions, and the images are all 
+but useless on their own.
+
+However, crystallization conditions can be recorded at the crystal treatment
+stage. The selection and subsequent treatments may also be confidential.
+
+"fxview" should clearly be locked out of the treatment UI. He can't do anything
+and has no business being there.
+
+The crystal treatment page assumes that nobody without Create permissions in at
+least one LN should have access to crystal treatment. Such users (including 
+"fxview" are prevented even from entering the module.
+
+Anyone with create permissions in at least one LN can enter the crystal 
+treatment module. The existing permissions system then ensures that he sees 
+only the selections and treatments he should know about. Users within the same
+(lab) group might have read permission on each other's treatments; the PiMS
+permission system ensures that they can't modify them.
+
+It's theoretically possible that two users could select the same crystal 
+through the PiMS UI and record an entire treatment chain under it, both 
+blissfully unaware of the other's actions because their permissions don't allow
+them to see each other's work. In practice, though, the real-world physical 
+constraint of having only one plate, owned by one of them but not the
+other, should prevent this situation from occurring. 

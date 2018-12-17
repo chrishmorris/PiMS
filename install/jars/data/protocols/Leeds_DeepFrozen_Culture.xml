@@ -1,0 +1,22 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="Deep-Frozen culture" objective="Record Deep-Frozen culture stock" creationDate="07-02-07" remarks="Used by construct management"  >
+ <experimentType>Deep-Frozen culture</experimentType>
+
+ <outputSamples>
+ <!-- TODO change to Transformed Cells -->
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="sample1"/>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="sample2"/>
+ </outputSamples>
+ <parameterDefinitions>
+  <parameterDefinition id="3" name="Organism" parameterType="String" defaultValue=""/>
+ </parameterDefinitions>
+
+<inputSamples>
+    <!-- TODO change to <inputSample sampleCatNamingSys="default" sampleCatName="Competent Cells" amount="" unit="L" displayUnit="uL" refSample="Strain" name="Strain" />-->
+    <inputSample sampleCatNamingSys="default" sampleCatName="Strain" amount="" unit="L" displayUnit="uL" refSample="Strain" name="Strain" />
+    
+    <!-- TODO change to <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL"  name="Expression Construct" /> -->
+	<inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Entry Clone" />
+</inputSamples>
+
+</protocol>

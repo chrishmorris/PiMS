@@ -1,0 +1,6 @@
+upgrader/upgrader.jar
+build.properties
+classes/*
+conf/Properties
+log/*
+pims-model.jar

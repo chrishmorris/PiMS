@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: DeliveryAgent.xsd,v 1.4 2006/11/02 08:34:59 lxl Exp $">
+	<xs:complexType name="DeliveryAgent">
+		<xs:annotation>
+			<xs:documentation>Information about the Delivery Agent used to send the protein or Dewar shipment.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="shippingDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Date on which the shipment was made.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Date on which the shipment is expected to be delivered to the receiving institution.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="agentName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of the shipping company e.g. 'FedEx'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="agentCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Code defined by the shipping company for this shipment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flightCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If this shipment will be sent by plane, code for the flight it will travel on.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

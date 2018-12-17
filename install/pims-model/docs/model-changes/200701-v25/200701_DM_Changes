@@ -1,0 +1,36 @@
+DATA MODEL CHANGES 25
+
+x PIMS-481 change data type of attr rowPosition, colPosition and subPosition in classes:
+  Sample, Holder, RefSamplePosition & HolderTypePosition from Int to PositiveInt
+
+
+### Need further discussions - after 1.0
+- PIMS-568 change data type of MolComponent.seqString to avoid odd characters
+
+- change role Target.protein to unchangeable: no otherwise setProtein() does not exist if link unchangeable.
+
+- PIMS-258: replace all Target name attributes: commonName, systematicName, localName by name?
+     - remove serial
+     - remove commonName, systematicName and localName
+     - remove proteinName
+     - replace commonName by name and make it a unique key: Uniprot entry name, e.g. CAIC_ECOLI
+     - add attr aliases: list of other names
+
+commonName 1..1 The common name of the target is the name used to identify the target e.g. 'Endonuclease IV'.
+systematicName 0..1 The systematic name of the target is the 'proper' scientific name e.g. 'Endodeoxyribonuclease IV'.
+localName 0..1 Local name is what the target is known as in the lab e.g. 'A6'.
+
+geneName 0..1 The official name of the gene for this target. e.g. 'fcy1'.
+
+proteinName 0..1 The official name of the protein for this target. By default: 'theoretical protein'. e.g. 'Cytosine deaminase'.
+protein.name 1..1 The name of the MolComponent used to describe the Target protein
+
+replaced by
+
+name 1..1 The name of the target used to uniquely identify the target. It is its uniprot entry name, e.g. CAIC_ECOLI.
+aliases 0..* The list of the other target names: localName, proteinName,...
+
+geneName 0..1 The official name of the gene for this target. e.g. 'fcy1'.
+
+
+

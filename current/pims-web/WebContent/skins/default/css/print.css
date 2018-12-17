@@ -1,0 +1,58 @@
+
+html, body, #content { background-color:white; }
+
+form.grid { padding:0.5em 0; font-family:verdana,arial,helvetica,sans-serif; font-size:90%; width:auto; background-color:transparent}
+div.formblock 	{ width:98%; padding:0 1%; position:relative;top:0; }
+div.formblock div.column1,
+div.formblock div.column2 	{ width:100%;  }
+div.formblock div.shim		{ clear:both; font-size:0pt; background-color:transparent; height:0px; }
+
+form.grid .viewonly { visibility:visible;  }
+form.grid .editonly { visibility:hidden; }
+
+div.formblock label[title] { border-bottom:0; }
+
+form.grid div.toggleview { display:none; }
+
+form.grid div.submitCreate { display:none; }
+
+/******
+ * Overrides to grid form styles, to make a view 
+ ******/
+form.viewing div.formblock div.hyperlink input,
+form.viewing div.formblock div.formfield select 			{display:none; }
+
+form.viewing div.formblock div.formfield span.urlnoedit,
+form.viewing div.formblock div.formfield span.selectnoedit 	{display:inline; }
+form.viewing input[type=text],
+form.viewing input[type=password] 	{ border:0; background:transparent; font-family:verdana,arial,helvetica,sans-serif; padding-top:0.25em }
+form.viewing textarea 			{ border:0; background:transparent; overflow:auto; padding-top:0.25em }
+
+form.viewing div.radio div.formfield label {color:#999; }
+form.viewing div.radio div.formfield input[type=radio] {visibility:hidden}
+form.viewing div.radio div.formfield input[type=radio].checked {visibility:visible}
+form.viewing div.radio div.formfield input[type=radio].checked+span.radiolabel {color:black; }
+
+form.viewing div.formblock div.formfield input.amount { display:none; }
+form.viewing div.formblock div.formfield select.unit { display:none; }
+form.viewing div.formblock div.formfield span.amountUnit { display:inline; }
+
+
+form.viewing div.toggleview .editlink   { display:block; }
+form.viewing div.toggleview .savebutton { display:none; }
+
+form.viewing .viewonly { visibility:visible;  }
+form.viewing .editonly { visibility:hidden; }
+
+/* Widgets */
+div.collapsiblebox { border:0; background:none; 
+			margin-bottom:0.75em; -webkit-border-radius:0; }			
+div.collapsiblebox h3 { display:block; padding-left:0; margin:1em 1em 0 0.25em; border-bottom:2px solid #006;
+			background:none no-repeat 0 1px; color:#006; font-size:120%; }
+div.collapsiblebox div.boxcontent { border:0; background:white; margin:0; }
+div.containstable { border-top:1px solid #009; border-bottom:1px solid #009; background:white; margin-bottom:0.5em; overflow:scroll; }
+div.fixedbox h3 { background-image:none; }
+div.closedbox h3 { background-image:none; }
+div.closedbox div.boxcontent { display:block; }
+
+div.narrowbox { width:auto; }

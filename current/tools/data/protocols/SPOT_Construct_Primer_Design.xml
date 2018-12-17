@@ -1,0 +1,17 @@
+<protocol name="SPOT Construct Primer Design" objective="" creationDate="" remarks=""  >
+ <experimentType>SPOTConstructDesign</experimentType>
+
+ <parameterDefinitions>
+ <!-- <parameterDefinition id="1" name="Reverse Overlap" parameterType="Int" />
+  <parameterDefinition id="4" name="Forward Overlap" parameterType="Int" /> -->
+  <parameterDefinition id="2" name="Forward Tag" parameterType="String" />
+  <!-- <parameterDefinition id="3" name="Fwd. Primer GC" parameterType="Float" />
+  <parameterDefinition id="5" name="Rev. Primer GC" parameterType="Float" /> -->
+  <parameterDefinition id="6" name="Reverse Tag" parameterType="String" />
+ </parameterDefinitions>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.0" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+
+</protocol>

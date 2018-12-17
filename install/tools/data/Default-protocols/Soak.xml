@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<protocol details="" remarks="" creationDate="05-11-13" objective="" name="Soak">
+<experimentType>Crystal Treatment</experimentType>
+<inputSamples>
+	<inputSample name="Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+</inputSamples>
+<outputSample name="Treated Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+<parameterDefinitions>
+	<parameterDefinition id="1" name="Duration" parameterType="Int" defaultValue="0" minValue="0" maxValue="" isMandatory="true" label=""/>
+	<parameterDefinition id="2" name="Concentration" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="3" name="Batch" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="4" name="Ligand" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="5" name="Temperature" parameterType="String" defaultValue="+20C" possibleValues="+20C,+4C,Other" isMandatory="true" label=""/>
+</parameterDefinitions>
+</protocol>

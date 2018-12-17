@@ -1,0 +1,22 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="CS Restriction Digest Vector" objective="Prepare Vector for Cloning" creationDate="02-02-07" remarks="Based on Lab activities requirements from STRUBI" details="PCR performed using high-fidelity enzymes">
+ <experimentType>Digest</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Total Volume (uL)" parameterType="Float" defaultValue="10" />
+  <parameterDefinition id="2" name="Notes" parameterType="String" isMandatory="false"  />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="0.000000002" unit="kg" displayUnit="ug" refSample="Vector" name="Vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -restriction" amount="0.0000005" unit="L" displayUnit="uL" refSample="Enzyme -restriction" name="Restriction Enzyme Vector 1" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -restriction" amount="0.0000005" unit="L" displayUnit="uL" refSample="Enzyme -restriction" name="Restriction Enzyme Vector 2" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" unit="L" displayUnit="uL" refSample="Buffer" name="Buffer-type" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Chemical/Biochemical"  unit="L" displayUnit="uL" refSample="Albumin" name="Albumin" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solvent"  unit="L" displayUnit="uL" refSample="Water" name="Water" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+
+</protocol>
+

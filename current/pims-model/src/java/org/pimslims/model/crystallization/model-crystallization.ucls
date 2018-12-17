@@ -1,0 +1,191 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.crystallization.CyParameter" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/CyParameter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="339" y="291" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.crystallization.CyParameterDefinition" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/CyParameterDefinition.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="142" y="474" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.crystallization.DropAnnotation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="568" y="341" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.crystallization.Image" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="567" y="112" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.crystallization.Score" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/Score.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="613" y="542" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.crystallization.ScoringScheme" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/crystallization/ScoringScheme.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="364" y="546" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.Instrument" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="164" y="108" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.Sample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="955" y="224" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.Software" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Software.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="864" y="500" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.Image" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false">      
+      <attribute name="dropAnnotations"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.crystallization.DropAnnotation" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false">      
+      <attribute name="image"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.crystallization.Image" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false">      
+      <attribute name="instrument"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.Instrument" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.Score" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Score.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.crystallization.DropAnnotation" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false">      
+      <attribute name="score"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.Score" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Score.java" binary="false">      
+      <attribute name="scoringScheme"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.crystallization.ScoringScheme" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/ScoringScheme.java" binary="false">      
+      <attribute name="scores"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.Image" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false">      
+      <attribute name="cyParameters"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.crystallization.CyParameter" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/CyParameter.java" binary="false">      
+      <attribute name="image"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="dropAnnotations"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.crystallization.DropAnnotation" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.CyParameter" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/CyParameter.java" binary="false">      
+      <attribute name="cyParameterDefinition"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.crystallization.CyParameterDefinition" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/CyParameterDefinition.java" binary="false">      
+      <attribute name="cyParameters"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.experiment.Software" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Software.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.crystallization.DropAnnotation" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/DropAnnotation.java" binary="false">      
+      <attribute name="software"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.crystallization.Image" 
+      file="/pims-model/src/java/org/pimslims/model/crystallization/Image.java" binary="false">      
+      <attribute name="sample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="images"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>
+</class-diagram>

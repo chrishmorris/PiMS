@@ -1,0 +1,30 @@
+<form id="ffScreens" action=""><table class="list" border="0">
+	<tr>
+		<th>Name</th>
+		<td><input id="sc_name" /></td>
+		<th>Manufacturer Name</th>
+		<td><select id="sc_manufacturerName">
+			<option value="all" selected="selected">All</option>
+		</select></td>
+	</tr>
+	<tr>
+		<th>Type</th>
+		<td><select id="sc_type">
+			<option value="all" selected="selected">All</option>
+		</select></td>
+		<th>Number of Rows</th>
+		<td><select id="sc_numRows">
+			<option value='10' selected="selected">10</option>
+			<option value='20'>20</option>
+			<option value='30'>30</option>
+			<option value='50'>50</option>
+			<option value='100'>100</option>
+		</select></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td></td>
+		<th></th>
+		<td><input id="sc_clear" type="button" value="Clear" /></td>
+	</tr>
+</table></form>

@@ -1,0 +1,3 @@
+name,sizeX,sizeY,xlengthPerPixel,ylengthPerPixel,colourDepth,url,catorgory
+BioStore default type,1280,960,2.375,2.323,8,http://localhost:8080/xtalpims/images/OutputJPGImages2,composite
+Microscope default type,1280,960,2.979,2.979,256,http://www.oppf.ox.ac.uk/vault/images/lowres/,zoomed

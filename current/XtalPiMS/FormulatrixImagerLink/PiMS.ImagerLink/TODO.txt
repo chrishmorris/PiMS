@@ -1,0 +1,13 @@
+TODO
+====
+Jon Diprose, 15/08/2011
+
+1. OPPF.Integrations.ImagerLink.Scheduling.ImagingTaskProvider and ImagingTaskProviderNew
+have some hard-coded database connection strings. These should be moved to the config
+file.
+
+2. OPPF.Integrations.ImagerLink.PlateInfoProviderNew has a hard-coded list of plate types.
+This was done as a temporary work-around for a mismatch between the id according to PiMS
+and the id according to RockImager. Its possible that RockImager would accept the PiMS id
+- Jon didn't try as it could cause RockImager's existing taught plate positions to be
+lost.

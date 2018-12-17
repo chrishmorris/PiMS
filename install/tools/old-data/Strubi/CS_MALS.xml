@@ -1,0 +1,18 @@
+<!-- CS MALS protocol xml as flat file -->
+<protocol name="CS MALS" objective="Purification of Target Protein" creationDate="23-05-08" remarks="Based on Lab activities requirements from OPPF" details="Purification of Target Protein">
+ <experimentType>Characterisation</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Output Sample" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="MALS Trace" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="MALS Protocol" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="3" name="MALS Analysis" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>
+

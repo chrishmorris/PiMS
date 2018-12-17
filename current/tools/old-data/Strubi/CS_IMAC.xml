@@ -1,0 +1,20 @@
+<!-- CS IMAC protocol xml as flat file -->
+<protocol name="CS IMAC" objective="Purification of Target Protein" creationDate="23-05-08" 
+    remarks="To record multiple fractions, aliquote the Eluate sample" details="See http://www.ssgcid.org/home/PUBL_ActaF_01_en5479_Intro.pdf"
+>
+ <experimentType>Purification</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Eluate" />
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Flowthrough" />
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Wash" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="IMAC Trace" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="IMAC Protocol" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>

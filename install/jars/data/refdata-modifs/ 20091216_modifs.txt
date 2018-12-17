@@ -1,0 +1,18 @@
+Data
+
+Protocols: /data/Default-protocols
+Updated:
+PiMS_Cell_stock.xml
+Added: Parameter
+<parameterDefinition id="2" name="Antibiotic Res. (strain)" parameterType="String" isMandatory="false" />
+  
+Updated Input Samples:
+Old: <inputSample sampleCatNamingSys="default" sampleCatName="Cell" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+New: <inputSample sampleCatNamingSys="default" sampleCatName="Cell" amount="" unit="L" displayUnit="uL" refSample="Cell" name="Cell" />
+
+Protocols: /data/protocols
+Updated:
+SPOT_Primerless_Construct_Design.xml
+Updated: Output sample
+Old: <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid stock" />
+New: <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />

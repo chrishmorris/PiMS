@@ -1,0 +1,18 @@
+<!-- CS Prokaryotic Expression protocol xml as flat file -->
+<protocol name="CS Prokaryotic Expression" objective="Large Scale Expression of Target Protein" creationDate="02-02-07" >
+ <experimentType>Production scale expression</experimentType>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.0" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Extracellular Protein" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Intracellular Protein" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="InSoluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="InSoluble Protein" name="Membrane Pellet" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="__MW" label="Soluble Expression Level" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="2" name="__IMW" label="InSoluble Expression Level" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+ </parameterDefinitions>
+ 
+</protocol>

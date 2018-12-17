@@ -1,0 +1,12 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="Generic Fermenter culture" objective="Recording fermentation batches" creationDate="02-06-08" remarks="Used by specific UI for recording Leeds fermentation batches"  >
+ <experimentType>Fermenter culture</experimentType>
+
+ <outputSamples>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Cells" amount="" unit="kg" displayUnit="g" refSample="Cells" name="Cells"/>
+ </outputSamples>
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Batch" parameterType="String" defaultValue=""/>
+ </parameterDefinitions>
+
+</protocol>

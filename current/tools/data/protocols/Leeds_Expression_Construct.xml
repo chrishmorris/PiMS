@@ -1,0 +1,26 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="Expression construct" objective="Expression construct" creationDate="21-10-09" remarks="Used by construct management"  >
+ 
+  
+  <experimentType>Recombination</experimentType>
+
+ <outputSamples>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="sample1"/>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="sample2"/>
+  <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Clone Saver"/>
+ </outputSamples>
+ <parameterDefinitions>
+  <!-- <parameterDefinition id="1" name="Marker" parameterType="String" defaultValue="" /> -->
+  <parameterDefinition id="1" name="Antibiotic resistances" parameterType="String" defaultValue="" />
+  <parameterDefinition id="2" name="Restriction sites" parameterType="String" defaultValue=""/>
+  <parameterDefinition id="3" name="Tag" parameterType="String" defaultValue=""/>
+ </parameterDefinitions>
+
+<inputSamples>
+    <!-- TODO change to <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL"  name="Expression Construct" /> -->
+    <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL"  name="Entry clone" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL" name="Vector" /> 
+</inputSamples>
+
+</protocol>
+

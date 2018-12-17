@@ -1,0 +1,87 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.access.Access" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/access/Access.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="200" y="37" width="233" height="202"/>  
+  </class>  
+  <class language="java" name="org.pimslims.access.AccessImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/access/AccessImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="221" y="642" width="-1" height="-1"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.access.Condition" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/access/Condition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="504" y="37" width="196" height="106"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.access.NoAccess" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/access/NoAccess.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="200" y="279" width="233" height="138"/>  
+  </class>  
+  <class language="java" name="org.pimslims.access.PIMSAccess" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/access/PIMSAccess.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="41" y="279" width="119" height="186"/>  
+  </class>  
+  <class language="java" name="org.pimslims.dao.AbstractModel" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="634" y="403" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.access.Access" 
+      file="/pims-model/src/java/org/pimslims/access/Access.java" binary="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.AbstractModel" 
+      file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false">      
+      <attribute name="access"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.access.AccessImpl" 
+      file="/pims-model/src/java/org/pimslims/access/AccessImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.access.PIMSAccess" 
+      file="/pims-model/src/java/org/pimslims/access/PIMSAccess.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.access.PIMSAccess" 
+      file="/pims-model/src/java/org/pimslims/access/PIMSAccess.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.access.Access" 
+      file="/pims-model/src/java/org/pimslims/access/Access.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.access.NoAccess" 
+      file="/pims-model/src/java/org/pimslims/access/NoAccess.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.access.Access" 
+      file="/pims-model/src/java/org/pimslims/access/Access.java" binary="false"/>  
+  </generalization>
+</class-diagram>

@@ -1,0 +1,9 @@
+/* TODO make this svn:external */
+div#tooltip { position:absolute; top:0;left:0; z-index:10;
+				      border:2px solid #006; background-color:#ccf;color:#006; width:15em; padding:0.25em; 
+              font-size:80%; font-family:arial,helvetica,sans-serif; -moz-border-radius:0.4em; 
+              -moz-opacity:0.9; filter:alpha(opacity=90);}
+div#tooltip_head { border-bottom:1px solid #009; font-weight:bold; padding:0 0 0 20px; 
+                   background-repeat:no-repeat; background-image:url(../images/icons/tooltip_info.gif); }
+div#tooltip_body { min-height:3em }
+.hasTooltip  { /* cursor:help; */ }

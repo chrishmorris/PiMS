@@ -1,0 +1,17 @@
+Data
+
+Protocols: /data/Default-protocols
+Updated:
+PiMS_Plasmid_stock.xml
+Removed: Parameters
+  <parameterDefinition id="2" name="Antibiotic resistances" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="3" name="Rack position" parameterType="String" isMandatory="false" />
+  
+Updated Parameters:
+Old: <parameterDefinition id="4" name="Strain prepared from" parameterType="String" isMandatory="false" />
+New: <parameterDefinition id="2" name="Strain prepared from" parameterType="String" isMandatory="false" />
+
+Updated: /data/PlateTypes.csv
+Added:
+Box,81-place storage box,9,9,0,,,,9x9 storage box for 1.2-2ml tubes,I2381-5040,Starlab,,5,,Storage box,"Plasmid stock, Cell stock"
+Box,100-place storage box,10,10,0,,,,10x10 storage box for 1.2-2ml tubes,I2310-5800,Starlab,,5,,Storage box,"Plasmid stock, Cell stock"

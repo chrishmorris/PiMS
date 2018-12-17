@@ -1,0 +1,17 @@
+<!-- PiMS Mass Spectrometry protocol xml as flat file -->
+<protocol name="PiMS Mass Spectrometry" objective="Characterisation of Target Protein" creationDate="11-03-09" remarks="Default set of protocols for PiMS" details="Characterisation of Target Protein">
+ <experimentType>Mass spec</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Output Sample" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Molecular Weight" parameterType="Float" />
+  <parameterDefinition id="2" name="Method used" parameterType="String" />
+  <parameterDefinition id="3" name="Correct Molecular Weight?" parameterType="Boolean" />
+ </parameterDefinitions>
+
+</protocol>

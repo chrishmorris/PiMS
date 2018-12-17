@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Used by OPPF PlateDb only -->
+<Context antiJARLocking="false" antiResourceLocking="false" path="/xtalpims">
+
+	<Loader delegate="true"/>
+
+	<!-- UserDB DataSource -->
+	<Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/UserDB" password="****" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/userdb" username="userdb-user"/>
+
+	<!-- PlateDB DataSource -->
+	<Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/PlateDB" password="****" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/platedb" username="platedb-user"/>
+
+	<!-- web locations -->
+	<Environment name="url.sliceimages" type="java.lang.String" value="http://www.oppf.ox.ac.uk/vault/images/lowres/"/>
+	<Environment name="url.compositeimages" type="java.lang.String" value="http://www.oppf.ox.ac.uk/vault/images/lowres/"/>
+	<Environment name="url.zoomedimages" type="java.lang.String" value="http://www.oppf.ox.ac.uk/vault/images/micro/"/>
+
+	<!-- Use this to keep a log of the use of your xtalPiMS.
+		The PiMS team would be grateful for a copy of the log
+		from a typical day's activity.
+		<Valve className="org.apache.catalina.valves.FastCommonAccessLogValve"
+		directory="logs" prefix="xtalPiMS_access_log." suffix=".txt"
+		pattern="common" resolveHosts="false"/>
+	-->
+
+	<!-- use this filter for testing securely 
+		<Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127.0.0.1"/>
+	-->
+
+</Context>

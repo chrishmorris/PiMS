@@ -1,0 +1,108 @@
+DATA MODEL CHANGES 28
+
+--------------------------------------------------------------------------------
+-- PiMS CORE
+--------------------------------------------------------------------------------
+x PIMS-311 distinguish reference data classes from others
+  x Rename NormalStored to ExperimentalData
+  x Add ReferenceData subclass of MemopsBaseClass for reference data
+  x Change the superclass from ExperimentalData to ReferenceData of all reference data classes 
+    x DbName
+    x HolderCategory
+    x InstrumentType
+    x ExperimentType
+    x WorkflowItem
+    x ComponentCategory
+    x HazardPhrase
+    x SampleCategory
+    x Status
+    x Scoreboard
+    x NaturalSource
+
+x Rename in class Annotation attribute path to filename
+  >>> TODO: check implications in org.pimslims.hibernate.FileImpl & FileImplTester
+
+x Remove non-detailed diagrams - keep just one diagram per package in avarage
+
+x Remove unused classes (see datamodel/docs/sql-review/DBUse_CountReport_Summary.txt)
+  ExpBlueprint
+	x expb_blueprintdbref
+  Experiment
+	x expe_experiment2previous (many-to-many relationship next/previous on Experiment)
+	x expe_importsample
+  Instrument
+	x inst_abstractinstrument >>> merge with inst_instrument & remove instrumentType attr
+	x inst_column
+	x inst_nmrprobe
+	x inst_nmrprobe2citations
+	x inst_nmrsp2citations
+	x inst_nmrspectrometer
+  Protocol
+	x prot_addstep
+	x prot_centrifugationstep
+	x prot_crunchingstep
+	x prot_filtrationstep
+	x prot_flowstep
+	x prot_pressstep
+	x prot_procedure_remarks (delete attr remarks from Procedure)
+	x prot_sonicationstep
+	x prot_expety2instty (delete many-to-many link between ExperimentType & InstrumentType)
+  RefSampleComponent
+	x refs_cell
+	x refs_compin2elements
+	x refs_componentdbref
+	x refs_composite
+	x refs_compositeelement
+	x refs_compositeinteraction
+	x refs_isotla_atomnames
+	x refs_isotopelabel
+	x refs_label
+	x refs_restrictionenzyme
+	x refs_specificlabelgroup
+	x refs_substance
+  Sample
+	x sam_sampca2inpuwoit
+	x sam_sampca2outpwoit
+  Target
+	x targ_targgr2citations
+
+x Add one-to-many link between Person and Sample called assignTo
+
+
+--------------------------------------------------------------------------------
+-- PiMS PROTOCOLS
+--------------------------------------------------------------------------------
+x PIMS-955
+  x Remove link between RefSample and RefInput/OutoutSample
+  x Add mandatory link between SampleCategory and RefInput/OutoutSample
+x Add two links from Protocol to ParameterDefinition one for setup parameters and the other one for results
+x Add attribute isGroupLevel in ParameterDefinition and ResultDefinition (mandatory, default=false)
+x Rename attribute ParameterDefinition.mandatory to ParameterDefinition.isMandatory (mandatory, default=true)
+x Add attribute isForUse in Protocol: preventing incorrect protocols from being used 
+  if experiments have been done using them, then these protocols can't be
+  deleted. It's a way of marking them "not to be used".
+x Add attribute methodDescription in Protocol
+
+
+--------------------------------------------------------------------------------
+-- DEFERED
+--------------------------------------------------------------------------------
+- Add barcode attribute in Holder
+- PIMS-466 HolderType must have link to supplier
+- Merge ExperimentType / Status / Scoreboard
+- Remove namingSystem attribute in reference data classes
+- PIMS-743 Add a one-to-many link between ExperimentalData and Annotation 
+  - remove link between Annotation and Experiment
+  - remove link between Annotation and ExperimentGroup
+  - remove link between Annotation and Protocol
+  - remove link between Annotation and Target.Project
+  - remove link between Annotation and TargetGroup
+  - remove link between Annotation and Target
+- Remove unused classes in Holder pkg (see datamodel/docs/sql-review/DBUse_CountReport_Summary.txt)
+  - hold_holdertypeposition
+  - hold_pintype
+  - hold_refsampleposition
+- Remove Procedure and Step and subclasses of Step in Protocol pkg
+- parameterDefinitions, resultDefinitions, refInputSamples & refOutputSamples must be an ordered list
+- Add derived method hasExperiments() in Protocol
+  

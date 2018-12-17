@@ -1,0 +1,20 @@
+<!-- OPPF Optic Construct Primer Design protocol xml as flat file -->
+<protocol name="OPPF Construct Primer Design" objective="" creationDate="" remarks=""  >
+ <experimentType>Optic Construct Design</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.0" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.0" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Forward Primer Tm" parameterType="Float" />
+  <parameterDefinition id="2" name="Forward Primer" parameterType="String" />
+  <!-- <parameterDefinition id="6" name="Reverse Overlap" parameterType="String"/>
+  <parameterDefinition id="3" name="Forward Overlap" parameterType="String"/> -->
+  <parameterDefinition id="4" name="Forward Tag" parameterType="String" />
+  <parameterDefinition id="5" name="Reverse Tag" parameterType="String" />
+  <parameterDefinition id="7" name="Reverse Primer" parameterType="String" />
+  <parameterDefinition id="8" name="Reverse Primer Tm" parameterType="Float" />
+ </parameterDefinitions>
+ 
+</protocol>

@@ -1,0 +1,21 @@
+<!-- PIMS Circular Dichroism protocol xml as flat file -->
+<protocol name="PiMS CD" objective="Record Circular Dichroism Experiment details" creationDate="12-05-10" remarks="Default set of protocols for PiMS" details="Characterisation of Target Protein" >
+ <experimentType>Characterisation</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="% alpha-helix" label="% of protein in alpha-helical conformation" parameterType="Float" isMandatory="false" />
+  <parameterDefinition id="2" name="% beta-sheet" label="% of protein in beta-sheet conformation" parameterType="Float" isMandatory="false" />
+  <parameterDefinition id="3" name="% random coil" label="% of protein in random coil conformation" parameterType="Float" isMandatory="false" />
+  <parameterDefinition id="4" name="Path length" label="Path length 'l' in centimetres" parameterType="Float" defaultValue="0.1" displayUnit="cm" isMandatory="false" />
+  <parameterDefinition id="5" name="Protein Concentration" label="Concentration of the protein" parameterType="Float" displayUnit="mg/ml" isMandatory="false" />
+  <parameterDefinition id="6" name="Spectrum attached?" label="Is the CD spectrum attached to this Experiment record?" parameterType="Boolean" defaultValue="false" isMandatory="false" />
+  <parameterDefinition id="7" name="Volume used" label="The volume used in the Experiment" parameterType="Float" displayUnit="ul" isMandatory="false" />
+  <parameterDefinition id="8" name="Wavelength range (nm)" label="Range of wavelengths used in the Experiment" parameterType="String" defaultValue="180-260" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>
+

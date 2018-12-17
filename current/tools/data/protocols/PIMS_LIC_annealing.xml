@@ -1,0 +1,24 @@
+<!-- Generic LIC annealing reaction protocol xml as flat file -->
+<protocol name="PiMS LIC annealing" objective="anneal LIC T4 polymerase treated insert and vector, generate recombinant plasmid" creationDate="14-11-06" remarks="for control reaction, substitute 2ul H2O for 2ul LIC polymerase reaction" details="set up one reaction per insert" >
+ <experimentType>LIC annealing</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="mL" refSample="Annealing reaction product" name="LIC-product" />
+
+ <parameterDefinitions>
+ <parameterDefinition id="1" name="LIC vector concentration ng/ul" parameterType="Float" defaultValue="50"/>
+  <parameterDefinition id="2" name="Control" parameterType="String" defaultValue=
+  "Substitute 2ul H2O for 2ul LIC-prepared insert"/>
+  <parameterDefinition id="3" name="Incubation conditions" parameterType="String" defaultValue=
+  "Incubate 5 min at room temperature,
+   Cool on ice" />
+
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="0.000001" unit="L" displayUnit="uL" refSample="LIC-prepared vector" name="LIC vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="LIC-prepared insert" name="Insert" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000001" unit="L" displayUnit="uL" refSample="EDTA 25mM" name="Chelating agent" />
+ </inputSamples>
+
+</protocol>
+

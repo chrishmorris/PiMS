@@ -1,0 +1,17 @@
+<!-- PiMS Gel prification protocol xml as flat file -->
+<protocol name="PiMS Gel purification" objective="Purify PCR product" creationDate="16-02-07" >
+ <experimentType>DNA purification</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="% Recovery" label="% of PCR product recovered" parameterType="String" />
+  <parameterDefinition id="2" name="Why purified?" label="Reason for Gel purification" parameterType="String" />
+  <parameterDefinition id="3" name="% Gel" parameterType="Float" defaultValue="2" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000045" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+ </inputSamples>
+
+</protocol>

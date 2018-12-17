@@ -1,0 +1,1408 @@
+<?xml version="1.0"?>
+	<HazardPhrases>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R1</code>
+		<phrase>Explosive when dry.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R2</code>
+		<phrase>Risk of explosion by shock, friction, fire or other sources of ignition.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R3</code>
+		<phrase>Extreme risk of explosion by shock, friction, fire or other sources of ignition.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R4</code>
+		<phrase>Forms very sensitive explosive metallic compounds.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R5</code>
+		<phrase>Heating may cause an explosion.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R6</code>
+		<phrase>Explosive with or without contact with air.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R7</code>
+		<phrase>May cause fire.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R8</code>
+		<phrase>Contact with combustible material may cause fire.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R9</code>
+		<phrase>Explosive when mixed with combustible material.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R10</code>
+		<phrase>Flammable.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R11</code>
+		<phrase>Highly flammable.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R12</code>
+		<phrase>Extremely flammable.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R13</code>
+		<phrase>Extremely flammable liquefied gas.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R14</code>
+		<phrase>Reacts violently with water.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R14/15</code>
+		<phrase>Reacts violently with water, liberating extremely flammable gases.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R15</code>
+		<phrase>Contact with water liberates extremely flammable gases.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R15/29</code>
+		<phrase>Contact with water liberates toxic, extremely flammable gas.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R16</code>
+		<phrase>Explosive when mixed with oxidising substances.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R17</code>
+		<phrase>Spontaneously flammable in air.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R18</code>
+		<phrase>In use, may form flammable/explosive vapour air-mixture.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R19</code>
+		<phrase>May form explosive peroxides.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R20</code>
+		<phrase>Harmful by inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R20/21</code>
+		<phrase>Harmful by inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R20/21/22</code>
+		<phrase>Harmful by inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R20/22</code>
+		<phrase>Harmful by inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R21</code>
+		<phrase>Harmful in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R21/22</code>
+		<phrase>Harmful in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R22</code>
+		<phrase>Harmful if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R23</code>
+		<phrase>Toxic by inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R23/24</code>
+		<phrase>Toxic by inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R23/24/25</code>
+		<phrase>Toxic by inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R23/25</code>
+		<phrase>Toxic by inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R24</code>
+		<phrase>Toxic in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R24/25</code>
+		<phrase>Toxic in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R25</code>
+		<phrase>Toxic if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R26</code>
+		<phrase>Very toxic by inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R26/27</code>
+		<phrase>Very toxic by inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R26/27/28</code>
+		<phrase>Very toxic by inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R26/28</code>
+		<phrase>Very toxic by inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R27</code>
+		<phrase>Very toxic in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R27/28</code>
+		<phrase>Very toxic in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R28</code>
+		<phrase>Very toxic if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R29</code>
+		<phrase>Contact with water liberates toxic gas.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R30</code>
+		<phrase>Can become highly flammable in use.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R31</code>
+		<phrase>Contact with acids liberates toxic gas.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R32</code>
+		<phrase>Contact with acids liberates very toxic gas.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R33</code>
+		<phrase>Danger of cumulative effects.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R34</code>
+		<phrase>Causes burns.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R35</code>
+		<phrase>Causes severe burns.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R36</code>
+		<phrase>Irritating to eyes.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R36/37</code>
+		<phrase>Irritating to eyes and respiratory system.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R36/37/38</code>
+		<phrase>Irritating to eyes, respiratory system and skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R36/38</code>
+		<phrase>Irritating to eyes and skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R37</code>
+		<phrase>Irritating to respiratory system.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R37/38</code>
+		<phrase>Irritating to respiratory system and skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R38</code>
+		<phrase>Irritating to skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39</code>
+		<phrase>Danger of very serious irreversible effects.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/23</code>
+		<phrase>Toxic: danger of very serious irreversible effects through inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/23/24</code>
+		<phrase>Toxic: danger of very serious irreversible effects through inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/23/24/25</code>
+		<phrase>Toxic: danger of very serious irreversible effects through inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/23/25</code>
+		<phrase>Toxic: danger of very serious irreversible effects through inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/24</code>
+		<phrase>Toxic: danger of very serious irreversible effects in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/24/25</code>
+		<phrase>Toxic: danger of very serious irreversible effects in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/25</code>
+		<phrase>Toxic: danger of very serious irreversible effects if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/26</code>
+		<phrase>Very toxic: danger of very serious irreversible effects through inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/26/27</code>
+		<phrase>Very toxic: danger of very serious irreversible effects through inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/26/27/28</code>
+		<phrase>Very toxic: danger of very serious irreversible effects through inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/26/28</code>
+		<phrase>Very toxic: danger of very serious irreversible effects through inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/27</code>
+		<phrase>Very toxic: danger of very serious irreversible effects in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/27/28</code>
+		<phrase>Very toxic: danger of very serious irreversible effects in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R39/28</code>
+		<phrase>Very toxic: danger of very serious irreversible effects if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40</code>
+		<phrase>Limited evidence of a carcinogenic effect.</phrase>
+		<details>The phrase has been changed by ATP 28 (6 August 2001).The corresponding phrase used in earlier cards reads: Possible risk of irreversible effects.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40/20</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40/20/21</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation and in contact with skin.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40/20/21/22</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation, in contact with skin and if swallowed.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40/20/22</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation and if swallowed.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40/21</code>
+		<phrase>Harmful: possible risk of irreversible effects in contact with skin.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40/21/22</code>
+		<phrase>Harmful: possible risk of irreversible effects in contact with skin and if swallowed.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R40/22</code>
+		<phrase>Harmful: possible risk of irreversible effects if swallowed.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R41</code>
+		<phrase>Risk of serious damage to eyes.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R42</code>
+		<phrase>May cause sensitization by inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R42/43</code>
+		<phrase>May cause sensitization by inhalation and skin contact.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R43</code>
+		<phrase>May cause sensitization by skin contact.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R44</code>
+		<phrase>Risk of explosion if heated under confinement.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R45</code>
+		<phrase>May cause cancer.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R46</code>
+		<phrase>May cause heritable genetic damage.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R47</code>
+		<phrase>May cause birth defects.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48</code>
+		<phrase>Danger of serious damage to health by prolonged exposure.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/20</code>
+		<phrase>Harmful: danger of serious damage to health by prolonged exposure through inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/20/21</code>
+		<phrase>Harmful: danger of serious damage to health by prolonged exposure through inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/20/21/22</code>
+		<phrase>Harmful: danger of serious damage to health by prolonged exposure through inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/20/22</code>
+		<phrase>Harmful: danger of serious damage to health by prolonged exposure through inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/21</code>
+		<phrase>Harmful: danger of serious damage to health by prolonged exposure in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/21/22</code>
+		<phrase>Harmful: danger of serious damage to health by prolonged exposure in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/22</code>
+		<phrase>Harmful: danger of serious damage to health by prolonged exposure if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/23</code>
+		<phrase>Toxic: danger of serious damage to health by prolonged exposure through inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/23/24</code>
+		<phrase>Toxic: danger of serious damage to health by prolonged exposure through inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/23/24/25</code>
+		<phrase>Toxic: danger of serious damage to health by prolonged exposure through inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/23/25</code>
+		<phrase>Toxic: danger of serious damage to health by prolonged exposure through inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/24</code>
+		<phrase>Toxic: danger of serious damage to health by prolonged exposure in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/24/25</code>
+		<phrase>Toxic: danger of serious damage to health by prolonged exposure in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R48/25</code>
+		<phrase>Toxic: danger of serious damage to health by prolonged exposure if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R49</code>
+		<phrase>May cause cancer by inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R50</code>
+		<phrase>Very toxic to aquatic organisms.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R50/53</code>
+		<phrase>Very toxic to aquatic organisms, may cause long-term adverse effects in the aquatic environment.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R51</code>
+		<phrase>Toxic to aquatic organisms.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R51/53</code>
+		<phrase>Toxic to aquatic organisms, may cause long-term adverse effects in the aquatic environment.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R52</code>
+		<phrase>Harmful to aquatic organisms.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R52/53</code>
+		<phrase>Harmful to aquatic organisms, may cause long-term adverse effects in the aquatic environment.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R53</code>
+		<phrase>May cause long-term adverse effects in the aquatic environment.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R54</code>
+		<phrase>Toxic to flora.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R55</code>
+		<phrase>Toxic to fauna.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R56</code>
+		<phrase>Toxic to soil organisms.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R57</code>
+		<phrase>Toxic to bees.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R58</code>
+		<phrase>May cause long-term adverse effects in the environment.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R59</code>
+		<phrase>Dangerous for the ozone layer.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R60</code>
+		<phrase>May impair fertility.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R61</code>
+		<phrase>May cause harm to the unborn child.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R62</code>
+		<phrase>Possible risk of impaired fertility.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R63</code>
+		<phrase>Possible risk of harm to the unborn child.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R64</code>
+		<phrase>May cause harm to breast-fed babies.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R65</code>
+		<phrase>Harmful: may cause lung damage if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R66</code>
+		<phrase>Repeated exposure may cause skin dryness or cracking.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R67</code>
+		<phrase>Vapours may cause drowsiness and dizziness.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68</code>
+		<phrase>Possible risks of irreversible effects.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68/20</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68/20/21</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation and in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68/20/21/22</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation, in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68/20/22</code>
+		<phrase>Harmful: possible risk of irreversible effects through inhalation and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68/21</code>
+		<phrase>Harmful: possible risk of irreversible effects in contact with skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68/21/22</code>
+		<phrase>Harmful: possible risk of irreversible effects in contact with skin and if swallowed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>R68/22</code>
+		<phrase>Harmful: possible risk of irreversible effects if swallowed.</phrase>
+		<details>Safety Phrases</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S1</code>
+		<phrase>Keep locked up.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S1/2</code>
+		<phrase>Keep locked up and out of the reach of children.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S2</code>
+		<phrase>Keep out of the reach of children.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3</code>
+		<phrase>Keep in a cool place.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3/7</code>
+		<phrase>Keep container tightly closed in a cool place.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3/7/9</code>
+		<phrase>Keep container tightly closed in a cool, well-ventilated place.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3/9</code>
+		<phrase>Keep in a cool, well-ventilated place.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3/9/14</code>
+		<phrase>Keep in a cool, well-ventilated place away from (incompatible materials to be indicated by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3/9/14/49</code>
+		<phrase>Keep only in the original container in a cool, well-ventilated place away from ... (incompatible materials to be indicated by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3/9/49</code>
+		<phrase>Keep only in original container in a cool, well-ventilated place.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S3/14</code>
+		<phrase>Keep in a cool place away from ... (incompatible materials to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S4</code>
+		<phrase>Keep away from living quarters.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S5</code>
+		<phrase>Keep contents under ... (appropriate liquid to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S6</code>
+		<phrase>Keep under ... (inert gas to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S7</code>
+		<phrase>Keep container tightly closed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S7/8</code>
+		<phrase>Keep container tightly closed and dry.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S7/9</code>
+		<phrase>Keep container tightly closed and in a well-ventilated place.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S7/47</code>
+		<phrase>Keep container tightly closed and at a temperature not exceeding ...  (to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S8</code>
+		<phrase>Keep container dry.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S9</code>
+		<phrase>Keep container in a well-ventilated place.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S10</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S11</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S12</code>
+		<phrase>Do not keep the container sealed.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S13</code>
+		<phrase>Keep away from food, drink and animal feedingstuffs.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S14</code>
+		<phrase>Keep away from ... (incompatible materials to be indicated by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S15</code>
+		<phrase>Keep away from heat.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S16</code>
+		<phrase>Keep away from sources of ignition -- No smoking.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S17</code>
+		<phrase>Keep away from combustible material.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S18</code>
+		<phrase>Handle and open container with care.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S19</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S20</code>
+		<phrase>When using do not eat or drink.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S20/21</code>
+		<phrase>When using do not eat, drink or smoke.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S21</code>
+		<phrase>When using do not smoke.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S22</code>
+		<phrase>Do not breathe dust.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S23</code>
+		<phrase>Do not breathe gas/fumes/vapour/spray (appropriate wording to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S24</code>
+		<phrase>Avoid contact with the skin.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S24/25</code>
+		<phrase>Avoid contact with skin and eyes.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S25</code>
+		<phrase>Avoid contact with eyes.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S26</code>
+		<phrase>In case of contact with eyes, rinse immediately with plenty of water and seek medical advice.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S27</code>
+		<phrase>Take off immediately all contaminated clothing.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S27/28</code>
+		<phrase>After contact with skin, take off immediately all contaminated clothing, and wash immediately with plenty of (to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S28</code>
+		<phrase>After contact with skin, wash immediately with plenty of ... (to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S29</code>
+		<phrase>Do not empty into drains.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S29/35</code>
+		<phrase>Do not empty into drains; dispose of this material and its container in a safe way.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S29/56</code>
+		<phrase>Do not empty into drains, dispose of this material and its container at hazardous or special waste collection point.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S30</code>
+		<phrase>Never add water to this product.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S31</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S32</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S33</code>
+		<phrase>Take precautionary measures against static discharges.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S34</code>
+		<phrase>Avoid shock and friction.</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S35</code>
+		<phrase>This material and its container must be disposed of in a safe way.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S36</code>
+		<phrase>Wear suitable protective clothing.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S36/37</code>
+		<phrase>Wear suitable protective clothing and gloves.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S36/37/39</code>
+		<phrase>Wear suitable protective clothing, gloves and eye/face protection.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S36/39</code>
+		<phrase>Wear suitable protective clothing and eye/face protection.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S37</code>
+		<phrase>Wear suitable gloves.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S37/39</code>
+		<phrase>Wear suitable gloves and eye/face protection.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S38</code>
+		<phrase>In case of insufficient ventilation, wear suitable respiratory equipment.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S39</code>
+		<phrase>Wear eye/face protection.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S40</code>
+		<phrase>To clean the floor and all objects contaminated by this material, use ... (to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S41</code>
+		<phrase>In case of fire and/or explosion do not breathe fumes.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S42</code>
+		<phrase>During fumigation/spraying wear suitable respiratory equipment (appropriate wording to specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S44</code>
+		<phrase>If you feel unwell, seek medical advice (show label where possible).</phrase>
+		<details>The phrase has been deleted by ATP 28 (6 August 2001),but may still appear in cards not modified since then.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S45</code>
+		<phrase>In case of accident or if you feel unwell, seek medical advice immediately (show the label where possible).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S46</code>
+		<phrase>If swallowed, seek medical advice immediately and show container or label.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S47</code>
+		<phrase>Keep at temperature not exceeding ...  (to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S47/49</code>
+		<phrase>Keep only in the original container at a temperature not exceeding ...  (to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S48</code>
+		<phrase>Keep wet with ... (appropriate material to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S49</code>
+		<phrase>Keep only in the original container.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S50</code>
+		<phrase>Do not mix with ... (to be specified by the manufacturer).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S51</code>
+		<phrase>Use only in well-ventilated areas.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S52</code>
+		<phrase>Not recommended for interior use on large surface areas.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S53</code>
+		<phrase>Avoid exposure -- obtain special instructions before use.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S54</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S55</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S56</code>
+		<phrase>Dispose of this material and its container to hazardous or special waste collection point.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S57</code>
+		<phrase>Use appropriate container to avoid environmental contamination.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S58</code>
+		<phrase>---</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S59</code>
+		<phrase>Refer to manufacturer/supplier for information on recovery/ recycling.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S60</code>
+		<phrase>This material and its container must be disposed of as hazardous waste.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S61</code>
+		<phrase>Avoid release to the environment. Refer to special instructions/safety data sheets.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S62</code>
+		<phrase>If swallowed, do not induce vomiting: seek medical advice immediately and show this container or label.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S63</code>
+		<phrase>In case of accident by inhalation: remove casualty to fresh air and keep at rest.</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>S64</code>
+		<phrase>If swallowed, rinse mouth with water (only if the person is conscious).</phrase>
+		<details></details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>E</code>
+		<phrase>Explosive</phrase>
+		<details>Category of danger: Physico/chemical</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>F+</code>
+		<phrase>Extremely flammable</phrase>
+		<details>Category of danger: Physico/chemical</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>F</code>
+		<phrase>Highly flammable</phrase>
+		<details>Category of danger: Physico/chemical</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>T+</code>
+		<phrase>Very toxic</phrase>
+		<details>Category of danger: Health</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>T</code>
+		<phrase>Toxic</phrase>
+		<details>Category of danger: Health</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>Xn</code>
+		<phrase>Harmful</phrase>
+		<details>Category of danger: Health</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>C</code>
+		<phrase>Corrosive</phrase>
+		<details>Category of danger: Health</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>Xi</code>
+		<phrase>Irritant</phrase>
+		<details>Category of danger: Health</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>N</code>
+		<phrase>Dangerous for the Environment</phrase>
+		<details>Category of danger: Environmental</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>MSDS</classification>
+		<code>O</code>
+		<phrase>Oxidizing</phrase>
+		<details>Category of danger: Physico/chemical</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Biology</classification>
+		<code>Hazard Level 1</code>
+		<phrase>LOW Hazard. Substances which are considered to carry a low level of severity including those without any indication of danger</phrase>
+		<details>Examples: sucrose, glucose, glycine, starch, potassium hydrogen carbonate</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Biology</classification>
+		<code>Hazard Level 2</code>
+		<phrase>MEDIUM Hazard. Substances which carry a medium level of severity.</phrase>
+		<details>Examples:  Flammable, Highly flammable, Irritant (R36, R37, R38), Corrosive (R34, R35), Harmful substances (R20, R21, R22) but not Category 3 Carcinogens / Mutagens / Toxic to Reproduction, &amp; Sensitisers</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Biology</classification>
+		<code>Hazard Level 4</code>
+		<phrase>EXCEPTIONAL/SPECIAL Hazard. Used only where there is an exceptional hazard. e.g. able to cause acute or chronic health effects at low levels of exposure or where statutory cotrols are in place concerning the substance.</phrase>
+		<details>All Cat.1 Carcinogens, Mutagens and Toxic to reproduction (R45, R46, R60, R61, R62, R63) May also include substances labelled V.Toxic (R26, R27, R28, R39) Require a full written risk assessment &amp; approval by the Departmental Safety Advisor BEFORE ordering</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Biology</classification>
+		<code>Hazard Level 3</code>
+		<phrase>HIGH Hazard. Substances which carry a high level of severity</phrase>
+		<details>Explosive, Oxidizing, Ex. flammable, Harmful (Cat3 Carcinogens/Mutagens/Toxic to Reproduction), Sensitisers (R40, R42, R43) Toxic (Cat2 Carcinogens, Mutagens, Toxic to Reproduction) (R23, R24, R45, R48, R49, R60, R61, R62, R63) V Toxic (R26, R27, R28, R39</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Chemistry</classification>
+		<code>Severity Level 4</code>
+		<phrase>EXCEPTIONAL/SPECIAL Hazard. Used only where there is an exceptional hazard. e.g. able to cause acute or chronic health effects at low levels of exposure or where statutory cotrols are in place concerning the substance.</phrase>
+		<details>Any hazardous substance which is within this category of severity would require the approval of the Head of Department prior to the order being placed.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Chemistry</classification>
+		<code>Severity Level 3</code>
+		<phrase>Substances which are considered to carry a high level of severity</phrase>
+		<details>Those indicated with categories of danger including Explosive, Oxidizing, Extremely flammable, Toxic and Very toxic including harmful substances indiacted as carcinogenic.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Chemistry</classification>
+		<code>Severity Level 2</code>
+		<phrase>Substances which carry a medium level of severity.</phrase>
+		<details>Including Flammable, Highly flammable, Irritant, Harmful substances indicated as not carcinogenic.</details>
+	</HazardPhrase>
+	<HazardPhrase>
+		<classification>local_York_Chemistry</classification>
+		<code>Severity Level 1</code>
+		<phrase>Substances which are considered to carry a low level of severity including those without any indication of danger</phrase>
+		<details></details>
+	</HazardPhrase>
+	</HazardPhrases>
+

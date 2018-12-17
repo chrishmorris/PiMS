@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: PocketHolder.xsd,v 1.4 2006/11/02 08:34:59 lxl Exp $">
+	<xs:complexType name="PocketAuthentication">
+		<xs:sequence>
+			<xs:element name="proposal" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PocketBatch">
+		<xs:sequence>
+			<xs:element name="pocketAuthentication" type="tns:PocketAuthentication"/>
+			<xs:element name="pocketHolder" type="tns:PocketHolder" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PocketHolder">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Sample Name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="protein" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Crystal Name - Protein Acronym - SpaceGroup</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="code" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The code to identify the Holder. It can a barcode, a datamatrix or any label stuck on it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="position" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The location of the Holder in the Container. This location will depend on the Container type : puck, cane,...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="holderLength" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The length of pin + hat, in millimeter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="loopLength" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The diameter of the loop containing the Crystal, in millimeter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="loopType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The type of the loop e.g. 'Nylon'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wireWidth" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The width of the loop wire, in micrometer.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crystalUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The globally unique code of the Crystal ensures a correct identification between the different partners. It could be defined by the crystallisation centre. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="pocketBatch" type="tns:PocketBatch"/>
+</xs:schema>

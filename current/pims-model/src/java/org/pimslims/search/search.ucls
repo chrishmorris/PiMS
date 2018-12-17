@@ -1,0 +1,202 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.dao.search.Paging" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/Paging.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="433" y="743" width="-1" height="-1"/>  
+  </class>  
+  <enumeration language="java" name="org.pimslims.dao.search.Paging.Order" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/Paging.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="451" y="965" width="-1" height="-1"/>  
+  </enumeration>  
+  <interface language="java" name="org.pimslims.dao.search.PIMSCriteria" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="811" y="929" width="-1" height="-1"/>  
+  </interface>  
+  <enumeration language="java" name="org.pimslims.dao.search.PIMSCriteria.SearchLink" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="649" y="734" width="-1" height="-1"/>  
+  </enumeration>  
+  <enumeration language="java" name="org.pimslims.dao.search.PIMSCriteria.SearchCon" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="988" y="755" width="-1" height="-1"/>  
+  </enumeration>  
+  <class language="java" name="org.pimslims.dao.search.PIMSCriteriaImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteriaImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="642" y="185" width="280" height="426"/>  
+  </class>  
+  <class language="java" name="org.pimslims.dao.search.Restriction" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/Restriction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="142" y="185" width="148" height="282"/>  
+  </class>  
+  <class language="java" name="org.pimslims.dao.search.Searcher" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/search/Searcher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="330" y="185" width="272" height="202"/>  
+  </class>  
+  <class language="java" name="org.pimslims.dao.AbstractModel" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="360" y="-65" width="-1" height="-1"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.dao.ReadableVersion" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="673" y="-211" width="-1" height="-1"/>  
+  </interface>  
+  <interface language="java" name="org.pimslims.metamodel.MetaClass" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1093" y="449" width="-1" height="-1"/>  
+  </interface>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.Paging" 
+      file="/pims-model/src/java/org/pimslims/dao/search/Paging.java" binary="false">      
+      <attribute name="orderBy"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.search.Paging.Order" 
+      file="/pims-model/src/java/org/pimslims/dao/search/Paging.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.PIMSCriteriaImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteriaImpl.java" binary="false">      
+      <attribute name="metaClass"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.MetaClass" 
+      file="/pims-model/src/java/org/pimslims/metamodel/MetaClass.java" binary="false"/>  
+  </association>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.dao.search.PIMSCriteria" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.search.PIMSCriteria.SearchCon" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false"/>  
+  </nesting>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.dao.search.PIMSCriteria" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.search.PIMSCriteria.SearchLink" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false"/>  
+  </nesting>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.dao.search.PIMSCriteriaImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteriaImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.search.PIMSCriteria" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.Searcher" 
+      file="/pims-model/src/java/org/pimslims/dao/search/Searcher.java" binary="false">      
+      <attribute name="version"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.ReadableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false"/>  
+  </association>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.dao.search.Paging" 
+      file="/pims-model/src/java/org/pimslims/dao/search/Paging.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.search.Paging.Order" 
+      file="/pims-model/src/java/org/pimslims/dao/search/Paging.java" binary="false"/>  
+  </nesting>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.PIMSCriteriaImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteriaImpl.java" binary="false">      
+      <attribute name="rv"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.ReadableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.PIMSCriteriaImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteriaImpl.java" binary="false">      
+      <attribute name="EQUALorLIKESearch"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.search.PIMSCriteria.SearchCon" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false"/>    
+    <bendpoint x="872" y="651"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.PIMSCriteriaImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteriaImpl.java" binary="false">      
+      <attribute name="ANDorORSearch"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.search.PIMSCriteria.SearchLink" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteria.java" binary="false"/>    
+    <bendpoint x="611" y="651"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.PIMSCriteriaImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/search/PIMSCriteriaImpl.java" binary="false">      
+      <attribute name="paging"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.search.Paging" 
+      file="/pims-model/src/java/org/pimslims/dao/search/Paging.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.search.Searcher" 
+      file="/pims-model/src/java/org/pimslims/dao/search/Searcher.java" binary="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.AbstractModel" 
+      file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false"/>  
+  </association>
+</class-diagram>

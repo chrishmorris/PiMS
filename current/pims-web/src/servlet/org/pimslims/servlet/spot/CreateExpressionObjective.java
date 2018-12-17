@@ -1,0 +1,575 @@
+package org.pimslims.servlet.spot;
+
+import java.io.IOException;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.StringEscapeUtils;
+import org.pimslims.bioinf.newtarget.PIMSTarget;
+import org.pimslims.dao.ReadableVersion;
+import org.pimslims.dao.WritableVersion;
+import org.pimslims.exception.AbortedException;
+import org.pimslims.exception.AccessException;
+import org.pimslims.exception.ConstraintException;
+import org.pimslims.lab.primer.PimsStandardPrimerDesigner;
+import org.pimslims.lab.primer.YorkPrimerBean;
+import org.pimslims.lab.sequence.DnaSequence;
+import org.pimslims.lab.sequence.SequenceUtility;
+import org.pimslims.lab.sequence.ThreeLetterProteinSeq;
+import org.pimslims.metamodel.ModelObject;
+import org.pimslims.model.core.LabNotebook;
+import org.pimslims.model.sample.Sample;
+import org.pimslims.model.target.ResearchObjective;
+import org.pimslims.model.target.Target;
+import org.pimslims.presentation.ModelObjectBean;
+import org.pimslims.presentation.ModelObjectShortBean;
+import org.pimslims.presentation.TargetBean;
+import org.pimslims.presentation.construct.ConstructBean;
+import org.pimslims.presentation.construct.ConstructBeanWriter;
+import org.pimslims.presentation.construct.ConstructResultBean;
+import org.pimslims.presentation.construct.SyntheticGeneBean;
+import org.pimslims.presentation.construct.SyntheticGeneManager;
+import org.pimslims.servlet.PIMSServlet;
+import org.pimslims.servlet.construct.AddPrimers;
+
+/**
+ * 
+ * 
+ * 
+ */
+public class CreateExpressionObjective extends PIMSServlet {
+
+    /**
+     * SAVE_PRIMERLESS_CONSTRUCT String
+     */
+    public static final String SAVE_PRIMERLESS_CONSTRUCT = "Save Construct";
+
+    /**
+     * C_TAG String
+     */
+    public static final String C_TAG = "expressed_prot_c";
+
+    /**
+     * N_TAG String
+     */
+    public static final String N_TAG = "expressed_prot_n";
+
+    /**
+     * @see javax.servlet.Servlet#getServletInfo()
+     * @return Description of Servlet
+     */
+    @Override
+    public String getServletInfo() {
+        return "Create a construct";
+    }
+
+    /**
+     * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest,
+     *      javax.servlet.http.HttpServletResponse)
+     * @param request a request from a URL
+     * @param response a response from a URL
+     * @throws ServletException if no target found
+     * @throws IOException if it cannot write to the user's browser
+     */
+    @Override
+    protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
+        throws ServletException, IOException {
+
+        // Ensure that PIMS was able to connect to the database
+        if (!this.checkStarted(request, response)) {
+            return;
+        }
+
+        // Get a read transaction
+        final ReadableVersion version = this.getReadableVersion(request, response);
+        if (version == null) {
+            return; // error message has already been sent
+        }
+
+        // always use a transaction in a try/catch block
+        try {
+            final ConstructBean cb;
+            final String pathInfo = request.getPathInfo();
+            String sampleHook = "";
+            String sampleName = "";
+            if (pathInfo.contains("sample.Sample")) {
+                Sample sgSample;
+                if (null == pathInfo || 2 > pathInfo.length()) {
+                    throw new ServletException("No Sample specified");
+                }
+                final String hook = pathInfo.substring(1);
+                //Attempt to distinguish synthetic gene from Target
+                sampleHook = hook;
+                request.setAttribute("sampleHook", sampleHook);
+                sgSample = version.get(hook);
+                if (null == sgSample || !(SyntheticGeneManager.isSynthGene(sgSample))) {
+                    this.writeErrorHead(request, response, "Synthetic gene Sample not found",
+                        HttpServletResponse.SC_NOT_FOUND);
+                    return;
+                }
+                // Synthetic gene support was never used
+                final SyntheticGeneBean sgb = new SyntheticGeneBean(sgSample);
+                request.setAttribute("syntheticGeneBean", sgb);
+                sampleName = sgb.getName();
+                request.setAttribute("sampleName", sampleName);
+                final TargetBean sgtb = sgb.getTargetBean(); //get the targeBean from the SyntheticGene bean
+                final Target t = version.get(sgtb.getHook()); //get the Target from the Target bean
+                final String dnaSeq = sgb.getDnaSeq().toUpperCase(); //Set the DNA sequence in the TargetBean to the SyntheticGene sequence
+                sgtb.setDnaSeq(dnaSeq);
+
+                cb = new ConstructBean(sgtb);
+                //cb.setTargetProtSeq(sgb.getProteinSeq());
+                //cb.setName(sgb.getSgeneName()); //??what is this for?
+                cb.setAccess(sgb.getAccess());
+                SpotNewTarget.setPeople(request, version);
+
+                request.setAttribute("constructBean", cb);
+                final Collection<ConstructResultBean> milestones =
+                    org.pimslims.servlet.spot.SpotTarget.getMilestones(version, t);
+                request.setAttribute("milestones", milestones);
+                //To format the DNA sequence in JSP without using scriptlets
+                final List<String> chunks = new DnaSequence(cb.getTargetDnaSeq()).chunkSeq();
+                request.setAttribute("chunks", chunks);
+                cb.setTargetProtSeq(ThreeLetterProteinSeq.translate(sgtb.getDnaSeq()));
+                //final List<String> transSeqChunks = new ProteinSequence(cb.getTargetProtSeq()).chunkSeq();
+                final List<String> transSeqChunks = SequenceUtility.chunkSeq(cb.getTargetProtSeq());
+                request.setAttribute("transSeqChunks", transSeqChunks);
+                request.setAttribute("accessObjects", PIMSServlet.getPossibleCreateOwners(version));
+
+            } else {
+                final Target t = CreateExpressionObjective.getTarget(request, version);
+                if (null == t) {
+                    this.writeErrorHead(request, response, "Target not found",
+                        HttpServletResponse.SC_NOT_FOUND);
+                    return;
+                }
+
+                // Get a SPOTTarget
+                final TargetBean tb = new TargetBean(t);
+
+                //DNA Target doesn't have DNA MolComp
+                if (!PIMSTarget.isDNATarget(t)) {
+                    if (null == tb.getDnaSeq()) {
+                        this.writeErrorHead(request, response, "No DNA sequence found",
+                            HttpServletResponse.SC_BAD_REQUEST);
+                        response
+                            .getWriter()
+                            .println(
+                                "Please create a DNA sequence or associate a DNA sequence with this target<br />");
+                        response.getWriter().println(
+
+                            "<a href=" + request.getContextPath()
+                                + "/Create/org.pimslims.model.molecule.Molecule?nucTargets="
+                                + tb.getPimsTargetHook() + ">Add new</a><br />"
+
+                        );
+                        response.getWriter().println(
+                            "<a href=" + request.getContextPath() + "/EditRole/" + tb.getPimsTargetHook()
+                                + "/nucleicAcids?molType=DNA>Search/Add</a><br />");
+
+                        response.getWriter().println("</body></html>");
+                        return;
+                    }
+                }
+
+                cb = new ConstructBean(tb);
+                //cb.setTargetName(tb.getProtein_name());
+                //DNA Target doesn't need protein sequence
+                if (!PIMSTarget.isDNATarget(t)) {
+                    try {
+                        cb.setTargetProtSeq(ThreeLetterProteinSeq.translate(tb.getDnaSeq()));
+                        //final List<String> transSeqChunks = new ProteinSequence(cb.getTargetProtSeq()).chunkSeq();
+                        final List<String> transSeqChunks = SequenceUtility.chunkSeq(cb.getTargetProtSeq());
+                        request.setAttribute("transSeqChunks", transSeqChunks);
+
+                    } catch (final IllegalArgumentException e) {
+                        if (e.getMessage().contains("Protein sequence is not all IUB symbols")) {
+                            this.writeErrorHead(request, response, "Invalid DNA sequence",
+                                HttpServletResponse.SC_BAD_REQUEST);
+                            response.getWriter().println(
+                                "Please correct the DNA sequence: " + tb.getDnaSeq() + " <br />"
+                                    + e.getMessage());
+                            response.getWriter().println("</body></html>");
+                            return;
+                        } else if (e.getMessage().contains(
+                            "The source length must be divisible by the window width")) {
+                            this.writeErrorHead(request, response, "Invalid DNA sequence",
+                                HttpServletResponse.SC_BAD_REQUEST);
+                            response.getWriter().println(
+                                "Please correct the DNA sequence: "
+                                    + StringEscapeUtils.escapeXml(tb.getDnaSeq()) + " <br />"
+                                    + e.getMessage());
+                            response.getWriter().println("</body></html>");
+                            return;
+                        }
+                        throw e;
+                    }
+                    cb.setTargetDnaSeq(tb.getDnaSeq().toUpperCase());
+                }
+                //DNA Target saves DNA sequence in protein sequence
+                else {
+                    cb.setTargetName(tb.getName());
+                    cb.setTargetDnaSeq(tb.getProtSeq().toUpperCase().replaceAll(" ", ""));
+                    cb.setDnaTarget("dnaTarget");
+                    //nonProtConstruct =true;
+                }
+
+                SpotNewTarget.setPeople(request, version);
+                request.setAttribute("constructBean", cb);
+                final Collection<ConstructResultBean> milestones =
+                    org.pimslims.servlet.spot.SpotTarget.getMilestones(version, t);
+                request.setAttribute("milestones", milestones);
+                //To format the DNA sequence in JSP without using scriptlets
+                final List<String> chunks = new DnaSequence(cb.getTargetDnaSeq()).chunkSeq();
+                request.setAttribute("chunks", chunks);
+                request.setAttribute("accessObjects", PIMSServlet.getPossibleCreateOwners(version));
+            }
+            final RequestDispatcher dispatcher = request.getRequestDispatcher(this.getJspPath());
+            dispatcher.forward(request, response);
+            version.commit();
+        } catch (final AbortedException ex) {
+            throw new ServletException(ex);
+        } catch (final ConstraintException ex) {
+            throw new ServletException(ex);
+        } finally {
+            if (!version.isCompleted()) {
+                version.abort();
+            }
+        }
+
+    }
+
+    /**
+     * @return String path to the calling JSP
+     */
+    protected String getJspPath() {
+        return "/JSP/spot/CreateExpressionObjective.jsp";
+    }
+
+    //needed to pass value of checkbox if using non-standard start codon
+    //TODO no, don't use mutable static fields. Value goes into hidden field in SpotNewConstructWizardStep2c.jsp.
+    private static String fixNonstandardStartCodon = "";
+
+    /**
+     * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest,
+     *      javax.servlet.http.HttpServletResponse)
+     * @param request a request from a URL
+     * @param response a response from a URL
+     * @throws ServletException if no target found
+     * @throws IOException if it cannot write to the user's browser
+     */
+    @Override
+    protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
+        throws ServletException, IOException {
+
+        final WritableVersion version = this.getWritableVersion(request, response);
+        if (version == null) {
+            return; // error message has already been sent
+        }
+        try {
+            //TODO if its a polycistronic construct, there will be several targets
+            //String insert = "";
+            final String targetHook = request.getParameter("pims_target_hook");
+            TargetBean tb = new TargetBean();
+            if (null != targetHook) {
+                final Target target = (Target) version.get(targetHook);
+                tb = new TargetBean(target);
+                /* if (1 == target.getNucleicAcids().size()) {
+                    // TODO accept a parameter
+                    //insert = target.getNucleicAcids().iterator().next().getSeqString();
+                } */
+            }
+            /* TODO For synthetic gene, need different DNA sequence
+            final String sampleHook = request.getParameter("sampleHook");
+            if (null != sampleHook && "" != sampleHook) {
+                final Sample sgSample = version.get(sampleHook);
+                if (null == sgSample || !(SyntheticGeneManager.isSynthGene(sgSample))) {
+                    this.writeErrorHead(request, response, "Synthetic gene Sample not found",
+                        HttpServletResponse.SC_NOT_FOUND);
+                    return;
+                }
+                final SyntheticGeneBean sgb = new SyntheticGeneBean(sgSample);
+                request.setAttribute("syntheticGeneBean", sgb);
+                final String dnaSeq = sgb.getDnaSeq().toUpperCase();
+                tb.setDnaSeq(dnaSeq);
+            }
+            request.setAttribute("sampleHook", sampleHook);
+            */
+
+            final String name = request.getParameter("construct_id");
+
+            final ConstructBean cb = new ConstructBean(tb);
+
+            if (null != request.getParameter("sampleName") && "" != request.getParameter("sampleName")) {
+                cb.setName(request.getParameter("sampleName") + "." + request.getParameter("construct_id"));
+            } else {
+                cb.setName(cb.getTargetName() + "." + request.getParameter("construct_id"));
+            }
+
+            //For synthetic gene construct
+            if (null != request.getParameter("sampleHook") && "" != request.getParameter("sampleHook")) {
+                final String shook = request.getParameter("sampleHook");
+                cb.setSgSampleHook(shook);
+                String sampleName;
+                final ModelObject sample = version.get(shook);
+                sampleName = sample.get_Name();
+                cb.setSgSampleName(sampleName);
+            }
+
+            this.setConstructBean(version, request, cb, tb);
+            cb.setPcrProductSeq(cb.getDnaSeq());
+            cb.setExpressedProt(ThreeLetterProteinSeq.translate(cb.getDnaSeq()));
+            final ResearchObjective ro = ConstructBeanWriter.createNewConstruct(version, cb);
+            final String roHook = ro.get_Hook();
+            final String roeHook = ro.getResearchObjectiveElements().iterator().next().get_Hook();
+            version.commit();
+            if (CreateExpressionObjective.SAVE_PRIMERLESS_CONSTRUCT.equals(request.getParameter("Submit"))) {
+                PIMSServlet.redirectPost(response, request.getContextPath() + "/View/" + roHook);
+                return;
+            } else {
+                PIMSServlet
+                    .redirectPost(response, request.getContextPath() + "/update/AddPrimers/" + roeHook);
+                //TODO ?desired_tm=
+            }
+
+            /* this part is obsolete
+            final ConstructBean cb =
+                new ConstructBean(tb, new PrimerBean(PrimerBean.FORWARD), new PrimerBean(PrimerBean.REVERSE));
+            cb.setConstructId(name);
+            this.setConstructBean(version, request, cb, tb);
+            final Map<String, String> parameterMap = PIMSServlet.getParameterMap(request);
+
+            final List<YorkPrimerBean> primerBeans = new ArrayList<YorkPrimerBean>();
+            final List<YorkPrimerBean> rprimerBeans = new ArrayList<YorkPrimerBean>();
+            final String nextPage =
+                CreateExpressionObjective.designPrimers(parameterMap, cb, primerBeans, rprimerBeans);
+            // not saved, need to show another form
+            SpotNewTarget.setPeople(request, version);
+            request.setAttribute("constructBean", cb);
+            request.setAttribute("primerBeans", primerBeans);
+            request.setAttribute("rprimerBeans", rprimerBeans);
+            request.setAttribute("forward_tags", Extensions.getExtensions(version, "Forward Extension"));
+            request.setAttribute("reverse_tags", Extensions.getExtensions(version, "Reverse Extension"));
+            request.setAttribute("fixNonstandardStartCodon",
+                CreateExpressionObjective.fixNonstandardStartCodon); //for non-standard start codon
+
+
+            response.setStatus(HttpServletResponse.SC_OK);
+            final RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
+            version.abort(); // nothing created yet */
+            return;
+        } catch (final AbortedException e) {
+            throw new ServletException(e);
+        } catch (final ConstraintException e) {
+            e.printStackTrace();
+            throw new ServletException(e);
+        } catch (final AccessException e) {
+            throw new ServletException(e);
+        } catch (final NumberFormatException e1) {
+            this.writeErrorHead(request, response, "bad number: " + e1.getMessage(),
+                HttpServletResponse.SC_BAD_REQUEST);
+        } finally {
+            if (!version.isCompleted()) {
+                version.abort();
+            }
+        }
+    }
+
+    @Deprecated
+    // tested but not used
+    static String designPrimers(final Map<String, String> parms, final ConstructBean cb,
+        final List<YorkPrimerBean> primerBeans, final List<YorkPrimerBean> rprimerBeans) {
+
+        //final String NONSTANDARD = "Non-standard letters in DNA Sequence";
+        final String wizardStep = parms.get("wizard_step");
+
+        if (wizardStep.equals("1")) {
+            if (null != parms.get("sampleName") && "" != parms.get("sampleName")) {
+                // for synthetic gene
+                cb.setConstructId(parms.get("sampleName") + "." + parms.get("construct_id"));
+            } else {
+                cb.setConstructId(cb.getTargetName() + "." + parms.get("construct_id"));
+            }
+
+            final String desiredTm = parms.get("desired_tm");
+            float tm = AddPrimers.DEFAULT_TM;
+            if (null != desiredTm) {
+                tm = Float.parseFloat(desiredTm);
+            }
+            cb.setDesiredTm(tm);
+            // }
+            //06-02-09 processing non-standard start codons
+            if ("on".equals(parms.get("fixNonstandardStartCodon"))) {
+                final String newStart = "A";
+                cb.setDnaSeq(newStart + cb.getDnaSeq().substring(1));
+                CreateExpressionObjective.fixNonstandardStartCodon = "on";
+            } else {
+                CreateExpressionObjective.fixNonstandardStartCodon = "off";
+            }
+            PimsStandardPrimerDesigner.makeFandRPrimerBeanLists(primerBeans, rprimerBeans, cb.getDesiredTm(),
+                cb.getDnaSeq());
+
+            // }
+            return "/JSP/spot/SpotNewConstructWizardStep2c.jsp"; //TODO /JSP/construct/DesignOverlaps.jsp
+
+        } else if (wizardStep.equals("1dna")) {
+
+            //cb.setDesignType(parms.get("design_type"));
+            cb.setConstructId(parms.get("target_name") //TODO get this some other way
+                + "." + parms.get("construct_id"));
+            final String desiredTm = parms.get("desired_tm");
+            float tm = AddPrimers.DEFAULT_TM;
+            if (null != desiredTm) {
+                tm = Float.parseFloat(desiredTm);
+            }
+            cb.setDesiredTm(tm);
+            // }
+            PimsStandardPrimerDesigner.makeFandRPrimerBeanLists(primerBeans, rprimerBeans, cb.getDesiredTm(),
+                cb.getDnaSeq());
+            return "/JSP/dnaTarget/DNAConstructWizardStep2.jsp";
+        } else {
+            throw new java.lang.AssertionError("Use AddPrimers");
+        }
+
+    }
+
+    /**
+     * @param request a request from a URL
+     * @return org.pimslims.presentation.construct.ConstructBean -presenation layer construct bean
+     */
+    private ModelObjectShortBean setConstructBean(final ReadableVersion version,
+        final HttpServletRequest request, final ConstructBean cb, final TargetBean tb) {
+        if (null != request.getParameter(PIMSServlet.LAB_NOTEBOOK_ID)) {
+            cb.setDnaTarget(request.getParameter("dna_target"));
+
+            final LabNotebook project = version.get(request.getParameter(PIMSServlet.LAB_NOTEBOOK_ID));
+            if (project != null) {
+                cb.setAccess(new ModelObjectBean(project));
+            }
+        }
+
+        //this.setDnaAndProtProperties(request, cb);
+        //DNA Sequence formatted for JSPs
+        final List<String> chunks = SequenceUtility.chunkSeq(cb.getTargetDnaSeq());
+        request.setAttribute("chunks", chunks);
+        //Oct 08 after re-design
+        //Susy 23-62010 for version 4.1 -displaying target protein sequence NOT translated sequence
+
+        if (null == cb.getDnaTarget() || "".equals(cb.getDnaTarget())) {
+            cb.setTargetProtSeq(ThreeLetterProteinSeq.translate(tb.getDnaSeq()));
+            this.setSeqStartAndEnd(request, cb);
+            final List<String> transSeqChunks =
+                SequenceUtility.chunkSeq(ThreeLetterProteinSeq.translate(cb.getTargetDnaSeq()));
+            //final List<String> transSeqChunks = SequenceUtility.chunkSeq(cb.getTargetProtSeq());
+            request.setAttribute("transSeqChunks", transSeqChunks);
+        } else {
+            this.setDNASeqStartAndEnd(request, cb);
+        }
+
+        final String final_n = request.getParameter("final_prot_n");
+        cb.setFinalProtN(final_n == null ? "" : final_n);
+
+        if (null == cb.getDnaTarget() || "".equals(cb.getDnaTarget())) {
+            //22-11-07 Code to process Start codon ATG addition to tag, if checkbox is checked
+            if ("on".equals(request.getParameter("check1"))) {
+                final String ftag = request.getParameter("forward_extension") + "ATG";
+                cb.setForwardTag(ftag);
+                //220708 Also have to add 'M' to N-term of protein
+                final String expM = request.getParameter(CreateExpressionObjective.N_TAG) + "M";
+                cb.setForwardTag(expM);
+                final String finM = final_n + "M";
+                cb.setFinalProtN(finM);
+            }
+
+            //not set anywhere
+            cb.setDescription(request.getParameter("description"));
+            cb.setComments(request.getParameter("comments"));
+            cb.setUserHook(request.getParameter("personHook"));
+        }
+
+        return cb;
+    }
+
+    /* Mapping for Primer design type obsolete
+    private static java.util.Map<String, String> radioMap = new LinkedHashMap<String, String>();
+    static {
+        CreateExpressionObjective.radioMap.put("StAndrews", "User-defined primer length");
+        CreateExpressionObjective.radioMap.put("PrimersProvided", "User-provided primer sequences");
+        CreateExpressionObjective.radioMap.put("York", "User-defined Tm");
+    } */
+
+    /**
+     * @param request a request from a URL
+     * @param cb an instance of org.pimslims.presentation.construct.ConstructBean
+     */
+    private void setDNASeqStartAndEnd(final HttpServletRequest request, final ConstructBean cb) {
+        String startDT = "";
+        String endDT = "";
+
+        if (null != request.getParameter("target_dna_start")) {
+            startDT = request.getParameter("target_dna_start").trim();
+            final int startInt = Integer.parseInt(startDT);
+            cb.setTargetDnaStart(new Integer(startInt));
+        }
+        if (null != request.getParameter("target_dna_end")) {
+            endDT = request.getParameter("target_dna_end").trim();
+            final int endInt = Integer.parseInt(endDT);
+            cb.setTargetDnaEnd(new Integer(endInt));
+        }
+        cb.setDnaSeq(cb.getTargetDnaSeq().substring((cb.getTargetDnaStart()) - 1, cb.getTargetDnaEnd()));
+        final List<String> constructChunks = new DnaSequence(cb.getDnaSeq()).chunkSeq();
+        request.setAttribute("constructChunks", constructChunks);
+
+    }
+
+    /**
+     * @param request a request from a URL
+     * @param cb an instance of org.pimslims.presentation.construct.ConstructBean
+     */
+    protected void setSeqStartAndEnd(final HttpServletRequest request, final ConstructBean cb) {
+        final int THREE = 3;
+        cb.setTargetProtStart(new Integer(request.getParameter("target_prot_start")));
+        cb.setTargetProtEnd(new Integer(request.getParameter("target_prot_end")));
+        cb.setDnaSeq(cb.getTargetDnaSeq().substring(((cb.getTargetProtStart()) * THREE) - THREE,
+            cb.getTargetProtEnd() * THREE));
+
+        //06-02-09 processing non-standard start codons
+        if ("on".equals(request.getParameter("fixNonstandardStartCodon"))
+            || "on".equals(request.getParameter("fixNonstandardStartCodon"))) {
+            cb.setDnaSeq("A" + cb.getDnaSeq().substring(1));
+        }
+        cb.setProtSeq(ThreeLetterProteinSeq.translate(cb.getDnaSeq()));
+        //Oct 08 after re-design
+        final List<String> protConDNAChunks = SequenceUtility.chunkSeq(cb.getDnaSeq());
+        request.setAttribute("protConDNAChunks", protConDNAChunks);
+        final List<String> protConChunks = SequenceUtility.chunkSeq(cb.getProtSeq());
+        request.setAttribute("protConChunks", protConChunks);
+        cb.suggestPrimerNames();
+    }
+
+    /**
+     * @param request an request to an URL like xxxx/org.pimslims.model.target.Target:4334
+     * @param version PiMS Readable version
+     * @return the target specific in the pathInfo
+     * @throws ServletException if no target is specified
+     */
+    public static Target getTarget(final HttpServletRequest request, final ReadableVersion version)
+        throws ServletException {
+        Target t;
+        final String pathInfo = request.getPathInfo();
+        if (null == pathInfo || 2 > pathInfo.length()) {
+            throw new ServletException("No target specified");
+        }
+        final String hook = pathInfo.substring(1);
+        t = version.get(hook);
+        return t;
+    }
+
+}

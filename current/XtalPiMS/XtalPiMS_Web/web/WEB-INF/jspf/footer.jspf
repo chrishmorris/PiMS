@@ -1,0 +1,12 @@
+</div>
+</div>
+
+<div class="noprint main_footer">
+<br/>
+<div style="border-top: 1px solid grey;">
+<div style="color:#006;width:29em;text-align:left;margin:0 auto">
+<img style="float:left;position:relative;top:0.25em;width:25%" src="${pageContext.request['contextPath']}/skins/academic/footer_logo.png" /> <br/> Crystallization PiMS v1.4
+</div>
+</div>
+</body>
+</html>

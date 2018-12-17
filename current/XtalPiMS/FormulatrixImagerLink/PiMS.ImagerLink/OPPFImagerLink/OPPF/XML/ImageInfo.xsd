@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ImageInfo" targetNamespace="http://www.oppf.ox.ac.uk/xsd/RI/ImageInfo.xsd"
+	elementFormDefault="qualified" xmlns="http://www.oppf.ox.ac.uk/xsd/RI/ImageInfo.xsd" xmlns:mstns="http://www.oppf.ox.ac.uk/xsd/RI/ImageInfo.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+
+  <xs:element name="ImageInfo" type="ImageInfo" />
+	<xs:complexType name="ImageInfo">
+		<xs:sequence>
+      <xs:element name="Url" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            The URL at which the image can be found
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Imager" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            The name of the imager
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ImagingId" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            The id of the imaging session to which this image belongs
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PlateId" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            The id of the plate from which this image was taken
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Drop" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            The drop from which this image was taken in the form RowCol.Drop, eg A01.1, H12.3
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ImageType">
+        <xs:annotation>
+          <xs:documentation>
+            The type of the image
+          </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="C">
+              <xs:annotation>
+                <xs:documentation>
+                  Composite, eg ExtendedFocus image
+                </xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="S">
+              <xs:annotation>
+                <xs:documentation>
+                  Slice, eg FocusLevel or BestFocus image
+                </xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ImagedAt" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>
+            when the image was taken, in UTC
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Zoom" type="xs:double">
+        <xs:annotation>
+          <xs:documentation>
+            Zoom or magnification of the image
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SizeInPixels" type="Size">
+        <xs:annotation>
+          <xs:documentation>
+            Height and width of image in pixels
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SizeInMicrons" type="DoubleSize">
+        <xs:annotation>
+          <xs:documentation>
+            Height and width of image in microns
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Z" type="xs:double">
+        <xs:annotation>
+          <xs:documentation>
+            Z height of the image, which can be used for ordering images with imageType S
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Size">
+    <xs:all minOccurs="1">
+      <xs:element name="Height" type="xs:int" />
+      <xs:element name="Width" type="xs:int" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="DoubleSize">
+    <xs:all minOccurs="1">
+      <xs:element name="Height" type="xs:double" />
+      <xs:element name="Width" type="xs:double" />
+    </xs:all>
+  </xs:complexType>
+</xs:schema>

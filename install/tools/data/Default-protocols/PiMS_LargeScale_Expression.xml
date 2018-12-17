@@ -1,0 +1,24 @@
+<!-- PiMS Large Scale Expression protocol xml as flat file -->
+<protocol name="PiMS Large Scale Expression" objective="Large Scale Expression of Target Protein" creationDate="04-03-09" remarks="Default set of protocols for PiMS" >
+ <experimentType>Production scale expression</experimentType>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.0" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Supernatant" />
+ <outputSample sampleCatNamingSys="default" sampleCatName="InSoluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="InSoluble Protein" name="Membrane Pellet" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Expression strain" label="Bacterial strain used for expression" parameterType="String" defaultValue="BL21" possibleValues="BL21;BL21.DE3;Rosetta;BL*;B834"/>
+  <parameterDefinition id="2" name="Transformation conditions" parameterType="String" defaultValue="Heat shock" ismandatory="false" />
+  <parameterDefinition id="4" name="Culture media" parameterType="String" defaultValue="" ismandatory="false" />
+  <parameterDefinition id="5" name="Culture volume (ml)" parameterType="Int" defaultValue="500" />
+  <parameterDefinition id="6" name="Lysis method" label="Method used to lyse the cells" parameterType="String" possibleValues="Sonication;French press;Cell Disruptor;Chemical;None;Other" defaultValue="Cell Disruptor"/> 
+  <parameterDefinition id="7" name="Lysate volume (ml)" parameterType="Float" />
+  <parameterDefinition id="8" name="% Soluble protein" parameterType="Float" />  
+  <parameterDefinition id="9" name="__MW" label="Soluble Expression" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="10" name="__IMW" label="Insoluble" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+ </parameterDefinitions>
+ 
+</protocol>

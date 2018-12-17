@@ -1,0 +1,26 @@
+<form id="ffGroups" action=""><table class="list" border="0">
+	<tr>
+		<th>Name</th>
+		<td>
+			<input id="g_name" />
+		</td>
+		<th>Organisation</th>
+		<td>
+			<input id="g_organisation" />
+		</td>
+	</tr>
+	<tr>
+		<th>Number of Rows</th>
+		<td>
+			<select id="g_numRows" >
+				<option value='10' selected="selected">10</option>
+				<option value='20'>20</option>
+				<option value='30'>30</option>
+				<option value='50'>50</option>
+				<option value='100'>100</option>
+			</select>
+		</td>
+		<th></th>
+		<td><input id="g_clear" type="button" value="Clear" /></td>
+	</tr>
+</table></form>

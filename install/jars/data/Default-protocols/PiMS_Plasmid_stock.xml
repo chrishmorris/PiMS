@@ -1,0 +1,20 @@
+<!-- PiMS Plasmid stock protocol as flat file -->
+<protocol name="PiMS Plasmid Stock" objective="Record the details of a Plamid stock for inclusion in a stock list" creationDate="07-07-09" remarks="Default set of protocols for PiMS" 
+details="Amount: DNA concentration; Antibiotic resistances: e.g. Amp, Tet etc.;
+Rack position: Location of the stock e.g. A03, B06;
+Strain prepared from: the strain the plasmid was prepared from e.g. DH5alpha">
+ <experimentType>Plasmid stock</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Concentration (ug/ul)" parameterType="Float" defaultValue="0.0" isMandatory="false" />
+  <parameterDefinition id="2" name="Strain prepared from" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid stock" />
+
+</protocol>

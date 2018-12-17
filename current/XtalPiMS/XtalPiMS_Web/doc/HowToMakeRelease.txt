@@ -1,0 +1,52 @@
+* Check PiMS jars are updated: pims-model.jar, pims-web.jar, pims-tools.jar
+   You may also need to update following files:
+   -XtalPiMS_Web\web\WEB-INF\web.xml
+   -XtalPiMS_Web\web\WEB-INF\pims.tld
+   -XtalPiMS_Web\web\css
+Most of the other directories that are imported from pims-web are updated automatically
+because they are defined as svn:external.
+ 
+* compress \js\xpims\DataFilter.js to DataFilter.js.ycomp.js
+    (only viewPlates.jsp at the moment)
+See http://arkblog.wordpress.com/2008/12/02/minify-javascript-and-css-files-in-ide-netbeans-and-eclipse/
+
+
+* make a release branch, e.g.: 
+    export repos=https://ccpforge.cse.rl.ac.uk/svn/pims
+    svn copy $repos/current/XtalPiMS/XtalPiMS_Web $repos/licenced-releases/xtalPiMS_V1_3 -m'to become release, must change exports'
+    svn checkout $repos/licenced-releases/xtalPiMS_V1_3
+    
+
+5, In the release branch, update external links by search and replace, e.g.
+replace  https://www.pims-lims.org/svn/pims/current https://www.pims-lims.org/svn/pims/releases/V3_3_0
+    
+    
+    svn propget svn:externals xtalPiMS_V1_3/web/ > externals.txt
+    vi externals.txt
+    svn propset svn:externals xtalPiMS_V1_3/web/ -F externals.txt
+    
+    svn propget svn:externals xtalPiMS_V1_3/web/WEB-INF/ > externals.txt
+    vi externals.txt
+    svn propset svn:externals xtalPiMS_V1_3/web/WEB-INF/ -F externals.txt
+
+    svn update xtalPiMS_V1_3/web/
+    svn commit xtalPiMS_V1_3/web/ -m'point externals to last release of PiMS'
+     
+    
+6, make war file:
+    ant -f xtalPiMS_V1_3/build.xml war
+    
+
+7, Update docs and links
+    -update  README.txt
+    -create  /srv/www/htdocs/download/xtalPiMS_V1_2
+    -copy README.txt and xtalpims.war from https://cselnx4.dl.ac.uk/svn/pims/licenced-releases/xtalPiMS_V1_2/distribution/ to /srv/www/htdocs/download/xtalPiMS_V1_2
+    -edit the links of above 2 files in /srv/www/htdocs/download/index.html
+    
+8, Update the xtalpims demo
+    -replace the xtalpims.war in /home/pimsauto/ with release version
+    -shutdown tomcat
+    -rm -rf /root/tomcat/webapps/xtalpims 
+    -rm -rf /root/tomcat/work/Catalina/localhost/xtalpims 
+    -start tomcat
+    

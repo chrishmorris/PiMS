@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINS Vector</name>
+    <details>Derived from pET28a/Kanamycin, combined cleavable
+        N-Term His Tag with SUMO fusion</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINS" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA">
+        <function>In-Fusion[TM] E.coli Expression Vector
+        </function>
+        <resistanceDetails name="Kanamycin" />
+        <markerDetails
+            name="N-Term cleavable His Tag with SUMO fusion sequence"
+            details="MGSSHHHHHH-SUMO|" featureType="Tag" status="not cleaved" />
+    </sampleComponent>
+</vector>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"
+	xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Laboratory.xsd"/>
+	<xs:include schemaLocation="Crystal.xsd"/>
+	<xs:include schemaLocation="BeamlineSession.xsd"/>
+	<xs:include schemaLocation="BeamlineDataCollection.xsd"/>
+	<xs:include schemaLocation="BeamlineDiffractionImage.xsd"/>
+	<xs:include schemaLocation="BeamlineSample.xsd"/>
+	<xs:include schemaLocation="BeamlineProposal.xsd"/>
+	<xs:complexType name="BeamlineExportedInformation">
+		<xs:sequence>
+			<xs:element name="laboratory" type="tns:Laboratory" minOccurs="0"/>
+			<xs:element ref="tns:proposal"/>
+			<xs:element ref="tns:session"/>
+			<xs:element ref="tns:dataCollectionInformation" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="beamlineExportedInformation" type="tns:BeamlineExportedInformation">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="DataCollectionInformation">
+		<xs:sequence>
+			<xs:element ref="tns:blSample" minOccurs="0"/>
+			<xs:element name="crystal" type="tns:Crystal" minOccurs="0"/>
+			<xs:element ref="tns:dataCollection" minOccurs="0"/>
+			<xs:element ref="tns:energyScan" minOccurs="0"/>
+			<xs:element ref="tns:xFEFluorescenceSpectrum" minOccurs="0"/>
+			<xs:element ref="tns:image" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="dataCollectionInformation" type="tns:DataCollectionInformation"/>
+</xs:schema>

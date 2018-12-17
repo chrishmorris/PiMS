@@ -1,0 +1,654 @@
+<!--CHECK: 
+ParameterType for proteinProteaseRatio (Proteolysis experiment) -surely this should be a string e.g. 20:1.?  In the api the description is: The ratio of protein to protease used for the cleavage = mol protein / mol protease
+Also, recovery (Concentration experiment) -is this % or an amount?  api states 'The percentage of the final mass devided by the initial mass'
+What is PathString type? in api: 'One-line, long string for file name 'path' attributes, no linebreaks, no backslashes'
+Is a 'Characterisation experiment a generic characterisation experiment ?? in api states characterisation of a sample by different methods
+What is meant by 'type of value measured for 'Result' experiment ? is this for an generic result 
+Is the measuredValue of a 'result' experiment equivalent to Parameter.value??
+What are acceptable parameter units for time? s, sec ?  in OD time series & mass spec
+In Gel Result, attributes expectedMolMass and MeasuredMolMass should be expected size, nucleic acid bands measured in bp not kDa -->
+<parameterDefinitions>
+ <parameterDefinition>
+  <parameterName>system</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>'Gateway Tm', 'Infusion/Creator Tm', 'Novagen system'</parameterPhraseList>
+  <parameterDefaultValue>Gateway Tm</parameterDefaultValue>
+  <parameterDescription>kit used for Recombination experiment</parameterDescription>
+ <parameterValue value="" experimentType="recombination" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>numTransformedPlasmid</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>number of transformants</parameterDescription>
+ <parameterValue value="" experimentType="transformation" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>isShaken</parameterName>
+  <parameterType>Boolean</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>Yes</parameterDefaultValue>
+  <parameterDescription>is the culture shaken?</parameterDescription>
+ <parameterValue value="" experimentType="transformation" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>numIsolatedColonies</parameterName>
+  <parameterType>Int</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>number of isolated colonies on the plate</parameterDescription>
+ <parameterValue value="" experimentType="dish culture" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>isLabelled</parameterName>
+  <parameterType>Boolean</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>No</parameterDefaultValue>
+  <parameterDescription>is the culture labelled?</parameterDescription>
+ <parameterValue value="" experimentType="dish culture" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>proteinProteaseRatio</parameterName>
+  <parameterType>Float</parameterType> <!--surely this should be a string e.g. 20:1? -->
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>n:n</parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>ratio of protease to protein</parameterDescription>
+ <parameterValue value="" experimentType="proteolysis" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>recovery</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit>???</parameterUnit>
+<!--api states The percentage of the final mass devided by the initial mass. ASK -->
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>???</parameterDescription>
+ <parameterValue value="" experimentType="concentration" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>dropShape</parameterName>
+  <parameterType>Line</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>round, elipse </parameterPhraseList>
+  <parameterDefaultValue>round</parameterDefaultValue>
+  <parameterDescription>the shape of the drop</parameterDescription>
+ <parameterValue value="" experimentType="drop setup" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>dropType</parameterName>
+  <parameterType>Line</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>sitting, hanging</parameterPhraseList>
+  <parameterDefaultValue>sitting</parameterDefaultValue>
+  <parameterDescription>The type of the drop: sitting or hanging </parameterDescription>
+ <parameterValue value="" experimentType="drop setup" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>temperature</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit>K</parameterUnit>
+  <parameterDisplayUnit>C</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>20</parameterDefaultValue>
+  <parameterDescription>temperature at which the drop has been set up</parameterDescription>
+ <parameterValue value="" experimentType="drop setup" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>tempDisplayUnit</parameterName>
+  <parameterType>Word</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>C, F, K</parameterPhraseList>
+  <parameterDefaultValue>C</parameterDefaultValue>
+  <parameterDescription>unit for temperature</parameterDescription>
+ <parameterValue value="" experimentType="drop setup" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>relativeHumidity</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>%</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>humidity at which 'drop' is stored</parameterDescription>
+ <parameterValue value="" experimentType="drop setup" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>score</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>numerical score for the drop based on scoring system</parameterDescription>
+ <parameterValue value="" experimentType="drop scoring" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>observation</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+<!-- Will be user-defined, no standard?-->
+  <parameterPhraseList>clear drop, crystal, precipitate, micro-crystal, skin, spherulite, phasesep, twin, no change</parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>what is observed in the well</parameterDescription>
+ <parameterValue value="" experimentType="drop scoring" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>observationType</parameterName>
+  <parameterType>Line</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>human, software</parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>how was the observation made</parameterDescription>
+ <parameterValue value="" experimentType="drop scoring" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>imageFile</parameterName><!--??change to path ? --> 
+  <parameterType>PathString</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>path to the image file for the drop</parameterDescription>
+ <parameterValue value="" experimentType="drop scoring"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>imageFile</parameterName><!--??change to path ? -->
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>path to the image file for the drop</parameterDescription>
+ <parameterValue value="" experimentType="drop imaging" />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>crystalNum</parameterName>
+  <parameterType>NonNegativeInt</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>number of crystals mounted</parameterDescription>
+ <parameterValue value="" experimentType="mount crystal"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>supplier</parameterName>
+  <parameterType>Organisation</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>details of the suplier of the item</parameterDescription>
+ <parameterValue value="" experimentType="import item"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>isShaken</parameterName>
+  <parameterType>Boolean</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>Yes</parameterDefaultValue>
+  <parameterDescription>is the culture shaken?</parameterDescription>
+ <parameterValue value="" experimentType="culture"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>isStirred</parameterName>
+  <parameterType>Boolean</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>No</parameterDefaultValue>
+  <parameterDescription>is the culture stirred?</parameterDescription>
+ <parameterValue value="" experimentType="culture"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>isLabelled</parameterName>
+  <parameterType>Boolean</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>No</parameterDefaultValue>
+  <parameterDescription>is the culture labelled?</parameterDescription>
+ <parameterValue value="" experimentType="culture"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>isInduced</parameterName>
+  <parameterType>Boolean</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>No</parameterDefaultValue>
+  <parameterDescription>is the culture induced?</parameterDescription>
+ <parameterValue value="" experimentType="culture"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>path</parameterName>
+  <parameterType>PathString</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>path to the data file for the experiment</parameterDescription>
+ <parameterValue value="" experimentType="characterisation"  />  <!-- is this a generic characterisation experiment?-->
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>valueType</parameterName> 
+  <parameterType>Line</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>what type of value is being measured?</parameterDescription>
+ <parameterValue value="" experimentType="result"  /> <!-- Is this a generic result??-->
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>expectedValue</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>the expected value of the result</parameterDescription>
+ <parameterValue value="" experimentType="result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>measuredValue</parameterName> <!--is this equivalent to Parameter.value ?-->
+  <parameterType></parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>the measured value</parameterDescription>
+ <parameterValue value="" experimentType="result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>valueUnit</parameterName>
+  <parameterType>Word</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>the unit for the value</parameterDescription>
+ <parameterValue value="" experimentType="result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>details</parameterName>
+  <parameterType>String</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>comments</parameterDescription>
+ <parameterValue value="" experimentType="result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>wavelength</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit>nm</parameterUnit>
+  <parameterDisplayUnit>nm</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue>280</parameterDefaultValue>
+  <parameterDescription>wavelength used</parameterDescription>
+ <parameterValue value="" experimentType="od measurement"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>timepoint</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit>s</parameterUnit>
+  <parameterDisplayUnit>sec</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>time when od was measured in seconds</parameterDescription>
+ <parameterValue value="" experimentType="od time series"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>od</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>the od measured (at the specified timepoint)</parameterDescription>
+ <parameterValue value="" experimentType="od time series"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>odRatio</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>od 260 : 280 ratio</parameterDescription>  <!--what about other ratios?-->
+ <parameterValue value="" experimentType="od time series"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>gelType</parameterName>
+  <parameterType>String</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>agarose 1%, SDS-PAGE 14%, ...</parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>type of gel used</parameterDescription>
+ <parameterValue value="" experimentType="gel"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>path</parameterName>
+  <parameterType>PathString</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>path to the data file for the gel</parameterDescription>
+ <parameterValue value="" experimentType="gel"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>result</parameterName>
+  <parameterType>String</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>band at expected weight, band at unexpected weight, no band</parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>result for band in the gel</parameterDescription>
+ <parameterValue value="" experimentType="gel result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>expectedMolMass</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>kDa</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>expected molecular mass in kDa</parameterDescription>
+ <parameterValue value="" experimentType="gel result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>expectedSize</parameterName> <!--alternative to expectedMolMass -->
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>expected size</parameterDescription>
+ <parameterValue value="" experimentType="gel result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>measuredMolMass</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>kDa</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>measured molecular mass in kDa</parameterDescription>
+ <parameterValue value="" experimentType="gel result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>measuredSize</parameterName> <!--alternative to measuredMolMass -->
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>measured size</parameterDescription>
+ <parameterValue value="" experimentType="gel result"  />
+ </parameterDefinition>
+
+
+ <parameterDefinition>
+  <parameterName>details</parameterName>
+  <parameterType>String</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>comments</parameterDescription>
+ <parameterValue value="" experimentType="gel result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>proteinTreatment</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>pretreatment of the protein e.g. dilution, filtered</parameterDescription>
+ <parameterValue value="" experimentType="light scattering"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>radiusSize</parameterName>
+  <parameterType></parameterType>
+  <parameterUnit>m</parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>radius size in m</parameterDescription>
+ <parameterValue value="" experimentType="light scattering"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>polydispersity</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>%</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>% polydispersity</parameterDescription>
+ <parameterValue value="" experimentType="light scattering"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>intensity</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription></parameterDescription>
+ <parameterValue value="" experimentType="light scattering result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>expectedMolMass</parameterName>
+  <parameterType></parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>Da</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>expected mass in Da</parameterDescription>
+ <parameterValue value="" experimentType="light scattering result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>measuredMolMass</parameterName>
+  <parameterType></parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>Da</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>measured mass in Da</parameterDescription>
+ <parameterValue value="" experimentType="light scattering result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>electrsprayIon</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>electrospray ionisation used</parameterDescription>
+ <parameterValue value="" experimentType="mass spectrometry"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>timeOfFlight</parameterName>
+  <parameterType></parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>sec</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>the time of flight in seconds</parameterDescription>
+ <parameterValue value="" experimentType="mass spectrometry"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>matrixType</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList>MALDI, TOF, ...</parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>type of the matrix assited laser desorption ionisation</parameterDescription>
+ <parameterValue value="" experimentType="mass spectrometry"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>calibrants</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>calibrants used</parameterDescription>
+ <parameterValue value="" experimentType="mass spectrometry"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>externalCalibrant</parameterName>
+  <parameterType></parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>external calibrant</parameterDescription>
+ <parameterValue value="" experimentType="mass spectrometry"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>observedPeaks</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>observed peaks</parameterDescription>
+ <parameterValue value="" experimentType="mass spectrometry"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>onservedInteraction</parameterName>
+  <parameterType>Text</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>observed interaction between protein:protein, protein:ligand etc.</parameterDescription>
+ <parameterValue value="" experimentType="mass spectrometry"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>expectedMolMass</parameterName>
+  <parameterType>Float</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>Da</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>expected mass in Da</parameterDescription>
+ <parameterValue value="" experimentType="mass spec result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>measuredMolMass</parameterName>
+  <parameterType></parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit>Da</parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>measured mass in Da</parameterDescription>
+ <parameterValue value="" experimentType="mass spec result"  />
+ </parameterDefinition>
+
+ <parameterDefinition>
+  <parameterName>details</parameterName>
+  <parameterType>String</parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription>comments</parameterDescription>
+ <parameterValue value="" experimentType="mass spec result"  />
+ </parameterDefinition>
+
+
+ <parameterDefinition>
+  <parameterName></parameterName>
+  <parameterType></parameterType>
+  <parameterUnit></parameterUnit>
+  <parameterDisplayUnit></parameterDisplayUnit>
+  <parameterPhraseList></parameterPhraseList>
+  <parameterDefaultValue></parameterDefaultValue>
+  <parameterDescription></parameterDescription>
+ <parameterValue value="" experimentType=""  />
+ </parameterDefinition>
+
+</parameterDefinitions>
+

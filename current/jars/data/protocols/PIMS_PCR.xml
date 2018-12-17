@@ -1,0 +1,30 @@
+<!-- Generic PCR protocol xml as flat file -->
+<protocol name="PiMS PCR" objective="Amplify target DNA" creationDate="14-11-06" >
+ <experimentType>PCR</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="A. Annealing temperature" parameterType="Float" defaultValue="45" previousName="Annealing temperature"/>
+  <parameterDefinition id="2" name="B. Number of cycles" parameterType="Int" defaultValue="35" previousName="Number of cycles"/>
+  <parameterDefinition id="3" name="C. Thermocycling conditions" parameterType="String" previousName="Thermocycling conditions"
+  defaultValue="Anneal 30 sec at 45C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="D. Primer concentration uM" parameterType="Float" previousName="Primer concentration uM"
+  defaultValue="100" />
+  <parameterDefinition id="5" name="E. Template concentration ng/ul" parameterType="Float" previousName="Template concentration ng/ul" defaultValue=
+  "50" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+     <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" amount="0.000005" unit="L" displayUnit="uL" refSample="10x PCR buffer" name="Buffer" />
+     <inputSample sampleCatNamingSys="default" sampleCatName="Nucleotide" amount="0.000005" unit="L" displayUnit="uL" refSample="dNTP mix 2mM" name="dNTPs" />
+     <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.0000005" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+     <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+     <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000001" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+     <inputSample sampleCatNamingSys="default" sampleCatName="Solvent"  unit="L" displayUnit="uL" refSample="Milli-Q water" name="Water" />
+     <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -polymerase" amount="0.000001" unit="L" displayUnit="uL" refSample="Polymerase" name="Polymerase" />
+ </inputSamples>
+
+</protocol>

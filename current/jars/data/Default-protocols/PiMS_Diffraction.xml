@@ -1,0 +1,26 @@
+<!-- PiMS Diffraction protocol xml as flat file -->
+<protocol name="PiMS Diffraction" objective="Collection of data from diffraction on beamline" creationDate="16-03-05" remarks="Default set of protocols for PiMS" details="Data collection for of Target Protein" >
+ <experimentType>Diffraction</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Crystal Hits" name="Mounted Crystal" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Post data collection Crystal" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Beamline" parameterType="String" />
+  <parameterDefinition id="2" name="Data collection date" parameterType="String" />
+  <parameterDefinition id="3" name="Data collection place" parameterType="String" />
+  <parameterDefinition id="4" name="Indicative resolution" parameterType="String" />
+  
+  <parameterDefinition id="5" name="Dataset" parameterType="String" />
+  <parameterDefinition id="6" name="Peak Dataset" parameterType="String" />
+  <parameterDefinition id="7" name="Inflexion Dataset" parameterType="String" />
+  <parameterDefinition id="8" name="HE Rem Dataset" parameterType="String" label="High energy remote dataset" />
+  <parameterDefinition id="9" name="LE Rem Dataset" parameterType="String" label="Low energy remote dataset" />
+  
+ </parameterDefinitions>
+
+</protocol>
+

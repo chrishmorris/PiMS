@@ -1,0 +1,125 @@
+Record Level Access Control for PiMS
+====================================
+Jon Diprose, 26/02/2008
+
+
+Access control in RDBMSs is implemented in several tiers. The highest tier is controlling access to the entire db, via ip restrictions and by requiring that users supply valid credentials before they are connected to the db. This is something of a blunt instrument - either you can or cannot connect to the db. This level of access control is RDBMS-specific, and can also be constrained by the underlying operating system and network firewalls.
+
+The second tier controls access to catalogs, schemas and schema objects (such as tables, views and sequences) through the use of GRANT and REVOKE SQL statements. Privileges on each such object are granted or revoked to a specific user or role. These statements are sufficiently fine grained to control which users can read, update, insert and/or delete from a particular table. However, it cannot be used to control access to particular records - either the user can or cannot read the entire table. The implementation of this level of access control is largely independent of the RDBMS for an SQL92-compliant RDBMS.
+
+The third tier controls access to particular records in the database. An example of where this might be important is a laboratory that contains competing users that are working on several samples, but where each user should not be allowed to see any information about the others' samples. The samples are all described in the same way and so are appropriately stored in a single table. Users must be able to see their own samples, so they must be granted select privileges on the samples table. However, users must not be allowed to see the records of others' samples. Access must be controlled at the record level.
+
+Record level access control requires that each record has an associated privilege requirement and that the privileges of the accessing user are known. The implementation of this tier is both schema- and RDBMS-specific. Association of the privilege requirement is typically done through an additional column which either directly contains the requirement or is a foreign key to an additional table in which the requirement is stored. Assertion of the privileges of the accessing user is typically done either by explicit inclusion in the where clause of a query or by using a view that implicitly includes them in the query, though Oracle's Virtual Private Database is a notable set up in this regard.
+
+Taking the example above, an implementation of explicit inclusion could look something like:
+
+  select * from sample where user = :user;
+
+However, this rapidly becomes unworkable when there query includes table joins. If there were also a table of proteins, we might have:
+
+  select * from sample, protein where sample.proteinid = protein.proteinid and sample.user = :sampleuser and protein.user = :proteinuser;
+
+For every joined table, we need to apply our record level access control. The queries become long and difficult to both build and maintain. Creating views removes this complexity:
+
+  create view sample_view as select * from sample where user = current_user;
+  create view protein_view as select * from protein where user = current_user;
+
+The security constraint is embedded in the view - current_user is an SQL92-defined function that returns the current effective user (though support is patchy). Our queries then become:
+
+  select * from sample_view;
+  select * from sample_view, protein_view where sample_view.proteinid = protein.proteinid;
+
+The record level access control has been hidden by the view. The only change we need to make to our application is to use the secure view rather than the table. In fact, we could have renamed the table and created the view as the original name of the table and we would then need no change to our application at all.
+
+Under normal circumstances, the database knows who is using it and the current_user function will tell us who that is. User authentication is a key component of tier 1. Tier 2 is dependent on knowing who the current user is and their current role. Unfortunately, establishing a connection to the database can be a slow process and databases often have a limited number of available connections. It is common practice to use connection pools to ameliorate both of these issues. The connections are built in advance and handed out by the pool on demand. To do this requires that all the connections be made as a single user with sufficient privileges to perform any of the tasks required by the application. This means that the privileges of the database user are not those of the application user and we have a problem for access control - who am I? The consensus seems to be that the use of connection pooling is a security vs performance tradeoff which must be judged on the merits of the application.
+
+Unfortunately, connection pooling has another problem to throw at us - when we close the connection, actually it doesn't really close and gets handed back to the pool. If this happens outside our control, then we have no opportunity to reset any session data, such as our application user token. Is this a security issue? Possibly, if the next time we use it we don't set the token. Given that the underlying database user has sufficient privilege to set the token anyway, I'm not sure that it is. The main security risk is that we have the credentials of our highly-privileged db user lying around, unencrypted, on our web server. Failing to set the token correctly on session start-up is serious, but entirely within our control.
+
+Application to PiMS
+-------------------
+
+Currently, record level access control in PiMS is applied by specifying the application user's privileges in every query. As a result, it is dangerous to allow developers access to the Hibernate session or the underlying database connection. A badly-written query could break or bypass the access control and expose privileged information to which the user should not have access. This is particularly the case when complex queries, such as those involving joins, are required. The main advantage of RDBMS-managed record level access control to PiMS is that it frees PiMS from this responsibility. Providing that the developer does not reset the effective privileges, record level access control is applied automatically and hence Hibernate's query mechanisms can be made available to the developers.
+
+PiMS already associates access control requirements with each data model object. The impl_memopsbaseclass table holds a record for each data model object. The acco_user table holds a record for each PiMS user. The two are related by assigning permissions for each data model object to groups of users, using the following schema:
+
+impl_memopsbaseclass
+    *|
+     |1
+acco_accessobject
+     |1
+    *|
+acco_permission
+    *|
+     |1
+acco_usergroup
+     |1
+    *|
+acco_usergroup2members
+    *|
+     |1
+acco_user
+
+Given that we know the pk of the acco_user record for the application user (userid), the minimal access controlled query would be:
+
+select
+  imbc.*
+from
+  impl_memopsbaseclass as imbc
+  left outer join acco_permission as ap on imbc.accessid = ap.accessobjectid
+  left join acco_usergroup2members as au2m on ap.usergroupid = au2m.usergroupid
+where
+  imbc.accessid is null or
+  (ap.optype = 'read' and au2m.memberid = :userid)
+
+Or, as a subselect:
+
+select
+  imbc.*
+from
+  impl_memopsbaseclass as imbc
+where
+  imbc.accessid is null or
+  imbc.accessid in (
+    select
+      ap.accessobjectid
+    from
+      acco_permission as ap,
+      acco_usergroup2members as au2m
+    where
+      ap.optype = 'read' and
+      ap.usergroupid = au2m.usergroupid and
+      au2m.memberid = :userid
+  )
+
+I don't know which will be faster in a join with multiple impl_memopsbaseclass - possibly the subselect if it can be reused. Note also that AccessObject, Permission, UserGroup and User are themselves subclasses of AccessObject, and that these queries do not check that the application user has access to those records. I believe this to be the correct operation - that the user does not have permission to see an access control object does not mean that it should not be applied.
+
+For PiMS, we need really only consider two RDBMSs - Oracle and PostgreSQL.
+
+This area is where Oracle justifies its expense. There is a system called Virtual Private Database (VPD) which essentially amounts to the application of security policies to tables. The security policies are functions that generate a predicate - a where clause - that is appended to every query involving that table, completely transparently to the user. Policies can similarly be applied to update, insert and delete operations. The effect is very similar to the view technique described above except that the DBA seems to have a huge amount of control as to when the policies apply and, as a result, its an extremely powerful system. Further, whilst its not clear that current_user is supported, there are several different methods by which the identity of the application user can be made available to the security policy at the time that the policy is applied (ie run time rather than build time). As well as several items available from the sys_context function, Oracle's package-scoped variables make it simple to set and get variables for a session. I've disabled my 10g so I can't test it right now, but there are several examples available online which leave me in no doubt that we can use VPD for record level access control.
+
+For PostgreSQL, it appears that we could create database users for all the application users and call set role '<app_user>' at the start of each session. After this call, current_user will return the name of the application user and the view technique should work as expected. However, if we use current_user then acco_user must be included in the queries suggested above. It would be better to use the userid and save ourselves that join. Setting variables in PostgreSQL is surprisingly difficult - it appears that only system variables are supported by default. One suggestion I have seen is to make use of the custom_variable_classes configuration item that allows variables to be set in named classes. An additional advantage of this system is it appears to be possible to set variables within the scope of a transaction rather than the session, and hence the value will be cleared whenever the connection is returned to the pool.
+
+An additional complexity of the use of a view is that the view must be updatable - Hibernate will look at the view and not be able to switch to the underlying table for updates, inserts and deletes. Whilst updatable views are transparently supported in Oracle, in PostgreSQL one must create appropriate rules to inform the database of the action to take when an update, insert or delete is requested. At first glance, this appears to be a daunting complexity. However, it is in fact the ideal opportunity to apply our update/delete record level access control. I do not understand how PiMS' access control implementation restricts creates, so I cannot comment on its use in the control of inserts.
+
+In short, it looks like record level access control can be implemented in both Oracle and PostgreSQL in a way that is transparent to Hibernate. The implementation will be RDBMS-specific, though probably only in terms of the generated schema (which is already RDBMS-specific anyway). I think that any RDBMS-specificity in the setting of the userid token can be wrapped into a function such that it can be called in an RDBMS-independent way.
+
+References
+==========
+
+General:
+http://www.microsoft.com/technet/prodtechnol/sql/2005/multisec.mspx
+http://www.theserverside.com/discussions/thread.tss?thread_id=24782
+
+Oracle VPD:
+http://www.devshed.com/c/a/Oracle/RowLevel-Security-with-Virtual-Private-Database/
+
+PostgreSQL Updatable Views:
+http://www.lshift.net/blog/2006/07/20/updateable-views-in-postgresql
+http://archives.postgresql.org/pgsql-admin/2006-05/msg00253.php
+http://archives.postgresql.org/pgsql-general/2007-03/msg00126.php
+http://www.postgresonline.com/journal/index.php?/archives/11-Database-Abstraction-with-Updateable-Views.html
+
+PostgreSQL Session Variables:
+http://archives.postgresql.org/pgsql-novice/2004-11/msg00120.php
+http://www.onlamp.com/pub/a/onlamp/2004/06/28/postgresql_extensions.html
+http://www.depesz.com/index.php/2007/07/27/update-account-set-password-new_password-oops/

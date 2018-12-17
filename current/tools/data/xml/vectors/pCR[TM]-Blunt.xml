@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pCR[TM]-Blunt Vector</name>
+    <details></details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="K2700-20"
+        dataPageUrl="http://products.invitrogen.com/ivgn/en/US/adirect/invitrogen?cmd=catProductDetail&amp;productID=K270020"
+        supplier="Invitrogen" />
+    <sampleComponent name="pCR[TM]-Blunt"
+        componentCategory="Vector" details="3512" molType="DNA"
+        constructStatus="empty" sequenceType="DNA">
+        <function>PCR Cloning Vector for cloning of blunt-end PCR
+            product</function>
+        <resistanceDetails name="Kanamycin" startSeq="1321"
+            endSeq="2025" />
+        <resistanceDetails name="Zeocin" startSeq="2231"
+            endSeq="2605" />
+        <promoterDetails name="T7 Promoter" startSeq="400"
+            endSeq="419" />
+        <promoterDetails name="Lac Promoter Operator"
+            startSeq="95" endSeq="216" />
+        <markerDetails name="LacZ-alpha ORF" startSeq="217"
+            endSeq="570" featureType="selectable marker"
+            details="fused to bacterial death gene, cloning disrupts
+                expression of the lacZalpha-ccdB gene fusion" />
+        <markerDetails name="ccdB gene ORF" startSeq="580"
+            endSeq="882" featureType="selectable marker"
+            details="bacterial death gene, cloning disrupts
+                expression of the lacZalpha-ccdB gene fusion" />
+        <markerDetails name="Multiple Cloning sites SmaI-DraIII"
+            details="NsiI-HindIII-KpnI-SacI-BamHI-SpeI-EcoRI-EcoRI-PstI-EcoRV-NotI-XhoI-NsiI-XbaI-ApaI"
+            startSeq="269" endSeq="418" featureType="MCS" />
+        <markerDetails name="pUC origin" startSeq="2673"
+            endSeq="3386" featureType="ori" />
+        <markerDetails name="Recommended Hosts" details="One Shot[R] TOP10"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

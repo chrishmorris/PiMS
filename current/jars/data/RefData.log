@@ -1,0 +1,249 @@
+07/02/2007 By Bill
+-new ref data for Leeds:
+	<protocol> "Leeds Order Primer Plate" in Leeds_Order_PrimerPlate.xml
+	<experimentType> "Order" in ExperimentTypes.csv
+	<RefOutputSample> "Primer" (automatically created when load above protocol)
+-To load them:
+	run tasks, in build.xml, load ExperimentTypes and load Protocols in order.
+
+16/05/2007 By Bill
+-new ref data for Leeds:
+	<experimentType> in ExperimentTypes.csv
+		"Cloning design"
+		"Primer design"
+-To load them:
+	run tasks, in build.xml, load ExperimentTypes.
+
+
+13/11/2007  by Susy
+-corrected spelling of Kanamycin
+	In protocols:
+	PiMS_Culture.xml, PIMS_miniprep.xml, PIMS_PlasmidPrep.xml,
+	PIMS_TrialExpression.xml, PIMS_LIC_PlateCulture.xml
+-To load changes use ProtocolUtility.java  ?? seems to add extra input sample rather than update existing one? If name is same, existing one will be replaced. Otherwise, extra one will be added <Bill>
+	In Reagents.csv:
+-To load changes use ReagentUtility.java  ?? needs to delete incorrect record? No <Bill>
+
+
+-added RefData for chemical
+	carbenicillin in Chemicals.csv
+To load changes use ChemicalUtility.java
+
+-added to RefData for HolderCategories
+	Box, Clone saver card
+-To load changes use HolderCatsUtility
+
+16/11/07  by Susy
+-corrected Sample Category for ampicillin (sodium)
+	In Chemicals.csv
+	Use ChemicalUtility.java but may need upgrader to change value or replace
+
+20/11/07 by sUSY
+-updated ref data added new Component category for PCR Product
+	In ComponentCats.csv
+-To load, run ComponentCatsUtility.java
+
+27/11/07
+-added Primer RefSamples to Reagents.csv
+	Invitrogen Primer,PCR Primer from Invitrogen,Primer,PCR,,Invitrogen/Life Technologies,http://www.invitrogen.com/content.cfm?pageid=9714&CID=TN-Prods-Oligos
+	Invitrogen / Life Technologies Primer,PCR Primer from Invitrogen,Primer,PCR,,Invitrogen/Life Technologies,http://www.invitrogen.com/content.cfm?pageid=9714&CID=TN-Prods-Oligos
+	Operon Primer,PCR Primer from Operon Biotechnologies GmbH,Primer,PCR,,Operon Biotechnologies GmbH,https://www.operon.com/products_main.php
+	MWG Primer,PCR Primer from MWG Biotech,Primer,PCR,,MWG Biotech,http://www.mwg-biotech.com/html/s_synthesis/s_overview.shtml
+
+-modified RefSamples, changed Solution to Antibiotic
+	Kanamycin 30mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+	Tetracycline 12mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+	Chloramphenicol 34mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+	Carbenicillin 50mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+
+-To load changes use ReagentUtility.java  ?? needs to delete incorrect record?
+
+-modified SampleCategory for InputSample in PIMS_PlasmidPrep.xml
+
+-To load run protocolUtility but needs to delete existing protocol
+
+30/11/07 by Susy
+-updated RefSamples in Reagents.csv
+	for KOD HiFi DNA Polymerase changed names and details
+-To load changes use ReagentUtility.java -needs to delate existing RefSamples
+
+05/11/07 by Susy
+-added model organisms and tutorial organisms to NaturalSources.csv
+-To load use NaturalSourceUtility.java or run tasks in build.xml, loadNaturalSources
+
+12/12/07 by Susy
+-added to NaturalSources.csv
+-To load use NaturalSourceUtility.java or run tasks in build.xml, loadNaturalSources
+
+-modified Chemicals.csv changed [R] to (R) and [TM] to (TM) for some chemicals
+-To load run tasks in build.xml, loadNaturalChemicals BUT need to update or delate existing chemical and/or refSample
+
+17/12/07 by Bill
+-added card to Holders.csv
+-To load run tasks in build.xml, loadHolders
+
+05/02/08 by Susy
+-modified Chemicals.csv, added missing ComponentCategories
+-To load run tasks in build.xml, loadChemicals BUT need to update or delete existing chemical
+
+23/04/08 by Susy
+-modified Chemicals.csv added sodium phosphate dibasic
+-To load run tasks in build.xml, loadChemicals
+
+24/04/08 by Susy
+-modified ExperimentTypes.csv & StatusToExperimentTypes.csv added Membrane preparation
+
+25/04/08 by Susy
+-modified ComponentCats.csv
+Added Forward Extension and Reverse Extension
+-To load run tasks in build.xml, loadComponentCategories
+
+28/04/08 by Susy
+-added to NaturalSources.csv  "Nematostella vectensis",45351
+-To load use NaturalSourceUtility.java or run tasks in build.xml, loadNaturalSources
+
+28/07/08 by Anne
+- added to SampleCats.csv "Affinity Resin"
+- added to ExperimentTypes.csv "Cleavage"
+
+29/07/08 by Susy
+-added to NaturalSources.csv  "Neisseria gonorrhoeae", 485
+-To load use NaturalSourceUtility.java or run tasks in build.xml, loadNaturalSources
+
+14/11/08 by Susy
+- added to SampleCats.csv "Buffering Agent"
+- modified Chemicals.csv, added missing SampleCategories e.g. Buffering Agent, modified some individual entries
+-To load run tasks in build.xml, loadChemicals BUT need to update or delete existing chemical
+
+31/03/09 by Susy
+- added to Suppliers.csv "Supplier,ATCC,LGC Standards,Queens Road,Middlesex,,Teddington,TW11 0LY,UK,+44 (0)20 8943 8480,+44 (0)20 8943 7554,uksales@lgcstandards.com,http://www.lgcstandards-atcc.org/Home/tabid/477/Default.aspx"
+-To load use SupplierUtility.java or run tasks in build.xml loadSuppliers
+- removed from Extensions.xml "STOP_KpnI_pHLsecF,CGCGGTACCCTA,Forward Extension"
+
+25/06/09 by Susy
+-modified Chemicals.csv changed Na2NO3 to NaNO3
+-To load run tasks in build.xml, loadChemicals
+
+25/06/09 by Susy
+-added to NaturalSources.csv  "Mycobacterium tuberculosis H37Rv",83332
+-To load use NaturalSourceUtility.java or run tasks in build.xml, loadNaturalSources
+
+01/07/09 by Susy
+-added to ExperimentTypes.csv
+"default,Cell stock,,Preparative experiment,Recording a cell stock"
+"default,Plasmid stock,,Preparative experiment,Recording a plasmid stock"
+-To load run tasks, in build.xml, load ExperimentTypes
+
+28/09/09 by Susy
+-updated pET-28a.xml pET26b, pET-21d.xml, pET-15b.xml, pET21a, pBAD24, pHSG389, pUC57
+-To load run tasks in build.xml, loadVectors VectorXmlLoader
+Need to load new suppliers first BUT need to check if this updates existing Vectors in PiMS
+modified Suppliers.csv changed Amersham to GE Healthcare
+Added TaKaRa Bio Europe and GenScript
+-To load run tasks in build.xml, loadSuppliers
+
+10/03/10 by Susy
+-modified Chemicals.csv
+updated sodium nitrate, 4-(N-maleimido) benzophenone, BIS-TRIS propane
+-added to Chemical.csv "MES monohydrate,4-morpholineethanesulfonic acid monohydrate;  2-(N-morpholino)ethanesulfonic acid,Buffering agent,C6H13NO4S.H2O,145224-94-8,213.45,MolComp,other,Y,,,1,"R36/37/38,"S26,S36",Xi,MES monohydrate,"Buffer,Buffering Agent,Chemical/Biochemical""
+
+-To load run tasks in build.xml, loadChemicals
+
+09/04/10 by Susy
+-modified PiMS_VerificationPCR
+updated parameter definition __SCORE -order of scores from possibleValues="Yes,No,Maybe,Unscored" to possibleValues="Unscored,No,Maybe,Yes"
+
+13/05/10 by Susy
+-modified Chemicals.csv
+-added "PGA-LM,poly-gamma-glutamic acid sodium salt,Precipitant,[CO(CH2)2CH(CO2H)NH]n,30811-79-1,400000,MolComp,other,Y,,,,,,,PGA-LM,Chemical/Biochemical"
+-To load run tasks in build.xml, loadChemicals
+
+-new ref data Default protocols:
+    <protocol> "PiMS_TrypFluorescence_Quenching.xml" in Default-protocols
+    <protocol> "PiMS_ITC.xml" in Default-protocols
+    <protocol> "PiMS_CD.xml" in Default-protocols
+    
+-To load:
+    run tasks, in build.xml, loadDefaultProtocols
+    
+21/10/10 by Susy
+-new ref data Default protocols:
+<protocol> "PiMS_Synthetic_gene.xml" in Default-protocols
+-To load:
+    run tasks, in build.xml, loadDefaultProtocols
+
+-added to SampleCats.csv
+"default,Synthetic gene,A synthesized gene"
+-To load run tasks in build.xml, loadSampleCategories
+
+-added to ExperimentTypes.csv
+"default,Synthetic gene,,,Details for a Synthetic gene"
+-To load run tasks, in build.xml, load ExperimentTypes
+
+12/11/10 by Susy
+-added to ComponentCats.csv
+"default,Synthetic gene,PIMS default category"
+-To load, run tasks in build.xml, loadComponentCategories
+
+22/11/10 by Susy
+-modified PiMS_Synthetic_gene.xml
+added InputSample 'Vector'
+added Parameter definitions '3'-Restriction site', '5'-Restriction site', 'Expression host'
+-To update:
+    run tasks, in build.xml, loadDefaultProtocols
+    
+17/01/11 by Susy 
+-modified PiMS_Synthetic_gene.xml
+updated Parameter definition 'Expression host'
+from <parameterDefinition id="3" name="Expression host" label="Host cells for expression" parameterType="String" isMandatory="false" />
+to <parameterDefinition id="3" name="Optimized for expression in:" label="Expression host the sequence has been optimized for" parameterType="String" isMandatory="false" />
+reordered ParameterDefinitions
+-To update:
+    run tasks, in build.xml, loadDefaultProtocols
+    
+04/02/2011 by Susy
+-modified PiMS_Harvest_Crystal.xml
+updated Parameter definition 'Crystal size'
+from:<parameterDefinition id="4" name="Crystal size" parameterType="Float" isMandatory="false" displayUnit="mm" label="Size of the crystal" />
+to:  <parameterDefinition id="4" name="Size of crystal" parameterType="String" isMandatory="false" label="Dimensions of the crystal in microns" />
+added Parameter definitions 'Colour', 'Morphology', 'Quality'
+
+-modified PiMS_Diffraction.xml
+added output sample 'Post data collection Crystal'
+
+-new ref data Default protocols:
+<protocol> "PiMS_Diffraction_Test.xml" in /tools/data/Default-protocols
+
+-To update:
+    run tasks, in build.xml, loadDefaultProtocols
+
+    07/02/11 by Susy 
+-modified PiMS_Synthetic_gene.xml
+updated Parameter definition 'Optimized for expression in:'
+from <parameterDefinition id="3" name="Optimized for expression in:" label="Expression host the sequence has been optimized for" parameterType="String" isMandatory="false" />
+to <parameterDefinition id="4" name="Optimized for expression in:" label="Expression host the sequence has been optimized for" parameterType="String" isMandatory="false" />
+
+-added new Parameter definition
+    <parameterDefinition id="3" name="Vector resistances" label="Vector's antibiotic resistance markers" parameterType="String" isMandatory="false" />
+
+-deleted /data/Default-protocols/PiMS_Test_Diffraction.xml
+
+-To update:
+    run tasks, in build.xml, loadDefaultProtocols
+    
+    08/02/11 by Susy
+-modified /tools/data/Default-protocols/PiMS_Diffraction.xml
+updated OutputSample:
+from  <outputSample sampleCatNamingSys="default" sampleCatName="Post data collection Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Mounted Crystal" />
+to  <outputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Mounted Crystal" name="Post data collection Crystal" />
+
+-To update:
+    run tasks, in build.xml, loadDefaultProtocols
+    
+    09/02/11 by Chris
+- modified tools/data/Reagents.csv
+Added Fetal Bovine Serum
+-To update:
+    run tasks, in build.xml, loadReagents
+    
+    

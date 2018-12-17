@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+
+
+
+    <defaultCache
+        maxElementsInMemory="1000"
+        eternal="false"
+        timeToIdleSeconds="1800"
+        timeToLiveSeconds="180000"
+        overflowToDisk="false"
+        diskPersistent="false"/>
+
+    <cache name="org.pimslims.model.core.BaseClass"
+    	maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="1800"
+        timeToLiveSeconds="180000"
+        overflowToDisk="false"
+        diskPersistent="false"/>
+    <cache name="org.pimslims.model.core.LabBookEntry"
+    	maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="1800"
+        timeToLiveSeconds="180000"
+        overflowToDisk="false"
+        diskPersistent="false"/>
+    <cache name="org.pimslims.model.reference.PublicEntry"
+    	maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="1800"
+        timeToLiveSeconds="180000"
+        overflowToDisk="false"
+        diskPersistent="false"/>
+</ehcache>

@@ -1,0 +1,101 @@
+<form id="ffPlates" action=""><table class="list" border="0">
+	<tr>
+		<th>Owner</th>
+		<td>
+			<input id="p_owner" />
+		</td>
+		<th>Barcode</th>
+		<td>
+			<input id="p_barcode" />
+		</td>
+	</tr>
+	<tr>
+		<th>Status</th>
+		<td>
+			<select id="p_status">
+				<option value="all" selected="selected">All</option>
+				<option value="active">Active</option>
+				<option value="destroyed">Destroyed</option>
+			</select>
+		</td>
+		<th>Description</th>
+		<td>
+			<input id="p_description" />
+		</td>
+	</tr>
+	<tr>
+		<th>Imager</th>
+		<td>
+			<select id="p_imager">
+				<option value="all" selected="selected">All</option>
+			</select>
+		</td>
+		<th>Group</th>
+		<td>
+<div class="yui-skin-sam" id="p_groupAC" style="position: relative">
+	<input id="p_group" type="text" style="width: auto; position: relative" />
+	<div id="p_groupACPopup" style="width:20em"></div>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<th>Temperature</th>
+		<td>
+			<select id="p_temperature">
+				<option value="all" selected="selected">All</option>
+			</select>
+		</td>
+		<th>Construct Name</th>
+		<td>
+			<input id="p_constructName" />
+		</td>
+	</tr>
+	<tr>
+		<th>Minimum Crystals</th>
+		<td>
+			<select id="p_numberOfCrystals" >
+				<option value="0" selected="selected">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</td>
+		<th>Sample Name</th>
+		<td>
+			<input id="p_sampleName" />
+		</td>
+	</tr>
+	<tr>
+		<th>Create Date</th>
+		<td>
+			<input readonly="readonly" size="10" id="p_createDateStart"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="p_createDateStart_show" />
+			<input readonly="readonly" size="10" id="p_createDateEnd"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="p_createDateEnd_show" />
+		</td>
+		<th>Number of Rows</th>
+		<td>
+			<select id="p_numRows" >
+				<option value="10" selected="selected">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th>Last Image Date</th>
+		<td>
+			<input readonly="readonly" size="10" id="p_lastImageDateStart"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="p_lastImageDateStart_show" />
+			<input readonly="readonly" size="10" id="p_lastImageDateEnd"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="p_lastImageDateEnd_show" />
+		</td>
+		<th></th>
+		<td><input id="p_clear" type="button" value="Clear" /></td>
+	</tr>
+</table></form>

@@ -1,0 +1,35 @@
+/* xtalpims */
+.noprint          {display:none;   }
+
+div#content {top:auto; clear:both;margin-top:0.5em; }
+
+table.list th { background-color: #99f; color:#003; }
+
+table.browsetargets { border-collapse:collapse; }
+table.browsetargets th, table.browsetargets td {  border:1px solid #66f; }
+
+.prot_desc_param, .prot_desc_unknownparam { border:1px solid black; }
+div#prot_paramlist {float:none; width:100%; }
+div#prot_descriptionwrapper {display:block; clear:both; width:100%; margin:10pt 0 0 0; padding-top:10pt;}
+div#prot_descandparams h4 {display:block; clear:both; }
+div.prot_param,div.prot_unknownparam { float:left; width:49%; border:none; } 
+div#prot_params_indesc { border:none; }
+div#prot_params_notindesc { border:none; clear:both; }
+
+.print_wide {
+    position:relative;
+    display:block; 
+    clear:both; 
+    width:100%; 
+    margin:10pt 0 0 0; 
+    padding-top:10pt;
+}
+.print_image {
+    width:800px;
+}
+.image_content1 {
+    position: relative; top:0px;left:0px; width:800px;margin-left:auto; margin-right:auto;
+}
+.image_content2 {
+    position: relative; top:0px;left:0px;width:800px;margin-left:auto; margin-right:auto;
+}

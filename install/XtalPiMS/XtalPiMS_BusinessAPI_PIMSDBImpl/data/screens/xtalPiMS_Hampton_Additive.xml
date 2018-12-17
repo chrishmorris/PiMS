@@ -1,0 +1,684 @@
+<screen>
+ <screenName>Hampton Additive HT</screenName>
+  <screenSupplier>Hampton</screenSupplier>
+  <screenCatNum>HR2-138</screenCatNum>
+  <screenDetails>Additive Screen is a library of small molecules that can affect the solubility and crystallization of biological macromolecules, including both soluble and membrane proteins. Additive Screen HT contains 96 unique reagents, 1 ml each, in a single Deep Well block.</screenDetails>
+  <screenReference />
+  <screenNumberOfSolutions>96</screenNumberOfSolutions>
+  <solutions>
+  <solution>
+   <solutionId>1</solutionId>
+   <localNum>A01</localNum>
+   <components>
+    <component name="Barium Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>2</solutionId>
+   <localNum>A02</localNum>
+   <components>
+    <component name="Cadmium Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>3</solutionId>
+   <localNum>A03</localNum>
+   <components>
+    <component name="Calcium Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>4</solutionId>
+   <localNum>A04</localNum>
+   <components>
+    <component name="Cobalt(II) Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>5</solutionId>
+   <localNum>A05</localNum>
+   <components>
+    <component name="Copper(II) Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>6</solutionId>
+   <localNum>A06</localNum>
+   <components>
+    <component name="Magnesium Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>7</solutionId>
+   <localNum>A07</localNum>
+   <components>
+    <component name="Manganese(II) Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>8</solutionId>
+   <localNum>A08</localNum>
+   <components>
+    <component name="Strontium Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>9</solutionId>
+   <localNum>A09</localNum>
+   <components>
+    <component name="Yttrium Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>10</solutionId>
+   <localNum>A10</localNum>
+   <components>
+    <component name="Zinc Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>11</solutionId>
+   <localNum>A11</localNum>
+   <components>
+    <component name="Iron(III) Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>12</solutionId>
+   <localNum>A12</localNum>
+   <components>
+    <component name="Nickel(II) Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>13</solutionId>
+   <localNum>B01</localNum>
+   <components>
+    <component name="Chromium(III) Chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>14</solutionId>
+   <localNum>B02</localNum>
+   <components>
+    <component name="Praseodymium(III) Acetate" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>15</solutionId>
+   <localNum>B03</localNum>
+   <components>
+    <component name="Ammonium Sulphate" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>16</solutionId>
+   <localNum>B04</localNum>
+   <components>
+    <component name="Potassium Chloride" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>17</solutionId>
+   <localNum>B05</localNum>
+   <components>
+    <component name="Lithium Chloride" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>18</solutionId>
+   <localNum>B06</localNum>
+   <components>
+    <component name="Sodium Chloride" type="additive"   concentration="2.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>19</solutionId>
+   <localNum>B07</localNum>
+   <components>
+    <component name="Sodium Fluoride" type="additive"   concentration="0.5" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>20</solutionId>
+   <localNum>B08</localNum>
+   <components>
+    <component name="Sodium Iodide" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>21</solutionId>
+   <localNum>B09</localNum>
+   <components>
+    <component name="Sodium Thiocyanate" type="additive"   concentration="2.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>22</solutionId>
+   <localNum>B10</localNum>
+   <components>
+    <component name="Potassium Sodium Tartrate" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>23</solutionId>
+   <localNum>B11</localNum>
+   <components>
+    <component name="tri-Sodium Citrate" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>24</solutionId>
+   <localNum>B12</localNum>
+   <components>
+    <component name="Caesium Chloride" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>25</solutionId>
+   <localNum>C01</localNum>
+   <components>
+    <component name="Sodium Malonate" type="additive"   concentration="1.0" concentrationUnits="M" pH="7.0" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>26</solutionId>
+   <localNum>C02</localNum>
+   <components>
+    <component name="L-Proline" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>27</solutionId>
+   <localNum>C03</localNum>
+   <components>
+    <component name="Phenol" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>28</solutionId>
+   <localNum>C04</localNum>
+   <components>
+    <component name="Dimethylsulphoxide" type="additive"   concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>29</solutionId>
+   <localNum>C05</localNum>
+   <components>
+    <component name="Sodium Bromide" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>30</solutionId>
+   <localNum>C06</localNum>
+   <components>
+    <component name="6-Aminocaproicacid" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>31</solutionId>
+   <localNum>C07</localNum>
+   <components>
+    <component name="1,5-Diaminopentane di-Hydrochloride" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>32</solutionId>
+   <localNum>C08</localNum>
+   <components>
+    <component name="1,6-Diaminohexane" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>33</solutionId>
+   <localNum>C09</localNum>
+   <components>
+    <component name="1,8-Diaminooctane" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>34</solutionId>
+   <localNum>C10</localNum>
+   <components>
+    <component name="Glycine" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>35</solutionId>
+   <localNum>C11</localNum>
+   <components>
+    <component name="Glycyl-Glycyl-Glycine" type="additive"   concentration="0.3" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>36</solutionId>
+   <localNum>C12</localNum>
+   <components>
+    <component name="Taurine" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>37</solutionId>
+   <localNum>D01</localNum>
+   <components>
+    <component name="Betaine Hydrochloride" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>38</solutionId>
+   <localNum>D02</localNum>
+   <components>
+    <component name="Spermidine" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>39</solutionId>
+   <localNum>D03</localNum>
+   <components>
+    <component name="Spermine tetrahydrochloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>40</solutionId>
+   <localNum>D04</localNum>
+   <components>
+    <component name="Hexaamminecobalt(III) chloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>41</solutionId>
+   <localNum>D05</localNum>
+   <components>
+    <component name="Sarcosine" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>42</solutionId>
+   <localNum>D06</localNum>
+   <components>
+    <component name="Trimethylamine Hydrochloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>43</solutionId>
+   <localNum>D07</localNum>
+   <components>
+    <component name="Guanidine Hydrochloride" type="additive"   concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>44</solutionId>
+   <localNum>D08</localNum>
+   <components>
+    <component name="Urea" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>45</solutionId>
+   <localNum>D09</localNum>
+   <components>
+    <component name="Nicotinamide Adenine Dinucleotide" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>46</solutionId>
+   <localNum>D10</localNum>
+   <components>
+    <component name="Adenosine 5'-triphosphate disodium salt" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>47</solutionId>
+   <localNum>D11</localNum>
+   <components>
+    <component name="Tris(2-carboxyethyl)phosphine hydrochloride" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>48</solutionId>
+   <localNum>D12</localNum>
+   <components>
+    <component name="Glutathione (oxidised form)" type="additive"   concentration="0.01" concentrationUnits="M" />
+    <component name="Glutathione (reduced form)" type="additive"   concentration="0.01" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>49</solutionId>
+   <localNum>E01</localNum>
+   <components>
+    <component name="EDTA disodium salt" type="additive"   concentration="0.1" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>50</solutionId>
+   <localNum>E02</localNum>
+   <components>
+    <component name="Polyvinylpyrrolidone K15" type="additive"   concentration="5.0" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>51</solutionId>
+   <localNum>E03</localNum>
+   <components>
+    <component name="Dextran Sulphate Sodium salt" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>52</solutionId>
+   <localNum>E04</localNum>
+   <components>
+    <component name="Pentaerythritol Ethoxylate (3/4 EO/OH)" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>53</solutionId>
+   <localNum>E05</localNum>
+   <components>
+    <component name="Polyethylene glycol 3350" type="additive"   concentration="10" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>54</solutionId>
+   <localNum>E06</localNum>
+   <components>
+    <component name="D-(+)-Glucose" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>55</solutionId>
+   <localNum>E07</localNum>
+   <components>
+    <component name="D-(+)-Sucrose" type="additive" concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>56</solutionId>
+   <localNum>E08</localNum>
+   <components>
+    <component name="Xylitol" type="additive" concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>57</solutionId>
+   <localNum>E09</localNum>
+   <components>
+    <component name="Sorbitol" type="additive" concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>58</solutionId>
+   <localNum>E10</localNum>
+   <components>
+    <component name="myo-Inositol" type="additive" concentration="12" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>59</solutionId>
+   <localNum>E11</localNum>
+   <components>
+    <component name="D-(+)-Trehalose" type="additive" concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>60</solutionId>
+   <localNum>E12</localNum>
+   <components>
+    <component name="D-Galactose" type="additive" concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+
+  <solution>
+   <solutionId>61</solutionId>
+   <localNum>F01</localNum>
+   <components>
+    <component name="Ethylene Glycol" type="additive"   concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>62</solutionId>
+   <localNum>F02</localNum>
+   <components>
+    <component name="Glycerol" type="additive"   concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>63</solutionId>
+   <localNum>F03</localNum>
+   <components>
+    <component name="NDSB-195" type="additive"   concentration="3.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>64</solutionId>
+   <localNum>F04</localNum>
+   <components>
+    <component name="NDSB-201" type="additive"   concentration="2.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>65</solutionId>
+   <localNum>F05</localNum>
+   <components>
+    <component name="NDSB-211" type="additive" concentration="2.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>66</solutionId>
+   <localNum>F06</localNum>
+   <components>
+    <component name="NDSB-221" type="additive" concentration="2.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>67</solutionId>
+   <localNum>F07</localNum>
+   <components>
+    <component name="NDSB-256" type="additive" concentration="1.0" concentrationUnits="M" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>68</solutionId>
+   <localNum>F08</localNum>
+   <components>
+    <component name="1,2,3-heptanetriol" type="additive" concentration="15" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>69</solutionId>
+   <localNum>F09</localNum>
+   <components>
+    <component name="Benzamidine hydrochloride" type="additive" concentration="20" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>70</solutionId>
+   <localNum>F10</localNum>
+   <components>
+    <component name="n-Dodecyl-N,N-dimethylamine-N-oxide" type="additive" concentration="5" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>71</solutionId>
+   <localNum>F11</localNum>
+   <components>
+    <component name="N-Octyl-b-D-Glucoside" type="additive" concentration="5" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>72</solutionId>
+   <localNum>F12</localNum>
+   <components>
+    <component name="n-Dodecyl b-D-maltoside" type="additive" concentration="5" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>73</solutionId>
+   <localNum>G01</localNum>
+   <components>
+    <component name="Trimethylamine N-Oxide" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>74</solutionId>
+   <localNum>G02</localNum>
+   <components>
+    <component name="1,6-Hexanediol" type="additive"   concentration="30" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>75</solutionId>
+   <localNum>G03</localNum>
+   <components>
+    <component name="2-Methyl-2,4-Pentanediol" type="additive"   concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>76</solutionId>
+   <localNum>G04</localNum>
+   <components>
+    <component name="Polyethylene glycol 400" type="additive"   concentration="50" concentrationUnits="Percent w/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>77</solutionId>
+   <localNum>G05</localNum>
+   <components>
+    <component name="Jeffamine M-600" type="additive"   concentration="50" concentrationUnits="Percent v/v" pH="7" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>78</solutionId>
+   <localNum>G06</localNum>
+   <components>
+    <component name="2,5-hexanediol" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>79</solutionId>
+   <localNum>G07</localNum>
+   <components>
+    <component name="1,3-Butanediol" type="additive" concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>80</solutionId>
+   <localNum>G08</localNum>
+   <components>
+    <component name="Polypropylene Glycol P400" type="additive" concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>81</solutionId>
+   <localNum>G09</localNum>
+   <components>
+    <component name="Dioxane" type="additive" concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>82</solutionId>
+   <localNum>G10</localNum>
+   <components>
+    <component name="Ethanol" type="additive" concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>83</solutionId>
+   <localNum>G11</localNum>
+   <components>
+    <component name="2-Propanol" type="additive" concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>84</solutionId>
+   <localNum>G12</localNum>
+   <components>
+    <component name="Methanol" type="additive" concentration="30" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>85</solutionId>
+   <localNum>H01</localNum>
+   <components>
+    <component name="1,4-Butanediol" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>86</solutionId>
+   <localNum>H02</localNum>
+   <components>
+    <component name="tert-Butanol" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>87</solutionId>
+   <localNum>H03</localNum>
+   <components>
+    <component name="1,3 Propanediol" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>88</solutionId>
+   <localNum>H04</localNum>
+   <components>
+    <component name="Acetonitrile" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>89</solutionId>
+   <localNum>H05</localNum>
+   <components>
+    <component name="gamma-Butyrolactone" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>90</solutionId>
+   <localNum>H06</localNum>
+   <components>
+    <component name="n-Propanol" type="additive"   concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>91</solutionId>
+   <localNum>H07</localNum>
+   <components>
+    <component name="Ethyl Acetate" type="additive" concentration="5" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>92</solutionId>
+   <localNum>H08</localNum>
+   <components>
+    <component name="Acetone" type="additive" concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>93</solutionId>
+   <localNum>H09</localNum>
+   <components>
+    <component name="Dichloromethane" type="additive" concentration="0.25" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>94</solutionId>
+   <localNum>H10</localNum>
+   <components>
+    <component name="n-Butanol" type="additive" concentration="7" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>95</solutionId>
+   <localNum>H11</localNum>
+   <components>
+    <component name="2,2,2-Trifluoroethanol" type="additive" concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  <solution>
+   <solutionId>96</solutionId>
+   <localNum>H12</localNum>
+   <components>
+    <component name="1,1,1,3,3,3-Hexafluoro-2-Propanol" type="additive" concentration="40" concentrationUnits="Percent v/v" />
+   </components>
+  </solution>
+  </solutions>
+ </screen>

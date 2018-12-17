@@ -1,0 +1,249 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.molecule.AbstractComponent" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/AbstractComponent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="300" y="-10" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.ComponentCategory" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/ComponentCategory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="536" y="-16" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.Molecule" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="284" y="323" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.MoleculeFeature" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/MoleculeFeature.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="639" y="173" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.Construct" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/Construct.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="83" y="356" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.Primer" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/Primer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="76" y="545" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.ResearchObjectiveElement" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="763" y="451" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.Target" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="409" y="725" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.target.ResearchObjective" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="779" y="757" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.Host" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/Host.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="80" y="163" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.molecule.Extension" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/molecule/Extension.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="84" y="723" width="-1" height="-1"/>  
+  </class>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.molecule.Primer" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Primer.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.molecule.Extension" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Extension.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="relatedResearchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="trialMolecules"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>    
+    <bendpoint x="459" y="446"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.molecule.Construct" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Construct.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="nucTargets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="nucleicAcids"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>    
+    <bendpoint x="345" y="488"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjective" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjective.java" binary="false">      
+      <attribute name="researchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="researchObjective"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="researchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="target"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="protTargets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.target.Target" 
+      file="/pims-model/src/java/org/pimslims/model/target/Target.java" binary="false">      
+      <attribute name="protein"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>    
+    <bendpoint x="248" y="491"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="moleculeFeatures"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.MoleculeFeature" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/MoleculeFeature.java" binary="false">      
+      <attribute name="molecule"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>    
+    <bendpoint x="415" y="181"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.molecule.Host" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Host.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.molecule.AbstractComponent" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/AbstractComponent.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.target.ResearchObjectiveElement" 
+      file="/pims-model/src/java/org/pimslims/model/target/ResearchObjectiveElement.java" binary="false">      
+      <attribute name="molecule"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="researchObjectiveElements"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>    
+    <bendpoint x="489" y="328"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false">      
+      <attribute name="refMoleculeFeatures"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.MoleculeFeature" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/MoleculeFeature.java" binary="false">      
+      <attribute name="refMolecule"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.ComponentCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/ComponentCategory.java" binary="false">      
+      <attribute name="components"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.molecule.AbstractComponent" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/AbstractComponent.java" binary="false">      
+      <attribute name="categories"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.molecule.Molecule" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/Molecule.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.molecule.AbstractComponent" 
+      file="/pims-model/src/java/org/pimslims/model/molecule/AbstractComponent.java" binary="false"/>  
+  </generalization>
+</class-diagram>

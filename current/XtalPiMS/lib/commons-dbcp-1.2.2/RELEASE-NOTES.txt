@@ -1,0 +1,144 @@
+
+                        Jakarta Commons DBCP Version 1.2.2 
+                                   RELEASE NOTES
+
+      
+This is a maintenance release containing bug fixes and enhancements. All API 
+changes are binary compatible with version 1.2.1. 
+
+For more information on Jakarta Commons DBCP, see
+http://jakarta.apache.org/commons/dbcp/
+      
+Changes in this version include:
+
+  Additions:
+
+* Add a JNDI How To to the User Guide. 
+          
+
+  Bug fixes:
+
+* DBCP-108. DriverManagerConnectionFactory: blank username/password handling. 
+  Thanks to Maxwell Grender-Jones. 
+          
+* DBCP-113. Broken behaviour for BasicDataSource.setMaxActive(0). Thanks to 
+  Rohan Lenard. 
+          
+* DBCP-36. BasicDataSource does not work with getConnection(String, String). 
+  Thanks to Jonathan Whitall. 
+          
+* DBCP-50. Error in JOCL snippet in org.apache.commons.dbcp package javadoc. 
+  Thanks to Nicky Nicolson. 
+          
+* Changes to make DBCP compile on JDK 1.5 by adding source="1.4" to compiler 
+  arguments (there are compiler errors in JDK 5.0 without this source switch 
+  that cannot be fixed without JDK 5.0-specific syntax). 
+          
+* DBCP-20. Per-user pooling with Oracle driver and default isolation 
+  settings. Thanks to Chris Nappin. 
+          
+* DBCP-9. Error in JOCL document in javadoc. Thanks to Adrian Baker. 
+          
+* DBCP-184. Improved Exception nesting in ConnectionPool. Thanks to Meikel 
+  Bisping. 
+          
+* DBCP-144. Fix broken website links for examples. Thanks to Sebb. 
+          
+* DBCP-28. Modified PoolableConnection close method to invalidate instance 
+  when invoked on an already closed connection. Thanks to Huw Lewis, James 
+  Ring. 
+          
+* DBCP-81. Inserted null checks to avoid NPE in close operations. 
+          
+* DBCP-105. Changed getReference method in InstanceKeyDataSource to return a 
+  concrete factory and added implementations of getReference in concrete 
+  subclasses. Thanks to Sandy McArthur, Thomas Fischer. 
+          
+* DBCP-39. Inserted null check in close method of SharedPoolDataSource to 
+  avoid NPE when invoked on non-initialized pool. Thanks to Jindrich Vimr. 
+          
+* DBCP-71. Document fact that true values for testOnBorrow, testOnReturn, 
+  testWhileIdle only have effect when validationQuery is set to a non-null 
+  string. Thanks to Douglas Squirrel. 
+          
+* DBCP-102. Modified activateObject in PoolableConnection to test connection 
+  properties before resetting to defaults. 
+          
+* DBCP-188. Corrected maxActive documentation in configuration.html. 
+          
+* DBCP-41. Fixed errors in pool parameter documentation and made 0 value for 
+  _maxPreparedStatements in DriverAdapterCPDS behave like a negative value, 
+  to be consistent with documentation and pool behavior. Thanks to Anton 
+  Tagunov. 
+          
+* DBCP-100. Made userKeys an instance variable (i.e., not static) in 
+  SharedPoolDataSource. 
+          
+* DBCP-198. Changed implementation of equals in 
+  PoolingDataSource.PoolGuardConnectionWrapper to ensure it is reflexive, 
+  even when wrapped connections are not DelegatingConnections. 
+          
+* DBCP-65. Removed synchronization from prepareStatement methods in 
+  PoolingConnection. Synchronization in these methods was causing deadlocks. 
+  No resources other than the prepared statement pool are accessed by these 
+  methods, and the pool methods are synchronized. Also fixes DBCP-202. 
+          
+
+  Enhancements:
+
+* DBCP-164. Enhancements to prepared statement in DriverAdapterCPDS. Thanks 
+  to Todd Carmichael. 
+          
+* DBCP-186. Better messages and docs for LoginTimeout 
+  UnsupportedOperationException. Thanks to Ralf Hauser. 
+          
+* DBCP-165. Added toString() methods to DelegatingPreparedStatement and 
+  DelegatingStatement Thanks to QM. 
+          
+* Added toString() method to DelegatingConnection. 
+          
+* DBCP-181. Add DriverManager.invalidateConnection(). Thanks to Meikel 
+  Bisping. 
+          
+* Upgraded dependency to Pool 1.3. 
+          
+* DBCP-187. Added connection info to SQLException messages when closed 
+  connections (resp stmts) are accessed in DelegatingConnection, 
+  DelegatingStatement. Thanks to Ralf Hauser. 
+          
+* DBCP-116. Added rollbackAfterValidation property and code to issue a 
+  rollback on a connection after validation when this property is set to true 
+  to eliminate Oracle driver exceptions. Default property value is false. 
+  Thanks to Thomas Fischer. 
+          
+* DBCP-68. Removed dependency on Commons Collections by adding collections 
+  2.1 sources for LRUMap and SequencedHashMap with package scope to 
+  datasources package. 
+          
+Known Issues (significant open issues at time of release):
+  
+* Multiple issues (DBCP-3, DBCP-5, DBCP-23, DBCP-34, DBCP-61, DBCP-134,
+  DBCP-148, DBCP-180) related to DBCP connection closing semantics. Fixing
+  these issues could break existing clients, so they have been deferred to
+  a major release.
+
+* DBCP-44. Evictor thread in GenericObjectPool has potential for deadlock. 
+  The GenericObjectPool Evictor thread can potentially cause a deadlock between
+  its connection factory and java.sql.DriverManager. The deadlock occurs when
+  the Evictor thread is trying to make enough connections to bring the pool's
+  idle connections up to what's specified in minIdle, at the same time a
+  connection is being requested through DriverManager.getConnection(). The
+  suggested workaround is to either set minIdle to 0 when using the
+  PoolingDriver or access connections directly from the pool if minIdle is
+  set to a positive number. See the bug report for details.
+  
+* DBCP-191. DBCP does not compile under JDK 1.6 / JDBC 4.0.  Fixing this would
+  break backward compatibility.
+
+For a full list of open DBCP issues see
+http://jakarta.apache.org/commons/dbcp/issue-tracking.html
+
+
+ 
+
+      

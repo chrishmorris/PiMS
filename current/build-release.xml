@@ -1,0 +1,108 @@
+<project name="PiMS" default="buildRelease" basedir="." >
+    <property file="build.properties"/>
+    
+   
+    <property name="pimsweb.dir" value="./pims-web/" />
+    <property name="xtalpims.dir" value="./../xtalPiMS/current/" /><!-- TODO change -->
+    <property name="jars.dir" value="./jars/" />
+    <property name="dmjar.filename" value="pims-model.jar" />
+    <property name="dmjar.file" value="${basedir}/pims-model/${dmjar.filename}" />
+    <property name="ddl.filename" value="pims.ddl"/>    
+    <property name="grant.filename" value="grant.ddl"/>
+    <property name="ddl.all.filename" value="pims-database.sql"/>
+    <property name="sql.dir" value="${basedir}/pims-model/src/sql"/>
+    <property name="ddl.all.file" value="${sql.dir}/${ddl.all.filename}"/>
+    <property name="pwebjar.filename" value="pims-web.jar" />
+    <property name="pwebjar.file" value="${basedir}/pims-web/build/${pwebjar.filename}" />
+    <property name="upgrader.jar.name" value="upgrader.jar" />
+    <property name="refDataJar.file" value="RefDataLoader.jar" />
+    
+    <!-- TODO check this -->
+    <property name="xtalpims.dir" value="../XtalPiMS/" />
+    
+    <target name="buildRelease">
+        <antcall target="buildDataModel" />
+        <antcall target="buildUpgrader" />
+        <antcall target="copyDMToJars" />
+        <antcall target="updatePimsWeb" />
+        <antcall target="buildWebJar" />
+        <antcall target="updateTools" />
+        <antcall target="buildRefDataLoader" />
+        <antcall target="updateXtalPiMS" />
+    <!-- TODO build xtalPiMS projects  -->
+    </target>
+        
+    <target name="buildDataModel" >
+        <ant antfile="./pims-model/build.xml" target="jar"> 
+            <property name="basedir" value="${basedir}/pims-model/" />
+        </ant>
+        <ant antfile="./pims-model/build.xml" target="installDatabase"> 
+            <property name="basedir" value="${basedir}/pims-model/" />
+        </ant>  
+    </target>
+    
+    <target name="buildUpgrader">
+        <ant antfile="./pims-model/upgrader/build-upgrader.xml" target="build"> 
+            <property name="basedir" value="${basedir}/pims-model/" />
+        </ant>
+    </target>
+    
+    <target name="copyDMToJars"  depends="buildDataModel,buildUpgrader"
+        description="Publishes new data model to jars project." >
+        <copy overwrite="true" verbose="true" file="${ddl.all.file}" tofile="${jars.dir}/${ddl.all.filename}" />
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${jars.dir}/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="./pims-model/upgrader/${upgrader.jar.name}" tofile="${jars.dir}/${upgrader.jar.name}" />  
+    </target>    
+        
+    <target name="updatePimsWeb" depends="copyDMToJars"
+    description="Publishes ${dmjar.filename} to pims-web project." >
+        <copy overwrite="true" verbose="true" file="${jars.dir}/${dmjar.filename}" tofile="${pimsweb.dir}/WebContent/WEB-INF/lib/${dmjar.filename}" />
+    </target>
+    
+    
+    <target name="buildWebJar"  >
+        <ant antfile="./pims-web/build.xml" target="jar"> 
+            <property name="basedir" value="${basedir}/pims-web/" />
+        </ant>  
+    </target>
+    
+    <target name="updateTools" depends="buildWebJar"
+    description="Publishes ${dmjar.filename} and ${pwebjar.file} to tools project." >
+      <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="./tools/lib/${dmjar.filename}" />
+      <copy overwrite="true" verbose="true" file="${pwebjar.file}" tofile="./tools/lib/${pwebjar.filename}" />
+    </target>
+    
+    <!-- Short cut for development, not for building release -->
+    <target name="loadRefData"  >
+        <ant antfile="./tools/build.xml" target="loadRefData"> 
+            <property name="basedir" value="${basedir}/tools/" />
+        </ant>  
+    </target>
+    
+   
+    <target name="buildRefDataLoader" >
+        <ant antfile="./tools/build.xml" target="RefDataLoader.jar"> 
+            <property name="basedir" value="${basedir}/tools/" />
+        </ant>  
+        <copy overwrite="true" verbose="true" file="./tools/${refDataJar.file}" tofile="${jars.dir}/${refDataJar.file}" />
+    </target>
+    
+    
+    <target name="updateXtalPiMS" description="Publishes ${dmjar.filename} to xtalPiMS project" >
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/XtalPiMS_BusinessAPI_PIMSDBImpl/lib/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/OPPF Data Migration/lib/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/ImageProcessor/lib/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="${dmjar.file}" tofile="${xtalpims.dir}/XtalPiMS_Web/web/WEB-INF/lib/${dmjar.filename}" />
+        <copy overwrite="true" verbose="true" file="${pwebjar.file}" tofile="${xtalpims.dir}/XtalPiMS_Web/web/WEB-INF/lib/${pwebjar.filename}" />
+    </target>
+    
+    
+    <!-- TODO run:
+      tools tests
+      ref data loader
+      pims-web tests
+      xtalPiMS tests
+    -->
+    
+    
+</project>

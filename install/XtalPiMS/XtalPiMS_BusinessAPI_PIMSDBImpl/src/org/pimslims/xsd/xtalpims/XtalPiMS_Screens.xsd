@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="screen" type="ScreenType"/>
+	<xsd:complexType mixed="false" name="ScreenType">
+		<xsd:sequence>
+			<xsd:element name="screenName" type="xsd:string"/>
+			<xsd:element name="screenSupplier" type="xsd:string"/>
+			<xsd:element name="screenCatNum" type="xsd:string"/>
+			<xsd:element name="screenDetails" type="xsd:string"/>
+			<xsd:element name="screenReference" type="xsd:string"/>
+			<xsd:element name="screenNumberOfSolutions" type="xsd:unsignedInt"/>
+			<xsd:element name="solutions" type="SolutionList"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SolutionList">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="solution" type="SolutionType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType mixed="false" name="SolutionType">
+		<xsd:sequence>
+			<xsd:element name="solutionId" type="xsd:string"/>
+			<xsd:element name="localNum" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="pHfinal" type="xsd:decimal"/>
+			<xsd:element name="components" type="ComponentList"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ComponentList">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="component" type="ComponentType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ComponentType">
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="type" type="TypeType" use="required"/>
+		<xsd:attribute name="concentration" type="xsd:decimal" use="required"/>
+		<xsd:attribute name="concentrationUnits" type="ConcentrationUnitType" use="required"/>
+		<xsd:attribute name="pH" type="xsd:decimal"/> <!-- This is required for types buffer, and unused for other types. -->
+	</xsd:complexType>
+	<xsd:simpleType name="TypeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="buffer"/>
+			<xsd:enumeration value="precipitant"/>
+			<xsd:enumeration value="salt"/>
+			<xsd:enumeration value="additive"/>
+<!-- No other type so far -->
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ConcentrationUnitType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="Percent v/v"/>
+			<xsd:enumeration value="Percent w/v"/>
+<!-- No other concentration units so far -->
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
+

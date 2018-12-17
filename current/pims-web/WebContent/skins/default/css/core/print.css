@@ -1,0 +1,32 @@
+
+.noprint          {display:none;   }
+
+body {background:white; }
+
+div#content {top:auto; clear:both;margin-top:0.5em; border-bottom:0; }
+
+table.list th { background-color: #99f; color:#003; }
+
+table.list { border-collapse:collapse; }
+table.list th, table.list td {  border:1px solid #99f; }
+
+/* believed obsolete, except in sequencing pages*/
+div.collapsibleBox_closed div.collapsibleBox_body{ display:block; }
+div.collapsibleBox_opened,div.collapsibleBox_fixedopen,div.collapsibleBox_closed { border-width:0; border-top:5px solid #006; -moz-border-radius:0 }
+div.collapsibleBox_head h3 {font-size:140%; }
+
+div.twocolumn div.rhs { position:static; clear:both;}
+
+table.list tr.highlighted  { border:2px solid red }
+
+/* Collapsible boxes */
+div.collapsiblebox { border:none; background:white; font-size:120%; page-break-inside:avoid; }
+div.collapsiblebox div.boxheader { border:1px solid #006;
+    background:#bbf url(../../images/widget/boxtopbackground.png) no-repeat -80px 0px; border:5px solid black; padding:0.5em; }
+div.collapsiblebox h3 { background-image:none; font-size:120%; border-width:1px; padding:0.25em; margin-top:1em;}
+div.collapsiblebox div.boxcontent { border:none; }
+div.closedbox div.boxcontent { display:block; border-top:none; }
+
+/* Protocol method box - remove label, make box full width */
+#protocol_method_body .textarea div.fieldname   { display:none; }
+#protocol_method_body .textarea div.formfield   { margin-left:0; }

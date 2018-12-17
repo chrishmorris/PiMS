@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pDEST17 Vector</name>
+    <details>N-terminal 6xHis tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="11803-012"
+        dataPageUrl="http://products.invitrogen.com/ivgn/en/US/adirect/invitrogen?cmd=catProductDetail&amp;productID=11803012"
+        supplier="Invitrogen" />
+    <sampleComponent name="pDEST17" componentCategory="Vector"
+        details="6354" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>E.coli Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="2570"
+            endSeq="3430" />
+        <promoterDetails name="T7 Promoter" startSeq="21"
+            endSeq="40" />
+        <markerDetails name="N-term His Tag coding sequence"
+            startSeq="113" endSeq="130" details="MSYYHHHHHHLESTSLYKKAG"
+            featureType="Tag" />
+        <markerDetails name="attR1 site" startSeq="140"
+            endSeq="264" featureType="recombination site" />
+        <markerDetails name="Chloramphenicol resistance gene (CmR)"
+            startSeq="373" endSeq="1032" featureType="antibiotic resistance" />
+        <markerDetails name="ccdB gene" startSeq="1374"
+            endSeq="1679" featureType="selectable marker"
+            details="bacterial death gene, exchanged for 
+                gene of interest in the entry clone" />
+        <markerDetails name="attR1 site" startSeq="1720"
+            endSeq="1844" featureType="recombination site" />
+        <markerDetails name="pBR322 origin" startSeq="3575"
+            endSeq="4248" featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Propagation: One Shot[TM] ccdB Survival[TM] 2 T1R; Expression: BL21-AI[TM]"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

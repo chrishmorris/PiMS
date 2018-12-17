@@ -1,0 +1,20 @@
+<!-- PiMS Tag Cleavage protocol xml as flat file -->
+<protocol name="PiMS Tag Cleavage" objective="Enzymatic removal of Tag peptides" creationDate="11-03-09" remarks="Default set of protocols for PiMS" details="Removal of Tag peptides">
+ <experimentType>Cleavage</experimentType>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" unit="L" displayUnit="" refSample="Buffer" name="Cleavage Buffer" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -protease" unit="L" displayUnit="" refSample="Buffer" name="Protease" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Cleaved Protein" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Enzyme used" parameterType="String" isMandatory="true" />
+  <parameterDefinition id="2" name="Incubation conditions" parameterType="String" />
+  <parameterDefinition id="3" name="Yield (mg)" parameterType="Int" />
+  <parameterDefinition id="4" name="% Cleavage" parameterType="Int" />
+ </parameterDefinitions>
+
+</protocol>

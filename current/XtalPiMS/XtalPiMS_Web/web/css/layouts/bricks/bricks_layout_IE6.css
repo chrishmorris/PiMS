@@ -1,0 +1,8 @@
+/* 
+ * CSS styles for this layout, applicable only to IE6.
+ * To ensure effects are confined to this layout only, prefix each rule 
+ * with "body.CLASSNAME " - this ensures that matched items are descendants
+ * of the correct class of body.
+ */
+
+body.bricks .doublewidth  { width:49.1%;  }

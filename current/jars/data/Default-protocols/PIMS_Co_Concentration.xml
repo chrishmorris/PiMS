@@ -1,0 +1,22 @@
+<!-- PiMS Co-Concentration protocol xml as flat file -->
+<protocol name="PiMS Co Concentration" objective="Concentration of Target Proteins" creationDate="02-02-07" remarks="Default set of protocols for PiMS" details="Concentration of Target Protein">
+ <experimentType>Concentration</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Concentrator type" parameterType="String" />
+  <parameterDefinition id="2" name="Concentrator speed (g)" parameterType="Int" />
+  <parameterDefinition id="3" name="Output volume" parameterType="Int" />
+  <parameterDefinition id="4" name="Output concentration" parameterType="Int" />
+  <parameterDefinition id="5" name="Output yield" parameterType="Int" />
+  <parameterDefinition id="6" name="Concentrator Notes" parameterType="String" />
+ </parameterDefinitions>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="" unit="L" displayUnit="uL" refSample="Purified Protein" name="Purified Protein A" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="" unit="L" displayUnit="uL" refSample="Purified Protein" name="Purified Protein B" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Purified protein" amount="0.00008" unit="L" displayUnit="uL" refSample="Concentrated Protein" name="Concentrated Protein"/>
+ <!-- not sure if there is an output sample -->
+
+</protocol>

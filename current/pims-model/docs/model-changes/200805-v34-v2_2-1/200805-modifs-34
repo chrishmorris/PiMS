@@ -1,0 +1,31 @@
+DATA MODEL CHANGES 34
+
+--------------------------------------------------------------------------------
+-- DM Changes Agreed
+--------------------------------------------------------------------------------
+x PIMS-1653 DbRef.code has limitation of 32 characters which is not sufficient to record some databases accessions
+>>> change data type from VARCHAR(32) to VARCHAR(80) for dbRef.DbRef.code
+
+x PIMS-1662 DM-level date/time
+>>> replace java.sql.Timestamp into java.util.Calendar to be able to add a timezone 
+>>> 21 matches in mapping files: Annotation; ConferenceCitation; DropAnnotation; 
+    Image; Experiment; ExperimentGroup; Holder; HolderLocation; PersonInGroup; Protocol
+    Sample; Milestone; Project
+
+x PIMS-1840 The person/creator of crystallization.Image should be nullable
+>>> change not-null="true" to not-null="false" for crystallization.Image.creator
+
+x PIMS-1996 the "why chosen" of target should not be mandatory
+>>> change not-null="true" to not-null="false" for target.Target.whyChosen
+
+x PIMS-1512 Experiment Status
+>>> add value "unknown" into the list of possible values of Experiment.experiment.status
+--> TODO: use null for unspecified in db and change getter to return empty string when null
+
+x PIMS-389 Reagent shelf life
+>>> add attribute useByDate into class sample.Sample of type Calendar
+
+x PIMS-1441 Constraint needed that start date is before end date
+>>> add constraint end_date_ge_start_date (ge = greater than or equals to) on experiment.Experiment.endDate
+
+x replace meta attribute contraints by constraints

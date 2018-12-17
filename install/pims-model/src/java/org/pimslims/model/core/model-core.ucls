@@ -1,0 +1,250 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.core.AccessObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="216" y="72" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.LabBookEntry" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="237" y="329" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.accessControl.User" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="542" y="215" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.Attachment" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="781" y="316" width="117" height="71"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.Annotation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/Annotation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="699" y="584" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.ExternalDbLink" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/ExternalDbLink.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="843" y="533" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.Note" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/Note.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="348" y="448" width="117" height="71"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.Citation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/Citation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="489" y="616" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.JournalCitation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/JournalCitation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="296" y="807" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.BookCitation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/BookCitation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="418" y="799" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.ThesisCitation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/ThesisCitation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="539" y="783" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.ConferenceCitation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/ConferenceCitation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="660" y="814" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.ApplicationData" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/ApplicationData.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="831" y="125" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.SystemClass" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="543" y="59" width="-1" height="-1"/>  
+  </class>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.ThesisCitation" 
+      file="/pims-model/src/java/org/pimslims/model/core/ThesisCitation.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Citation" 
+      file="/pims-model/src/java/org/pimslims/model/core/Citation.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.Note" 
+      file="/pims-model/src/java/org/pimslims/model/core/Note.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Attachment" 
+      file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.JournalCitation" 
+      file="/pims-model/src/java/org/pimslims/model/core/JournalCitation.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Citation" 
+      file="/pims-model/src/java/org/pimslims/model/core/Citation.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false">      
+      <attribute name="attachments"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.Attachment" 
+      file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false">      
+      <attribute name="parentEntry"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.ConferenceCitation" 
+      file="/pims-model/src/java/org/pimslims/model/core/ConferenceCitation.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Citation" 
+      file="/pims-model/src/java/org/pimslims/model/core/Citation.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.ApplicationData" 
+      file="/pims-model/src/java/org/pimslims/model/core/ApplicationData.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Attachment" 
+      file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false">      
+      <attribute name="access"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.BookCitation" 
+      file="/pims-model/src/java/org/pimslims/model/core/BookCitation.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Citation" 
+      file="/pims-model/src/java/org/pimslims/model/core/Citation.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.SystemClass" 
+      file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false">      
+      <attribute name="creator"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.core.Note" 
+      file="/pims-model/src/java/org/pimslims/model/core/Note.java" binary="false">      
+      <attribute name="relatedEntries"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.ExternalDbLink" 
+      file="/pims-model/src/java/org/pimslims/model/core/ExternalDbLink.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Attachment" 
+      file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.Annotation" 
+      file="/pims-model/src/java/org/pimslims/model/core/Annotation.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Attachment" 
+      file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.core.LabBookEntry" 
+      file="/pims-model/src/java/org/pimslims/model/core/LabBookEntry.java" binary="false">      
+      <attribute name="lastEditor"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>    
+    <bendpoint x="351" y="255"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.core.Citation" 
+      file="/pims-model/src/java/org/pimslims/model/core/Citation.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.Attachment" 
+      file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.core.SystemClass" 
+      file="/pims-model/src/java/org/pimslims/model/core/SystemClass.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.core.Attachment" 
+      file="/pims-model/src/java/org/pimslims/model/core/Attachment.java" binary="false">      
+      <attribute name="author"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>  
+  </association>
+</class-diagram>

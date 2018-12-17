@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<protocol details="Records the selection of a crystal from a successful trial, for further treatment. Used by the Select Crystal user interface." remarks="" creationDate="05-11-13" objective="" name="Select Crystal">
+<experimentType>Crystal</experimentType>
+<inputSamples>
+	<inputSample name="Drop containing crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="TrialDrop" sampleCatNamingSys="default"/>
+</inputSamples>
+<outputSample name="Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+<parameterDefinitions>
+	<parameterDefinition id="1" name="Conditions" parameterType="String" defaultValue="" isMandatory="false" label="The crystallization conditions"/>
+	<parameterDefinition id="2" name="Protein buffer" parameterType="String" defaultValue="" isMandatory="false" label="Protein buffer and concentration"/>
+	<parameterDefinition id="3" name="Temperature" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="The temperature at which the plate was stored"/>
+	<parameterDefinition id="4" name="Crystal number" parameterType="Int" defaultValue="0" minValue="" maxValue="" isMandatory="true" label="An identifier for the crystal. Should be unique within a given drop. Don't change this, it's set automatically."/>
+	<parameterDefinition id="5" name="Pin barcode" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="6" name="r" parameterType="Float" defaultValue="100" minValue="" maxValue="" isMandatory="true" label="The radius from the centre, to contain the crystal"/>
+	<parameterDefinition id="7" name="x" parameterType="Float" defaultValue="0" minValue="" maxValue="" isMandatory="true" label="The x co-ordinate of the crystal centre"/>
+	<parameterDefinition id="8" name="y" parameterType="Float" defaultValue="0" minValue="" maxValue="" isMandatory="true" label="The y co-ordinate of the crystal centre"/>
+</parameterDefinitions>
+</protocol>

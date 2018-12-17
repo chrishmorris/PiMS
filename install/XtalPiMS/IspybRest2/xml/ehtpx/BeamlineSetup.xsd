@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="beamLineSetup" type="tns:BeamLineSetup">
+		<xs:annotation>
+			<xs:documentation>Setup of the Beamline</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="BeamLineSetup">
+		<xs:sequence>
+			<xs:element name="setupDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="synchrotronMode" type="xs:string" minOccurs="0"/>
+			<xs:element name="detectorType" type="xs:string" minOccurs="0"/>
+			<xs:element name="detectorManufacturer" type="xs:string" minOccurs="0"/>
+			<xs:element name="detectorModel" type="xs:string" minOccurs="0"/>
+			<xs:element name="detectorMode" type="xs:string" minOccurs="0"/>
+			<xs:element name="detectorPixelSize" type="xs:float" minOccurs="0"/>
+			<xs:element name="undulatorType1" type="xs:string" minOccurs="0"/>
+			<xs:element name="undulatorType2" type="xs:string" minOccurs="0"/>
+			<xs:element name="undulatorType3" type="xs:string" minOccurs="0"/>
+			<xs:element name="undulatorGap1" type="xs:float" minOccurs="0"/>
+			<xs:element name="undulatorGap2" type="xs:float" minOccurs="0"/>
+			<xs:element name="undulatorGap3" type="xs:float" minOccurs="0"/>
+			<xs:element name="focalSpotSizeAtSample" type="xs:float" minOccurs="0"/>
+			<xs:element name="focusingOptic" type="xs:string" minOccurs="0"/>
+			<xs:element name="beamDivergenceHorizontal" type="xs:float" minOccurs="0"/>
+			<xs:element name="beamDivergenceVertical" type="xs:float" minOccurs="0"/>
+			<xs:element name="polarisation" type="xs:float" minOccurs="0"/>
+			<xs:element name="monochromatorType" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

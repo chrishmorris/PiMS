@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+        xmlns:dls="http://www.diamond.ac.uk/services/genericws" 
+        attributeFormDefault="qualified" 
+        elementFormDefault="qualified" 
+        targetNamespace="http://www.diamond.ac.uk/services/genericws"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+ >
+    
+    <!-- TYPES  --> 
+       
+         <!-- Exceptions -->
+            <xs:complexType name="Exception">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:anyType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="IllegalStateException">
+                <xs:complexContent>
+                    <xs:extension base="dls:Exception" />
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="BadDataException">
+                <xs:complexContent>
+                    <xs:extension base="dls:Exception" />
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="NotFoundException">
+                <xs:complexContent>
+                    <xs:extension base="dls:Exception" />
+                </xs:complexContent>
+            </xs:complexType>
+            
+            <!--- input -->
+            <xs:complexType name="credentials">
+                    <xs:sequence>
+                        <xs:element name="fedid" type="xs:string"/>
+                        <xs:element name="password" type="xs:string"/>
+                    </xs:sequence>
+            </xs:complexType>
+            
+            <xs:complexType name="logoutParameters">
+                    <xs:sequence>
+                        <xs:element name="fedid" type="xs:string"/>
+                        <xs:element name="token" type="xs:string"/>
+                    </xs:sequence>
+            </xs:complexType>
+ 			
+ 			<xs:simpleType name="allowedFlag">
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="original" />
+						<xs:enumeration value="jpeg" />
+						<xs:enumeration value="thumbnail" />
+						<xs:enumeration value="highjpeg" />
+						<xs:enumeration value="nonimage" />
+					</xs:restriction>
+    		</xs:simpleType>
+    		
+    		<xs:simpleType name="allowedResolution">
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="high" />
+						<xs:enumeration value="low" />
+					</xs:restriction>
+    		</xs:simpleType>
+ 			
+			<xs:simpleType name="allowedDatabase">
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ispyb" />
+					</xs:restriction>
+    		</xs:simpleType>
+			
+			<xs:simpleType name="allowedTable">
+					<xs:restriction base="xs:string">						
+						<xs:enumeration value="datacollection" />
+						<xs:enumeration value="datacollectiongroup" />
+						<xs:enumeration value="image" />
+						<xs:enumeration value="blsession" />
+						<xs:enumeration value="proposal" />						
+						<xs:enumeration value="imagequalityindicators" />
+						<xs:enumeration value="screening" />
+						<xs:enumeration value="screeningoutput" />
+						<xs:enumeration value="screeningoutputlattice" />
+						<xs:enumeration value="screeninginput" />
+						<xs:enumeration value="screeningstrategy" />
+						<xs:enumeration value="screeningstrategywedge" />
+						<xs:enumeration value="screeningstrategysubwedge" />
+						<xs:enumeration value="screeningFile" />	
+						<xs:enumeration value="autoprocintegration" />	
+						<xs:enumeration value="autoprocprogram" />	
+						<xs:enumeration value="autoprocprogramattachment" />	
+						<xs:enumeration value="autoprocscaling_has_int" />	
+						<xs:enumeration value="autoproc" />	
+						<xs:enumeration value="autoprocscaling" />	
+						<xs:enumeration value="autoprocscalingstatistics" />	
+						<xs:enumeration value="energyscan"/>
+            			<xs:enumeration value="xfefluorescencespectrum"/>
+						<xs:enumeration value="protein"/>
+						<xs:enumeration value="blsample"/>            
+						<xs:enumeration value="crystal"/>
+						<xs:enumeration value="shipping"/>
+						<xs:enumeration value="dewar"/>
+						<xs:enumeration value="container"/>
+					</xs:restriction>
+			</xs:simpleType>
+			
+			
+			<xs:simpleType name="allowedOperator">
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="=" />
+						<xs:enumeration value="&gt;" />
+						<xs:enumeration value="&lt;" />
+						<xs:enumeration value="&lt;&gt;" />
+					</xs:restriction>
+			</xs:simpleType>
+			
+			<xs:complexType name="orderPair">
+					<xs:sequence>
+						<xs:element minOccurs="1" maxOccurs="1" name="orderColumn" type="xs:string"/>
+						<xs:element minOccurs="1" maxOccurs="1" name="orderType"   type="dls:allowedOrder" />
+					</xs:sequence>
+			</xs:complexType>
+			
+			<xs:simpleType name="allowedOrder">
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="asc" />
+						<xs:enumeration value="desc" />
+					</xs:restriction>
+			</xs:simpleType>
+            
+            <xs:complexType name="constraintTriplet">
+               <xs:sequence>
+                        <xs:element minOccurs="1" maxOccurs="1" name="constraintColumn"   type="xs:string"/>
+                        <xs:element minOccurs="1" maxOccurs="1" name="constraintOperator" type="dls:allowedOperator"/>
+                        <xs:element minOccurs="1" maxOccurs="1" name="constraintValue"    type="xs:string"/>
+               </xs:sequence>
+            </xs:complexType>
+            
+            <xs:complexType name="queryParameters">
+                    <xs:sequence>
+					    <xs:element name="fedid"       minOccurs="1" maxOccurs="1" type="xs:string"/> 
+					    <xs:element name="token"       minOccurs="1" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="dbname"      minOccurs="1" maxOccurs="1" type="dls:allowedDatabase"/>
+                        <xs:element name="tablename"   minOccurs="1" maxOccurs="1" type="dls:allowedTable"/>
+                        <xs:element name="columnNames" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+                        <xs:element name="constraints" minOccurs="0" maxOccurs="unbounded" type="dls:constraintTriplet"/>
+                        <xs:element name="rangestart"  minOccurs="0" maxOccurs="1" type="xs:int"/>
+                        <xs:element name="rangeend"    minOccurs="0" maxOccurs="1" type="xs:int"/>
+                        <xs:element name="orderpair"   minOccurs="0" maxOccurs="unbounded" nillable="true" type="dls:orderPair"/>
+                    </xs:sequence>
+            </xs:complexType>
+            
+            <xs:complexType name="getFileParameters">
+                    <xs:sequence>
+					    <xs:element name="fedid"       minOccurs="1" maxOccurs="1" type="xs:string"/> 
+					    <xs:element name="token" minOccurs="1" maxOccurs="1" type="xs:string"/>
+					    <xs:element name="imageflag"  type="dls:allowedFlag"/>
+                        <xs:element name="fileid"  type="xs:string"/>
+                    </xs:sequence>
+            </xs:complexType>
+            
+            <xs:complexType name="getSnapshotsParameters">
+                    <xs:sequence>
+					    <xs:element name="fedid"       minOccurs="1" maxOccurs="1" type="xs:string"/> 
+					    <xs:element name="token" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="datacollectionid" type="xs:string"/>
+                        <xs:element name="imageresolution"    type="dls:allowedResolution"/>
+                    </xs:sequence>
+            </xs:complexType>
+            
+            <xs:complexType name="updateCommentsParameters">
+                    <xs:sequence>
+					    <xs:element name="fedid"       minOccurs="1" maxOccurs="1" type="xs:string"/> 
+					    <xs:element name="token" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="datacollectionid" type="xs:string"/>
+                        <xs:element name="comments"         type="xs:string"/>
+                    </xs:sequence>
+            </xs:complexType>
+            
+            <xs:complexType name="downloadFileParameters">
+                    <xs:sequence>
+					    <xs:element name="fedid"       minOccurs="1" maxOccurs="1" type="xs:string"/> 
+					    <xs:element name="nonce" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="filepath"     type="xs:string"/>
+                    </xs:sequence>
+            </xs:complexType>
+            
+            <xs:complexType name="getVisitInfoParameters">
+                    <xs:sequence>
+					    <xs:element name="fedid"       minOccurs="0" maxOccurs="1" type="xs:string"/> 
+					    <xs:element name="token"       minOccurs="0" maxOccurs="1" type="xs:string"/>
+					    <xs:element name="beamline"    minOccurs="0" maxOccurs="1" nillable="true" type="xs:string"/> 
+                        <xs:element name="starttime"   minOccurs="1" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="endtime"     minOccurs="1" maxOccurs="1" type="xs:string"/>
+                    </xs:sequence>
+            </xs:complexType>
+
+          <!-- responses -->  
+            <xs:simpleType name="Confirmation">
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="OK"/>
+                <xs:enumeration value="Failed"/>
+              </xs:restriction>
+            </xs:simpleType>   
+             
+          <!-- exceptions-->  
+            <xs:element name="IllegalStateException" type="dls:IllegalStateException"/>
+            <xs:element name="BadDataException" type="dls:BadDataException" />
+            <xs:element name="NotFoundException" type="dls:NotFoundException" />
+            
+            <!-- Methods -->  
+            <xs:element name="echoString" type="xs:string"/>
+            <xs:element name="echoStringResponse" type="xs:string"/>
+            
+            <xs:element name="getVersion" type="xs:string"/>
+            <xs:element name="getVersionResponse" type="xs:string"/>
+
+			<xs:element name="getAuthToken" type="dls:credentials"/>
+            <xs:element name="getAuthTokenResponse">
+            	<xs:complexType>
+                    <xs:sequence>
+                    	<xs:element name="token" type="xs:string"/>                       
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element> 
+            <xs:element name="logout" type="dls:logoutParameters"/>
+            <xs:element name="logoutResponse">
+            	<xs:complexType>
+                    <xs:sequence>                       
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element> 			
+                    
+            <xs:element name="buildSQL" type="dls:queryParameters"/>
+            <xs:element name="buildSQLResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="numberColumns" type="xs:int"/>
+                        <xs:element name="columnNames" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+                        <xs:element name="numberRows" type="xs:int"/>
+                        <xs:element name="row" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+    		
+    		<xs:element name="getFile" type="dls:getFileParameters"/>
+    		<xs:element name="getFileResponse">
+        		 <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="file" minOccurs="0" maxOccurs="1" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+                        <xs:element name="fileName" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+    		</xs:element>
+    		
+    		<xs:element name="getSnapshots" type="dls:getSnapshotsParameters"/>
+    		<xs:element name="getSnapshotsResponse">
+        		 <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="snapshot1" minOccurs="0" maxOccurs="1" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+                        <xs:element name="snapshot2" minOccurs="0" maxOccurs="1" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+                        <xs:element name="snapshot3" minOccurs="0" maxOccurs="1" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+                        <xs:element name="snapshot4" minOccurs="0" maxOccurs="1" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+                        
+                        <xs:element name="fileName1" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="fileName2" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="fileName3" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="fileName4" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                        
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+    		</xs:element>
+    		
+    		<xs:element name="updateComments" type="dls:updateCommentsParameters"/>
+    		<xs:element name="updateCommentsResponse">
+        		 <xs:complexType>
+                    <xs:sequence>                       
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+    		</xs:element>
+    		
+    		<xs:element name="downloadFilebyLocation" type="dls:downloadFileParameters"/>
+    		<xs:element name="downloadFilebyLocationResponse">
+        		 <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="file" minOccurs="0" maxOccurs="1" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+                        <xs:element name="fileName" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+    		</xs:element>
+    		
+			<xs:element name="getVisitInfo" type="dls:getVisitInfoParameters"/>
+    		<xs:element name="getVisitInfoResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="numberColumns" type="xs:int"/>
+                        <xs:element name="columnNames" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+                        <xs:element name="numberRows" type="xs:int"/>
+                        <xs:element name="row" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+                        <xs:element name="status" type="dls:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+    		</xs:element>
+    		
+
+</xs:schema>

@@ -1,0 +1,16 @@
+Data
+Chemicals.csv
+Updated: added missing ComponentCategories
+
+Old: "2-amino-2-methyl-1,3-propanediol",AMPD; ammediol,,(HOCH2)2C(NH2)CH3,115-69-5,105.14,MolComp,other,Y,,Y,2,R36/37/38,"S26,S36",Xi,"2-Amino-2-methyl-1,3-propanediol",Chemical/Biochemical
+New: "2-amino-2-methyl-1,3-propanediol",AMPD; ammediol,Buffering agent,(HOCH2)2C(NH2)CH3,115-69-5,105.14,MolComp,other,Y,,Y,2,R36/37/38,"S26,S36",Xi,"2-Amino-2-methyl-1,3-propanediol",Chemical/Biochemical
+Old: copper(II) chloride,copper dichloride; cupric chloride,Additive,CuCl2,7447-39-4,134.45,MolComp,other,Y,,,,"R22,R36/37/38,R50/53","S26,S36,S60,S61","Xn,N",Copper(II) chloride,Chemical/Biochemical
+New: copper(II) chloride,copper dichloride; cupric chloride,"Additive,Salt",CuCl2,7447-39-4,134.45,MolComp,other,Y,,,,"R22,R36/37/38,R50/53","S26,S36,S60,S61","Xn,N",Copper(II) chloride,Chemical/Biochemical
+Old: copper(II) chloride dihydrate,cupric chloride dihydrate,,CuCl2. 2H2O,10125-13-0,170.48,MolComp,other,Y,,Y,3,"R25,R36","S24/25,S45","Xn,N",Copper(II) chloride dihydrate,Chemical/Biochemical
+New: copper(II) chloride dihydrate,cupric chloride dihydrate,Salt,CuCl2. 2H2O,10125-13-0,170.48,MolComp,other,Y,,Y,3,"R25,R36","S24/25,S45","Xn,N",Copper(II) chloride dihydrate,Chemical/Biochemical
+Old: dipicolinic acid,"2,6-pyridinedicarboxylic acid",,C7H5NO4,499-83-2,167.12,MolComp,other,,,Y,2,R36/37/38,"S26,S36",Xi,Dipicolinic acid,Chemical/Biochemical,
+New: dipicolinic acid,"2,6-pyridinedicarboxylic acid",Chelator,C7H5NO4,499-83-2,167.12,MolComp,other,,,Y,2,R36/37/38,"S26,S36",Xi,Dipicolinic acid,Chemical/Biochemical,
+Old: 2-ethyl-5-phenylisoxazolium sulfonate,Woodward's Reagent K,,C11H11NO4S,4156-16-5,253.27,MolComp,other,Y,,,1,,,,2-Ethyl-5-phenylisoxazolium sulfonate,Chemical/Biochemical,
+New: 2-ethyl-5-phenylisoxazolium sulfonate,Woodward's Reagent K,Modifying agent,C11H11NO4S,4156-16-5,253.27,MolComp,other,Y,,,1,,,,2-Ethyl-5-phenylisoxazolium sulfonate,Chemical/Biochemical,
+Old: alpha-hydroxyisobutyric acid,2-hydroxy-2-methylpropionic acid; 2-methyllactic acid,,C4H8O3,594-61-6,104.1,MolComp,other,,,Y,2,R36/37/38,"S26,S36",Xi,alpha Hydroxyisobutyric acid,Chemical/Biochemical
+New: alpha-hydroxyisobutyric acid,2-hydroxy-2-methylpropionic acid; 2-methyllactic acid,Chelator,C4H8O3,594-61-6,104.1,MolComp,other,,,Y,2,R36/37/38,"S26,S36",Xi,alpha Hydroxyisobutyric acid,Chemical/Biochemical

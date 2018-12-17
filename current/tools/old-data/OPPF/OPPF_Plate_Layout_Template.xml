@@ -1,0 +1,15 @@
+<!-- Layout of Plates protocol xml as flat file -->
+<protocol name="OPPF Plate Layout - Template" objective="Design Plate Layout" creationDate="29-05-07" remarks="Based on Lab activities requirements from OPPF" details="The plate is a physival plate that will be kept in fridge" >
+ <experimentType>Import sample</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Template Layout Notes" parameterType="String" /> 
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+ 
+</protocol>

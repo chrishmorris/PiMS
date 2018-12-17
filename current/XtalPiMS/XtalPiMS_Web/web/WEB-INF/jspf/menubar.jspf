@@ -1,0 +1,234 @@
+<%--
+*************************************************************
+* This file contains the menu items for the top menu bar.   *
+* It must be in sync with xtal/menubar.jsp.                *
+* TODO retire this file.                                    *
+*************************************************************
+*
+* Important note
+* 
+* Main menu items must be numbered consecutively from zero. A gap in numbering means subsequent pulldowns won't work.
+* When commenting out or uncommenting sections, the rest must be renumbered.
+* 
+* Menu items: Main items have id "menu_x", where x is sequential from zero.
+*             Submenus have id "submenu_x", x corresponding to the parent menu.
+--%>  
+<%-- was
+            boolean user = false;
+            if ((request.isUserInRole("pims-user")) || (request.isUserInRole("pims-administrator")) || (request.isUserInRole("admin"))) {
+                user = true;
+            }
+Check this change is OK for OPPF --%>
+<ul class="menu">
+    
+    <%
+            int id = 0;
+    %>
+    
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+       
+        <a href="${pageContext.request['contextPath']}/">Xtal Home</a>
+
+
+    </li>
+    <% id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+      
+        
+        <a href="${pageContext.request['contextPath']}/public/Logout">Logout: <%=request.getRemoteUser()%></a>
+
+        
+    </li>
+
+    <% id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+               
+        
+        <a href="${pageContext.request['contextPath']}/ViewPlates.jsp">Search</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/ViewPlates.jsp">Plate Experiments</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewInspections.jsp">Plate Inspections</a></li>
+            <li><a href="${pageContext.request['contextPath']}/Search/org.pimslims.model.sample.Sample?sampleCategories=Purified+protein">Samples</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewConstructs.jsp">Constructs</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewGroups.jsp">Groups</a></li>
+            <li><a href="${pageContext.request['contextPath']}/Search/">More...</a></li>
+        </ul>
+
+    </li>
+    <% id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+              
+        
+        <a href="${pageContext.request['contextPath']}/UploadOrder.jsp">Upload</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/UploadOrder.jsp">New Order</a></li>
+            
+            <li><a href="${pageContext.request['contextPath']}/UploadPlateDetails.jsp">Update Plate</a></li>
+            <!-- <li><a href="${pageContext.request['contextPath']}/UploadInspection.jsp">New Inspection</a></li> -->
+        </ul>
+     
+    </li>
+    <%--
+    <% id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+        <%
+            if (user) {
+        %>        
+        
+        <a href="${pageContext.request['contextPath']}/CreatePlateExperiment.jsp">Create</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/CreatePlateExperiment.jsp">Create Plate Experiment</a></li>
+            
+            <li><a href="${pageContext.request['contextPath']}/CreateScoringScheme.jsp">Create Scoring Scheme</a></li>
+            <li><a href="${pageContext.request['contextPath']}/CreateSample.jsp">Create Protein</a></li>
+            <!--<li><a href="${pageContext.request['contextPath']}/ViewConstructs.jsp">View By Construct</a></li>-->
+            <li><a href="${pageContext.request['contextPath']}/CreateGroup.jsp">Create Group</a></li>
+        </ul>
+        <% }%>
+    </li>
+    --%>
+    
+    <%-- Admin Menu --%>
+    <%--
+    <% id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+        <%
+            if (request.isUserInRole("pims-administrator")) {
+        %>        
+        <a href="${pageContext.request['contextPath']}/ViewAllPlates.jsp">Admin</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/ViewAllPlates.jsp">View All Plates</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewAllDates.jsp">View By Date</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewAllSamples.jsp">View By Sample</a></li>            
+        </ul>
+        
+        <% }%>
+    </li>
+    --%>
+    <%-- processes menu --%>
+    <%--
+    <% id++; %>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()"><a href="${pageContext.request['contextPath']}/ViewProjects.jsf">Processes</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/ViewPlates.jsf">Plates</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddPlate.jsf">+ Add Plate</a></li>
+            <li><a href="${pageContext.request['contextPath']}/UploadPlate.jsf">+ Upload Plate</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewCrystalDrops.jsf">Crystal Drops</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddCrystalDrop.jsf">+ Add Crystal Drop</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewCryos.jsf">Cryos</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddCryo.jsf">+ Add Cryo</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewDiffractionPlans.jsf">Diffraction Plans</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddDiffractionPlan.jsf">+ Add Diffraction Plan</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewMountedDrops.jsf">Mounted Drops</a></li>
+            <li><a href="${pageContext.request['contextPath']}/MountCrystal.jsf">+ Add Mounted Drop</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewShipments.jsf">Shipments</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddShipment.jsf">+ Add Shipment</a></li>            
+            <li><a href="${pageContext.request['contextPath']}/ReturnShipment.jsf">Return Shipment</a></li>            
+        </ul>
+    </li>
+    --%>
+    
+    <%-- labware menu --%>
+    <%--
+    <% id++; %>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()"><a href="${pageContext.request['contextPath']}/ViewPins.jsf">Labware</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/ViewPins.jsf">Pins</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddPin.jsf">+ Add Pin</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddPins.jsf">+ Add Pins</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewCanes.jsf">Canes</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddCane.jsf">+ Add Cane</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewPucks.jsf">Pucks</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddPuck.jsf">+ Add Puck</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewIgloos.jsf">Plate Transporters</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddIgloo.jsf">+ Add Plate Transporter</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewStorageDewars.jsf">Storage Dewars</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddStorageDewar.jsf">+ Add Storage Dewar</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewShipmentDewars.jsf">Shipment Dewars</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddShipmentDewar.jsf">+ Add Shipment Dewar</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewAgents.jsf">Shipping Agents</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddAgent.jsf">+ Add Shipping Agent</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewLocations.jsf">Locations</a></li>
+            <li><a href="${pageContext.request['contextPath']}/AddLocation.jsf">+ Add Location</a></li>
+        </ul>
+    </li>
+    --%>
+    <%-- Project details Menu --%>
+    <%-- id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+        <a href="${pageContext.request['contextPath']}/public/documentation.jsp">Project Details</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <!--
+            <li><a href="${pageContext.request['contextPath']}/public/documentation.jsp">Project Documentation</a></li>
+            <li><a href="${pageContext.request['contextPath']}/public/downloads.jsp">Downloads</a></li>
+            <li><hr/></li>
+            -->
+        </ul>
+    </li>    
+    --%>
+    
+    <%id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+       
+        <a href="${pageContext.request['contextPath']}/ViewScreens.jsp">Screens</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/ViewScreens.jsp">Screens</a></li>
+            <li><a href="${pageContext.request['contextPath']}/ViewConditions.jsp">Conditions</a></li>
+            <!--<li><a href="${pageContext.request['contextPath']}/ViewComponents.jsp">Components</a></li>-->
+        </ul>
+    
+    </li>  <%id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+       
+	    <a href="${pageContext.request['contextPath']}/IspybResults.jsp">Diffraction</a>
+	    <ul class="submenu" id="submenu_<%=id%>">
+	      <li><a href="${pageContext.request['contextPath']}/AssembleShipment/?destination=Diamond">Create pins-in-pucks shipment</a></li>
+	      <li><a href="${pageContext.request['contextPath']}/AssembleShipment/?destination=Diamond&plateshipment=yes">Create plates shipment</a></li>
+	      <li><a href="${pageContext.request['contextPath']}/RecentShipments">Recent shipments</a></li>
+	      <li><a href="${pageContext.request['contextPath']}/IspybResults.jsp">Retrieve ISPyB results</a></li>
+	    </ul>
+     
+    </li>  
+    <%id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()">
+        
+        <a href="${pageContext.request['contextPath']}/Search/org.pimslims.model.experiment.Instrument">Reference</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+            <li><a href="${pageContext.request['contextPath']}/Search/org.pimslims.model.experiment.Instrument">Imagers</a></li>
+            <li><a href="${pageContext.request['contextPath']}/Search/org.pimslims.model.reference.ImageType">ImageType</a></li>
+            <li><a href="${pageContext.request['contextPath']}/Search/org.pimslims.model.reference.CrystalType">PlateTypes</a></li>
+            <li><a href="${pageContext.request['contextPath']}/Search/org.pimslims.model.crystallization.ScoringScheme">ScoringScheme</a></li>
+            <!--<li><a href="${pageContext.request['contextPath']}/ViewComponents.jsp">Components</a></li>-->
+        </ul>
+    
+    </li>  
+    <%-- help menu --%>
+    <% id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()"><a href="${pageContext.request['contextPath']}/Help.jsp">Help</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+        <!--<li><a href="${pageContext.request['contextPath']}/Help.jsp">Guide to using Xtal PiMS</a></li>-->
+        <!--<li><a href="${pageContext.request['contextPath']}/ReleaseNotes.jsp">Release Notes</a></li>-->
+        <!--<li><a href="${pageContext.request['contextPath']}/Feedback.jsf">Feedback</a></li>-->
+        <% if ("/ViewTrialDrops2.jsp".equals(request.getServletPath())) { %><li><a target="blank" href="${pageContext.request['contextPath']}/ViewTrialDrops2Help.jsp">Help On This Page</a></li><% } %>
+        <% if ("/ViewTrialDrops3.jsp".equals(request.getServletPath())) { %><li><a target="blank" href="${pageContext.request['contextPath']}/ViewTrialDrops3Help.jsp">Help On This Page</a></li><% } %>
+        <li><a target="new" href="http://www.pims-lims.org/">PIMS Project Home</a></li>
+        <!--  
+        <li><a target="new" href="https://www.pims-lims.org/svn/pims/crystallization">Subversion Repository</a></li>
+        <li><a target="new" href="http://cselnx4.dl.ac.uk/auto/svnlog.txt">Subversion Log</a></li>
+        <li><a target="new" href="http://cselnx4.dl.ac.uk:8080/jira/browse/XP">Issue Tracker</a></li>
+        -->
+        </ul>
+    </li>
+    <%--
+    <% id++;%>
+    <li id="menu_<%=id%>" onmouseover="showMenu(<%=id%>)" onmouseout="hideMenus()"><a href="${pageContext.request['contextPath']}/Test.jsp">Test</a>
+        <ul class="submenu" id="submenu_<%=id%>">
+        
+            <li><a href="${pageContext.request['contextPath']}/Test.jsp">Test</a></li>
+        
+        </ul>
+    </li>    
+    
+    --%>
+</ul>
+

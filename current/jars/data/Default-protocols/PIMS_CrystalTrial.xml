@@ -1,0 +1,16 @@
+<!-- Generic protocol xml as flat file -->
+<protocol name="CrystalTrial" objective="Do crystal trial" creationDate="17-02-09" >
+ <experimentType>Trials</experimentType>
+
+ <outputSample sampleCatName="TrialDrop" amount="0.0000001" unit="L" displayUnit="nL" name="Trial Drop" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Additive Screen?" parameterType="Boolean" defaultValue="false" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+     <inputSample sampleCatName="Purified protein" amount="0.0000001" unit="L" displayUnit="nL" name="Purified protein" />
+  <inputSample sampleCatName="Buffer" amount="0.00001" unit="L" displayUnit="uL" name="Mother liquor" />
+  </inputSamples>
+
+</protocol>

@@ -1,0 +1,676 @@
+package org.pimslims.command.leeds;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Map;
+import java.util.PropertyResourceBundle;
+import java.util.Set;
+
+import org.pimslims.command.leeds.PDFFormReader.FormType;
+import org.pimslims.dao.ReadableVersion;
+import org.pimslims.dao.WritableVersion;
+import org.pimslims.exception.AccessException;
+import org.pimslims.exception.ConstraintException;
+import org.pimslims.lab.Creator;
+import org.pimslims.lab.PersonUtility;
+import org.pimslims.lab.Util;
+import org.pimslims.lab.Utils;
+import org.pimslims.leeds.FormFieldsNames;
+import org.pimslims.leeds.LeedsFormServletUtils;
+import org.pimslims.model.experiment.Experiment;
+import org.pimslims.model.experiment.InputSample;
+import org.pimslims.model.experiment.OutputSample;
+import org.pimslims.model.experiment.Parameter;
+import org.pimslims.model.people.Person;
+import org.pimslims.model.reference.ExperimentType;
+import org.pimslims.model.reference.SampleCategory;
+import org.pimslims.model.sample.Sample;
+import org.pimslims.model.sample.SampleComponent;
+import org.pimslims.presentation.AttributeToHTML;
+import org.pimslims.presentation.PrimerBean;
+import org.pimslims.presentation.PrimerBeanReader;
+
+import com.lowagie.text.pdf.AcroFields;
+import com.lowagie.text.pdf.PRAcroForm;
+import com.lowagie.text.pdf.PdfReader;
+
+/**
+ * Class represent Leeds primer form recorded in PIMS
+ * 
+ * @author Petr Troshin
+ */
+public class PrimerForm implements FormFieldsNames {
+
+    /**
+     * 
+     */
+    private static final String WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE =
+        "Writable version must be passed for this update";
+
+    PrimerBean forwardPrimer;
+
+    PrimerBean reversePrimer;
+
+    /*
+     * Resources - names of Entry Clone & Expression Construct forms
+     */
+    static final PropertyResourceBundle primerformRb;
+
+    static final PropertyResourceBundle fprimerRb;
+
+    static final PropertyResourceBundle rprimerRb;
+    //TODO change this, the error reporting for static initializers is not good
+    static {
+        InputStream in_stream = null;
+        InputStream in2_stream = null;
+        InputStream in3_stream = null;
+        try {
+            in_stream = PrimerForm.class.getResourceAsStream("PrimerForm_en.properties");
+            primerformRb = new PropertyResourceBundle(in_stream);
+            in2_stream = PrimerForm.class.getResourceAsStream("ForwardPrimer_en.properties");
+            fprimerRb = new PropertyResourceBundle(in2_stream);
+            in3_stream = PrimerForm.class.getResourceAsStream("ReversePrimer_en.properties");
+            rprimerRb = new PropertyResourceBundle(in3_stream);
+        } catch (final IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            if (in_stream != null) {
+                try {
+                    in_stream.close();
+                } catch (final IOException isc) {
+                    // do nothing
+                }
+            }
+            if (in2_stream != null) {
+                try {
+                    in2_stream.close();
+                } catch (final IOException isc) {
+                    // do nothing
+                }
+            }
+            if (in3_stream != null) {
+                try {
+                    in3_stream.close();
+                } catch (final IOException isc) {
+                    // do nothing
+                }
+            }
+        }
+    }
+
+    // Load categories from properties
+    public static final Map<String, String> primerFormProp =
+        Collections.unmodifiableMap(LeedsFormServletUtils.resourceToMap(PrimerForm.primerformRb));
+
+    public static final Map<String, String> fprimerProp =
+        Collections.unmodifiableMap(LeedsFormServletUtils.resourceToMap(PrimerForm.fprimerRb));
+
+    public static final Map<String, String> rprimerProp =
+        Collections.unmodifiableMap(LeedsFormServletUtils.resourceToMap(PrimerForm.rprimerRb));
+
+    // Form experiment
+    Experiment experiment;
+
+    WritableVersion rw;
+
+    /*
+     * DB mapping Experiment.details - comments Person - designedBy Experiment.Parameter - from
+     * Experiment.Parameter - to Experiment.Parameter - genelength Experiment.Parameter - modif
+     * Experiment.Parameter - pcrprodlength Experiment.Parameter - sendformto Experiment.date- date
+     */
+
+    /*
+     *
+     */
+    public PrimerForm(final Experiment experiment) {
+        this.experiment = experiment;
+
+        final String experimentTypeName = experiment.getExperimentType().getName();
+        //System.out.println("PrimerForm [" + experimentTypeName + "]");
+
+        if (experimentTypeName.equals(FormFieldsNames.leedscloningDesign)) {
+            Sample s;
+            s = this.getInSample(FormFieldsNames.FPRIMER);
+            if (null != s) {
+                final PrimerBean bean = PrimerBeanReader.readPrimer(s);
+                this.forwardPrimer = bean;
+            }
+            s = this.getInSample(FormFieldsNames.RPRIMER);
+            if (null != s) {
+                final PrimerBean bean = PrimerBeanReader.readPrimer(s);
+                this.reversePrimer = bean;
+            }
+        }
+
+        if (experimentTypeName.equals(FormFieldsNames.oppfcloningDesign)
+            || experimentTypeName.equals(FormFieldsNames.spotcloningDesign)) {
+
+            final Set<OutputSample> outputSamples = experiment.getOutputSamples();
+            for (final OutputSample outputSample : outputSamples) {
+                final Sample sample = outputSample.getSample();
+                if (sample != null) {
+                    final Set<SampleComponent> sampleComponents = sample.getSampleComponents();
+                    for (final SampleComponent sampleComponent : sampleComponents) {
+                        //There has to be a better way than this! might need datamodel tweek
+                        if (sampleComponent.getRefComponent().get_MetaClass().getJavaClass().getName()
+                            .equals("org.pimslims.model.molecule.Primer")) {
+                            final PrimerBean bean = PrimerBeanReader.readPrimer(sample);
+                            if (bean.isForward()) {
+                                this.forwardPrimer = bean;
+                            }
+                            if (bean.isReverse()) {
+                                this.reversePrimer = bean;
+                            }
+                        }
+
+                        //    Object o = sampleComponent.getRefComponent();
+                        //    System.out.println("PrimerForm component [" + o.getClass().getName() + "]");
+                        //    org.pimslims.model.molecule.AbstractComponent abstractComponent =
+                        //        (org.pimslims.model.molecule.AbstractComponent) o;
+                        //    org.pimslims.model.molecule.Molecule molComponent =
+                        //        (org.pimslims.model.molecule.Molecule) abstractComponent.get_Version().get(
+                        //            abstractComponent.get_Hook());
+                        //    System.out.println("PrimerForm molcomponent [" + molComponent.getName() + "]");
+                        //    if (molComponent instanceof org.pimslims.model.molecule.Primer) {
+                        //        System.out.println("PrimerForm primer [" + molComponent.getName() + "]");
+                        //    }
+                    }
+                }
+            }
+        }
+    }
+
+    public PrimerForm(final Experiment experiment, final ReadableVersion version) {
+        this(experiment);
+    }
+
+    /*
+     * If update is required use this constructor!
+     */
+    public PrimerForm(final Experiment experiment, final WritableVersion rw) {
+        this(experiment);
+        this.rw = rw;
+    }
+
+    public PrimerBean getForwardPrimer() {
+        //System.out.println("PrimerForm.getForwardPrimer [" + forwardPrimer + "]");
+        return this.forwardPrimer;
+    }
+
+    public PrimerBean getReversePrimer() {
+        return this.reversePrimer;
+    }
+
+    /*
+    public Primer getForwardPrimer() {
+        Sample sample = getInSample(fprimer);
+        if (sample != null) {
+            return new Primer(sample);
+        }
+        return null;
+    }
+
+    public Primer getReversePrimer() {
+        Sample sample = getInSample(rprimer);
+        if (sample != null)
+            return new Primer(sample);
+        return null;
+    }
+     */
+
+    public static PrimerFormBean loadFromPdf(final byte[] pdf) throws IOException {
+
+        final PdfReader reader = new PdfReader(pdf);
+        final PRAcroForm form = reader.getAcroForm();
+        if (form == null) {
+            throw new RuntimeException("This document has no fields.");
+        }
+        final AcroFields nform = reader.getAcroFields();
+        if (PDFFormReader.guessFormType(nform) != FormType.Primers) {
+            // Should not happen as the method do not exposed to the user
+            // directly
+            throw new AssertionError("Pdf file is of incorrect type (primer form is expected) cannot proceed");
+        }
+        // Forward primer
+        String name = PDFFormReader.getValue(PrimersPdfForm.name1, nform);
+        String box = PDFFormReader.getValue(PrimersPdfForm.box1, nform);
+        String position = PDFFormReader.getValue(PrimersPdfForm.position1, nform);
+        String concentration = PDFFormReader.getValue(PrimersPdfForm.concentration1, nform);
+        String gcfull = PDFFormReader.getValue(PrimersPdfForm.gcfull1, nform);
+        String gcgene = PDFFormReader.getValue(PrimersPdfForm.gcgene1, nform);
+        String length = PDFFormReader.getValue(PrimersPdfForm.length1, nform);
+        String lenghtgene = PDFFormReader.getValue(PrimersPdfForm.lengthgene1, nform);
+        String particularity = PDFFormReader.getValue(PrimersPdfForm.particularity1, nform);
+        String plasmideconcerned = PDFFormReader.getValue(PrimersPdfForm.plasmideconcerned1, nform);
+        String restrictionsite = PDFFormReader.getValue(PrimersPdfForm.restrictionsite1, nform);
+        String seller = PDFFormReader.getValue(PrimersPdfForm.seller1, nform);
+        String sequence = PDFFormReader.getValue(PrimersPdfForm.sequence1, nform);
+        String location =
+            PDFFormReader.cleanLocation(PDFFormReader.getValue(PrimersPdfForm.storagelocation1, nform));
+        String tmfull = PDFFormReader.getValue(PrimersPdfForm.tmfull1, nform);
+        String tmgene = PDFFormReader.getValue(PrimersPdfForm.tmgene1, nform);
+        String tmseller =
+            PDFFormReader.cleanTmSeller(PDFFormReader.getValue(PrimersPdfForm.tmseller1, nform)).toString();
+        final PrimerBean fpr =
+            new PrimerBean(name, box, position, concentration, gcfull, gcgene, length, lenghtgene,
+                particularity, restrictionsite, seller, sequence, location, tmfull, tmgene, tmseller, true, "");
+        // System.out.println(fpr);
+        // Primer fprimer = new Primer(fpr.create(rw, "Leeds"));
+        // TODO record the data
+        // Reverse primer
+        name = PDFFormReader.getValue(PrimersPdfForm.name2, nform);
+        box = PDFFormReader.getValue(PrimersPdfForm.box2, nform);
+        position = PDFFormReader.getValue(PrimersPdfForm.position2, nform);
+        concentration = PDFFormReader.getValue(PrimersPdfForm.concentration2, nform);
+        gcfull = PDFFormReader.getValue(PrimersPdfForm.gcfull2, nform);
+        gcgene = PDFFormReader.getValue(PrimersPdfForm.gcgene2, nform);
+        length = PDFFormReader.getValue(PrimersPdfForm.length2, nform);
+        lenghtgene = PDFFormReader.getValue(PrimersPdfForm.lengthgene2, nform);
+        particularity = PDFFormReader.getValue(PrimersPdfForm.particularity2, nform);
+        plasmideconcerned = PDFFormReader.getValue(PrimersPdfForm.plasmideconcerned2, nform);
+        restrictionsite = PDFFormReader.getValue(PrimersPdfForm.restrictionsite2, nform);
+        seller = PDFFormReader.getValue(PrimersPdfForm.seller2, nform);
+        sequence = PDFFormReader.getValue(PrimersPdfForm.sequence2, nform);
+        location =
+            PDFFormReader.cleanLocation(PDFFormReader.getValue(PrimersPdfForm.storagelocation2, nform));
+        tmfull = PDFFormReader.getValue(PrimersPdfForm.tmfull2, nform);
+        tmgene = PDFFormReader.getValue(PrimersPdfForm.tmgene2, nform);
+        tmseller =
+            PDFFormReader.cleanTmSeller(PDFFormReader.getValue(PrimersPdfForm.tmseller2, nform)).toString();
+        final PrimerBean rpr =
+            new PrimerBean(name, box, position, concentration, gcfull, gcgene, length, lenghtgene,
+                particularity, restrictionsite, seller, sequence, location, tmfull, tmgene, tmseller, false, "");
+        // System.out.println(rpr);
+        // Primer rprimer = new Primer(rpr.create(rw, "Leeds"));
+        // Common fields
+
+        final String comments = PDFFormReader.getValue(PrimersPdfForm.comments, nform);
+        final String designedBy = PDFFormReader.getValue(PrimersPdfForm.designedby, nform);
+        final String from = PDFFormReader.getValue(PrimersPdfForm.from, nform);
+        final String to = PDFFormReader.getValue(PrimersPdfForm.to, nform);
+        final String genelength = PDFFormReader.getValue(PrimersPdfForm.genelength, nform);
+        final String modif = PDFFormReader.getValue(PrimersPdfForm.modif, nform);
+        final String pcrprodlength = PDFFormReader.getValue(PrimersPdfForm.pcrproductlenght, nform);
+        final String sendformto = PDFFormReader.getValue(PrimersPdfForm.sendPDFform, nform);
+        final String date = PDFFormReader.getValue(PrimersPdfForm.date, nform);
+        Date dateVal;
+        try {
+            dateVal = new SimpleDateFormat("dd/MM/yyyy").parse(date);
+        } catch (final ParseException e) {
+            e.printStackTrace();
+            // ok, will use current date
+            dateVal = new Date();
+        }
+
+        final PrimerFormBean pform =
+            new PrimerFormBean(fpr, rpr, comments, designedBy, plasmideconcerned, from, to, genelength,
+                modif, pcrprodlength, sendformto, dateVal);
+
+        return pform;// pform;
+    }
+
+    /*
+     * This could be either hook to the expression or entryclone plasmid but also if these are not found could
+     * be a name of a plasmid which is ordinary text The difference must be handled on the presentation layer
+     */
+    public String getPlasmid() {
+        final Parameter param = this.getParameter(FormFieldsNames.plasmid);
+        if (param != null) {
+            return param.getValue();
+        }
+
+        return "";
+    }
+
+    private Sample getInSample(final String sampleCategoryName) {
+        final InputSample inSample = this.getInputSample(sampleCategoryName);
+        if (inSample != null) {
+            return inSample.getSample();
+        }
+        return null;
+    }
+
+    private InputSample getInputSample(final String sampleCategoryName) {
+        final Set<InputSample> inSamples = this.experiment.getSampleIos();
+        for (final InputSample inSample : inSamples) {
+            final Sample sample = inSample.getSample();
+            if (null == sample) {
+                continue;
+            }
+            final Set<SampleCategory> scats = sample.getSampleCategories();
+            for (final SampleCategory scat : scats) {
+                if (scat.getName().equalsIgnoreCase(sampleCategoryName)) {
+                    return inSample;
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * In order to set forward primer as reverse primer for the form primer.sample.sampleCategory must be
+     * changed This is not supported at the moment! Thus one Forward Primer can be changed to another forward
+     * primer but not the reverse one!
+     * 
+     * @param forwardPrimer
+     * @throws AccessException
+     * @throws ConstraintException
+     * @throws ClassNotFoundException
+     */
+    public void setForwardPrimer(final PrimerBean forwardPrimer) throws AccessException, ConstraintException,
+        ClassNotFoundException {
+        final InputSample inSample = this.getInputSample(FormFieldsNames.FPRIMER);
+        // TODO make sure that the sampleCategories of a primer contains
+        // appropriate category!
+        // Ideas to check -
+        // assert ! forwardPrimer.sample.getSampleCategories().getName()
+        // .contains(FormFieldsNames.rprimer) : "Sample must not have Reverse
+        // Primer sample category!";
+        // assert
+        // forwardPrimer.sample.getSampleCategories().contains(FormFieldsNames.fprimer)
+        // : "Sample must have Forward Primer sample category!";
+
+        if (inSample == null) {
+            this.createInputSample(forwardPrimer.getSample(), FormFieldsNames.FPRIMER);
+        } else {
+            this.getInputSample(FormFieldsNames.FPRIMER).setSample(forwardPrimer.getSample());
+        }
+    }
+
+    public void setReversePrimer(final PrimerBean reversePrimer) throws AccessException, ConstraintException,
+        ClassNotFoundException {
+        final InputSample sample = this.getInputSample(FormFieldsNames.RPRIMER);
+        // TODO See above (serForwardPrimer method)
+        if (sample == null) {
+            assert reversePrimer.getSample() != null : "Rev pr in Primer is null";
+            this.createInputSample(reversePrimer.getSample(), FormFieldsNames.RPRIMER);
+        } else {
+            this.getInputSample(FormFieldsNames.RPRIMER).setSample(reversePrimer.getSample());
+        }
+    }
+
+    private void createInputSample(final Sample sample, final String sampleCat) throws AccessException,
+        ConstraintException, ClassNotFoundException {
+        assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+        assert sample != null : "Sample is null!";
+        Creator.recordInputSamples(this.rw, sample, this.experiment, sample.getName() + " " + sampleCat);
+    }
+
+    // Getters
+
+    public String getComments() {
+        return this.experiment.getDetails();
+    }
+
+    public String getDesignedBy() {
+        final Person creator = this.experiment.getOperator();
+        if (creator == null) {
+            return null;
+        }
+        return creator.get_Hook();
+    }
+
+    public String getFrom() {
+        final Parameter param = this.getParameter(FormFieldsNames.from);
+        if (param != null) {
+            return param.getValue();
+        }
+
+        return "";
+    }
+
+    public String getTo() {
+        final Parameter param = this.getParameter(FormFieldsNames.to);
+        if (param != null) {
+            return param.getValue();
+        }
+
+        return "";
+    }
+
+    public String getGeneLength() {
+        final Parameter param = this.getParameter(FormFieldsNames.geneLength);
+        if (param != null) {
+            return param.getValue();
+        }
+
+        return "";
+    }
+
+    public String getModifications() {
+        final Parameter param = this.getParameter(FormFieldsNames.modifications);
+        if (param != null) {
+            return param.getValue();
+        }
+
+        return "";
+    }
+
+    public String getPCRProductLength() {
+        final Parameter param = this.getParameter(FormFieldsNames.pCRProdLength);
+        if (param != null) {
+            return param.getValue();
+        }
+
+        return "";
+    }
+
+    public String getSendFormTo() {
+        final Parameter param = this.getParameter(FormFieldsNames.sendFormTo);
+        if (param != null) {
+            return param.getValue();
+        }
+
+        return "";
+    }
+
+    public String getDate() {
+        return AttributeToHTML.getDate(this.experiment.getStartDate());
+    }
+
+    public Calendar getDateasTime() {
+        return this.experiment.getStartDate();
+    }
+
+    // Setters
+    public void setComments(final String comments) throws ConstraintException {
+        this.experiment.setDetails(comments);
+    }
+
+    public void setdesignedBy(final String personHook) throws ConstraintException, AccessException,
+        ClassNotFoundException {
+        Person designer = null;
+        if (Util.isEmpty(personHook)) {
+            return;
+        }
+
+        if (Util.isHookValid(personHook)) {
+            designer = this.experiment.get_Version().get(personHook);
+            assert designer != null : "Cannot change author of the experiment bacause person hook "
+                + personHook + " is not correct or no person found";
+        } else {
+            final String name = PersonUtility.getPersonName(personHook);
+            final String surname = PersonUtility.getPersonFamilyName(personHook);
+            assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+            designer = Creator.recordPerson(this.rw, surname, name);
+        }
+        this.experiment.setOperator(designer);
+    }
+
+    public void setFrom(final String fromVal) throws AccessException, ConstraintException,
+        ClassNotFoundException {
+        final Parameter param = this.getParameter(FormFieldsNames.from);
+        if (param != null) {
+            param.setValue(fromVal);
+        } else {
+            assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+            Creator.recordParameters(this.rw, FormFieldsNames.from, "Int", fromVal, this.experiment);
+        }
+    }
+
+    public void setTo(final String toVal) throws AccessException, ConstraintException, ClassNotFoundException {
+        final Parameter param = this.getParameter(FormFieldsNames.to);
+        if (param != null) {
+            param.setValue(toVal);
+        } else {
+            assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+            Creator.recordParameters(this.rw, FormFieldsNames.to, "Int", toVal, this.experiment);
+        }
+    }
+
+    public void setGeneLength(final String geneLengthVal) throws AccessException, ConstraintException,
+        ClassNotFoundException {
+        final Parameter param = this.getParameter(FormFieldsNames.geneLength);
+        if (param != null) {
+            param.setValue(geneLengthVal);
+        } else {
+            assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+            Creator.recordParameters(this.rw, FormFieldsNames.geneLength, "Int", geneLengthVal,
+                this.experiment);
+        }
+    }
+
+    public void setModifications(final String modificationsVal) throws AccessException, ConstraintException,
+        ClassNotFoundException {
+        final Parameter param = this.getParameter(FormFieldsNames.modifications);
+        if (param != null) {
+            param.setValue(modificationsVal);
+        } else {
+            assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+            Creator.recordParameters(this.rw, FormFieldsNames.modifications, "String", modificationsVal,
+                this.experiment);
+        }
+    }
+
+    public void setPCRProductLength(final String PCRproductLength) throws AccessException,
+        ConstraintException, ClassNotFoundException {
+        final Parameter param = this.getParameter(FormFieldsNames.pCRProdLength);
+        if (param != null) {
+            param.setValue(PCRproductLength);
+        } else {
+            assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+            Creator.recordParameters(this.rw, FormFieldsNames.pCRProdLength, "Int", PCRproductLength,
+                this.experiment);
+        }
+    }
+
+    public void setSendFormTo(final String sendFormToVal) throws AccessException, ConstraintException,
+        ClassNotFoundException {
+        final Parameter param = this.getParameter(FormFieldsNames.sendFormTo);
+        if (param != null) {
+            param.setValue(sendFormToVal);
+        } else {
+            assert this.rw != null : PrimerForm.WRITABLE_VERSION_MUST_BE_PASSED_FOR_THIS_UPDATE;
+            Creator.recordParameters(this.rw, FormFieldsNames.sendFormTo, "String", sendFormToVal,
+                this.experiment);
+        }
+    }
+
+    public void setDate(final Date date) throws ConstraintException {
+        this.experiment.setStartDate(Utils.getCalendar(date));
+    }
+
+    // TODO Think whether it worth to unify various getParameter
+    // to have one static synchronized method?
+    private Parameter getParameter(final String paramName) {
+        final Set<Parameter> paramaters = this.experiment.getParameters();
+        for (final Parameter par : paramaters) {
+            final String mname = par.getName();
+            if (mname != null && mname.equals(paramName)) {
+                return par;
+            }
+        }
+        return null;
+    }
+
+    public static Collection<PrimerForm> getPrimerForms(final ReadableVersion rv) {
+
+        final Map expProp = org.pimslims.lab.Util.getNewMap();
+        //TODO I suggest using a single experiment type for all these protocols
+        expProp.put(ExperimentType.PROP_NAME, FormFieldsNames.leedscloningDesign);
+        final Collection<ExperimentType> expTypes =
+            rv.findAll(org.pimslims.model.reference.ExperimentType.class, expProp);
+
+        expProp.put(ExperimentType.PROP_NAME, FormFieldsNames.oppfcloningDesign);
+        expTypes.addAll(rv.findAll(org.pimslims.model.reference.ExperimentType.class, expProp));
+
+        expProp.put(ExperimentType.PROP_NAME, FormFieldsNames.spotcloningDesign);
+        expTypes.addAll(rv.findAll(org.pimslims.model.reference.ExperimentType.class, expProp));
+
+        if (expTypes == null || expTypes.size() == 0) {
+            return null;
+            //System.out.println("PrimerForm.getPrimerForms Exp size [" + expTypes.size() + "]");
+            //assert expTypes.size() == 1 : "There must be only one experiment type 'Cloning design'";
+        }
+
+        final ArrayList<PrimerForm> primerForms = new ArrayList<PrimerForm>();
+        for (final java.util.Iterator iter = expTypes.iterator(); iter.hasNext();) {
+            final ExperimentType cldesign = (ExperimentType) iter.next();
+
+            final Collection<Experiment> exps = cldesign.getExperiments();
+            //System.out.println("PrimerForm.getPrimerForms [" + cldesign.get_Name() + ":" + exps.size() + "]");
+            for (final Experiment exp : exps) {
+                final PrimerForm pform = new PrimerForm(exp, rv);
+                primerForms.add(pform);
+            }
+        }
+        return primerForms;
+    }
+
+    public void setPlasmid(String plasmideconcerned) throws AccessException, ConstraintException,
+        ClassNotFoundException {
+        final Parameter param = this.getParameter(FormFieldsNames.plasmid);
+        // If the name of the plasmid concerned match the name of the plasmid
+        // recorded than replace it with the hook.
+        final Experiment exp = this.getPlasmidExperiment(plasmideconcerned, this.rw);
+        if (exp != null) {
+            plasmideconcerned = exp.get_Hook();
+        }
+        if (param != null) {
+            param.setValue(plasmideconcerned);
+        } else {
+            assert this.rw != null : "Please provide WritableVersion in the constructor";
+            Creator.recordParameters(this.rw, FormFieldsNames.plasmid, "String", plasmideconcerned,
+                this.experiment);
+        }
+    }
+
+    private Experiment getPlasmidExperiment(String name, final ReadableVersion rv) {
+        name = name.trim();
+        final Collection<Experiment> plasmids = Plasmid.getEntryCloneExperiments(rv);
+        final Collection<Experiment> expPlasmid = DeepFrozenCulture.getExpConstructExperiments(rv);
+        if (expPlasmid != null) {
+            plasmids.addAll(expPlasmid);
+        }
+        for (final Experiment exp : plasmids) {
+            if (name.equals(exp.getName())) {
+                return exp;
+            }
+        }
+        return null;
+    }
+
+    public String getHook() {
+        return this.experiment.get_Hook();
+    }
+
+    public String getName() {
+        return this.experiment.getName();
+    }
+
+    public ReadableVersion getVersion() {
+        return this.experiment.get_Version();
+    }
+
+    public Experiment getExperiment() {
+        return this.experiment;
+    }
+} // end of class

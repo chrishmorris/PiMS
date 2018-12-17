@@ -1,0 +1,193 @@
+### Sample/RefSampleComponent packages
+
+# ccp.Sample.AbstractSample
+	serial			1	Int	
+	name			1	Line
+	pH			0..1	Float
+	ionicStrength		0..1	Float
+	details			0..1	String
+	? isHazard		0..1	Boolean
+	? localRiskNum		0..1	? Int
+	? msdsSafetyDetails	0..1	String
+	? safetyDetails		0..1	String
+
+# ccp.Sample.RiskSafety
+	code			1	Line
+	? phraseDetails		0..1	String
+
+# ccp.Sample.Sample
+	code			0..1	Text
+	positionInHolder	0..1	Word
+	creationDate		0..1	DateTime (derived attr)
+	initialAmount		0..1	Float
+	currentAmount		0..1	Float
+	amountUnit		0..1	AmountUnit
+	amountDisplayUnit	0..1	Word
+	currentAmoutFlag	0..1	Boolean
+	batchNum		0..1	Word
+	details			0..1	String
+
+# ccp.Sample.RefSample
+	sampleType(s)		?	SampleType 
+					= {Buffer,
+					Nucleic acid purification kits,
+					Screen (crystallisation, additive),
+					Stock solution,
+					Amphiphiles,
+					Antibody,
+					Antibiotic,
+					Chemical/Biochemical,
+					Chromatography,
+					Competent cells,
+					Culture media (microbial, cell and tissue culture),
+					Detergent,
+					Electrophoresis,
+					Enzyme (with types),
+					Growth Factor,
+					Heavy atom reagents (+stains),
+					Hormone,
+					Inhibitor,
+					Lipid,
+					Marker (DNA ladders, Protein ladders),
+					Microparticle,
+					Microscopy,
+					Nucleic acid,
+					Oligo /Primer,
+					Pharmacopeia (?covered in Chemicals/biochemicals),
+					PolyAmino acids (?covered in Chemicals/biochemicals),
+					Radiochemicals,
+					Stains and Dyes,
+					Substrate,
+					Vector,
+					Vitamins and Derivatives,...}
+	usedInExpTypes		*	Line
+	
+# ccp.Sample.RefSampleSource
+	catalogNum		1	Line
+	dataPageUrl		0..1	Text
+
+# ccp.RefSampleComponent.AbstractComponent
+	name			1	Line
+	synonyms		*	Line
+	componentType		1	ComponentType
+					= {Protein,
+					DNA,
+					RNA,
+					Other Polymer,
+					DNA/RNA,
+					Non Polymer}
+	componentRoles		*	AbstractComponentRole
+					= {
+					[--- MolComponentRole ---]
+					Buffering Agent,
+					Chelator,
+					Cryo Coolant,
+					? CSI,
+					Detergent,
+					Gas,
+					Heavy Atom Compound,
+					Metal,
+					Nucleation Suppressant,
+					Organic,
+					pH Conjugate,
+					Precipitant,
+					Reducing Agent,
+					Salt,
+					Solvent,
+					Vector,					
+					Primer,
+					Inducer,
+					Chemical Shift Reference,
+
+					? also
+					Additive,
+					Antbiotic,
+					Catalyst,
+					Cofactor,
+					Crosslinker,
+					Ligand,
+					Lipid,
+					Modifying agent,
+					Substrate,
+					
+					[--- ConstructRole ---]
+					???,
+
+					[--- CellRole ---]
+					Competent Cell,
+					
+					[--- SubstanceRole ---]
+					Serum,
+					Antiserum, 
+					Extract,
+					Concentrator,
+					Dialysis equipment,
+					Filtration,
+					Gels (pre-poured SDS-PAGE),
+					Chromatography resin,
+					...}
+	casNum			0..1	Word
+	details			0..1	String
+
+# ccp.RefSampleComponent.MolComponent	
+	empiricalFormula	0..1	Line
+	molecularMass		0..1	Float
+	molecularMassMethod	0..1	Text
+	isSoluble		0..1	Boolean
+	solubilityLevel		0..1	Word
+
+# ccp.RefSampleComponent.RestrictionEnzyme
+	recogSeqCoding		0..1	Line
+	recogSeqNonCoding	0..1	Line
+	cutOffsetCoding		0..1	Line
+	cutOffsetNonCoding	0..1	Line
+
+# ccp.RefSampleComponent.Construct
+	? componentRoles(function) *	ConstructRole
+					= {
+					???}
+	constructType		1	ConstructType
+					= {Empty, 
+					With Target,
+					bac,
+					Cosmid}
+	sequenceType		0..1	Line
+	resistanceDetails	0..1	String
+	promotorDetails		0..1	String
+	markerDetails		0..1	String
+
+# ccp.RefSampleComponent.Primer
+	direction		1	Word
+	isUniversal		1	Boolean
+	meltingTemperature	0..1	Float
+
+# ccp.RefSampleComponent.Substance (only for funny mixture)
+	componentRoles		*	SubstanceRole
+					= {Serum,
+					Antiserum, 
+					Extract,...}
+
+questions & remarks: 
+
+- The risk and safety phrases should be split on comma.
+
+- In AbstractSample, do we need all theses attributes related to risk and safety issues: isHazard, localRiskNum, msdsSafetyDetails and safetyDetails ? If yes, which type should they have?
+
+- In RiskSafety class, do we want to store only the code or do we want also to store the phrase associated to it(attribute phraseDetails)?
+
+- Is RefSample.sampleType(s) a multiple or single attribute? What is the cardinality of this attribute: 0..1, 1, * or 1..*? Should the proposed values be an open enumerated list or a closed one? If it is a closed one, there is no way of extended it except by changing the data model.
+
+- In AbstractComponent class, do you think that it is a good idea to have be a componentType attribute and a componentRoles one? 
+
+- The AbstractComponent.componentType is used to define the type of the component, the possible values are {Protein, DNA, RNA, Other Polymer, DNA/RNA, Non Polymer}. I think this attribute is a mandatory attribute of cardinality 1. Do you agree? Should the possible values be an open enumerated list or a closed one?
+
+- The AbstractComponent.componentRoles attribute is used to categorise the component, the possible values are listed before. I think this attribute should not be mandatory and it is a multiple attribute because a component can have many different roles. This attribute is mainly here to help to display the list of AbstractComponent available by role, even if this classification depends on lab, I think it is better to have it to help to display them. And we can try to propose a "pims" way of grouping AbstractComponent by roles. Do you agree? Should the possible values be an open enumerated list or a closed one?
+
+- What is CSI in AbstractComponent.componentRoles?
+
+- In Construct, can we replace the attribute function to componentRoles? If yes, what is the list of the possible value?
+
+- Do we need a specific list of values for Cell.componentRoles: Competent Cell? 
+
+- Are there specific componentRoles for MolComponent, RestrictionEnzyme, Primer, Construct, Cell, Substance and Composite? or can the list for AbstractComponent.componentRoles be used for all of them? 
+

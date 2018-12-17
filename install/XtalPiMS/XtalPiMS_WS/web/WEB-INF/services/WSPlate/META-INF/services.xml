@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.5.4  Built on : Dec 19, 2010 (08:18:42 CET) -->
+<serviceGroup>
+    <service name="WSPlate" class="uk.ac.ox.oppf.www.wsplate.impl.WSPlateServiceLifeCycleImpl">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="uk.ac.ox.oppf.www.wsplate.WSPlateMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">uk.ac.ox.oppf.www.wsplate.impl.WSPlateImpl</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="updatedPriority" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImagingTaskProvider/updatedPriority</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/updatedPriorityResponse</outputActionMapping>
+            <faultActionMapping faultName="updatedPriorityError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/updatedPriority/Fault/updatedPriorityError</faultActionMapping>
+        </operation>
+        <operation name="getPlateID" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/PlateInfoProvider/getPlateID</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateIDResponse</outputActionMapping>
+            <faultActionMapping faultName="getPlateIDError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateID/Fault/getPlateIDError</faultActionMapping>
+        </operation>
+        <operation name="listSamples" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/SampleProvider/listSamples</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/listSamplesResponse</outputActionMapping>
+            <faultActionMapping faultName="listSamplesError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/listSamples/Fault/listSamplesError</faultActionMapping>
+        </operation>
+        <operation name="getFirstDrop" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/CaptureProvider/getFirstDrop</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getFirstDropResponse</outputActionMapping>
+            <faultActionMapping faultName="getFirstDropError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getFirstDrop/Fault/getFirstDropError</faultActionMapping>
+        </operation>
+        <operation name="getImageProcessor" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImageProcessorProvider/getImageProcessor</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getImageProcessorResponse</outputActionMapping>
+            <faultActionMapping faultName="getImageProcessorError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getImageProcessor/Fault/getImageProcessorError</faultActionMapping>
+        </operation>
+        <operation name="getPlateInfo" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/PlateInfoProvider/getPlateInfo</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateInfoResponse</outputActionMapping>
+            <faultActionMapping faultName="getPlateInfoError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateInfo/Fault/getPlateInfoError</faultActionMapping>
+        </operation>
+        <operation name="getPlateTypes" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/PlateInfoProvider/getPlateTypes</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateTypesResponse</outputActionMapping>
+            <faultActionMapping faultName="getPlateTypesError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateTypes/Fault/getPlateTypesError</faultActionMapping>
+        </operation>
+        <operation name="getDefaultCaptureProfile" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/CaptureProvider/getDefaultCaptureProfile</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getDefaultCaptureProfileResponse</outputActionMapping>
+            <faultActionMapping faultName="getDefaultCaptureProfileError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getDefaultCaptureProfile/Fault/getDefaultCaptureProfileError</faultActionMapping>
+        </operation>
+        <operation name="getCapturePoints" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/CaptureProvider/getCapturePoints</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getCapturePointsResponse</outputActionMapping>
+            <faultActionMapping faultName="getCapturePointsError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getCapturePoints/Fault/getCapturePointsError</faultActionMapping>
+        </operation>
+        <operation name="getPlateType" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/PlateInfoProvider/getPlateType</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateTypeResponse</outputActionMapping>
+            <faultActionMapping faultName="getPlateTypeError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getPlateType/Fault/getPlateTypeError</faultActionMapping>
+        </operation>
+        <operation name="listProjects" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/SampleProvider/listProjects</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/listProjectsResponse</outputActionMapping>
+            <faultActionMapping faultName="listProjectsError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/listProjects/Fault/listProjectsError</faultActionMapping>
+        </operation>
+        <operation name="canListSamples" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/canListSamples</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/canListSamplesResponse</outputActionMapping>
+            <faultActionMapping faultName="canListSamplesError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/canListSamples/Fault/canListSamplesError</faultActionMapping>
+        </operation>
+        <operation name="supportsPriority" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImagingTaskProvider/supportsPriority</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/supportsPriorityResponse</outputActionMapping>
+            <faultActionMapping faultName="supportsPriorityError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/supportsPriority/Fault/supportsPriorityError</faultActionMapping>
+        </operation>
+        <operation name="imagedPlate" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImagingTaskProvider/imagedPlate</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/imagedPlateResponse</outputActionMapping>
+            <faultActionMapping faultName="imagedPlateError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/imagedPlate/Fault/imagedPlateError</faultActionMapping>
+        </operation>
+        <operation name="skippedImaging" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImagingTaskProvider/skippedImaging</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/skippedImagingResponse</outputActionMapping>
+            <faultActionMapping faultName="skippedImagingError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/skippedImaging/Fault/skippedImagingError</faultActionMapping>
+        </operation>
+        <operation name="uploadImages" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImagingTaskProvider/uploadImages</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/uploadImagesResponse</outputActionMapping>
+            <faultActionMapping faultName="uploadImagesError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/uploadImages/Fault/uploadImagesError</faultActionMapping>
+        </operation>
+        <operation name="imagingPlate" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImagingTaskProvider/imagingPlate</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/imagingPlateResponse</outputActionMapping>
+            <faultActionMapping faultName="imagingPlateError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/imagingPlate/Fault/imagingPlateError</faultActionMapping>
+        </operation>
+        <operation name="getImagingTasks" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.oppf.ox.ac.uk/WSPlate/">
+            <actionMapping>http://www.oppf.ox.ac.uk/WSPlate/ImagingTaskProvider/getImagingTasks</actionMapping>
+            <outputActionMapping>http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getImagingTasksResponse</outputActionMapping>
+            <faultActionMapping faultName="getImagingTasksError">http://www.oppf.ox.ac.uk/WSPlate/WSPlatePortType/getImagingTasks/Fault/getImagingTasksError</faultActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

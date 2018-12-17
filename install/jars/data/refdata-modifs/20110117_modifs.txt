@@ -1,0 +1,12 @@
+Data/Default-protocols/PiMS_Synthetic_gene.xml
+Changed:
+Parameter definitions:
+Modified:
+OLD:  <parameterDefinition id="1" name="3'-Restriction site" label="Restriction site at the 3'-end" parameterType="String" isMandatory="false" />
+New:  <parameterDefinition id="2" name="3'-Restriction site" label="Restriction site at the 3'-end" parameterType="String" isMandatory="false" />
+OLD:  <parameterDefinition id="2" name="5'-Restriction site" label="Restriction site at the 5'-end" parameterType="String" isMandatory="false" />
+New:  <parameterDefinition id="1" name="5'-Restriction site" label="Restriction site at the 5'-end" parameterType="String" isMandatory="false" />
+OLD:  <parameterDefinition id="3" name="Expression host" label="Host cells for expression" parameterType="String" isMandatory="false" />
+New:  <parameterDefinition id="3" name="Optimized for expression in:" label="Expression host the sequence has been optimized for" parameterType="String" isMandatory="false" />
+
+  

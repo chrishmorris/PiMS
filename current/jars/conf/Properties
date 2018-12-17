@@ -1,0 +1,8 @@
+# properties for your database access
+
+# PiMS connection:
+db.url = jdbc:postgresql://localhost/test
+
+db.username = pimsadmin
+db.password = 
+

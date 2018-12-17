@@ -1,0 +1,18 @@
+<!-- Generic miniprep protocol xml as flat file -->
+<protocol name="OPPF Plasmid prep" objective="Purify plasmid from culture" creationDate="14-11-06" remarks="Based on Lab activities requirements from OPPF" details="Purify plasmid from culture" >
+ <experimentType>Plasmid prep</experimentType>
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="mL" refSample="Purified plasmid" name="Purified plasmid"/>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="2" name="Kit name" parameterType="String" defaultValue="Qiagen Plasmid turbo" />
+  <parameterDefinition id="3" name="PlasmidPrep Notes" parameterType="String" /> 
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="0.015" unit="L" displayUnit="mL" refSample="GS96" name="Culture media" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000015" unit="L" displayUnit="uL" refSample="Carbenicillin 50mg/ml" name="Antibiotic" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="0.000025" unit="L" displayUnit="uL" refSample="Transformed cells" name="Transformed cells" />
+ </inputSamples>
+ 
+</protocol>

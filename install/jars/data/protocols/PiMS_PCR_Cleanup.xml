@@ -1,0 +1,17 @@
+<!-- PiMS PCR cleanup protocol xml as flat file -->
+<protocol name="PiMS PCR Cleanup" objective="Purify PCR product" creationDate="16-02-07" remarks="Based on use of Qiagen kit" >
+ <experimentType>DNA purification</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Kit name" parameterType="String" defaultValue="Qiagen PCR cleanup kit Cat. 28104" />
+  <parameterDefinition id="2" name="Checked on gel?" label="Was purified DNA checked on gel?" parameterType="Boolean" defaultValue="true" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000045" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid purification kit" amount="" unit="" displayUnit="" refSample="Qiagen PCR clean up" name="Kit" />
+ </inputSamples>
+
+</protocol>

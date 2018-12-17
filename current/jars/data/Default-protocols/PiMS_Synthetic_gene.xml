@@ -1,0 +1,19 @@
+<!-- PiMS Synthetic gene protocol as flat file -->
+<protocol name="PiMS Synthetic Gene" objective="Record the details of a Synthetic gene" creationDate="20-10-10" remarks="Default set of protocols for PiMS" 
+details="Output sample: Synthetic gene">
+ <experimentType>Synthetic gene</experimentType>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="0.0" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Synthetic gene" amount="" unit="L" displayUnit="uL" refSample="Synthetic gene" name="Synthetic gene" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="5'-Restriction site" label="Restriction site at the 5'-end" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="3'-Restriction site" label="Restriction site at the 3'-end" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="3" name="Vector resistances" label="Vector's antibiotic resistance markers" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="4" name="Optimized for expression in:" label="Expression host the sequence has been optimized for" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>

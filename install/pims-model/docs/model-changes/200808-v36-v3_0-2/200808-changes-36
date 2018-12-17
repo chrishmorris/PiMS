@@ -1,0 +1,214 @@
+DATA MODEL CHANGES 36 (Re-Design Code Camp)
+
+Package.
+-done- rename implementation to core & rename tables IMPL_XXX to CORE_XXX 
+[Revision 15927]
+-done- rm ApplicationData & subclasses 
+[Revision 15930]
+-done- rm ContentStored, DataLocation, Storage, NormalStorage, ContentStorage 
+[Revision 15929]
+-done- rm AbstractStorage & Project 
+[Revision 15932]
+-done- rm all project property in subclasses of BaseClass
+-done- rm Url 
+[Revision 15933]
+
+BaseClass.
+-done- rename MemopsBaseClass to BaseClass & rename MEMOPSBASECLASSID to BASECLASSID & rename CORE_MEMOPSBASECLASS to CORE_BASECLASS & remove memops everywhere else 
+[Revision 15934]
+-done- add property name & details in BaseClass 
+[Revision 15935]
+-done- rm all name & details properties in subclasses of BaseClass - make name unique and mandatory in BaseClass: pb with subclasses that do not had name property
+-done- replacing @Table(uniqueConstraints={}) by @org.hibernate.annotations.NaturalId & remove unique constraint on name in subclasses of BaseClass except User
+    make BaseClass.name not a unique key
+    - subclasses that only have name as part of their unique key like protocol.Protocol need to be modified but I don't know how to override it? (keeping uniqueConstraints={@UniqueConstraint(columnNames={"NAME"})} does not work because there is no NAME column in this table)
+    - subclasses that didn't have a property called name do not need to be modified
+    - subclasses that have more than name as part of their unique key like protocol.ParameterDefinition need to be modified but I don't know how? (removed unique keys)
+    - subclasses that have other unique keys than name like Permission do not need to be modified
+    4 failures: ExceptionTester.testDuplicateKeyConstraint
+                ExceptionTest.testDuplicationException
+                PermissionTest.testFindAll
+                PermissionTest.testRead
+[Revision 15951]
+
+Revert changes.
+    Put back name property into subclasses due to problems with unique keys.
+    svn merge -r 15954:15934 https://cselnx4.dl.ac.uk/svn/pims/current/pims-model
+[Revision 15956]
+
+>>> org.pimslims.access.AccessImpleTester.testNonAdmin() failed getAll when run first time on empty db
+
+BaseClass.
+-done- add property details in BaseClass and remove it from all subclasses 
+[Revision 15961]
+
+LabBookEntry. 
+-done- create LabBookEntry in core
+-done- change extends BaseClass to LabBookEntry for most of the classes (except future reference classes)
+-done- add link between User & LabBookEntry called author & add creationDate
+-done- add link between User & LabBookEntry called lastEditor & add lastEditedDate
+-done- rm links Experiment.creator, Protocol.creator, DropAnnotation.annotator, Image.creator, Target.creator
+-done- rm Protocol.lastEditor, Protocol.lastEditedDate, Experiment.lastEditor, Experiment.lastEditedDate
+[Revision 15964]
+
+Attachment. 
+-done- create Attachment with date and author property as subclass of BaseClass
+-done- add one-to-many parent link between LabBookEntry and Attachment.
+
+Annotation.
+-done- mv Annotation to core - extends Attachment & remove pkg annotation
+-done- rm Annotation.date & Annotation.author
+-done- rm Annotation links to ExperimentGroup, Experiment, TargetGroup, TargetProject, Target, Protocol. Replaced by link to LabBookEntry
+
+DbRef. 
+-done- mv DbRef to core and rename to ExternalDbLink - extends Attachment
+-done- rm ExternalDbLink links to TargetGroup, Target. Replaced by link to LabBookEntry
+>>> org.pimslims.dao.FileImplTester.testAdd() failed
+[Revision 15968]
+
+Note.
+-done- create Note class with relatedEnties link to LabBookEntry - extends Attachment
+[Revision 15970]
+
+Citation. 
+-done- mv Citation to core & subclasses - extends Attachment
+-done- rm Citation links to Person (change to String), Method, Protocol, Software, Target. Replace by link to LabBookEntry
+-done- rm in Citation attr casAbstractCode, doi, medlineUiCode, pubMedId. 
+-done- rm Citation.keywords
+>>> 13 failures
+[Revision 15972]
+
+LabBookEntry.
+-done- add extra methods in LabBookEntry for getAnnotations(), getNotes(), getCitations() & getExternalDbLinks() 
+[Revision 16010]
+
+Primer.
+-done- add extra property in Primer [meltingTemperatureGene, meltingTemperatureSeller, gcGene, lengthOnGene, opticalDensity, particularity, restrictionSite]
+[Revision 16053]
+
+Annotation.
+-done- change column definition of description to TEXT in order to be able to store legend of image with line breaks.
+[Revision 16056]
+
+Reference changes.
+-done- create package reference
+-done- mv DbName to reference
+-done- mv HolderCategory, InstrumentType, ComponentCategory, ExperimentType, WorkflowItem, 
+          HazardPhrase, SampleCategory, Scoreboard, Status, NaturalSource,
+          AbstractHolderType, PinType, HolderType, CrystalType into reference
+-done- rename NaturalSource to Organism
+-done- rename Status to TargetStatus
+-done- create PublicEntry in reference with name as unique key
+-done- change prefix of table names to REF_
+-done- rm unique key namingSystem in subclasses of PublicEntry (keep name in subclasses otherwise problem with unique key)
+-done- refactor Organism.organismName to .name
+-done- check constructors
+-done- rm namingSystem attribute (not normalised) in reference package and put getter/setter @Deprecated
+-done- make one-to-many links to reference classes only one way (no need to getSamples from SampleCategory)
+[Revision 16092]
+
+-done- rm dbRef, riskAssessment, taxonomy packages
+[Revision 16094-6]
+
+-done- rm description field in AccessObject, Annotation & SchedulePlan
+
+Annotation.
+-done- add mimeType attribute
+-done- add title & legend attribute
+
+Reference changes.
+-done- rm Scoreboard
+[Revision 16402]
+
+Access.
+-done- mv AccessObject link from BaseClass to LabBookEntry
+[Revision 16403]
+
+Other changes.
+-done- mv Instrument to experiment
+-done- rm in protocol pkg Procedure, Step, WaitStep, TemperatureStep
+-done- rename TargetProject into Project, rename link between Target & Project to projects, rename recursive link on Project to project
+-done- rename ExpBlueprint into ResearchObjective & rename all links from Experiment, Milestone & Person
+-done- rename BlueprintComponent into ResearchObjectiveElement & rename all links from ResearchObjective, MolComponent, Target, SampleComponent, MolComponent
+[Revision 16422]
+
+-done- merge target & expBlueprint packages
+-done- rm instrument package
+-done- rename package refSampleComponent to molecule
+[Revision 16424]
+
+-done- rm expBlueprint package
+-done- rename MolComponent to Molecule & rename links from ResearchObjectiveElement and Molecule
+-done- rename MolCompFeature into MoleculeFeature & rename links from Molecule
+[Revision 16425]
+
+-done- mv Method, MethodParameter & Software to experiment
+-done- rm method package
+[Revision 16426]
+
+Bug Fixes
+- PIMS-2039 ExpBlueprint.whyChosen should be optional
+>done< change not-null="true" to not-null="false" for expBlueprint.ExpBlueprint.whyChosen
+
+Protocol Constraints
+- PIMS-1876 Protocol editor allow duplication of input and output samples. Such protocol, if made, cannot be used for making new experiments.
+>done< add uniqueness constraint on RefInputSample and RefOutputSample (protocolId, name)
+
+Target link to Status
+- PIMS-385 The links of ccp.Target.Status are called 'code'
+>done< rename the link called code to status between Milestone and Status in target package
+- PIMS-419 the role status(code) for targetStatus should be unchangeable
+>done< check that the role from Milestone to Status is unchangeable
+[Revision 16429]
+
+Holder pkg
+- PIMS-386 ccp.Holder.HolderCategories
+>????< links AbstractHolder/HolderCategory and AbstractHolderType/HolderCategory should not be mandatory (was not - low=0)
+>done< rename link AbstractHolderType/HolderCategory to defaultHolderCategories
+
+Target pkg
+- PIMS-1030 in simple experiment, once the milestone is added to a construct/target, it is always linked to this construct
+>done< remove link between Milestone and ResearchObjective and create helper methods in both classes by using Experiment
+[Revision 16430]
+
+Experiment pkg
+- PIMS-1278 Separate parameters to two categories - Setup parameters + Result parameters
+>done< add extra attribute isResult in ParameterDefinition
+>done< add helper methods getResultParameters() and getSetupParameters() by a search, using the value of isResult
+>>> (later) add another link between ParameterDefinition and Parameter, rename existing one to setupParameters and called the new one resultParameters
+[Revision 16431]
+
+ApplicationData.
+- put back with modifications - merge all subclasses of ApplicationData into ApplicationData: ApplicationData extends Attachment with attributes {application: String, keyword: String, value: String, type: String}
+[Revision 16444]
+
+Diagrams.
+- update
+[Revision 16457]
+
+Deprecated methods.
+- remove
+[Revision 16460]
+
+Reference.
+- mark problem many-to-many methods as deprecated
+[Revision 16461]
+
+Protocol.
+- create helper methods based on ParameterDefinition.isResult() in Protocol getResultParamDefinitions() and getSetupParamDefinitions()
+- remove links called setupDefinitions and resultDefinitions
+[Revision 16462]
+
+---------- TODO ----------
+- Setting date in constructor
+
+---------- DEFERRED ----------
+Clean annotations.
+-XX- replacing @Table(uniqueConstraints={}) by @org.hibernate.annotations.NaturalId
+-XX- remove @Column(nullable=true) default value
+-XX- remove @Column(unique=false) default value
+-XX- remove @Basic(optional=true) default value
+-XX- remove @Column(nullable=false) when @Basic(optional=false)
+
+Implement ImprovedNamingStrategy.
+-XX- remove table name and column name

@@ -1,0 +1,16 @@
+================================================================================
+Changes Agreed
+Changes to implement.
+================================================================================
+
+- PIMS-1506 Order of Input Samples
+
+NAME
+- PIMS-131 "name" has a variety of different meanings in the DM
+- PIMS-911 every class in DM should have getName()
+  > rename get_Name() to toGuiString(); move custom code to individual classes;  
+  > ModelObject.getName() will be returning this.toGuiString(); but will be 
+  > overridden for every class that has an attribute called "name"
+
+
+TRAG_RESEARCHOBJECTIVEELEMENT to TARG_RESEARCHOBJECTIVEELEMENT

@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.1  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Anne PAJON">
+	<META NAME="CREATED" CONTENT="20040414;10430900">
+	<META NAME="CHANGED" CONTENT="20040712;18442500">
+	<STYLE>
+	<!--
+		@page { size: 29.69cm 21.01cm; margin: 2.29cm }
+		P { margin-bottom: 0.21cm; border: none; padding: 0cm; page-break-before: auto }
+		P.western { font-family: "Bitstream Vera Sans"; font-size: 11pt }
+		H1 { margin-top: 0cm; margin-bottom: 0.25cm; border: none; padding: 0cm; color: #dc2300; text-align: center; text-decoration: underline; page-break-before: auto; page-break-after: avoid }
+		H1.western { font-family: "Bitstream Vera Sans"; font-size: 12pt; font-weight: bold }
+		H1.cjk { font-family: "Mincho"; font-size: 16pt; font-weight: bold }
+		H1.ctl { font-family: "Lucidasans"; font-size: 16pt; font-weight: bold }
+		H2 { margin-top: 0cm; margin-bottom: 0cm; border: none; padding: 0cm; text-decoration: underline; page-break-before: auto; page-break-after: avoid }
+		H2.western { font-family: "Bitstream Vera Sans"; font-size: 11pt; font-weight: bold }
+		H2.cjk { font-family: "Bitstream Vera Sans"; font-size: 18pt; font-weight: bold }
+		H2.ctl { font-family: "Lucidasans"; font-size: 18pt; font-weight: bold }
+		A:link { color: #000080; text-decoration: underline }
+		A:visited { color: #800000; text-decoration: underline }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" LINK="#000080" VLINK="#800000" DIR="LTR">
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT FACE="Helmet, monospace"><FONT SIZE=4><B>Data
+Model Modifications</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2>________________________________________________________________________________________________________</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium">
+<BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><I>EMBL-EBI 	</I>Kim
+Henrick, Wim Vranken, Anne Pajon</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><I>University of
+Cambridge 	</I>Rasmus Fogh, Wayne Boucher, Tim Stevens</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><I>Daresbury Laboratory</I>
+	Chris Morris</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><I>Diamond</I>	Alun
+Ashton</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><SPAN STYLE="font-weight: medium"><I>University
+of York 	</I></SPAN>Susy Griffiths</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><I>OPPF 	</I>Jon
+Diprose</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><I>CNRS Gif/Yvette</I>
+	Anne Poupon, Eric Oeuillet</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm">
+<SPAN STYLE="font-weight: medium"><FONT SIZE=2><FONT FACE="Bitstream Vera Sans"><I>Dundee</I>	Geoff
+Barton </FONT></FONT></SPAN><A HREF="mailto:geoff@compbio.dundee.ac.uk"><FONT SIZE=2><FONT FACE="Bitstream Vera Sans">geoff@compbio.dundee.ac.uk</FONT></FONT></A></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm">
+<SPAN STYLE="font-weight: medium"><FONT SIZE=2><FONT FACE="Bitstream Vera Sans"><I>Manchester</I>	Steve
+Prince </FONT></FONT></SPAN><A HREF="mailto:steve.prince@umist.ac.uk"><FONT SIZE=2><FONT FACE="Bitstream Vera Sans">steve.prince@umist.ac.uk</FONT></FONT></A></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><SPAN STYLE="font-weight: medium"><I>NRC
+Montreal </I>	Mirek Cygler, St&eacute;phane Raymond, </SPAN>Xueli Li</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><SPAN STYLE="font-weight: medium"><I>Weizmann
+Institute</I> 	</SPAN>Jaime Prilusky</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><I>EMBL Grenoble</I>
+	<I>HTP Crystallisation: 	</I>Jose A. Marquez, Martin Roewer, Jacques
+Chung</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 3.55cm; margin-bottom: 0cm">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2><SPAN STYLE="font-weight: medium">	<I>HTP
+Expression: 	</I>Darren Hart, Franck Tarendeau, Benjamin Corbex</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium">
+<FONT FACE="Bitstream Vera Sans"><FONT SIZE=2>________________________________________________________________________________________________________</FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<DIV ID="Table of Contents1" DIR="LTR" STYLE="background: transparent">
+	<DIV ID="Table of Contents1_Head" DIR="LTR">
+		<P STYLE="margin-top: 0.42cm; margin-bottom: 0.5cm; page-break-after: avoid">
+		<FONT FACE="Bitstream Vera Sans, sans-serif"><FONT SIZE=3><B>Table
+		of Contents</B></FONT></FONT></P>
+	</DIV>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>UNITS	2</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE PROTOCOL	3</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE EXPERIMENT	5</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE ANNOTATION	7</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE EXPBLUEPRINT	8</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE REFCONTAINER	9</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE
+	REFSAMPLECOMPONENT	10</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE SAMPLE	11</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE LOCATION	12</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE PEOPLE	13</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE METHOD	14</FONT></P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=2>PACKAGE INSTRUMENT	15</FONT></P>
+</DIV>
+<P CLASS="western" ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">UNITS</H1>
+<P CLASS="western" STYLE="margin-bottom: 0cm">All values are floats
+and they are going to be stored in a fixed SI unit. Because the user
+is going to enter these values in different unit, a displayUnit will
+be added.</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><U>For concentration</U>
+where three different types of value can be stored, three attributes
+are going to be created (concPerMol, concPerMass, concPerVolume) with
+fixed SI unit.</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">Rasmus suggested to
+keep the attrs concentration and concentrationUnit with a closed
+enumeration attached to it [kg/m3 (mass density), mol/m3
+(amount-of-substance concentration), m3/m3 (volume fraction), mol/mol
+(amount of substance fraction), kg/kg (mass fraction)] because there
+are more than three different types of concentration to store.</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><U>For amount</U> where
+three different types of value can be stored, three attributes are
+going to be created (mass, volume, number) with fixed SI unit.</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">Rasmus suggested to
+have the attrs amount and amountUnit with a closed enumeration
+attached to it [kg (mass), m3 (volume), ? (number)]. 
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#4700b8"><SPAN STYLE="background: #ffff99">?
+What do you think? If we adopt the attributes concentrationUnit and
+amountUnit with a closed enumeration, it will be easier to  increase
+the number of units in future for these two values.</SPAN></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#4700b8"><SPAN STYLE="background: #ffff99">?
+Which unit should be used for the amount value expressed in number?</SPAN></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE PROTOCOL</H1>
+<H2 CLASS="western"><B><U>new class Protocol</U></B> 
+</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add open
+	enumeration: protocolType = {Pcr, DnaPurification, Digest,...}</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#4700b8"><SPAN STYLE="background: #ffff99">?
+I'm not sure about the class name, since a &quot;protocol&quot; to a
+scientist seems to mean a recipe for a whole series of planned
+experiments. Can it be ExperimentMethod?</SPAN></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">new class FlowStep (subtype of Step)</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add open
+	enumeration: flowStepType = {fixed volume, one solution flow, 2
+	solutions gradient, ...}</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#4700b8"><SPAN STYLE="background: #ffff99">?
+How are solutionA and solutionB defined?</SPAN></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">new class CentrifugationStep</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	centrifugeModel ???</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	distFromAxis ???</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr numOfG
+	???</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#4700b8"><SPAN STYLE="background: #ffff99">?
+Should we add more attributes like the one listed above for
+CentrifugationStep?</SPAN></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><IMG SRC="dm-modif4-20040712_html_m3800be5f.gif" NAME="Graphic2" ALIGN=LEFT WIDTH=944 HEIGHT=564 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western"><FONT COLOR="#dc2300"><U><B>PACKAGE EXPERIMENT</B></U></FONT></H1>
+<H2 CLASS="western">class ccp.api.Experiment.DishCulture &amp; 
+ccp.api.Experiment.Culture</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	labellingType = {SelenoMet, SelenoCys, C13, N15, C13-N15,...}</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">new class ccp.api.Experiment.Gel</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr gelType =
+	{agarose 1%, SDS-PAGE 14%, ...}</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">new class ccp.api.Experiment.GelResult</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr result =
+	{band at expected weight, band at unexpected weight, no band} 
+	</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.Experiment.Experiment</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add a link to the
+	class Annotation</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	isModel (old isTemplate)</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	protocolDetails</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Modify link
+	between Experiment and Instrument: derived link from Method</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link between
+	Experiment and Method</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Modify attr
+	experimentType = {PCR, DNA purification, ...}. The open enumeration
+	will carry the experiment type, and all experiment subtypes that can
+	be fully described by the protocol class will be removed like PCR,
+	DNA Purification, ...</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.Experiment.InputSample</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	sampleIoType</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	amountUnit as closed enum = [kg (mass), m3 (volume), ? (number)]</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	displayUnit</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">A generic way of
+handling any type of parameters for experiment will be to add two new
+classes:</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><B><U>new class
+ccp.api.Experiment.Parameter</U></B> attrs [name | type | unit |
+description]</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><B><U>new class
+ccp.api.Experiment.ExperimentHasParameter</U></B> attrs [value]</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">This will give the
+possibility to store any kind of experiments.</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><B><U>new class
+ccp.api.Experiment.LightScatResult</U></B> attrs [ intensity |
+expectedMolMass | measuredMolMass ]</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><B><U>class
+ccp.api.Experiment.LightScaterring</U></B> attrs [ proteinTreatement
+| radiusSize | polydispersity ]</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<IMG SRC="dm-modif4-20040712_html_m21ad58d3.gif" NAME="Graphic3" ALIGN=LEFT WIDTH=855 HEIGHT=505 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE ANNOTATION</H1>
+<H2 CLASS="western">class ccp.api.Annotation.MolFeature</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add derived attr
+	position (derived from MolResidue.seqId)</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add method
+	getPosition()</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">new class ccp.api.Annotation.Annotation (Mole bug
+263)</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	description</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add derived attr
+	fileName from memops.api.Implementation.DataLocation.path</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add derived attr
+	url from memops.api.Implementation.DataLocation.url</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr date 
+	</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr details 
+	</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add a link to
+	memops.api.Implementation.DataLocation</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add a link to
+	Person (+author)</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">NB: Change all the attr
+fileName to a link to memops.api.Implementation.DataLocation and
+derived the attr fileName</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE EXPBLUEPRINT</H1>
+<H2 CLASS="western">class aap.api.ExpBlueprint.ExpBlueprint</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add a link to
+	ccp.api.People.Person called owner</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE REFCONTAINER</H1>
+<H2 CLASS="western">class ccp.api.RefContainer.RefHolder</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	numColumn			e.g. 12</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	columnName			e.g. 8</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	columnSpacing</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	numRow			e.g. 1,2,3,4,5,6,7,8,9,10,11,12</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	rowName			e.g. A,B,C,D,E,F,G,H</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	rowSpacing</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Change attr
+	numSubunits -&gt; capacity</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	vendorName</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to
+	ccp.api.People.Organisation called supplier</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	catalogNum</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.RefContainer.RefContainer</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr length</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr wireWidth</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	vendorName</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to
+	ccp.api.People.Organisation called supplier</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	catalogNum</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#4700b8"><SPAN STYLE="background: #ffff99">?
+Should we create a subclass of RefContainer for the crystal mounting
+specific attributes?</SPAN></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE REFSAMPLECOMPONENT</H1>
+<H2 CLASS="western">class
+ccp.api.RefSampleComponent.AbstractComponent</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">componentType
+	enum: lower case as molType in Molecule</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	vendorName</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to
+	ccp.api.People.Organisation called supplier</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	catalogNum</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.RefSampleComponent.Substance (Mole
+bug 266)</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr pH. This
+	would mean having different Substance objects for phosphate buffers
+	at different pHs.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">componentType
+	enum: add chemShiftRef (should be an <U>open</U> enum)</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm">The substance class is
+used to store not only mixtures but also components for which you do
+not want to create a molecule for.</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">Detergent
+(NonPolyMolComp or Substance?): Critical Micelle Concentration in
+pure water is an important parameter</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class
+ccp.api.RefSampleComponent.RestrictionEnzyme</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Change class name
+	RestrictionEnzyme to Enzyme</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.RefSampleComponent.Construct</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	constructType = {empty, with target, bac, cosmid, ...}</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.RefSampleComponent.MolComponent</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	empiricalFormula</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	expectedMolMass (not derived if descriptor not frozen)</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	measuredMolMass</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	molecularMass</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.RefSampleComponent.MolCompFeature</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add derived attr
+	length</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add method
+	getLength = endSeqId &ndash; starSeqId</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr status:
+	{cut, uncut, ...}</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western"><U><B>PACKAGE SAMPLE</B></U></H1>
+<H2 CLASS="western"><B><U><FONT COLOR="#000000">class
+ccp.api.Sample.Sample</FONT></U></B> 
+</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to
+	ccp.api.People.Organisation called supplier or used the experiment
+	import with a link to Organisation ???</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Attr derived attr
+	creator from Experiment.creator</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	catalogNum</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	initialAmountUnit  as closed enum = [kg (mass), m3 (volume), ?
+	(number)]</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	currentAmountUnit  as closed enum = [kg (mass), m3 (volume), ?
+	(number)]</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	displayUnit</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.Sample.SampleComponent</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Move attr
+	isotopicLabelling to class SampleComponent.PolyMolComp</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Change attr
+	isotopicLabelling to labellingType, and add an open enumeration
+	{SelenoMethionine, SelenoCysteine, N15, C13, N15+C13, ...} (look at
+	BioMagResBank labelling)</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	concentrationUnit closed enum = [kg/m3 (mass density), mol/m3
+	(amount-of-substance concentration), m3/m3 (volume fraction),
+	mol/mol (amount of substance fraction), kg/kg (mass fraction)]</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	displayUnit</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.Sample.AnomalousScatterer</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add
+	assessmentMethod as link name to ccp.api.Method.Method</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">change attr count
+	-&gt; numberOfInstances or numInstances</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class
+ccp.api.Sample.SampleLocation/HolderLocation</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Check location
+	validity for samples when they are part of an holder and this holder
+	has a particular location</P>
+</UL>
+<H1 CLASS="western" STYLE="page-break-before: always">PACKAGE
+LOCATION</H1>
+<H2 CLASS="western">class ccp.api.Location.Location</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr room</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to
+	Laboratory or Organisation ?</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE PEOPLE</H1>
+<H2 CLASS="western">new class ccp.api.People.ContactData</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	deliveryAddress 
+	</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	phoneNumber2</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.People.Person</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attrs
+	position, addresses and phone/fax numbers because they depend on the
+	laboratory which this person is affilated with.</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.People.Laboratory</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Change class name
+	Laboratory to Group</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<IMG SRC="dm-modif4-20040712_html_m5870de06.gif" NAME="Graphic4" ALIGN=LEFT WIDTH=642 HEIGHT=302 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE METHOD</H1>
+<H2 CLASS="western">class ccp.api.Method.Method</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr name</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.Method.Parameter</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr unit ???</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<IMG SRC="dm-modif4-20040712_html_5326ca84.gif" NAME="Graphic5" ALIGN=LEFT WIDTH=949 HEIGHT=371 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none; page-break-before: always">
+<BR>
+</P>
+<H1 CLASS="western">PACKAGE INSTRUMENT</H1>
+<H2 CLASS="western">class ccp.api.Instrument.AbstractIntrument</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Remove attr
+	manufacturer</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to
+	ccp.api.People.Organisation called manufacturer</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">class ccp.api.Instrument.Intrument</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to Method</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2 CLASS="western">new class ccp.api.Instrument.Column (subtype of
+Instrument)</H2>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr
+	columnType</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add attr volume 
+	</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add link to
+	ccp.api.Method.Method called loadingMethod</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<H1 CLASS="western"><BR><BR>
+</H1>
+<DIV TYPE=FOOTER>
+	<P STYLE="margin-top: 0.51cm; margin-bottom: 0cm"><SDFIELD TYPE=DATETIME SDNUM="2057;1033;NN, MMMM D, YYYY">Mon, July 12, 2004</SDFIELD>
+	<FONT FACE="Helmet, monospace"><FONT SIZE=2>/ <SDFIELD TYPE=DATETIME SDNUM="2057;1033;HH:MM">18:44</SDFIELD>		<SDFIELD TYPE=PAGE SUBTYPE=RANDOM FORMAT=PAGE>3</SDFIELD>/<SDFIELD TYPE=DOCSTAT SUBTYPE=PAGE FORMAT=PAGE>15</SDFIELD></FONT></FONT></P>
+</DIV>
+</BODY>
+</HTML>

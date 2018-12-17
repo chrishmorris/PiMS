@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pGEX6P-1 Vector</name>
+    <details>Cleavable N-terminal GST-tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="27-4597-01"
+        dataPageUrl="http://www6.gelifesciences.com/APTRIX/upp01077.nsf/Content/NewSearch_Result2?OpenDocument&amp;QueryString=q27-4597-01q&amp;SearchKeywords=products&amp;cmpid=bcl27459701"
+        supplier="GE Healthcare" />
+    <sampleComponent name="pGEX6P-1" componentCategory="Vector"
+        details="4984bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="1392"
+            endSeq="2252" />
+        <promoterDetails name="Tac Promoter" startSeq="184"
+            endSeq="212" />
+        <markerDetails name="GST-Tag coding sequence"
+            startSeq="244" endSeq="992" featureType="Tag" />
+        <markerDetails name="PreScision[TM] protease recognition/cleavage region"
+            details="LEVLFQ|GP" featureType="cleavage site" status="not cleaved" />
+        <markerDetails name="Multiple Cloning sites BamHI-XhoI"
+            details="BamHI-EcoRI-SmaI-SalI-Xho-I-NotI" startSeq="945"
+            endSeq="981" featureType="MCS" />
+        <markerDetails name="pBR322 origin" startSeq="2407" endSeq="3026"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression: Any E.coli; Expression: BL21, Any E.coli"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

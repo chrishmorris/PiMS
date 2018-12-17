@@ -1,0 +1,76 @@
+@CHARSET "ISO-8859-1";
+
+.player_active {
+	border: 0pt none ; padding-right: 3px; padding-left: 3px; vertical-align: text-bottom;
+}
+
+.player_inactive {
+	border: 0pt none ; padding-right: 3px; padding-left: 3px; vertical-align: text-bottom; display: none;
+}
+
+.slider_control {
+	border:0; padding-right: 1px; padding-left: 2px; vertical-align: text-bottom;
+}
+
+.slider_bg {
+	position:absolute;left:352px;background:url(../xtal/images/16x16/sliderbg.gif) 5px 0 repeat-x;height:16px;width:46px;
+}
+
+html {
+	overflow:hidden;
+}
+
+ul.menu, ul.menu li, ul.menu ul.submenu {
+	z-index:10;
+}
+
+.mycontrols {
+	position:fixed;
+	top:0px;
+	right:0px;
+	min-width:210px;
+	width:210px;
+	text-align:center;
+	z-index:100;
+}
+
+.mycontrols > DIV {
+	float: right;
+}
+
+.mycontrol {
+	float:left;
+	width:20px;
+	overflow:hidden;
+}
+
+.mycontrolpopup {
+	position:absolute;
+	display:none;
+	width:400px;
+	top:18px;
+	right:0px;
+	overflow-y:auto; /* Bodge for ie */
+}
+
+.mysliderbox {
+	position:absolute;
+	display:none;
+	background-color:#fff;
+	z-index:110;
+}
+
+DIV#side_info_content {
+	background-color:#fff;
+	width:420px;
+}
+
+DIV#side_search_content > DIV {
+	width:374px;
+	background-color:#fff;
+	float:right;
+}
+DIV#side_search_content > DIV > SPAN {
+	display:inline-block;
+	padding:1px;
+}

@@ -1,0 +1,27 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="Leeds Order Primer Plate" objective="Order a plate of primer for targets" creationDate="07-02-07" remarks="obsolete, use Order Primer Plate"  >
+ <experimentType>Order</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Primer" amount="" unit="L" displayUnit="uL" refSample="Primer" name="Primer"/>
+ 
+  
+  <parameterDefinitions>
+	<!-- plate level -->	
+  <parameterDefinition id="1" name="Purification type" parameterType="String" defaultValue="Reverse Phase" />
+  <parameterDefinition id="2" name="Starting Synthesis Scale" parameterType="String" defaultValue="25 nmole" />
+  <parameterDefinition id="3" name="BufferType" parameterType="String" defaultValue="TE" />
+  <parameterDefinition id="4" name="Normalization" parameterType="String" defaultValue="Concentration" />
+	<!-- well level -->
+  <parameterDefinition id="5" name="Restriction sites" parameterType="String" defaultValue="AvrII" />
+  <parameterDefinition id="6" name="Tm seller" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="7" name="Tm full" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="8" name="Tm gene" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="9" name="volumn in nL" parameterType="Float" defaultValue="400" />
+  <parameterDefinition id="10" name="OD" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="11" name="Length on the gene" parameterType="Int" defaultValue="0" />
+
+
+ </parameterDefinitions>
+
+
+</protocol>

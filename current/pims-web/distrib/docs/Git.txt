@@ -1,0 +1,10 @@
+Using Git
+=========
+
+Please install the EGit plugin.
+
+When you first push changes to the repository, please click the button marked
+   Add all branches spec
+Always commit in this mode, unless you are very sure what you are doing, 
+the alternatives are confusing.
+

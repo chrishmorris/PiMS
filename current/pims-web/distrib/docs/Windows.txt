@@ -1,0 +1,13 @@
+INSTALLING PIMS ON WINDOWS  
+
+    See README.txt in this directory for general installation instructions.
+
+    The location for uploaded files should be specified as
+    
+  	  <Environment name="uploadDirectory" 
+  			value="C:\\pimsUploads" type="java.lang.String" />
+
+    In Windows Vista and later, Tomcat must be run as administrator, 
+    if you have User Access Control enabled.
+    To do this, view the properties of tomcat.exe, and click the box labelled:
+        Run as Administrator

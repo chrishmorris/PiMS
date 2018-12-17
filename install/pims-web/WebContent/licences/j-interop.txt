@@ -1,0 +1,19 @@
+This library is distributed under the LGPL v3.0 license. Please refer to lgpl.txt accompanying 
+the distribution for more details.
+
+An important requirement in j-Interop licensing is that , you must mention at any publically 
+displayed media like website, readme(s) or acknowledgements, the usage of j-Interop as a library 
+to interoperate with COM servers.
+
+Third Party Licenses
+
+    * Jcifs is licensed under LGPL .
+    * jarapac has forked out to jcifs implementation and follows the same licensing scheme.
+    * iwombat has donated UUID generation related code to the library. My heartfelt thanks to 
+    Bob Combs and iWombat.com.
+    * GNU Crypto Project under Guile License.
+
+Acknowledgements
+
+This product includes software developed by the iWombat.com and all other members of the Third 
+Party Licenses.

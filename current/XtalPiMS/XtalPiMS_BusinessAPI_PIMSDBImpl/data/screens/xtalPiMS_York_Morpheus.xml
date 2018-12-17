@@ -1,0 +1,1339 @@
+  <screen>
+  <screenName>Morpheus</screenName>
+  <screenSupplier>Molecular Dimensions</screenSupplier>
+  <screenCatNum>MD1-47</screenCatNum>
+  <screenDetails>A 96 condition 3D protein crystallization screen with original chemistry incorporating a range of low molecular weight ligands found ordered in more than 33,000 deposited structures. Developed and utilized in the world renowned Laboratory of Molecular Biology, Cambridge, UK. This unique screen aims to unlock novel chemical space previously inaccessible using conventional screens. 96 x 1 ml conditions in deep-well blocks.
+  NOTE: Buffer Conditions may not be accurate, refer to LMB screen name LMB17 at http://www2.mrc-lmb.cam.ac.uk/screens.html</screenDetails>
+  <screenReference>D. Stock, O. Perisic, J. L�we "Robotic nanolitre protein crystallisation at the LMB�, Prog. Biophys. Mol. Biol. 88 (2005) 311-327</screenReference>
+  <screenNumberOfSolutions>96</screenNumberOfSolutions>
+  <solutions>
+   <solution>
+    <solutionId>1-1</solutionId>
+    <localNum>A01</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-2</solutionId>
+    <localNum>A02</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-3</solutionId>
+    <localNum>A03</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-4</solutionId>
+    <localNum>A04</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-5</solutionId>
+    <localNum>A05</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-6</solutionId>
+    <localNum>A06</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-7</solutionId>
+    <localNum>A07</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-8</solutionId>
+    <localNum>A08</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-9</solutionId>
+    <localNum>A09</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-10</solutionId>
+    <localNum>A10</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-11</solutionId>
+    <localNum>A11</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-12</solutionId>
+    <localNum>A12</localNum>
+    <components>
+     <component name="Magnesium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Calcium Chloride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-13</solutionId>
+    <localNum>B01</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-14</solutionId>
+    <localNum>B02</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-15</solutionId>
+    <localNum>B03</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-16</solutionId>
+    <localNum>B04</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-17</solutionId>
+    <localNum>B05</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-18</solutionId>
+    <localNum>B06</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-19</solutionId>
+    <localNum>B07</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-20</solutionId>
+    <localNum>B08</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-21</solutionId>
+    <localNum>B09</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-22</solutionId>
+    <localNum>B10</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-23</solutionId>
+    <localNum>B11</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-24</solutionId>
+    <localNum>B12</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-25</solutionId>
+    <localNum>C01</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-26</solutionId>
+    <localNum>C02</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-27</solutionId>
+    <localNum>C03</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-28</solutionId>
+    <localNum>C04</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-29</solutionId>
+    <localNum>C05</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-30</solutionId>
+    <localNum>C06</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-31</solutionId>
+    <localNum>C07</localNum>
+    <components>
+     <component name="Sodium Fluoride" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Iodide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Sodium Bromide" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-32</solutionId>
+    <localNum>C08</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-33</solutionId>
+    <localNum>C09</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-34</solutionId>
+    <localNum>C10</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-35</solutionId>
+    <localNum>C11</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-36</solutionId>
+    <localNum>C12</localNum>
+    <components>
+     <component name="Sodium Nitrate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="di-Sodium Hydrogen Phosphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Ammonium Sulphate" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>   
+   <solution>
+    <solutionId>1-37</solutionId>
+    <localNum>D01</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-38</solutionId>
+    <localNum>D02</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-39</solutionId>
+    <localNum>D03</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-40</solutionId>
+    <localNum>D04</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-41</solutionId>
+    <localNum>D05</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-42</solutionId>
+    <localNum>D06</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-43</solutionId>
+    <localNum>D07</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-44</solutionId>
+    <localNum>D08</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-45</solutionId>
+    <localNum>D09</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-46</solutionId>
+    <localNum>D10</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-47</solutionId>
+    <localNum>D11</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>1-48</solutionId>
+    <localNum>D12</localNum>
+    <components>
+     <component name="1,2-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="2-Propanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1-butanol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="1,6-hexanediol" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>   
+   <solution>
+    <solutionId>2-1</solutionId>
+    <localNum>E01</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-2</solutionId>
+    <localNum>E02</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-3</solutionId>
+    <localNum>E03</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-4</solutionId>
+    <localNum>E04</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+    <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-5</solutionId>
+    <localNum>E05</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-6</solutionId>
+    <localNum>E06</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-7</solutionId>
+    <localNum>E07</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-8</solutionId>
+    <localNum>E08</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-9</solutionId>
+    <localNum>E09</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-10</solutionId>
+    <localNum>E10</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-11</solutionId>
+    <localNum>E11</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-12</solutionId>
+    <localNum>E12</localNum>
+    <components>
+     <component name="Diethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Triethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Tetraethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Pentaethylene glycol" type="additive" concentration="0.03" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>   
+   <solution>
+    <solutionId>2-13</solutionId>
+    <localNum>F01</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-14</solutionId>
+    <localNum>F02</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-15</solutionId>
+    <localNum>F03</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-16</solutionId>
+    <localNum>F04</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+    <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-17</solutionId>
+    <localNum>F05</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-18</solutionId>
+    <localNum>F06</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-19</solutionId>
+    <localNum>F07</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-20</solutionId>
+    <localNum>F08</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-21</solutionId>
+    <localNum>F09</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-22</solutionId>
+    <localNum>F10</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-23</solutionId>
+    <localNum>F11</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-24</solutionId>
+    <localNum>F12</localNum>
+    <components>
+     <component name="D-Glucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Mannose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Galactose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="L-Fucose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="D-Xylose" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="N-Acetyl-D-Glucosamine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>   
+   <solution>
+    <solutionId>2-25</solutionId>
+    <localNum>G01</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-26</solutionId>
+    <localNum>G02</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-27</solutionId>
+    <localNum>G03</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-28</solutionId>
+    <localNum>G04</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+    <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-29</solutionId>
+    <localNum>G05</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-30</solutionId>
+    <localNum>G06</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-31</solutionId>
+    <localNum>G07</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-32</solutionId>
+    <localNum>G08</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-33</solutionId>
+    <localNum>G09</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-34</solutionId>
+    <localNum>G10</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-35</solutionId>
+    <localNum>G11</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-36</solutionId>
+    <localNum>G12</localNum>
+    <components>
+     <component name="Sodium Formate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Ammonium Acetate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="tri-Sodium Citrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Potassium Sodium Tartrate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium Oxamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>   
+   <solution>
+    <solutionId>2-37</solutionId>
+    <localNum>H01</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-38</solutionId>
+    <localNum>H02</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-39</solutionId>
+    <localNum>H03</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-40</solutionId>
+    <localNum>H04</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+    <component name="Morpheus Buffer1" type="buffer" concentration="0.1" concentrationUnits="M" pH="6.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-41</solutionId>
+    <localNum>H05</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-42</solutionId>
+    <localNum>H06</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-43</solutionId>
+    <localNum>H07</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-44</solutionId>
+    <localNum>H08</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="MOPS" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="HEPES-Na" type="buffer" concentration="0.1" concentrationUnits="M" pH="7.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-45</solutionId>
+    <localNum>h09</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 20000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 550 MME" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-46</solutionId>
+    <localNum>H10</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 8000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Ethylene Glycol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-47</solutionId>
+    <localNum>H11</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 4000" type="precipitant" concentration="10" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="precipitant" concentration="20" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+    <solutionId>2-48</solutionId>
+    <localNum>H12</localNum>
+    <components>
+     <component name="Glycine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Sodium L-Glutamate" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Alanine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Lysine Hydrochloride" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="DL-Serine" type="additive" concentration="0.02" concentrationUnits="M" />
+     <component name="Morpheus Buffer3" type="buffer" concentration="0.1" concentrationUnits="M" pH="8.5"  />
+     <component name="Polyethylene glycol 3350" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="Polyethylene glycol 1000" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+     <component name="2-Methyl-2,4-Pentanediol" type="precipitant" concentration="12.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+  </solutions>
+ </screen>

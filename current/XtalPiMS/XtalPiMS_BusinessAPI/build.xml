@@ -1,0 +1,84 @@
+<project name="datamodel" default="jar and copy" basedir=".">
+
+
+
+    <!-- jar -->
+	<property name="jar.filename" value="xtalPiMS_API.jar" />
+	<property name="jar.file" value="${basedir}/${jar.filename}" />
+
+    <!-- java -->
+    <property name="lib.dir" value="${basedir}/lib" />
+    <property name="java.dir" value="${basedir}/src" />
+    <property name="test.dir" value="${basedir}/test" />
+    <property name="build.dir" value="${basedir}/bin" />
+
+	<!-- standard classpath lib -->
+	<path id="classpath.lib">
+	    <fileset dir="${lib.dir}">
+	        <include name="*.jar" />
+	    </fileset>
+	</path>
+
+    <!-- classpath for compile and run test -->
+    <path id="classpath.run">
+    	<path refid="classpath.lib" />
+        <pathelement path="${build.dir}" />
+    </path>
+
+
+
+    <!-- ============================================================ -->
+    <!-- Install tasks.                                               -->
+    <!-- ============================================================ -->
+	
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+	<target name="compile" depends="cleanCompiledJava" description="Compiles the java source tree.">
+		<javac
+			failOnError="true"
+			sourcepath=""
+			srcdir="${java.dir}:${test.dir}"
+			destdir="${build.dir}"
+			target="1.5" source="1.5" deprecation="false"
+            encoding="UTF-8"
+            debug="true"
+          >
+			<classpath refid="classpath.run" />
+		</javac>
+	</target>
+
+	    <!-- ============================================================ -->
+    <!-- Jar tasks                                                  -->
+    <!-- ============================================================ -->
+	<target name="jar" depends="compile" description="Make the ${jar.filename} file.">
+		<echo>tar file: ${jar.file}</echo>
+		<jar index="true" destfile="${jar.file}">
+			<fileset dir="${build.dir}" />
+		</jar>
+	</target>
+ 	<target name="jar and copy" depends="jar" description="Make the ${jar.filename} and copy it to other xtalPiMS projects use it">
+		<copy overwrite="true" verbose="true" file="${jar.file}" tofile="../XtalPiMS_Web/web/WEB-INF/lib/${jar.filename}" />
+		<copy overwrite="true" verbose="true" file="${jar.file}" tofile="../User_BusinessAPI_UserDBImpl/lib/${jar.filename}" />
+        <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../Formulatrix_Impl/lib/${jar.filename}" />
+		<!-- <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../XtalPiMS_BusinessAPI_PlateDBImpl/lib/${jar.filename}" /> -->
+		<!-- No longer do this, now the PIMSDB Impl project depends on having the API project open
+		copy overwrite="true" verbose="true" file="${jar.file}" tofile="../XtalPiMS_BusinessAPI_PIMSDBImpl/lib/${jar.filename}" 
+		-->
+		<!-- <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../OPPF Data Migration/lib/${jar.filename}" /> -->
+        <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../ImageProcessor/lib/${jar.filename}" />
+        <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../Rhombix_Impl/lib/${jar.filename}" />
+	</target>
+
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+
+    <target name="cleanCompiledJava" description="Remove compiled java classes.">
+        <delete dir="${build.dir}" />
+        <mkdir dir="${build.dir}" />
+    </target>
+
+ 
+
+</project>

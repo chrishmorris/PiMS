@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<protocol>
+    <name>SPOT Construct Primer Design  - xml new format</name>
+    <experimentType>SPOTConstructDesign</experimentType>
+    <objective></objective>
+    <method></method>
+    <remarks></remarks>
+    <details></details>
+    <exportDate>2009-02-09T19:57:58.761Z</exportDate>
+    <parameterDefinitions>
+        <!-- <parameterDefinition>
+            <name>Reverse Overlap</name>
+            <label></label>
+            <paramType>Int</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue></defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition> -->
+        <parameterDefinition>
+            <name>Forward Tag</name>
+            <label></label>
+            <paramType>String</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue></defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+        <!--<parameterDefinition>
+            <name>Fwd. Primer GC</name>
+            <label></label>
+            <paramType>Float</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue></defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+         <parameterDefinition>
+            <name>Forward Overlap</name>
+            <label></label>
+            <paramType>Int</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue></defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition> -->
+        <!-- <parameterDefinition>
+            <name>Rev. Primer GC</name>
+            <label></label>
+            <paramType>Float</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue></defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition> -->
+        <parameterDefinition>
+            <name>Reverse Tag</name>
+            <label></label>
+            <paramType>String</paramType>
+            <unit></unit>
+            <displayUnit></displayUnit>
+            <defaultValue></defaultValue>
+            <minValue></minValue>
+            <maxValue></maxValue>
+            <isMandatory>true</isMandatory>
+            <isGroupLevel>false</isGroupLevel>
+            <isResult>false</isResult>
+        </parameterDefinition>
+    </parameterDefinitions>
+    <inputSamples/>
+    <outputSamples>
+        <outputSample>
+            <sampleCategory>Reverse Primer</sampleCategory>
+            <name>Reverse Primer</name>
+            <amount>0.0</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </outputSample>
+        <outputSample>
+            <sampleCategory>Forward Primer</sampleCategory>
+            <name>Forward Primer</name>
+            <amount>0.0</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </outputSample>
+        <outputSample>
+            <sampleCategory>Nucleic acid</sampleCategory>
+            <name>Template</name>
+            <amount>0.0</amount>
+            <unit>L</unit>
+            <displayUnit>uL</displayUnit>
+        </outputSample>
+    </outputSamples>
+</protocol>

@@ -1,0 +1,5 @@
+Data
+
+ComponentCats.csv
+Added:
+default,Synthetic gene,PIMS default category

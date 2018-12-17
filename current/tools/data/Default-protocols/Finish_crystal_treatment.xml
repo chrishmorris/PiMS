@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<protocol details="" remarks="" creationDate="05-11-13" objective="" name="Finish crystal treatment">
+<experimentType>Mount crystal</experimentType>
+<inputSamples>
+	<inputSample name="Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+</inputSamples>
+<outputSample name="Mounted crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Mounted Crystal" sampleCatNamingSys="default"/>
+<parameterDefinitions>
+	<parameterDefinition id="1" name="Pin barcode" parameterType="String" defaultValue="" isMandatory="true" label=""/>
+	<parameterDefinition id="2" name="Puck barcode" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+</parameterDefinitions>
+</protocol>

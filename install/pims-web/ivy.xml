@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info
+      organisation="www.pims-lims.org"
+      module="pims-model"/>
+    <configurations>
+        <conf name="runtime" description="Runtime libs - needed by dependent projects" />
+        <conf name="build" description="Buildtime libs - needed by ant tasks in build.xml but not needed by dependent projects" />
+    </configurations>
+    <dependencies>
+        <!-- Probably should exclude cglib from hibernate-core but both it and javassist are required by
+          hibernate-entitymanager, so no point. -->
+        <dependency org="org.hibernate" name="hibernate-core" rev="3.6.8.Final" conf="runtime->default,optional"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.6.8.Final" conf="runtime->default"/>
+        <dependency org="org.hibernate" name="hibernate-c3p0" rev="3.6.8.Final" conf="runtime->default"/>
+        <dependency org="org.hibernate" name="hibernate-ehcache" rev="3.6.8.Final" conf="runtime->default"/>
+        
+    <!-- TODO Update to 9.1-901 when in repository - or create a local repository
+         TODO Update to jdbc4 when we drop java 1.5 support
+        <dependency org="postgresql" name="postgresql" rev="9.1-901.jdbc3"/> -->
+    <!-- Actual logging implementation for slf4j - jdk logging - NB Version should match dependency from hibernate-core -->
+    <dependency org="org.slf4j" name="slf4j-jdk14" rev="1.6.1" conf="runtime->default"/>
+
+
+<!-- pims-web dependencies -->
+<!-- TODO <dependency org="org.biojava" name="biojava3-core" rev="3.0" conf="runtime->default"/> -->
+
+<dependency org="org.jdom" name="jdom" rev="1.1.2" conf="runtime->default"/>
+<dependency org="commons-io" name="commons-io" rev="1.4" conf="runtime->default" />
+<dependency org="commons-collections" name="commons-collections" rev="3.2" conf="runtime->default" />
+
+<!--  Does not seem to work
+<dependency org="commons-lang" name="commons-lang" rev="2.6" conf="runtime->default" />
+<dependency org="commons-fileupload" name="commons-fileupload" rev="1.2.2"  />
+ -->
+
+<dependency org="javax.mail" name="mail"  rev="1.4.4" conf="runtime->default"/>
+<dependency org="wsdl4j" name="wsdl4j"   conf="runtime->default" rev="1.6.2" />
+<dependency org="org.slf4j" name="jcl-over-slf4j" rev="1.6.1"  conf="runtime->default"/>
+<dependency org="org.slf4j" name="jcl-over-slf4j" rev="1.6.1"  conf="runtime->default"/>
+
+<!-- TODO <dependency org="javax.servlet" name="jstl" rev="1.2" conf="default"/> -->
+
+<!-- xtalPiMS-Web dependencies
+<dependency org="net.sf.json-lib" name="json-lib" rev="2.2.3" conf="runtime->default">
+    <exclude org="org.apache.commons" module="commons-io" />
+    <exclude org="commons-logging" module="commons-logging" />
+    <exclude org="org.codehaus.jaxen" module="jaxen" />
+</dependency>
+<dependency org="org.apache.axis2" name="axis2" rev="1.5.4"/>
+<dependency org="org.apache.axis2" name="axis2-transport-http" rev="1.5.4">
+    <exclude org="org.apache.ant" />
+    <exclude org="xerxes" />
+</dependency>
+<dependency org="org.apache.axis2" name="axis2-transport-local" rev="1.5">
+    <exclude org="org.apache.ant" />
+    <exclude org="xerxes" />
+</dependency>
+<dependency org="org.apache.ws.commons.schema" name="XmlSchema" rev="1.4.3" transitive="false" />
+<dependency org="org.apache.ws.commons.axiom" name="axiom-api" rev="1.2.10" transitive="false"/>
+<dependency org="org.apache.ws.commons.axiom" name="axiom-dom" rev="1.2.10" transitive="false"/>
+<dependency org="org.apache.ws.commons.axiom" name="axiom-impl" rev="1.2.10" transitive="false"/>
+-->
+
+
+<exclude org="*" ext="*" type="source"/>
+<exclude org="*" ext="*" type="javadoc"/>
+<exclude org="org.apache.commons" module="commons-logging"/>
+<exclude org="org.apache" module="log4j" />
+<exclude org="javax.servlet" module="servlet-api" />
+<exclude org="org.apache.geronimo.specs" />
+
+<!-- the following exclude fails.
+One possible cause is the existence of a circular dependency.
+Alternatively, we might have to put "transitive=false" on json-lib.
+ -->
+<exclude org="javax.portlet"  />
+
+
+</dependencies>
+</ivy-module>

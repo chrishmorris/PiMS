@@ -1,0 +1,4 @@
+
+Creator.recordRefSample(rw, "reference", direct ? fprimer : rprimer);
+ModelObject expType = Creator.recordExperimentType(rw, FormFieldsNames.expression, "reference");
+Creator.recordRefSample(rw, "reference", FormFieldsNames.plasmid);

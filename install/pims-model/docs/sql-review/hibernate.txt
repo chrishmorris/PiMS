@@ -1,0 +1,909 @@
+-------------------------------------------------------------------------------------------------
+HIBERNATE MAPPING & JAVA CLASS IN PiMS
+-------------------------------------------------------------------------------------------------
+
+CLASS (Target)
+CONSTRUCTOR (Scoreboard)
+ATTRIBUTE
+   SINGLE-VALUE ATTRIBUTE (Target.name)
+   MULTI-VALUES ATTRIBUTE (Protocol.remarks)
+   DERIVED ATTRIBUTE (Target.getSeqString)
+ROLE
+   DERIVED ROLE (AbstractSample/HazardPhrase)
+   MANY-TO-MANY ROLE (Target/TargetProject)
+   MANY-TO-ONE ROLE (Target/MolComponent)
+   MANY-TO-ONE PARENT ROLE (OutputSample/Experiment)
+   ONE-TO-ONE ROLE (OutputSample/Sample)
+   ONE-WAY ROLE (SampleComponent/AbstractComponent)
+   
+TEST MODEL 10 classes: 
+   Target, TargetProject
+   AbstractComponent, MolComponent
+   AbstractSample, Sample, SampleComponent
+   HazardPhrase
+   Experiment, OutputSample
+
+=================================================================================================
+CLASS (Target)
+=================================================================================================
+### JAVA: Target.java
+package org.pimslims.pojo.target;
+
+/**
+ * Generated 06-Dec-2007 13:31:08 by Hibernate Tools 3.2.0.b9
+ * 
+ * Protein Information Management System - PiMS project
+ * 
+ * @see http://www.pims-lims.org
+ * @version: 2.0
+ * 
+ * Copyright (c) 2007
+ * 
+ * This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser
+ * General Public License as published by the Free Software Foundation; either version 2.1 of the License, or
+ * (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+ * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public
+ * License for more details.
+ * 
+ * A copy of the license is in dist/docs/LGPL.txt. It is also available here:
+ * @see: http://www.gnu.org/licenses/lgpl.txt
+ */
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.pimslims.annotation.Attribute;
+import org.pimslims.annotation.MetaClass;
+import org.pimslims.annotation.Role;
+import org.pimslims.metamodel.WritableVersion;
+
+import org.pimslims.pojo.annotation.Annotation;
+import org.pimslims.pojo.citation.Citation;
+import org.pimslims.pojo.dbRef.DbRef;
+import org.pimslims.pojo.expBlueprint.BlueprintComponent;
+import org.pimslims.pojo.implementation.Project;
+import org.pimslims.pojo.people.Person;
+import org.pimslims.pojo.refSampleComponent.MolComponent;
+import org.pimslims.pojo.taxonomy.NaturalSource;
+
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Cascade;
+
+/**
+ * The information on the target.
+ */
+@MetaClass(     
+    helpText = "The information on the target.",
+    keyNames = {"name", "rootProject"},
+    subclasses = {},
+    parent = org.pimslims.pojo.implementation.Project.class,
+    parentRoleName= "rootProject"
+)
+@Entity
+@Table(name="TARG_TARGET")
+public class Target extends org.pimslims.pojo.implementation.MemopsBaseClass implements java.lang.Comparable, java.io.Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+
+    /* ************************************************************ */
+    /* CONSTRUCTORS                                                 */
+    /* ************************************************************ */
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+
+    /* ************************************************************ */
+    /* EXTRA METHODS                                                */
+    /* ************************************************************ */
+}
+
+### HIBERNATE: Target.hbm.xml
+<hibernate-mapping auto-import="false" package="org.pimslims.pojo.target">
+  <joined-subclass
+    name="Target"
+    extends="org.pimslims.pojo.implementation.MemopsBaseClass"
+    table="TARG_TARGET"
+  >
+  <meta attribute="implements">java.lang.Comparable</meta>
+  <meta attribute="generated-class">org.pimslims.pojo.target.Target</meta>
+  <meta attribute="class-description">The information on the target.</meta>
+  <meta attribute="custom-class">ccp.api.Target.CustomTarget</meta>
+  <key column="MEMOPSBASECLASSID" foreign-key="TARG_TARGET_MEMOBACL_FK"/>
+
+  </joined-subclass>
+</hibernate-mapping>
+
+=================================================================================================
+CONSTRUCTOR (Scoreboard)
+=================================================================================================
+### JAVA: Scoreboard.java
+    /**
+     * Empty constructor
+     */
+    protected Scoreboard() {
+        super();
+    }
+
+    /**
+     * Constructor for PIMS WritableVersion
+     */
+    protected Scoreboard(WritableVersion wVersion) throws org.pimslims.metamodel.ConstraintException {
+        super(wVersion);
+    }
+
+    /**
+     * Constructor for required arguments without memops project
+     * assigned to default in init()
+     */
+    public Scoreboard(WritableVersion wVersion, java.lang.String namingSystem, java.lang.String name) throws org.pimslims.metamodel.ConstraintException {
+        this(wVersion);
+        java.util.Map<String, Object> attributes = new java.util.HashMap();
+        attributes.put(PROP_NAMINGSYSTEM, namingSystem);
+        attributes.put(PROP_NAME, name);
+        
+        init(attributes);
+    }
+
+    /**
+     * Constructor with argument [name, value] in a map
+     */
+    public Scoreboard(WritableVersion wVersion, java.util.Map<String, Object> attributes) throws org.pimslims.metamodel.ConstraintException {
+        this(wVersion);
+        init(attributes);
+    }
+
+### HIBERNATE: none
+
+=================================================================================================
+ATTRIBUTE
+=================================================================================================
+-------------------------------------------------------------------------------------------------
+   SINGLE-VALUE ATTRIBUTE (Target.name)
+-------------------------------------------------------------------------------------------------
+### JAVA: Target.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_NAME = "name";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private String name;
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: name
+      * ----------------------------------------------------------- */
+    @Attribute(
+        helpText = "The name of the target used to uniquely identify the target. It is its uniprot entry name, e.g. CAIC_ECOLI.",
+        constraints = { "contains_no_linebreak" }
+        // defaultValue =
+    )
+    @Basic(optional=false)
+    @Column(name="NAME", columnDefinition="VARCHAR(80)", length=80, unique=false, nullable=false) 
+    public String getName() {
+        return (String) get_prop(PROP_NAME);
+    }
+
+    public void setName(String name) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_NAME, name);
+    }
+
+    protected String getHbName() {
+        return this.name;
+    }
+
+    protected void setHbName(String name)  {
+        this.name = name;
+    }
+   
+### HIBERNATE: Target.hbm.xml
+  <property
+    name="hbName"
+    type="java.lang.String" length="80"
+    not-null="true"
+  >
+    <meta attribute="field-description">The name of the target used to uniquely identify the target. It is its uniprot entry name, e.g. CAIC_ECOLI.</meta>
+    <meta attribute="default-value">null</meta>
+    <meta attribute="contraints">"contains_no_linebreak"</meta>
+
+    <column name="NAME" sql-type="VARCHAR(80)" length="80" not-null="true" unique-key="targetUniqueKey" />
+  </property>
+
+-------------------------------------------------------------------------------------------------
+   MULTI-VALUES ATTRIBUTE (Protocol.remarks)
+-------------------------------------------------------------------------------------------------
+### JAVA: Protocol.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_REMARKS = "remarks";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private List<String> remarks = new ArrayList<String>(0);
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: remarks
+      * ----------------------------------------------------------- */
+    @Attribute(
+        helpText = "Some remarks on the reason why the protocol has been updated."
+        // defaultValue =
+    )
+    // TODO: Annotation for collection of elements.
+    public List<String> getRemarks() {
+        return (List<String>)get_prop(PROP_REMARKS);
+    }
+
+    public void setRemarks(List<String> remarks) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_REMARKS, remarks);
+    }
+
+    protected List<String> getHbRemarks() {
+        return this.remarks;
+    }
+
+    protected void setHbRemarks(List<String> remarks)  {
+        this.remarks = remarks;
+    }
+
+### HIBERNATE: Protocol.hbm.xml
+  <list
+    name="hbRemarks"
+    table="PROT_PROTOCOL_REMARKS"
+    cascade="all"
+  >
+    <meta attribute="field-description">Some remarks on the reason why the protocol has been updated.</meta>
+    <cache usage="read-write" />
+    <key column="PROTOCOLID" foreign-key="PROT_PROTOCOL_REMARKS_FK"/>
+    <index>
+      <column name="order_" sql-type="int8" not-null="true"/>
+    </index>
+    <element type="java.lang.String" not-null="true">
+      <column name="REMARK" sql-type="TEXT" not-null="true"/>
+    </element>
+  </list>
+  
+-------------------------------------------------------------------------------------------------
+   DERIVED ATTRIBUTE (Target.getSeqString)
+-------------------------------------------------------------------------------------------------
+### JAVA: Target.java
+    /* ************************************************************ */
+    /* EXTRA METHODS                                                */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Helper: getSeqString()
+      * ----------------------------------------------------------- */
+    @Attribute(
+        helpText = "This is usually the amino acid sequence derived from Molecule.Polymer."
+    )
+    public java.lang.String getSeqString() {
+        org.pimslims.pojo.refSampleComponent.MolComponent mol = this.getProtein();
+        if (mol == null)
+            return "";
+        return mol.getSeqString();
+    }
+
+### HIBERNATE: Target.hbm.xml
+none
+
+=================================================================================================
+ROLE
+=================================================================================================
+-------------------------------------------------------------------------------------------------
+   DERIVED ROLE (AbstractSample/HazardPhrase)
+-------------------------------------------------------------------------------------------------
+### JAVA: AbstractSample.java
+    /* ************************************************************ */
+    /* EXTRA METHODS                                                */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Helper: getLocalRiskPhrases()
+      * ----------------------------------------------------------- */
+    @Role(helpText = "Local risk phrases that are specific to a certain laboratory.", isDerived = true)
+    public java.util.Set<org.pimslims.pojo.riskAssessment.HazardPhrase> getLocalRiskPhrases() {
+        java.util.Set<org.pimslims.pojo.riskAssessment.HazardPhrase> list = new java.util.HashSet<org.pimslims.pojo.riskAssessment.HazardPhrase>();
+        java.util.Iterator i = getHazardPhrases().iterator();
+        while (i.hasNext()) {
+            org.pimslims.pojo.riskAssessment.HazardPhrase hazardPhrase = (org.pimslims.pojo.riskAssessment.HazardPhrase) i.next();
+            if (hazardPhrase.getClassification().equals("local")) {
+                list.add(hazardPhrase);
+            }
+        }
+        return list;
+    }
+
+### HIBERNATE: AbstractSample.hbm.xml
+none
+
+-------------------------------------------------------------------------------------------------
+   MANY-TO-MANY ROLE (Target/TargetProject)
+-------------------------------------------------------------------------------------------------
+### JAVA: Target.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_TARGETPROJECTS = "targetProjects";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private Set<TargetProject> targetProjects = new HashSet<TargetProject>(0);
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: targetProjects
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "The list of project to wich this target belongs.",
+        high = -1,
+        low = 0,
+        isChangeable = true,
+        reverseRoleName = "targets"
+        // baseName =
+    )
+    @ManyToMany(cascade=CascadeType.MERGE, fetch=FetchType.LAZY)
+    @JoinTable(name="TARG_TARGET2PROJECTS", joinColumns = { 
+        @JoinColumn(name="TARGETID", nullable=false, updatable=false) }, inverseJoinColumns = { 
+        @JoinColumn(name="PROJECTID", nullable=false, updatable=false) })
+    @Cascade( {org.hibernate.annotations.CascadeType.SAVE_UPDATE} )
+
+    public Set<TargetProject> getTargetProjects() {
+        return (Set<TargetProject>) get_prop(PROP_TARGETPROJECTS);
+    }
+
+    public void setTargetProjects(java.util.Collection<TargetProject> targetProjects) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_TARGETPROJECTS, targetProjects);
+    }
+
+    public void addTargetProject(org.pimslims.pojo.target.TargetProject targetProject) throws org.pimslims.metamodel.ConstraintException {
+        add(PROP_TARGETPROJECTS, targetProject);
+    }
+
+    public void removeTargetProject(org.pimslims.pojo.target.TargetProject targetProject) throws org.pimslims.metamodel.ConstraintException {
+        remove(PROP_TARGETPROJECTS, targetProject);
+    }
+
+    protected Set<TargetProject> getHbTargetProjects() {
+        return this.targetProjects;
+    }
+
+    protected void setHbTargetProjects(Set<TargetProject> targetProjects)  {
+            this.targetProjects = targetProjects;
+    }
+
+### HIBERNATE: Target.hbm.xml
+  <set
+    name="hbTargetProjects"
+    table="TARG_TARGET2PROJECTS"
+    inverse="false"
+    cascade="merge, save-update"
+  >
+    <meta attribute="field-description">The list of project to wich this target belongs.</meta>
+    <meta attribute="base-name">hbProject</meta>
+    <cache usage="read-write"/>
+    <key column="TARGETID" foreign-key="TARG_PROJECT_TARGETS_FK"/>
+    <many-to-many column="PROJECTID" class="org.pimslims.pojo.target.TargetProject" foreign-key="TARG_TARGET_PROJECTS_FK"/>
+  </set>
+
+### JAVA: TargetProject.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_TARGETS = "targets";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private Set<Target> targets = new HashSet<Target>(0);
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: targets
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "The list of target that belongs to a particular project.",
+        high = -1,
+        low = 0,
+        isChangeable = true,
+        reverseRoleName = "targetProjects"
+        // baseName =
+    )
+    @ManyToMany(cascade=CascadeType.MERGE, fetch=FetchType.LAZY, mappedBy="hbTargetProjects")
+    @Cascade( {org.hibernate.annotations.CascadeType.SAVE_UPDATE} )
+    public Set<Target> getTargets() {
+        return (Set<Target>)get_prop(PROP_TARGETS);
+    }
+
+    public void setTargets(java.util.Collection<Target> targets) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_TARGETS, targets);
+    }
+
+    public void addTarget(org.pimslims.pojo.target.Target target) throws org.pimslims.metamodel.ConstraintException {
+        add(PROP_TARGETS, target);
+    }
+
+    public void removeTarget(org.pimslims.pojo.target.Target target) throws org.pimslims.metamodel.ConstraintException {
+        remove(PROP_TARGETS, target);
+    }
+
+    protected Set<Target> getHbTargets() {
+        return this.targets;
+    }
+
+    protected void setHbTargets(Set<Target> targets)  {
+        this.targets = targets;
+    }
+
+### HIBERNATE: TarjetProject.hbm.xml
+  <set
+    name="hbTargets"
+    table="TARG_TARGET2PROJECTS"
+    inverse="true"
+    cascade="merge, save-update"
+  >
+    <meta attribute="field-description">The list of target that belongs to a particular project.</meta>
+    <meta attribute="base-name">hbTarget</meta>
+    <cache usage="read-write"/>
+    <key column="PROJECTID" foreign-key="TARG_TARGET_PROJECTS_FK"/>
+    <many-to-many column="TARGETID" class="org.pimslims.pojo.target.Target" foreign-key="TARG_PROJECT_TARGETS_FK"/>
+  </set>
+
+-------------------------------------------------------------------------------------------------
+   MANY-TO-ONE ROLE (Target/MolComponent)
+-------------------------------------------------------------------------------------------------
+### JAVA: Target.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_PROTEIN = "protein";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private MolComponent protein;
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: protein
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "The MolComponent used to describe the Target protein",
+        high = 1,
+        low = 1,
+        isChangeable = true,
+        reverseRoleName = "protTargets"
+        // baseName =
+    )
+    @ManyToOne(targetEntity=org.pimslims.pojo.refSampleComponent.MolComponent.class, optional=false, cascade=javax.persistence.CascadeType.MERGE, fetch=javax.persistence.FetchType.EAGER)
+    @JoinColumn(name="PROTEINID", unique=false, nullable=false)
+    public MolComponent getProtein() {
+        return (MolComponent) get_prop(PROP_PROTEIN);
+    }
+
+    public void setProtein(MolComponent protein) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_PROTEIN, protein);
+    }
+
+    protected MolComponent getHbProtein() {
+        return this.protein;
+    }
+
+    protected void setHbProtein(MolComponent protein)  {
+        this.protein = protein;
+    }
+
+### HIBERNATE: Target.hbm.xml
+  <many-to-one
+    name="hbProtein"
+    column="PROTEINID"
+    class="org.pimslims.pojo.refSampleComponent.MolComponent"
+    cascade="merge,save-update"
+    not-null="true"
+    unique="false"
+    foreign-key="TARG_TARGET_PROTEIN_FK"
+  >
+    <meta attribute="field-description">The MolComponent used to describe the Target protein</meta>
+  </many-to-one>
+
+### JAVA: MolComponent.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_PROTTARGETS = "protTargets";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private Set<Target> protTargets = new HashSet<Target>(0);
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: protTargets
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "The Target associated to the MolComponent that defines it",
+        high = -1,
+        low = 0,
+        isChangeable = true,
+        reverseRoleName = "protein"
+        // baseName =
+    )
+    @OneToMany(fetch=FetchType.LAZY, mappedBy="hbProtein")
+    public Set<Target> getProtTargets() {
+        return (Set<Target>)get_prop(PROP_PROTTARGETS);
+    }
+
+    public void setProtTargets(java.util.Collection<Target> protTargets) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_PROTTARGETS, protTargets);
+    }
+    
+    public void addProtTarget(Target protTarget) throws org.pimslims.metamodel.ConstraintException {
+       add(PROP_PROTTARGETS, protTarget);
+    }
+
+    public void removeProtTarget(Target protTarget) throws org.pimslims.metamodel.ConstraintException {
+       remove(PROP_PROTTARGETS, protTarget);
+    }
+
+    protected Set<Target> getHbProtTargets() {
+        return this.protTargets;
+    }
+
+    protected void setHbProtTargets(Set<Target> protTargets)  {
+        this.protTargets = protTargets;
+    }
+
+### HIBERNATE: MolComponent.hbm.xml
+  <set
+    name="hbProtTargets"
+    table="TARG_TARGET"
+    inverse="true"
+    cascade="none"
+  >
+    <meta attribute="field-description">The Target associated to the MolComponent that defines it</meta>
+    <meta attribute="base-name">hbProtTarget</meta>
+    <cache usage="read-write"/>
+    <key column="PROTEINID"/>
+    <one-to-many class="org.pimslims.pojo.target.Target"/>
+  </set>
+
+-------------------------------------------------------------------------------------------------
+   MANY-TO-ONE PARENT ROLE (OutputSample/Experiment)
+-------------------------------------------------------------------------------------------------
+### JAVA: OutputSample.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_EXPERIMENT = "experiment";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private Experiment experiment;
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: experiment
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "N/A",
+        high = 1,
+        low = 1,
+        isChangeable = true,
+        reverseRoleName = "outputSamples"
+        // baseName =
+    )
+    @ManyToOne(targetEntity=org.pimslims.pojo.experiment.Experiment.class, optional=false, cascade=javax.persistence.CascadeType.MERGE, fetch=javax.persistence.FetchType.EAGER)
+    @JoinColumn(name="EXPERIMENTID", unique=false, nullable=false)
+    public Experiment getExperiment() {
+        return (Experiment)get_prop(PROP_EXPERIMENT);
+    }
+
+    public void setExperiment(Experiment experiment) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_EXPERIMENT, experiment);
+    }
+
+    protected Experiment getHbExperiment() {
+        return this.experiment;
+    }
+
+    protected void setHbExperiment(Experiment experiment)  {
+        this.experiment = experiment;
+    }
+
+### HIBERNATE: OutputSample.hbm.xml
+  <many-to-one
+    name="hbExperiment"
+    column="EXPERIMENTID"
+    class="org.pimslims.pojo.experiment.Experiment"
+    cascade="merge,save-update"
+    not-null="true"
+    unique="false"
+    foreign-key="EXPE_OUTPSA_EXPERIMENT_FK"
+    unique-key="outputSampleUniqueKey"
+    index="EXPE_OUTPSA_EXPERIMENT_INX"
+  >
+    <meta attribute="field-description">N/A</meta>
+  </many-to-one>
+
+### JAVA: Experiment.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_OUTPUTSAMPLES = "outputSamples";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private Set<OutputSample> outputSamples = new HashSet<OutputSample>(0);
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: outputSamples
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "N/A",
+        high = -1,
+        low = 0,
+        isChangeable = true,
+        reverseRoleName = "experiment"
+        // baseName =
+    )
+    @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="hbExperiment")
+    public Set<OutputSample> getOutputSamples() {
+        return (Set<OutputSample>)get_prop(PROP_OUTPUTSAMPLES);
+    }
+
+    public void setOutputSamples(java.util.Collection<OutputSample> outputSamples) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_OUTPUTSAMPLES, outputSamples);
+    }
+
+    public void addOutputSample(OutputSample outputSample) throws org.pimslims.metamodel.ConstraintException {
+       add(PROP_OUTPUTSAMPLES, outputSample);
+    }
+
+    public void removeOutputSample(OutputSample outputSample) throws org.pimslims.metamodel.ConstraintException {
+       remove(PROP_OUTPUTSAMPLES, outputSample);
+    }
+
+    protected Set<OutputSample> getHbOutputSamples() {
+        return this.outputSamples;
+    }
+
+    protected void setHbOutputSamples(Set<OutputSample> outputSamples)  {
+        this.outputSamples = outputSamples;
+    }
+
+### HIBERNATE: Experiment.hbm.xml
+  <set
+    name="hbOutputSamples"
+    table="EXPE_OUTPUTSAMPLE"
+    inverse="true"
+    cascade="all"
+  >
+    <meta attribute="field-description">N/A</meta>
+    <meta attribute="base-name">hbOutputSample</meta>
+    <cache usage="read-write"/>
+    <key column="EXPERIMENTID"/>
+    <one-to-many class="org.pimslims.pojo.experiment.OutputSample"/>
+  </set>
+
+-------------------------------------------------------------------------------------------------
+   ONE-TO-ONE ROLE (OutputSample/Sample)
+-------------------------------------------------------------------------------------------------
+### JAVA: OutputSample.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_SAMPLE = "sample";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private Sample sample;
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: sample
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "Sample involved as an output sample of an experiment.",
+        high = 1,
+        low = 0,
+        isChangeable = true,
+        reverseRoleName = "outputSample"
+        // baseName =
+    )
+    @ManyToOne(targetEntity=org.pimslims.pojo.sample.Sample.class, optional=true, cascade=javax.persistence.CascadeType.MERGE, fetch=javax.persistence.FetchType.EAGER)
+    @JoinColumn(name="SAMPLEID", unique=true, nullable=true)
+    public Sample getSample() {
+        return (Sample)get_prop(PROP_SAMPLE);
+    }
+
+    public void setSample(Sample sample) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_SAMPLE, sample);
+    }
+
+    protected Sample getHbSample() {
+        return this.sample;
+    }
+
+    protected void setHbSample(Sample sample)  {
+        this.sample = sample;
+    }
+
+### HIBERNATE: OutputSample.hbm.xml
+  <many-to-one
+    name="hbSample"
+    column="SAMPLEID"
+    class="org.pimslims.pojo.sample.Sample"
+    cascade="merge,save-update"
+    not-null="false"
+    unique="true"
+    foreign-key="EXPE_OUTPSA_SAMPLE_FK"
+  >
+    <meta attribute="field-description">Sample involved as an output sample of an experiment.</meta>
+  </many-to-one>
+
+### JAVA: Sample.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_OUTPUTSAMPLE = "outputSample";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private OutputSample outputSample;
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: outputSample
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "Output sample list that describes the amount of sample created by that experiment for a given sample.",
+        high = 1,
+        low = 0,
+        isChangeable = true,
+        reverseRoleName = "sample"
+        // baseName =
+    )
+    public OutputSample getOutputSample() {
+        return (OutputSample) get_prop(PROP_OUTPUTSAMPLE);
+    }
+
+    public void setOutputSample(OutputSample outputSample) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_OUTPUTSAMPLE, outputSample);
+    }
+
+    protected OutputSample getHbOutputSample() {
+        return this.outputSample;
+    }
+
+    protected void setHbOutputSample(OutputSample outputSample)  {
+        this.outputSample = outputSample;
+    }
+
+### HIBERNATE: Sample.hbm.xml
+  <one-to-one
+    name="hbOutputSample"
+    class="org.pimslims.pojo.experiment.OutputSample"
+    property-ref="hbSample"
+  >
+    <meta attribute="field-description">Output sample list that describes the amount of sample created by that experiment for a given sample.</meta>
+  </one-to-one>
+
+-------------------------------------------------------------------------------------------------
+   ONE-WAY ROLE (SampleComponent/AbstractComponent)
+-------------------------------------------------------------------------------------------------
+### JAVA: SampleComponent.java
+    /* ************************************************************ */
+    /* CONSTANTS                                                    */
+    /* ************************************************************ */
+    public static final String PROP_REFCOMPONENT = "refComponent";
+
+    /* ************************************************************ */
+    /* INSTANCE VARIABLES                                           */
+    /* ************************************************************ */
+    private AbstractComponent refComponent;
+
+    /* ************************************************************ */
+    /* PROPERTY ACCESSORS                                           */
+    /* ************************************************************ */
+    /** -----------------------------------------------------------
+      * Property: refComponent
+      * ----------------------------------------------------------- */
+    @Role(
+        helpText = "The component used as a reference associated to a SampleComponent.",
+        high = 1,
+        low = 1,
+        isChangeable = true,
+        reverseRoleName = "Unresolved"
+        // baseName =
+    )
+    @ManyToOne(targetEntity=org.pimslims.pojo.refSampleComponent.AbstractComponent.class, optional=false, cascade=javax.persistence.CascadeType.MERGE, fetch=javax.persistence.FetchType.EAGER)
+    @JoinColumn(name="REFCOMPONENTID", unique=false, nullable=false)
+    public AbstractComponent getRefComponent() {
+        return (AbstractComponent)get_prop(PROP_REFCOMPONENT);
+    }
+
+    public void setRefComponent(AbstractComponent refComponent) throws org.pimslims.metamodel.ConstraintException {
+        set_prop(PROP_REFCOMPONENT, refComponent);
+    }
+
+    protected AbstractComponent getHbRefComponent() {
+        return this.refComponent;
+    }
+
+    protected void setHbRefComponent(AbstractComponent refComponent)  {
+        this.refComponent = refComponent;
+    }
+
+### HIBERNATE: SampleComponent.hbm.xml
+  <many-to-one
+    name="hbRefComponent"
+    column="REFCOMPONENTID"
+    class="org.pimslims.pojo.refSampleComponent.AbstractComponent"
+    cascade="merge,save-update"
+    not-null="true"
+    unique="false"
+    foreign-key="SAM_SAMPCO_REFCO_FK"
+  >
+    <meta attribute="field-description">The component used as a reference associated to a SampleComponent.</meta>
+  </many-to-one>
+
+### JAVA: AbstractComponent.java
+none
+
+### HIBERNATE: AbstractComponent.hbm.xml
+none
+   
+
+

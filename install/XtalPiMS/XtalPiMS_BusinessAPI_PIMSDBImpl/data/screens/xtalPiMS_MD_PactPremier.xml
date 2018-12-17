@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<screen>
+    <screenCatNum>MD1-29</screenCatNum>
+    <screenDetails/>
+    <screenName>PACTpremier</screenName>
+    <screenNumberOfSolutions>96</screenNumberOfSolutions>
+    <screenSupplier>Molecular Dimensions</screenSupplier>
+    <solutions>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Fluoride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>G01</localNum>
+            <solutionId>73</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Potassium Nitrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E05</localNum>
+            <solutionId>53</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MIB System pH 4.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+            </components>
+            <localNum>B01</localNum>
+            <solutionId>13</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MES pH 6.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Ammonium Chloride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>B08</localNum>
+            <solutionId>20</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Potassium Sodium Tartrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E09</localNum>
+            <solutionId>57</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Acetate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>H07</localNum>
+            <solutionId>91</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="PCB System pH 4.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>C01</localNum>
+            <solutionId>25</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="HEPES pH 7.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Zinc Chloride" concentrationUnits="M" concentration="0.01"/>
+            </components>
+            <localNum>C12</localNum>
+            <solutionId>36</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Tris pH 8.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Sodium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>D07</localNum>
+            <solutionId>43</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Formate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>F06</localNum>
+            <solutionId>66</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Citrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>F11</localNum>
+            <solutionId>71</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="SPG System pH 7.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+            </components>
+            <localNum>A04</localNum>
+            <solutionId>4</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Citrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E11</localNum>
+            <solutionId>59</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MIB System pH 7.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>B04</localNum>
+            <solutionId>16</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="SPG System pH 9.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A06</localNum>
+            <solutionId>6</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Zinc Chloride" concentrationUnits="M" concentration="0.02"/>
+                <component name="Tris pH 8.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>D12</localNum>
+            <solutionId>48</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MIB System pH 8.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>B05</localNum>
+            <solutionId>17</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Acetate pH 5.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A07</localNum>
+            <solutionId>7</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Potassium Thiocyanate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>F04</localNum>
+            <solutionId>64</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Magnesium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="HEPES pH 7.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>C10</localNum>
+            <solutionId>34</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Malonate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>F12</localNum>
+            <solutionId>72</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="PCB System pH 5.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+            </components>
+            <localNum>C02</localNum>
+            <solutionId>26</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Bromide" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E02</localNum>
+            <solutionId>50</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MES pH 6.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Calcium Chloride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>B11</localNum>
+            <solutionId>23</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MES pH 6.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Sodium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>B07</localNum>
+            <solutionId>19</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Bromide" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>F02</localNum>
+            <solutionId>62</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Formate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>G06</localNum>
+            <solutionId>78</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MES pH 6.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Magnesium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>B10</localNum>
+            <solutionId>22</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium/Potassium Phosphate" concentrationUnits="M" concentration="0.02"/>
+            </components>
+            <localNum>H10</localNum>
+            <solutionId>94</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MIB System pH 6.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>B03</localNum>
+            <solutionId>15</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MMT System pH 8.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+            </components>
+            <localNum>D05</localNum>
+            <solutionId>41</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Malonate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H12</localNum>
+            <solutionId>96</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Iodide" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E03</localNum>
+            <solutionId>51</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Acetate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>G07</localNum>
+            <solutionId>79</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="PCB System pH 8.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>C05</localNum>
+            <solutionId>29</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="SPG System pH 4.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A01</localNum>
+            <solutionId>1</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="HEPES pH 7.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>C07</localNum>
+            <solutionId>31</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Malonate" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>E12</localNum>
+            <solutionId>60</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MIB System pH 5.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>B02</localNum>
+            <solutionId>14</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="SPG System pH 8.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A05</localNum>
+            <solutionId>5</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Bromide" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>G02</localNum>
+            <solutionId>74</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Fluoride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>F01</localNum>
+            <solutionId>61</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Iodide" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>G03</localNum>
+            <solutionId>75</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Potassium Thiocyanate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>G04</localNum>
+            <solutionId>76</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Potassium Sodium Tartrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>G09</localNum>
+            <solutionId>81</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Potassium Thiocyanate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E04</localNum>
+            <solutionId>52</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="PCB System pH 6.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+            </components>
+            <localNum>C03</localNum>
+            <solutionId>27</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Citrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>G11</localNum>
+            <solutionId>83</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Acetate pH 5.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Calcium Chloride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>A11</localNum>
+            <solutionId>11</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Iodide" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>F03</localNum>
+            <solutionId>63</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Acetate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E07</localNum>
+            <solutionId>55</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium/Potassium Phosphate" concentrationUnits="M" concentration="0.02"/>
+            </components>
+            <localNum>E10</localNum>
+            <solutionId>58</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Ammonium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Tris pH 8.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>D08</localNum>
+            <solutionId>44</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="SPG System pH 5.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A02</localNum>
+            <solutionId>2</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Acetate pH 5.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Zinc Chloride" concentrationUnits="M" concentration="0.01"/>
+            </components>
+            <localNum>A12</localNum>
+            <solutionId>12</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Ammonium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Sodium Acetate pH 5.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>A08</localNum>
+            <solutionId>8</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="SPG System pH 6.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A03</localNum>
+            <solutionId>3</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Magnesium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Acetate pH 5.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A10</localNum>
+            <solutionId>10</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Potassium Nitrate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>H05</localNum>
+            <solutionId>89</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MMT System pH 6.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>D03</localNum>
+            <solutionId>39</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium/Potassium Phosphate" concentrationUnits="M" concentration="0.02"/>
+            </components>
+            <localNum>F10</localNum>
+            <solutionId>70</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Malonate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>G12</localNum>
+            <solutionId>84</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Iodide" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H03</localNum>
+            <solutionId>87</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Formate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H06</localNum>
+            <solutionId>90</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Lithium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Tris pH 8.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>D09</localNum>
+            <solutionId>45</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Bromide" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H02</localNum>
+            <solutionId>86</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="PCB System pH 9.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>C06</localNum>
+            <solutionId>30</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Potassium Sodium Tartrate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>F09</localNum>
+            <solutionId>69</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Fluoride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E01</localNum>
+            <solutionId>49</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Sulphate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H08</localNum>
+            <solutionId>92</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Potassium Nitrate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>G05</localNum>
+            <solutionId>77</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MMT System pH 4.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>D01</localNum>
+            <solutionId>37</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="HEPES pH 7.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Calcium Chloride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>C11</localNum>
+            <solutionId>35</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Ammonium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="HEPES pH 7.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>C08</localNum>
+            <solutionId>32</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Fluoride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H01</localNum>
+            <solutionId>85</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MIB System pH 9.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>B06</localNum>
+            <solutionId>18</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Sulphate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>G08</localNum>
+            <solutionId>80</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="PCB System pH 7.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>C04</localNum>
+            <solutionId>28</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Formate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E06</localNum>
+            <solutionId>54</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Tris pH 8.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Magnesium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>D10</localNum>
+            <solutionId>46</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="HEPES pH 7.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Lithium Chloride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>C09</localNum>
+            <solutionId>33</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Tris pH 8.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Calcium Chloride" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>D11</localNum>
+            <solutionId>47</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MMT System pH 5.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+            </components>
+            <localNum>D02</localNum>
+            <solutionId>38</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 7.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium/Potassium Phosphate" concentrationUnits="M" concentration="0.02"/>
+            </components>
+            <localNum>G10</localNum>
+            <solutionId>82</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Citrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H11</localNum>
+            <solutionId>95</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Lithium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="MES pH 6.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>B09</localNum>
+            <solutionId>21</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Lithium Chloride" concentrationUnits="M" concentration="0.2"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Acetate pH 5.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>A09</localNum>
+            <solutionId>9</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Potassium Sodium Tartrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H09</localNum>
+            <solutionId>93</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Zinc Chloride" concentrationUnits="M" concentration="0.01"/>
+                <component name="MES pH 6.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 6000" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>B12</localNum>
+            <solutionId>24</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Acetate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>F07</localNum>
+            <solutionId>67</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="MMT System pH 7.0" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+            </components>
+            <localNum>D04</localNum>
+            <solutionId>40</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 1500" concentrationUnits="w/v" concentration="25%"/>
+                <component name="MMT System pH 9.0" concentrationUnits="M" concentration="0.1"/>
+            </components>
+            <localNum>D06</localNum>
+            <solutionId>42</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Sodium Sulphate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>E08</localNum>
+            <solutionId>56</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="Sodium Sulphate" concentrationUnits="M" concentration="0.2"/>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+            </components>
+            <localNum>F08</localNum>
+            <solutionId>68</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 6.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Potassium Nitrate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>F05</localNum>
+            <solutionId>65</solutionId>
+        </solution>
+        <solution>
+            <components>
+                <component name="bis-Tris Propane pH 8.5" concentrationUnits="M" concentration="0.1"/>
+                <component name="Polyethylene Glycol 3350" concentrationUnits="w/v" concentration="20%"/>
+                <component name="Potassium Thiocyanate" concentrationUnits="M" concentration="0.2"/>
+            </components>
+            <localNum>H04</localNum>
+            <solutionId>88</solutionId>
+        </solution>
+    </solutions>
+
+</screen>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by XML (XML) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Laboratory.xsd,v 1.3 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="Person.xsd"/>
+	<xs:complexType name="Laboratory">
+		<xs:annotation>
+			<xs:documentation>Information about the Laboratory site from which the data come. The Laboratory element contains at least one Person element to identify the sender of the data.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="laboratoryUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier for this Laboratory.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of the Laboratory.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="address" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Address of the Laboratory.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="city" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The city of the laboratory. e.g. 'Cambridge'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="country" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The country of the laboratory. e.g. 'UK'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organisation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The organisation to which the laboratory belongs. e.g. 'University of Cambridge'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="url" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL of the Laboratory.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="person" type="tns:Person" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The list of senders associated to this Laboratory.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

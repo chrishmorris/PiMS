@@ -1,0 +1,33 @@
+<!-- Trail expression protocol xml as flat file -->
+<protocol name="PiMS Trial expression" objective="Determine conditions for optimal expression of target protein" creationDate="15-11-06" remarks="Based on Lab activities requirements from YSBL"  >
+ <experimentType>Small scale expression</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Culture" name="Culture"/>
+ <!-- not sure if there is an output sample -->
+ <parameterDefinitions>
+
+  <parameterDefinition id="1" name="A. Expression strain" parameterType="String" defaultValue="B834" />
+  <parameterDefinition id="2" name="B. Construct ID and location" parameterType="String" defaultValue="" />
+  <parameterDefinition id="3" name="C. Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="4" name="D. Shaker speed rpm" parameterType="Int" defaultValue="160" />
+  <parameterDefinition id="5" name="E. Time (hours) before induction" parameterType="Float" defaultValue="2.0" />
+  <parameterDefinition id="6" name="F. OD before induction" parameterType="Float" defaultValue="0.6" />
+  <parameterDefinition id="7" name="G. Temperatue C" parameterType="Float" defaultValue="37" />
+  <parameterDefinition id="8" name="H. Autoinduction/IPTG" parameterType="String" defaultValue="IPTG" />
+  <parameterDefinition id="9" name="I. Sample time interval (hours)" parameterType="Float" defaultValue="2" />
+  <parameterDefinition id="10" name="J. OD sample 1" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="11" name="K. OD sample 2" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="12" name="L. OD sample 3" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="13" name="M. Optimal expression time (hours)" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="14" name="N. Solubilization method" parameterType="String" defaultValue="Sonication" />
+  <parameterDefinition id="15" name="O. Solubilization details" parameterType="String" />
+  <parameterDefinition id="16" name="P. Gel image attached?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="17" name="Q. Gel details" parameterType="String" defaultValue="Markers in lane 1, etc." />
+ </parameterDefinitions>
+
+<inputSamples>
+      <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="0.001" unit="L" displayUnit="mL" refSample="Luria broth (LB)" name="Culture media" />
+      <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000001" unit="L" displayUnit="uL" refSample="Kanamycin 30mg/ml" name="Antibiotic"/>
+</inputSamples>
+
+</protocol>

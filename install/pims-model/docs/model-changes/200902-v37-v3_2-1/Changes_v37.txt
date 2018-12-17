@@ -1,0 +1,137 @@
+================================================================================
+PiMS RELEASE v3.2-1
+DATABASE REVISION NUMBER 37.
+PURPOSE: - This change is for xtalPiMS to load PlateInspection/Scheduled task 
+           and image information.
+         - Improve Scalability 
+================================================================================
+
+--------------------------------------------------------------------------------
+ImageType (New Class)
+--------------------------------------------------------------------------------
+Attributes:
+- Name: String, length:80
+- XlengthPerPixel: float, 
+- YlengthPerPixel: float, 
+- SizeX: int, the width of image
+- SizeY: int, the height of image
+- ColourDepth: int, the colour depth of image
+- URL: the default url for its image eg: http://www.oppf.ox.ac.uk/vault/images/lowres/
+- Catorgory: type of image, eg:COMPOSITE, SLICE, ZOOMED
+
+--------------------------------------------------------------------------------
+Image
+--------------------------------------------------------------------------------
+New Role:
+- ImageType :many to 1 -> ImageType
+- ScheduledTask:many to -> ScheduledTask
+
+--------------------------------------------------------------------------------
+ScheduledTask
+--------------------------------------------------------------------------------
+New attribute:
+- Name: String, length:80
+- CompletionTime:  Calendar , the actual time when the task is done
+New Role:
+- Images: 1 to many -> Image
+- Instrument: many to 1
+Dropped:
+- Protocol: drop protocolid
+- ExperimentGroup: drop experimentgroupid
+- Location
+
+--------------------------------------------------------------------------------
+RefSample
+--------------------------------------------------------------------------------
+New attribute:
+- isSaltCrystal: Boolean
+
+--------------------------------------------------------------------------------
+DropAnnotation
+--------------------------------------------------------------------------------
+New role:
+•	holder
+
+--------------------------------------------------------------------------------
+Holder
+--------------------------------------------------------------------------------
+New attribute:
+•	crystalNumber:  integer
+New role:
+•	lastTask (LastInspection)
+
+
+--------------------------------------------------------------------------------
+UserGroup
+--------------------------------------------------------------------------------
+New Role:
+- Header: many to 1->user
+
+--------------------------------------------------------------------------------
+Instrument
+--------------------------------------------------------------------------------
+New Attribute:
+- Pressure: float
+- Temperature: float
+- pressureDisplayUnit: String
+- tempDisplayUnit: String
+Change Name to required
+New Role:
+- DefaultImageType: many to 1->ImageType
+- Location: many to 1->Location
+
+--------------------------------------------------------------------------------
+Experiment
+--------------------------------------------------------------------------------
+- Change operator from person to user
+
+--------------------------------------------------------------------------------
+Researchobjective
+--------------------------------------------------------------------------------
+Add unique key on the CommonName
+
+--------------------------------------------------------------------------------
+Drop 1-m roles: (no db change needed)
+--------------------------------------------------------------------------------
+- ExperimentGroup. scheduledTasks
+- SchedulePlanOffset. scheduledTasks
+- Location.scheduledTasks
+- Protocol. scheduledTasks
+- Protocol.Experiments
+- ParameterDefinition.Parameters
+- AccessObject. LabBookEntries
+- Person. operatedExps
+- RefSample. Conformings
+- Person.Samples
+- Person. ResearchObjectives
+- Group. Experiments
+- Instrument.Images
+- Instrument.Experiments
+- RefOutputSample. OutputSamples
+- RefInputSample. inputSamples
+- Method. Experiments
+- Score.DropAnnotations
+- Software.DropAnnotations
+- HolderCategory.AbstractHolders
+- RefHolder.RefHolderOffsets
+
+--------------------------------------------------------------------------------
+Drop Namelist
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Drop baseTable
+--------------------------------------------------------------------------------
+this will reduce the depth of join and improve performance. 
+This table is almost empty anyway.
+We just need to move column 'details' to core_labbookentry and ref_publicentry 
+- Drop BaseClass, move dbid & details to PublicEntry, LabBookEntry, Attachment
+- Add SystemClass which has dbid & details as the top class of AccessObject, User, Permission, UserGroup
+
+--------------------------------------------------------------------------------
+Change target’s alias -> role
+--------------------------------------------------------------------------------
+- Remove Target’s multiple attribute alias
+- Add Class Alias
+- Add a role between alias and target
+

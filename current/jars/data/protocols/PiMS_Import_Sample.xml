@@ -1,0 +1,4 @@
+<!-- Generic Unspecified protocol xml as flat file -->
+<protocol name="PiMS Import Sample" objective="To allow the user to import target a containing sample" creationDate="15-02-06"  >
+ <experimentType>Other</experimentType>
+</protocol>

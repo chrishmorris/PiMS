@@ -1,0 +1,19 @@
+/* suspected obsolete */
+div.extraswrapper h3 {display:inline}
+div.extraswrapper h4 {display:inline}
+
+div.facilitieswrapper, div.extraswrapper { background-color:white; color:black; width:48em; }
+div#currentfacilities { float:left; width:23em; }
+div#futurefacilities  { float:right; width:23em; margin-left:1em }
+div.facilities { background-color:white; color:black; margin-bottom:1em; }
+ul.facilitieslist {
+  width:100%; list-style:none; background-color:#ccc; color:black; margin:0; padding-left:0;
+ }
+ul.facilitieslist li {
+  border-bottom:1px solid white; margin-left:0; padding:5px;
+}
+ul.facilitieslist ul li {
+  list-style:none; margin-left:0; padding-left:0; border:0; padding:0
+}
+
+ul.facilitieslist h3 a { text-decoration:none; color:blue }

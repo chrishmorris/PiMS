@@ -1,0 +1,51 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.persistence.HibernateUtil" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/persistence/HibernateUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="350" y="245" width="159" height="234"/>  
+  </class>  
+  <class language="java" name="org.pimslims.persistence.HQLUtil" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/persistence/HQLUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="549" y="245" width="351" height="154"/>  
+  </class>  
+  <class language="java" name="org.pimslims.persistence.ImportFromClasspathEntityResolver" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/persistence/ImportFromClasspathEntityResolver.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="122" y="245" width="188" height="58"/>  
+  </class>  
+  <class language="java" name="org.pimslims.util.InstallationProperties" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/util/InstallationProperties.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="417" y="100" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.persistence.HibernateUtil" 
+      file="/pims-model/src/java/org/pimslims/persistence/HibernateUtil.java" binary="false">      
+      <attribute name="properties"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.util.InstallationProperties" 
+      file="/pims-model/src/java/org/pimslims/util/InstallationProperties.java" binary="false"/>  
+  </association>
+</class-diagram>

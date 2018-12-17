@@ -1,0 +1,4 @@
+# Sample robots.txt file
+# This file requests search engines not to visit this PiMS installation
+User-agent: * # match all bots
+Disallow: / # keep them out

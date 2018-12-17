@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="false" antiResourceLocking="false" path="/xtalpims"
+  docBase="/root/xtalpims.war"
+>
+
+	<Loader delegate="true"/>
+
+	<!-- UserDB DataSource  
+	<Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/UserDB" password="****" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/userdb" username="userdb-user"/>
+-->
+	<!-- web locations  for OPPF only
+	<Environment name="url.sliceimages" type="java.lang.String" value="http://www.oppf.ox.ac.uk/vault/images/lowres/"/>
+	<Environment name="url.compositeimages" type="java.lang.String" value="http://www.oppf.ox.ac.uk/vault/images/lowres/"/>
+	<Environment name="url.zoomedimages" type="java.lang.String" value="http://www.oppf.ox.ac.uk/vault/images/micro/"/>
+	-->
+	
+	<!-- database connection -->
+	<Environment name="db.className" type="java.lang.String" value="org.postgresql.Driver"/>
+	<Environment name="db.url" type="java.lang.String" value="jdbc:postgresql://localhost/pims"/>
+	<Environment name="db.username" type="java.lang.String" value="pimsupdate"/>
+	<Environment name="db.password" type="java.lang.String" value="****"/>
+
+	<!-- the directory PiMS is to use for uploaded files.
+		User "tomcat" must have write permission for this
+	-->
+	<Environment name="uploadDirectory" type="java.lang.String" value="/var/pims/uploads"/>
+
+	<!-- Set these if you use an HTTP proxy, so PiMS can access genomic databases
+		<Environment name="http.proxyHost" value="proxy.your.domain.ac.uk" type="java.lang.String"/>
+		<Environment name="http.proxyPort" value="8080" type="java.lang.String" />
+		<Environment name="http.nonProxyHosts" value="localhost" type="java.lang.String" />
+	-->
+
+	<!-- Enabled perspective List, 
+		-Current available perspectives: standard,CSIC,OPPF,admin,expert 
+		-Default perspective is first one in the list
+		-If this list is not defined, all perspectives will be enabled and default perspective is: standard
+	-->
+	<Environment name="customization.perspective" type="java.lang.String" value="xtal,standard,OPPF"/>
+
+
+	<!-- Use this to keep a log of the use of your xtalPiMS. -->
+		The PiMS team would be grateful for a copy of the log
+		from a typical day's activity.
+		<Valve className="org.apache.catalina.valves.FastCommonAccessLogValve"
+		directory="logs" prefix="xtalPiMS_access_log." suffix=".txt"
+		pattern="common" resolveHosts="false"/>
+
+	<!-- use this filter for testing securely 
+		<Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127.0.0.1"/>
+	-->
+
+</Context>

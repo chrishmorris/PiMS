@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Exposure.xsd,v 1.6 2006/11/02 08:34:59 lxl Exp $">
+	<xs:complexType name="Exposure">
+		<xs:annotation>
+			<xs:documentation>Description of the Exposure for one edge, given a Crystal and a wavelength.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="absorptionEdge">
+				<xs:annotation>
+					<xs:documentation>Wavelength relative to edge.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Peak"/>
+						<xs:enumeration value="Inflection"/>
+						<xs:enumeration value="Low Energy Remote"/>
+						<xs:enumeration value="High Energy Remote"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="priority" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Priority of this Exposure for the specified Crystal.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resolution" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The resolution for this edge, in Angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="time" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>Exposure time to be use in s or Bioxhit Insulin Units</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

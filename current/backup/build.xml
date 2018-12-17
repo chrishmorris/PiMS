@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="usage" name="pims-backup" basedir=".">
+
+    <!-- Properties -->
+    <property file="${basedir}/conf/Properties" />
+
+    <!-- PiMS Backup -->
+    <property name="db.copy.file" value="${db.name}_dbCopy.sql"/>
+    <property name="db.name.copied" value="${db.name}_copied"/>
+    <property name="db.copy.filtered.file" value="${db.name}_filtered.sql"/>
+    <property name="jarfile" value="${basedir}/filterdb.jar"/>
+    <property name="log.dir" location="${basedir}/log" />
+    <property name="temp_Properties" value="${basedir}/temp_Properties" />
+    <property name="force" value="no" />
+
+    <condition property="userOK">
+        <and>
+            <isset property="anUser"/>
+            <not>
+                <equals arg1="${anUser}" arg2=""/>
+            </not>
+        </and>
+    </condition>
+
+    <!-- =================================
+          target: usage
+         ================================= -->
+    <target name="usage" description="How to use pims-backup">
+        <echo>How to use pims-backup:</echo>
+        <echo>     ant -DanUser=_user_ [-Dforce=yes] makedbbackup</echo>
+    </target>
+
+    <!-- =================================
+          target: checkuser
+         ================================= -->
+    <target name="checkuser" unless="userOK">
+        <echo>An 'user' name is mandatory!</echo>
+        <fail message="Usage: ant -DanUser=_user_ [-Dforce=yes] makedbbackup"/>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: dumpcopydb
+         - - - - - - - - - - - - - - - - - -->
+    <target name="dumpcopydb" depends="checkuser" if="userOK" description="Dump a copy of database.">
+        <exec failOnError="true" executable="pg_dump"><arg line="-U ${db.username} --no-owner -f ${db.copy.file} ${db.name}"/></exec>
+        <echo>Database '${db.name}' copied to ${db.copy.file}</echo>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: installcopydb
+         - - - - - - - - - - - - - - - - - -->
+    <target name="installcopydb" description="Install a copy of database." depends="dumpcopydb">
+        <exec failOnError="true" executable="createdb"><arg line="--encoding UTF8 -U ${db.username} '${db.name.copied}' " /></exec>
+        <mkdir dir="${log.dir}" />
+        <echo>Installing database with ${db.copy.file}, see ${log.dir}/install-db-copy.out</echo>
+        <exec output="${log.dir}/install-db-copy.out" failOnError="true" executable="psql">
+            <arg line="-q -U ${db.username} -d ${db.name.copied} -f ${db.copy.file}" />
+        </exec>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: checkjarfile
+         - - - - - - - - - - - - - - - - - -->
+    <target name="checkjarfile" description="check if jar file exits">
+        <available file="${jarfile}" property="jarfile.exists"/>
+    </target>
+    <!-- - - - - - - - - - - - - - - - - -
+          target: filtercopydbjar
+         - - - - - - - - - - - - - - - - - -->
+    <!--this targe is based on a file created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required - Modified by AWSS                                     -->
+    <target name="filtercopydbjar" depends="checkjarfile" unless="jarfile.exists" description="create jar file">
+        <jar destfile="${jarfile}" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="org.pimslims.dbexport.FilterDataPerUser"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${basedir}/classes">
+                <include name="**/*.class"/>
+            </fileset>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/antlr-2.7.6rc1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/asm.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/c3p0-0.9.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/cglib-2.1.3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/commons-collections-3.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/commons-logging-1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/dom4j-1.6.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/ehcache-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/ejb3-persistence.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/hibernate-annotations.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/hibernate-commons-annotations.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/hibernate-entitymanager.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/hibernate3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/javassist.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/jta.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/log4j-1.2.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/pims-model.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${basedir}/lib/postgresql-8.1-405.jdbc3.jar"/>
+        </jar>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: wrightTempProperties
+         - - - - - - - - - - - - - - - - - -->
+    <target name="wrightTempProperties" description="wright temp_Properties file">
+        <echo file="${temp_Properties}">
+            db.name = ${db.name.copied}
+            db.url = jdbc:postgresql://localhost/${db.name.copied}
+            db.username = postgres
+            db.password =
+        </echo>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: filtercopydb
+         - - - - - - - - - - - - - - - - - -->
+    <target name="filtercopydb" description="Remove data not allowed to be read." depends="installcopydb, filtercopydbjar, wrightTempProperties">
+        <echo>Removing data not allowed to be read...</echo>
+        <java jar="${jarfile}" fork='true'>
+            <jvmarg value="-enableassertions" />
+            <jvmarg value="-Xms128M" />
+            <jvmarg value="-Xmx512M" />
+            <arg line="${temp_Properties} ${anUser} ${force}"/>
+        </java>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: dumpfiltereddb
+         - - - - - - - - - - - - - - - - - -->
+    <target name="dumpfiltereddb" description="Dump filtered copy of database for backup." depends="filtercopydb">
+        <exec failOnError="true" executable="pg_dump"><arg line="-U ${db.username} --no-owner -f ${db.copy.filtered.file} ${db.name.copied}"/></exec>
+        <echo>Database '${db.name.copied}' saved to ${db.copy.filtered.file}</echo>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: dropcopieddb
+         - - - - - - - - - - - - - - - - - -->
+    <target name="dropcopieddb" description="" depends="dumpfiltereddb">
+        <echo>dropdb -U ${db.username} '${db.name.copied}'</echo>
+        <exec failOnError="false" executable="dropdb"><arg line="-U ${db.username} '${db.name.copied}'" /></exec>
+    </target>
+
+    <!-- =================================
+          target: makedbbackup
+         ================================= -->
+    <target name="makedbbackup" depends="dropcopieddb" description="Make a filtered backup of database.">
+        <delete file="${db.copy.file}"/>
+        <delete file="${temp_Properties}"/>
+        <echo>Backup for ${db.name} done and saved as '${db.copy.filtered.file}' for user '${anUser}'</echo>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: forcedropcopieddb
+         - - - - - - - - - - - - - - - - - -->
+    <target name="forcedropcopieddb" description="" depends="">
+        <echo>dropdb -U ${db.username} '${db.name.copied}'</echo>
+        <exec failOnError="false" executable="dropdb"><arg line="-U ${db.username} '${db.name.copied}'" /></exec>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - -
+          target: forceinstallcopieddb
+         - - - - - - - - - - - - - - - - - -->
+    <target name="forceinstallcopieddb" description="" depends="forcedropcopieddb,installcopydb">
+    </target>
+
+</project>

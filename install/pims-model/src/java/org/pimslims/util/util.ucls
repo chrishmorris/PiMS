@@ -1,0 +1,82 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <interface language="java" name="org.pimslims.util.File" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/util/File.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="730" y="243" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.util.FileImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/util/FileImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="386" y="37" width="208" height="506"/>  
+  </class>  
+  <class language="java" name="org.pimslims.util.InstallationProperties" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/util/InstallationProperties.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="41" y="37" width="140" height="138"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.util.MessageHandler" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/util/MessageHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="221" y="37" width="125" height="154"/>  
+  </interface>  
+  <interface language="java" name="org.pimslims.metamodel.ModelObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/metamodel/ModelObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="165" y="452" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.model.core.Annotation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/Annotation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="708" y="501" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.util.FileImpl" 
+      file="/pims-model/src/java/org/pimslims/util/FileImpl.java" binary="false">      
+      <attribute name="annotation"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.Annotation" 
+      file="/pims-model/src/java/org/pimslims/model/core/Annotation.java" binary="false"/>  
+  </association>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.util.FileImpl" 
+      file="/pims-model/src/java/org/pimslims/util/FileImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.util.File" file="/pims-model/src/java/org/pimslims/util/File.java" 
+      binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.util.FileImpl" 
+      file="/pims-model/src/java/org/pimslims/util/FileImpl.java" binary="false">      
+      <attribute name="annotationObj"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.metamodel.ModelObject" 
+      file="/pims-model/src/java/org/pimslims/metamodel/ModelObject.java" binary="false"/>  
+  </association>
+</class-diagram>

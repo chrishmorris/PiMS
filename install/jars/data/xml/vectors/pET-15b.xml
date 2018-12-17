@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pET-15b Vector</name>
+    <details>N-terminal His-Tag sequence followed by a
+        thrombin site and three cloning sites</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="69661-3"
+        dataPageUrl="http://www.merck-chemicals.com/life-science-research/EMD_BIO-69661/p_uuid"
+        supplier="Novagen" />
+    <sampleComponent name="pET15b" componentCategory="Vector"
+        details="5708bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="4643"
+            endSeq="5500" />
+        <promoterDetails name="T7 Promoter" startSeq="463"
+            endSeq="479" />
+        <markerDetails
+            name="Thrombin cleavable N-term His Tag coding sequence"
+            startSeq="337" endSeq="353" details="MGSSHHHHHHSSGLVPR|GSH"
+            featureType="Tag" />
+        <markerDetails name="Multiple Cloning sites NdeI-BamHI"
+            details="NdeI-XhoI-BamHI" startSeq="319" endSeq="335"
+            featureType="MCS" />
+        <markerDetails name="NcoI cloning site for native expression -no tag"
+            details="C|CATGG" startSeq="289" endSeq="294" featureType="Cloning site" />
+        <markerDetails name="Thrombin cleavage site"
+            details="LVPR|GS" featureType="cleavage site" status="not cleaved" />
+        <markerDetails name="pBR322 origin" startSeq="3882"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression:NovaBlue[TM], JM109, DH5alpha; Expression: BL21(DE3), and BL21(DE3)pLysS"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

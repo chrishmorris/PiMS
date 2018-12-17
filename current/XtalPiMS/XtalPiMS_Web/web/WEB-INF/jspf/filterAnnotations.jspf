@@ -1,0 +1,40 @@
+<form id="ffAnnotations" action="" ><table class="list" border="0">
+	<tr>
+		<th>Barcode</th>
+		<td>
+			<input id="a_barcode" />
+		</td>
+		<th>Well</th>
+		<td>
+		  <input id="a_well" />
+		</td>
+	</tr>
+	<tr>
+		<th>Description</th>
+		<td>
+			<input id="a_description" />
+		</td><th>Date</th>
+        <td>
+            <input readonly="readonly" size="10" id="a_dateStart"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="a_dateStart_show" />
+            <input readonly="readonly" size="10" id="a_dateEnd"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="a_dateEnd_show" />
+        </td>
+		
+	</tr>
+	<tr>
+		<th>Annotator</th>
+		<td>
+			<input id="a_name" />
+		</td>
+		<th>Number of Rows</th>
+        <td>
+            <select id="a_numRows" >
+                <option value='10' selected="selected">10</option>
+                <option value='20'>20</option>
+                <option value='30'>30</option>
+                <option value='50'>50</option>
+                <option value='100'>100</option>
+            </select>
+            <input id="a_clear" type="button" value="Clear Form" />
+        </td>
+	</tr>
+</table></form>

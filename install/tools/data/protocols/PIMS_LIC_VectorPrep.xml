@@ -1,0 +1,33 @@
+<!-- LIC vector prep. protocol xml as flat file -->
+<protocol name="PiMS LIC vector preparation" objective="generate insert-compatible S/S overhangs" creationDate="14-11-06" >
+ <experimentType>LIC polymerase reaction</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="mL" refSample="LIC-prepared vector" name="LIC vector" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="A. Plasmid concentration ug/ml" parameterType="Float" label="Plasmid concentration ug/ml" />
+  <parameterDefinition id="2" name="B. Plasmid volume for 8 ug" parameterType="Float" label="Plasmid volume for 8 ug" />
+  <parameterDefinition id="3" name="C. Digest conditions" parameterType="String" label="Incubation conditions" defaultValue="
+   Incubate 37C for 2 hours" />
+  <parameterDefinition id="4" name="D. Gel purified" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="5" name="E. Linearised vector yield, pmol" parameterType="Float" defaultValue="8" />
+  <parameterDefinition id="6" name="F. Incubation conditions" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+  <parameterDefinition id="7" name="G. Final vector concentration ng/ul" parameterType="Float" label="Final vector concentration ng/ul" defaultValue="50" />
+
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000000008" unit="kg" displayUnit="ug" refSample="Purified plasmid" name="Vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -restriction" amount="0.000008" unit="L" displayUnit="uL" refSample="BseRI" name="Restriction enzyme"/>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" amount="0.000016" unit="L" displayUnit="uL" refSample="NEBuffer 2" name="Restriction buffer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" amount="0.000002" unit="L" displayUnit="uL" refSample="10x T4 polymerase buffer" name="Polymerase buffer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleotide" amount="0.000002" unit="L" displayUnit="uL" refSample="dTTP 25mM" name="dTTP" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000001" unit="L" displayUnit="uL" refSample="DTT 100mM" name="Reducing agent" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solvent" unit="L" displayUnit="uL" details="To 20ul final volume" refSample="Milli-Q water" name="Water" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -polymerase" amount="0.0000004" unit="L" displayUnit="uL" refSample="LIC qualfied T4 Polymerase" name="Polymerase"/>
+ </inputSamples>
+
+</protocol>
+

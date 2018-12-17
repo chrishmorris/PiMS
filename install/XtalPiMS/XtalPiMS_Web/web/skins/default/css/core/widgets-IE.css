@@ -1,0 +1,7 @@
+
+
+/*Something in our existing CSS makes the form items fall out of sight if the box is narrow*/
+div.narrowbox { width:80%; border:5px solid red }
+
+/* for IE7 and IE8 */
+img { -ms-interpolation-mode:bicubic }

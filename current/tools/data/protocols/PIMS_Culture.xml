@@ -1,0 +1,18 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="PiMS Culture" objective="Growth of E.coli in liquid culture" creationDate="14-11-06" remarks="Use appropriate selective medium and container"  >
+ <experimentType>Culture</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Cells" name="Culture"/>
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="2" name="Is the culture stirred?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="3" name="Is the culture labelled?" parameterType="Boolean" defaultValue="false" />
+ </parameterDefinitions>
+
+<inputSamples>
+      <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="0.025" unit="L" displayUnit="mL" refSample="Luria broth (LB)" name="Culture media" />
+      <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000025" unit="L" displayUnit="uL" refSample="Kanamycin 30mg/ml" name="Antibiotic"/>
+      <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="0.0001" unit="L" displayUnit="uL" refSample="Transformed cells" name="Innoculum" />
+</inputSamples>
+
+</protocol>

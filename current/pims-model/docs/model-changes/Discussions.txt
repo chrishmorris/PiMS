@@ -1,0 +1,749 @@
+================================================================================
+DISCUSSIONS - TOC
+================================================================================
+TARGET
+- Modifications to DbRef
+- Cohorts of constructs
+EXPERIMENT
+- SampleCategories on RefoutputSamples
+- Set up a plate, observe results in wells
+SAMPLE
+- Holders and locations
+- Sample categories
+- Sample.isStock()
+CRYSTALLISATION
+- Crystal screen data
+CORE
+- MemopsBaseClass
+- Ownership and runBy
+- PiMS and Record Level Access Control
+- Application Data
+- Simplification for Permission
+
+================================================================================
+DISCUSSIONS - TARGET
+================================================================================
+--------------------------------------------------------------------------------
+Modifications to DbRef
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 30-Aug-2007 by Susy
+
+I think your suggestion for the extra class between Target and DbRef is excellent 
+and, as you suggest would avoid unnecessary duplication where 2 targets have the 
+different e-value and %similarity to the same DbRef.  It would also make it simpler 
+to add any additional attributes which might be required at a later date.
+In fact I think we need one already -for the TargetDb Blast hits.
+
+The xml returned from Web service Blast searches contains a description element. 
+For PDB entries I think the value in this constant. e.g. 'mol:protein length:495 
+Cytochrome P450 1A2' and I had planned to put this into the DbRef.details attribute.
+
+However, for TargetDb entries, the description value is updated when the Target 
+status is updated i.e. it progresses to the next stage in the pipeline.
+e.g. Selected,Cloned,Expressed,Soluble,Purified.
+So, a TargetDb blast hit might have a different value over time.  This is represented 
+by e.g. ###########Selected, ###########Cloned, ###########Expressed etc. in the 
+description element.
+We need this information to produce Lester's TargetDb top-hits report as he 
+highlights hits where the status is Crystallized or In crystallization.
+
+I think it would make sense to have an extra attribute in the 'inbetween' class for 
+the description.
+
+Does that make sense?
+................................................................................
+PIMS-2144 Link modification between Target & DbRef
+
+--------------------------------------------------------------------------------
+Cohorts of constructs
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 28-Jul-2007 by Chris
+*** http://www.dl.ac.uk/list-archive-public/data-model-change/msg00439.html
+
+The practice at OPPF is to start work on a number of designed constructs at once. 
+After some progress has been achieved, then some more will be started.
+The people who manage the laboratory need reports grouped by these cohorts.
+
+The practice at HiTel in York is likely to be similar. This will also be the 
+practice with the Hamilton Gateway at SSPF. It seems like a sensible way to 
+run any laboratory.
+
+This suggests that we should provide a "job view" or "cohort view" for managing 
+laboratory operations. It isn't likely to be of use to a scientist, who will be 
+more interested in particular targets, but it will nevertheless be important.
+
+This seems to need a new data model class.
+On the face of things it needs fields:
+- constructs
+- startDate
+- details
+- currentStage
+- experiments or experimentGroups
+- isCompleted
+
+Does this sound right?
+................................................................................
+
+================================================================================
+DISCUSSIONS - EXPERIMENT
+================================================================================
+--------------------------------------------------------------------------------
+SampleCategories on RefoutputSamples
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 20-Feb-2008 by Marc Savitsky
+*** http://www.dl.ac.uk/list-archive-public/pims-coredvlpt/msg01859.html
+
+Issue PiMS-1508 OPPF Purification Protocol addresses an issue where the output 
+from a purification experiment (Purified Protein) usually wants to go on to the 
+next experiment (concentration), but sometimes it is not purified enough, and 
+needs to go back into a purification experinment (as Target comtaining Sample).
+
+This can be achieved by changing or adding to the category of the outputSample 
+through the sample interface, or preferably by setting the refoutputsample in 
+the protocol to belong to both sample categories.
+The DataModel doesn't allow a refoutputsample to have more than one samplecategory.  
+Chris suggested I mail the development list before discussion at the developers 
+meeting next week.
+
+................................................................................
+*** posted 20-Feb-2008 by Ed Daniel 
+
+Can the output of a purification truly be said to be both Purified Protein 
+and Target Containing Sample? It sounds as if the answer is, "Kind of, but 
+not really, it's not purified enough to be both." One of those lovely woolly ones!
+
+Perhaps a more specific way to handle this would be to modify RefOutputSample 
+to have a "passed" and a "failed" SampleCategory. This would prevent users from 
+being able to enter the next experiment on the basis of a failed purification - 
+OutputSamples from failed purifications would then inherit the "failed" 
+SampleCategory, and simply wouldn't be available as inputs to a concentration 
+experiment because they weren't Purified Protein. Allowing the OutputSample to 
+be in both categories doesn't afford that protection.
+
+That may be complicated, because it would tie back into experiment:status 
+and possibly whether a milestone is achieved, but I think it's a more accurate 
+representation of what's actually going on. Can it work, in practice?
+
+................................................................................
+*** posted 22-Feb-2008 by Chris Morris
+
+Another possibility occurs to me.
+
+The problem is this:
+- the normal output of purification is "Purified protein"
+- the normal input of purification is "Transformed cells"
+- transformed cells are certainly not suitable for use as an input for crystallogenesis
+- sometimes, the output from purification must be purified again
+
+There are a few other similar cases of potential loops in the workflow. We have 
+discussed dealing with this by marking the output with two sample categories.
+
+Another approach would be to have two different input samples for a purification, 
+where usually only one is used. So the user would provide either some transformed cells,
+or some purified protein, or occasionally could provide both.
+
+What are the advantages and disadvantages of this?
+................................................................................
+
+--------------------------------------------------------------------------------
+Set up a plate, observe results in wells
+--------------------------------------------------------------------------------
+................................................................................
+*** posted by Chris on 28/07/2007
+*** http://www.dl.ac.uk/list-archive-public/data-model-change/msg00440.html
+
+The distinction that is about to be made between set up parameters 
+(e.g. annealing temperature) and results (e.g. OD) is going to help improve the 
+usability of the support for experiments.
+It seems to me that one other change would be useful. Results belong to a particular 
+well. The set up parameters seem to belong to the whole plate.
+There's one apparent exception to this, which is a temperature gradient PCR.
+But this isn't arbitrary temperatures for each well: it can be recorded as a 
+gradient for the experiment group.
+This would mean that a non-plate experiment would have to be recorded as a 
+experiment in a singleton group.
+I think this overhead would be more than compensated by the saving in storing 
+plate experiments.
+................................................................................
+
+
+================================================================================
+DISCUSSIONS - SAMPLE
+================================================================================
+--------------------------------------------------------------------------------
+Holders and locations
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 22-Apr-2008 by Chris Morris
+*** http://www.dl.ac.uk/list-archive-public/pims-coredvlpt/msg01980.html
+
+At present there is a lot in common between "holders" and "locations".
+You can move a box of plates from one fridge to another. A fridge seems like a 
+"location", in the sense that it is rarely moved, and plate seems like a "holder", 
+in the sense that it contains samples, and is often moved. But it seems a little 
+arbitrary that a box of plates is a "location". A location can have a "parent 
+location", a slightly odd term.
+
+The data model for holders and locations is exactly parallel.
+
+I wonder if it would be better to come down to a single concept, "container". 
+A container can "be contained by" other containers, and can "contain" both 
+samples and containers.
+
+Would that be more straightforward?
+
+................................................................................
+*** posted 22-Apr-2008 by Ian Berry
+
+That's the way that it is done within ehtpx!
+Although you do need some additional information (e.g. address for a location, 
+pin length for a pin, etc), but they can all inherit from the container object 
+(which makes adding containers to containers, etc. quite neat.
+You do end up having to give a type to a container (in ehtpx its called a containerType), 
+and then define a hierarchy showing what types can be contained within what types of 
+container so that you can give sensible options on the gui level.
+You then might also want to know how many of each type of container a container can 
+contain, in ehtpx I call this containerCapacity - remember that this is a run time value 
+not a fixed parameter - a container of type plate may be able to contain 24 samples, 96 
+samples, 288 or more samples depending on the type (or perhaps this is a function of type, 
+but that depends whether you want lots of containerTypes or not)
+I go as far as saying that a sample is also a container (crystal drop) as it can contain 
+crystals which contain chemicals, etc. etc... but I suspect that might be going too far for pims!
+
+................................................................................
+*** posted 27-Apr-2008 by Peter Troshin 
+
+It looks to me a bit odd to name a room as a container. I think that location 
+should be anything which cannot be moved, like a room, and then a container is 
+everything else e.g. fridge, plate, box, etc. It would help though if we rename 
+holder to container as fridge can be seen as a container easier than as a holder.
+
+If we assume that the location is something that cannot be moved, this will 
+essentially change the majority of locations, at least recorded within MPSI 
+database, to containers.
+
+................................................................................
+*** posted 28-Apr-2008 by Bill Lin
+
+It seems to me that we should add a boolean attribute "movable" in holder. So 
+every location is a holder but some may not be movable.
+
+................................................................................
+*** posted 28-Apr-2008 by Susy Griffiths
+
+I can see a potential problem here. A well isn't movable by itself but the 
+plate it is part of is.
+
+................................................................................
+*** posted 28-Apr-2008 by Jon Diprose
+
+Surely the sample's holder is the plate? I didn't think there is a holder for 
+each individual well.
+
+................................................................................
+*** posted 12-May-2008 by Anne Pajon
+
+You may need a holder for each individual well if you have more than one sample 
+per well like for crystallization plate. If you want to specify the location of 
+every drop samples, you can use an holder for the well.
+................................................................................
+
+--------------------------------------------------------------------------------
+Sample categories
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 21-Feb-2008 by Chris Morris
+*** http://www.dl.ac.uk/list-archive-public/pims-coredvlpt/msg01867.html
+
+I don't think that category "Target containing Sample" has proved useful in it's 
+original purpose.
+
+In the case described below, the sample is known to be protein. Would "Expressed 
+Protein" be a suitable name for this category?
+................................................................................
+
+--------------------------------------------------------------------------------
+Sample.isStock()
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 09-Aug-2007 by Chris
+*** http://www.dl.ac.uk/list-archive-public/data-model-change/msg00441.html
+
+Scientists refer to the product of an experiment, which contains target, as a "sample".
+They refer to the result of mixing standard reagents as a "stock solution".
+PiMS should display these in different ways. The data model records them both in the Sample table.
+This email is to record a suggestion (not mine) that we add a column isStock to Sample.
+This has lots of merits: it is simple, and needs no join in the query.
+It also deals with some complications.
+We may decide to record the act of mixing as an experiment, although at present we don't.
+At present, PiMS may fail to record the target for an experiment, though this will be fixed 
+when support for primers is unified, (hopefully in 1.3).
+There are some preparations which are identical to experiments that process targets but 
+which are performed with no target, e.g. during LIC: it isn't yet clear what to call preparation products.
+................................................................................
+
+================================================================================
+DISCUSSIONS - CRYSTALLISATION
+================================================================================
+--------------------------------------------------------------------------------
+Crystal screen data
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 06-Nov-2007 by Jon
+
+As you may know, the OPPF is committed to having Nautilus turned off, or at 
+least sidelined, by the end of the year. The remaing task that it deals with 
+is the setup side of our crystal trials. Now that PIMS1.3 is out, I'm going 
+to start getting that data in.
+
+I know lots of work has previously been done on loading crystal screens. Can 
+anyone point me to any existing code? It seems to have (quite rightly) been 
+ditched from current.
+
+................................................................................
+*** posted 08-Nov-2007 by Susy
+
+you may already know this but there is some (not much) screen data in:
+http://cselnx4.dl.ac.uk/svn/pims/crystallization/screens/data/
+and
+http://cselnx4.dl.ac.uk/svn/pims/crystallization/crystalfarm/nki-screens/xtalhit-screenexport/screens/
+as far as I know, Tassos' lab are doing this work.
+I think I have some more screen.xml files but I don't know if they match the schema used for the other screens.
+................................................................................
+
+================================================================================
+DISCUSSIONS - CORE
+================================================================================
+--------------------------------------------------------------------------------
+MemopsBaseClass
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 12-Mar-2008 by Chris Morris
+*** http://www.dl.ac.uk/list-archive-public/data-model-change/msg00444.html
+
+I think we need more thorough discussion before modifying MemopsBaseClass.
+
+The issues I see are:
+
+- we need to distingish between "experimental data" (often updated, owned, 
+usually private) and "reference data" (rarely updated, controlled, shared). 
+Reference data does not need to subclass MemopsBaseClass. This would simplify 
+the database a great deal.
+
+- we need to be able to annotate experimental data flexibly. We have ad hoc 
+solutions, e.g. we can add a file to an experiment but not to a sample, some 
+tables have "description" and some do not. Perhaps MemopsBaseClass should be 
+renamed LabBookEntry.
+
+- in the long term, we need an audit trail. We have some ad hoc features like 
+Experiment.creator, but probably need to be able to view "Last week's database" 
+and see who made changes. We could begin by exposing the Oracle audit trail, 
+and then look at adding those features to the Postgres implementation.
+
+If a change is essential to xtalPiMS in the short term then this would mean a fork.
+
+................................................................................
+*** posted 12-Mar-2008 by Jon Diprose
+
+Whilst I agree in principle that there is a real distinction to be made between 
+reference data and experimental data, I don't in practice find the distinction 
+easy to formalise.
+
+I agree that there is a difference in mutation rate but I'm less convinced that 
+there is a difference in ownership or access control, particularly if more than 
+one independent group uses the same instance of PiMS. Similarly, reference data 
+items may be just as deserving of associated files and descriptions as 
+experiments and samples.
+
+Auditing is actually a really sticky problem in our architecture. Because we 
+always connect to the database as the hibernate user, the most complete audit 
+trail - the rdbms's transaction logs - only tells us what change is being made, 
+not who is making the change. We have to match our db sessions up to http 
+requests, which is likely to be difficult on a heavily used system. The other 
+issue with the transaction logs is that they audit at a level of detail that 
+may significantly exceed what we are after.
+
+Ian and I have talked about using an event-based audit trail as an alternative. 
+When the data access layer detects that a change is occurring to an audited 
+component, it fires an event reporting the relevant information (eg who, what 
+object, c/r/u/d, old value, new value). A listener receives the event and writes 
+the details to the data store. The data access layer already knows that a change 
+is occuring. We would need to add the code to detect whether an audit event 
+should be fired for that particular change. An appropriate implementation of 
+that code could allow auditing of all changes by a particular user, or all changes 
+to a particular class of model object, or only inserts, or whatever logic we 
+chose to code. It would be straight forward to make the level of auditing 
+admin-configurable.
+
+See http://www.hibernate.org/318.html for some ideas.
+
+................................................................................
+
+--------------------------------------------------------------------------------
+Ownership and runBy
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 12-Mar-2008 by Ian Berry
+*** http://www.dl.ac.uk/list-archive-public/data-model-change/msg00442.html
+
+I would like to add an "runBy" field to be added to experiment/experiment group 
+to let us record who has performed the experiment (which in crystallization is 
+often a technician, so the owner will want to know who to blame when it goes wrong!)
+
+In addition to cover ownership, Jon and I suggest adding a person and a group 
+to memopsbase class to show who actually owns the object (so you know who to 
+contact if it gets smashed or something)
+
+................................................................................
+*** posted 12-Mar-2008 by Jon Diprose
+
+The two points are nominally separate but are actually joined by my lack of 
+understanding of what the access control implementation allows.
+
+The situation we are trying to describe is one where one person performs an 
+action on behalf of another. The key example for us is where a technician 
+performs a crystallization setup action on behalf of a crystallographer. We 
+want to be able to record who actually performed the action and for whom it was 
+performed.
+
+The action gets recorded as an Experiment. As far as I can see, we are currently 
+able only to record one of these people, in the Experiment.creator field.
+
+Who "created" this experiment? One can argue both cases: that the technician 
+created the experiment because he/she actually performed the action; and that 
+the crystallographer created the experiment when he/she designed the 
+crystallization trials. Certainly, it is typical for the crystallographer to get 
+all of the credit. If we store the crystallographer as the creator, where do we 
+store the technician?
+
+For crystallization, we are often dealing with plates and hence 
+ExperimentGroups. Having this information available on ExperimentGroup saves a 
+couple of lookups. Having said that, I'm struggling to see how to find an 
+ExperimentGroup given a Holder without having to go via the Experiments anyway. 
+I need to have a good look round the current plate experiment code to get a 
+better understanding of how ExperimentGroups are being used.
+
+I don't see how our current implementation of access control conveys the concept 
+of ownership. The access control implementation assigns a specific access 
+permission on an object to a group of users. There does not appear to be an 
+"owner" permission. Write permission does not imply ownership. I would also 
+argue that ownership does not imply write permission, and consequently that 
+ownership and access control are independent concepts. I think it probably is 
+appropriate for the owner to be a group of users, so the implementation is 
+likely to be similar. I would suggest an additional one-to-many relationship 
+that identifies a UserGroup as the owner of an object.
+
+As Chris points out, the concept of ownership probably does not apply equally to 
+all subclasses of MemopsBaseClass. However, it is not obvious to me that there 
+is an objective distinction to be made and, even if there were, I am not keen 
+on the idea of introducing another layer of inheritance hierarchy to implement 
+that distinction. Making the change to MemopsBaseClass is the simplest way of 
+changing all the subclasses in one go. I think that the addition of the 
+relationship described above is actually a relatively minor change.
+
+................................................................................
+*** posted 14-Mar-2008 by Chris Morris
+
+There are a number of good points here which I'd like to think about more.
+
+In regard to the specific, pressing, question, I suggest that the technician is 
+the creator of the crystallogenesis experiment, and that the scientist is 
+associated with the target.
+
+................................................................................
+
+--------------------------------------------------------------------------------
+PiMS and Record Level Access Control
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 26-Feb-2008 by Jon Diprose
+
+I spent an interesting half day looking into record level access control and 
+have written a little report on what I found. The report is attached.
+
+I have two main reasons for doing this: firstly, for xtalPiMS I need to do some 
+minorly fiendish joins and would really like to use Hibernate funtionality 
+without reimplementing access control myself; and secondly, I think our current 
+implementation has a security leak when doing a join (no access control applied 
+other than to the primary data model class).
+
+I'll see if I can mock up a little demo for postgres and let you know how I get 
+on.
+
+................................................................................
+*** posted 27-Feb-2008 by Bill Lin 
+
+About the access control itself, I do agree we have a security hole and Jon's 
+suggestion is a good way to solve it.
+However, the risk caused by this hole is low and the cost to improve it is very 
+high.
+I suggest we discuss and consider it later.(after v3.0?)
+
+Running a provided HQL, as asked by Jon, need to reimplement not only access 
+control but also paging, sorting and parameter binding.
+
+In mine mind, it is hard to test/reuse/maintain/understand.
+That is why I suggest using Sub-Criteria instead.
+
+................................................................................
+
+
+--------------------------------------------------------------------------------
+Application Data
+--------------------------------------------------------------------------------
+................................................................................
+*** posted 30-Nov-2007 by Jon Diprose
+*** http://www.dl.ac.uk/list-archive-public/pims-coredvlpt/msg01711.html
+
+Application data does have an intended use: to store data relevant to 
+applications other than laboratory information without requiring those 
+applications to modify the data model. For example, xtalPIMS intends to use 
+application data attached to user objects to store user interface preferences. 
+Whilst it isn't likely to be used for many of the data model classes, there are 
+definitely several for which I can see potential uses - user, sample, refsample, 
+experiment, experiment_group and holder. It does not appear to cost us much to 
+keep it and if it were removed from the data model we would probably have to put 
+something similar back in for the classes mentioned above.
+
+If we use application data in this way, the database will be very difficult to 
+manage and maintain.
+Thus, in my [Bill's] view, it should only be a middle&temp step.
+
+Bill, could you provide more information to justify that statement? What makes 
+you think it will be difficult to manage and maintain?
+
+I see a need for this type of functionality, so it would be useful to know what the problems are likely to be.
+
+................................................................................
+*** posted 30-Nov-2007 by Bill Lin
+
+The main problem currently is lack of document about: what kind of data is 
+there, why it is there, what kind of relationship it has with other data and 
+how to use it. The consequence is they are easily be ignored or misused.
+
+If you clearly define above information, you can turn it into proper DM.
+
+A proper DM can enhance the rules/info defined in above information and protect 
+us to from lot of mistakes.
+
+
+................................................................................
+*** posted 30-Nov-2007 by Jon Diprose
+
+The available data types are limited to the available AppData... subclasses.
+
+The application data classes and the data stored in application data objects are 
+for use by non-PIMS applications that make use of the PIMS data model.
+
+The relationship is as stated in the data model - it is additional data attached 
+to a specific data model object.
+
+My non-PIMS application uses the additional data to enhance its representation 
+of that object. The data is only relevant to my application. How I (mis)use that 
+in my application is entirely up to me.
+
+For the example of xtalPIMS, I might want a user-preference flag to record 
+whether the user wants to be notified by email every time one of their plates 
+gets imaged. I can store that as an AppDataBoolean in the xtalPIMS namespace, 
+attached to the relevant user record.
+
+I could model fully all the additional data items my application needs but then 
+a) the PIMS DM gets polluted with stuff that is only used by my application and 
+b) I have to sit around for several months whilst my application-specific model 
+gets included into PIMS model.
+
+
+................................................................................
+*** posted 30-Nov-2007 by Bill Lin
+
+These are general decription about appData and all of us know it. However, for 
+each specific case, we need specific documentation.
+
+I am entiely focus on pims' DM which is used by pims's code. It seems your case 
+is out of pims' scope.
+
+Even your case is out of pims' scope, I still suggest you put additional data in 
+a normal way without using appdata. Eg: install additional 
+table/column/constraint on top of pims' database.
+
+
+................................................................................
+*** posted 30-Nov-2007 by Jon Diprose
+
+I disagree - neither PIMS nor the PIMS developers need to know anything about my 
+application's use of data specific to the application.
+
+Which is exactly what application data was created for - to allow non-PIMS 
+applications to store application-specific information in a PIMS database 
+without impacting on PIMS.
+
+I'll be very happy to do that if the PIMS team will commit to supporting my 
+modified data model!
+
+I know that sounds like a joke comment, but it really is an important issue. 
+Yes, I could modify the data model and regenerate the hb layer. Who is 
+responsible for ensuring that my data model changes get persisted through an 
+upgrade cycle? What happens if one of my modifications conflicts with a future 
+official PIMS data model update? Who is responsible for ensuring the next 
+upgrader doesn't just strip out my data? Who is responsible for ensuring the 
+code generation machinery accurately reflects my new constraints? I don't want 
+to branch the data model, I just want to add a few application-specific data 
+items on top of what is already there.
+
+Application data provides a simple mechanism to allow me to add 
+application-specific extensions to existing data model classes that I can access 
+using the standard pims data access layer. PIMS itself has no interest in or 
+dependency upon the data I choose to store - its only relevant to my 
+application. All I expect from PIMS is that the data acces layer allows me to 
+access it and that the upgrader doesn't remove it from the data model object to 
+which it is attached. The only issue I can envisage is if the data model object 
+is itself being deleted as part of an upgrade, which is unlikely if its actively 
+in use.
+
+I still don't see why the existence of the ApplicationData data model classes 
+make the data model any harder to manage or maintain. Creating and maintaining 
+a derivative data model, on the other hand, will certainly be harder to manage 
+and maintain.
+
+
+................................................................................
+*** posted 30-Nov-2007 by Bill Lin
+
+I think we are misunderstand each other here. Let me clarify it:
+
+What I mean is: If pims' developers using appData, they should give specific 
+document and publish it. Actually, most of my discuss is focus on this. 
+(It seems we do not use it anymore. I hope I am correct.)
+
+If external developers using it, they should have this document for themselves.
+
+"out of pims' scope" means, non-PIMS's developers should make sure their 
+appData is correct and up-to-date by themselves.
+
+Of cause, this is not possible.
+
+I agree: "Application data provides a simple mechanism..." But keep in mind, 
+non-PIMS developer maintain the Application data by themselves. When they put 
+big and complex data into it, it will be troublesome.
+
+I hope this discuss is helpful.
+
+................................................................................
+
+--------------------------------------------------------------------------------
+Simplification for Permission
+--------------------------------------------------------------------------------
+................................................................................
+*** posted by Chris on 15/06/2007
+*** http://www.dl.ac.uk/list-archive-public/data-model-change/msg00430.html
+
+At the moment the Permission table has three columns we don't use: 
+permissionclass, rolename and permission (always TRUE in our database). I 
+suggest dropping them.
+
+The value in Permission.optype is always one: "create", "read", "update",  
+"delete"
+It would be better to have four columns containing either 0 or 1. Then (accessid, 
+usergroupid) would become a key to the table.
+
+If we do that then a single join can get all experiments that the current user 
+can read, together with an indication of the delete and update permissions:
+select max(Permission.mayUpdate) as mayUpdate, max(Permission.mayDelete)
+as mayDelete, Experiment.*
+   from Experiment, User2UserGroup, Permission
+   where Experiment.accessid = Permission.accessid
+   and Permission.read = 1
+   and Permission.usergroupId = User2UserGroup.usergroupId
+   and User2UserGroup.userid = $userid -- the dbid of the record for
+the current user
+   group by Experiment.id
+
+................................................................................
+*** posted 15-Jun-2007 by Bill
+
+I agree that our access control has lot of problems:
+For Permission of reading, following bugs are likely happen
+(1) rv.findall(target.class,1,10) can not guarantee 10 results will return as 
+some targets may be blocked by access.
+(2) rv.findfirst(taget.class) may return null same reason as above.
+(3) something like: target.getCitations().getTargets() will ignore access 
+control at all!! It is because getXXX() is not through PIMS rv.
+
+(sorry, I haven't create test cases yet)
+We also have similar defects in update and delete, I beileve.
+
+Choice one:
+Add and enable "hibernate data filter" which should filte the data by some sqls 
+as Chris suggested,
+Reference:
+http://www.hibernate.org/hib_docs/v3/reference/en/html/filters.html
+"java persistence with hibernate" chapter 12 (revised edition of hibernate in action)
+
+We can do it by:
+1, add following element into Hibnerate-mappings
+<filter-def name="readableItemsByUserid">
+<filter-param name="currentUserID" type="long">
+</filter-def>
+
+2, add following element into memopsBaseClass-mappings or any class we want to 
+put under access control
+<filter name="readableItemsByUserid"
+condition="1==( select Permission.read from User2UserGroup, Permission
+where accessid = Permission.accessid
+and Permission.usergroupId = User2UserGroup.usergroupId
+and User2UserGroup.userid = $userid )
+"/>
+
+3, enable the filter when open a rv:
+filter =session.enableFilter("readableItemsByUserid");
+filter.setParameter("currentUserID", rv.getUser().getDbId());
+This will solve above 3 bugs of "read Permission" I beileve. And if all class 
+under access control have a same super class, then we only need to declare it once.
+
+However, it seems to me that "hibernate filter" can not apply on update and delete
+
+Choice two:
+Using Custom SQL for create, update and delete
+Reference:
+http://www.hibernate.org/hib_docs/v3/reference/en/html/querysql.html 16.3
+We will need something like following for each class under access control and 
+replace <sql-insert> <sql-update> <sql-delete> by what Chris suggested.
+
+<class name="Person">
+<id name="id">
+<generator class="increment"/>
+</id>
+<property name="name" not-null="true"/>
+<sql-insert>INSERT INTO PERSON (NAME, ID) VALUES ( UPPER(?), ? )</sql-insert>
+<sql-update>UPDATE PERSON SET NAME=UPPER(?) WHERE ID=?</sql-update>
+<sql-delete>DELETE FROM PERSON WHERE ID=?</sql-delete>
+</class>
+
+The problem will be we need to add an additional attribute (can put it into a 
+super class) "currentuser" to pass the current user id into Custom SQL.
+
+................................................................................
+*** posted 01-May-2008 by Jon Diprose
+
+I just found a copy of this when poking around on the google sites thingy.
+
+I am very much in favour of the suggested dm changes.
+
+For one of the things I'm starting to use PiMS for, I have two categories of 
+usergroups - project members and site admins. There are many project member 
+groups and a single site admins group. Project member groups have read and 
+update permissions; the site admins group has read, update and delete 
+permissions. These changes would cut down the number of permission records that 
+need managing from 5 to 2.
+
+I am using permissionclass to distinguish permissions for project member groups 
+from permissions for the site admins group, to make it easier for me to manage 
+the permissions - it saves me from having to look up the usergroups and figure 
+out which is which. However, it would not be difficult for me to do without, 
+especially with the number of permissions reduced.
+
+................................................................................
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pUC8 Vector</name>
+    <details>Cloning and expression vector, Ampicillin resistance</details>
+    <sampleCategory>Vector</sampleCategory>
+    <sampleComponent name="pUC8" componentCategory="Vector"
+        details="2665bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Cloning Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="864"
+            endSeq="1724" />
+        <promoterDetails name="Lac Promoter" startSeq="142"
+            endSeq="171" />
+        <markerDetails name="LacZ_a" startSeq="278" endSeq="421"
+            featureType="Reporter gene" />
+        <markerDetails name="Multiple Cloning sites EcoRII-HindIII"
+            details="EcoRI-SmaI-BamHI-SalI-PstI-HindIII"
+            startSeq="230" endSeq="265"
+            featureType="MCS" />
+        <markerDetails name="pBR322 origin" startSeq="1879" endSeq="2498"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="JM83, JM105"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

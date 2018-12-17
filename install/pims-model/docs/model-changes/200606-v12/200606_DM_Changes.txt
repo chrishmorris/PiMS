@@ -1,0 +1,39 @@
+﻿DATA MODEL CHANGES
+
+
+PACKAGES
+x Remove association contactPerson from AbstractHolderType to Person
+x Remove import link between Holder & People
+x Remove import link between Sample & Location
+x Change import link between People & AccessControl (turn around)
+
+CHEMCOMP PACKAGE
+x ccp.ChemComp.ChemCompVar.descriptor.descriptor_format_rule.
+   Equivalent code needs to be added ot the java version.
+     if not self.chemComp.isLinearPolymer:
+       print("Malformed descriptor %s: only linear polymer ChemComps may have 'link' descriptors" % (value,))
+       isValid = False
+       break
+
+EXPBLUEPRINT PACKAGE
+x Change the role name blueprintStatuss in ccp.api.ExpBlueprint.ExpBlueprint to blueprintStatus
+
+DBREF PACKAGE
+x Changed DbRef.code to be non-mandatory
+
+TARGET PACKAGE
+x Removed association protTargets from Target to Molecule
+x Removed association nucTargets from Target to Molecule
+x Created association protTargets from Target to MolComponent
+x Created association nucTargets from Target to MolComponent
+x Removed import dependancy from Target to Molecule
+x Created import dependancy from Target to RefSampleComponent
+
+CRYSTALLIZATION PACKAGE
+x Rename attribute mineType in class Image to mimeType
+
+PROTOCOL PACKAGE
+x Created ccp.api.Protocol.ParamDefType as a copy of ccp.Method.ParamType with
+  some extra options - Filename, DateTime, Interval, InputSample, OutputSample,
+  Instrument
+x Changed type of ParameterDefinition.paramType to ParamDefType

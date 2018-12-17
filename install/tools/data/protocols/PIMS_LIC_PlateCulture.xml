@@ -1,0 +1,20 @@
+<!-- Plate culture for LIC protocol xml as flat file -->
+<!-- Don't know how to record agar plate -->
+<protocol name="PiMS LIC Plate culture" objective="Growth of isolated colonies" creationDate="14-11-06" remarks="use appropriate pre-warmed selective agar support" details="Parameter number of isolated colonies defined for output from protocol">
+ <experimentType>Dish culture</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="" displayUnit="" refSample="Cells" name="Colonies" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="A. Number of colonies" parameterType="Int" minValue="0" />
+  <parameterDefinition id="2" name="B. Growth conditions" parameterType="String" defaultValue=
+  "Plate out and incubate overnight at 37C" />
+  <parameterDefinition id="3" name="C. Plate type" parameterType="String" defaultValue="LB agar plus 30ug/ml kanamycin" /> 
+  <parameterDefinition id="4" name="D. Colony size" parameterType="String" minValue="1mm" defaultValue="2mm"/>
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="0.00015" unit="L" displayUnit="uL" refSample="Transformed cells" name="Cells" />
+ </inputSamples>
+
+</protocol>

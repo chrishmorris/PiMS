@@ -1,0 +1,19 @@
+<!-- CS Crystal Harvest protocol xml as flat file -->
+<protocol name="CS Crystal Harvest" objective="Mounting a crystal onto a pin" creationDate="23-05-08" remarks="Based on Lab activities requirements from OPPF" details="Purification of Target Protein">
+ <experimentType>Mount crystal</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Crystal Hits" name="Crystal Hit" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Mounted Crystal" amount="0.0" unit="L" displayUnit="uL" refSample="Crystal Hits" name="Mounted Crystal" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Cryroprotectant" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Cryo concentration" parameterType="Float" isMandatory="false" />
+  <parameterDefinition id="3" name="Other Additives" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="4" name="Soak Time" parameterType="Float" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>
+

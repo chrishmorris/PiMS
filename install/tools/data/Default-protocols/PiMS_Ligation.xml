@@ -1,0 +1,20 @@
+<!-- PiMS Ligation protocol xml as flat file -->
+<protocol name="PiMS Ligation" objective="Ligation of PCR product (Insert) with Linearised Vector" creationDate="04-03-09" remarks="Default set of protocols for PiMS" details="" >
+ <experimentType>Ligation</experimentType>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL" refSample="Linearised vector" name="Linearised vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="Insert" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Possible clone" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Buffer type" label="Ligation buffer" parameterType="String" defaultValue="" />
+  <parameterDefinition id="2" name="Enzyme" label="Ligase used" parameterType="String" defaultValue="Quick Ligase" />
+  <parameterDefinition id="3" name="Incubation conditions" label="Details of the ligation reaction" parameterType="String" defaultValue="" ismandatory="false" />
+  <parameterDefinition id="3" name="Total Volume (uL)" label="Volume of the ligation reaction" parameterType="Float" defaultValue="21" />
+ </parameterDefinitions>
+
+</protocol>
+

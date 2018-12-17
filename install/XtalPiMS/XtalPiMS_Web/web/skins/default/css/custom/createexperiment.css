@@ -1,0 +1,11 @@
+
+@CHARSET "UTF-8";
+
+
+/***************************
+ * Create experiment
+ ***************************/
+div#expt_createexperiment { width:35em; }
+div.expt_createform { padding:0 2em 1em 2em; } 
+
+div.expt_createform form { background-color:transparent; width:auto; padding-left:1em; padding-right:1em; }

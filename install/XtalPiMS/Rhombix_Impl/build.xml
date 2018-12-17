@@ -1,0 +1,168 @@
+<!-- 
+
+Builds the job to import images from Rhombix.
+
+-->
+<project default="importer.jar" name="pims Rhombix interface" basedir="."
+	xmlns:ora="antlib:net.sf.incanto"
+	>
+
+    <!-- Properties -->
+    <property file="build.properties"/>
+
+    <!-- log -->
+    <property name="log.dir" location="${basedir}/log" />
+
+    <!-- jars directory -->
+    <property name="importer.file" value="${basedir}/build/pims-Rhombix-importer.jar" />
+    <property name="jars" value="../../current/jars" />
+
+
+    <!-- web -->
+	<property name="keystore" value="${basedir}/conf/.keystore" />
+
+    <!-- java -->
+    <property name="java.src" location="${basedir}/src" />
+    <property name="test.src" location="${basedir}/TestSource" />
+    <property name="classes" location="${basedir}/bin" />
+    <property name="testClasses" location="${basedir}/testClasses" />
+    <property name="lib.path" location="${basedir}/lib" />
+    
+
+
+    <!-- ............................................................ -->
+    <!-- java classpaths.                                             -->
+    <!-- ............................................................ -->
+
+    <!-- First, the production classes -->
+    <path id="instrument.classpath">
+        <pathelement location="${classes}" />
+    </path>
+
+    <!-- add libraries -->
+    <path id="project.classpath">
+        <path refid="instrument.classpath" />
+
+    	<pathelement location="${basedir}/conf" />
+        
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <!-- add test classes -->
+    <path id="test.classpath">
+        <path refid="project.classpath" />
+        <pathelement location="${testClasses}" />
+    </path>
+    <property name="ant.reuse.loader" value="true" /> 
+    
+    
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+    <!-- Compile web application -->
+    <target name="compile" depends="clean">
+        
+        <!-- compile the command line tools -->
+        <javac srcdir="${basedir}/src" destdir="${classes}" target="1.5" source="1.5" debug="on" encoding="UTF-8"
+        >
+            <classpath refid="project.classpath" />
+        </javac>
+    </target>
+	
+   
+    
+    <!-- ============================================================ -->
+    <!-- Test case tasks.                                             -->
+    <!-- ============================================================ -->
+    <target name="compileTest" depends="compile">
+        <javac srcdir="${test.src}" destdir="${testClasses}" target="1.5" source="1.5" deprecation="false" debug="on" encoding="UTF-8">
+            <classpath refid="test.classpath" />
+        </javac>
+    </target>
+
+    <target name="test" depends="compileTest">
+        <emma enabled="true">
+            <instr instrpathref="instrument.classpath" mode="overwrite" metadatafile="${instr.dir}/metadata.emma" merge="true">
+                <!--
+                    Could have <filter value="${emma.filter}" />
+                -->
+            </instr>
+        </emma>
+        <junit haltonfailure="true" haltonerror="true" fork="true" dir="${basedir}" forkmode="once">
+            <jvmarg value="-server" />
+            <jvmarg value="-enableassertions" />
+            <jvmarg value="-Xms512m" />
+            <jvmarg value="-Xmx512m" />
+            <jvmarg value="-Demma.coverage.out.file=${instr.dir}/coverage.emma" />
+            <jvmarg value="-Demma.coverage.out.merge=false" />
+            <classpath refid="test.classpath" />
+            <formatter type="brief" usefile="false" />
+            <test name="org.pimslims.AllToolsTests" />
+            <sysproperty key="TestingDataPath" value="${data.src}"/>
+        </junit>
+        
+    </target>
+
+   
+	
+     <target name="importer.jar">
+     	<jar index="true" jarfile="${importer.file}" basedir="${classes}" excludes="META-INF/SUN_MICR.*" 
+     		filesetmanifest="mergewithoutmain"
+     		> 
+        
+            
+            <zipfileset src="${basedir}\lib\pims-model.jar" />
+            <zipfileset src="${basedir}\lib\pims-lib.jar" />
+            <zipfileset src="${basedir}\lib\ojdbc14.jar" />
+            <zipfileset src="${basedir}\lib\xtalPiMS_API.jar" />
+            <zipfileset src="${basedir}\lib\xtalPiMS_PiMSImpl.jar" />
+     		<!-- These ones may be needed to run under Java 1.5 
+            <zipfileset src="${basedir}\lib\jaxp-api.jar" />
+            <zipfileset src="${basedir}\lib\jaxp-ri.jar" />
+            <zipfileset src="${basedir}\lib\jaxb-api.jar" />
+            <zipfileset src="${basedir}\lib\activation.jar" />
+            <zipfileset src="${basedir}\lib\jaxb-impl.jar" /> -->
+     		
+     	    <manifest>
+     	      <attribute name="Main-Class"
+     	            value="org.pimslims.rhombix.command.MplImporter"/>
+     	    </manifest>
+
+        </jar>
+        
+   	  <!-- <copy overwrite="true" verbose="true" file="${jar.file}" tofile="../jars/pims-Rhombix-importer.jar" /> -->
+        
+    </target>
+    
+    <target name="oradump">   
+        <ora:expdp 
+            failOnError="true" logon="${db.username}/${db.passwordd}"          
+            >
+            <![CDATA[
+            schemas=pimsadmin
+            directory=data_pump_dir
+            dumpfile=pims-database-withrefdata.ora.dmp
+         ]]>
+        </ora:expdp>
+    </target>
+    
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+    <!-- Clean temp directories -->
+    <target name="clean">
+        <delete dir="${classes}" />
+        <mkdir dir="${classes}" />
+        <delete dir="${testClasses}" />
+        <mkdir dir="${testClasses}" />
+    </target>
+	
+    <target name="cleanLog" description="Clean log dirrectory.">
+        <delete dir="${log.dir}" />
+        <mkdir dir="${log.dir}" />
+    </target>
+
+    <!-- TODO commit, deploy, install conf/Properties  -->
+</project>

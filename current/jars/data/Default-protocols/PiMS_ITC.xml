@@ -1,0 +1,27 @@
+<!-- PIMS ITC protocol xml as flat file -->
+<protocol name="PiMS ITC" objective="Derive ligand binding data" creationDate="11-05-10" remarks="Default set of protocols for PiMS" details="Isothermal Titration Calorimetry" >
+ <experimentType>Characterisation</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="DeltaH" label="Enthalpy change" parameterType="Float" displayUnit="joules" isMandatory="false" />
+  <parameterDefinition id="2" name="DeltaS" label="Entropy change" parameterType="Float" displayUnit="joules/kelvin" isMandatory="false" />
+  <parameterDefinition id="3" name="Resulting curve attached?" label="Is the resulting curve attached to this Experiment record?" parameterType="Boolean" defaultValue="false" isMandatory="false" />
+  <parameterDefinition id="4" name="Estimated Kd" label="Estimated Kd value" parameterType="Float" displayUnit="uM" isMandatory="false" />
+  <parameterDefinition id="5" name="Estimated Stoichiometry" label="The estimated stoichiometry of the interaction" parameterType="Float" displayUnit="N" isMandatory="false" />
+  <parameterDefinition id="6" name="Ligand Concentration" label="Concentration of the ligand" parameterType="Float" displayUnit="uM" isMandatory="false" />
+  <parameterDefinition id="7" name="Ligand in syringe" label="Name of the Ligand used in the Experiment" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="8" name="Number of injections after first one" label="The number of injections after first injection" parameterType="Int" isMandatory="false" />
+  <parameterDefinition id="9" name="Protein Concentration" label="Concentration of the protein" parameterType="Float" displayUnit="uM" isMandatory="false" />
+  <parameterDefinition id="10" name="Stirring speed" label="Wavelength of light from excitation source" parameterType="Int" displayUnit="rpm" isMandatory="false" />
+  <parameterDefinition id="11" name="Temperature" label="Temperature of the Experiment" parameterType="Float" defaultValue="25" displayUnit="C" isMandatory="false" />
+  <parameterDefinition id="12" name="Time between injections" label="Time interval between injections in minutes" parameterType="Float" defaultValue="4" displayUnit="min" isMandatory="false" />
+  <parameterDefinition id="13" name="Volume of first injection" label="The volume of the first injection" parameterType="Float" defaultValue="2" displayUnit="ul" isMandatory="false" />
+  <parameterDefinition id="14" name="Volume of subsequent injections" label="The volume of the subsequent injections" parameterType="Float" displayUnit="ul" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>
+

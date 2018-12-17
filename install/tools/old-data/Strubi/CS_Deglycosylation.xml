@@ -1,0 +1,14 @@
+<!-- CS Deglycosylation protocol xml as flat file -->
+<protocol name="CS Deglycosylation" objective="Removal of Glycans" creationDate="23-05-08" remarks="Based on Lab activities requirements from OPPF" details="Purification of Target Protein">
+ <experimentType>Protein purification</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Output Sample" />
+ 
+ <parameterDefinitions>
+ </parameterDefinitions>
+
+</protocol>

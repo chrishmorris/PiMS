@@ -1,0 +1,3422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Notice: Rock Maker XML schema  copyright (c)2006, 2007 by Formulatrix, Inc., www.formulatrix.com
+For more information on this file format visit http://www.formulatrix.com/rmxml.shtml
+This XML file is generated according to the Rock Maker XML schema. Formulatrix grants you the license to freely use,
+generate and redistribute XML documents conforming to the Rock Maker XML schema PROVIDED
+(1) you do not extend or modify the schema and
+(2) this entire notice appears unmodified at the top of every file.
+End of notice.
+-->
+<screen>
+  <conditions>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>1</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>2</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>3</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>4</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>5</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>6</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>7</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>8</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>9</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>10</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>12</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>13</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>14</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>15</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>16</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>17</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>18</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>19</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>20</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>21</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>22</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>23</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>24</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>25</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>26</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>27</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>28</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>29</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>30</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>31</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>32</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>33</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>34</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>35</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>36</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>37</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>38</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>39</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>40</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>41</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>42</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>43</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>44</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>45</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>46</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>48</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>49</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>50</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>51</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>52</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>53</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>54</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>55</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>56</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>57</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>58</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>59</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>60</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>61</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>62</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>63</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>64</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>65</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>66</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>67</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>68</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>69</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>70</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>71</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>72</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>73</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>75</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>76</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>77</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>78</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>79</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>80</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>81</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>82</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>83</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>84</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>86</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>87</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>88</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>89</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>90</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>91</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>92</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>93</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>94</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>95</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0</concentration>
+        <type>Additive</type>
+        <stockLocalID>96</stockLocalID>
+      </conditionIngredient>
+    </condition>
+  </conditions>
+  <ingredients>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>1</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v L-Citrulline 
+0.16% w/v L-Ornithine hydrochloride 
+0.16% w/v Urea 
+0.16% w/v Oxalic acid
+0.16% w/v Kanamycin monosulfate
+0.16% w/v L-Arginine 
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 1 (A1)</name>
+      <shortName>SBB1A1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>2</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v L-Carnitine hydrochloride
+0.16% w/v Tannic acid
+0.16% w/v Aspartame
+0.16% w/v Caffeine
+0.16% w/v p-Coumaric acid
+0.16% w/v 4-Hydroxy-L-proline
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 2 (A2)</name>
+      <shortName>SBB2A2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>3</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Disodium beta-Glycerophosphate tetrahydrate
+0.16% w/v trans-Cinnamic acid
+0.16% w/v O-Phospho-L-tyrosine
+0.16% w/v Betaine anhydrous
+0.16% w/v Maltotriose hydrate
+0.16% w/v Cytidine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 3 (A3)</name>
+      <shortName>SBB3A3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>4</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v L-Canavanine
+0.16% w/v O-Phospho-L-serine
+0.16% w/v Taurine
+0.16% w/v Quinine
+0.16% w/v Sodium glyoxylate monohydrate
+0.16% w/v Cholic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 4 (A4)</name>
+      <shortName>SBB4A4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>5</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.08% w/v Ellipticine 
+0.20% w/v Gibberellin A3
+0.20% w/v trans-Cinnamic acid 
+0.20% w/v Phenol
+0.20% w/v Succinic acid disodium salt hexahyrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 5 (A5)</name>
+      <shortName>SBB5A5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>6</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Sulfanilamide
+0.16% w/v D-(+)-Cellobiose
+0.16% w/v D-Glyceric acid calcium salt dihydrate
+0.16% w/v 6-Phosphogluconic acid trisodium salt
+0.16% w/v Na-Benzoyl-L-arginine ethyl ester hydrochloride
+0.16% w/v D-(+)-Galactosamine hydrochloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 6 (A6)</name>
+      <shortName>SBB6A6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>7</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Benzamidine hydrochloride
+0.16% w/v Acarbose
+0.16% w/v Ethidium bromide
+0.16% w/v Cholesterol
+0.16% w/v Sarcosine
+0.16% w/v L-Homoserine
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 7 (A7)</name>
+      <shortName>SBB7A7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>8</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Sodium gluconate
+0.20% w/v Acarbose
+0.20% w/v D-(+)-Maltose monohydrate
+0.20% w/v Salicylic acid
+0.20% w/v D-(+)-Melibiose monohydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 8 (A8)</name>
+      <shortName>SBB8A8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>9</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v g-Strophanthin
+0.20% w/v D-Sorbitol
+0.20% w/v 1,4-Diaminobutane
+0.20% w/v D-(+)-Trehalose dihydrate
+0.20% w/v L-a-Phosphatidylcholine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 9 (A9)</name>
+      <shortName>SBB9A9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>10</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Sucrose
+0.16% w/v Cadaverine
+0.16% w/v L-Glutamic acid
+0.16% w/v L-Arginine
+0.16% w/v Oxalic acid
+0.16% w/v Tetrahydrofolic acid
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 10 (A10)</name>
+      <shortName>SBB10A10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>11</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Protamine sulfate salt
+0.20% w/v g-Strophanthin
+0.20% w/v Benzamidine hydrochloride
+0.20% w/v D-Fructose 1,6-diphosphate trisodium salt octahydrate
+0.20% w/v Oxamic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 11 (A11)</name>
+      <shortName>SBB11A11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>12</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v 2'-Deoxyadenosine 5'-triphosphate disodium salt
+0.20% w/v Benzidine
+0.20% w/v L-Carnitine hydrochloride
+0.20% w/v Sulfanilamide	
+0.20% w/v Cytosine
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 12 (A12)</name>
+      <shortName>SBB12A12</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>13</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v 2'-Deoxyguanosine 5'-monophosphate sodium salt hydrate
+0.20% w/v N-Acetyl-D-galactosamine
+0.20% w/v O-Phospho-L-serine
+0.20% w/v 4-Aminobenzoic acid
+0.20% w/v Uridine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 13 (B1)</name>
+      <shortName>SBB13B1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>14</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Thymidine 5'-triphosphate sodium salt
+0.16% w/v L-Canavanine
+0.16% w/v D-Sorbitol
+0.16% w/v Salicylic acid
+0.16% w/v 2'-Deoxyguanosine  hydrate
+0.16% w/v D-(+)-Raffinose pentahydrate
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 14 (B2)</name>
+      <shortName>SBB14B2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>15</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Cytidine 5'-triphosphate disodium salt
+0.16% w/v Stachyose hydrate
+0.16% w/v Cystathionine
+0.16% w/v Cystamine dihydrochloride
+0.16% w/v trans-Cinnamic acid
+0.16% w/v Inosine 5'-monophosphate disodium salt
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 15 (B3)</name>
+      <shortName>SBB15B3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>16</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-16</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Uridine 5'-diphosphate sodium salt
+0.20% w/v Quinine
+0.20% w/v p-Coumaric acid
+0.20% w/v D-(+)-Melibiose monohydrate
+0.20% w/v Cystamine dihydrochloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 16 (B4)</name>
+      <shortName>SBB16B4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>17</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-17</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Nicotinic acid
+0.20% w/v Inosine 5'-monophosphate disodium salt
+0.20% w/v Gibberellin A3
+0.20% w/v O-Phospho-L-tyrosine
+0.20% w/v Caffeine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 17 (B5)</name>
+      <shortName>SBB17B5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>18</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-18</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Adenosine 3',5'-cyclic monophosphate sodium salt monohydrate
+0.20% w/v Cadaverine
+0.20% w/v D-(+)-Melezitose hydrate
+0.20% w/v Aspartame
+0.20% w/v Guanosine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 18 (B6)</name>
+      <shortName>SBB18B6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>19</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-19</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Thymidine
+0.16% w/v Adenosine 3',5'-cyclic monophosphate sodium salt monohydrate
+0.16% w/v Sarcosine
+0.16% w/v 4-Aminobenzoic acid
+0.16% w/v Acarbose
+0.16% w/v Inosine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 19 (B7)</name>
+      <shortName>SBB19B7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>20</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-20</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.08% w/v Ellipticine 
+0.20% w/v Protamine sulfate salt
+0.20% w/v D-(+)-Trehalose dihydrate
+0.20% w/v 6-Phosphogluconic acid trisodium salt
+0.20% w/v D-(+)-Glucose
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 20 (B8)</name>
+      <shortName>SBB20B8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>21</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-21</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Penicillin G sodium salt
+0.20% w/v L-Arginine
+0.20% w/v D-(+)-Cellobiose
+0.20% w/v Pyridoxamine dihydrochloride
+0.20% w/v Betaine anhydrous
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 21 (B9)</name>
+      <shortName>SBB21B9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>22</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-22</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Nicotinic acid
+0.20% w/v Adenosine
+0.20% w/v L-Tyrosine
+0.20% w/v Xanthine
+0.20% w/v L-Lactic acid
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 22 (B10)</name>
+      <shortName>SBB22B10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>23</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-23</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v 2'-Deoxyadenosine monohydrate
+0.20% w/v N-Acetylneuraminic acid
+0.20% w/v N-p-Tosyl-L-phenylalanine chloromethyl ketone
+0.20% w/v a-D-Glucose 1-phosphate disodium salt hydrate
+0.20% w/v Fumaric acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 23 (B11)</name>
+      <shortName>SBB23B11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>24</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-24</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.25% w/v Thymidine 5'-triphosphate sodium salt
+0.25% w/v a-Ketoglutaric acid disodium salt
+0.25% w/v 2-Nitrophenyl ß-D-galactopyranoside
+0.25% w/v cis-Aconitic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 24 (B12)</name>
+      <shortName>SBB24B12</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>25</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-25</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v 2'-Deoxyguanosine 5'-monophosphate sodium salt hydrate 
+0.20% w/v Ethanolamine
+0.20% w/v Theophylline
+0.20% w/v Isopropyl 1-thio-beta-D-galactopyranoside
+0.20% w/v Oxalacetic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 25 (C1)</name>
+      <shortName>SBB25C1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>26</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-26</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v 2'-Deoxyadenosine 5'-triphosphate disodium salt
+0.20% w/v D-Glucose 6-phosphate sodium salt
+0.20% w/v Acetylsalicylic acid
+0.20% w/v Choline base solution
+0.20% w/v Nicotinamide
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 26 (C2)</name>
+      <shortName>SBB26C2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>27</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-27</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Uridine 5'-diphosphate sodium salt
+0.20% w/v L-Carnosine
+0.20% w/v L-Thyroxine
+0.20% w/v Sodium phenyl phosphate dibasic dihydrate
+0.20% w/v Glutaric acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 27 (C3)</name>
+      <shortName>SBB27C3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>28</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-28</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Cytosine
+0.20% w/v Vitamin B12
+0.20% w/v Pepstatin A
+0.20% w/v Shikimic acid
+0.20% w/v N-Acetyl-L-glutamic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 28 (C4)</name>
+      <shortName>SBB28C4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>29</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-29</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v 2'-Deoxycytidine 5'-triphosphate disodium salt
+0.20% w/v Hydrocortisone
+0.20% w/v Hemin
+0.20% w/v O-Phospho-DL-threonine
+0.20% w/v L-Phenylalanine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 29 (C5)</name>
+      <shortName>SBB29C5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>30</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-30</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.04% w/v Cortisone
+0.04% w/v (±)-Epinephrine
+0.04% w/v Protoporphyrin disodium salt
+0.04% w/v Pyridoxine
+0.04% w/v Thymidine 5'-monophosphate disodium salt hydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 30 (C6)</name>
+      <shortName>SBB30C6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>31</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-31</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Adenosine
+0.20% w/v Pepstatin A
+0.20% w/v (±)-Epinephrine
+0.20% w/v Sodium phenyl phosphate dibasic dihydrate
+0.20% w/v Inosine 5'-triphosphate trisodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 31 (C7)</name>
+      <shortName>SBB31C7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>32</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-32</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v 2'-Deoxyadenosine monohydrate
+0.20% w/v O-Phospho-DL-threonine
+0.20% w/v Flavin adenine dinucleotide disodium salt hydrate
+0.20% w/v DL-Xylose
+0.20% w/v Nalidixic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 32 (C8) </name>
+      <shortName>SBB32C8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>33</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-33</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Guanosine
+0.20% w/v D-Glucose 6-phosphate sodium salt
+0.20% w/v 2,3-Pyridinedicarboxylic acid
+0.20% w/v L-Tyrosine
+0.20% w/v Adenosine 5'-diphosphate sodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 33 (C9)</name>
+      <shortName>SBB33C9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>34</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-34</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.25% w/v 2'-Deoxyguanosine  hydrate
+0.25% w/v Cortisone
+0.25% w/v a-Ketoglutaric acid disodium salt
+0.25% w/v Pyruvic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 34 (C10)</name>
+      <shortName>SBB34C10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>35</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-35</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Thymidine
+0.20% w/v trans-Dehydroandrosterone
+0.20% w/v Xanthine
+0.20% w/v Shikimic acid
+0.20% w/v Histamine dihydrochloride
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 35 (C11)</name>
+      <shortName>SBB35C11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>36</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-36</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Uridine
+0.20% w/v Hydrocortisone
+0.20% w/v N-Acetylneuraminic acid
+0.20% w/v 2-Nitrophenyl ß-D-galactopyranoside
+0.20% w/v Phospho(enol)pyruvic acid monosodium salt hydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 36 (C12)</name>
+      <shortName>SBB36C12</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>37</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-37</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Cytosine
+0.20% w/v Pyridoxine
+0.20% w/v Hemin
+0.20% w/v L-Carnosine
+0.20% w/v Cytidine 5'-diphosphocholine sodium salt dihydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 37 (D1)</name>
+      <shortName>SBB37D1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>38</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-38</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Cytosine
+0.20% w/v a-D-Glucose 1-phosphate disodium salt hydrate
+0.20% w/v trans-Dehydroandrosterone
+0.20% w/v Isopropyl 1-thio-b-D-galactopyranoside
+0.20% w/v D-(-)-Ribose
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 38 (D2)</name>
+      <shortName>SBB38D2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>39</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-39</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Thiamine pyrophosphate
+0.20% w/v D-Glucosamic acid
+0.20% w/v Choline base solution
+0.20% w/v Theophylline
+0.20% w/v Ethanolamine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 39 (D3)</name>
+      <shortName>SBB39D3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>40</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-40</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Acetylsalicylic acid
+0.20% w/v Vitamin B12
+0.20% w/v 2,3-Pyridinedicarboxylic acid
+0.20% w/v Ethanolamine
+0.20% w/v Thiamine hydrochloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 40 (D4)</name>
+      <shortName>SBB40D4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>41</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-41</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v L-Lactic acid
+0.16% w/v L-Aspartic acid
+0.16% w/v L-Thyroxine
+0.16% w/v Pyridoxine
+0.16% w/v L-Ascorbic acid
+0.16% w/v Phytic acid sodium salt hydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 41 (D5)</name>
+      <shortName>SBB41D5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>42</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-42</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Thiamine pyrophosphate
+0.16% w/v L-Aspartic acid
+0.16% w/v L-Glutamic acid
+0.16% w/v L-(+)-Lysine
+0.16% w/v L-Arginine
+0.16% w/v L-Histidine
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 42 (D6)</name>
+      <shortName>SBB42D6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>43</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-43</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.125% w/v L-Methionine
+0.125% w/v L-Phenylalanine
+0.125% w/v L-Leucine
+0.125% w/v L-Isoleucine
+0.125% w/v L-Valine
+0.125% w/v L-Alanine
+0.125% w/v L-Tryptophan
+0.125% w/v L-Proline
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 43 (D7)</name>
+      <shortName>SBB43D7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>44</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-44</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.14% w/v Glycine
+0.14% w/v L-Asparagine monohydrate
+0.14% w/v L-Glutamine
+0.14% w/v L-Tyrosine
+0.14% w/v L-Serine
+0.14% w/v L-(-)-Threonine
+0.14% w/v Maleic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 44 (D8)</name>
+      <shortName>SBB44D8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>45</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-45</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.14% w/v Sodium bromide
+0.14% w/v Sodium fluoride
+0.14% w/v Sodium carbonate
+0.14% w/v Sodium tetraborate decahydrate
+0.14% w/v Sodium phosphate dibasic dihydrate
+0.14% w/v Sodium nitrate
+0.14% w/v Rhenium(IV) oxide
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 45 (D9)</name>
+      <shortName>SBB45D9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>46</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-46</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.002 M Calcium chloride dihydrate
+0.002 M Cadmium chloride hydrate
+0.002 M Magnesium chloride hexahydrate
+0.002 M Manganese(II) chloride tetrahydrate
+0.002 M Zinc chloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 46 (D10)</name>
+      <shortName>SBB46D10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>47</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-47</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.002 M Nickel(II) chloride hexahydrate
+0.002 M Copper(II) chloride dihydrate
+0.002 M Cobalt(II) chloride hexahydrate
+0.002 M Molybdenum(III) chloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 47 (D11)</name>
+      <shortName>SBB47D11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>48</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-48</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v L-Homoserine
+0.16% w/v 4-Hydroxy-L-proline
+0.16% w/v Argininosuccinic acid disodium salt hydrate
+0.16% w/v Cytidine
+0.16% w/v Inosine
+0.16% w/v Guanine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 48 (D12)</name>
+      <shortName>SBB48D12</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>49</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-49</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Thiamine monophosphate chloride dihydrate
+0.16% w/v Acetylsalicylic acid
+0.16% w/v Cholic acid
+0.16% w/v 1,2,3-Heptanetriol
+0.16% w/v Vanillin
+0.16% w/v N-Acetyl-D-mannosamine
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 49 (E1)</name>
+      <shortName>SBB49E1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>50</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-50</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Adenosine 5'-(ß,?-imido)triphosphate tetralithium salt hydrate
+0.20% w/v Protoporphyrin disodium salt
+0.20% w/v Coproporphyrin I dihydrochloride
+0.20% w/v Tris
+0.20% w/v DL-Glyceraldehyde
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 50 (E2)</name>
+      <shortName>SBB50E2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>51</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-51</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v D-Glucosamic acid
+0.16% w/v D-(+)-Galactosamine hydrochloride
+0.16% w/v D-(+)-Glucosamine hydrochloride
+0.16% w/v Sodium gluconate
+0.16% w/v D-Mannosamine hydrochloride
+0.16% w/v D-(+)-Mannose
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 51 (E3)</name>
+      <shortName>SBB51E3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>52</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-52</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v D-Glucosamine 6-phosphate sodium salt
+1.00% w/v Tryptone
+0.16% w/v Isomaltose
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 52 (E4)</name>
+      <shortName>SBB52E4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>53</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-53</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.04% w/v Coproporphyrin I dihydrochloride
+0.04% w/v Vanillin
+0.04% w/v D-Mannosamine hydrochloride
+0.04% w/v D-(+)-Fucose
+0.04% w/v Guanine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 53 (E5)</name>
+      <shortName>SBB53E5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>54</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-54</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.05% w/v L-Citrulline 
+0.05% w/v Glycine 
+0.05% w/v L-(-)-Threonine 
+0.05% w/v L-(+)-Lysine 
+0.05% w/v L-Alanine 
+0.05% w/v L-Arginine 
+0.05% w/v L-Asparagine monohydrate    
+0.05% w/v L-Aspartic acid 
+0.05% w/v L-Glutamic acid 
+0.05% w/v L-Glutamine 
+0.05% w/v L-Histidine 
+0.05% w/v L-Isoleucine 
+0.05% w/v L-Leucine 
+0.05% w/v L-Methionine 
+0.05% w/v L-Phenylalanine 
+0.05% w/v L-Proline 
+0.05% w/v L-Serine 
+0.05% w/v L-Tryptophan
+0.05% w/v L-Tyrosine
+0.05% w/v L-Valine 
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 54 (E6)</name>
+      <shortName>SBB54E6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>55</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-55</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v L-(+)-Arabinose
+0.16% w/v DL-Glyceraldehyde
+0.16% w/v D-Glucose 6-phosphate sodium salt
+0.16% w/v D-(+)-Fucose
+0.16% w/v D-(+)-Mannose
+0.16% w/v Isomaltose
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 55 (E7)</name>
+      <shortName>SBB55E7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>56</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-56</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v N-Acetylneuraminic acid
+0.16% w/v N-Acetylmuramic acid
+0.16% w/v N-Acetyl-D-mannosamine
+0.16% w/v N-Acetyl-D-glucosamine
+0.16% w/v Tris
+0.16% w/v L-(+)-Arabinose
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 56 (E8)</name>
+      <shortName>SBB56E8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>57</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-57</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Tyr-Phe
+0.16% w/v Leu-Leu
+0.16% w/v Ala-Leu
+0.16% w/v Val-Ser
+0.16% w/v Trp-Gly hydrochloride
+0.16% w/v Met-Gly
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 57 (E9)</name>
+      <shortName>SBB57E9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>58</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-58</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Tyr-Phe
+0.16% w/v Tyr-Leu
+0.16% w/v Z-Val-Phe
+0.16% w/v Gly-Gly-Gly
+0.16% w/v Ala-Ala
+0.16% w/v Trp-Gly hydrochloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 58 (E10)</name>
+      <shortName>SBB58E10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>59</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-59</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Leu-Gly-Gly
+0.20% w/v Leu-Leu
+0.20% w/v Met-Ala-Ser
+0.20% w/v Ala-Ala-Ala
+0.20% w/v Gly-Gly-Gly
+0.20% w/v Trp-Gly hydrochloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 59 (E11)</name>
+      <shortName>SBB59E11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>60</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-60</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Gly-Gly-Gly-Gly
+0.16% w/v Leu-Gly-Gly
+0.16% w/v Met-Ala-Ser
+0.16% w/v Gly-Gly-Gly-Gly-Gly
+0.16% w/v Ala-Leu
+0.16% w/v Tyr-Leu
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 60 (E12)</name>
+      <shortName>SBB60E12</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>61</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-61</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.25% w/v ß-Nicotinamide adenine dinucleotide phosphate tetrasodium salt
+0.25% w/v Adenosine 5'-triphosphate disodium salt hydrate
+0.25% w/v N-Acetyl-D-galactosamine
+0.25% w/v Gentamicin sulfate salt hydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 61 (F1)</name>
+      <shortName>SBB61F1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>62</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-62</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Tryptone
+0.20% w/v Inosine 5'-monophosphate disodium salt
+0.20% w/v D-Lactose monohydrate
+0.20% w/v L-Citrulline
+0.20% w/v 2'-Deoxycytidine 5'-monophosphate sodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 62 (F2)</name>
+      <shortName>SBB62F2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>63</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-63</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Sodium pyrophosphate tetrabasic decahydrate
+0.20% w/v D-(-)-Ribose
+0.20% w/v Phytic acid sodium salt hydrate
+0.20% w/v Adenosine 3',5'-cyclic monophosphate sodium salt monohydrate
+0.04% w/v Acetyl coenzyme A sodium salt 
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 63 (F3)</name>
+      <shortName>SBB63F3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>64</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-64</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.25% w/v S-(5'-Adenosyl)-L-methionine chloride
+0.25% w/v Disodium beta-Glycerophosphate tetrahydrate
+0.25% w/v Stachyose hydrate
+0.25% w/v Cytidine 5'-diphosphocholine sodium salt dihydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 64 (F4)</name>
+      <shortName>SBB64F4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>65</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-65</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Biotin
+0.20% w/v Phospho(enol)pyruvic acid monosodium salt hydrate
+0.20% w/v Sodium pyruvate
+0.20% w/v D-(+)-Melezitose hydrate
+0.20% w/v Coenzyme B12
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+      </types>
+      <name>Silver Bullets Bio 65 (F5)</name>
+      <shortName>SBB65F5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>66</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-66</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Flavin adenine dinucleotide disodium salt hydrate
+0.20% w/v D-(-)-3-Phosphoglyceric acid disodium salt
+0.20% w/v Spermine
+0.20% w/v Adenosine-5'-diphosphoglucose disodium salt
+0.20% w/v L-Tyrosine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 66 (F6)</name>
+      <shortName>SBB66F6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>67</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-67</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Thymine
+0.20% w/v Sodium pyrophosphate tetrabasic decahydrate
+0.20% w/v D-Glyceric acid calcium salt dihydrate
+0.20% w/v ß-Cyclodextrin
+0.20% w/v myo-Inositol
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 67 (F7)</name>
+      <shortName>SBB67F7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>68</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-68</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v ß-Nicotinamide adenine dinucleotide hydrate
+0.20% w/v D-Fructose 1,6-bisphosphate trisodium salt octahydrate
+0.20% w/v Spermidine
+0.20% w/v Adenosine 5'-diphosphoribose sodium salt
+0.20% w/v Histamine dihydrochloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 68 (F8)</name>
+      <shortName>SBB68F8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>69</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2--988-69</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Pyridoxal 5-phosphate monohydrate
+0.20% w/v Pyruvic acid
+0.20% w/v ß-Cyclodextrin
+0.20% w/v (±)-Epinephrine
+0.20% w/v myo-Inositol 2-monophosphate bis(cyclohexylammonium) salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 69 (F9)</name>
+      <shortName>SBB69F9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>70</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-70</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Adenosine 5'-diphosphate sodium salt
+0.20% w/v Adenosine 5'-monophosphate sodium salt
+0.20% w/v Uridine 5'-monophosphate disodium salt hydrate
+0.20% w/v Cytidine 5'-diphosphate sodium salt hydrate
+0.20% w/v Cytidine 5'-monophosphate disodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 70 (F10)</name>
+      <shortName>SBB70F10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>71</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-71</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Pyridoxal hydrochloride
+0.20% w/v 2'-Deoxyadenosine 5'-monophosphate
+0.20% w/v Guanosine 5'-diphosphate sodium salt
+0.20% w/v Nalidixic acid
+0.20% w/v Uridine 5'-diphospho-N-acetylglucosamine sodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 71 (F11)</name>
+      <shortName>SBB71F11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>72</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-72</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.25% w/v Guanosine 5'-triphosphate sodium salt hydrate
+0.25% w/v Thymidine 5'-monophosphate disodium salt hydrate
+0.25% w/v L-Tryptophan
+0.25% w/v Inosine 5'-triphosphate trisodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 72 (F12)</name>
+      <shortName>SBB72F12</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>73</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-73</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Adenosine 5'-triphosphate disodium salt hydrate
+0.20% w/v 2'-Deoxycytidine 5'-monophosphate sodium salt
+0.20% w/v ß-Estradiol
+0.20% w/v D-(+)-Galactose
+0.20% w/v 2'-Deoxyguanosine hydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver BUllets Bio 73 (G1)</name>
+      <shortName>SBB73G1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>74</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>7</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-74</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>10% v/v Tacsimate pH 7.0
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 74 (G2)</name>
+      <shortName>SBB74G2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>75</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-75</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v DL-a-Lipoic acid
+0.20% w/v Creatine monohydrate
+0.20% w/v L-Glutathione reduced
+0.20% w/v D-Pantothenic acid hemicalcium salt
+0.20% w/v gamma-Aminobutyric acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 75 (G3)</name>
+      <shortName>SBB75G3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>76</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-76</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Pyridoxal hydrochloride
+0.20% w/v Nicotinamide
+0.20% w/v Batyl alcohol
+0.20% w/v Glutaric acid
+0.20% w/v N-Acetyl-L-glutamic acid
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 76 (G4)</name>
+      <shortName>SBB76G4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>77</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-77</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Riboflavin 5'-monophosphate sodium salt dihydrate
+0.20% w/v Maleic acid
+0.20% w/v Pyridoxamine dihydrochloride
+0.20% w/v Acetylcholine chloride
+0.20% w/v Uridine 5'-diphospho-N-acetylglucosamine sodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 77 (G5)</name>
+      <shortName>SBB77G5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>78</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-78</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Fumaric acid
+0.20% w/v cis-Aconitic acid
+0.20% w/v DL-Isocitric acid trisodium salt
+0.20% w/v Oxalacetic acid
+0.20% w/v Sodium pyruvate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 78 (G6)</name>
+      <shortName>SBB78G6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>79</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-79</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.04% w/v ß-Nicotinamide adenine dinucleotide phosphate sodium salt hydrate
+0.04% w/v Tetrahydrofolic acid
+0.04% w/v L-Ascorbic acid
+0.04% w/v D-(+)-Glucose
+0.04% w/v Folic acid
+0.04% w/v D-Pantothenic acid hemicalcium salt
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 79 (G7)</name>
+      <shortName>SBB79G7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>80</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-80</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Riboflavin
+0.16% w/v L-a-Phosphatidylcholine
+0.16% w/v D-(+)-Raffinose pentahydrate
+0.16% w/v D-(-)-3-Phosphoglyceric acid disodium salt
+0.16% w/v gamma-Aminobutyric acid
+0.16% w/v Thionicotinamide adenine dinucleotide
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 80 (G8)</name>
+      <shortName>SBB80G8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>81</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-81</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v 2'-Deoxyguanosine 5'-monophosphate sodium salt hydrate
+0.16% w/v Cholesterol
+0.16% w/v Thymine
+0.16% w/v Oxamic acid
+0.16% w/v D-Glucosamine 6-phosphate sodium salt
+0.16% w/v Guanosine 3',5'-cyclic monophosphate sodium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 81 (G9)</name>
+      <shortName>SBB81G9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>82</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%W/V</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-82</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Thiamine monophosphate chloride dihydrate
+0.20% w/v Creatine phosphate disodium salt tetrahydrate
+0.20% w/v Na-Benzoyl-L-arginine ethyl ester hydrochloride
+0.20% w/v Tetracycline hydrochloride
+0.20% w/v Succinic acid disodium salt hexahydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 82 (G10)</name>
+      <shortName>SBB82G10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>83</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-83</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Uridine 5'-triphosphate trisodium salt hydrate
+0.20% w/v Kanamycin monosulfate
+0.20% w/v Maltotriose hydrate
+0.20% w/v Leupeptin hydrochloride
+0.20% w/v Sodium glyoxylate monohydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 83 (G11)</name>
+      <shortName>SBB83G11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>84</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-84</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v 5-Phospho-D-ribose 1-diphosphate pentasodium salt
+0.16% w/v Maleic acid
+0.16% w/v N-Acetyl-D-glucosamine
+0.16% w/v L-(-)-Malic acid sodium salt	
+0.16% w/v gamma-Aminobutyric acid
+0.16% w/v Acetylcholine chloride
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 84 (G12)</name>
+      <shortName>SBB84G12</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>85</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-85</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.05% w/v L-Citrulline 
+0.05% w/v Glycine 
+0.05% w/v L-(-)-Threonine 
+0.05% w/v L-(+)-Lysine 
+0.05% w/v L-Alanine 
+0.05% w/v L-Arginine 
+0.05% w/v L-Asparagine monohydrate    
+0.05% w/v L-Aspartic acid 
+0.05% w/v L-Glutamic acid 
+0.05% w/v L-Glutamine 
+0.05% w/v L-Histidine 
+0.05% w/v L-Isoleucine 
+0.05% w/v L-Leucine 
+0.05% w/v L-Methionine 
+0.05% w/v L-Phenylalanine 
+0.05% w/v L-Proline 
+0.05% w/v L-Serine 
+0.05% w/v L-Tryptophan
+0.05% w/v L-Tyrosine
+0.05% w/v L-Valine 
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 85 (H1)</name>
+      <shortName>SBB85H1</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>86</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-86</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.14% w/v Gly-Gly-Gly-Gly-Gly
+0.14% w/v Leu-Gly-Gly
+0.14% w/v Ala-Ala-Ala
+0.14% w/v Met-Ala-Ser
+0.14% w/v Val-Ser
+0.14% w/v Ala-Leu
+0.14% w/v Z-Val-Phe
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 86 (H2)</name>
+      <shortName>SBB86H2</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>87</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-87</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Adenosine 5'-triphosphate disodium salt hydrate
+0.16% w/v Pyridoxal 5-phosphate monohydrate
+0.16% w/v Creatine monohydrate
+0.16% w/v Thymine
+0.16% w/v L-(-)-Malic acid sodium salt
+0.16% w/v Spermine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 87 (H3)</name>
+      <shortName>SBB87H3</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>88</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-88</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Adenosine 5'-triphosphate disodium salt hydrate
+0.16% w/v Riboflavin 5'-monophosphate sodium salt dihydrate
+0.16% w/v DL-a-Lipoic acid
+0.16% w/v Acetylsalicylic acid
+0.16% w/v L-Ornithine hydrochloride
+0.16% w/v Adenosine
+0.02 M HEPES sodium pH 6.8</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 88 (H4)</name>
+      <shortName>SBB88H4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>89</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-89</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Creatine phosphate disodium salt tetrahydrate
+0.16% w/v ß-Nicotinamide adenine dinucleotide phosphate sodium salt hydrate
+0.16% w/v Guanosine 5'-triphosphate sodium salt hydrate
+0.16% w/v Uridine
+0.16% w/v D-Pantothenic acid hemicalcium salt
+0.16% w/v N-Acetyl-D-glucosamine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 89 (H5)</name>
+      <shortName>SBB89H5</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>90</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-90</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.14% w/v Thiamine monophosphate chloride dihydrate
+0.14% w/v ß-Nicotinamide adenine dinucleotide hydrate
+0.14% w/v Guanosine
+0.14% w/v Thymidine
+0.14% w/v D-(+)-Galactose
+0.14% w/v Biotin
+0.14% w/v D-Fructose 1,6-bisphosphate trisodium salt octahydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 90 (H6)</name>
+      <shortName>SBB90H6</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>91</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-91</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v 2'-Deoxyguanosine 5'-monophosphate sodium salt hydrate
+0.16% w/v Thymidine 5'-triphosphate sodium salt
+0.16% w/v 4-Aminobenzoic acid
+0.16% w/v Cytosine
+0.16% w/v Benzamidine hydrochloride
+0.16% w/v ß-Nicotinamide adenine dinucleotide, reduced dipotassium salt
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 91 (H7)</name>
+      <shortName>SBB91H7</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>92</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-92</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v ß-Nicotinamide adenine dinucleotide, reduced dipotassium salt
+0.16% w/v Guanidine hydrochloride
+0.16% w/v Cystamine dihydrochloride
+0.16% w/v Aspartame
+0.16% w/v Caffeine
+0.16% w/v Cytidine 5'-monophosphate disodium salt  
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 92 (H8)</name>
+      <shortName>SBB92H8</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>93</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-93</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.20% w/v Uridine 5'-triphosphate trisodium salt hydrate
+0.20% w/v Adenosine 5'-monophosphate sodium salt
+0.20% w/v N-Acetylneuraminic acid
+0.20% w/v L-Tyrosine
+0.20% w/v L-Thyroxine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 93 (H9)</name>
+      <shortName>SBB93H9</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>94</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-94</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Pyridoxamine dihydrochloride
+0.16% w/v Guanosine 5'-diphosphate sodium salt
+0.16% w/v Cytidine 5'-triphosphate disodium salt
+0.16% w/v D-Glucose 6-phosphate sodium salt
+0.16% w/v O-Phospho-L-tyrosine
+0.16% w/v Spermidine
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 94 (H10)</name>
+      <shortName>SBB94H10</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>95</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-95</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v L-Carnitine hydrochloride
+0.16% w/v ß-Nicotinamide adenine dinucleotide phosphate tetrasodium salt
+0.16% w/v 2'-Deoxyadenosine 5'-triphosphate disodium salt
+0.16% w/v Choline base solution
+0.16% w/v a-D-Glucose 1-phosphate disodium salt hydrate
+0.16% w/v Riboflavin
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 95 (H11)</name>
+      <shortName>SBB95H11</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>96</localID>
+          <stockConcentration>100</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>100</defaultHighConcentration>
+          <units>%w/v</units>
+          <pH>6.8</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-988-96</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>0.16% w/v Uridine 5'-monophosphate disodium salt hydrate
+0.16% w/v D-(+)-Maltose monohydrate
+0.16% w/v D-Sorbitol 
+0.16% w/v O-Phospho-L-serine
+0.16% w/v Benzidine
+0.16% w/v Sodium phenyl phosphate dibasic dihydrate
+0.02 M HEPES sodium pH 6.8
+</comments>
+        </stock>
+      </stocks>
+      <types>
+        <type>Additive</type>
+        <type>Complex ingredient</type>
+      </types>
+      <name>Silver Bullets Bio 96 (H12)</name>
+      <shortName>SBB96H12</shortName>
+    </ingredient>
+  </ingredients>
+</screen>

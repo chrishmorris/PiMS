@@ -1,0 +1,55 @@
+/* suspected obsolete */
+.required { color:red; }
+.requiredlegend { color:#006 }
+
+img.icon { border:0 } 
+
+form { background-color:#ccf; color:#006; width:35em; padding-bottom:0.5em;  } 
+div.mainform { background-color:#fff; width:35em; padding:0; text-align:center; }
+#content>div.mainform { background-color:#ccf } /* IE ignores */
+div.formrow { background-color:#ccf; border-bottom:1px solid white; text-align:right; padding:5px; }
+
+div.formrow a, div.formrow a:visited { color:#006 }
+
+form.singlebutton       { display:inline; width:auto; background-color:transparent; }
+form.cancel             { float:left; position:relative; top:-1em; margin-left:5px }
+form.cancel input       { position:relative; top:-3em;  }
+div>form.cancel input   { position:relative; top:1em; } /* IE ignores */
+form.abandon            { position:relative; top:-1em; }
+form.abandon input      { position:relative; top:-3em; }
+div>form.abandon input  { position:relative; top:1em; } /* IE ignores */
+
+div.searchAddAbstractClass     { height:20px; padding:2px 2px 0 2px;  }
+div.searchAddAbstractClass img { float:left }
+
+/* Form input fields and labels */
+
+span.radiohelp          { display:block; font-size:smaller; margin:0 0 0.5em 2em; } /* for radio buttons and checkboxes in a fieldset */
+span.formhelp           { display:block; font-size:smaller; margin:0.2em 0 0.5em 19em; } /* for selects, text boxes, not in a fieldset */
+
+label, div.label, span.label { float:left; color:#006 }
+label a.helpIcon, div.label a.helpIcon        { color:#006; cursor:help; border-bottom:1px dotted #006; text-decoration: none; }
+label>a.helpIcon, div.label a.helpIcon        { text-decoration:none; border-bottom:1px dotted #006; cursor:help; }
+
+input.submit            { float:right; width:auto; margin:5px; }
+textarea,select         { width:22.5em; }
+input.text              { width:22.5em; } /*need class="text" and this rule because IE doesn't recognise [type="text"] selector */
+input.radio             { width:auto; }
+input.checkbox          { width:auto; }
+input[type="text"]      { width:22.5em; }
+input[type="radio"]	    { width:auto; }
+input[type="checkbox"]  { width:auto; }
+			   
+/*******/
+
+form.searchform {  
+				  width:20em; padding:0.5em; 
+				  text-align:right }
+form.searchform table { text-align:left; width:100%; padding-bottom:0.5em; }
+form.searchform td input { float:right; } 
+form.searchform select { width:10.7em; float:right; } 
+
+/*SPOT forms*/
+form#frmStep2 { width:47em; }
+form#frmStep2 td.radio, form#frmStep2 td.tm, form#frmStep2 td.length { text-align:center; } 
+form#frmStep2 th.primers {font-size:larger;}

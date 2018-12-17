@@ -1,0 +1,294 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.reference.Organism" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/Organism.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="333" y="425" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.DbName" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/DbName.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="761" y="105" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.AbstractHolderType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="630" y="569" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.ExperimentType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/ExperimentType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1665" y="465" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HazardPhrase" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HazardPhrase.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1288" y="383" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.ComponentCategory" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/ComponentCategory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1184" y="483" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.WorkflowItem" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/WorkflowItem.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1673" y="305" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.CrystalType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/CrystalType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1119" y="742" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.PublicEntry" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1211" y="129" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HolderCategory" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HolderCategory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="488" y="435" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HolderType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="800" y="724" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.InstrumentType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/InstrumentType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1533" y="520" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.PinType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/PinType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="509" y="695" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.TargetStatus" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/TargetStatus.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1629" y="139" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HolderTypeSource" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HolderTypeSource.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="809" y="400" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.SampleCategory" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/SampleCategory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1102" y="376" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.ImageType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/ImageType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="412" y="122" width="-1" height="-1"/>  
+  </class>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.ComponentCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/ComponentCategory.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.ImageType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/ImageType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.Organism" 
+      file="/pims-model/src/java/org/pimslims/model/reference/Organism.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.InstrumentType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/InstrumentType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.HolderTypeSource" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderTypeSource.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.PinType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PinType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.TargetStatus" 
+      file="/pims-model/src/java/org/pimslims/model/reference/TargetStatus.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.ExperimentType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/ExperimentType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.HolderCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderCategory.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.HolderTypeSource" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderTypeSource.java" binary="false">      
+      <attribute name="holderType"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false">      
+      <attribute name="holderTypeSources"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.WorkflowItem" 
+      file="/pims-model/src/java/org/pimslims/model/reference/WorkflowItem.java" binary="false">      
+      <attribute name="status"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.TargetStatus" 
+      file="/pims-model/src/java/org/pimslims/model/reference/TargetStatus.java" binary="false">      
+      <attribute name="workflowItems"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.WorkflowItem" 
+      file="/pims-model/src/java/org/pimslims/model/reference/WorkflowItem.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.HazardPhrase" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HazardPhrase.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.WorkflowItem" 
+      file="/pims-model/src/java/org/pimslims/model/reference/WorkflowItem.java" binary="false">      
+      <attribute name="experimentType"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.ExperimentType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/ExperimentType.java" binary="false">      
+      <attribute name="workflowItems"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.HolderCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderCategory.java" binary="false">      
+      <attribute name="abstractHolderTypes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false">      
+      <attribute name="defaultHolderCategories"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.CrystalType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/CrystalType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.HolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.SampleCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/SampleCategory.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.HolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.DbName" 
+      file="/pims-model/src/java/org/pimslims/model/reference/DbName.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.PublicEntry" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PublicEntry.java" binary="false"/>    
+    <bendpoint x="875" y="488"/>  
+  </generalization>
+</class-diagram>

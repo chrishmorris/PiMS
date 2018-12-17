@@ -1,0 +1,29 @@
+This directory should contains following files:
+
+Properties 
+	-DB connection info: username, passwd, url(db name). 
+		Edit them for your own db connection
+	-uploadDirectory 
+		Create this directory if you need to use it (Eg: fileImpl)
+	-Don't commit this file!
+		
+Properties.sample
+	-You can copy this to a file called "Properties" and custmize it.
+	
+ehcache.xml
+	-the default settings for hibernate 2nd level cache
+	-if pims-dm-hb.jar is in your class path and it is placed before conf/ehcahe.xml in classpath,
+	 the ehcache.xml in this jar will work. The conf/ehcahe.xml will be ignored.
+
+pims_log4j.properties
+	-the settings for hibernate log4j
+	-If you do not have this file under this directory, you need to create it by copy it from dataModelObject
+	-By default, the log info will be displayed on screen and stored in conf/Hibernate.log.txt
+	-If you do not want see/store log info, stdout/R should be remove from log4j.rootLogger=warn, R,stdout
+	-If you want to see more info, you can change the related property from info to debug.
+	eg. To show all sql to db, log4j.logger.org.hibernate.SQL=info should
+	be changed to log4j.logger.org.hibernate.SQL=debug
+	
+Hibernate.log.txt
+	-Is generated hibernate log file.
+	-Don't commit these files!

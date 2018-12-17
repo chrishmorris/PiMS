@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="protocol" type="protocolXmlBean"/>
+
+  <xs:complexType name="protocolXmlBean">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="experimentType" type="xs:string" minOccurs="0"/>
+      <xs:element name="objective" type="xs:string" minOccurs="0"/>
+      <xs:element name="method" type="xs:string" minOccurs="0"/>
+      <xs:element name="remarks" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="details" type="xs:string" minOccurs="0"/>
+      <xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="isForUse" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="exportDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="parameterDefinitions" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="parameterDefinition" type="parameterDefinitionXmlBean" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      </xs:element>
+      <xs:element name="inputSamples" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="inputSample" type="refSampleXmlBean" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="outputSamples" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="outputSample" type="refSampleXmlBean" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parameterDefinitionXmlBean">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="label" type="xs:string" minOccurs="0"/>
+      <xs:element name="paramType" type="xs:string" minOccurs="0"/>
+      <xs:element name="unit" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayUnit" type="xs:string" minOccurs="0"/>
+      <xs:element name="defaultValue" type="xs:string" minOccurs="0"/>
+      <xs:element name="minValue" type="xs:string" minOccurs="0"/>
+      <xs:element name="maxValue" type="xs:string" minOccurs="0"/>
+      <xs:element name="isMandatory" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="isGroupLevel" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="isResult" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="possibleValues" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="refSampleXmlBean">
+    <xs:all>
+      <xs:element name="sampleCategory" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="amount" type="xs:float" minOccurs="0"/>
+      <xs:element name="unit" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayUnit" type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>
+

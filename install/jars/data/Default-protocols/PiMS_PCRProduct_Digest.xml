@@ -1,0 +1,19 @@
+<!-- PiMS default PCR product digest protocol xml as flat file -->
+<protocol name="PIMS PCR Product Digest" objective="Prepare PCR Product for Cloning" creationDate="04-03-09" remarks="Default set of protocols for PiMS" details="" >
+ <experimentType>Digest</experimentType>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Buffer" label="Buffer used" parameterType="String" defaultValue="" />
+  <parameterDefinition id="2" name="Enzyme 1" label="Name of the restriction enzyme used" parameterType="String" defaultValue="" />
+  <parameterDefinition id="3" name="Enzyme 2" label="Name of the restriction enzyme used" parameterType="String" defaultValue="" isMandatory="false" />
+  <parameterDefinition id="4" name="Digest volume (uL)" label="Total volume of the digest" parameterType="Float" defaultValue="50" />
+ </parameterDefinitions>
+
+ </protocol>
+

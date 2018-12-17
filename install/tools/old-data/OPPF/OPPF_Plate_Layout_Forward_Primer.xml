@@ -1,0 +1,15 @@
+<!-- Layout of Plates protocol xml as flat file -->
+<protocol name="OPPF Plate Layout - Forward Primers" objective="Design Plate Layout" creationDate="29-05-07" remarks="Based on Lab activities requirements from OPPF" details="The plate is a physival plate that will be kept in fridge" >
+ <experimentType>Import sample</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Forward Primer Layout Notes" parameterType="String" /> 
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+ 
+</protocol>

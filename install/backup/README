@@ -1,0 +1,29 @@
+PiMS-Backup is an application to create a copy of the PiMS database for a
+specific user and doing so, respecting the access rights this user may have,
+i.e., for the stuff that the user doesn't have access, they will be removed from
+the final sql file created.
+
+The main idea is to allow an user to load this private sql file in his/her own
+computer and have access to PiMS offline and just for reading purposes.
+
+This application can only be run by the PiMS administrator.
+
+Files needed to run pims-backup
+    - build.xml (ant script)
+    - filterdb.jar (java binary)
+    - conf/Properties (folder and properties file)
+    - log/ (folder where logs will be written)
+
+The tgz file pims-backup.tgz contains the files above.
+
+Before using, the PiMS administrator may need to modify file 'conf/Properties'
+properly.
+
+To use, just do in pims-backup folder the command:
+
+    ant -DanUser=_user_ [-Dforce=yes] makedbbackup
+
+where _user_ is the user name for whom the administrator wants a copy/backup.
+
+Option "-Dforce=yes" is case one is using a old version of DB and the usual
+command is failing.

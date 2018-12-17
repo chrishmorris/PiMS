@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: CrystallisationSolution.xsd,v 1.4 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="Salt.xsd"/>
+	<xs:include schemaLocation="Buffer.xsd"/>
+	<xs:include schemaLocation="Precipitant.xsd"/>
+	<xs:complexType name="CrystallisationSolution">
+		<xs:annotation>
+			<xs:documentation>Information about the well used for Crystallisation</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kitName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the kit used for Crystallisation e.g. 'hampton crystal screen 2 number="26"'</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="detergent" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="salt" type="tns:Salt" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="buffer" type="tns:Buffer" minOccurs="0"/>
+			<xs:element name="precipitant" type="tns:Precipitant" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

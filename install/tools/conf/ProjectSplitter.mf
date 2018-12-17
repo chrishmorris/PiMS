@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: Protein Information Management System Hamburg Project Splitter
+Implementation-Version: 3.0
+Implementation-Vendor: the PIMS team
+Implementation-URL: http://www.pims-lims.org
+Specification-Version: 3.1
+Main-Class: org.pimslims.embl.ProjectSplitter
+

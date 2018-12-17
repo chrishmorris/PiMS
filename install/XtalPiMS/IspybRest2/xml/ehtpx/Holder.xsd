@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: Holder.xsd,v 1.5 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="Crystal.xsd"/>
+	<xs:include schemaLocation="CrystalIdentifier.xsd"/>
+	<xs:complexType name="Holder">
+		<xs:annotation>
+			<xs:documentation>The Holder is the set of hat, pin, loop, cryovial holding the Crystal. It can be placed in a Container such as a basket, a cane, a carousel or a puck, inside a Dewar.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the Sample</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="code" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The code to identify the Holder. It can a barcode, a datamatrix or any label stuck on it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="position" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The position of the Holder in the Container. This location will depend on the Container type : puck, cane,...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="holderLength" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The length of pin + hat, in millimeter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="loopLength" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The diameter of the loop containing the Crystal, in millimeter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="loopType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The type of the loop e.g. 'Nylon'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wireWidth" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The width of the loop wire, in micrometer.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comments" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Comments on the Sample</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crystalUUID" type="xs:string" nillable="false">
+				<xs:annotation>
+					<xs:documentation>The globally unique code of the Crystal ensures a correct identification between the different partners. It could be defined by the crystallisation centre. Thus, contrary to a Polymer 'id' for instance, this code is not only unique within this XML file !</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crystalIdentifier" type="tns:CrystalIdentifier" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Alternative way to uniquely identify a Crystal</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="diffractionPlanUUID" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier for this diffraction plan.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

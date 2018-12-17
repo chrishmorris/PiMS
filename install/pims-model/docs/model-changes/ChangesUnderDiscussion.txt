@@ -1,0 +1,53 @@
+================================================================================
+Changes Under Discussion
+================================================================================
+
+--------------------------------------------------------------------------------
+Experiment Group
+--------------------------------------------------------------------------------
+>>> Simple experiment is a group experiment of one. Link protocol to experiment group
+
+--------------------------------------------------------------------------------
+Protocol
+--------------------------------------------------------------------------------
+- PIMS-1417 Experiment.protocol should be required
+  > change not-null="false" to not-null="true" for experiment.Experiment.protocol
+
+- PIMS-848 Can't createa plate experiment if the protocol has no output sample
+
+--------------------------------------------------------------------------------
+Units
+--------------------------------------------------------------------------------
+- PIMS-368 Attribute names for amounts and units should have regular relationship
+  > add constraint must_have_amount_unit_when_have_amount and display_amount_unit_must_be_compatible_with_amount_unit
+- PIMS-369 Units need constraints
+  > add constraint unit_must_be_not_null_if_value_is_not_null
+
+>>> need implicit unit as static constant in Measurement
+==> create Hibernate type Measurement and for amount, temperature, ... return Measurement rather than float
+(stored only value in a same agreed unit but need to make it clear in the documentation: change column name to value_in_unit?)
+
+--------------------------------------------------------------------------------
+Reference data
+--------------------------------------------------------------------------------
+- PIMS-1559 Remove links to admin-only pages
+  > All classes in reference package under PublicEntry
+
+--------------------------------------------------------------------------------
+Molecule Component
+--------------------------------------------------------------------------------
+- PIMS-420 MolComponent category instead on MolType
+  > don't know what to do
+
+--------------------------------------------------------------------------------
+Access Control
+--------------------------------------------------------------------------------
+- PIMS-571 role should have an bollean attribute to tell the access right should be check or not
+  > clear example needed e.g. link to AccessObject- Bill to provide
+
+--------------------------------------------------------------------------------
+Research Objective
+--------------------------------------------------------------------------------
+- remove link between BlueprintComponent and MolComponent (just have link to Target that has already a link to MolComponent and can be anything: protein, DNA, or even a small molecule)
+- rename ExpBlueprint to Project with a many-to-many link to Target, a many-to-one to Experiment and many-to-many to Sample
+- rename BlueprintComponent to ProjectComponent

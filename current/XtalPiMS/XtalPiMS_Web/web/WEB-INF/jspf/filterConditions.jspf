@@ -1,0 +1,61 @@
+<form id="ffConditions" action=""><table class="list" border="0">
+	<tr>
+		<th>Local Name</th>
+		<td>
+			<select id="c_localName">
+				<option value="all" selected="selected">All</option>
+			</select>
+		</td>
+		<th>Manufacturer Name</th>
+		<td>
+			<select id="c_manufacturerName">
+				<option value="all" selected="selected">All</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th title="Well Number of this condition,e.g:A01">Well Number</th>
+		<td>
+			<input id="c_localNumber" />
+		</td>
+		<th>Manufacturer Screen Name</th>
+		<td>
+			<input id="c_manufacturerScreenName" />
+		</td>
+	</tr>
+	<tr>
+		<th title="Final pH of this condition">Final pH</th>
+		<td>
+			<input id="c_pH" />
+		</td>
+		<th>Component Name</th>
+		<td>
+			<input id="c_componentName" />
+		</td>
+	</tr>
+	<tr>
+		<th>Volatile</th>
+		<td>
+			<select id="c_volatileCondition">
+				<option value="all" selected="selected">All</option>
+				<option value="true">True</option>
+				<option value="false">False</option>
+			</select>
+		</td>
+		<th>Salt Crystal</th>
+		<td>
+			<select id="c_saltCondition">
+				<option value="all" selected="selected">All</option>
+				<option value="true">True</option>
+				<option value="false">False</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th></th>
+		<td>
+		</td>
+		<th></th>
+		<td><input id="c_clear" type="button" value="Clear" /></td>
+	</tr>
+</table></form>

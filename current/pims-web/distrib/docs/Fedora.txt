@@ -1,0 +1,39 @@
+SOME HINTS FOR INSTALLING ON FEDORA
+
+PiMS is tested on SUSE Linux, so you are most likely to get a good result 
+on that platform. If you prefer to use Fedora, here are some notes
+that may help with the installation process.
+
+POSTGRESQL
+You will need to edit
+   /var/lib/pgsql/data/pg_hba.conf
+   
+JAVA AND TOMCAT
+Fedora installs the GNU Java implementation, gcj. PiMS is not tested on gcj.
+We recommend uninstalling that by:
+    yum list | grep gcj | xargs yum remove    
+
+We advise installing and using Sun Java, 
+specifically the HotSpot Server JVM. You need the whole JDK, not just the JRE. 
+Note that to change the JVM used by Tomcat you must edit both of:
+    /etc/tomcat6/tomcat6.conf
+    /etc/sysconfig/tomcat6
+    
+You can find some helpful detailed instructions at the following sites:
+http://fedorasolved.org/browser-solutions/java-i386
+http://labnotesh.wordpress.com/2006/08/21/Installing-vanilla-tomcat-on-fedora-core/
+
+Running scheduled Blast searches:
+Ant also uses the gij java complier so you will also need to edit:
+/etc/ant.conf
+by specifying the JAVA_HOME
+ JAVA_HOME=/path to java
+ e.g. JAVA_HOME=/usr/local/jdk1.7.9
+ 
+ UPGRADING TO A NEW VERSION OF PIMS
+ Whenyou update a PiMS installation, you may have to run some Java programs that we supply to update the schema of your database. 
+ If the command "java" invokes gij, then these jobs may fail, with messages like:
+     java.lang.ClassNotFoundException: javax.management.ObjectName
+     
+ In that case, you should run them again, specifying the path to your installation
+ of Sun Java.

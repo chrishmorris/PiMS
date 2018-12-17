@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="org/pimslims/testmodel/" kind="src" path="src/java"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/antlr-2.7.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/asm-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/c3p0-0.9.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/cglib-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/commons-collections-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/ehcache-core-2.4.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/hibernate-c3p0-3.6.8.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/hibernate-core-3.6.8.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/hibernate-ehcache-3.6.8.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/hibernate-entitymanager-3.6.8.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/javassist-3.12.0.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/jta-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/postgresql-9.1-901.jdbc3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/slf4j-api-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/slf4j-jdk14-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/build/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/ojdbc14.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

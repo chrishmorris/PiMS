@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.0//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_0.dtd">
+<suppressions>
+        <!-- Dont report duplicates in head comments -->
+        <suppress checks="StrictDuplicateCode"
+              files=""
+              lines="1-20"/>
+</suppressions>

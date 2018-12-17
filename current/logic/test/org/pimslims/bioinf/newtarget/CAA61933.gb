@@ -1,0 +1,63 @@
+LOCUS       CAA61933                 394 aa            linear   BCT 18-APR-2005
+DEFINITION  AraM protein [Bacillus subtilis].
+ACCESSION   CAA61933 REGION: complement(1..394)
+VERSION     CAA61933.1  GI:1913927
+DBSOURCE    embl accession X89810.1
+KEYWORDS    .
+SOURCE      Bacillus subtilis
+  ORGANISM  Bacillus subtilis
+            Bacteria; Firmicutes; Bacillales; Bacillaceae; Bacillus.
+REFERENCE   1
+  AUTHORS   Sa-Nogueira,I., Nogueira,T.V., Soares,S. and de Lencastre,H.
+  TITLE     The Bacillus subtilis L-arabinose (ara) operon: nucleotide
+            sequence, genetic organization and expression
+  JOURNAL   Microbiology (Reading, Engl.) 143 (PT 3), 957-969 (1997)
+   PUBMED   9084180
+REFERENCE   2  (residues 1 to 394)
+  AUTHORS   Sa-Nogueira,I.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (19-JUL-1995) I. Sa-Nogueira, Instituto de Teconologia
+            Quimica e Biologica, Rua da Quinta Grande n. 6, Apt 127, P- 2780
+            Oeiras Codex, PORTUGAL
+COMMENT     Related sequence X89408.
+FEATURES             Location/Qualifiers
+     source          1..394
+                     /organism="Bacillus subtilis"
+                     /strain="168T+"
+                     /db_xref="taxon:1423"
+                     /map="256 degrees"
+     Protein         complement(1..394)
+                     /product="AraM protein"
+                     /function="unknown"
+     Region          complement(8..371)
+                     /region_name="G1PDH"
+                     /note="Glycerol-1-phosphate dehydrogenase (G1PDH)
+                     catalyzes the reversible reduction of dihydroxyacetone
+                     phosphate (DHAP) to glycerol-1-phosphate (G1P) in an
+                     NADH-dependent manner; cd08175"
+                     /db_xref="CDD:173934"
+     Site            complement(order(105,121,125,201,205,212,220,236..237,254,
+                     256..257,272,275,278..280,341))
+                     /site_type="active"
+                     /db_xref="CDD:173934"
+     Site            complement(order(105,125,205))
+                     /site_type="metal-binding"
+                     /note="metal binding site [ion binding]"
+                     /db_xref="CDD:173934"
+     CDS             complement(1..394)
+                     /gene="araM"
+                     /coded_by="X89810.1:807..1991"
+                     /transl_table=11
+                     /db_xref="GOA:P94527"
+                     /db_xref="InterPro:IPR002658"
+                     /db_xref="InterPro:IPR023003"
+                     /db_xref="UniProtKB/Swiss-Prot:P94527"
+ORIGIN      
+        1 mnriaadvqr afenagektl pikveeivlg kqaadslldy vkrknnqhiv lvcdanthri
+       61 agidlenrln qegfqaecli ipeneagdvt aderslihvl ihtkqptdvm iavgsgtihd
+      121 ivrfaafqrd lpfisyptap svdgftsaga piilygtktt iqtkapsalf adldllkaap
+      181 qsmvaagfgd mlgkitslad weisrhlage pyspagakiv qealaacieh tediamktet
+      241 girvlmesll vsglvmlald hsrpasggeh hishwiemel mekkrpqilh gakvgcaavl
+      301 ltdtyrklaq ddglnefsps rreaiqsayq tlprgevlad wlrsaggpad fdeigvgqds
+      361 vknafrhaht lrdrctglri inenktlinh glye
+//

@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+/* suspected obsolete */
+.print_invis {
+	visibility:hidden;
+	position:relative;
+	width:100%;
+	border:0px;
+	left:0px;
+	right:auto;
+	z-index:0;
+	border: 1px solid black;
+}
+
+.print_vis {
+	position:relative;
+	left:0px;
+	top:auto;
+	right:auto;
+	width:100%;
+	display: block;
+	visibility:visible;
+	z-index:0;
+}
+
+.print_invis div {
+	float: none;
+	display: none;
+}
+
+.print_invis> div, DIV#side_info, DIV#side_info_content {
+	display: block;
+	width: 100%;
+}

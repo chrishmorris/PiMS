@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config xmlns="http://www.oppf.ox.ac.uk/xsd/RI/Config.xsd">
+    <LoggerConfig>Extensions\\OPPFlogger.xml</LoggerConfig>
+    <WebDir>C:\\Imager\\Web\\%date%\\%plateid%\\</WebDir>
+    <ArchiveDir>C:\\Imager\\Archive\\%date%\\%plateid%\\</ArchiveDir>
+    <XmlDir>C:\\Imager\\XML\\</XmlDir>
+  <DoneDir>C:\\Temp\\RockImager</DoneDir>
+  <!--
+  <WsPlateEndpoint>http://localhost:8080/xtalpims-ws/services/WSPlate.WSPlateSOAP11port_http/</WsPlateEndpoint>
+  <Username>administrator</Username>
+  <Password>test123</Password>
+   -->
+  <!-- -->
+  <WsPlateEndpoint>http://172.22.20.9:8080/xtalpims-ws/services/WSPlate.WSPlateSOAP11port_http/</WsPlateEndpoint>
+  <Username>administrator</Username>
+  <Password>********</Password>
+  <ImageBaseUrl>http://www.oppf.rc-harwell.ac.uk/images/</ImageBaseUrl>
+  <!-- -->
+</Config>

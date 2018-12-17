@@ -1,0 +1,36 @@
+<pimstospine2><!-- obsolete -->
+
+  <!-- translation of PiMS to SPINE2 experiment types -->
+  <experimentType pimsExperimentType="Transformation" spine2ExperimentType="expression" />
+  <experimentType pimsExperimentType="Concentration" spine2ExperimentType="scaleUp" />
+
+  <!-- translation of PiMS to SPINE2 work packages -->
+  <workPackage pimsWorkPackage="OPPF" spine2WorkPackage="WP1.2" />
+
+  <!-- translation of PiMS to SPINE2 target groups -->
+  <targetGroup pimsTargetGroup="Immune Targets" spine2TargetGroup="Immune" />
+  <targetGroup pimsTargetGroup="Cancer Targets" spine2TargetGroup="Cancer" />
+  <targetGroup pimsTargetGroup="Virus Targets" spine2TargetGroup="Viral" />
+
+  <!-- translation of PiMS to SPINE2 database names -->
+  <databaseName pimsDatabaseName="Swiss-Prot" spine2DatabaseName="SwissProt" />
+  <databaseName pimsDatabaseName="GenBank" spine2DatabaseName="GenBank" />
+  <databaseName pimsDatabaseName="NCBI Taxonomy" spine2DatabaseName="NCBI" />
+  <databaseName pimsDatabaseName="PDB" spine2DatabaseName="PDB" />
+  <databaseName pimsDatabaseName="RefSeq" spine2DatabaseName="RefSeq" />
+  <databaseName pimsDatabaseName="UniProt" spine2DatabaseName="UniProt" />
+
+  <!-- not sure about these
+  <databaseName pimsDatabaseName="Swiss-Prot" spine2DatabaseName="PIR-PSD" />
+  <databaseName pimsDatabaseName="Swiss-Prot" spine2DatabaseName="TrEMBL" />
+  -->
+  
+  <!-- translation of PiMS to SPINE2 organism names -->
+  <organismName pimsOrganismName="Homo sapiens" spine2OrganismName="Homo_sapiens" />
+  <organismName pimsOrganismName="Mus musculus" spine2OrganismName="Mus_musculus" />
+  <organismName pimsOrganismName="Rattus rattus" spine2OrganismName="Rattus_rattus" />
+  <organismName pimsOrganismName="Rattus norvegicus" spine2OrganismName="Rattus_norvegicus" />
+  <organismName pimsOrganismName="Gallus gallus" spine2OrganismName="Gallus_gallus" />
+
+</pimstospine2>
+

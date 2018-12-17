@@ -1,0 +1,3811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Notice: Rock Maker XML schema  copyright (c)2006, 2007 by Formulatrix, Inc., www.formulatrix.com
+For more information on this file format visit http://www.formulatrix.com/rmxml.shtml
+This XML file is generated according to the Rock Maker XML schema. Formulatrix grants you the license to freely use,
+generate and redistribute XML documents conforming to the Rock Maker XML schema PROVIDED
+(1) you do not extend or modify the schema and
+(2) this entire notice appears unmodified at the top of every file.
+End of notice.
+-->
+<screen>
+  <conditions>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.8</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.8</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.8</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.8</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.8</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.8</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.6</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.6</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.6</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.6</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.6</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.6</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>74</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Salt</type>
+        <stockLocalID>189</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.5</concentration>
+        <type>Salt</type>
+        <stockLocalID>189</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>189</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>189</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>189</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>3.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>189</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Salt</type>
+        <stockLocalID>190</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.5</concentration>
+        <type>Salt</type>
+        <stockLocalID>190</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>190</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>190</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>190</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>3.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>190</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Salt</type>
+        <stockLocalID>191</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.5</concentration>
+        <type>Salt</type>
+        <stockLocalID>191</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>191</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>191</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>191</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>3.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>191</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Salt</type>
+        <stockLocalID>192</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.5</concentration>
+        <type>Salt</type>
+        <stockLocalID>192</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>192</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>192</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>2.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>192</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>3.4</concentration>
+        <type>Salt</type>
+        <stockLocalID>192</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.784</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.016</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.98</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.02</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.372</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.028</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.764</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.036</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.72</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.08</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.9</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.26</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.14</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.62</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.18</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.52</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.28</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.65</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.35</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.91</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.49</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>1.17</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.63</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.28</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.52</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.35</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.65</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.49</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.91</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.63</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.17</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.12</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.68</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.15</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.85</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.21</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.19</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.27</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.53</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.032</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.768</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.04</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>0.96</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.056</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.344</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.072</concentration>
+        <type>Salt</type>
+        <stockLocalID>194</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1.728</concentration>
+        <type>Salt</type>
+        <stockLocalID>195</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>1</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>2</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>3</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>4</pH>
+        <type>Buffer</type>
+        <stockLocalID>47</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>5</pH>
+        <type>Buffer</type>
+        <stockLocalID>11</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>6</pH>
+        <type>Buffer</type>
+        <stockLocalID>85</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>7</pH>
+        <type>Buffer</type>
+        <stockLocalID>98</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>8</pH>
+        <type>Buffer</type>
+        <stockLocalID>141</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+    <condition>
+      <conditionIngredient>
+        <concentration>0.1</concentration>
+        <pH>9</pH>
+        <type>Buffer</type>
+        <stockLocalID>173</stockLocalID>
+      </conditionIngredient>
+      <conditionIngredient>
+        <concentration>4</concentration>
+        <type>Precipitant</type>
+        <stockLocalID>196</stockLocalID>
+      </conditionIngredient>
+    </condition>
+  </conditions>
+  <ingredients>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>1</localID>
+          <stockConcentration>1.6</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1.6</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-549</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>2</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-735</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>3</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>4</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>5</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>6</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>7</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>8</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>9</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>10</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>11</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>12</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>13</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>14</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>15</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>16</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>17</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>18</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-16</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>19</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-17</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>20</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-18</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>21</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-19</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>22</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-20</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>23</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-21</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>24</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-22</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>25</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-23</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>26</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-935-24</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>27</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-428-23</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>28</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-757</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 3.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>29</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904.01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>30</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>31</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>32</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>33</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>34</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>35</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>36</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 2.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>37</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>38</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>39</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>40</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>41</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>42</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>43</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>44</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-16</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>45</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-17</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>46</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>3.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-18</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 3.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>47</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-19</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>48</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-20</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>49</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-21</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>50</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-22</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>51</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-23</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>52</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-24</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>53</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-25</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>54</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-26</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>55</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-27</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>56</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-28</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 4.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>57</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-29</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>58</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-30</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>59</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-31</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>60</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-32</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>61</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-33</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>62</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-34</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>63</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-35</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>64</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-36</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>65</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-37</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>66</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-38</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 5.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>67</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-39</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 6.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>68</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-40</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 6.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>69</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-41</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 6.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>70</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-42</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 6.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>71</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-43</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 6.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>72</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-904-44</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Citric acid, pH has been adjusted to 6.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>73</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>2.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-831</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>Citric acid trisodium salt dihydrate</alias>
+        <alias>Trisodium citrate dihydrate</alias>
+        <alias>Sodium citrate tribasic dihydrate</alias>
+        <alias>Buffer: Citric Acid</alias>
+      </aliases>
+      <types>
+        <type>Salt</type>
+        <type>Precipitant</type>
+        <type>Buffer</type>
+        <type>Additive</type>
+      </types>
+      <bufferData>
+        <titrationTable>
+          <titrationPoint>
+            <pH>7</pH>
+            <acidToBaseRatio>0.001</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3</pH>
+            <acidToBaseRatio>2.42</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.1</pH>
+            <acidToBaseRatio>2.36</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.2</pH>
+            <acidToBaseRatio>2.29</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.3</pH>
+            <acidToBaseRatio>2.22</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.4</pH>
+            <acidToBaseRatio>2.15</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.5</pH>
+            <acidToBaseRatio>2.08</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.6</pH>
+            <acidToBaseRatio>2.01</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.7</pH>
+            <acidToBaseRatio>1.93</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.8</pH>
+            <acidToBaseRatio>1.85</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>3.9</pH>
+            <acidToBaseRatio>1.78</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4</pH>
+            <acidToBaseRatio>1.7</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.1</pH>
+            <acidToBaseRatio>1.62</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.2</pH>
+            <acidToBaseRatio>1.54</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.3</pH>
+            <acidToBaseRatio>1.46</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.4</pH>
+            <acidToBaseRatio>1.38</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.5</pH>
+            <acidToBaseRatio>1.3</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.6</pH>
+            <acidToBaseRatio>1.22</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.7</pH>
+            <acidToBaseRatio>1.15</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.8</pH>
+            <acidToBaseRatio>1.07</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>4.9</pH>
+            <acidToBaseRatio>0.99</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5</pH>
+            <acidToBaseRatio>0.92</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.1</pH>
+            <acidToBaseRatio>0.85</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.2</pH>
+            <acidToBaseRatio>0.77</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.3</pH>
+            <acidToBaseRatio>0.71</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.4</pH>
+            <acidToBaseRatio>0.64</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.5</pH>
+            <acidToBaseRatio>0.57</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.6</pH>
+            <acidToBaseRatio>0.51</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.7</pH>
+            <acidToBaseRatio>0.45</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.8</pH>
+            <acidToBaseRatio>0.4</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>5.9</pH>
+            <acidToBaseRatio>0.34</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>6</pH>
+            <acidToBaseRatio>0.29</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>6.1</pH>
+            <acidToBaseRatio>0.25</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>6.2</pH>
+            <acidToBaseRatio>0.2</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>6.3</pH>
+            <acidToBaseRatio>0.16</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>6.4</pH>
+            <acidToBaseRatio>0.12</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>6.5</pH>
+            <acidToBaseRatio>0.08</acidToBaseRatio>
+          </titrationPoint>
+          <titrationPoint>
+            <pH>2</pH>
+            <acidToBaseRatio>2.9</acidToBaseRatio>
+          </titrationPoint>
+        </titrationTable>
+      </bufferData>
+      <casNumbers>
+        <casNumber>6132-04-3</casNumber>
+        <casNumber>68-04-2</casNumber>
+        <casNumber>77-92-9</casNumber>
+      </casNumbers>
+      <name>tri-Sodium citrate</name>
+      <shortName>Na3 Cit</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>74</localID>
+          <stockConcentration>3.5</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>3.5</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-541</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>75</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-428-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+      </stocks>
+      <types>
+        <type>Salt</type>
+        <type>Precipitant</type>
+        <type>Additive</type>
+      </types>
+      <casNumbers>
+        <casNumber>7783-20-2</casNumber>
+      </casNumbers>
+      <name>Ammonium sulfate</name>
+      <shortName>(NH4)2SO4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>76</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-787</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>77</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>78</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>79</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>80</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>81</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>82</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>83</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>84</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 5.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>85</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>86</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>87</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>88</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>89</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>90</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>91</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>92</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-16</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>93</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-17</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>94</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-18</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>95</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-19</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>96</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-943-20</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.1 using NaOH</comments>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>2-(N-morpholino)ethanesulfonic acid</alias>
+        <alias>4-morpholineethanesulfonic acid monohydrate</alias>
+        <alias>MES monohydrate</alias>
+        <alias>2-Morpholinoethanesulfonic acid</alias>
+      </aliases>
+      <types>
+        <type>Buffer</type>
+      </types>
+      <bufferData>
+        <pKa>6.1</pKa>
+      </bufferData>
+      <casNumbers>
+        <casNumber>145224-94-8</casNumber>
+        <casNumber>4432-31-9</casNumber>
+        <casNumber> 	 	71119-23-8</casNumber>
+      </casNumbers>
+      <name>MES</name>
+      <shortName>MES</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>97</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-729</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>98</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-785</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>99</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>100</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>101</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>102</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>103</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>104</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>105</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>106</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>107</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>108</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>109</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>110</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>111</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>112</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>113</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-902-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>114</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-733</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>HR2-733 pH has been adjusted to 7.5 at 25 degrees Celsius using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>115</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.8 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>116</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 6.9 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>117</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.0 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>118</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.1 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>119</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.2 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>120</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.3 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>121</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.4 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>122</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.5 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>123</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.6 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>124</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.7 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>125</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.8 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>126</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.9 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>127</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.0 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>128</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.1 using HCl
+Sodium HEPES</comments>
+        </stock>
+        <stock>
+          <localID>129</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-931-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.2 using HCl
+Sodium HEPES</comments>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>4-(2-hydroxyethyl)piperazine-1-ethanesulfonic aci</alias>
+        <alias>N-(2-hydroxyethyl)piperazine-N'-(2-ethanesulfonic</alias>
+        <alias>Sodium HEPES</alias>
+        <alias>4-(2-Hydroxyethyl)-1-piperazineethanesulfonic acid</alias>
+      </aliases>
+      <types>
+        <type>Buffer</type>
+      </types>
+      <bufferData>
+        <pKa>7.5</pKa>
+      </bufferData>
+      <casNumbers>
+        <casNumber>7365-45-9</casNumber>
+        <casNumber>75277-39-3</casNumber>
+      </casNumbers>
+      <name>HEPES</name>
+      <shortName>HEPES</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>130</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-727</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.5 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>131</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.0 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>132</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.1 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>133</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.2 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>134</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.3 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>135</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.4 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>136</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.5 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>137</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.6 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>138</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.7 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>139</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.8 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>140</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 7.9 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>141</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.0 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>142</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.1 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>143</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.2 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>144</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.3 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>145</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.4 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>146</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-16</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.5 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>147</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-17</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.6 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>148</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-18</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.7 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>149</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-19</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.8 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>150</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-20</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 8.9 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>151</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-900-21</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris base, pH has been adjusted to 9.0 using HCl</comments>
+        </stock>
+        <stock>
+          <localID>152</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.0 using NaOH
+</comments>
+        </stock>
+        <stock>
+          <localID>153</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>154</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.2 using NaOH
+</comments>
+        </stock>
+        <stock>
+          <localID>155</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.3 using NaOH
+</comments>
+        </stock>
+        <stock>
+          <localID>156</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.4 using NaOH
+</comments>
+        </stock>
+        <stock>
+          <localID>157</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.5 using NaOH
+</comments>
+        </stock>
+        <stock>
+          <localID>158</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.6 using NaOH
+</comments>
+        </stock>
+        <stock>
+          <localID>159</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.7 using NaOH
+</comments>
+        </stock>
+        <stock>
+          <localID>160</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>161</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 7.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>162</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>163</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>164</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>165</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.3 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>166</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>167</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-16</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>168</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-17</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>169</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-18</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>170</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-19</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>171</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-20</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 8.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>172</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-937-21</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>Tris hydrochloride
+pH has been adjusted to 9.0 using NaOH</comments>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>Trizma base</alias>
+        <alias>THAM</alias>
+        <alias>Tris(hydroxymethyl)aminomethane</alias>
+        <alias>Trometamol</alias>
+        <alias>Tris hydrochloride</alias>
+        <alias>2-Amino-2-(hydroxymethyl)-1,3-propanediol</alias>
+      </aliases>
+      <types>
+        <type>Buffer</type>
+      </types>
+      <bufferData>
+        <pKa>8.1</pKa>
+      </bufferData>
+      <casNumbers>
+        <casNumber>77-86-1</casNumber>
+        <casNumber>1185-53-1</casNumber>
+      </casNumbers>
+      <name>TRIS</name>
+      <shortName>TRIS</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>173</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-723</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>HR2-723 has been titrated to pH 9.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>174</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-01</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>175</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-02</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>176</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-03</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>177</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-04</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 7.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>178</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-05</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>179</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.1</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-06</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.1 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>180</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.2</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-07</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.2 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>181</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.3</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-08</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>182</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.4</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-09</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.4 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>183</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.5</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-10</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.5 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>184</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.6</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-11</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.6 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>185</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.7</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-12</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.7 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>186</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.8</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-13</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.8 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>187</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>8.9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-14</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 8.9 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>188</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0.1</defaultLowConcentration>
+          <defaultHighConcentration>0.1</defaultHighConcentration>
+          <units>M</units>
+          <pH>9</pH>
+          <useAsBuffer>true</useAsBuffer>
+          <vendorPartNumber>HR2-999-15</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>pH has been adjusted to 9.0 using NaOH</comments>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>N,N-Bis(2-hydroxyethyl)glycine</alias>
+      </aliases>
+      <types>
+        <type>Buffer</type>
+      </types>
+      <bufferData>
+        <pKa>8.3</pKa>
+      </bufferData>
+      <casNumbers>
+        <casNumber>150-25-4</casNumber>
+      </casNumbers>
+      <name>BICINE</name>
+      <shortName>BICINE</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>189</localID>
+          <stockConcentration>3.4</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <pH>4</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-747</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>HR2-747 titrated to pH 4.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>190</localID>
+          <stockConcentration>3.4</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <pH>5</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-749</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>HR2-749 titrated to pH 5.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>191</localID>
+          <stockConcentration>3.4</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <pH>6</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-751</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>HR2-751 titrated to pH 6.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>192</localID>
+          <stockConcentration>3.4</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-707</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+          <comments>HR2-707 titrated to pH 7.0 using NaOH</comments>
+        </stock>
+        <stock>
+          <localID>193</localID>
+          <stockConcentration>1</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <pH>7</pH>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-428-25</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>Propanedioic acid</alias>
+      </aliases>
+      <types>
+        <type>Salt</type>
+        <type>Precipitant</type>
+        <type>Additive</type>
+      </types>
+      <casNumbers>
+        <casNumber>141-82-2</casNumber>
+        <casNumber>141-95-7</casNumber>
+      </casNumbers>
+      <name>di-Sodium malonate</name>
+      <shortName>Na2 Malon</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>194</localID>
+          <stockConcentration>4</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>1</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-551</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>Mono-Sodium Phosphate (Monobasic)</alias>
+        <alias>Sodium phosphate monobasic monohydrate</alias>
+      </aliases>
+      <types>
+        <type>Salt</type>
+        <type>Precipitant</type>
+        <type>Additive</type>
+      </types>
+      <casNumbers>
+        <casNumber>10049-21-5</casNumber>
+      </casNumbers>
+      <name>Sodium di-hydrogen phosphate</name>
+      <shortName>NaH2PO4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>195</localID>
+          <stockConcentration>4</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>4</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-635</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+      </stocks>
+      <aliases>
+        <alias>Dipotassium hydrogen phosphate</alias>
+        <alias>Dipotassium phosphate</alias>
+        <alias>sec.-Potassium phosphate</alias>
+        <alias>Potassium phosphate dibasic</alias>
+      </aliases>
+      <types>
+        <type>Salt</type>
+        <type>Precipitant</type>
+        <type>Additive</type>
+      </types>
+      <casNumbers>
+        <casNumber>7758-11-4</casNumber>
+        <casNumber>7778-53-2</casNumber>
+      </casNumbers>
+      <name>di-Potassium hydrogen phosphate</name>
+      <shortName>K2HPO4</shortName>
+    </ingredient>
+    <ingredient>
+      <stocks>
+        <stock>
+          <localID>196</localID>
+          <stockConcentration>5</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>5</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-637</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+        <stock>
+          <localID>197</localID>
+          <stockConcentration>2</stockConcentration>
+          <defaultLowConcentration>0</defaultLowConcentration>
+          <defaultHighConcentration>2</defaultHighConcentration>
+          <units>M</units>
+          <useAsBuffer>false</useAsBuffer>
+          <vendorPartNumber>HR2-428-18</vendorPartNumber>
+          <vendorName>Hampton Research</vendorName>
+        </stock>
+      </stocks>
+      <types>
+        <type>Salt</type>
+        <type>Precipitant</type>
+        <type>Additive</type>
+      </types>
+      <casNumbers>
+        <casNumber>7647-14-5</casNumber>
+      </casNumbers>
+      <name>Sodium chloride</name>
+      <shortName>NaCl</shortName>
+    </ingredient>
+  </ingredients>
+</screen>

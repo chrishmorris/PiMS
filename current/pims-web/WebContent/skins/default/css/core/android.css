@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+/* Android fails to handle events for elements with position:relative 
+*/
+div.formblock   { position:static; }
+#plates { position:static }
+.pw_tabset { position:static }
+.pw_tabset h3.pw_tab { position:static }

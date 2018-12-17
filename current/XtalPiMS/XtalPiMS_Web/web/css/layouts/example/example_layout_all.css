@@ -1,0 +1,11 @@
+/*
+ * CSS styles for this layout, applicable to all browsers.
+ * To ensure effects are confined to this layout only, prefix each rule 
+ * with "body.CLASSNAME " - this ensures that matched items are descendants
+ * of the correct class of body.
+ */
+
+/*
+Affects div id="content", for this layout only
+body.CLASSNAME div#content { ...sstyle rules here... }
+*/

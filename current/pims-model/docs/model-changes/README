@@ -1,0 +1,25 @@
+PROCESS FOR MODEL CHANGES
+-------------------------------------------------------------------------------------------------
+
+- list changes in text file into docs/model-changes named YYYYMM-vXX-vR_R-N
+  where XX is the database version, R_R the release number and N the number of model changes
+- modify org.pimslims.model
+- run test cases AllModelTests.java
+
+
+CODE EXAMPLES ARE AVAILABLE IN org.pimslims.testmodel 
+-------------------------------------------------------------------------------------------------
+CLASS (ClassTemplate)
+CONSTRUCTOR (ClassTemplate)
+ATTRIBUTE
+   SINGLE-VALUE ATTRIBUTE (SingleProperty.name)
+   MULTI-VALUES ATTRIBUTE (SingleProperty.remarks)
+   DERIVED ATTRIBUTE (Target.getSeqString)
+ROLE
+   DERIVED ROLE (AbstractSample/HazardPhrase)
+   MANY-TO-MANY ROLE (Target/TargetProject)
+   MANY-TO-ONE ROLE (Target/MolComponent)
+   MANY-TO-ONE PARENT ROLE (OutputSample/Experiment)
+   ONE-TO-ONE ROLE (OutputSample/Sample)
+   ONE-WAY ROLE (SampleComponent/AbstractComponent)
+   

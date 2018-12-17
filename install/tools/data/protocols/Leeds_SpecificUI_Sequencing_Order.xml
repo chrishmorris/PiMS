@@ -1,0 +1,53 @@
+<!-- The order for the sequencing facility xml as flat file 
+
+must_be_one_of(Float,Int,String,Boolean,DateTime,Interval)
+
+-->
+<!-- For a different way to look at Leeds sequencing order see ...Sequencing_Order1.xml  -->
+<protocol name="Sequencing order" objective="Supply samples and other required details for sequencing" creationDate="02-06-08" remarks="Used by specific UI for sequencing"  >
+ <experimentType>Sequencing order</experimentType>
+ 
+	<parameterDefinitions>
+  		<!-- This is now the name of the experiment 
+  		<parameterDefinition id="1" name="Reference Number" parameterType="Int" defaultValue=""/>
+  		 -->
+  		<!-- Can't make it a sample as this name is unlikely to be unique -->
+  		<parameterDefinition id="2" name="Template Name" parameterType="String"  defaultValue="" />
+  		<parameterDefinition id="3" name="Template Concentration" parameterType="Float"  defaultValue="" />
+  		<parameterDefinition id="4" name="Template Volume" parameterType="Float"  defaultValue="" />
+  		<parameterDefinition id="5" name="Template Length" parameterType="Int"  defaultValue="" />
+  		<parameterDefinition id="6" name="Required Read Length" parameterType="Int"  defaultValue="" />
+  		<parameterDefinition id="7" name="CD Provided?" parameterType="String" possibleValues="Yes; No;" defaultValue="No"/>
+  		<!-- Can't make it a sample as do not know the sequence -->
+  		<parameterDefinition id="8" name="Primer Name" parameterType="String"  defaultValue="" />
+  		<parameterDefinition id="9" name="Primer Volume" parameterType="Float"  defaultValue="" />
+  		<parameterDefinition id="10" name="Primer Concentration" parameterType="Float" defaultValue=""/>
+  		<parameterDefinition id="11" name="Return Samples?" parameterType="String"  possibleValues="Yes; No; Returned;" defaultValue="No"/>
+  		<!-- The PI and user details should really be recorded as a user. However this is not possible in 
+  		PIMS DM 3.0 as it mandates that the user mast be the user who logged in. This is not the case for Leeds, and perhaps not only for them. 
+  	  Because 
+  		1) Users will use common "per-lab" account for recording their orders.
+  		2) Email and phone details can only be recorded if the user group is known which again is not the case for leeds.
+  		3) DM does not support recording Account number
+  		For external users it will never be worth creating user accounts.  
+  		Taking the above into account the only way to accomplish the tasks seems to be to record this info as 
+  		parameters, hoping that the issues listed above will be resolved later.       
+  		 -->
+  		<!-- PI details -->
+  		<parameterDefinition id="12" name="Account Number" parameterType="String" defaultValue=""/>
+  		<parameterDefinition id="13" name="Principal Investigator" parameterType="String" defaultValue=""/>
+  		<!-- User details -->
+  		<parameterDefinition id="14" name="User" parameterType="String" defaultValue=""/>
+  		<parameterDefinition id="15" name="User Phone" parameterType="String" defaultValue=""/>
+  		<parameterDefinition id="16" name="User Email" parameterType="String" defaultValue=""/>
+  		<parameterDefinition id="17" name="Department" parameterType="String" defaultValue=""/>
+  		<parameterDefinition id="18" name="Order ID" parameterType="String" defaultValue=""/>
+  		<!-- 
+  		<parameterDefinition id="19" name="Status" parameterType="String" defaultValue="OK" possibleValues="OK; Reinject; Reprocess; Failed;" />
+  		<parameterDefinition id="20" name="Message" parameterType="String" defaultValue="" />
+  		 -->
+ </parameterDefinitions>
+	<!-- Defined to link it to another experiment -->
+	<!-- Resembles user sample - name is unique generated according to the convention e.g. refnumber -->
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="DNA" name="DNA" />
+</protocol>

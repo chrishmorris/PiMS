@@ -1,0 +1,32 @@
+DATA MODEL CHANGES 27
+
+--------------------------------------------------------------------------------
+-- PiMS CORE
+--------------------------------------------------------------------------------
+x PIMS-258: replace all Target name attributes: commonName, systematicName, localName by name?
+     x remove serial
+     x remove commonName, systematicName and localName
+     x remove proteinName
+     x replace commonName by name and make it a unique key: The name of the target used to uniquely identify the target. It is its uniprot entry name, e.g. CAIC_ECOLI.
+     x add attr aliases 0..*: The list of the other target names: localName, proteinName,...  
+     x keep geneName 0..1 The official name of the gene for this target. e.g. 'fcy1'.
+     x keep protein.name 1..1 The name of the MolComponent used to describe the Target protein
+x PIMS-872: Cut link to Molecule package
+     x delete link bertween MolComponent and Molecule
+     x delete link between MolResidue and IsotopeLabel
+     x delete link between MolResidue and MolFeature
+     x delete MolFeature class
+     x create data type MolType in RefSampleComponent package
+x PIMS-944: Add Annotation link to ExperimentGroup
+
+
+- Simplify UML diagrams.
+
+--------------------------------------------------------------------------------
+-- PiMS CRYSTALLIZATION
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+-- DEFERED
+--------------------------------------------------------------------------------

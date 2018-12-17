@@ -1,0 +1,27 @@
+name,details
+Selected,PIMS default target status
+PCR,PIMS default target status
+Cloned,PIMS default target status
+Expressed,PIMS default target status
+Small Scale Expression,PIMS default target status
+Soluble,PIMS default target status
+Production Scale expression,PIMS default target status
+Purified,PIMS default target status
+In Crystallization,PIMS default target status
+Crystallized,PIMS default target status
+Diffraction Quality Crystals,PIMS default target status
+Native Diffraction Data,PIMS default target status
+Diffraction,PIMS default target status
+Phasing Diffraction Data,PIMS default target status
+HSQC,PIMS default target status
+NMR Assigned,PIMS default target status
+NMR NOE,PIMS default target status
+Crystal Structure,PIMS default target status
+NMR Structure,PIMS default target status
+In PDB,PIMS default target status
+In BMRB,PIMS default target status
+Molecular Function,PIMS default target status
+Biological Process,PIMS default target status
+Cellular Component,PIMS default target status
+Work Stopped,PIMS default target status
+Other,PIMS default target status

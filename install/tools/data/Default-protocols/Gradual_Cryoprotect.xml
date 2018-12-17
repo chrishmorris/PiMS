@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<protocol details="" remarks="" creationDate="05-11-13" objective="" name="Gradual Cryoprotect">
+<experimentType>Crystal Treatment</experimentType>
+<inputSamples>
+	<inputSample name="Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+</inputSamples>
+<outputSample name="Treated Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Crystal" sampleCatNamingSys="default"/>
+<parameterDefinitions>
+	<parameterDefinition id="1" name="Duration" parameterType="Int" defaultValue="0" minValue="0" maxValue="" isMandatory="true" label=""/>
+	<parameterDefinition id="2" name="Concentration" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="3" name="Cryoprotectant" parameterType="String" defaultValue="Glycerol" possibleValues="Glycerol,Ethylene Glycol,Polyethylene Glycol 200,Polyethylene Glycol 400,Polyethylene Glycol 600,Polyethylene Glycol 4000,(L or D)-2-Methyl-2\,4-pentanediol,Sodium Malonate pH 7.0,D-(+)-Glucose,1\,6-Hexanediol,Propylene Glycol,Dimethyl Sulfoxide,2-Propanol,Ethanol,Methanol,D-(+)-Sucrose,meso-Erythritol,Xylitol,Inositol,D-(+)-Raffinose,D-(+)-Trehalose,2\,3-Butanediol,L-(+)-2\,3-Butanediol,Lithium Acetate,Lithium Chloride,Lithium Formate,Lithium Nitrate,Lithium Sulfate,Magnesium Acetate,Sodium Chloride,Sodium Formate,Sodium Nitrate,Polyvinylpyrrolidone K15,Paratone-N,Paraffin Oil,NVH Oil,Other" isMandatory="true" label=""/>
+	<parameterDefinition id="4" name="Start concentration %" parameterType="Float" defaultValue="0" minValue="0" maxValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="5" name="End concentration %" parameterType="Float" defaultValue="" minValue="0" maxValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="6" name="Step %" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label=""/>
+</parameterDefinitions>
+</protocol>

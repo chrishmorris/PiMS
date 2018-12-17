@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>uk.ac.pims.design package</title>
+<!--
+
+  @(#)package.html	July 2004
+
+  
+
+-->
+</head>
+<body bgcolor="white">
+<img src="metamodel.png" alt="metamodel class diagram"/>
+<br />Provides abstract classes and interfaces that express the design for 
+persistence in PIMS. 
+<p>
+This is a design for the common features required by any data model
+(a "metamodel").
+Design goals are:
+<ul>
+<li>provide an adequate API for applications</li>
+<li>in particular, provide an API that will remain stable</li>
+<li>not constrain implementations</li>
+</ul>
+
+<p>
+A real-world laboratory object is represented by a record in the PIMS database.
+Each transaction represents the database as it is at a particular moment.
+That is why transactions are also referred to as "versions" of the model.
+</p>
+<p>
+An application begins by getting an instance of AbstractModel, 
+then uses the methods it provides.
+The next step is to call either <code>model.getReadableVersion()</code>
+ or <code>model.getWritableVersion()</code>.
+This starts a <a href="http://en.wikipedia.org/wiki/ACID">transaction</a>. 
+The application will then use the methods provided by the version
+to read or update the model. 
+</p>
+<p>
+Any changes made to the model are made permanent by calling <code>version.commit()</code>,
+or cancelled by calling <code>version.abort()</code>. The application is responsible for
+calling one or the other before discarding the version object.
+All the changes will be made together as a single atomic update.
+An example is:
+<code>
+        WritableVersion version = model.getWritableVersion(username);
+        try {
+            processRequest(version, parms);
+            version.commit();
+        } catch (AbortedException e) {
+            //Could add code here to retry
+            throw new RuntimeException(e);
+        } catch (ConstraintException e) {
+            throw new RuntimeException("The values you provided are inconsistent:", e);
+        } catch (AccessException e) {
+            throw new RuntimeException("You are not allowed to do that:", e);
+        } finally {
+            if (!version.isCompleted()) {
+                version.abort();
+            }
+        }
+
+</code></p>
+<p>
+This API provides methods to query metadata about the model, 
+e.g. <code>model.getMetaClass()</code>.
+It also provides methods to update the model that use this metadata, e.g. 
+metaRole.add(). These are used to make the generic parts of the UI.
+There are also specific methods for updating the model in the generated classes.
+These will be used when implementing scientific logic.
+</p>
+</body>
+</html>

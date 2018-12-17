@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>YEp352 Vector</name>
+    <details> yeast (S. cerevisiae)/E. coli shuttle vector</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="37673"
+        dataPageUrl="http://www.lgcstandards-atcc.org/LGCAdvancedCatalogueSearch/ProductDescription/tabid/1068/Default.aspx?ATCCNum=37673&amp;Template=vectors"
+        supplier="ATCC" />
+    <sampleComponent name="YEp352" componentCategory="Vector"
+        details="5181bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Yeast YE-type (episomal) shuttle vector, cloning
+            vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="3165"
+            endSeq="4025" />
+        <markerDetails name="Multiple Cloning sites EcoRI-NarI"
+            startSeq="15" endSeq="231" featureType="MCS" />
+        <markerDetails name="pBR322 origin" startSeq="4180"
+            endSeq="4799" featureType="ori" />
+        <markerDetails name="URA3" startSeq="1167" endSeq="367"
+            featureType="selection" />
+        <markerDetails name="Yeast 2 micron sequence"
+            startSeq="1384" endSeq="-2768" featureType="recombination system" />
+        <markerDetails name="Recommended Hosts" details="DH5alpha"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

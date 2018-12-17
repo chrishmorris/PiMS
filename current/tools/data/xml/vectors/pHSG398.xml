@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pHSG398 Vector</name>
+    <details>Cloning and IPTG-inducible expression vector, sequencing with M13 primers, Chloramphenicol resistance, </details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="3398"
+        dataPageUrl="http://catalog.takara-bio.co.jp/en/product/basic_info.asp?unitid=U100005395"
+        supplier="TaKaRa BIO Inc" />
+    <sampleComponent name="pHSG398" componentCategory="Vector"
+        details="2227bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Cloning Vector</function>
+        <resistanceDetails name="chloramphenicol" startSeq="193"
+            endSeq="852" />
+        <promoterDetails name="Lac Promoter" startSeq="1096"
+            endSeq="1125" />
+        <markerDetails name="LacZ_a" startSeq="1241" endSeq="1396"
+            featureType="Reporter gene" />
+        <markerDetails name="Multiple Cloning sites EcoRII-HindIII"
+            details="EcoRI-SacI-KpnI-SmaI/XmaI-BamHI-XbaI-SalI/HincII/AccI-PstI/Sse8387I-SphI-HindIII" startSeq="1185" endSeq="1241"
+            featureType="MCS" />
+        <markerDetails name="LacZ_a" startSeq="1241" endSeq="1396"
+            featureType="Reporter gene" />
+        <markerDetails name="pBR322 origin" startSeq="2190"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="JM83"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

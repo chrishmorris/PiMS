@@ -1,0 +1,152 @@
+span.required   { color:red; }
+
+form.grid { padding:0em 0; font-family:verdana,arial,helvetica,sans-serif; font-size:90%; width:auto; background-color:transparent}
+/* overridden for Android */
+div.formblock 	{ width:90%; padding: 0.2em 0 0 1.9em; position:relative; top:0; }
+div.formblock div.column1 	{ float:left;  width:48%;  }
+div.formblock div.column2 	{ float:right; width:50%;  }
+div.formblock div.column2 p   { margin-left: -20em;  }
+div.formblock div.shim		{ clear:both; font-size:0pt; background-color:transparent; height:0px; }
+
+/* For blocks that only show when a radio button is selected, e.g, "possible values" in protocol */
+div.subsection { padding-left:5%; width:90%; }
+
+div.formblock h4  { font-size:120%; padding:0;margin:0.25em 0 0.75em 0; }
+
+
+/* Apply "viewonly" or "editonly" to things you only want to see in one mode */
+form.grid .viewonly { visibility:hidden;  }
+form.grid .editonly { visibility:visible; }
+
+/* Style all labels with title attributes, to indicate tooltips */
+div.formblock label[title] { cursor:help }
+
+form.grid div.formitem { min-height:2em; padding-top: 0.2em; overflow: visible; }
+
+form.grid div.fieldname { float:left; width:17em; font-weight:bold; margin-top:0.2em; color:#000; }
+form.grid div.formfield { margin-left:17.5em; margin-right:1em; }
+form.grid div.formfield input[type=text] { width:98.7% }
+form.grid div.formfield input[type=password] { width:99% }
+/*div.collapsiblebox input[type="submit"] {background-color: #000; border: 0px solid; color: #fff; padding: 3px 15px; margin-bottom: 0.5em; margin-top: 0.5em; cursor: pointer; font-size: 80%;}*/
+#content input[type="submit"] {background-color: #000; border: 0px solid; color: #fff; padding: 3px 15px; margin: 0.5em; cursor: pointer; font-size: 80%;}
+#content input[type="submit"][tabindex="1"] { color: black; background-color: yellow }
+div.formitem  input[type="submit"] {margin-right: 2.2em;}
+form.grid div.formfield select { width:99% }
+form.grid div.formfield textarea { width:99% }
+
+form.grid div.formfield input.amount { width:50%; float:left; }
+form.grid div.formfield select.unit { width:49%;}
+form.grid div.formfield span.amountUnit { display:none; }
+
+form.grid div.formfield input.date[type=text] { padding-left:20px; width:82%; ) 2px 2px no-repeat; }
+form.grid div.formfield span.date { display:none }
+form.grid div.formfield img.editdate { float:right; cursor:pointer; padding-right: 1em; }
+
+
+form.grid div.toggleview { text-align:right; }
+form.grid div.toggleview .editlink { display:none; }
+form.grid div.toggleview .editlink span { font-weight:bold; color:#DB8A27; cursor:pointer; }
+form.grid div.toggleview .editlink p { float: right; margin: 0; padding: 0.2em 0 0.2em 0.5em; text-decoration: underline; }
+form.grid div.toggleview .editlink p:hover { float: right; margin: 0; color: #B1D0DF; padding: 0.2em 0 0.2em 0.5em; text-decoration: underline; }
+form.grid div.toggleview .editlink img { position:relative; top:0.2em; }
+form.grid div.toggleview .savebutton { display:block; }
+form.grid span.canceledit { color:#000; font-size:smaller; cursor:pointer; float:left; margin: 0.7em;}
+
+
+/*
+ * Width overrides, to align one- and two-column fields. 
+ * Not pixel-perfect, but close enough.
+ */
+form.grid div.column1 div.formfield input[type=text],
+form.grid div.column2 div.formfield input[type=text] 		{ width:97% }
+form.grid div.column1 div.formfield input[type=password],
+form.grid div.column2 div.formfield input[type=password] 	{ width:97% }
+form.grid div.column1 div.formfield textarea,
+form.grid div.column2 div.formfield textarea 			{ width:97% }
+form.grid div.column1 div.formfield select,
+form.grid div.column2 div.formfield select 			{ width:98% }
+form.grid div.column1 div.formfield input.date[type=text],
+form.grid div.column2 div.formfield input.date[type=text] { width:85%; }
+
+form.grid div.formfield span.inputnoedit,
+form.grid div.formfield span.urlnoedit,
+form.grid div.formfield span.selectnoedit 		{ display:none;position:relative;top:0.2em }
+
+form.grid div.submitCreate { text-align:right; padding-right: 1.2em; }
+
+/* table forms */
+form.grid table .viewonly { display:none;  }
+form.grid table .editonly { display:inline; }
+form.grid table .amount { width:4em;  }
+form.grid table .units  { width:6em; }
+form.grid table img.icon  { border:none; cursor:pointer; }
+
+
+form.hastable { padding:0; }
+form.hastable table { padding:0; margin:0; }
+form.hastable+form.hastable { border-top:1px solid #999; }
+
+/* experiment-specific CSS */
+form.grid table .amountheader  { width:10em;border:1px solid #999; }
+
+
+
+/******
+ * Overrides to grid form styles, to make a view 
+ ******/
+form.viewing div.hyperlink input,
+form.viewing div.formfield select 			{display:none; }
+
+form.viewing div.formfield span.urlnoedit,
+form.viewing div.formfield span.inputnoedit,
+form.viewing div.formfield span.selectnoedit 	{display:inline; }
+form.viewing div.formfield span.selectnoedit span.linkwithicon     {padding: 0; }
+form.viewing input[type=text],
+form.viewing input[type=password] 	{ display:none; border:0; background:transparent; font-family:verdana,arial,helvetica,sans-serif; padding-top:0.25em }
+form.viewing textarea 			{ border:0; background:transparent; overflow:auto; padding-top:0.25em }
+
+form.viewing div.radio div.formfield label {color:#999; }
+form.viewing div.radio div.formfield input[type=radio] {visibility:hidden}
+form.viewing div.radio div.formfield input[type=radio].checked {visibility:visible}
+form.viewing div.radio div.formfield input[type=radio].checked+span.radiolabel {color:black; }
+
+form.viewing div.formfield input.amount { display:none; }
+form.viewing div.formfield select.unit { display:none; }
+form.viewing div.formfield span.amountUnit { display:inline; }
+
+form.viewing div.formfield input.date { display:none; }
+form.viewing div.formfield span.date { display:inline; }
+form.viewing div.formfield img.editdate { display:none; }
+
+form.viewing div.toggleview .editlink   { display:block; }
+form.viewing div.toggleview .savebutton { display:none; }
+
+form.viewing .viewonly { visibility:visible; color: black;  }
+form.viewing .editonly { visibility:hidden; }
+form.viewing table .viewonly { display:inline;  }
+form.viewing table .editonly { display:none; }
+
+
+/* Other form-related styles */
+form.filesform { width:auto;padding:0;background-color:white;margin:0;
+                 font-family:verdana,arial,helvetica,sans-serif }
+form.filesform table { width:auto; }
+form.filesform table td, form.filesform table th { width:auto;font-size:80% }
+
+/* Custom style for order plate form */
+table.orderplate select {width:90%; }
+
+div.formgrid .hidden { display:none; }
+form.grid .hidden { display:none; }
+
+/* Styles to make non-PiMS forms look OK e.g. for teh TarO query*/
+div.column1 p span.nsfieldname { border-bottom:0px dotted #000099; color: black; font-size:smaller; font-weight:bold; float:left; }
+div.column1 p span.nsformfield { float:right; margin-right:20em; }
+
+/* Extra styles to override defaults in crystal treatment UI */
+div.treatmentexperiment form.grid div.formfield input.amount { width:20%; margin:0; }
+div.treatmentexperiment form.grid div.formfield select.units { width:20%; }
+div.treatmentexperiment form.grid div.formfield select.sample { width:50%;  }
+div.treatmentexperiment form.grid div.formfield span.amountUnit { display:none; }
+
+*[tabindex="1"] { color: black; background-color: yellow }

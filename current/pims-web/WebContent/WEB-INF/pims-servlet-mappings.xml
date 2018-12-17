@@ -1,0 +1,839 @@
+<!-- PiMS SERVLET MAPPINGS  -->
+
+
+<!-- 
+    <servlet-mapping>
+        <servlet-name>FindJsp</servlet-name>
+        <url-pattern>/read/FindJsp/*</url-pattern>
+    </servlet-mapping>
+ -->
+
+    <!-- Mappings for /Create/ -->
+    <servlet-mapping>
+        <servlet-name>CreateExperiment</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.experiment.Experiment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateExperimentGroup</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.experiment.ExperimentGroup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateDNA</servlet-name>
+        <url-pattern>/CreateDNA/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpotNewTarget</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.target.Target</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateTargetsForGroup</servlet-name>
+        <url-pattern>/update/CreateTargetsForGroup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateProtocol</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.protocol.Protocol</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateRefInputSample</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.protocol.RefInputSample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateRefOutputSample</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.protocol.RefOutputSample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateParameterDefinition</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.protocol.ParameterDefinition</url-pattern>
+    </servlet-mapping>
+    <!--  now an annotation <servlet-mapping>
+        <servlet-name>CreateUser</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.accessControl.User</url-pattern>
+    </servlet-mapping> -->
+    <servlet-mapping>
+        <servlet-name>ToggleActive</servlet-name>
+        <url-pattern>/update/ToggleActive/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateSample</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.sample.Sample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateContainer</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.holder.Holder</url-pattern>
+    </servlet-mapping>
+    <!-- 
+obsolete -->
+    <servlet-mapping>
+        <servlet-name>CreateContainer</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.location.Location</url-pattern>
+    </servlet-mapping>  
+    <servlet-mapping>
+        <servlet-name>CreateExtension</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.molecule.Extension</url-pattern>
+    </servlet-mapping>
+    <!-- now an annotation <servlet-mapping>
+        <servlet-name>CreateLabNotebook</servlet-name>
+        <url-pattern>/Create/org.pimslims.model.core.LabNotebook</url-pattern>
+    </servlet-mapping> -->
+    <servlet-mapping>
+        <servlet-name>Create</servlet-name>
+        <url-pattern>/Create/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserGroupPermissions</servlet-name>
+        <url-pattern>/UserGroupPermissions/*</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>CreateSampleFromRefSample</servlet-name>
+        <url-pattern>/update/CreateSampleFromRefSample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImportSample</servlet-name>
+        <url-pattern>/ImportSample</url-pattern>
+    </servlet-mapping>
+    <!-- obsolete <servlet-mapping>
+        <servlet-name>TargetProgress</servlet-name>
+        <url-pattern>/read/TargetProgress</url-pattern>
+    </servlet-mapping> -->
+    <servlet-mapping>
+        <servlet-name>AjaxExists</servlet-name>
+        <url-pattern>/read/AjaxExists/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjaxCreate</servlet-name>
+        <url-pattern>/update/AjaxCreate/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjaxRemove</servlet-name>
+        <url-pattern>/update/AjaxRemove/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjaxValidate</servlet-name>
+        <url-pattern>/read/AjaxValidate/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Permission</servlet-name>
+        <url-pattern>/access/Permission</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SetProtocol</servlet-name>
+        <url-pattern>/update/SetProtocol/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete</servlet-name>
+        <url-pattern>/Delete/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteAndBackToReferer</servlet-name>
+        <url-pattern>/update/DeleteAndBackToReferer/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SyntheticGene</servlet-name>
+        <url-pattern>/read/SyntheticGene/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateSyntheticGene</servlet-name>
+        <url-pattern>/update/CreateSyntheticGene/*</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>View</servlet-name>
+        <url-pattern>/View/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Export</servlet-name>
+        <url-pattern>/read/Export/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DayServlet</servlet-name>
+        <url-pattern>/Day/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WeekServlet</servlet-name>
+        <url-pattern>/Week/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- TODO convert to annotation -->
+    <servlet-mapping> 
+        <servlet-name>ExpertView</servlet-name>
+        <url-pattern>/expert/View/*</url-pattern>
+    </servlet-mapping> <!-- 
+    <servlet-mapping>
+        <servlet-name>ViewFile</servlet-name>
+        <url-pattern>/read/ViewFile/*</url-pattern>
+    </servlet-mapping> -->
+    
+    
+        <!-- 
+     <servlet-mapping>
+        <servlet-name>Edit</servlet-name>
+        <url-pattern>/Edit/*</url-pattern>
+    </servlet-mapping> -->
+    
+     <servlet-mapping>
+        <servlet-name>EditParameterDefinition</servlet-name>
+        <url-pattern>/EditParameterDefinition/*</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>EditRefInputSample</servlet-name>
+        <url-pattern>/update/EditRefInputSample/*</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>EditRefOutputSample</servlet-name>
+        <url-pattern>/update/EditRefOutputSample/*</url-pattern>
+    </servlet-mapping>
+
+<!-- leeds only
+    <servlet-mapping>
+        <servlet-name>FileUpload</servlet-name>
+        <url-pattern>/FileUpload</url-pattern>
+    </servlet-mapping> -->
+    
+    <servlet-mapping>
+        <servlet-name>Copy</servlet-name>
+        <url-pattern>/update/Copy/*</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>
+        <servlet-name>Update</servlet-name>
+        <url-pattern>/Update/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- obsolete, now in annotation  
+    <servlet-mapping>
+        <servlet-name>Notes</servlet-name>
+        <url-pattern>/update/Notes/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExternalDbLinks</servlet-name>
+        <url-pattern>/update/ExternalDbLinks/*</url-pattern>
+    </servlet-mapping> -->
+ 
+    
+    
+   
+    
+    <servlet-mapping>
+        <servlet-name>UpdateInputSamples</servlet-name>
+        <url-pattern>/experiment/UpdateInputSamples/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateOutputSamples</servlet-name>
+        <url-pattern>/experiment/UpdateOutputSamples/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ExperimentUpdate</servlet-name>
+        <url-pattern>/update/ExperimentUpdate</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>VectorList</servlet-name>
+        <url-pattern>/read/VectorList</url-pattern>
+    </servlet-mapping>
+
+
+    
+
+<!-- now mapped by annotations
+<servlet-mapping>
+        <servlet-name>SearchExperimentGroup</servlet-name>
+        <url-pattern>/Search/org.pimslims.model.experiment.ExperimentGroup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchExperiment</servlet-name>
+        <url-pattern>/Search/org.pimslims.model.experiment.Experiment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchProtocol</servlet-name>
+        <url-pattern>/Search/org.pimslims.model.protocol.Protocol</url-pattern>
+    </servlet-mapping>
+ <servlet-mapping>
+        <servlet-name>SearchConstruct</servlet-name>
+        <url-pattern>/Search/org.pimslims.model.target.ResearchObjective</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>
+        <servlet-name>SearchTarget</servlet-name>
+        <url-pattern>/Search/org.pimslims.model.target.Target</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchSample</servlet-name>
+        <url-pattern>/Search/org.pimslims.model.sample.Sample</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>QuickSearch</servlet-name>
+        <url-pattern>/Search/*</url-pattern>
+    </servlet-mapping>  -->
+
+    
+    
+<!-- obsolete Leeds  
+     <servlet-mapping>
+        <servlet-name>SearchPrimers</servlet-name>
+        <url-pattern>/SearchPrimers/*</url-pattern>
+    </servlet-mapping> -->
+    
+    <!--  now in annotation  
+    <servlet-mapping>
+        <servlet-name>ListFiles</servlet-name>
+        <url-pattern>/update/ListFiles/*</url-pattern>
+    </servlet-mapping> -->
+    <!-- obsolete<servlet-mapping>
+        <servlet-name>ImportFiles</servlet-name>
+        <url-pattern>/ImportFiles</url-pattern>
+    </servlet-mapping> -->
+    
+    <!--  now in annotation  
+    <servlet-mapping>
+        <servlet-name>DoListFiles</servlet-name>
+        <url-pattern>/read/DoListFiles/*</url-pattern>
+    </servlet-mapping> -->
+    
+    <servlet-mapping>
+        <servlet-name>EditRole</servlet-name>
+        <url-pattern>/EditRole/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListRole</servlet-name>
+        <url-pattern>/read/ListRole/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ChooseComponentForRecipe</servlet-name>
+        <url-pattern>/ChooseForCreate/org.pimslims.model.sample.SampleComponent/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ChooseForCreate</servlet-name>
+        <url-pattern>/ChooseForCreate/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Barcode</servlet-name>
+        <url-pattern>/Barcode/*</url-pattern>
+    </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>LocalSW</servlet-name>
+        <url-pattern>/LocalSW</url-pattern>
+    </servlet-mapping>
+
+    
+<!--
+...................................................
+SERVLET MAPPINGS - standard perspective
+...................................................
+ -->
+    <servlet-mapping>
+        <servlet-name>ViewSample</servlet-name>
+        <url-pattern>/standard/ViewSample/*</url-pattern>
+    </servlet-mapping>
+    <!-- obsolete<servlet-mapping>
+        <servlet-name>ViewProject</servlet-name>
+        <url-pattern>/read/ViewProject/*</url-pattern>
+    </servlet-mapping> -->
+    <servlet-mapping>
+        <servlet-name>ViewUser</servlet-name>
+        <url-pattern>/read/ViewUser/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewHolder</servlet-name>
+        <url-pattern>/ViewHolder/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewHolderContents</servlet-name>
+        <url-pattern>/read/Contents/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewExpressionObjective</servlet-name>
+        <url-pattern>/read/ViewExpressionObjective/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteCollection</servlet-name>
+        <url-pattern>/update/DeleteCollection/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Move</servlet-name>
+        <url-pattern>/update/Move/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DivideSample</servlet-name>
+        <url-pattern>/update/DivideSample/*</url-pattern>
+    </servlet-mapping>
+    
+    
+
+    <servlet-mapping>
+        <servlet-name>AddSampleCategory</servlet-name>
+        <url-pattern>/update/AddSampleCategory/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Viewing recipes -->
+    <servlet-mapping>
+        <servlet-name>ViewRefSample</servlet-name>
+        <url-pattern>/standard/ViewRefSample/*</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    <servlet-mapping>
+        <servlet-name>ViewParent</servlet-name>
+        <url-pattern>/standard/ViewParent/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewExperiment</servlet-name>
+        <url-pattern>/standard/ViewExperiment/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewProtocol</servlet-name>
+        <url-pattern>/standard/ViewProtocol/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewExtension</servlet-name>
+        <url-pattern>/read/ViewExtension/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewHost</servlet-name>
+        <url-pattern>/read/ViewHost/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HostList</servlet-name>
+        <url-pattern>/read/HostList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlasmidStockList</servlet-name>
+        <url-pattern>/read/PlasmidStockList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CellStockList</servlet-name>
+        <url-pattern>/read/CellStockList</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SampleProgress</servlet-name>
+        <url-pattern>/read/SampleProgress</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WeekOldSamples</servlet-name>
+        <url-pattern>/read/WeekOldSamples</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewSamples</servlet-name>
+        <url-pattern>/read/NewSamples</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AssignedSamples</servlet-name>
+        <url-pattern>/read/AssignedSamples</url-pattern>
+    </servlet-mapping>
+    <!-- <servlet-mapping>
+        <servlet-name>WeekOldConstructs</servlet-name>
+        <url-pattern>/read/WeekOldConstructs</url-pattern>
+    </servlet-mapping> -->
+    
+    
+
+
+<!--
+...................................................
+SERVLET MAPPINGS - Framework
+...................................................
+ -->
+
+    <servlet-mapping>
+        <servlet-name>Display</servlet-name>
+        <url-pattern>/Display</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet-mapping>
+        <servlet-name>Bookmark</servlet-name>
+        <url-pattern>/Bookmark/*</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet-mapping>
+        <servlet-name>PasswordChange</servlet-name>
+        <url-pattern>/update/PasswordChange</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <!-- <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/public/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Denied</servlet-name>
+        <url-pattern>/public/Denied</url-pattern>
+    </servlet-mapping> -->
+
+    <servlet-mapping>
+        <servlet-name>Example</servlet-name>
+        <url-pattern>/read/Example/*</url-pattern>
+    </servlet-mapping>
+
+
+<!--
+...................................................
+SERVLET MAPPINGS - SPOT
+...................................................
+ -->
+    <servlet-mapping>
+        <servlet-name>SpotTarget</servlet-name>
+        <url-pattern>/read/TargetView/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpotConstructMilestone</servlet-name>
+        <url-pattern>/spot/SpotConstructMilestone/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpotNewTarget</servlet-name>
+        <url-pattern>/spot/SpotNewTarget/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SpotReports</servlet-name>
+        <url-pattern>/spot/SpotReports/*</url-pattern>
+    </servlet-mapping>
+    <!-- 
+    <servlet-mapping>
+        <servlet-name>SpotConstructFasta</servlet-name>
+        <url-pattern>/spot/SpotConstructFasta</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>
+        <servlet-name>SpotConstructProgress</servlet-name>
+        <url-pattern>/spot/SpotConstructProgress</url-pattern>
+    </servlet-mapping> -->
+
+    <servlet-mapping>
+        <servlet-name>SpotConstructDetail</servlet-name>
+        <url-pattern>/read/ConstructView/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpotConstructMilestoneDetail</servlet-name>
+        <url-pattern>/read/ViewMilestone/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- obsolete -->
+    <servlet-mapping>
+        <servlet-name>SpotNewConstructWizard</servlet-name>
+        <url-pattern>/spot/SpotNewConstructWizard/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>AddPrimers</servlet-name>
+        <url-pattern>/update/AddPrimers/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateExpressionObjective</servlet-name>
+        <url-pattern>/update/CreateExpressionObjective/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateMutatedObjective</servlet-name>
+        <url-pattern>/update/CreateMutatedObjective/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpotTargetExperiments</servlet-name>
+        <url-pattern>/spot/SpotTargetExperiments/*</url-pattern>
+    </servlet-mapping>
+
+<!--
+...................................................
+SERVLET MAPPINGS - Non-protein Targets
+...................................................
+ -->
+    <servlet-mapping>
+        <servlet-name>NewDnaTarget</servlet-name>
+        <url-pattern>/dnatarget/NewDnaTarget</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewNaturalSourceTarget</servlet-name>
+        <url-pattern>/naturalsourcetarget/NewNaturalSourceTarget/*</url-pattern>
+    </servlet-mapping>
+<!-- 
+    <servlet-mapping>
+        <servlet-name>ErrorPage</servlet-name>
+        <url-pattern>/public/ErrorPage</url-pattern>
+    </servlet-mapping> -->
+
+<!--  <servlet-mapping>
+        <servlet-name>ConstraintErrorPage</servlet-name>
+        <url-pattern>/update/ConstraintErrorPage</url-pattern>
+    </servlet-mapping> -->
+    <servlet-mapping>
+        <servlet-name>Installation</servlet-name>
+        <url-pattern>/Installation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Crash</servlet-name>
+        <url-pattern>/admin/Crash</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping> 
+        <servlet-name>DiagramServlet</servlet-name>
+        <url-pattern>/Graph/*</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping> 
+        <servlet-name>DotServlet</servlet-name>
+        <url-pattern>/read/Dot/*</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>BarcodeGraphServlet</servlet-name>
+        <url-pattern>/barcodegraph/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BarcodeServlet</servlet-name>
+        <url-pattern>/read/BarcodeServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+            <servlet-name>RetrieveDBRecord</servlet-name>
+            <url-pattern>/RetrieveDBRecord</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+            <servlet-name>TargetRecorder</servlet-name>
+            <url-pattern>/update/TargetRecorder</url-pattern>
+    </servlet-mapping>
+   <servlet-mapping>
+            <servlet-name>DisplayBioEntry</servlet-name>
+            <url-pattern>/read/DisplayBioEntry/*</url-pattern>
+    </servlet-mapping>
+
+
+<!--
+...................................................
+SERVLET MAPPINGS - Reports
+...................................................
+
+ -->
+
+    <servlet-mapping>
+        <servlet-name>TargetGroupReport</servlet-name>
+        <url-pattern>/report/TargetGroupReport/*</url-pattern>
+    </servlet-mapping>
+    <!-- obsolete <servlet-mapping>
+        <servlet-name>TargetExperimentReport</servlet-name>
+        <url-pattern>/report/TargetExperimentReport/*</url-pattern>
+    </servlet-mapping> -->
+    
+    <servlet-mapping>
+            <servlet-name>ReportExperimentParameters</servlet-name>
+            <url-pattern>/report/ReportExperimentParameters</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+            <servlet-name>SelectTargetParameters</servlet-name>
+            <url-pattern>/report/SelectTargetParameters</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+            <servlet-name>ReportTargetParameters</servlet-name>
+            <url-pattern>/report/ReportTargetParameters</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+            <servlet-name>TargetsReportAction</servlet-name>
+            <url-pattern>/report/TargetsReportAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+            <servlet-name>ReportConstructsSummary</servlet-name>
+            <url-pattern>/report/ConstructsSummary</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+            <servlet-name>T2CReport</servlet-name>
+            <url-pattern>/read/Provenance/*</url-pattern>
+    </servlet-mapping>
+<!--
+...................................................
+SERVLET MAPPINGS - Targets
+...................................................
+ -->
+  
+    
+    <servlet-mapping>
+        <servlet-name>TargetScoreboard</servlet-name>
+        <url-pattern>/TargetScoreboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TargetGroupCsv</servlet-name>
+        <url-pattern>/read/TargetGroupCsv/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DNAConstructWizard</servlet-name>
+        <url-pattern>/DNAConstructWizard/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExtensionsList</servlet-name>
+        <url-pattern>/ExtensionsList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlateExperimentCsv</servlet-name>
+        <url-pattern>/read/PlateExperimentCsv/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateExperimentGroupCsv</servlet-name>
+        <url-pattern>/read/CreateExperimentGroupCsv/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OutcomesCsv</servlet-name>
+        <url-pattern>/read/OutcomesCsv/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CompareTargetSequences</servlet-name>
+        <url-pattern>/read/CompareTargetSequences/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReverseComplementPopup</servlet-name>
+        <url-pattern>/read/ReverseComplementPopup/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DNAandProtSeqPopup</servlet-name>
+        <url-pattern>/read/DNAandProtSeqPopup/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FastaSequencePopup</servlet-name>
+        <url-pattern>/read/FastaSequencePopup/*</url-pattern>
+    </servlet-mapping>
+    
+
+<!--
+...................................................
+SERVLET MAPPINGS - Bioinformatics
+...................................................
+ -->
+    <servlet-mapping>
+        <servlet-name>PDBBlast</servlet-name>
+        <url-pattern>/read/Blast/PDBBlast/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlastWeekly</servlet-name>
+        <url-pattern>/read/Blast/BlastWeekly/*</url-pattern>
+    </servlet-mapping>
+    
+ <!--
+...................................................
+SERVLET MAPPINGS - Complexes
+...................................................
+ -->
+    <servlet-mapping>
+        <servlet-name>BrowseComplex</servlet-name>
+        <url-pattern>/BrowseComplex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewComplex</servlet-name>
+        <url-pattern>/NewComplex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewComplex</servlet-name>
+        <url-pattern>/ViewComplex/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditComplexRole</servlet-name>
+        <url-pattern>/update/EditComplexRole/*</url-pattern>
+    </servlet-mapping>
+
+<!--
+...................................................
+SERVLET MAPPINGS - OPPF perspective
+...................................................
+ -->
+    <servlet-mapping>
+        <servlet-name>OpticImporter</servlet-name>
+        <url-pattern>/OpticImporter</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>OppfPrimerOrder</servlet-name>
+        <url-pattern>/OppfPrimerOrderForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlignSequence</servlet-name>
+        <url-pattern>/AlignSequence/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SequenceResult</servlet-name>
+        <url-pattern>/SequenceResult/*</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    
+
+     <servlet-mapping>
+        <servlet-name>OrderPlate</servlet-name>
+        <url-pattern>/OrderPlate/*</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>CreateOrderPlate</servlet-name>
+        <url-pattern>/update/CreateOrderPlate</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>AddExperimentToGroup</servlet-name>
+        <url-pattern>/update/AddExperimentToGroup/*</url-pattern>
+    </servlet-mapping>
+    <!-- old update plate -->
+    <servlet-mapping>
+        <servlet-name>BasicUpdatePlateExperiment</servlet-name>
+        <url-pattern>/update/BasicUpdatePlateExperiment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjaxUpdatePlateExperiment</servlet-name>
+        <url-pattern>/update/AjaxPlateExperimentUpdate/*</url-pattern>
+    </servlet-mapping>
+      
+    
+    <servlet-mapping>
+        <servlet-name>AdvancedFillOptionsServlet</servlet-name>
+        <url-pattern>/update/AdvancedFillOptionsServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdatePlateFromSpreadsheet</servlet-name>
+        <url-pattern>/update/UpdatePlateFromSpreadsheet/*</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>AjaxUpdate</servlet-name>
+        <url-pattern>/update/AjaxUpdate/*</url-pattern>
+    </servlet-mapping>  
+    
+    <!-- new view plate -->
+    <servlet-mapping>
+        <servlet-name>ViewExperimentGroup</servlet-name>
+        <url-pattern>/read/ViewExperimentGroup/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CopyFromPlate</servlet-name>
+        <url-pattern>/CopyFromPlate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MergeByScore</servlet-name>
+        <url-pattern>/read/MergeByScore</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreatePlate</servlet-name>
+        <url-pattern>/CreatePlate</url-pattern>
+    </servlet-mapping>
+    
+<!--
+...................................................
+SERVLET MAPPINGS - BARCODES
+...................................................
+ -->
+ <!-- 
+    <servlet-mapping>
+        <servlet-name>QRCodeServlet</servlet-name>
+        <url-pattern>/public/qr</url-pattern>
+    </servlet-mapping> -->
+    

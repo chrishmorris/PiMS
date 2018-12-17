@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pBAD24 Vector</name>
+    <details>Regulated protein expression</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="87399"
+        dataPageUrl="http://www.lgcstandards-atcc.org/LGCAdvancedCatalogueSearch/ProductDescription/tabid/1068/Default.aspx?ATCCNum=87399&amp;Template=vectors"
+        supplier="ATCC" />
+    <sampleComponent name="pBAD24" componentCategory="Vector"
+        details="4542bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="1885"
+            endSeq="2745" />
+        <promoterDetails name="pBAD promoter" startSeq="1248"
+            endSeq="1276" />
+        <markerDetails name="Multiple Cloning sites NheI-HindIII"
+            details="NheI-EcoRI-NcoI-KpnI-SmaI-XbaI-SalI-PstI-HindIII" startSeq="1300"
+            endSeq="1366" featureType="MCS" />
+        <markerDetails name="araC ORF (opposite strand)" startSeq="974" endSeq="96"
+            featureType="regulator" />
+        <markerDetails name="pBR322 origin" startSeq="3248" endSeq="3945"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="DH5alpha" featureType="Hosts" />
+    </sampleComponent>
+</vector>

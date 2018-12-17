@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE web-app [
+    <!ENTITY mappings SYSTEM "pims-servlet-mappings.xml">
+    <!ENTITY definitions SYSTEM "pims-servlet-definitions.xml">
+  ]>
+<!-- Servlet configuration for PIMS web application.
+To add new functionality to PIMS, there are three section
+you are likely to need to edit:
+    Servlet definitions
+    Servlet mappings
+    Security Constraints
+Note that the order of entries in this file is prescribed in the DTD.
+You cannot rearrange it to make it more convenient
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5">
+
+    <display-name>PiMS</display-name>
+    <description>
+      Protein Information Management System
+    </description>
+    
+    <!-- obsolete LEEDS SERVLETS    
+     <servlet>
+        <servlet-name>SequenceDataExport</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.SequenceDataExport</servlet-class>
+    </servlet>
+  
+       <servlet>
+        <servlet-name>NewFermentation</servlet-name>
+        <servlet-class>org.pimslims.servlet.fermentation.NewFermentation</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>DeleteSequenceFiles</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.DeleteSequenceFiles</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>ExportCVSforSequencing</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.ExportCVSforSequencing</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>AdminHome</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.AdminHome</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>CreateSequencingOrder</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.CreateSequencingOrder</servlet-class>
+    </servlet>
+      <servlet>
+        <servlet-name>CreateControls</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.CreateControls</servlet-class>
+    </servlet>
+      <servlet>
+        <servlet-name>CompleteSOrder</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.CompleteSOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderAcknowledgement</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.OrderAcknowledgement</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateSequencingOrderFromFile</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.CreateSequencingOrderFromFile</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchSequencingOrders</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.SearchSequencingOrders</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>ViewSequencingOrder</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.ViewSequencingOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdvancedSearchSOrders</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.AdvancedSearchSOrders</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CopySOrder</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.CopySOrder</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>DeleteSOrder</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.DeleteSOrder</servlet-class>
+    </servlet> 
+    
+    <servlet>
+        <servlet-name>PlanSOPlate</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.PlanSOPlate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewPellet</servlet-name>
+        <servlet-class>org.pimslims.servlet.fermentation.NewPellet</servlet-class>
+    </servlet>
+  
+    <servlet>
+        <servlet-name>SequenceUploader</servlet-name>
+        <servlet-class>org.pimslims.servlet.recordfetch.SequenceUploader</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>ListSOrders</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.ListSOrders</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserListSOrders</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.UserListSOrders</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Notify</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.Notify</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>FixPlateLayout</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.FixPlateLayout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AbandonPlannedRun</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.AbandonPlannedRun</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TagResults</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.TagResults</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>TagOrder</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.TagOrder</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>SequencingPlateSetup</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.SequencingPlateSetup</servlet-class>
+    </servlet>
+      <servlet>
+        <servlet-name>LoadResults</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.LoadResults</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>TargetConstructsList</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.TargetConstructsList</servlet-class>
+    </servlet> -->
+    
+     <!-- Leeds forms  
+   
+        <servlet-name>PrimerOrderList</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.PrimerOrderList</servlet-class>
+   </servlet> 
+   <servlet>
+        <servlet-name>ViewPrimer</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.SinglePrimer</servlet-class>
+   </servlet>
+    <servlet>
+        <servlet-name>NewConstruct</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.NewConstruct</servlet-class>
+   </servlet>
+   
+   
+    <servlet>
+        <servlet-name>PrimerOrderForm</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.PrimerOrderForm</servlet-class>
+   </servlet>
+
+   <servlet>
+        <servlet-name>LoadNewConstruct.jsp</servlet-name>
+        <jsp-file>/JSP/Leedsforms/LoadNewConstruct.jsp</jsp-file>
+   </servlet>  
+    <servlet>
+        <servlet-name>ListEntryClones</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.ListEntryClones</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>AutomatedBlastStatus</servlet-name>
+        <servlet-class>org.pimslims.servlet.AutomatedBlastStatus</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BoxesBarcodeList</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.BoxesBarcodeList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListPrimerForms</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.ListPrimerForms</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewPrimerForm</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.NewPrimerForm</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>NewPrimer</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.NewPrimer</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>EditPrimer</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.EditPrimer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FullPrimerForm</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.FullPrimerForm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditPrimerForm</servlet-name>
+        <servlet-class>org.pimslims.servlet.leedsform.EditPrimerForm</servlet-class>
+    </servlet>
+     END OF LEEDS SERVLET DEFINITIONS -->
+    
+
+    
+
+    <!-- Listener
+    This connects to the database when the web application starts
+    -->
+    <listener>
+          <listener-class>org.pimslims.servlet.Listener</listener-class>
+    </listener>
+    
+    <listener>
+          <listener-class>org.pimslims.servlet.IFileTypeListener</listener-class>
+    </listener>
+    <!-- TODO Prevent memory leaks due to use of particular java/javax APIs
+    Requires at least Tomcat6.0.26
+    An alternative is to enable the GC protection but specify -XX:+ExplicitGCInvokesConcurrent
+<Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" 
+    gcDaemonProtection="false"
+/> -->
+<!--    
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+-->    
+   <!-- Uncomment for blast search with tomcat see Properties for configuration
+   <listener>
+          <listener-class>org.pimslims.servlet.AutomatedBlastListener</listener-class>
+    </listener>
+		-->
+ 	<!-- Session timeout in minutes -->
+ 		<session-config>
+    		<session-timeout>240</session-timeout>
+	  </session-config>
+
+<!-- for Tomcat7 
+<filter>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <async-supported>true</async-supported>
+</filter> -->
+
+<filter>
+    <filter-name>MhtmlFilter</filter-name>
+    <filter-class>org.pimslims.mhtml.MhtmlFilter</filter-class>
+</filter>
+<filter>
+    <filter-name>CacheParams</filter-name>
+    <filter-class>org.pimslims.servlet.CacheParams</filter-class>
+</filter>
+
+
+<filter><!-- believed obsolete -->
+    <filter-name>SetCurrentTab</filter-name>
+    <filter-class>org.pimslims.servlet.SetCurrentTab</filter-class>
+</filter>
+
+    <!-- PIMS CORE SERVLETS -->
+<!--
+===================
+SERVLET DEFINITIONS
+===================
+
+In a few cases the servlet has conditional processing
+depending on the user's security role.
+In these cases the "security role ref" must be specified.
+For more information see
+    http://www.pims-lims.org/api/org/pimslims/servlet/package-summary.html
+ -->
+<!--
+<servlet>
+  <servlet-name>spring</servlet-name>
+  <servlet-class>
+    org.springframework.web.servlet.DispatcherServlet
+  </servlet-class>
+  <load-on-startup>1</load-on-startup>
+</servlet>
+
+  <servlet-mapping>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>/S/*</url-pattern>
+  </servlet-mapping>
+
+ -->
+    <!-- JSP processor -->
+    <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>fork</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xpoweredBy</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>trimSpaces</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>compilerSourceVM</param-name>
+            <param-value>1.5</param-value>
+        </init-param>
+        <init-param>
+            <param-name>compilerTargetVM</param-name>
+            <param-value>1.5</param-value>
+        </init-param>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+    
+    
+
+        <!-- Also the help files are outside WEB-INF -->
+        <servlet-mapping>
+            <servlet-name>jsp</servlet-name>
+            <url-pattern>/help/*</url-pattern>
+        </servlet-mapping>
+        
+        <!-- the PiMS JSPs -->
+         <servlet-mapping>
+            <servlet-name>jsp</servlet-name>
+            <url-pattern>*.jsp</url-pattern>
+        </servlet-mapping>
+
+        <!--PiMS function pages -->
+        <servlet-mapping>
+            <servlet-name>jsp</servlet-name>
+            <url-pattern>/functions/*</url-pattern>
+        </servlet-mapping>
+    
+<!-- IMPORT THE STANDARD PiMS SERVLET DEFINITIONS -->
+&definitions;
+<!-- IMPORT THE STANDARD PiMS SERVLET MAPPINGS -->
+&mappings;
+<!--
+===================
+SERVLET MAPPINGS
+===================
+
+There must be an entry here for every servlet,
+relating the URL the user's browser visits
+to the servlet class.
+
+When a servlet dispatches a JSP, or a JSP includes a JSP,
+there is also a URL used, and a mapping must be entered here.
+
+These mappings are designed to allow custom servlets,
+JSPs, and JSPs to be called in place of the generic ones.
+ -->
+
+
+<!--
+...................................................
+SERVLET MAPPINGS - Generic Servlet URLs
+...................................................
+
+For each URL, the last mapping on the list maps to the generic servlet.
+Earlier entries in the list can provide
+a custom UI for a particular class or role
+ -->
+
+<!-- for Tomcat7
+<filter-mapping>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+</filter-mapping> -->
+
+<filter-mapping>
+    <filter-name>CacheParams</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+<filter-mapping>
+    <filter-name>MhtmlFilter</filter-name>
+    <url-pattern>/Save/*</url-pattern>
+</filter-mapping>
+
+<!--  obsolete
+<filter-mapping>
+    <filter-name>SetCurrentTab</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping> -->
+
+   <servlet-mapping>
+       <servlet-name>TaroListener</servlet-name>
+       <url-pattern>/TaroListener/*</url-pattern>
+   </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>OneAWeek</servlet-name>
+        <url-pattern>/OneAWeek</url-pattern>
+    </servlet-mapping>
+    
+    
+     
+    
+    
+
+<welcome-file-list>
+   <welcome-file>Bookmark/Home</welcome-file>
+</welcome-file-list>
+<error-page>
+  <error-code>403</error-code>
+  <location>/public/Denied</location>
+</error-page>
+<error-page>
+  <exception-type>javax.servlet.ServletException</exception-type>
+  <location>/public/ErrorPage</location>
+</error-page>
+<error-page>
+  <exception-type>java.lang.RuntimeException</exception-type>
+  <location>/public/ErrorPage</location>
+</error-page>
+<error-page>
+  <exception-type>java.lang.Exception</exception-type>
+  <location>/public/ErrorPage</location>
+</error-page>
+<!-- see org.pimslims.servlet.Update -->
+<error-page>
+  <exception-type>org.pimslims.servlet.ConcurrentUpdateException</exception-type>
+  <location>/JSP/core/ConcurrentUpdate.jsp</location>
+</error-page>
+<error-page>
+  <error-code>500</error-code>
+  <location>/public/ErrorPage</location>
+</error-page>
+
+<error-page>
+  <error-code>404</error-code>
+  <location>/JSP/Error404.jsp</location>
+</error-page>
+
+
+    <login-config>
+      <auth-method>FORM</auth-method>
+        <realm-name>Protein Information Management System</realm-name>
+      <form-login-config>
+          <form-login-page>/JSP/core/Login.jsp</form-login-page>
+          <form-error-page>/public/Denied</form-error-page>
+      </form-login-config>
+    </login-config>
+
+
+<!-- Application resources-->
+<context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>ApplicationResources</param-value>
+    </context-param>
+
+<!--
+===================
+SECURITY CONSTRAINTS
+===================
+
+There must be an entry here for every JSP and servlet
+ -->
+
+    <!-- public pages  -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>static pages, all public</web-resource-name>
+            
+            <!-- obsolete URLs
+            <url-pattern>/header</url-pattern>
+            <url-pattern>/footer</url-pattern>
+            <url-pattern>/help-screenshots/*</url-pattern>
+            -->
+            
+            <url-pattern>/menubar</url-pattern>
+            <url-pattern>/help/*</url-pattern>
+            <url-pattern>/functions/*</url-pattern>
+            <url-pattern>/javascript/*</url-pattern>
+            <url-pattern>/images/*</url-pattern>
+            <url-pattern>/css/*</url-pattern>
+            <url-pattern>/skins/*</url-pattern>
+            <url-pattern>/public/*</url-pattern>
+            <url-pattern>/JSP/core/Index.jsp</url-pattern>
+            <url-pattern>/Logout</url-pattern> <!-- and can always log out -->
+            <http-method>GET</http-method>
+        </web-resource-collection>
+    </security-constraint>
+
+
+    <!-- admin pages -->
+    <security-constraint>
+    <web-resource-collection>
+    	<web-resource-name>Administrator pages</web-resource-name>
+    	<url-pattern>/admin/*</url-pattern>
+        <url-pattern>/Installation</url-pattern>
+        <url-pattern>/functions/User.jsp</url-pattern>
+      <url-pattern>/JSP/HibernateStaticsInfo.jsp</url-pattern>
+      
+      
+   		<!-- Special restrictions for key access permissions classes -->
+    	<url-pattern>/access/Permission/*</url-pattern>
+    	<url-pattern>/Create/org.pimslims.model.accessControl.UserGroup</url-pattern>
+    	<url-pattern>/Create/org.pimslims.model.core.LabNotebook</url-pattern>
+    	<url-pattern>/Create/org.pimslims.model.accessControl.Permission</url-pattern>
+   		<url-pattern>/Create/org.pimslims.model.people.Person:users</url-pattern>
+   		<!-- Not this one, a group leader can use it:
+    	<url-pattern>/Create/org.pimslims.model.accessControl.User</url-pattern>
+    	 -->
+
+		<!--  Prevent ordinary users adding to enumeration type reference data
+		   This is a simple way of restricting the creation of a class,
+		   but be careful to cover all the "Create new" links for its roles
+		  -->
+		<url-pattern>/Create/org.pimslims.model.reference.TargetStatus</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.target.Milestone:code</url-pattern>
+  		<url-pattern>/Create/org.pimslims.model.target.TargetStatus:code</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.reference.ExperimentType</url-pattern>
+
+		<url-pattern>/Create/org.pimslims.model.experiment.Experiment:experimentType</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.reference.SampleCategory:experimentTypes</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.reference.SampleCategory</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.sample.Sample:sampleCategories</url-pattern> 
+		
+        <url-pattern>/Search/org.pimslims.model.accessControl.User</url-pattern>
+        <url-pattern>/Search/org.pimslims.model.people.Person</url-pattern>
+    	<url-pattern>/Search/org.pimslims.model.accessControl.UserGroup</url-pattern>
+    	<url-pattern>/Search/org.pimslims.model.core.LabNotebook</url-pattern>
+    	<url-pattern>/Search/org.pimslims.model.accessControl.Permission</url-pattern>
+    	<!-- No http-method means all methods are constrained -->
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>pims-administrator</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Prohibit updating on user pages for viewing 
+  -->
+    <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>User pages</web-resource-name>
+      <url-pattern>/Login</url-pattern>
+      <url-pattern>/read/*</url-pattern>
+      <url-pattern>/Save/*</url-pattern>
+      <url-pattern>/standard/*</url-pattern>
+      <url-pattern>/Search/*</url-pattern>
+      <url-pattern>/SearchPrimers/*</url-pattern>
+      <url-pattern>/ViewFile/*</url-pattern>
+      <url-pattern>/Display</url-pattern>
+      <url-pattern>/TargetScoreboard</url-pattern>
+      <url-pattern>/Barcode/*</url-pattern>
+      <url-pattern>/sspf/*</url-pattern>
+      <url-pattern>/report/*</url-pattern>
+      <url-pattern>/JSP/Upload.jsp</url-pattern>
+      <url-pattern>/ListEntryClones</url-pattern>
+      <url-pattern>/ListPrimerForms</url-pattern>
+      <url-pattern>/FullPrimerForm/*</url-pattern>
+      <url-pattern>/TargetConstructsList</url-pattern>
+      <url-pattern>/barcodegraph/*</url-pattern>
+      <url-pattern>*.jsp</url-pattern>
+      <url-pattern>/ExtensionsList</url-pattern>      
+      <http-method>POST</http-method>
+    </web-resource-collection>
+    <auth-constraint />
+  </security-constraint>
+
+<!--  Enable autentication for view only pages -->
+    <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>User pages (read only)</web-resource-name>
+      <url-pattern>/Login</url-pattern>
+      <url-pattern>/read/*</url-pattern>   
+      <url-pattern>/Save/*</url-pattern>         
+      <url-pattern>/Graph/*</url-pattern><!-- soon to be obsolete --> 
+      <url-pattern>/standard/*</url-pattern>
+      <url-pattern>/ViewFile/*</url-pattern>
+      <url-pattern>/Search/*</url-pattern>
+      <url-pattern>/SearchPrimers/*</url-pattern>
+      <url-pattern>/ViewPrimer/*</url-pattern>      
+      <url-pattern>/ListFiles/*</url-pattern>
+      <!-- <url-pattern>/ImportFiles/*</url-pattern> -->
+      <url-pattern>/ChooseForCreate/*</url-pattern>
+      <url-pattern>/Display</url-pattern>
+      <url-pattern>/TargetScoreboard</url-pattern>
+      <url-pattern>/Barcode/*</url-pattern>
+      <url-pattern>/spot/*</url-pattern>
+      <url-pattern>/sspf/*</url-pattern>
+      <url-pattern>/report/*</url-pattern>
+      <url-pattern>/Bookmark/*</url-pattern>
+      <url-pattern>/JSP/*</url-pattern>
+      <url-pattern>/ListEntryClones</url-pattern>
+      <url-pattern>/ListPrimerForms</url-pattern>
+      <url-pattern>/FullPrimerForm/*</url-pattern>
+      <url-pattern>/T2CReport/*</url-pattern>
+      <url-pattern>/TargetConstructsList</url-pattern>
+      <url-pattern>/barcodegraph/*</url-pattern>
+      <url-pattern>/ExtensionsList</url-pattern>  
+      <http-method>GET</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+      <role-name>pims-view</role-name>
+      <role-name>pims-administrator</role-name>
+    </auth-constraint>
+   </security-constraint>
+   
+   
+            <!-- Perspective switch use POST to do its job, thus it must be allowed for View -->
+    <security-constraint>
+      <web-resource-collection>
+            <web-resource-name>View</web-resource-name>
+            <url-pattern>/View/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>pims-view</role-name>
+        <role-name>*</role-name>
+        <role-name>pims-administrator</role-name>
+      </auth-constraint>
+    </security-constraint>
+
+   <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>User pages for general updating</web-resource-name> 
+      <url-pattern>/</url-pattern>       <!-- index page -->
+      <url-pattern>/Bookmark/*</url-pattern>      
+      <url-pattern>/dnatarget/NewDnaTarget</url-pattern>
+      <url-pattern>/DNAConstructWizard/*</url-pattern>
+      <url-pattern>/Day/*</url-pattern>
+      <url-pattern>/Week/*</url-pattern>
+      <url-pattern>/update/*</url-pattern>
+      <url-pattern>/Update/*</url-pattern> 
+      <url-pattern>/experiment/UpdateInputSamples/*</url-pattern>
+      <url-pattern>/experiment/UpdateOutputSamples/*</url-pattern>
+      <url-pattern>/ListFiles/*</url-pattern>
+      <!-- <url-pattern>/ImportFiles/*</url-pattern> -->
+      <url-pattern>/EditRole/*</url-pattern>
+      <url-pattern>/Construct/*</url-pattern>
+      <url-pattern>/Create/*</url-pattern>
+      <!-- <url-pattern>/Search/org.pimslims.model.sample.Sample</url-pattern> -->
+      <url-pattern>/Delete/*</url-pattern>
+      <url-pattern>/spot/*</url-pattern>
+      <url-pattern>/CreatePlate</url-pattern>
+      <url-pattern>/CopyRecipe/*</url-pattern>
+      <url-pattern>/CopyFromPlate</url-pattern>
+      <url-pattern>/Plate/*</url-pattern>
+      <url-pattern>/OrderPlate/*</url-pattern>
+      <url-pattern>/RetrieveDBRecord</url-pattern>
+      <url-pattern>/NewPrimerForm/*</url-pattern>
+      <url-pattern>/NewConstruct/*</url-pattern>
+      <!-- obsolete <url-pattern>/PrimerOrderList</url-pattern> -->
+      <url-pattern>/JSP/LoadNewConstruct.jsp</url-pattern>
+      <url-pattern>/JSP/oppf/*</url-pattern>
+      <url-pattern>/EditParameterDefinition/*</url-pattern>
+      <url-pattern>/BrowseComplex</url-pattern>
+      <url-pattern>/NewComplex</url-pattern>
+      <url-pattern>/CreateDNA/*</url-pattern>
+      <url-pattern>/ViewComplex/*</url-pattern>
+      <url-pattern>/ViewExpBlueprint/*</url-pattern>
+      <url-pattern>/OpticImporter</url-pattern>
+      <url-pattern>/OppfPrimerOrderForm/*</url-pattern>
+      <url-pattern>/AlignSequence/*</url-pattern>
+      <url-pattern>/SequenceResult/*</url-pattern>
+      <!-- <url-pattern>/ImportSample</url-pattern> -->
+      <url-pattern>/naturalsourcetarget/*</url-pattern>
+      <url-pattern>/read/SampleProgress</url-pattern>
+      <url-pattern>/Export/*</url-pattern>
+      <url-pattern>/LocalSW</url-pattern>
+      <url-pattern>/JSP/plateSequenceCheck/UploadSequences.jsp</url-pattern>
+      <!-- If no method is specified then all methods
+      are constrained
+      To make your installation read only, change this to just GET
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+      -->
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+      <role-name>pims-administrator</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- unsupported HTTP methods -->
+  <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>unsupported HTTP methods</web-resource-name>
+        <url-pattern>/*</url-pattern>
+            <http-method>PUT</http-method>
+            <http-method>DELETE</http-method>
+            <http-method>TRACE</http-method>
+            <http-method>HEAD</http-method>
+            <http-method>OPTIONS</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+  </security-constraint>
+  
+  
+  <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>What is not permitted is forbidden</web-resource-name>
+        <url-pattern>/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+  </security-constraint>
+
+    <!-- SECURITY ROLES
+        Note that tomcat-users.xml must contain
+      <role rolename="pims-adminstrator"/>
+      <role rolename="pims-user"/>
+      <role rolename="pims-view"/>
+    -->
+    <security-role>
+       <role-name>*</role-name>
+       <!-- any logged in user -->
+    </security-role>
+    <security-role>
+       <role-name>pims-administrator</role-name>
+       <!--<description>can install new software and manage user rights</description>-->
+    </security-role>
+    <!-- <security-role>
+       <role-name>pims-user</role-name>
+        <description>
+           can view and update laboratory information,
+           in conformance to the policy set by the administrator
+           Now replaced by *
+       </description> 
+    </security-role> -->
+    <security-role>
+       <role-name>pims-view</role-name>
+       <!--<description>
+           can view laboratory information,
+           in conformance to the policy set by the administrator
+           obsolete, not used and hard to support with JDBCRealm
+       </description>-->
+    </security-role>
+    <!-- a visitor who is not logged on can view the help files -->
+
+  <mime-mapping>
+    <extension>ico</extension>
+    <mime-type>image/x-icon</mime-type>
+  </mime-mapping>
+    <mime-mapping>
+     <extension>pdf</extension>
+     <mime-type>application/pdf</mime-type>
+   </mime-mapping>
+
+
+
+
+</web-app>

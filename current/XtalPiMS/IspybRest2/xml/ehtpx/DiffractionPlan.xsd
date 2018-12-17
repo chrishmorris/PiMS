@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: DiffractionPlan.xsd,v 1.8 2006/11/02 08:34:59 lxl Exp $">
+	<xs:include schemaLocation="Exposure.xsd"/>
+	<xs:include schemaLocation="ScreenPlan.xsd"/>
+	<xs:include schemaLocation="CollectPlan.xsd"/>
+	<xs:include schemaLocation="CrystalIdentifier.xsd"/>
+	<xs:complexType name="DiffractionPlan">
+		<xs:annotation>
+			<xs:documentation>Updated diffraction plan for the set of Crystals previously screened.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="projectUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier of the project to ensure the consistency for all the transactions between the different partners.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="diffractionPlanUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier for this diffraction plan.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crystalUUID" type="xs:string" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier of the Crystal for this diffraction plan.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crystalIdentifier" type="tns:CrystalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:sequence>
+				<xs:element ref="tns:screenPlan"  minOccurs="0"/>
+				<xs:element ref="tns:collectPlan"  minOccurs="0"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- added to handle new submitDiffractionDetails method -->
+	<xs:element name="submitDiffractionPlan" type="tns:DiffractionPlan"/>
+</xs:schema>
+                                                                                                                                                                                                                                                                                                                     

@@ -1,0 +1,5 @@
+/* obsolete */
+@CHARSET "UTF-8";
+textarea.comment {width: 42.5em; }
+input.sequence {width: 37em; }
+select {width: 38em; margin-right:0.8em;}

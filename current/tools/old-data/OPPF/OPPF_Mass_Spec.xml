@@ -1,0 +1,18 @@
+<!-- Generic miniprep protocol xml as flat file -->
+<protocol name="OPPF Mass Spectrometry" objective="Mass spectrometry analysis" creationDate="05-06-07" remarks="Based on Lab activities requirements from OPPF" details="Mass spectrometry analysis" >
+ <experimentType>Mass spec</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Molecular Weight" parameterType="Float" />
+  <parameterDefinition id="2" name="Mass Spec Notes" parameterType="String" />
+  <parameterDefinition id="3" name="% SelMet" parameterType="Int" />
+  <parameterDefinition id="4" name="Is Expected Molecular Weight" parameterType="Boolean" />
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="0.00008" unit="L" displayUnit="uL" refSample="Concentrated Protein" name="Concentrated Protein"/>
+ </inputSamples>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Purified protein" amount="" unit="L" displayUnit="mL" refSample="Concentrated Protein" name="Mass Spec Output"/>
+
+</protocol>

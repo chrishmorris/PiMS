@@ -1,0 +1,75 @@
+﻿<log4net>
+  <!-- A1 is set to be a ConsoleAppender -->
+  <appender name="ScreenApp" type="log4net.Appender.ConsoleAppender">
+    <!-- A1 uses PatternLayout -->
+    <threshold value="ALL"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level (%file:%line)  - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="FileApp" type="log4net.Appender.RollingFileAppender">
+    <threshold value="ALL"/>
+    <file value="LogFiles\OPPF.Integrations.ImagerLink.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="1000KB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level (%file:%line)  - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="ImageProcessorProviderFileApp" type="log4net.Appender.RollingFileAppender">
+    <threshold value="ALL"/>
+    <file value="LogFiles\OPPF.Integrations.ImagerLink.Imaging.Processing.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="1000KB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level (%file:%line)  - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="ImageUploaderFileApp" type="log4net.Appender.RollingFileAppender">
+    <threshold value="ALL"/>
+    <file value="LogFiles\OPPF.Integrations.ImageUploader.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="1000KB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level (%file:%line)  - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="MailApp" type="log4net.Appender.SmtpAppender">
+    <to value="formulatrix-errors@strubi.ox.ac.uk" />
+    <from value="formulatrix@strubi.ox.ac.uk" />
+    <subject value="Formulatrix Ops: Error" />
+    <smtpHost value="mail.strubi.ox.ac.uk" />
+    <bufferSize value="5" />
+    <lossy value="true" />
+    <evaluator type="log4net.Core.LevelEvaluator">
+      <threshold value="WARN"/>
+    </evaluator>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%property{log4net:HostName} :: %level :: %message %newlineLogger: %logger%newlineDate: %date%newlineFile: %file%newlineLine: %line%newline%newline" />
+    </layout>
+  </appender>
+  <!-- Set root logger level to DEBUG and its only appender to A1 -->
+  <root>
+    <appender-ref ref="ScreenApp" />
+    <appender-ref ref="FileApp" />
+    <!-- appender-ref ref="MailApp"/ -->
+  </root>
+  <logger name="OPPF.Integrations.ImagerLink.Imaging.Processing" additivity="false">
+    <appender-ref ref="ScreenApp" />
+    <appender-ref ref="ImageProcessorProviderFileApp" />
+    <!-- appender-ref ref="MailApp"/ -->
+  </logger>
+  <logger name="OPPF.Integrations.ImageUploader" additivity="false">
+    <appender-ref ref="ImageUploaderFileApp" />
+    <!-- appender-ref ref="MailApp"/ -->
+  </logger>
+</log4net>

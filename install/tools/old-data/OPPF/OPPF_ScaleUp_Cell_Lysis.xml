@@ -1,0 +1,21 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF ScaleUp Cell Lysis" objective="Lysis of Cell Culture" creationDate="02-02-07" remarks="Based on Lab activities requirements from OPPF">
+ <experimentType>Lysis</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Method of Cell Disruption" parameterType="String" possibleValues="Sonication;Cell Disruptor;Chemical;None;Other" defaultValue="Cell Disruptor"/> 
+  <parameterDefinition id="2" name="Volume of Lysate (ml)" parameterType="Float" />
+  <parameterDefinition id="3" name="Lysis Notes" parameterType="String" />
+ </parameterDefinitions>
+
+<inputSamples>
+	<inputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="" unit="L" displayUnit="mL" refSample="Culture" name="Culture" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Buffer" amount="0.04" unit="L" displayUnit="mL" refSample="Buffer" name="Lysis Buffer" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Inhibitor" amount="3" unit="number" displayUnit="tablets" refSample="Enzyme -modifying" name="Protease Inhibitor" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -modifying" amount="0.0001" unit="L" displayUnit="uL" refSample="Enzyme -modifying" name="DNAse" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -modifying" amount="" unit="L" displayUnit="uL" refSample="Enzyme -modifying" name="Lysozyme" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="0.00008" unit="L" displayUnit="uL" refSample="Supernatant" name="Supernatant"/>
+
+</protocol>

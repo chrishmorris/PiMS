@@ -1,0 +1,29 @@
+Data
+Vectors: /data/xml/Vectors
+Added:
+New vector file pET-21a.xml
+New vector file pTrc99A.xml
+New Vector file pGEX6P-1.xml
+New Vector file pBAD-gIIIA.xml
+New Vector file pBAD24.xml
+New Vector file pET24plus.xml
+New Vector file pHSG398.xml
+New Vector file pUC57.xml
+New Vector file pUC8.xml
+New Vector file pUC18.xml
+New Vector file pGEX-2T.xml
+New Vector file pGET-11c.xml
+New Vector file pGET-14b.xml
+New Vector file pGET-16b.xml
+New Vector file pTNT.xml
+
+Updated:
+pET-21d.xml, pET-15b.xml, pET-26b.xml, pET-28a.xml, pET-21a, pET-21d, pBAD24, pHSG389, pUC57
+
+Suppliers.csv
+Updated: Amersham to GE Healthcare
+Old: Supplier,Amersham Biosciences UK Limited,Amersham Place,,Buckinghamshire,,Little Chalfont,HP7 9NA,UK,0870 606 1921,01494 544350,orders.gb@amersham.com,http://www1.amershambiosciences.com/aptrix/upp01077.nsf/Content/uk_homepage
+New: Supplier,GE Healthcare UK Limited,Amersham Place,,Buckinghamshire,,Little Chalfont,HP7 9NA,UK,0870 606 1921,01494 544350,ordersgb@ge.com,http://www5.gelifesciences.com/aptrix/upp01077.nsf/content/uk_homepage
+Added:GenScript & TaKaRa
+Supplier,Takara Bio Europe,2 Avenue du President Kennedy,,,,Saint-Germain-en-Laye,F-78100,France,+33 (0)1 39 04 68 80,+33 (0)1 39 04 68 70,web@takara-bio.eu,http://www.takarabioeurope.com/
+Supplier,GenScript,120 Centennial Ave,,,,Piscataway,NJ 08854,USA,1-732-885-9188,1-732-210-0262,info@genscript.com,http://www.genscript.com/index.html

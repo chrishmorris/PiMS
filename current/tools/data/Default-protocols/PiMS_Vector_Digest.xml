@@ -1,0 +1,24 @@
+<!-- PiMS default Vector digest protocol xml as flat file -->
+<protocol name="PIMS Vector Digest" objective="Prepare Vector for Cloning" creationDate="04-03-09" remarks="Default set of protocols for PiMS" details="" >
+ <experimentType>Digest</experimentType>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="Linearised vector" name="Linearised vector" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Buffer" label="Buffer used" parameterType="String" defaultValue="" />
+  <parameterDefinition id="2" name="Digest conditions" label="Incubation conditions for the digest" parameterType="String" 
+  defaultValue="Incubate at 37C for 1 hour" />
+  <parameterDefinition id="3" name="Enzyme 1" label="Name of the restriction enzyme used" parameterType="String" defaultValue="" />
+  <parameterDefinition id="4" name="Enzyme 2" label="Name of the restriction enzyme used" parameterType="String" defaultValue="" isMandatory="false" />
+  <parameterDefinition id="5" name="Digest Volume (uL)" label="Total volume of the digest" parameterType="Float" defaultValue="50" />
+  <parameterDefinition id="6" name="Purification details" label="Details of any post-digest purification" parameterType="String" defaultValue="" isMandatory="false" />
+  <parameterDefinition id="7" name="Vector yield ug" label="Yield of linearised vector" parameterType="String" defaultValue="" isMandatory="false" />
+  <parameterDefinition id="8" name="Vector concentration ug/ul" label="Concentration of linearised vector" parameterType="Float" defaultValue="" isMandatory="false" />
+ </parameterDefinitions>
+
+ </protocol>
+

@@ -1,0 +1,1 @@
+PiMS is no longer distributed under the LGPL.

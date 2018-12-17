@@ -1,0 +1,18 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF Verification" objective="Verify the target DNA" creationDate="02-02-07" remarks="Based on Lab activities requirements from OPPF" details="Verify the target DNA">
+ <experimentType>Characterisation</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="Verification Product" name="Verification Product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Verification Result" parameterType="Int" />
+  <parameterDefinition id="2" name="Verification Notes" parameterType="String" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="Purified plasmid" name="Purified plasmid" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+ </inputSamples>
+
+</protocol>

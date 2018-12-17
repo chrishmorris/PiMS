@@ -1,0 +1,48 @@
+/* suspected obsolete */
+body { margin:0 10px; height:100%; font-family:verdana,arial,helvetica,sans-serif; }
+#menubar { margin-bottom:10px; background-color:#006; color:white; }
+#infobar { width:300px; position:absolute; top:0; }
+#mainimg { overflow:auto; position:relative; top:0; }
+#dropview { margin-left:310px; position:relative; top:0;  }
+#dropinfo { font-size:70%; }
+div.box { border:1px solid #006; background-color:#ccc; color:#006; }
+div.box h3 { height:1.5em; line-height:1.5em; }
+#information { margin-top:0.5em;  } 
+div.box .boxcontent { border-top:1px solid #006; border-bottom:1px solid #006; background-color:white; color:black; margin-bottom:5px; font-size:80% }
+#wells { max-height:170px;overflow:auto; padding-bottom:10px}
+
+#wells span { font-size:90%; cursor:pointer; border:3px solid white; background-color:red; display:block; text-align:center; width:3.4em; margin-right:0.2em; float:left; }
+#wells span.well96 { border:2px solid white; height:12px; width:12px; font-size:0; }
+#wells span.pix { border-color:#808080; border-style:dotted; }
+#wells span.currentwell { border-color:black; }
+#wells table { border-collapse:collapse; font-size:11px; margin:0 auto; }
+#wells th,#wells td { padding:0; }
+
+#navigation input {   }
+#navigation input[type="button"]  { width:1em; margin:0; }
+#navigation input[type="text"]    { width:2.5em; text-align:center; margin:0; }
+#controls {  }
+
+#player     { margin:0 auto; height:25px; }
+/* Repeat above for tc */
+#timecoursebox input {   }
+#timecoursebox input[type="button"]  { width:1em; margin:0; }
+#timecoursebox input[type="text"]    { width:2.5em; text-align:center; margin:0; }
+#tccontrols {  }
+
+#tcplayer     { margin:0 auto; height:25px; }
+.playericon { height:20px; width:20px; color:white; display:block; float:left; margin:0 1px; font-size:0; background-image:url(../xtal/images/icons/playericons.png); }
+.playericonfirst { background-position:0 -100px; }
+.playericonprev { background-position:0 -80px; }
+.playericonplay { background-position:0 -20px; }
+.playericonstop { background-position:0  0px; }
+.playericonnext { background-position:0 -40px; }
+.playericonlast { background-position:0 -60px; }
+.playericondisabled { -moz-opacity:0.4; filter:alpha(opacity=40); }
+
+#timecoursebox { position:absolute; top:0; left:0; width:298px; height: 355px; display: block; }
+#fulltimecourse { overflow:auto; }
+
+.timecourseimage { clear:both; }
+.timecourseimage img { float:left; margin-right:0.5em; }
+h2, h3, h4 { color: #006; font-family:verdana,arial,helvetica,sans-serif; }

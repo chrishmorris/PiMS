@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<protocol details="Test crystal quality before visiting beamline, and supply information useful to the synchrotron." remarks="" creationDate="05-11-13" objective="" name="Test diffraction and ship">
+<experimentType>Mount crystal</experimentType>
+<inputSamples>
+	<inputSample name="Mounted Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Mounted Crystal" sampleCatNamingSys="default"/>
+</inputSamples>
+<outputSample name="Mounted Crystal" refSample="" displayUnit="" unit="" amount="" sampleCatName="Mounted Crystal" sampleCatNamingSys="default"/>
+<parameterDefinitions>
+	<parameterDefinition id="1"  name="Anomalous scatterer" parameterType="String" defaultValue="[NONE]" possibleValues="[NONE],Ar,Au,Ba,Br,Ca,Cd,Co,Cu,Dy,Eu,Fe,Gd,Hg,Ho,I,Ir,Kr,Mg,Mn,Na,Ni,Os,P,Pb,Pt,S,Se,Sm,Sr,Ta,Tb,Te,U,W,Xe,Y,Zn" isMandatory="false" label=""/>
+	<parameterDefinition id="2"  name="Comments" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="3"  name="Data collection type" parameterType="String" defaultValue="OSC" possibleValues="MAD,SAD,MR,Ligand binding,Refinement,OSC,SAD - Inverse Beam,MAD - Inverse Beam" isMandatory="false" label=""/>
+	<parameterDefinition id="4"  name="Quality" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="5"  name="Space group" parameterType="String" defaultValue="P1" isMandatory="false" label="Indication of the space group for the crystal"/>
+	<parameterDefinition id="6"  name="Treatment page URL" parameterType="String" defaultValue="" isMandatory="false" label=""/>
+	<parameterDefinition id="7"  name="a" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Unit cell axis a"/>
+	<parameterDefinition id="8"  name="alpha" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Unit cell inclination angle alpha"/>
+	<parameterDefinition id="9"  name="b" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Unit cell axis b"/>
+	<parameterDefinition id="10" name="beta" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Unit cell inclination angle beta"/>
+	<parameterDefinition id="11" name="c" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Unit cell axis c"/>
+	<parameterDefinition id="12" name="gamma" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Unit cell inclination angle gamma"/>
+	<parameterDefinition id="13" name="x" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Rotation axis x"/>
+	<parameterDefinition id="14" name="y" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Rotation axis y"/>
+	<parameterDefinition id="15" name="z" parameterType="Float" defaultValue="" minValue="" maxValue="" isMandatory="false" label="Rotation axis z"/>
+</parameterDefinitions>
+</protocol>

@@ -1,0 +1,72 @@
+--------------------------------------------------------------------------------
+HELP FILE IN USE
+--------------------------------------------------------------------------------
+  
+                     
+HelpIndex.jsp             > remove later ?
+HelpIndex.jsp
+
+package.jsp                        > HowToWriteHelp.jsp
+HelpTemplate.jsp
+
+GENERAL (9)
+Perspectives.jsp
+helpLogInAndNav.jsp
+HelpCreateRecord.jsp
+HelpDeleteRecord.jsp
+HelpListRecords.jsp
+HelpSearchRecords.jsp
+HelpViewRecord.jsp
+HelpMRU.jsp                        > HelpHistory
+glossary.jsp                       > -
+
+TARGET (17)                         >>> target/
+HelpTarget.jsp                     
+HelpNewTarget.jsp                  
+HelpUploadTarget.jsp               
+HelpDnaTarget.jsp                  
+HelpRecordDNASeq.jsp               
+HelpNaturalSourceTarget.jsp        
+HelpTargets.jsp                    
+HelpTargetReports.jsp                
+HelpActiveTargetsReport.jsp        
+HelpBlastTarget.jsp                
+HelpAutomatedBlast.jsp             
+HelpTargetScoreboard.jsp           
+HelpComplex.jsp                    
+HelpLocalSimilaritySearch.jsp      
+HelpNewConstruct.jsp          
+HelpPrimerOrder.jsp                
+
+EXPERIMENT (4)                      >>> experiment/
+HelpExperiments.jsp                
+ExperimentGroup.jsp                
+HelpCreatePlateExperiment.jsp      
+HelpProtocol.jsp                   
+
+SAMPLE (3)                          >>> sample/
+HelpSamples.jsp                    
+HelpRecipeAndStock.jsp             
+
+USER (1)                            >>> user/
+HelpPeoplePlaces.jsp               
+
+LEEDS (4)                           >>> leeds/
+HelpLeedsUtilities.jsp
+HelpLeedsConstructs.jsp
+HelpLeedsPrimers.jsp
+HelpLeedsPrimerOrders.jsp
+
+
+--------------------------------------------------------------------------------
+FILES ALREADY MOVED
+--------------------------------------------------------------------------------
+REFERENCE (1)                       >>> help/reference/
+HelpRefData.jsp                    
+
+OPPF (4)                            >>> help/oppf/
+HelpOppfFunctions.jsp              
+HelpScorePlate.jsp                 
+HelpSequencePlate.jsp              
+HelpOperonOrderForm.jsp            > to be combined with HelpPrimerOrder
+

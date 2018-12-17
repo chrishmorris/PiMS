@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="src" path="TestSource"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="lib/ant-launcher.jar"/>
+	<classpathentry kind="lib" path="lib/ant.jar"/>
+	<classpathentry kind="lib" path="lib/biojava1_6.jar"/>
+	<classpathentry kind="lib" path="lib/bytecode.jar"/>
+	<classpathentry kind="lib" path="lib/checkstyle-all-4.3.jar"/>
+	<classpathentry kind="lib" path="lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/emma_ant.jar"/>
+	<classpathentry kind="lib" path="lib/emma.jar"/>
+	<classpathentry kind="lib" path="lib/fatjar.jar"/>
+	<classpathentry kind="lib" path="lib/incanto-0.2.4.jar"/>
+	<classpathentry kind="lib" path="lib/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="lib/jaxp-api.jar"/>
+	<classpathentry kind="lib" path="lib/jaxp-ri.jar"/>
+	<classpathentry kind="lib" path="lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jxl.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-jdk14-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/pims-logic.jar" sourcepath="/logic/src"/>
+	<classpathentry kind="lib" path="lib/pims-model.jar" sourcepath="/pims-model/src/java"/>
+	<classpathentry kind="lib" path="lib/hibernate-core-3.6.8.Final.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/pims-model"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/pims-web"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

@@ -1,0 +1,32 @@
+
+/*
+ * construct.css
+ *
+ * Styles for the construct pages 
+ * to format sequences as smaller font size with monospace font
+ *
+ */
+
+.sequence,
+.sequence textarea  { font-family:"Courier New",courier,monospace; font-size:1em; }
+.sequence label     { font-family:verdana,arial,helvetica,sans-serif; }
+
+div.formblock h3.plainHead { background:white; color: black; margin-left: -.15em; padding-left:0em; font-size:larger; }
+
+/*SPOT forms*/
+form#dnaConStep2 th.subhead form#frmStep2c th.subhead { text-align:center; } 
+form#dnaConStep2 th.primers, form#frmStep2c th.primers { font-size:larger; }
+
+form#dnaConStep3 tr.addNew, form#frmStep2a tr.addNew, form#frmStep3c tr.addNew { display:none; }
+div.addNew { display:none; }
+
+/*For wide Pop-up*/
+.seqPopup { font-family:"Courier New",courier,monospace ; }
+
+/*For popup link*/
+a.popup {font-weight:normal; font-size:85%; color:#DB8A27; }
+
+/*Blast alignment*/
+.blastSequence { font-family:"Courier New",courier,monospace ; }
+.blastPattern { color:red; font-family:"Courier New",courier,monospace; font-size:80%; }
+ 

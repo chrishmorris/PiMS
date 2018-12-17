@@ -1,0 +1,23 @@
+# properties for the data model
+# Copy this to a file called "Properties".
+# You are advised to set a password.
+
+db.url = jdbc:postgresql://localhost/protein100
+db.username = pimsadmin
+db.password = 
+
+
+# HTTP proxy, if you need one:
+http.proxyHost = wwwcache.dl.ac.uk
+http.proxyPort = 8080
+http.nonProxyHosts = localhost
+
+
+
+
+# uploadDirectory for Windows:
+uploadDirectory = C:\\pimsUploads
+
+# uploadDirectory for Linux:
+#uploadDirectory = $CATALINA_HOME/pimsUploads
+

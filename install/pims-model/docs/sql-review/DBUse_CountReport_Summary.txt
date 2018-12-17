@@ -1,0 +1,93 @@
+﻿--------------------------------------------------------------------------------
+-- All empty tables in example, SSPF, MPSI DB over 163 tables in total
+--------------------------------------------------------------------------------
+>>> Number of empty tables in all DB      = 61
+
+>>> Number of empty tables to keep   (==) = 23
+>>> Number of empty tables to remove (RM) = 38
+
+Citation
+==	cita_citation_keywords
+==	cita_conferencecitation
+
+ExpBlueprint
+RM	expb_blueprintdbref
+
+Experiment
+RM	expe_experiment2previous
+RM	expe_importsample
+
+Holder
+RM	hold_holdertypeposition
+RM	hold_pintype
+RM	hold_refsampleposition
+
+Implementation
+==	impl_appdatadouble
+==	impl_appdatafloat
+==	impl_appdatalong
+==	impl_datalocation
+
+Instrument
+RM	inst_abstractinstrument >>> merge with inst_instrument
+==	inst_instrument
+==	inst_instrumenttype
+== 	inst_instty2inst
+RM	inst_column
+RM	inst_nmrprobe
+RM	inst_nmrprobe2citations
+RM	inst_nmrsp2citations
+RM	inst_nmrspectrometer
+
+Method
+==	meth_method
+==	meth_method2citations
+==	meth_parameter
+==	meth_software
+==	meth_software_tasks
+==	meth_software2citations
+
+People
+==	peop_group
+==	peop_persingr_phonnu
+==	peop_person2editci
+==	peop_personingroup
+
+Protocol
+==	prot_expety2instty
+==	prot_parade_possva
+RM	prot_addstep
+RM	prot_centrifugationstep
+RM	prot_crunchingstep
+RM	prot_filtrationstep
+RM	prot_flowstep
+RM	prot_pressstep
+RM	prot_procedure_remarks
+RM	prot_sonicationstep
+RM	prot_expety2instty
+
+RefSampleComponent
+==	refs_primer
+==	refs_construct
+==	refs_molcompfeature
+RM	refs_cell
+RM	refs_compin2elements
+RM	refs_componentdbref
+RM	refs_composite
+RM	refs_compositeelement
+RM	refs_compositeinteraction
+RM	refs_isotla_atomnames
+RM	refs_isotla2molre
+RM	refs_isotopelabel
+RM	refs_label
+RM	refs_restrictionenzyme
+RM	refs_specificlabelgroup
+RM	refs_substance
+
+Sample
+==	sam_crystalsample
+RM	sam_sampca2inpuwoit
+RM	sam_sampca2outpwoit
+
+Target
+RM	targ_targgr2citations

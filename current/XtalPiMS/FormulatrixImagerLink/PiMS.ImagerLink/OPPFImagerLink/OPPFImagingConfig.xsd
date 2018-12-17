@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="OPPFImagingConfig" targetNamespace="http://www.oppf.ox.ac.uk/OPPFImagingConfig.xsd"
+	elementFormDefault="qualified" xmlns="http://www.oppf.ox.ac.uk/OPPFImagingConfig.xsd" xmlns:mstns="http://www.oppf.ox.ac.uk/OPPFImagingConfig.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+	
+	<xs:complexType name="OPPFImagingConfig">
+		<xs:sequence>
+			<xs:element name="imageFormat" >
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="bmp" />
+						<xs:enumeration value="jpg" />
+						<xs:enumeration value="jpeg" />
+						<xs:enumeration value="png" />
+						<xs:enumeration value="gif" />
+						<xs:enumeration value="emf" />
+						<xs:enumeration value="exif" />
+						<xs:enumeration value="tif" />
+						<xs:enumeration value="tiff" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="loggerConfig" type="xs:string" />
+			<xs:element name="directory" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

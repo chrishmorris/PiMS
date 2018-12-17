@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pTrc99A Vector</name>
+    <details> Expression vector</details>
+    <sampleCategory>Vector</sampleCategory>
+    <sampleComponent name="pTrc99A" componentCategory="Vector"
+        details="4176bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Cloning and IPTG-inducible expression vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="846"
+            endSeq="1706" />
+        <promoterDetails name="Trc Promoter" startSeq="193"
+            endSeq="266" />
+        <markerDetails name="Multiple Cloning sites NcoI-HindIII"
+            details="NcoI-EcoRI-SacI-KpnI-SmaI-BamHI-XbaI-SalI-PstI-HindIII" startSeq="261"
+            endSeq="330" featureType="MCS" />
+        <markerDetails name="NcoI cloning site for native expression -no tag"
+            details="C|CATGG" startSeq="265" endSeq="270" featureType="Cloning site" />
+        <markerDetails name="pBR322 origin" startSeq="1861" endSeq="2480"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression: JM109; Expression: BL21"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

@@ -1,0 +1,17 @@
+<!-- PiMS Complexation protocol xml as flat file -->
+<protocol name="PiMS Complexation" objective="Combination of Protein Samples" creationDate="15-03-09" remarks="Default set of protocols for PiMS" details="">
+ <experimentType>Complexation</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Protein 1" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Protein 2" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Protein complex" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Complex Protocol" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Cofactors" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>

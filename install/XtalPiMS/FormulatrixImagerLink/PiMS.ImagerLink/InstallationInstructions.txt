@@ -1,0 +1,25 @@
+PiMS.ImagerLink Installation
+============================
+Jon Diprose, 15/08/2011
+
+o Install the postgresql ODBC driver on machines running RockImager.
+
+o TODO: Update installation instructions for RockImager's new software update facility!
+
+o In all relevant %ALLUSERS%\ApplicationData\Formulatrix\RockImager[Processor]\ folders
+on the RockImager/RockImagerProcessor PCs, configure Extensions.config.
+
+o Copy the contents of PiMS.ImagerLink\OPPFImagerLink\bin\Debug into the relevant
+software update folders.
+
+o Check that the settings specified in OPPFImagerLinkConfig.xml are correct for the
+relevant RockImager/RockImagerProcessor instance.
+
+o Restart all RockImager and RockImagerProcessor instances.
+
+o Check RockImager/RockImagerProcessor and the relevant log files to ensure that the
+extension code is working as expected.
+
+o If you need to debug, copy PiMS.ImagerLink\OPPFImagerLinkTester\bin\Debug to the
+relevant PC and double-click to run - it should not require an installer package.
+

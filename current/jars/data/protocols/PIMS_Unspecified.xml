@@ -1,0 +1,4 @@
+<!-- Generic Unspecified protocol xml as flat file -->
+<protocol name="PiMS Unspecified" objective="To allow the user to create an experiment without a protocol" creationDate="15-02-06"  >
+ <experimentType>Unspecified</experimentType>
+</protocol>

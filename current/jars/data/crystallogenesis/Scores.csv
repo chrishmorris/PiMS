@@ -1,0 +1,10 @@
+name,color,value,scoringScheme,details
+Synchrotron,16711680,0,default,Has been send to synchrotron
+Crystals,16711680,1,default,X-rayable Crystals
+Optimisable Crystal,58880,2,default,Crystal needing optimisation
+Crystal Precipitate,16776960,3,default,Crystal-like precipitate
+Normal Precipitate,15980451,4,default,"Granular precipitates, etc"
+Aggregate,15980451,5,default,Insoluble misfolded protein
+Other,15980451,6,default,"Phase separation, etc"
+Salt Crystals,11184895,7,default,Non-protein crystal
+Clear,14474460,8,default,Nothing in the drop

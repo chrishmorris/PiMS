@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pUC18 Vector</name>
+    <details>Cloning and expression vector, Ampicillin resistance</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="37253"
+        dataPageUrl="http://www.lgcstandards-atcc.org/LGCAdvancedCatalogueSearch/ProductDescription/tabid/1068/Default.aspx?ATCCNum=37253&amp;Template=vectors"
+        supplier="ATCC" />
+    <sampleComponent name="pUC18" componentCategory="Vector"
+        details="2686bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Cloning Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="2486"
+            endSeq="1626" />
+        <promoterDetails name="Lac Promoter" startSeq="543"
+            endSeq="514" />
+        <markerDetails name="LacZ_a" startSeq="393" endSeq="250"
+            featureType="Reporter gene" />
+        <markerDetails name="Multiple Cloning sites HindIII-EcoRII"
+            details="HindIII-PstI-SalI-XbaI-BamHI-SmaI-KpnI-SacI-EcoRI"
+            startSeq="399" endSeq="455"
+            featureType="MCS" />
+        <markerDetails name="pBR322 origin" startSeq="1471" endSeq="852"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="JM103, DH5 alpha, DH10B, TB1, JM83, JM105, JM109, NM522"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

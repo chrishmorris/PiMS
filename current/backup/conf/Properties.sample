@@ -1,0 +1,4 @@
+db.name = pims
+db.url = jdbc:postgresql://localhost/pims
+db.username = alan
+db.password =

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="screen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="conditions" type="conditions" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="ingredients" type="ingredients" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="conditions">
+    <xs:sequence>
+      <xs:element name="condition" type="condition" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingredients">
+    <xs:sequence>
+      <xs:element name="ingredient" type="ingredient" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="condition">
+    <xs:sequence>
+        <xs:element name="conditionIngredient" type="conditionIngredient" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="conditionIngredient">
+    <xs:all>
+      <xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="concentration" type="xs:double" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="pH" type="xs:double" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="stockLocalID" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="highPHStockLocalID" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="ingredient">
+    <xs:all>
+      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="shortName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="aliases" type="aliases" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="casNumbers" type="casNumbers" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="types" type="types" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="bufferData" type="bufferData" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="stocks" type="stocks" minOccurs="1" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="stocks">
+    <xs:sequence>
+      <xs:element name="stock" type="stock" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stock">
+    <xs:all>
+      <xs:element name="localID" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="stockConcentration" type="xs:double" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="units" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="defaultLowConcentration" type="xs:double" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="defaultHighConcentration" type="xs:double" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="useAsBuffer" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pH" type="xs:double" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="vendorName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="vendorPartNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="aliases">
+    <xs:sequence>
+      <xs:element name="alias" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="types">
+    <xs:sequence>
+      <xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bufferData">
+    <xs:choice>
+      <xs:element name="pKa" type="xs:double" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="titrationTable" type="titrationTable" minOccurs="1" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="titrationTable">
+    <xs:sequence>
+      <xs:element name="titrationPoint" type="titrationPoint" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="titrationPoint">
+    <xs:sequence>
+      <xs:element name="pH" type="xs:double" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="acidToBaseRatio" type="xs:double" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="casNumbers">
+    <xs:sequence>
+      <xs:element name="casNumber" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>  
+</xs:schema>

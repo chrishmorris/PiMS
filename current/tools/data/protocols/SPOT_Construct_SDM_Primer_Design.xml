@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<protocol name="SPOT Construct SDM Primer Design" creationDate="2009-06-23">
+    <creationDate>2009-06-23</creationDate>
+    <details/>
+    <experimentType>SPOTConstructDesign</experimentType>
+    <exportDate>2009-06-25</exportDate>
+    <method/>
+    <name>SPOT Construct SDM Primer Design</name>
+    <objective/>
+    <parameterDefinitions/>
+    <inputSamples/>
+    
+        <outputSample sampleCatName="Primer" name="AntiSense Primer">
+            <amount>0.0</amount>
+            <displayUnit>uL</displayUnit>
+            <name>AntiSense Primer</name>
+            <sampleCategory>Primer</sampleCategory>
+            <unit>L</unit>
+        </outputSample>
+        <outputSample sampleCatName="Primer" name="Sense Primer">
+            <amount>0.0</amount>
+            <displayUnit>uL</displayUnit>
+            <name>Sense Primer</name>
+            <sampleCategory>Primer</sampleCategory>
+            <unit>L</unit>
+        </outputSample>
+    
+    <remarks/>
+</protocol>

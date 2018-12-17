@@ -1,0 +1,38 @@
+
+select.score option { padding-left:16px; background-position:left middle; background-repeat:no-repeat; }
+
+.score0 {  } /* unscored */
+.score1 { background-image:url(../../images/icons/scores/score1.png); background-color:#f99; }
+.score2 { background-image:url(../../images/icons/scores/score2.png); background-color:#ff9; }
+.score3 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+
+.SCORE0 {  } /* unscored */
+.SCORE1 { background-image:url(../../images/icons/scores/score1.png); background-color:#f99; }
+.SCORE2 { background-image:url(../../images/icons/scores/score2.png); background-color:#ff9; }
+.SCORE3 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+
+.SEQUENCE0 {  } /* unscored */
+.SEQUENCE1 { background-image:url(../../images/icons/scores/score1.png); background-color:#f99; }
+.SEQUENCE2 { background-image:url(../../images/icons/scores/score2.png); background-color:#ff9; }
+.SEQUENCE3 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+
+.IMW0 {  } /* unscored */
+.IMW1 { background-image:url(../../images/icons/scores/score1.png); background-color:#f99; }
+.IMW2 { background-image:url(../../images/icons/scores/score2.png); background-color:#ff9; }
+.IMW3 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+.IMW4 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+.IMW5 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+.IMW6 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+
+.MW0 {  } /* unscored */
+.MW1 { background-image:url(../../images/icons/scores/score1.png); background-color:#f99; }
+.MW2 { background-image:url(../../images/icons/scores/score2.png); background-color:#ff9; }
+.MW3 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+.MW4 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+.MW5 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+.MW6 { background-image:url(../../images/icons/scores/score3.png); background-color:#9f9; }
+
+.status_To_be_run   { background:url(../../images/icons/status/status_To_be_run.png) no-repeat center;  }
+.status_In_process  { background:url(../../images/icons/status/status_In_process.png) no-repeat center; }
+.status_OK          { background:url(../../images/icons/status/status_OK.png) no-repeat center;         }
+.status_Failed      { background:url(../../images/icons/status/status_Failed.png) no-repeat center;     }

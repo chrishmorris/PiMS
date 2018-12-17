@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema 
+    targetNamespace="http://www.pims-lims.org/services/ispyb" 
+    xmlns:tns="http://www.pims-lims.org/services/ispyb" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+    >
+	<xs:include schemaLocation="Laboratory.xsd"/>
+	<xs:include schemaLocation="DeliveryAgent.xsd"/>
+	<xs:include schemaLocation="Dewar.xsd"/>
+	<xs:complexType name="CrystalShipping">
+		<xs:annotation>
+			<xs:documentation>Information about the Shipping and content of a Dewar sent by the Crystallisation centre or directly by the user to the synchrotron. All the Crystals present in this Dewar have been previously submitted to the synchrotron for Safety and accepted.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="projectUUID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier of the project to ensure the consistency for all the transactions between the different partners.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the Shipping</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="laboratory" type="tns:Laboratory" minOccurs="0"/>
+			<xs:element name="deliveryAgent" type="tns:DeliveryAgent" minOccurs="0"/>
+			<xs:element name="dewar" type="tns:Dewar" maxOccurs="unbounded"/> 
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="crystalShipping" type="tns:CrystalShipping"/>
+</xs:schema>

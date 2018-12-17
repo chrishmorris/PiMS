@@ -1,0 +1,41 @@
+You can set your PiMS installation to search the PDB
+and or TargetDB on a regular basis for news relating to your targets.
+
+1. Type
+    ant -v
+If the response is
+    Apache Ant version 1.6.5 compiled on May 3 2006
+    Buildfile: build.xml does not exist!
+    Build failed
+then "Ant" is installed on your system.
+Otherwise, you will need to install 'Ant' and set up some parameters.
+
+    * Windows
+        -Download Ant from "http://mirror.fubra.com/ftp.apache.org/ant/binaries/apache-ant-1.7.0-bin.zip"   and unzip the file.
+
+    * Linux
+      check if Ant is already installed by typing: ant (on the command line)
+        -if ant is not installed you will need to install the correct version for your operating system
+
+    * Parameters:
+          o Add the Ant bin directory to your path
+          o Create or set the ANT_HOME Environment Variable to the directory where Ant is installed
+
+2. You must specify some details by copying the file
+    $CATALINA_HOME/webapps/pims/WebContent/WEB-INF/conf/Properties.sample
+to
+    $CATALINA_HOME/webapps/pims/WebContent/WEB-INF/conf/Properties
+and editing it. 
+
+3. Then you can search both databases by:
+
+ant -f  $CATALINA_HOME/webapps/pims/WebContent/WEB-INF/build-blast.xml \
+    SearchPDB SearchTargetDB 
+    
+4. You can then set this up as a regular job.
+On Linux, this is done with the "cronjob" command.
+It is better to ensure you receive the output by for example:
+
+ant -f  $CATALINA_HOME/webapps/pims/WebContent/WEB-INF/build-blast.xml \
+    SearchPDB SearchTargetDB |\
+     mail  -s "PiMS Automatic Blast `date`" you@your.institution.ac.uk 

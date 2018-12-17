@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINM Vector</name>
+    <details>Derived from pTriEx2/Ampicillin, combined cleavable
+        N-Term His Tag with MBP fusion</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINM" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA"
+        details="GenbankID EF372396">
+        <function>In-Fusion[TM] Multisystem Expression
+            Vector</function>
+        <resistanceDetails name="Ampicillin" />
+        <markerDetails
+            name="N-Term cleavable His Tag with MBP fusion sequence"
+            details="MAHHHHHHSSG-MBP-LEVLFQ|GP" featureType="Tag"
+            status="not cleaved" />
+    </sampleComponent>
+</vector>

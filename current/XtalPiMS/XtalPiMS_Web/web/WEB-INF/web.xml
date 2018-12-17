@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Servlet configuration for PIMS web application.
+To add new functionality to PIMS, there are three section
+you are likely to need to edit:
+    Servlet definitions
+    Servlet mappings
+    Security Constraints
+Note that the order of entries in this file is prescribed in the DTD.
+You cannot rearrange it to make it more convenient
+ -->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
+
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.Home</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>NewDiamondProject</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.NewDiamondProjectServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImagerOverview</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ImagerOverviewServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImagerContents</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ImagerContentsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImagerUsage</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ImagerUsageServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UserPrefsServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.UserPrefsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AutoCompleteServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.AutoCompleteServlet</servlet-class>
+	</servlet>
+	
+	<!-- 
+	<servlet>  obsolete I don't think this is in use - Chris  
+		<servlet-name>TimeCourseSliderServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.TimeCourseSliderServlet</servlet-class>
+	</servlet>
+	<servlet>  obsolete I don't think this is in use - Chris  
+		<servlet-name>TimeCourseServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.TimeCourseServlet</servlet-class>
+	</servlet> -->
+	
+
+	<servlet>
+		<servlet-name>ImageListInitServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ImageListInitServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ScoreImageServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ScoreImageServlet</servlet-class>
+	</servlet>
+	<servlet><!-- Oulu uses -->
+		<servlet-name>InspectionsServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.InspectionsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InspectionsCountServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.InspectionsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PlateServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlateServlet</servlet-class>
+	</servlet>
+	<servlet><!-- Oulu uses -->
+		<servlet-name>PlatesServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlatesServlet</servlet-class>
+	</servlet>
+	<servlet><!-- Oulu uses -->
+		<servlet-name>PlatesCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlatesServlet</servlet-class>
+	</servlet>
+	<servlet><!-- obsolete -->
+		<servlet-name>GroupServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.GroupServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GroupsServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.GroupsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GroupsCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.GroupsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConstructServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ConstructServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConstructsServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ConstructsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConstructsCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ConstructsServlet</servlet-class>
+	</servlet>
+	<servlet><!-- Oulu uses -->
+		<servlet-name>ImagesServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ImagesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImagesCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ImagesServlet</servlet-class>
+	</servlet>
+	<servlet><!-- Oulu uses -->
+		<servlet-name>AnnotationsServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.AnnotationsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AnnotationsCountServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.AnnotationsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SampleServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.SampleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SamplesServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.SamplesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SamplesCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.SamplesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ScreenServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ScreenServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ScreensServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ScreensServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ScreensCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ScreensServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConditionsServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ConditionsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConditionsCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ConditionsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ComponentsServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ComponentsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ComponentsCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ComponentsServlet</servlet-class>
+	</servlet>
+	<servlet><!-- Oulu uses -->
+		<servlet-name>ListAnnotations</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ListAnnotationsServlet</servlet-class>
+	</servlet>
+	<servlet><!-- Oulu uses -->
+		<servlet-name>ListImagers</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ListImagersServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListScreenManufacturersServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ListScreenManufacturersServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListScreenTypesServlet</servlet-name>
+		<servlet-class>
+			org.pimslims.crystallization.servlet.ListScreenTypesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SchedulesServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.SchedulesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SchedulesCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.SchedulesServlet</servlet-class>
+	</servlet>
+	 <servlet><!-- Oulu uses -->
+        <servlet-name>TrialDropServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.TrialDropServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MountServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.MountServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CrystalServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.CrystalServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SelectCrystalServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.SelectCrystalServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CrystalTreatmentServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.CrystalTreatmentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateShipmentServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.ShipmentCreate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AssembleShipmentServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.ShipmentAssemble</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewShipmentServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.ShipmentView</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListShipmentServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.ShipmentList</servlet-class>
+    </servlet>
+    
+	<servlet>
+		<servlet-name>TrialDropCountServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.TrialDropServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListScreens</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ListScreensServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ViewByName</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.view.ViewByName</servlet-class>
+	</servlet>	
+	<servlet>
+		<servlet-name>CreateTrialPlate</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlateCreateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EditPlate</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlateUpdateServlet</servlet-class>
+	</servlet>
+    <!-- obsolete -->
+	<servlet>
+		<servlet-name>EditPlateConstruct</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlateUpdateConstruct</servlet-class>
+	</servlet>
+	
+	<!-- obsolete -->
+	<servlet>
+		<servlet-name>EditPlateConstructSample</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlateUpdateConstructSample</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdatePlateConstruct</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.PlateSubUpdate</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateInspection</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.InspectionUpdate</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>CreateInspection</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.InspectionCreate</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreateScreen</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ScreenCreate</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateScreen</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ScreenUpdate</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InspectionImageUpload</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.InspectionImageUpload</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportScreen</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.ExportScreen</servlet-class>
+	</servlet>
+   <!-- now an annotation <servlet>
+        <servlet-name>ScreenUpload</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.ScreenUpload</servlet-class>
+    </servlet> -->
+    <servlet>
+        <servlet-name>IspybResults</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.IspybResults</servlet-class>
+    </servlet>
+	<servlet>
+		<servlet-name>OrderUpload</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.upload.OrderUpload</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExperimentUpload</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.upload.ExperimentUpload</servlet-class>
+	</servlet>
+	<servlet><!-- not in use -->
+		<servlet-name>InspectionUpload</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.upload.InspectionUpload</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SaltCrystalServlet</servlet-name>
+		<servlet-class>org.pimslims.crystallization.servlet.SaltCrystalServlet</servlet-class>
+	</servlet>
+    <servlet>
+        <servlet-name>ViewTrialDropsServlet</servlet-name>
+        <servlet-class>org.pimslims.crystallization.servlet.ViewTrialDropsServlet</servlet-class>
+    </servlet>
+    
+
+    
+
+    
+
+    <!-- Listener
+    This connects to the database when the web application starts
+    -->
+    <listener>
+          <listener-class>org.pimslims.servlet.Listener</listener-class>
+    </listener>
+    <listener>
+          <listener-class>org.pimslims.crystallization.datastorage.listeners.DataStorageStartupListener</listener-class>
+    </listener>
+    
+    <listener>
+          <listener-class>org.pimslims.servlet.IFileTypeListener</listener-class>
+    </listener>
+    <!-- TODO Prevent memory leaks due to use of particular java/javax APIs 
+    Requires at least Tomcat6.0.26
+    An alternative is to enable the GC protection but specify -XX:+ExplicitGCInvokesConcurrent -->
+<Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" 
+    gcDaemonProtection="false"
+/>  
+
+ 	<!-- Session timeout in minutes -->
+ 		<session-config>
+    		<session-timeout>240</session-timeout>
+	  </session-config>
+
+<!-- for Tomcat7 -->
+<filter>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <async-supported>true</async-supported>
+</filter>  
+
+<filter>
+    <filter-name>CacheParams</filter-name>
+    <filter-class>org.pimslims.servlet.CacheParams</filter-class>
+</filter>
+
+    <!-- PIMS CORE SERVLETS -->
+<!--
+===================
+SERVLET DEFINITIONS
+===================
+
+In a few cases the servlet has conditional processing
+depending on the user's security role.
+In these cases the "security role ref" must be specified.
+For more information see
+    http://www.pims-lims.org/api/org/pimslims/servlet/package-summary.html
+ -->
+
+    <!-- JSP processor -->
+    <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>fork</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xpoweredBy</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>trimSpaces</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>compilerSourceVM</param-name>
+            <param-value>1.5</param-value>
+        </init-param>
+        <init-param>
+            <param-name>compilerTargetVM</param-name>
+            <param-value>1.5</param-value>
+        </init-param>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+    
+    
+
+        <!-- Also the help files are outside WEB-INF -->
+        <servlet-mapping>
+            <servlet-name>jsp</servlet-name>
+            <url-pattern>/help/*</url-pattern>
+        </servlet-mapping>
+        
+        <!-- the PiMS JSPs -->
+         <servlet-mapping>
+            <servlet-name>jsp</servlet-name>
+            <url-pattern>*.jsp</url-pattern>
+        </servlet-mapping>
+
+        <!--PiMS function pages -->
+        <servlet-mapping>
+            <servlet-name>jsp</servlet-name>
+            <url-pattern>/functions/*</url-pattern>
+        </servlet-mapping>
+    
+<!-- no longer IMPORT THE STANDARD PiMS SERVLET DEFINITIONS  
+&definitions;
+ IMPORT THE STANDARD PiMS SERVLET MAPPINGS  
+&mappings; -->
+<!--
+===================
+SERVLET MAPPINGS
+===================
+
+There must be an entry here for every servlet,
+relating the URL the user's browser visits
+to the servlet class.
+
+When a servlet dispatches a JSP, or a JSP includes a JSP,
+there is also a URL used, and a mapping must be entered here.
+
+These mappings are designed to allow custom servlets,
+JSPs, and JSPs to be called in place of the generic ones.
+ -->
+
+
+<!--
+...................................................
+SERVLET MAPPINGS - Generic Servlet URLs
+...................................................
+
+For each URL, the last mapping on the list maps to the generic servlet.
+Earlier entries in the list can provide
+a custom UI for a particular class or role
+ -->
+
+<!-- for Tomcat7 -->
+<filter-mapping>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+</filter-mapping>  
+
+<filter-mapping>
+    <filter-name>CacheParams</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping> 
+
+
+
+    
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/Home</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewDiamondProject</servlet-name>
+		<url-pattern>/NewDiamondProject/</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImagerOverview</servlet-name>
+		<url-pattern>/ImagerOverview/</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImagerContents</servlet-name>
+		<url-pattern>/ImagerContents/</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImagerUsage</servlet-name>
+		<url-pattern>/ImagerUsage/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UserPrefsServlet</servlet-name>
+		<url-pattern>/UserPrefsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AutoCompleteServlet</servlet-name>
+		<url-pattern>/AutoCompleteServlet</url-pattern>
+	</servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>TrialDropServlet</servlet-name>
+        <url-pattern>/TrialDropServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>MountServlet</servlet-name>
+        <url-pattern>/update/Mount/*</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>SelectCrystalServlet</servlet-name>
+        <url-pattern>/update/SelectCrystal/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CrystalServlet</servlet-name>
+        <url-pattern>/update/Crystal/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CrystalTreatmentServlet</servlet-name>
+        <url-pattern>/update/CrystalTreatment/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateShipmentServlet</servlet-name>
+        <url-pattern>/CreateShipment/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AssembleShipmentServlet</servlet-name>
+        <url-pattern>/AssembleShipment/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewShipmentServlet</servlet-name>
+        <url-pattern>/ViewShipment/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListShipmentServlet</servlet-name>
+        <url-pattern>/RecentShipments/*</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TrialDropCountServlet</servlet-name>
+		<url-pattern>/TrialDropCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SchedulesServlet</servlet-name>
+		<url-pattern>/SchedulesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SchedulesCountServlet</servlet-name>
+		<url-pattern>/SchedulesCountServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 
+	<servlet-mapping> I don't think this is in use - Chris  
+		<servlet-name>TimeCourseSliderServlet</servlet-name>
+		<url-pattern>/TimeCourseSliderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping> I don't think this is in use - Chris  
+		<servlet-name>TimeCourseServlet</servlet-name>
+		<url-pattern>/TimeCourseServlet</url-pattern>
+	</servlet-mapping> -->
+	
+
+	<servlet-mapping>
+		<servlet-name>ImageListInitServlet</servlet-name>
+		<url-pattern>/ImageListInitServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ScoreImageServlet</servlet-name>
+		<url-pattern>/ScoreImageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InspectionsServlet</servlet-name>
+		<url-pattern>/InspectionsServlet</url-pattern>
+	</servlet-mapping>
+	
+    <servlet-mapping>
+        <servlet-name>CreateInspection</servlet-name>
+        <url-pattern>/Create/Inspection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateInspection</servlet-name>
+        <url-pattern>/Update/Inspection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InspectionImageUpload</servlet-name>
+        <url-pattern>/Inspection/ImageUpload</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>InspectionsCountServlet</servlet-name>
+		<url-pattern>/InspectionsCountServlet</url-pattern>
+	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateTrialPlate</servlet-name>
+        <url-pattern>/CreateTrialPlate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlateServlet</servlet-name>
+        <url-pattern>/PlateServlet</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlatesServlet</servlet-name>
+		<url-pattern>/PlatesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlatesCountServlet</servlet-name>
+		<url-pattern>/PlatesCountServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GroupsServlet</servlet-name>
+		<url-pattern>/GroupsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GroupsCountServlet</servlet-name>
+		<url-pattern>/GroupsCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConstructServlet</servlet-name>
+		<url-pattern>/ConstructServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConstructsServlet</servlet-name>
+		<url-pattern>/ConstructsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConstructsCountServlet</servlet-name>
+		<url-pattern>/ConstructsCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AnnotationsServlet</servlet-name>
+		<url-pattern>/AnnotationsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AnnotationsCountServlet</servlet-name>
+		<url-pattern>/AnnotationsCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SampleServlet</servlet-name>
+		<url-pattern>/SampleServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SamplesServlet</servlet-name>
+		<url-pattern>/SamplesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SamplesCountServlet</servlet-name>
+		<url-pattern>/SamplesCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ScreenServlet</servlet-name>
+		<url-pattern>/ScreenServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ScreensServlet</servlet-name>
+		<url-pattern>/ScreensServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ScreensCountServlet</servlet-name>
+		<url-pattern>/ScreensCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ComponentsServlet</servlet-name>
+		<url-pattern>/ComponentsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ComponentsCountServlet</servlet-name>
+		<url-pattern>/ComponentsCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConditionsServlet</servlet-name>
+		<url-pattern>/ConditionsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConditionsCountServlet</servlet-name>
+		<url-pattern>/ConditionsCountServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListAnnotations</servlet-name>
+		<url-pattern>/ListAnnotations</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListImagers</servlet-name>
+		<url-pattern>/ListImagers</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImagesServlet</servlet-name>
+		<url-pattern>/ImagesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListScreenManufacturersServlet</servlet-name>
+		<url-pattern>/ListScreenManufacturers</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListScreenTypesServlet</servlet-name>
+		<url-pattern>/ListScreenTypes</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListScreens</servlet-name>
+		<url-pattern>/ListScreens</url-pattern>
+	</servlet-mapping>
+		
+<!--
+		==============================================================================
+-->    
+     
+    
+    
+<!-- TODO can we do this with annotations? -->
+<welcome-file-list>
+   <welcome-file>Home</welcome-file>
+<!--
+   <welcome-file>Home.jsp</welcome-file>
+-->
+</welcome-file-list>
+<error-page>
+  <error-code>403</error-code>
+  <location>/public/Denied</location>
+</error-page>
+<error-page>
+  <exception-type>javax.servlet.ServletException</exception-type>
+  <location>/public/ErrorPage</location>
+</error-page>
+<error-page>
+  <exception-type>java.lang.RuntimeException</exception-type>
+  <location>/public/ErrorPage</location>
+</error-page>
+<error-page>
+  <exception-type>java.lang.Exception</exception-type>
+  <location>/public/ErrorPage</location>
+</error-page>
+<!-- see org.pimslims.servlet.Update -->
+<error-page>
+  <exception-type>org.pimslims.servlet.ConcurrentUpdateException</exception-type>
+  <location>/JSP/core/ConcurrentUpdate.jsp</location>
+</error-page>
+<error-page>
+  <error-code>500</error-code>
+  <location>/public/ErrorPage</location>
+</error-page>
+
+<error-page>
+  <error-code>404</error-code>
+  <location>/JSP/Error404.jsp</location>
+</error-page>
+
+
+    <login-config>
+      <auth-method>FORM</auth-method>
+        <realm-name>Protein Information Management System</realm-name>
+      <form-login-config>
+          <form-login-page>/JSP/core/Login.jsp</form-login-page>
+          <form-error-page>/public/Denied</form-error-page>
+      </form-login-config>
+    </login-config>
+
+
+<!-- Application resources-->
+<context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>ApplicationResources</param-value>
+    </context-param>
+
+<!--
+===================
+SECURITY CONSTRAINTS
+===================
+
+There must be an entry here for every JSP and servlet
+ -->
+	<!--  TODO This is a nightmare to maintain - there must be a better way. -->
+	<security-constraint>
+		<display-name>Security constraint for the xtalPiMS jsps and servlets</display-name>
+		<web-resource-collection>
+			<web-resource-name>Protected jsps</web-resource-name>
+			<description/>
+            <url-pattern>/CrystalHandling/*</url-pattern>
+            <url-pattern>/CrystalShipping/*</url-pattern>
+            <url-pattern>/CreateShipment/*</url-pattern>
+            <url-pattern>/AssembleShipment/*</url-pattern>
+            <url-pattern>/ViewShipment/*</url-pattern>
+            <url-pattern>/RecentShipments/*</url-pattern>
+			<url-pattern>/HibernateStaticsInfo.jsp</url-pattern>
+			<url-pattern>/NewDiamondProject/</url-pattern>
+			<url-pattern>/ImagerOverview/</url-pattern>
+			<url-pattern>/ImagerContents/</url-pattern>
+			<url-pattern>/ImagerUsage/</url-pattern>
+			<url-pattern>/Home</url-pattern>
+			<url-pattern>/Home.jsp</url-pattern>
+			<url-pattern>/InspectionCreate.jsp</url-pattern>
+            <url-pattern>/InspectionUpdate.jsp</url-pattern>
+            <url-pattern>/IspybResults.jsp</url-pattern>
+			<url-pattern>/PlateCreate.jsp</url-pattern>
+			<url-pattern>/PlateUpdate.jsp</url-pattern>
+			<url-pattern>/PlateUpdateConstruct.jsp</url-pattern>
+			<url-pattern>/PlateUpdateConstructSample.jsp</url-pattern>
+			<url-pattern>/Preferences.jsp</url-pattern>
+			<url-pattern>/ReleaseNotes.jsp</url-pattern>
+			<url-pattern>/ScreenCreate.jsp</url-pattern>
+			<url-pattern>/ScreenUpdate.jsp</url-pattern>
+			<url-pattern>/Search.jsp</url-pattern>
+			<url-pattern>/UploadInspection.jsp</url-pattern><!-- not in use -->
+			<url-pattern>/UploadOrder.jsp</url-pattern>
+			<url-pattern>/UploadPlateDetails.jsp</url-pattern>
+			<url-pattern>/ViewAnnotations.jsp</url-pattern>
+			<url-pattern>/ViewConditions.jsp</url-pattern>
+			<url-pattern>/ViewConstruct.jsp</url-pattern>
+			<url-pattern>/ViewConstructs.jsp</url-pattern>
+			<url-pattern>/ViewGroup.jsp</url-pattern>
+			<url-pattern>/ViewGroups.jsp</url-pattern>
+			<url-pattern>/ViewInspections.jsp</url-pattern>
+			<url-pattern>/ViewMicroscopeImages.jsp</url-pattern>
+			<url-pattern>/ViewPlate.jsp</url-pattern>
+			<url-pattern>/ViewPlateOverview.jsp</url-pattern>
+			<url-pattern>/ViewPlates.jsp</url-pattern>
+			<url-pattern>/ViewSaltCrystals.jsp</url-pattern>
+			<url-pattern>/ViewSample.jsp</url-pattern>
+			<url-pattern>/ViewScreen.jsp</url-pattern>
+			<url-pattern>/ViewScreens.jsp</url-pattern>
+			<!-- obsolete <url-pattern>/ViewTimeCourse.jsp</url-pattern> -->
+			<url-pattern>/ViewTrialDrops1.jsp</url-pattern>
+			<url-pattern>/ViewTrialDrops2.jsp</url-pattern>
+			<url-pattern>/ViewTrialDrops2Help.jsp</url-pattern>
+			<url-pattern>/ViewTrialDrops3.jsp</url-pattern>
+			<url-pattern>/ViewTrialDrops3Help.jsp</url-pattern>
+            <url-pattern>/CrystalHandling.jsp</url-pattern>
+            <url-pattern>/ScreenUpload.jsp</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>HEAD</http-method>
+          <auth-constraint>
+            <role-name>*</role-name>
+            <role-name>pims-administrator</role-name>
+          </auth-constraint>
+		</web-resource-collection>
+		
+		<web-resource-collection>
+			<web-resource-name>Protected servlet mappings</web-resource-name>
+			<description/>
+			<url-pattern>/UserPrefsServlet</url-pattern>
+			<url-pattern>/AutoCompleteServlet</url-pattern>
+			<url-pattern>/TrialDropServlet</url-pattern>
+			<url-pattern>/TrialDropCountServlet</url-pattern>
+			<url-pattern>/SchedulesServlet</url-pattern>
+			<url-pattern>/SchedulesCountServlet</url-pattern>
+			<!-- <url-pattern>/TimeCourseSliderServlet</url-pattern>  I don't think this is in use - Chris  
+			<url-pattern>/TimeCourseServlet</url-pattern>  I don't think this is in use - Chris -->
+			<url-pattern>/ImageListInitServlet</url-pattern>
+			<url-pattern>/ScoreImageServlet</url-pattern>
+			<url-pattern>/InspectionsServlet</url-pattern>
+			<url-pattern>/InspectionsCountServlet</url-pattern>
+			<url-pattern>/PlateServlet</url-pattern>
+			<url-pattern>/PlatesServlet</url-pattern>
+			<url-pattern>/PlatesCountServlet</url-pattern>
+			<url-pattern>/GroupsServlet</url-pattern>
+			<url-pattern>/GroupsCountServlet</url-pattern>
+			<url-pattern>/ConstructServlet</url-pattern>
+			<url-pattern>/ConstructsServlet</url-pattern>
+			<url-pattern>/ConstructsCountServlet</url-pattern>
+			<url-pattern>/AnnotationsServlet</url-pattern>
+			<url-pattern>/AnnotationsCountServlet</url-pattern>
+			<url-pattern>/SampleServlet</url-pattern>
+			<url-pattern>/SamplesServlet</url-pattern>
+			<url-pattern>/SamplesCountServlet</url-pattern>
+			<url-pattern>/ScreenServlet</url-pattern>
+			<url-pattern>/ScreensServlet</url-pattern>
+			<url-pattern>/ScreensCountServlet</url-pattern>
+			<url-pattern>/ComponentsServlet</url-pattern>
+			<url-pattern>/ComponentsCountServlet</url-pattern>
+			<url-pattern>/ConditionsServlet</url-pattern>
+			<url-pattern>/ConditionsCountServlet</url-pattern>
+			<url-pattern>/ListAnnotations</url-pattern>
+			<url-pattern>/ListImagers</url-pattern>
+			<url-pattern>/ImagesServlet</url-pattern>
+			<url-pattern>/ListScreenManufacturers</url-pattern>
+			<url-pattern>/ListScreenTypes</url-pattern>
+			<url-pattern>/ListScreens</url-pattern>
+			<url-pattern>/ViewByName/*</url-pattern>
+			<url-pattern>/CreateTrialPlate</url-pattern>
+			<url-pattern>/EditPlate/*</url-pattern>
+			<url-pattern>/Plate/*</url-pattern>
+			
+			<!-- obsolete 
+            <url-pattern>/Create/Screen</url-pattern>
+            <url-pattern>/EditScreen/*</url-pattern> -->
+			
+			<!-- obsolete -->
+			<url-pattern>/EditPlateConstruct/*</url-pattern>
+			<url-pattern>/EditPlateConstructSample/*</url-pattern>
+			
+			<url-pattern>/UpdatePlateConstruct/*</url-pattern>
+			<url-pattern>/Create/Inspection</url-pattern>
+			<url-pattern>/Update/Inspection</url-pattern>
+			<url-pattern>/Inspection/ImageUpload</url-pattern>
+			<url-pattern>/List/org.pimslims.model.holder.RefHolder</url-pattern>
+			<url-pattern>/ExportScreen/*</url-pattern>
+			<url-pattern>/OrderUpload</url-pattern>
+			<url-pattern>/ExperimentUpload</url-pattern>
+            <url-pattern>/InspectionUpload</url-pattern>
+            <url-pattern>/IspybResults</url-pattern>
+			<url-pattern>/SaltCrystalServlet</url-pattern>
+            <url-pattern>/ViewTrialDrops.jsp</url-pattern>
+    		<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>HEAD</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+			<role-name>pims-administrator</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+    <!-- public pages  -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>static pages, all public</web-resource-name>
+            
+            <url-pattern>/js/*</url-pattern> <!-- for xtalPiMS -->
+            <url-pattern>/menubar</url-pattern>
+            <url-pattern>/help/*</url-pattern>
+            <url-pattern>/functions/*</url-pattern>
+            <url-pattern>/javascript/*</url-pattern>
+            <url-pattern>/menu/*</url-pattern>
+            <url-pattern>/images/*</url-pattern>
+            <url-pattern>/css/*</url-pattern>
+            <url-pattern>/skins/*</url-pattern>
+            <url-pattern>/public/*</url-pattern>
+            <url-pattern>/xtal/*</url-pattern>
+            <url-pattern>/example/*</url-pattern>
+            <url-pattern>/JSP/core/Index.jsp</url-pattern>
+             
+            <http-method>GET</http-method>
+        </web-resource-collection>
+    </security-constraint>
+
+
+    <!-- admin pages -->
+    <security-constraint>
+    <web-resource-collection>
+    	<web-resource-name>Administrator pages</web-resource-name>
+    	<url-pattern>/admin/*</url-pattern>
+        <url-pattern>/Installation</url-pattern>
+        <url-pattern>/functions/User.jsp</url-pattern>
+      <url-pattern>/JSP/HibernateStaticsInfo.jsp</url-pattern>
+      
+      
+   		<!-- Special restrictions for key access permissions classes -->
+    	<url-pattern>/access/Permission/*</url-pattern>
+    	<url-pattern>/Create/org.pimslims.model.accessControl.UserGroup</url-pattern>
+    	<url-pattern>/Create/org.pimslims.model.core.LabNotebook</url-pattern>
+    	<url-pattern>/Create/org.pimslims.model.accessControl.Permission</url-pattern>
+   		<url-pattern>/Create/org.pimslims.model.people.Person:users</url-pattern>
+   		<!-- Not this one, a group leader can use it:
+    	<url-pattern>/Create/org.pimslims.model.accessControl.User</url-pattern>
+    	 -->
+
+		<!--  Prevent ordinary users adding to enumeration type reference data
+		   This is a simple way of restricting the creation of a class,
+		   but be careful to cover all the "Create new" links for its roles
+		  -->
+		<url-pattern>/Create/org.pimslims.model.reference.TargetStatus</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.target.Milestone:code</url-pattern>
+  		<url-pattern>/Create/org.pimslims.model.target.TargetStatus:code</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.reference.ExperimentType</url-pattern>
+
+		<url-pattern>/Create/org.pimslims.model.experiment.Experiment:experimentType</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.reference.SampleCategory:experimentTypes</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.reference.SampleCategory</url-pattern>
+		<url-pattern>/Create/org.pimslims.model.sample.Sample:sampleCategories</url-pattern> 
+		
+        <url-pattern>/Search/org.pimslims.model.accessControl.User</url-pattern>
+        <url-pattern>/Search/org.pimslims.model.people.Person</url-pattern>
+    	<url-pattern>/Search/org.pimslims.model.accessControl.UserGroup</url-pattern>
+    	<url-pattern>/Search/org.pimslims.model.core.LabNotebook</url-pattern>
+    	<url-pattern>/Search/org.pimslims.model.accessControl.Permission</url-pattern>
+    	<!-- No http-method means all methods are constrained -->
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>pims-administrator</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Permit get and prohibit updating on user pages for viewing 
+  -->
+    <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>User pages</web-resource-name>
+      <url-pattern>/Login</url-pattern>
+      <url-pattern>/Images/*</url-pattern> <!-- for xtalPiMS -->
+      <url-pattern>/Search/*</url-pattern>
+      <url-pattern>/Show/*</url-pattern>
+      <url-pattern>/Display</url-pattern>
+      <url-pattern>/Barcode/*</url-pattern>
+      <url-pattern>/JSP/*</url-pattern>
+      
+      <url-pattern>/read/*</url-pattern>
+      <url-pattern>/standard/*</url-pattern>
+      
+      <!-- Molecular biology
+      <url-pattern>/SearchPrimers/*</url-pattern>
+      <url-pattern>/ViewPrimer/*</url-pattern>      
+      <url-pattern>/ListFiles/*</url-pattern>
+      <url-pattern>/ChooseForCreate/*</url-pattern>
+      <url-pattern>/TargetScoreboard</url-pattern>
+      <url-pattern>/spot/*</url-pattern>
+      <url-pattern>/sspf/*</url-pattern>
+      <url-pattern>/report/*</url-pattern>
+      <url-pattern>/ListEntryClones</url-pattern>
+      <url-pattern>/ListPrimerForms</url-pattern>
+      <url-pattern>/FullPrimerForm/*</url-pattern>
+      <url-pattern>/T2CReport/*</url-pattern>
+      <url-pattern>/TargetConstructsList</url-pattern>
+      <url-pattern>/barcodegraph/*</url-pattern>
+      <url-pattern>/Graph/*</url-pattern>
+      <url-pattern>/ExtensionsList</url-pattern>  
+      -->
+      <http-method>GET</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+      <role-name>pims-view</role-name>
+      <role-name>pims-administrator</role-name>
+    </auth-constraint>
+   </security-constraint>
+      
+            <!-- Perspective switch use POST to do its job, thus it must be allowed for View -->
+    <security-constraint>
+      <web-resource-collection>
+            <web-resource-name>View</web-resource-name>
+            <url-pattern>/View/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>pims-view</role-name>
+        <role-name>*</role-name>
+        <role-name>pims-administrator</role-name>
+      </auth-constraint>
+    </security-constraint>
+
+
+   <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>User pages for general updating</web-resource-name>
+			<!-- Perspective switch use POST to do its job, thus it must be allowed for View -->
+      <url-pattern>/</url-pattern>       <!-- index page -->
+      <url-pattern>/Search/org.pimslims.model.sample.Sample</url-pattern>
+      
+       <url-pattern>/Bookmark/*</url-pattern>
+      <url-pattern>/View/*</url-pattern>
+      <url-pattern>/Day/*</url-pattern>
+      <url-pattern>/Week/*</url-pattern>
+      <url-pattern>/update/*</url-pattern>
+      <url-pattern>/Update/*</url-pattern>
+      <url-pattern>/ajax/Update</url-pattern>
+      <url-pattern>/ajax/BulkUpdate</url-pattern>
+      <url-pattern>/experiment/UpdateInputSamples/*</url-pattern>
+      <url-pattern>/experiment/UpdateOutputSamples/*</url-pattern>
+      <url-pattern>/ListFiles/*</url-pattern>
+      <url-pattern>/EditRole/*</url-pattern>
+      <url-pattern>/Create/*</url-pattern>
+      <url-pattern>/Delete/*</url-pattern>
+      <url-pattern>/DeleteAndBackToReferer/*</url-pattern>
+      <url-pattern>/CreatePlate</url-pattern>
+      <url-pattern>/SetupPlate/*</url-pattern>
+      <url-pattern>/CopyRecipe/*</url-pattern>
+      <url-pattern>/CopyFromPlate</url-pattern>
+      <url-pattern>/Plate/*</url-pattern>
+      <url-pattern>/ChooseSampleCat/*</url-pattern>
+      <url-pattern>/Export/*</url-pattern>
+       
+       <!-- Molecular biology
+      <url-pattern>/dnatarget/NewDnaTarget</url-pattern>
+      <url-pattern>/DNAConstructWizard/*</url-pattern>
+      <url-pattern>/Construct/*</url-pattern>
+      <url-pattern>/spot/*</url-pattern>
+      <url-pattern>/OrderPlate/*</url-pattern>
+      <url-pattern>/RetrieveDBRecord</url-pattern>
+      <url-pattern>/NewPrimerForm/*</url-pattern>
+      <url-pattern>/NewConstruct/*</url-pattern>
+      <url-pattern>/JSP/LoadNewConstruct.jsp</url-pattern>
+      <url-pattern>/JSP/oppf/*</url-pattern>
+      <url-pattern>/EditParameterDefinition/*</url-pattern>
+      <url-pattern>/BrowseComplex</url-pattern>
+      <url-pattern>/NewComplex</url-pattern>
+      <url-pattern>/CreateDNA/*</url-pattern>
+      <url-pattern>/ViewComplex/*</url-pattern>
+      <url-pattern>/ViewExpBlueprint/*</url-pattern>
+      <url-pattern>/OpticImporter</url-pattern>
+      <url-pattern>/OppfPrimerOrderForm/*</url-pattern>
+      <url-pattern>/AlignSequence/*</url-pattern>
+      <url-pattern>/SequenceResult/*</url-pattern>
+      <url-pattern>/ImportSample</url-pattern>
+      <url-pattern>/naturalsourcetarget/*</url-pattern>
+      <url-pattern>/read/SampleProgress</url-pattern>
+      <url-pattern>/LocalSW</url-pattern>
+      <url-pattern>/JSP/plateSequenceCheck/UploadSequences.jsp</url-pattern> -->
+      <!-- If no method is specified then all methods
+      are constrained
+      To make your installation read only, change this to just GET
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+      -->
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+      <role-name>pims-administrator</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- unsupported HTTP methods -->
+  <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>unsupported HTTP methods</web-resource-name>
+        <url-pattern>/*</url-pattern>
+            <http-method>PUT</http-method>
+            <http-method>DELETE</http-method>
+            <http-method>TRACE</http-method>
+            <http-method>HEAD</http-method>
+            <http-method>OPTIONS</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+  </security-constraint>
+  
+  
+  <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>What is not permitted is forbidden</web-resource-name>
+        <url-pattern>/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+  </security-constraint>
+
+    <!-- SECURITY ROLES
+        Note that tomcat-users.xml must contain
+      <role rolename="pims-adminstrator"/>
+      <role rolename="pims-user"/>
+      <role rolename="pims-view"/>
+    -->
+    <security-role>
+       <role-name>*</role-name>
+       <!-- any logged in user -->
+    </security-role>
+    <security-role>
+       <role-name>pims-administrator</role-name>
+       <!--<description>can install new software and manage user rights</description>-->
+    </security-role>
+    <security-role>
+       <role-name>pims-user</role-name>
+        <description>
+           can view and update laboratory information,
+           in conformance to the policy set by the administrator
+           Now replaced by *
+       </description> 
+    </security-role> 
+    <security-role>
+       <role-name>pims-view</role-name>
+       <!--<description>
+           can view laboratory information,
+           in conformance to the policy set by the administrator
+           obsolete, not used and hard to support with JDBCRealm
+       </description>-->
+    </security-role>
+    <!-- a visitor who is not logged on can view the help files -->
+
+  <mime-mapping>
+    <extension>ico</extension>
+    <mime-type>image/x-icon</mime-type>
+  </mime-mapping>
+    <mime-mapping>
+     <extension>pdf</extension>
+     <mime-type>application/pdf</mime-type>
+   </mime-mapping>
+
+
+
+
+</web-app>

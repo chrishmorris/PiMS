@@ -1,0 +1,20 @@
+# properties for the data model
+# Copy this to a file called "Properties".
+# You are advised to set a password.
+
+db.className = org.postgresql.Driver
+db.url = jdbc:postgresql://localhost/test
+db.username = postgres
+db.password = ****
+
+
+
+# uploadDirectory for Windows:
+uploadDirectory = C:\\pimsUploads
+
+# uploadDirectory for Linux:
+#uploadDirectory = $CATALINA_HOME/pimsUploads
+
+
+# the name of the memops project for the PIMS data
+project = chemcomp

@@ -1,0 +1,11 @@
+
+<protocol name="PIMS Homogenise" objective="" creationDate="" remarks=""  >
+ <experimentType>Preparative experiment</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Homogenise Notes" parameterType="String" />
+ </parameterDefinitions>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" amount="0.0" unit="L" displayUnit="uL" refSample="Homogenised sample" name="Homogenised sample" />
+
+</protocol>

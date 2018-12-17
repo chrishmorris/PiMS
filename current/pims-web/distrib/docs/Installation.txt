@@ -1,0 +1,283 @@
+Installing PiMS
+=============================
+
+INSTRUCT provides a PiMS installation. All academic scientists in Europe are welcome to use it. 
+For a userid, please contact
+   pims-users@dl.ac.uk
+There are more details at:
+    http://pims.instruct-fp7.eu/
+This is the recommended way to use PiMS.
+    
+
+If you already have a PiMS installation and want to update it, then please see
+    http://pims.structuralbiology.eu/docs//README.txt
+    
+    
+If you prefer to have your own installation of PiMS on your own server, 
+then this file describes the installation procedure. First, download the release from:
+    http://pims.structuralbiology.eu/pims.zip
+and unzip it, for example by logging on as root and
+    wget -c /root/pims.zip http://pims.structuralbiology.eu/pims.zip
+    unzip pims.zip
+    cd jars/
+This large file contains everything you need to update PiMS 
+or install PiMS for the first time.
+
+    
+
+PRECONDITIONS
+=============
+
+    You will need to install the following before you can run PIMS:
+    - Java 1.6 JDK or above. We recommend Oracle Java, OpenJdk6 does not work because of:
+           https://bugs.openjdk.java.net/show_bug.cgi?id=100251
+    - Postgresql 8.1 or later
+    - Tomcat7
+    - GraphViz 2.18 (http://www.graphviz.org/Download.php)
+
+Take special note of your superuser name and password
+during installation of postgreSQL, it will be needed during the PIMS install.
+The instructions below assume that the superuser is called "postgres".
+
+When installing GraphViz on Windows, you should add it to the path,
+so that "dot" is a valid command. Alternatively, see Windows.txt.
+
+For GraphViz on linux (or Mac), the formats actually available in a given Graphviz 
+system depends on how the system was built and the presence of additional libraries. 
+To see what formats *dot* supports, run dot -T?.
+
+You may need to recompile dot on linux for png support 
+(http://www.graphviz.org/doc/info/output.html). 
+
+ 
+DEPLOYING IN TOMCAT
+===================
+
+    There are several ways to deploy a web app in Tomcat. The most predictable
+    is to create a file:
+        $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+    with contents like in
+        http://pims.structuralbiology.eu/docs/installation/pims.xml
+    If you also want to install xtalPiMS, then make a similar file xtal.xml, linking to xtalPiMS.war.
+
+    The file should have
+        <Context docBase="/root/pims4_4.war" path="/pims">
+        </Context>
+    See below for the <Environment> elements that must appear in this <Context>.
+    After you have prepared it, make a copy e.g.:
+         $CATALINA_HOME/conf/Catalina/localhost/pims.xml.backup
+    because Tomcat sometimes deletes this file.
+
+    You are recommended to run Tomcat with the following Java options:
+        -server -Xmx1024m  -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled -enableassertions
+    If you are running PiMs on a server with no graphics card, you also need:
+        -Djava.awt.headless=true
+    On Linux, you set these by
+        export JAVA_OPTS="-server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled -enableassertions -Djava.awt.headless=true"
+
+    If you have a server class machine, or are upgrading from a previous release of PiMS,
+    please see Tomcat.txt for some other problems you may encounter.
+
+    Developers should see Eclipse.txt for how to install PiMS as a development copy.
+
+
+INSTALLATION OF THE PIMS DATABASE
+=================================
+
+  There are dedicated installation instructions for different platforms in other
+  files at this folder. Please see which one better fits your needs.
+  Below follows general instructions.
+
+  If you are installing PiMS for the first time,
+  then you need to install a database as explained here.
+
+  This release is tested only Postgres and Oracle.
+  These instructions assume you have already installed your database server but
+have not created the pims database or database users.
+
+   Create the database and database users:
+
+        createuser -U postgres -P pimsview
+        createuser -U postgres -P pimsupdate
+        createuser -U postgres -P pimsadmin
+        createdb -U pimsadmin --encoding UTF-8 pims
+
+    If you used a postgres superuser name other than 'postgres', use your
+    postgres superuser name in place of 'postgres' in these commands.
+    You may need to add an entry to pg_hba.conf.
+    See file postgresql.txt for details.
+
+    You do not have to use 'pims' as the name of the database in the
+    createdb command but if you do not, the subsequent steps will need
+    adapting accordingly.
+
+    All three users only need the default privileges - answer no the three
+    questions asked by createuser (superuser, create databases and create
+    roles).
+
+    Keep a note of the passwords you specify - in particular you will need
+    the password for pimsupdate in Step 4.
+
+  Step 3. Install the data model and reference data:
+        psql -d pims -U pimsadmin -f pims-database.sql
+
+  Step 4. Load the reference data. 
+       You need to provide the database connection information, in a file called Properties. 
+       You can do this by editing the file conf/Properties to add the password for your database. Then:
+           java -jar -Xms64m -Xmx256m RefDataLoader.jar loadRefData
+           
+  Step 5. Create a directory for uploaded files.
+  
+       So that your PiMS users can upload files, you must tell Tomcat where to put them, 
+       by editing the file:
+            $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+       for example to set:
+            <Environment name="uploadDirectory" type="java.lang.String"
+               value="/var/pims/pimsUploads"  />
+               
+        You must create this directory, and make it writeable by Tomcat:
+            mkdir /var/pims
+            mkdir /var/pims/pimsUploads
+            chown tomcat /var/pims/pimsUploads
+        
+       You will want to back up this directory regularly. 
+
+  Step 6. Configure PIMS for your database connection.
+
+    Edit your Tomcat Context configuration file as created in "DEPLOYING IN TOMCAT":
+        $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+    You should add Environments in this file for your database Connection.
+    eg:
+     <Environment name="db.className"
+        value="org.postgresql.Driver" type="java.lang.String" />
+    <Environment name="db.url"
+        value="jdbc:postgresql://localhost/pims"  type="java.lang.String" />
+    <Environment name="db.username"
+        value="pimsupdate" type="java.lang.String" />
+    <Environment name="db.password"
+        value="abcd" type="java.lang.String"/>
+
+    Then stop and restart Tomcat.
+
+
+CONFIGURING YOUR HTTP PROXY
+===========================
+
+PiMS has a facility to download targets from public databases.
+If your organisation uses an HTTP proxy then you must tell PiMS what it is.
+To do this, specify proxy settings in your Tomcat Context configuration file 
+as created in "DEPLOYING IN TOMCAT":
+        $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+
+        http.proxyHost - your proxy server
+        http.proxyPort - your proxy port
+        http.nonProxyHosts - the server which should be accessed directly
+
+    Example:
+    eg:
+      <Environment name="http.proxyHost"
+            value="wwwcache3.dl.ac.uk" type="java.lang.String"/>
+        <Environment name="http.proxyPort"
+            value="8080" type="java.lang.String" />
+        <Environment name="http.nonProxyHosts"
+            value="localhost" type="java.lang.String" />
+
+CONFIGURATION OF OTHER PIMS PARAMETERS
+======================================
+    There are some other Environment elements in the configuration file. 
+    You will not usually want to change these.    
+
+
+DEFINING USERS AND ACCESS RIGHTS
+================================
+
+    PiMS can now store users' passwords in its own database, except for the PiMS administrator.
+    Previous versions of PiMS used the file tomcat-users.xml to record all the passwords.
+    This version of PiMS can still be operated the old way - 
+    if you are updating an existing installation you can ignore this section. 
+    Please note that the procedure described here does not work in Tomcat6.
+    
+    Copy postgresql-9.1-901.jdbc3.jar to $CATALINA_HOME/lib/.
+
+    (1) edit $CATALINA_HOME/conf/tomcat-users.xml
+    You need roles:
+        <role rolename="pims-user"/>
+        <role rolename="pims-administrator"/>
+
+    You should add something like this. You can choose the user name:
+        <user username="administrator" password="xxx" roles="pims-administrator,pims-user"/>
+        <!-- and for each PiMS user: -->
+        <user username="xxx" password="xxx" roles="pims-user"/>
+    [Replace 'xxx' with the usernames/passwords you want to use to log
+    into PIMS]
+
+    You can now log on to PiMS as the administrator.
+
+    (2) Go to
+        http://localhost:8080/pims/Create/org.pimslims.model.accessControl.User
+    log on as administrator, and define your first PiMS user.
+    (You may need to correct the domain name, depending how you have installed PiMS)
+    Click the link to create a new user, and fill in the details and click Save.
+    Click "User Groups: Search".
+
+    Click in the check box for the     "public" user group
+    to add that user to the "public" Lab Notebook.     
+    A Lab Notebook is a group of PiMS pages. Also click the link to "Change Password". 
+    Once you have set a password, the new user can log in to PiMS.
+    Advise her or him to change the password - there is a menu entry 
+    under the word "Logout" on the menu bar.
+
+    
+
+    (3) If you are happy to have all your data in a single public project,
+    no more action is needed. Otherwise go to
+        http://localhost:8080/pims/access/Permission
+    and click the link "Create new project". You can use the edit permissions
+    page to fine tune the permissions for your user groups. Then you can
+    add your users to the user groups appropriate to the projects
+    they are involved with. The list of users you have set up is at
+        http://localhost:8080/pims/Search/org.pimslims.model.accessControl.User
+
+    The notes on
+        http://localhost:8080/pims/access/Permission
+    explains the options you have for access control.
+
+
+
+INSTALLATION PROBLEMS
+=====================
+
+    If you are updating from an earlier version of PiMS, some pages may be laid out incorrectly
+    when first viewed. If any users complain about this, please asked them
+    to press CONTROL-F5.
+
+    If you encounter a problem installing PIMS on a particular platform,
+    you may find some hints in:
+        http://pims.structuralbiology.eu/docs/
+    If you have hints about how to install on your preferred platform,
+    we would be pleased to receive details.
+
+
+BULLETIN BOARD
+==============
+
+    To subscribe please mail to pims-users@dl.ac.uk.
+    The archive will be available at:
+    http://www.dl.ac.uk/list-archive-public/pims-users/threads.html
+    
+FORUM
+=====
+
+    There is a forum for PiMS users at:
+        http://www.structuralbiology.eu/networks/pims?tab=forums
+
+DEFECTS
+=======
+
+    Please report defects to pims-defects@dl.ac.uk.
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINB Vector</name>
+    <details>Derived from pET28a/Kanamycin, N-Term cleavable His
+        Tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINB" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA">
+        <function>In-Fusion[TM] E.coli Expression Vector
+        </function>
+        <resistanceDetails name="Kanamycin" />
+        <markerDetails name="N-Term cleavable His Tag sequence"
+            details="MGSSHHHHHHSSGLEVLFQ|GP" featureType="Tag" status="not cleaved" />
+    </sampleComponent>
+</vector>

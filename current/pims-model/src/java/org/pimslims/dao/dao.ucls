@@ -1,0 +1,260 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.dao.AbstractModel" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="648" y="74" width="-1" height="-1"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.dao.LongWritableVersion" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/LongWritableVersion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1" y="1786" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.dao.ModelImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/ModelImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="752" y="1240" width="-1" height="-1"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.dao.ReadableVersion" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="217" y="998" width="252" height="650"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.dao.ReadableVersionImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="87" y="-151" width="382" height="1099"/>  
+  </class>  
+  <interface language="java" name="org.pimslims.dao.WritableVersion" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/WritableVersion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="8" y="1553" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.dao.WritableVersionImpl" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/dao/WritableVersionImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="-118" y="998" width="295" height="346"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.accessControl.User" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="606" y="369" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.AccessObject" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="607" y="622" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.core.Project" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/core/Project.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="607" y="501" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.access.Access" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/access/Access.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="958" y="149" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.util.InstallationProperties" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/util/InstallationProperties.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="890" y="811" width="-1" height="-1"/>  
+  </class>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.dao.LongWritableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/LongWritableVersion.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.WritableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/WritableVersion.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ModelImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ModelImpl.java" binary="false">      
+      <attribute name="singleton"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.ModelImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ModelImpl.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false">      
+      <attribute name="project"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.Project" 
+      file="/pims-model/src/java/org/pimslims/model/core/Project.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ModelImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ModelImpl.java" binary="false">      
+      <attribute name="properties"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.util.InstallationProperties" 
+      file="/pims-model/src/java/org/pimslims/util/InstallationProperties.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.dao.ModelImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ModelImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.AbstractModel" 
+      file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.dao.WritableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/WritableVersion.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.ReadableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false">      
+      <attribute name="user"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.dao.AbstractModel" 
+      file="/pims-model/src/java/org/pimslims/dao/AbstractModel.java" binary="false">      
+      <attribute name="access"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.access.Access" 
+      file="/pims-model/src/java/org/pimslims/access/Access.java" binary="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false">      
+      <attribute name="model"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.ModelImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ModelImpl.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false">      
+      <attribute name="readAccessIDs"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.dao.WritableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/WritableVersionImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false"/>  
+  </generalization>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.ReadableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersion.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false">      
+      <attribute name="project"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.Project" 
+      file="/pims-model/src/java/org/pimslims/model/core/Project.java" binary="false">      
+      <attribute name="accessObjects"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false">      
+      <attribute name="currentVersions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.dao.ReadableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/ReadableVersionImpl.java" binary="false">      
+      <attribute name="accessObjectofWORLDWRITABLE"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.AccessObject" 
+      file="/pims-model/src/java/org/pimslims/model/core/AccessObject.java" binary="false"/>    
+    <bendpoint x="500" y="668"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.accessControl.User" 
+      file="/pims-model/src/java/org/pimslims/model/accessControl/User.java" binary="false">      
+      <attribute name="project"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.core.Project" 
+      file="/pims-model/src/java/org/pimslims/model/core/Project.java" binary="false">      
+      <attribute name="users"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.dao.WritableVersionImpl" 
+      file="/pims-model/src/java/org/pimslims/dao/WritableVersionImpl.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.dao.WritableVersion" 
+      file="/pims-model/src/java/org/pimslims/dao/WritableVersion.java" binary="false"/>  
+  </realization>
+</class-diagram>

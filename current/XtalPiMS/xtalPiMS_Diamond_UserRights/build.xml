@@ -1,0 +1,52 @@
+<project default="jar" name="xtalPiMS_Diamond_UserRights" basedir=".">
+    
+	<!-- set global properties for this build -->
+	<property name="src" location="src"/>
+	<property name="build" location="build"/>
+	<property name="dist"  location="dist"/>
+	<property name="lib.path" location="${basedir}/lib" />
+    
+    <!-- jar -->
+    <property name="jar.filename" value="xtalPiMSDiamondUserRights.jar" />
+    <property name="jar.file" value="${basedir}/${jar.filename}" />
+	
+	<!-- add libraries -->
+    <path id="project.classpath">
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+	
+    <target name="jar" depends="compile" description="Make the jar file">
+        <echo>tar file: ${jar.file}</echo>
+		<manifest file="build/MANIFEST.MF">
+			<attribute name="Main-Class" value="org.pimslims.diamond.userrights.UserRightsManager" />
+		</manifest>
+        <jar index="true" destfile="${jar.file}">
+            <fileset dir="${build}" />
+			<zipfileset src="${basedir}/lib/dom4j-1.6.1.jar" />
+			<zipfileset src="${basedir}/lib/genericWebServices.jar" />
+			<zipfileset src="${basedir}/lib/hibernate-commons-annotations-3.2.0.Final.jar" />
+			<zipfileset src="${basedir}/lib/hibernate-core-3.6.8.Final.jar" />
+			<zipfileset src="${basedir}/lib/hibernate-entitymanager-3.6.8.Final.jar" />
+			<zipfileset src="${basedir}/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar" />
+			<zipfileset src="${basedir}/lib/javassist-3.12.0.GA.jar" />
+			<zipfileset src="${basedir}/lib/pims-model.jar" />
+			<zipfileset src="${basedir}/lib/postgresql-9.1-901.jdbc3.jar" />
+		</jar>
+	</target>
+    
+    <target name="compile" depends="clean">
+	    <javac srcdir="${basedir}/src" destdir="${build}" target="1.5" source="1.5" debug="on" encoding="UTF-8"
+            sourcepath="" nowarn="true"
+        >
+            <classpath refid="project.classpath" />
+		</javac>
+	</target>
+    
+	<target name="clean">
+	    <delete dir="${build}"/>
+	    <mkdir dir="${build}"/>
+	</target>
+	
+</project>

@@ -1,0 +1,17 @@
+# properties for the data model
+# Copy this to a file called "Properties".
+# You are advised to set a password.
+
+db.url = jdbc:postgresql://localhost/test
+db.username = postgres
+db.password = 
+
+fedid= 
+password= 
+
+# uploadDirectory for Windows:
+uploadDirectory = C:\\pimsUploads
+
+# uploadDirectory for Linux:
+#uploadDirectory = $CATALINA_HOME/pimsUploads
+

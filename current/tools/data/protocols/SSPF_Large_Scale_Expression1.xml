@@ -1,0 +1,29 @@
+<!-- SSPF St. Andrews Purification protocol xml as flat file -->
+<protocol name="SSPF Large Scale Expression 1" objective="Large Scale Expression of Target Protein" creationDate="07-05-07" remarks="Based on Lab activities requirements from SSPF St. Andrews">
+ <experimentType>Production scale expression</experimentType>
+  
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Culture" name="Pellet"/>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="A. Solubility Result" parameterType="String" possibleValues="0;1S;2S;3S;I"  defaultValue="0" />
+  <parameterDefinition id="2" name="B. Native/Selmet" parameterType="String" possibleValues="Native;Selmet"  defaultValue="Native" />
+  <parameterDefinition id="3" name="C. Cell Line" parameterType="String" possibleValues="BL21 (DE3);C43 (DE3);B834 (DE3)" defaultValue="BL21 (DE3)" />
+  <parameterDefinition id="4" name="D. Antibiotic" parameterType="String" defaultValue="100ug/ml Ampicillin" />
+  <parameterDefinition id="5" name="E. Media" parameterType="String" possibleValues="Auto-induction;LB;Simple-semet;Auto-semet" defaultValue="TPB" />
+  <parameterDefinition id="6" name="F. IPTG concentration (mM)" parameterType="Float" possibleValues="0.2;0.4" defaultValue="0.2" />
+  <parameterDefinition id="7" name="G. Pre-Induction Temperature (C)" parameterType="Float" defaultValue="37" />
+  <parameterDefinition id="8" name="H. Post-Induction Temperature (C)" parameterType="Float" possibleValues="15;20;25" defaultValue="25" />
+  <parameterDefinition id="9" name="I. Inoculum type (Glycerol Stock/ Colonies" parameterType="String" possibleValues="Glycerol Stock;Colonies" defaultValue="Glycerol Stock" />
+  <parameterDefinition id="10" name="J. Induction duration" parameterType="String" possibleValues="48 Hours;Overnight" defaultValue="Overnight" />
+  <parameterDefinition id="11" name="K. Ratio of Inoculum" parameterType="String" possibleValues="1:10;1:100" defaultValue="1:100" />
+  <parameterDefinition id="12" name="L. OD(600nm) at Induction" parameterType="Float" possibleValues="0.6;0.1" defaultValue="0.6" />
+  <parameterDefinition id="13" name="M. Shaker R.P.M." parameterType="Int" possibleValues="200;250;275" defaultValue="200" />
+  <parameterDefinition id="14" name="N. Scale-up volume (ml)" parameterType="Int" defaultValue="500" />
+  
+ </parameterDefinitions>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="0.0001" unit="L" displayUnit="uL" refSample="Transformed cells" name="Inoculum" />
+</inputSamples>
+
+</protocol>

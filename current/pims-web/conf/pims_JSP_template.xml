@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="jsp_new" deleted="false" description="" enabled="true" name="PiMS JSP template">
+&lt;%@ page contentType="text/html; charset=utf-8" language="java"&#13;
+import="java.util.*,org.pimslims.presentation.*,org.pimslims.lab.*"  %&gt;&#13;
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;&#13;
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %&gt;&#13;
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %&gt;&#13;
+&lt;%@ taglib uri="/WEB-INF/pims.tld" prefix="pims" %&gt;&#13;
+&lt;%@ taglib prefix="pimsForm" tagdir="/WEB-INF/tags/pimsForm" %&gt;&#13;
+&lt;%-- &#13;
+Author: ${user}&#13;
+Date: ${date}&#13;
+Servlets: &#13;
+&#13;
+--&gt;&#13;
+&lt;%-- bean declarations e.g.:&#13;
+&lt;jsp:useBean id="targetBean" scope="request" type="TargetBean" /&gt;&#13;
+&lt;jsp:useBean id="constructBeans" scope="request"&#13;
+type="Collection&lt;ConstructBean&gt;" /&gt;&#13;
+--%&gt;&#13;
+&#13;
+&lt;c:catch var="error"&gt;&#13;
+&lt;jsp:include page="/JSP/core/Header.jsp"&gt;&#13;
+    &lt;jsp:param name="HeaderName" value='-- your title here --' /&gt;&#13;
+    &lt;jsp:param name="mayUpdate" value='$${mayUpdate}' /&gt;&#13;
+&lt;/jsp:include&gt;&#13;
+&#13;
+&lt;%-- page body here --%&gt;&#13;
+&#13;
+&lt;/c:catch&gt;&lt;c:if test="$${error != null}"&gt;"/&gt;&#13;
+    &lt;p class="error"&gt;error $${error}&lt;error /&gt;&lt;/p&gt;&#13;
+&lt;/c:if&gt;    &#13;
+&lt;jsp:include page="/JSP/core/Footer.jsp" /&gt;&#13;
+</template></templates>

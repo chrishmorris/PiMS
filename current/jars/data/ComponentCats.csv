@@ -1,0 +1,51 @@
+namingSystem,name,details
+default,Buffering agent,PIMS default category
+default,Chelator,PIMS default category
+default,Cryo coolant,PIMS default category
+default,CSI,PIMS default category
+default,Detergent,PIMS default category
+default,Gas,PIMS default category
+default,Heavy atom compound,PIMS default category
+default,Metal,PIMS default category
+default,Nucleation suppressant,PIMS default category
+default,Organic,PIMS default category
+default,PCR Product,PIMS default category
+default,pH conjugate,PIMS default category
+default,Precipitant,PIMS default category
+default,Reducing agent,PIMS default category
+default,Oxidising agent,PIMS default category
+default,Salt,PIMS default category
+default,Solvent,PIMS default category
+default,Vector,PIMS default category
+default,Construct,PIMS default category
+default,Plasmid,PIMS default category
+default,Competent cell,PIMS default category
+default,Primer,PIMS default category
+default,Inducer,PIMS default category
+default,Inhibitor,PIMS default category
+default,Additive,PIMS default category
+default,Antibiotic,PIMS default category
+default,Catalyst,PIMS default category
+default,Co-factor,PIMS default category
+default,Cross linker,PIMS default category
+default,Ligand,PIMS default category
+default,Lipid,PIMS default category
+default,Modifying agent,PIMS default category
+default,Substrate,PIMS default category
+default,Enzyme,PIMS default category
+default,Nucleotide,PIMS default category
+default,Preservative,PIMS default category
+default,Sugar,PIMS default category
+default,StainsAndDyes,PIMS default category
+default,Synthetic gene,PIMS default category
+default,Denaturant,PIMS default category
+default,Oligonucleotide,PIMS default category
+default,Amino acid,PIMS default category
+default,Vitamin,PIMS default category
+default,Final Protein,PIMS default category
+default,Expressed Protein,PIMS default category
+default,Template,PIMS default category
+default,Protein,PIMS default category
+default,Nucleic acid,PIMS default category
+default,Forward Extension,PIMS default category
+default,Reverse Extension,PIMS default category

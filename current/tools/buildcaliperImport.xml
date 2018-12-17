@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project pims-tools">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar index="true" destfile="C:/Temp/Caliper_run/caliperImport.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="org.pimslims.tools.CaliperFileImport"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="C:/current/pims-tools/classes"/>
+        	<zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/pims-model.jar"/>
+        	<!--
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse3.6/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/asm.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/bytecode.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/biojava1_6.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/c3p0-0.9.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/cglib-2.1.3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/checkstyle-all-4.3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/dom4j-1.6.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/ehcache-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/ejb3-persistence.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/hibernate-annotations.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/hibernate-commons-annotations.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/hibernate-entitymanager.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/hibernate3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/javassist.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/jdom.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/jta.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/jxl.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/log4j-1.2.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/postgresql-8.1-405.jdbc3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/servlet-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/commons-fileupload-1.2.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-tools/lib/ojdbc14.jar"/>
+            -->
+            <fileset dir="C:/current/pims-web/WebContent/WEB-INF/classes"/>
+        	<!--
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/antlr-2.7.6rc1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/asm.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/asm-attrs.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/cglib-2.1.3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-beanutils.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-collections-3.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-lang-2.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/grappa1_2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jakarta-oro.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jaxrpc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jdom.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jstl.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/log4j-1.2.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/postgresql-8.1-405.jdbc3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/standard.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/httpunit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/jericho-html-1.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/js.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/servlet-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/Tidy.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/commons-el.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jxl.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-cli-1.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/ols-client-1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/soap.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/wsdl4j.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jtds-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/ejb3-persistence.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/bytecode.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-dbcp-1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-pool-1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/xml-apis-dom3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/ehcache-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/hibernate-annotations.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/barbecue-1.5-beta1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/batik-awt-util.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/batik-bridge.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/batik-gui-util.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/batik-gvt.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/batik-parser.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/batik-script.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/batik-swing.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/batik-util.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/batik-svg-dom.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/batik-dom.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/batik-css.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/batik-ext.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/batik-xml.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/itext-1.4.7.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/biojava1_6.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/hibernate3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/c3p0-0.9.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/hibernate-commons-annotations.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/hibernate-entitymanager.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jta.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/javassist.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/pims-model.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/poi-3.2-FINAL-20081019.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/activation.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/jsr173_1.0_api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/mail.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/webservices-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/webservices-rt.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/webservices-tools.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/webservices-extra-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/webservices-extra.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/axis.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/JUnicorn_fat.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/displaytag-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/displaytag-export-poi-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/displaytag-portlet-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/jsp-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/el-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/pims-oppf.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/commons-discovery-0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/WebContent/WEB-INF/lib/ojdbc14.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/current/pims-web/lib/commons-logging-1.1.jar"/>
+            -->
+        </jar>
+    </target>
+</project>

@@ -1,0 +1,29 @@
+#
+# Default colours, etc., for PIMS. These may be overridden, 
+# in any perspective.
+#
+# You may use one property as the value of another
+# property, provided that it is already defined:
+#
+# OK:
+# DARK1=black
+# LINKCOLOR=DARK1
+#
+# Not OK:
+# LINKCOLOR=DARK1 //fails because DARK1 is undefined
+# DARK1=black
+#
+
+#Basic colour themes
+LIGHT3=#fff
+LIGHT2=#ccf
+LIGHT1=#99f
+DARK1=#006
+DARK2=#003
+DARK3=#000
+
+#Header, menu bar colours, etc.
+MENUBAR_BACKGROUND=DARK2
+MENUBAR_MAINMENU_LINKCOLOR=LIGHT3
+MENUBAR_MAINMENU_LINKCOLOR_ACTIVE=DARK1
+MENUBAR_MAINMENU_LINKBACKGROUND_ACTIVE=LIGHT2

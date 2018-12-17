@@ -1,0 +1,372 @@
+Protocols
+Changed: added alphabetical index to ParameterDefinition name attributes
+/YSBL/protocols/HiTel_CloneVerification.xml
+Old:
+  <parameterDefinition id="1" name="Polymerase" label="Polymerase used: Pfu/KOD" parameterType="String" defaultValue="Pfu" />
+  <parameterDefinition id="2" name="Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="3" name="Comments" label="Any comments about the PCR product" parameterType="String" />
+  <parameterDefinition id="4" name="Optimised?" label="Was the PCR reaction optimised?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="5" name="Optimisation" label="Details of optimised conditions" parameterType="String" defaultValue="Anneal 30 sec at 60C, Extend 70 sec at 72C, Denature 30 sec at 94C" />
+  <parameterDefinition id="6" name="Pure plasmid Plate ID" label="ID of purified plasmid plate" parameterType="String"  />
+  <parameterDefinition id="7" name="T7 primer" label="T7 primer forward or reverse?" parameterType="String" defaultValue="Reverse" />
+  <parameterDefinition id="8" name="Gene-specific primer" label="Gene-specific primer forward or reverse?" parameterType="String" defaultValue="Forward" />
+New:
+  <parameterDefinition id="1" name="A. Polymerase" label="Polymerase used: Pfu/KOD" parameterType="String" defaultValue="Pfu" />
+  <parameterDefinition id="2" name="B. Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="3" name="C. Comments" label="Any comments about the PCR product" parameterType="String" />
+  <parameterDefinition id="4" name="D. Optimised?" label="Was the PCR reaction optimised?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="5" name="E. Optimisation" label="Details of optimised conditions" parameterType="String" defaultValue="Anneal 30 sec at 60C, Extend 70 sec at 72C, Denature 30 sec at 94C" />
+  <parameterDefinition id="6" name="F. Pure plasmid Plate ID" label="ID of purified plasmid plate" parameterType="String"  />
+  <parameterDefinition id="7" name="G. T7 primer" label="T7 primer forward or reverse?" parameterType="String" defaultValue="Reverse" />
+  <parameterDefinition id="8" name="H. Gene-specific primer" label="Gene-specific primer forward or reverse?" parameterType="String" defaultValue="Forward" />
+
+/YSBL/protocols/HiTel_LIC_Cloning.xml
+Old:
+  <parameterDefinition id="1" name="Vector: LIC+, LIC-, Baculo" label="Type of vector used: LIC +/- cleavable C-term" parameterType="String" defaultValue="LIC+" />
+  <parameterDefinition id="2" name="T4 pol Plate ID" label="ID of T4 polymerase reaction plate" parameterType="String" />
+  <parameterDefinition id="3" name="LIC-annealing Plate ID" label="ID of LIC-annealing reaction plate" parameterType="String" />
+  <parameterDefinition id="4" name="Transformation plate details" label="ID and position in 24-well transformation plate" parameterType="String" />
+  <parameterDefinition id="5" name="Transformation conditions" parameterType="String" defaultValue="Incubate 5 min on ice,
+  Heat shock 30 sec,
+  Incubate a further 5 min on ice" />
+  <parameterDefinition id="6" name="Heat shock temperature" parameterType="Float" defaultValue="42" /> 
+  <parameterDefinition id="7" name="Colonies" label="Any colonies? Yes/No, or number" parameterType="String" defaultValue="Yes" /> 
+  <parameterDefinition id="8" name="Minipreps" label="Number of colonies processed" parameterType="Int" defaultValue="2" /> 
+New:
+  <parameterDefinition id="1" name="A. Vector: LIC+, LIC-, Baculo" label="Type of vector used: LIC +/- cleavable C-term" parameterType="String" defaultValue="LIC+" />
+  <parameterDefinition id="2" name="B. T4 pol Plate ID" label="ID of T4 polymerase reaction plate" parameterType="String" />
+  <parameterDefinition id="3" name="C. LIC-annealing Plate ID" label="ID of LIC-annealing reaction plate" parameterType="String" />
+  <parameterDefinition id="4" name="D. Transformation plate details" label="ID and position in 24-well transformation plate" parameterType="String" />
+  <parameterDefinition id="5" name="E. Transformation conditions" parameterType="String" defaultValue="Incubate 5 min on ice,
+  Heat shock 30 sec,
+  Incubate a further 5 min on ice" />
+  <parameterDefinition id="6" name="F. Heat shock temperature" parameterType="Float" defaultValue="42" /> 
+  <parameterDefinition id="7" name="G. Colonies" label="Any colonies? Yes/No, or number" parameterType="String" defaultValue="Yes" /> 
+  <parameterDefinition id="8" name="H. Minipreps" label="Number of colonies processed" parameterType="Int" defaultValue="2" /> 
+
+/YSBL/protocols/HiTel_LIC_polymerase.xml
+Old:
+  <parameterDefinition id="1" name="Insert concentration pmol/ul" parameterType="Float" />
+  <parameterDefinition id="2" name="Incubation conditions" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+New:
+  <parameterDefinition id="1" name="A. Insert concentration pmol/ul" parameterType="Float" />
+  <parameterDefinition id="2" name="B. Incubation conditions" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+   
+/YSBL/protocols/HiTel_LIC_VectorPrep.xml
+Old:
+  <parameterDefinition id="1" name="Plasmid concentration ug/ml" parameterType="Float" label="Plasmid concentration ug/ml" />
+  <parameterDefinition id="2" name="Plasmid volume for 50 ug" parameterType="Float" label="Plasmid volume for 50 ug" />
+  <parameterDefinition id="3" name="Digest conditions" parameterType="String" label="Digest conditions" defaultValue="
+   Incubate 37C for 1 hour 50 min" />
+  <parameterDefinition id="4" name="Gel purified" label="Was the linearised vector gel purified?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="5" name="Linearised vector yield ug" parameterType="Float" defaultValue="50" />
+  <parameterDefinition id="6" name="Linearised vector conc. ug/ul" parameterType="Float" defaultValue="50" />
+  <parameterDefinition id="7" name="Vol. Vector in T4 reaction ul" label="Volume of linearized vector in T4 reaction" parameterType="Float" defaultValue="11" />  
+  <parameterDefinition id="8" name="Incubation conditions" label="Conditions for LIC T4 reaction" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+  <parameterDefinition id="9" name="Final vector concentration ng/ul" parameterType="Float" label="Final vector concentration ng/ul" defaultValue="50" />
+ New:
+  <parameterDefinition id="1" name="A. Plasmid concentration ug/ml" parameterType="Float" label="Plasmid concentration ug/ml" />
+  <parameterDefinition id="2" name="B. Plasmid volume for 50 ug" parameterType="Float" label="Plasmid volume for 50 ug" />
+  <parameterDefinition id="3" name="C. Digest conditions" parameterType="String" label="Digest conditions" defaultValue="
+   Incubate 37C for 1 hour 50 min" />
+  <parameterDefinition id="4" name="D. Gel purified" label="Was the linearised vector gel purified?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="5" name="E. Linearised vector yield ug" parameterType="Float" defaultValue="50" />
+  <parameterDefinition id="6" name="F. Linearised vector conc. ug/ul" parameterType="Float" defaultValue="50" />
+  <parameterDefinition id="7" name="G. Vol. Vector in T4 reaction ul" label="Volume of linearized vector in T4 reaction" parameterType="Float" defaultValue="11" />
+  
+  <parameterDefinition id="8" name="H. Incubation conditions" label="Conditions for LIC T4 reaction" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+  <parameterDefinition id="9" name="I. Final vector concentration ng/ul" parameterType="Float" label="Final vector concentration ng/ul" defaultValue="50" />
+ 
+/YSBL/protocols/HiTel_LIC_Standard_PCR.xml
+Old:
+  <parameterDefinition id="1" name="Annealing temp." label="Annealing temperature" parameterType="Float" defaultValue="60" />
+  <parameterDefinition id="2" name="Num. cycles" label="Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="Initial denaturation" label="Initial denaturation conditions" parameterType="String" defaultValue="5 min at 94C" />
+  <parameterDefinition id="4" name="Thermocycling" label="Thermocycling conditions" parameterType="String" defaultValue="Anneal 30 sec at 60C, Extend 70 sec at 72C, Denature 30 sec at 94C" />
+  <parameterDefinition id="5" name="Final extension" label="Final extension conditions" parameterType="String" defaultValue="3 min at 72C" />
+  <parameterDefinition id="6" name="Hold" parameterType="String" defaultValue="Overnight at 4C" />
+  <parameterDefinition id="7" name="Template type" label="Plasmid DNA: P, Genomic DNA: G" parameterType="String" defaultValue="P" />
+  <parameterDefinition id="8" name="Expected size" label="Expected size (bp) of PCR product" parameterType="String" />
+  <parameterDefinition id="9" name="Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="10" name="Comments" label="Any comments about the PCR product" parameterType="String" />
+  <parameterDefinition id="11" name="PCR clean-up?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="12" name="Clean-up plate ID" label="ID of plate used for PCR clean-up" parameterType="String" />
+  <parameterDefinition id="13" name="Gel purify?" label="Was the PCR product gel-purified?" parameterType="Boolean" defaultValue="false" />
+New:
+  <parameterDefinition id="1" name="A. Annealing temp." label="Annealing temperature" parameterType="Float" defaultValue="60" />
+  <parameterDefinition id="2" name="B. Num. cycles" label="Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="C. Initial denaturation" label="Initial denaturation conditions" parameterType="String" defaultValue="5 min at 94C" />
+  <parameterDefinition id="4" name="D. Thermocycling" label="Thermocycling conditions" parameterType="String" defaultValue="Anneal 30 sec at 60C, Extend 70 sec at 72C, Denature 30 sec at 94C" />
+  <parameterDefinition id="5" name="E. Final extension" label="Final extension conditions" parameterType="String" defaultValue="3 min at 72C" />
+  <parameterDefinition id="6" name="F. Hold" parameterType="String" defaultValue="Overnight at 4C" />
+  <parameterDefinition id="7" name="G. Template type" label="Plasmid DNA: P, Genomic DNA: G" parameterType="String" defaultValue="P" />
+  <parameterDefinition id="8" name="H. Expected size" label="Expected size (bp) of PCR product" parameterType="String" />
+  <parameterDefinition id="9" name="I. Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="10" name="J. Comments" label="Any comments about the PCR product" parameterType="String" />
+  <parameterDefinition id="11" name="K. PCR clean-up?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="12" name="L. Clean-up plate ID" label="ID of plate used for PCR clean-up" parameterType="String" />
+  <parameterDefinition id="13" name="M. Gel purify?" label="Was the PCR product gel-purified?" parameterType="Boolean" defaultValue="false" />
+
+/YSBL/protocols/HiTel_TrialExpression.xml
+Old:
+  <parameterDefinition id="1" name="Clones processed?" label="Number of clones processed e.g. 1 of 2, 2 of 2"  parameterType="String" defaultValue="1 of 2" />
+  <parameterDefinition id="2" name="Culture media" label="Details of culture media used for expression" parameterType="String" defaultValue="Autoinduction medium" /> 
+  <parameterDefinition id="3" name="Expressed in BL21" label="Protein expression in BL21" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="4" name="Expressed in Rosetta" label="Protein expression in Rosetta?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="5" name="Expressed in BL*" label="Protein expression in BL*?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="6" name="Expressed in B834" label="Protein expression in B834?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="7" name="Soluble?" label="Soluble protein expressed?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="8" name="Soluble in strain" label="Which strains produced soluble expression?" parameterType="String" defaultValue="BL21" />
+  <parameterDefinition id="9" name="Transformation plate details" label="ID and position in 24-well transformation plate" parameterType="String" />
+  <parameterDefinition id="10" name="Expected size" label="Expected size of protein kDa" parameterType="String" />
+  <parameterDefinition id="11" name="Actual size" label="Actual size of protein kDa" parameterType="String" />
+  <parameterDefinition id="12" name="Optimisation reqired?" label="Does expression need optimising?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="13" name="Comments" label="Comments about the trials" parameterType="String" />
+New:
+  <parameterDefinition id="1" name="A. Clones processed?" label="Number of clones processed e.g. 1 of 2, 2 of 2"  parameterType="String" defaultValue="1 of 2" />
+  <parameterDefinition id="2" name="B. Culture media" label="Details of culture media used for expression" parameterType="String" defaultValue="Autoinduction medium" />  
+  <parameterDefinition id="3" name="C. Expressed in BL21" label="Protein expression in BL21" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="4" name="D. Expressed in Rosetta" label="Protein expression in Rosetta?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="5" name="E. Expressed in BL*" label="Protein expression in BL*?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="6" name="F. Expressed in B834" label="Protein expression in B834?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="7" name="G. Soluble?" label="Soluble protein expressed?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="8" name="H. Soluble in strain" label="Which strains produced soluble expression?" parameterType="String" defaultValue="BL21" />
+  <parameterDefinition id="9" name="I. Transformation plate details" label="ID and position in 24-well transformation plate" parameterType="String" />
+  <parameterDefinition id="10" name="J. Expected size" label="Expected size of protein kDa" parameterType="String" />
+  <parameterDefinition id="11" name="K. Actual size" label="Actual size of protein kDa" parameterType="String" />
+  <parameterDefinition id="12" name="L. Optimisation reqired?" label="Does expression need optimising?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="13" name="M. Comments" label="Comments about the trials" parameterType="String" />
+
+/YSBL/protocols/YSBL_CloneDigest.xml
+Old:
+  <parameterDefinition id="1" name="Enzyme 1" label="Name of first restriction enzyme" parameterType="String" defaultValue="NcoI" />
+  <parameterDefinition id="2" name="Enzyme 2" label="Name of second restriction enzyme" parameterType="String" defaultValue="NdeI" />
+  <parameterDefinition id="3" name="Digest conditions" parameterType="String" 
+  defaultValue="1 hour at 37C"/>
+  <parameterDefinition id="4" name="Expected fragment size(s)" label="Expected size (bp) of digestion product(s)" parameterType="String" />
+  <parameterDefinition id="5" name="Correct product(s)?" label="Are the digest products the expected size?" parameterType="Boolean" defaultValue="true" />
+New:
+  <parameterDefinition id="1" name="A. Enzyme 1" label="Name of first restriction enzyme" parameterType="String" defaultValue="NcoI" />
+  <parameterDefinition id="2" name="B. Enzyme 2" label="Name of second restriction enzyme" parameterType="String" defaultValue="NdeI" />
+  <parameterDefinition id="3" name="C. Digest conditions" parameterType="String" 
+  defaultValue="1 hour at 37C"/>
+  <parameterDefinition id="4" name="D. Expected fragment size(s)" label="Expected size (bp) of digestion product(s)" parameterType="String" />
+  <parameterDefinition id="5" name="E. Correct product(s)?" label="Are the digest products the expected size?" parameterType="Boolean" defaultValue="true" />
+
+/YSBL/protocols/YSBL_CloneVerification.xml
+Old:
+  <parameterDefinition id="1" name="Extension time (sec)" parameterType="Float"  />
+  <parameterDefinition id="2" name="Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="Thermocycling conditions" parameterType="String" 
+  defaultValue="Anneal 30 sec at 42C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="Expected size" label="Expected size (bp) of PCR product" parameterType="String" />
+  <parameterDefinition id="5" name="Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="6" name="Polymerase" label="Type of polymerase used" parameterType="String" defaultValue="KOD Hot Start DNA Polymerase (Novagen)" />
+  <parameterDefinition id="7" name="T7 primer" label="T7 primer forward or reverse?" parameterType="String" defaultValue="Reverse" />
+  <parameterDefinition id="8" name="Gene-specific primer" label="Gene-specific primer forward or reverse?" parameterType="String" defaultValue="Forward" />
+New:
+  <parameterDefinition id="1" name="A. Extension time (sec)" parameterType="Float"  />
+  <parameterDefinition id="2" name="B. Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="C. Thermocycling conditions" parameterType="String" 
+  defaultValue="Anneal 30 sec at 42C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="D. Expected size" label="Expected size (bp) of PCR product" parameterType="String" />
+  <parameterDefinition id="5" name="E. Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="6" name="F. Polymerase" label="Type of polymerase used" parameterType="String" defaultValue="KOD Hot Start DNA Polymerase (Novagen)" />
+  <parameterDefinition id="7" name="G. T7 primer" label="T7 primer forward or reverse?" parameterType="String" defaultValue="Reverse" />
+  <parameterDefinition id="8" name="H. Gene-specific primer" label="Gene-specific primer forward or reverse?" parameterType="String" defaultValue="Forward" />
+
+/YSBL/protocols/YSBL_LIC_Cloning.xml
+Old:
+  <parameterDefinition id="1" name="Insert size (bp)" label="Size of Insert in bp" parameterType="Int" />
+  <parameterDefinition id="2" name="ng Insert needed" label="Amount (ng) insert required for LIC reaction (0.2pmol)" parameterType="Int" />
+  <parameterDefinition id="3" name="Insert conc. ng/ul" label="Concentration of Insert ng/ul" parameterType="Float" />
+  <parameterDefinition id="4" name="LIC vector" label="Which LIC vector used" parameterType="String" defaultValue="pET-YSBLIC" /> 
+  <parameterDefinition id="5" name="Vector conc. ng/ul" label="Concentration of vector ng/ul" parameterType="Float" defaultValue="50.0" /> 
+  <parameterDefinition id="6" name="T4 polymerase" label="T4 polymerase used for LIC reaction" parameterType="String" defaultValue="Novagen LIC qualified T4 DNA pol" /> 
+  <parameterDefinition id="7" name="Competent cells" label="Competent cells used for Transformation" parameterType="String" defaultValue="Nova Blue Giga Singles" /> 
+  <parameterDefinition id="8" name="Colonies" label="Any colonies? Yes/No, or number" parameterType="String" defaultValue="Yes" /> 
+New:
+  <parameterDefinition id="1" name="A. Insert size (bp)" label="Size of Insert in bp" parameterType="Int" />
+  <parameterDefinition id="2" name="B. ng Insert needed" label="Amount (ng) insert required for LIC reaction (0.2pmol)" parameterType="Int" />
+  <parameterDefinition id="3" name="C. Insert conc. ng/ul" label="Concentration of Insert ng/ul" parameterType="Float" />
+  <parameterDefinition id="4" name="D. LIC vector" label="Which LIC vector used" parameterType="String" defaultValue="pET-YSBLIC" /> 
+  <parameterDefinition id="5" name="E. Vector conc. ng/ul" label="Concentration of vector ng/ul" parameterType="Float" defaultValue="50.0" /> 
+  <parameterDefinition id="6" name="F. T4 polymerase" label="T4 polymerase used for LIC reaction" parameterType="String" defaultValue="Novagen LIC qualified T4 DNA pol" /> 
+  <parameterDefinition id="7" name="G. Competent cells" label="Competent cells used for Transformation" parameterType="String" defaultValue="Nova Blue Giga Singles" /> 
+  <parameterDefinition id="8" name="H. Colonies" label="Any colonies? Yes/No, or number" parameterType="String" defaultValue="Yes" /> 
+
+/YSBL/protocols/YSBL_StandardPCR.xml
+Old:
+  <parameterDefinition id="1" name="Extension time (sec)" parameterType="Float" />
+  <parameterDefinition id="2" name="Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="Thermocycling conditions" parameterType="String" 
+  defaultValue="Anneal 30 sec at 45C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="Primer stock conc. uM" label="Primer stock concentration uM" parameterType="Float" defaultValue="100" />
+  <parameterDefinition id="5" name="Primer working conc. uM" label="Primer working concentration uM" parameterType="Float" defaultValue="20" />
+  <parameterDefinition id="6" name="Template type" label="Plasmid DNA: P, Genomic DNA: G" parameterType="String" defaultValue="P" />
+  <parameterDefinition id="7" name="Template conc. ng/ul" label="Concentration of Template ng/ul" parameterType="Float" defaultValue="50" />
+  <parameterDefinition id="8" name="Expected size" label="Expected size (bp) of PCR product" parameterType="String" />
+  <parameterDefinition id="9" name="Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="10" name="Polymerase" label="Type of polymerase used" parameterType="String" defaultValue="KOD Hot Start DNA Polymerase (Novagen)" />
+New:
+  <parameterDefinition id="1" name="A. Extension time (sec)" parameterType="Float" />
+  <parameterDefinition id="2" name="B. Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="C. Thermocycling conditions" parameterType="String" 
+  defaultValue="Anneal 30 sec at 45C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="D. Primer stock conc. uM" label="Primer stock concentration uM" parameterType="Float" defaultValue="100" />
+  <parameterDefinition id="5" name="E. Primer working conc. uM" label="Primer working concentration uM" parameterType="Float" defaultValue="20" />
+  <parameterDefinition id="6" name="F. Template type" label="Plasmid DNA: P, Genomic DNA: G" parameterType="String" defaultValue="P" />
+  <parameterDefinition id="7" name="G. Template conc. ng/ul" label="Concentration of Template ng/ul" parameterType="Float" defaultValue="50" />
+  <parameterDefinition id="8" name="H. Expected size" label="Expected size (bp) of PCR product" parameterType="String" />
+  <parameterDefinition id="9" name="I. Correct size?" label="Is the PCR product the expected size?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="10" name="J. Polymerase" label="Type of polymerase used" parameterType="String" defaultValue="KOD Hot Start DNA Polymerase (Novagen)" />
+
+/YSBL/protocols/YSBL_TrialExpression.xml
+Old:
+  <parameterDefinition id="1" name="Expression strain used"  parameterType="String" defaultValue="BL21.DE3" />
+  <parameterDefinition id="2" name="Autoinduction/IPTG" label="Induction method" parameterType="String" defaultValue="Autoinduction" />
+  <parameterDefinition id="3" name="Growth medium" label="Type of growth medium used" parameterType="String" defaultValue="10 ml Auto-induction medium" />
+  <parameterDefinition id="4" name="IPTG conc. mM" label="Concentration of IPTG mM -if used" parameterType="Float" defaultValue="1.0" />
+  <parameterDefinition id="4" name="Expression temp." label="Expression temperature degrees C" parameterType="Int" defaultValue="37" />
+  <parameterDefinition id="5" name="Expression time" label="Length of time of Expression" parameterType="String" defaultValue="Overnight" />
+  <parameterDefinition id="6" name="Lysis method" label="Method used to lyse cells" parameterType="String" defaultValue="Sonication" />
+  <parameterDefinition id="7" name="Expression?" label="Any protein expressed?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="8" name="Soluble?" label="Soluble protein expressed?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="9" name="Expected size" label="Expected size of protein kDa" parameterType="String" />
+  <parameterDefinition id="10" name="Actual size" label="Actual size of protein kDa" parameterType="String" />
+New:
+  <parameterDefinition id="1" name="A. Expression strain used"  parameterType="String" defaultValue="BL21.DE3" />
+  <parameterDefinition id="2" name="B. Autoinduction/IPTG" label="Induction method" parameterType="String" defaultValue="Autoinduction" />
+  <parameterDefinition id="3" name="C. Growth medium" label="Type of growth medium used" parameterType="String" defaultValue="10 ml Auto-induction medium" />
+  <parameterDefinition id="4" name="D. IPTG conc. mM" label="Concentration of IPTG mM -if used" parameterType="Float" defaultValue="1.0" />
+  <parameterDefinition id="4" name="E. Expression temp." label="Expression temperature degrees C" parameterType="Int" defaultValue="37" />
+  <parameterDefinition id="5" name="F. Expression time" label="Length of time of Expression" parameterType="String" defaultValue="Overnight" />
+  <parameterDefinition id="6" name="G. Lysis method" label="Method used to lyse cells" parameterType="String" defaultValue="Sonication" />
+  <parameterDefinition id="7" name="H. Expression?" label="Any protein expressed?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="8" name="I. Soluble?" label="Soluble protein expressed?" parameterType="Boolean" defaultValue="false" />
+  <parameterDefinition id="9" name="J. Expected size" label="Expected size of protein kDa" parameterType="String" />
+  <parameterDefinition id="10" name="K. Actual size" label="Actual size of protein kDa" parameterType="String" />
+
+/protocols/PIMS_LIC_PlateCulture.xml
+Old:
+  <parameterDefinition id="1" name="Number of colonies" parameterType="Int" minValue="0" />
+  <parameterDefinition id="2" name="Growth conditions" parameterType="String" defaultValue=
+  "Plate out and incubate overnight at 37C" />
+  <parameterDefinition id="3" name="Plate type" parameterType="String" defaultValue="LB agar plus 30ug/ml kannamycin" /> 
+  <parameterDefinition id="4" name="Colony size" parameterType="String" minValue="1mm" defaultValue="2mm"/>
+New:
+  <parameterDefinition id="1" name="A. Number of colonies" parameterType="Int" minValue="0" />
+  <parameterDefinition id="2" name="B. Growth conditions" parameterType="String" defaultValue=
+  "Plate out and incubate overnight at 37C" />
+  <parameterDefinition id="3" name="C. Plate type" parameterType="String" defaultValue="LB agar plus 30ug/ml kannamycin" /> 
+  <parameterDefinition id="4" name="D. Colony size" parameterType="String" minValue="1mm" defaultValue="2mm"/>
+
+/protocols/PIMS_LIC_VectorPrep.xml
+Old:
+  <parameterDefinition id="1" name="Plasmid concentration ug/ml" parameterType="Float" label="Plasmid concentration ug/ml" />
+  <parameterDefinition id="2" name="Plasmid volume for 8 ug" parameterType="Float" label="Plasmid volume for 8 ug" />
+  <parameterDefinition id="3" name="Digest conditions" parameterType="String" label="Incubation conditions" defaultValue="
+   Incubate 37C for 2 hours" />
+  <parameterDefinition id="4" name="Gel purified" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="5" name="Linearised vector yield, pmol" parameterType="Float" defaultValue="8" />
+  <parameterDefinition id="6" name="Incubation conditions" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+  <parameterDefinition id="7" name="Final vector concentration ng/ul" parameterType="Float" label="Final vector concentration ng/ul" defaultValue="50" />
+New:
+  <parameterDefinition id="1" name="A. Plasmid concentration ug/ml" parameterType="Float" label="Plasmid concentration ug/ml" />
+  <parameterDefinition id="2" name="B. Plasmid volume for 8 ug" parameterType="Float" label="Plasmid volume for 8 ug" />
+  <parameterDefinition id="3" name="C. Digest conditions" parameterType="String" label="Incubation conditions" defaultValue="
+   Incubate 37C for 2 hours" />
+  <parameterDefinition id="4" name="D. Gel purified" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="5" name="E. Linearised vector yield, pmol" parameterType="Float" defaultValue="8" />
+  <parameterDefinition id="6" name="F. Incubation conditions" parameterType="String" defaultValue="Warm to room temperature,
+   Incubate 30 min at 22C,
+   Heat for 5 min at 75C" />
+  <parameterDefinition id="7" name="G. Final vector concentration ng/ul" parameterType="Float" label="Final vector concentration ng/ul" defaultValue="50" />
+
+/protocols/PIMS_PCR.xml
+Old:
+  <parameterDefinition id="1" name="Annealing temperature" parameterType="Float" defaultValue="45" />
+  <parameterDefinition id="2" name="Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="Thermocycling conditions" parameterType="String" 
+  defaultValue="Anneal 30 sec at 45C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="Primer concentration uM" parameterType="Float" 
+  defaultValue="100" />
+  <parameterDefinition id="5" name="Template concentration ng/ul" parameterType="Float" defaultValue=
+  "50" />
+New:
+  <parameterDefinition id="1" name="A. Annealing temperature" parameterType="Float" defaultValue="45" />
+  <parameterDefinition id="2" name="B. Number of cycles" parameterType="Int" defaultValue="35" />
+  <parameterDefinition id="3" name="C. Thermocycling conditions" parameterType="String" 
+  defaultValue="Anneal 30 sec at 45C,
+   Extend 30 sec at 72C,
+   Denature 30 sec at 94C"/>
+  <parameterDefinition id="4" name="D. Primer concentration uM" parameterType="Float" 
+  defaultValue="100" />
+  <parameterDefinition id="5" name="E. Template concentration ng/ul" parameterType="Float" defaultValue=
+  "50" />
+
+/protocols/PIMS_TrialExpression.xml
+Old:
+  <parameterDefinition id="1" name="Expression strain" parameterType="String" defaultValue="B834" />
+  <parameterDefinition id="2" name="Construct ID and location" parameterType="String" defaultValue="" />
+  <parameterDefinition id="3" name="Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="4" name="Shaker speed rpm" parameterType="Int" defaultValue="160" />
+  <parameterDefinition id="5" name="Time (hours) before induction" parameterType="Float" defaultValue="2.0" />
+  <parameterDefinition id="6" name="OD before induction" parameterType="Float" defaultValue="0.6" />
+  <parameterDefinition id="7" name="Temperatue C" parameterType="Float" defaultValue="37" />
+  <parameterDefinition id="8" name="Autoinduction/IPTG" parameterType="String" defaultValue="IPTG" />
+  <parameterDefinition id="9" name="Sample time interval (hours)" parameterType="Float" defaultValue="2" />
+  <parameterDefinition id="10" name="OD sample 1" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="11" name="OD sample 2" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="12" name="OD sample 3" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="13" name="Optimal expression time (hours)" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="14" name="Solubilization method" parameterType="String" defaultValue="Sonication" />
+  <parameterDefinition id="15" name="Solubilization details" parameterType="String" />
+  <parameterDefinition id="16" name="Gel image attached?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="17" name="Gel details" parameterType="String" defaultValue="Markers in lane 1, etc." />
+New:
+  <parameterDefinition id="1" name="A. Expression strain" parameterType="String" defaultValue="B834" />
+  <parameterDefinition id="2" name="B. Construct ID and location" parameterType="String" defaultValue="" />
+  <parameterDefinition id="3" name="C. Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="4" name="D. Shaker speed rpm" parameterType="Int" defaultValue="160" />
+  <parameterDefinition id="5" name="E. Time (hours) before induction" parameterType="Float" defaultValue="2.0" />
+  <parameterDefinition id="6" name="F. OD before induction" parameterType="Float" defaultValue="0.6" />
+  <parameterDefinition id="7" name="G. Temperatue C" parameterType="Float" defaultValue="37" />
+  <parameterDefinition id="8" name="H. Autoinduction/IPTG" parameterType="String" defaultValue="IPTG" />
+  <parameterDefinition id="9" name="I. Sample time interval (hours)" parameterType="Float" defaultValue="2" />
+  <parameterDefinition id="10" name="J. OD sample 1" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="11" name="K. OD sample 2" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="12" name="L. OD sample 3" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="13" name="M. Optimal expression time (hours)" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="14" name="N. Solubilization method" parameterType="String" defaultValue="Sonication" />
+  <parameterDefinition id="15" name="O. Solubilization details" parameterType="String" />
+  <parameterDefinition id="16" name="P. Gel image attached?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="17" name="Q. Gel details" parameterType="String" defaultValue="Markers in lane 1, etc." />
+
+
+Changed: added possibleValues
+/YSBL/protocols/HiTel_LIC_Cloning.xml
+Old:
+  <parameterDefinition id="1" name="Vector: LIC+, LIC-, Baculo" label="Type of vector used: LIC +/- cleavable C-term" parameterType="String" defaultValue="LIC+" />
+New:
+  <parameterDefinition id="1" name="A. Vector: LIC+, LIC-, Baculo" label="Type of vector used: LIC +/- cleavable C-term" parameterType="String" possibleValues="LIC+;LIC-;Baculo" defaultValue="LIC+" />

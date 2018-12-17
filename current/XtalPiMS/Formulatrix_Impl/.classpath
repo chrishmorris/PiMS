@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/junit.jar"/>
+	<classpathentry kind="lib" path="lib/jtds-1.2.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-1.4-ivy.jar"/>
+	<classpathentry kind="lib" path="lib/xtalPiMS_API.jar" sourcepath="/xtalPiMSApi"/>
+	<classpathentry kind="lib" path="lib/xtalPiMS_PiMSImpl.jar"/>
+	<classpathentry kind="lib" path="lib/pims-model.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/ehcache-core-2.4.3.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/hibernate-c3p0-3.6.8.Final.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/hibernate-core-3.6.8.Final.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/hibernate-ehcache-3.6.8.Final.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/hibernate-entitymanager-3.6.8.Final.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/postgresql-9.1-901.jdbc3.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/slf4j-jdk14-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="/pims-model/lib/runtime/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/json-lib-2.2.1-jdk15.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1-ivy.jar"/>
+	<classpathentry kind="lib" path="lib/ezmorph-1.0.6-ivy.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

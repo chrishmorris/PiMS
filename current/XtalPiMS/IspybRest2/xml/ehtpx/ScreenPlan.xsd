@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Exposure.xsd"/>
+	<xs:element name="screenPlan" type="tns:ScreenPlan">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="ScreenPlan">
+		<xs:sequence>
+			<xs:element name="experimentType">
+				<xs:annotation>
+					<xs:documentation>The type of the experiment: anomalous (MAD,SAD) or fixed wavelength.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="MAD"/>
+						<xs:enumeration value="SAD"/>
+						<xs:enumeration value="MR"/>
+						<xs:enumeration value="Ligand binding"/>
+						<xs:enumeration value="Refinement"/>
+						<xs:enumeration value="OSC"/>
+						<xs:enumeration value="SAD - Inverse Beam"/>
+						<xs:enumeration value="MAD - Inverse Beam"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="requestedOverallDResHigh" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>Ideal resolution, in Angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requestedOverallDResLow" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>Minimal resolution, in Angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requestedMeanIOverSigIAll" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The ratio of the mean of the intensities of all reflections  merged within the resolution limits _d_res_low    and d_res_high to the mean of the standard    uncertainties of the intensities of all reflections in the same  resolution limits.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exposure" type="tns:Exposure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of the Exposures for this Crystal.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="anomalousScattererElement" type="xs:string" minOccurs="0"/>
+			<xs:element name="wavelength" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The wavelength, in Angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="collectionStrategy">
+				<xs:annotation>
+					<xs:documentation>Rank crystals or collect first OK one.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Rank crystals"/>
+						<xs:enumeration value="Collect first OK crystal"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="temperature">
+				<xs:annotation>
+					<xs:documentation>Room temperature or 100K.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Room temperature"/>
+						<xs:enumeration value="100K"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="multiplicity" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The mean number of redundancy for the intensities of all reflections   measured in the resolution limits d_res_low and d_res_high.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="forceOnePassOnly" type="xs:boolean"/>
+			<xs:element name="resolutionAtHome" type="xs:string" minOccurs="0"/>
+			<xs:element name="mosaicityAtHome" type="xs:string" minOccurs="0"/>
+			<xs:element name="oscillationAnglePerImage" type="xs:double" minOccurs="0"/>
+			<xs:element name="doseLimit" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The dose limit, in seconds.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maximalExposureTime" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The maximal exposure time, in seconds.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="existingReflectionData" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The uploaded MTZ file ??? Can we give a URL instead ???</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requestedPercentPossibleAll" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Overall completeness, in %. The percentage of geometrically possible reflections represented
+  by all reflections measured in the resolution limits 
+  _diffrn_reflns.d_res_low and _diffrn_reflns.d_res_high.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requestedShellPercentPossibleAll" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The completeness in highest resolution bin, in %</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="notesComments" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

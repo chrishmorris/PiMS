@@ -1,0 +1,18 @@
+<!-- PiMS Concentration protocol xml as flat file -->
+<protocol name="PiMS Concentration" objective="Concentration of Target Protein" creationDate="16-03-05" remarks="Default set of protocols for PiMS" details="Purification of Target Protein" >
+ <experimentType>Concentration</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Concentrated protein" name="Concentrated protein" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Concentrator type" parameterType="String" />
+  <parameterDefinition id="2" name="Input Concentration" parameterType="String" />
+  <parameterDefinition id="3" name="Output Concentration" parameterType="String" />
+  <parameterDefinition id="4" name="Output volume (ml)" parameterType="Float" />
+ </parameterDefinitions>
+
+</protocol>

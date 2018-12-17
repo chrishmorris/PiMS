@@ -1,0 +1,33 @@
+Data
+NaturalSources.csv
+Added: Natural sources
+"Bacillus subtilis",1423
+
+Chemical.csv
+Updated: changed [R] to (R)
+Old: polyoxyethylene(23) lauryl ether,C12E23,Detergent,,9002-92-0,1198,MolComp,other,Y,,Y,2,"R22,R38,R41","S26,S36/37/39","Xn",BRIJ [R] 35,Detergent
+New: polyoxyethylene(23) lauryl ether,C12E23,Detergent,,9002-92-0,1198,MolComp,other,Y,,Y,2,"R22,R38,R41","S26,S36/37/39","Xn",BRIJ (R) 35,Detergent
+Old: 3-(decyldimethylammonio)propane-1-sulfonate,,Detergent,C15H33NO3S,15163-36-7,307.6,MolComp,other,Y,,,,R36/37/38,"S2,S24/25","Xi",Zwittergent[R] 3-10,Detergent
+New: 3-(decyldimethylammonio)propane-1-sulfonate,,Detergent,C15H33NO3S,15163-36-7,307.6,MolComp,other,Y,,,,R36/37/38,"S2,S24/25","Xi",Zwittergent(R) 3-10,Detergent
+Old: "3-(N,N-dimethyloctylammonio)propane-sulfonate","octyl sulfobetaine; SB3-8; n-octyl-N,N-dimethyl-3-ammonio-1-propane sulfonate",Detergent,C13H29NO3S,15178-76-4,279.44,MolComp,other,Y,,Y,,R36/37/38,"S26,S36/37","Xi",Zwittergent[R] 3-8,Detergent
+New: "3-(N,N-dimethyloctylammonio)propane-sulfonate","octyl sulfobetaine; SB3-8; n-octyl-N,N-dimethyl-3-ammonio-1-propane sulfonate",Detergent,C13H29NO3S,15178-76-4,279.44,MolComp,other,Y,,Y,,R36/37/38,"S26,S36/37","Xi",Zwittergent(R) 3-8,Detergent
+Old: "3-(N,N-dimethylpalmitylammonio)propane-sulfonate","3-(N,N-dimethylhexadecylammonio)propanesulfonate; 3-(hexadecyldimethylammonio)propanesulfonate; 3-(palmityldimethylammonio)propanesulfonate; palmityl sulfobetaine; SB3-16",Detergent,C21H45NO3S,2281-11-0,391.65,MolComp,other,Y,,Y,,R36/37/38,"S26,S36","Xi",Zwittergent[R] 3-16,Detergent
+New: "3-(N,N-dimethylpalmitylammonio)propane-sulfonate","3-(N,N-dimethylhexadecylammonio)propanesulfonate; 3-(hexadecyldimethylammonio)propanesulfonate; 3-(palmityldimethylammonio)propanesulfonate; palmityl sulfobetaine; SB3-16",Detergent,C21H45NO3S,2281-11-0,391.65,MolComp,other,Y,,Y,,R36/37/38,"S26,S36","Xi",Zwittergent(R) 3-16,Detergent
+Old: 3-(dodecyldimethylammonio)propanesulfonate,"SB3-12; 3-(N,N-dimethyldodecylammonio)propanesulfonate; 3-(N,N-dimethyllaurylammonio)propanesulfonate; 3-(lauryldimethylammonio)propanesulfonate; dodecyldimethyl(3-sulfopropyl)ammonium hydroxide inner salt,lauryl sulfobetaine ",Detergent,C17H37NO3S,14933-08-5,335.55,MolComp,other,Y,,Y,1,R34,"S26,S36/37/39","C",Zwittergent[R] 3-12,Detergent
+New: 3-(dodecyldimethylammonio)propanesulfonate,"SB3-12; 3-(N,N-dimethyldodecylammonio)propanesulfonate; 3-(N,N-dimethyllaurylammonio)propanesulfonate; 3-(lauryldimethylammonio)propanesulfonate; dodecyldimethyl(3-sulfopropyl)ammonium hydroxide inner salt,lauryl sulfobetaine ",Detergent,C17H37NO3S,14933-08-5,335.55,MolComp,other,Y,,Y,1,R34,"S26,S36/37/39","C",Zwittergent(R) 3-12,Detergent
+Old: O-(2-aminopropyl)-O'-(2-methoxyethyl)polypropylene glycol,polypropylene glycol 500 mono-2-aminoethyl mono-2-methoxyethyl ether,Precipitant,CH3OCH2CH2O[CH(CH3)CH2O]nCH2CH(NH2)CH3,77110-54-4,,MolComp,other,Y,,Y,,"R21/22,R36/38","S26,S36/37","Xn",Jeffamine[R] M-600,Chemical/Biochemical
+New: O-(2-aminopropyl)-O'-(2-methoxyethyl)polypropylene glycol,polypropylene glycol 500 mono-2-aminoethyl mono-2-methoxyethyl ether,Precipitant,CH3OCH2CH2O[CH(CH3)CH2O]nCH2CH(NH2)CH3,77110-54-4,,MolComp,other,Y,,Y,,"R21/22,R36/38","S26,S36/37","Xn",Jeffamine(R) M-600,Chemical/Biochemical
+Old: "alpha,omega-diamine poly(oxyethylene-co-oxypropylene)","O,O'-bis-(2-aminopropyl) polypropylene glycol-block-polyethylene glycol-block-polypropylene glycol",Precipitant,CH3CH(NH2)CH2[OCH(CH3)CH2]l(OCH2CH2)m[OCH2CH(CH3)]nNH2,65605-36-9,,MolComp,other,Y,,,,,,,Jeffamine[R] ED-2001,Chemical/Biochemical
+New: "alpha,omega-diamine poly(oxyethylene-co-oxypropylene)","O,O'-bis-(2-aminopropyl) polypropylene glycol-block-polyethylene glycol-block-polypropylene glycol",Precipitant,CH3CH(NH2)CH2[OCH(CH3)CH2]l(OCH2CH2)m[OCH2CH(CH3)]nNH2,65605-36-9,,MolComp,other,Y,,,,,,,Jeffamine(R) ED-2001,Chemical/Biochemical
+Old: TRIS HCl,TRIS hydrochloride; tris(hydroxymethyl)aminomethane hydrochloride,Buffering agent,NH2C(CH2OH)3.HCl,1185-53-1,157.6,MolComp,other,Y,,Y,,R36/37/38,"S26,S36","Xi",Trizma[R] hydrochloride,Chemical/Biochemical
+New: TRIS HCl,TRIS hydrochloride; tris(hydroxymethyl)aminomethane hydrochloride,Buffering agent,NH2C(CH2OH)3.HCl,1185-53-1,157.6,MolComp,other,Y,,Y,,R36/37/38,"S26,S36","Xi",Trizma(R) hydrochloride,Chemical/Biochemical
+Old: t-octylphenoxypolyethoxyethanol,"4-(1,1,3,3-tetramethylbutyl)phenyl-polyethylene glycol; polyethylene glycol tert-octylphenyl ether",Detergent,C14H22O(C2H4O)9-10,9002-93-1,,MolComp,other,Y,,Y,2,"R22,R41","S24,S26,S39","Xn,Xi",Triton[R] X-100,Detergent
+New: t-octylphenoxypolyethoxyethanol,"4-(1,1,3,3-tetramethylbutyl)phenyl-polyethylene glycol; polyethylene glycol tert-octylphenyl ether",Detergent,C14H22O(C2H4O)9-10,9002-93-1,,MolComp,other,Y,,Y,2,"R22,R41","S24,S26,S39","Xn,Xi",Triton(R) X-100,Detergent
+Old: polyethylene glycol tert-octylphenyl ether,"(1,1,3,3-Tetramethylbutyl)phenyl-polyethylene glycol",Detergent,C14H22O(C2H4O)7-8,9036-19-5,,MolComp,other,Y,,Y,2,"R37/38,R41","S26,S37/39","Xi",Triton[R] X-114,Detergent
+New: polyethylene glycol tert-octylphenyl ether,"(1,1,3,3-Tetramethylbutyl)phenyl-polyethylene glycol",Detergent,C14H22O(C2H4O)7-8,9036-19-5,,MolComp,other,Y,,Y,2,"R37/38,R41","S26,S37/39","Xi",Triton(R) X-114,Detergent
+Old: polyoxyethylene sorbitan monolaurate,polyethylene glycol sorbitan monolaurate,Detergent,C58H11O26,9005-64-5,,MolComp,other,Y,,,,,,,Tween[R] 20;polyoxyethylene sorbitan monolaurate,Detergent
+New: polyoxyethylene sorbitan monolaurate,polyethylene glycol sorbitan monolaurate,Detergent,C58H11O26,9005-64-5,,MolComp,other,Y,,,,,,,Tween(R) 20;polyoxyethylene sorbitan monolaurate,Detergent
+
+Updated: changed [TM] to (TM)
+Old: tacsimate,,"Salt,Precipitant,Buffering agent,pH conjugate",,,,MolComp,other,Y,,Y,,R36/37/38,S26,"Xi",Tacsimate(TM),Chemical/Biochemical
+New: tacsimate,,"Salt,Precipitant,Buffering agent,pH conjugate",,,,MolComp,other,Y,,Y,,R36/37/38,S26,"Xi",Tacsimate(TM),Chemical/Biochemical

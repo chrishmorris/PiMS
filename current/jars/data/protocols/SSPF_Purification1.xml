@@ -1,0 +1,58 @@
+<!-- SSPF St. Andrews Purification protocol xml as flat file -->
+<protocol name="SSPF Purification 1" objective="Purification of Target Protein" creationDate="03-05-07" remarks="Based on Lab activities requirements from SSPF St. Andrews">
+ <experimentType>Protein purification</experimentType>
+ 
+<outputSample sampleCatNamingSys="default" sampleCatName="Purified protein" amount="" unit="L" displayUnit="uL" refSample="Purified Protein" name="Purified Protein"/>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="1a. Date of Expression" parameterType="String" defaultValue="" />
+  <parameterDefinition id="2" name="1b. Scale" parameterType="String" possibleValues="Small;Large" defaultValue="Large" />
+  <parameterDefinition id="3" name="1c. Native/Seleno" parameterType="String" defaultValue="Native" />
+  <parameterDefinition id="4" name="1d. Lysis date" parameterType="String" defaultValue="" />
+  <parameterDefinition id="5" name="1e. Date frozen" parameterType="String" defaultValue="" />
+
+  <parameterDefinition id="6" name="1f. Mass and Extinction coeff" parameterType="String" defaultValue="" />
+  <parameterDefinition id="7" name="1g. Mass of cells/L culture (g)" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="8" name="1h. Expected yield (mg)" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="9" name="1i. Final yield (mg)" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="10" name="1j. Freezer location" parameterType="String" defaultValue="" />
+
+  <parameterDefinition id="11" name="1k. Aliquots (number)" parameterType="String" defaultValue="" />
+  <parameterDefinition id="12" name="1l. Concentration (mg/ml)" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="13" name="2a. Lysis method" parameterType="String" possibleValues="Lysozyme -Freeze thaw;Cell disruptor;Sonicate" defaultValue="" />
+  <parameterDefinition id="14" name="2b. Bench or Akta" parameterType="String" defaultValue="Akta" />
+  <parameterDefinition id="15" name="2c. Akta method" parameterType="String" defaultValue="" />
+  
+  <parameterDefinition id="16" name="2d. Brand of Ni resin" parameterType="String" possibleValues="GE;Qiagen" defaultValue="" />
+  <parameterDefinition id="17" name="2e. Volume of Ni resin (ml)" parameterType="String" defaultValue="" />
+  <parameterDefinition id="18" name="2f. [Immidazole] for lysis" parameterType="String" defaultValue="" />
+  <parameterDefinition id="19" name="2g. [Immidazole] for wash" parameterType="String" defaultValue="" />
+  <parameterDefinition id="20" name="2h. Recommended [Immidazole]" parameterType="String" defaultValue="" />
+
+  <parameterDefinition id="21" name="2i. Yield (mg) after desalt" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="22" name="3a. Amount TEV added (mg)" parameterType="String" defaultValue="" />
+  <parameterDefinition id="23" name="3b. TEV efficiency" parameterType="String" defaultValue="" />  
+  <parameterDefinition id="24" name="3c. Length of incubation" parameterType="String" defaultValue="" />
+  <parameterDefinition id="25" name="3d. Amount DTT added (mM)" parameterType="Float" defaultValue="1" />
+
+  <parameterDefinition id="26" name="3e. Yield (mg) after TEV" parameterType="Float" defaultValue="" />
+
+  <parameterDefinition id="27" name="4a. GF [NaCL] (mM)" parameterType="Int" possibleValues="150;500" defaultValue="150" />
+  <parameterDefinition id="28" name="4b. Other additives" parameterType="String" possibleValues="10% glycerol;2mM DTT" defaultValue="" />
+  <parameterDefinition id="29" name="4c. GF column" parameterType="String" possibleValues="S75;S200" defaultValue="S200" />
+  <parameterDefinition id="30" name="4d. Yield (mg) after GF" parameterType="Float" defaultValue="" />
+  <parameterDefinition id="31" name="4e. Pooled fractions" parameterType="String" defaultValue="" />
+
+  <parameterDefinition id="32" name="5a. Final concentration" parameterType="String" defaultValue="" />
+  <parameterDefinition id="33" name="5b. Final buffer" parameterType="String" defaultValue="" />
+  <parameterDefinition id="34" name="5c. Concentration 2xPCT" parameterType="String" defaultValue="" />
+  <parameterDefinition id="35" name="5d. SOP used" parameterType="String" defaultValue="" />
+  <parameterDefinition id="36" name="5e. Purification Notes" parameterType="String" defaultValue="" />
+
+ </parameterDefinitions>
+
+<inputSamples>
+ 	<inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Culture" name="Pellet" />
+</inputSamples>
+
+</protocol>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    This log4net config is used as the fallback if the specified
+    config is not found. See the OPPFConfigXML.LoggerConfig property.
+    
+    NB:DO NOT DELETE OR RENAME THIS FILE WITHOUT MAKING A CORRESPONDING
+    CHANGE TO THE CODE FOR OPPFConfigXML.LoggerConfig!
+-->
+<log4net>
+  <!-- TraceAppender is set to be a TraceAppender -->
+  <appender name="TraceAppender" type="log4net.Appender.TraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level (%file:%line)  - %message%newline" />
+    </layout>
+  </appender>
+  <!-- Set root logger level to INFO and its only appender to TraceAppender -->
+  <root>
+    <level value="INFO" />
+    <appender-ref ref="TraceAppender" />
+  </root>
+</log4net>

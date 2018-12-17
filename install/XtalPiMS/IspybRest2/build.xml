@@ -1,0 +1,123 @@
+<!-- Exports the code as a jar
+
+-->
+<project default="jar" name="IspybRest" basedir="."
+	>
+
+    <!-- Properties -->
+    <property file="${basedir}/conf/Properties" />
+
+    <!-- log -->
+    <property name="log.dir" location="${basedir}/log" />
+
+    <!-- java -->
+    <property name="java.src" location="${basedir}/src" />
+    <property name="service.jar" location="${basedir}/WebContent/WEB-INF/lib/IspybService-test-client.jar" />
+	
+	
+    <property name="test.src" location="${basedir}/test" />
+    <property name="Rest.classes" location="${basedir}/build/classes" />
+    <property name="Test.classes" location="${basedir}/build/testClasses" />
+    <property name="ToPims.classes" location="${basedir}/../ispybToPiMS/bin" />
+    <property name="lib.path" location="${basedir}/lib" />
+    <property name="lib.web.path" location="${basedir}/WebContent/WEB-INF/lib" />
+ 
+ 	
+    <!-- jar -->
+    <property name="jar.filename" value="IspybToPims.jar" />
+    <property name="jar.file" value="${basedir}/${jar.filename}" />
+
+    <!-- ............................................................ -->
+    <!-- java classpaths.                                             -->
+    <!-- ............................................................ -->
+
+    <!-- add libraries -->
+    <path id="project.classpath">
+        <fileset dir="${lib.web.path}">
+            <include name="*.jar" />
+        </fileset>
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+    	<pathelement location="${Rest.classes}" />
+    </path>
+
+    <!-- add test classes 
+    <path id="test.classpath">
+        <path refid="project.classpath" />
+        <pathelement location="${Test.classes}" />
+    </path> -->
+
+
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+    <!-- Compile web application -->
+    <target name="compile" depends="clean">
+         <javac srcdir="${java.src}" destdir="${Rest.classes}" target="1.6" source="1.6" debug="on" encoding="UTF-8"
+            sourcepath=""
+        >
+            <classpath refid="project.classpath" />
+        </javac>
+ 
+
+        <!-- copy some config files TODO put these in WEB-INF/conf/ -->
+    	<copy file="${basedir}/conf/java.util.logging.config.properties" tofile="${Rest.classes}/java.util.logging.config.properties" />
+     </target>
+	
+	<target name="compileTest"  >
+	         <javac srcdir="${test.src}" destdir="${basedir}/build/testClasses" target="1.6" source="1.6" debug="on" encoding="UTF-8"
+	            sourcepath=""
+	        >
+	            <classpath refid="project.classpath" />
+	        </javac>
+	</target>
+
+
+    <target name="jar"  description="Make the jar file">
+        <echo>tar file: ${Rest.classes}, ${ToPims.classes}, and ${service.jar} to ${jar.file}</echo>
+        <jar destfile="${jar.file}"
+        	excludes="**/*Test.class,*.properties"
+        	>
+            <fileset dir="${Rest.classes}" 
+                excludes="**/*Test.class,*.properties"
+              includes="**/*.class"              
+            />
+            <fileset dir="${ToPims.classes}" 
+                excludes="**/*Test.class,*.properties"
+              includes="**/*.class"              
+            />
+        	<zipfileset src="${service.jar}" />
+        </jar>
+    </target>
+    
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+    <!-- Clean temp directories -->
+    <target name="clean">
+        <delete dir="${Rest.classes}" />
+        <mkdir dir="${Rest.classes}" />
+        <delete dir="${Test.classes}" />
+        <mkdir dir="${Test.classes}" />
+    </target>
+
+    <target name="cleanLog" description="Clean log dirrectory.">
+        <delete dir="${log.dir}" />
+        <mkdir dir="${log.dir}" />
+    </target>
+
+<!-- No longer needed, the web service is now on a server with a proper certificate
+	<target name="genkeystore" description="generate a keystore">
+		<delete file="${keystore}" />
+		<genkey alias="pims" storepass="secret" keystore="${keystore}">
+		  <dname>
+		    <param name="CN" value="PiMS"/>
+		    <param name="OU" value="PiMS Development Team"/>
+		    <param name="O"  value="PiMS"/>
+		    <param name="C"  value="UK"/>
+		  </dname>
+		</genkey>
+	</target> -->
+
+</project>

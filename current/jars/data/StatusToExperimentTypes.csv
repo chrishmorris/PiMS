@@ -1,0 +1,65 @@
+experimentTypeName,targetStatusName
+PCR,PCR
+Cloning,Cloned
+Digest,Cloned
+Recombination,Cloned
+LIC annealing,Cloned
+LIC polymerase reaction,Cloned
+Transformation,Cloned
+Ligation,Cloned
+DNA purification,Cloned
+Mini prep,Cloned
+Plasmid prep,Cloned
+Expression,Expressed
+Small scale expression,Small Scale Expression
+Production scale expression,Production Scale expression
+Purification,Purified
+DNA purification,Purified
+Mini prep,Purified
+Protein purification,Purified
+Chromatography,Purified
+Proteolysis,Purified
+Refold,Purified
+Dialysis,Purified
+Concentration,Purified
+Fractionation,Purified
+Lysis,Purified
+Protein production summary,Purified
+Crystallogenesis,In Crystallization
+Drop set-up,In Crystallization
+Native trials,In Crystallization
+Selmet trials,In Crystallization
+Trials,In Crystallization
+Drop scoring,In Crystallization
+Drop imaging,In Crystallization
+Native optimization,In Crystallization
+Selmet optimization,In Crystallization
+Crystallization plate inspection,In Crystallization
+Native crystal,Crystallized
+Selmet crystal,Crystallized
+Crystal,Crystallized
+Mount crystal,Diffraction Quality Crystals
+Crystallography,Diffraction
+Diffraction,Diffraction
+Native diffraction,Diffraction
+Selmet diffraction,Diffraction
+Data set,Diffraction
+Crystal Structure,Crystal Structure
+Preparative experiment,Other
+Buffer prep,Other
+Solution prep,Other
+Culture,Other
+Import sample,Other
+Fermentation,Other
+Characterisation,Other
+Gel,Other
+OD measurement,Other
+Light scattering,Other
+Mass spec,Other
+Dish culture,Other
+Plate check,Other
+Other,Other
+Annotation,Other
+Information,Other
+Membrane preparation,Other
+PDB,In PDB

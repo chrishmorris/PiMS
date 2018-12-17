@@ -1,0 +1,20 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="CS Ligation" objective="Ligation" creationDate="02-02-07" remarks="Based on Lab activities requirements from STRUBI" details="PCR performed using high-fidelity enzymes">
+ <experimentType>Ligation</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Total Volume (uL)" parameterType="Float" defaultValue="21" />
+  <parameterDefinition id="2" name="Notes" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -ligase" amount="0.000001" unit="L" displayUnit="uL" refSample="Enzyme -ligase" name="Quick Ligase" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" amount="0.00001" unit="L" displayUnit="uL" refSample="Buffer" name="Buffer-type" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Expression Vector" name="Plasmid" />
+
+</protocol>
+

@@ -1,0 +1,25 @@
+<project name="pims-web-ivy" default="resolve" xmlns:ivy="antlib:org.apache.ivy.ant">
+    
+	
+	
+	<ivy:settings file="ivysettings.xml"/>
+    <!-- ================================= 
+          target: resolve              
+         ================================= -->
+<target name="resolve" description="retrieve dependencies with ivy">
+    <ivy:retrieve sync="true"  type="jar" 
+        pattern="build/lib/[artifact]-[revision]-ivy.[type]"/> 
+	<!-- If that succeeded, update PiMS -->
+    <delete >
+        <fileset dir="WebContent/WEB-INF/lib" includes="*ivy*"/>
+    </delete>   
+	<copy todir="WebContent/WEB-INF/lib/" >
+		<fileset dir="build/lib" includes="*ivy*"/>
+	</copy>
+	<ivy:report graph="true" todir="WebContent/WEB-INF/lib/licenses" />
+</target>
+	
+
+    
+	
+</project>

@@ -1,0 +1,22 @@
+Hibernate Reference Documentation 3.2.2
+http://www.hibernate.org/hib_docs/v3/reference/en/html/index.html
+
+Hibernate Tools Reference Guide 3.2.0.beta9
+http://www.hibernate.org/hib_docs/tools/reference/en/html/index.html
+
+FreeMarker Manual 2.3.10 
+http://freemarker.org/docs/index.html
+  - Built-ins for strings
+  http://freemarker.org/docs/ref_builtins_string.html
+
+Javadoc For Package javax.persistence
+http://java.sun.com/javaee/5/docs/api/index.html?javax/persistence/package-tree.html
+
+
+org.hibernate.tool.hbm2x.Cfg2HbmTool c2h;
+org.hibernate.tool.hbm2x.Cfg2JavaTool c2j;
+
+Working on hbm2java to implement association management
+http://forum.hibernate.org/viewtopic.php?t=972452&highlight=side+property+template
+hbm2java: addX(T x)/removeX(T x) methods generation in one-to-many relation class
+http://opensource.atlassian.com/projects/hibernate/browse/HBX-5

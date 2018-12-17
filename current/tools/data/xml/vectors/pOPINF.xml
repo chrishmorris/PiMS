@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pOPINF Vector</name>
+    <details>Derived from pTriEx2/Ampicillin, N-Term cleavable
+        His Tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource
+        dataPageUrl="http://www.oppf.ox.ac.uk/OPPF/public/services/cloning.jsp"
+        supplier="OPPF" />
+    <sampleComponent name="pOPINF" componentCategory="Vector"
+        molType="DNA" constructStatus="empty" sequenceType="DNA"
+        details="GenbankID EF372398">
+        <function>In-Fusion[TM] Multisystem Expression
+            Vector</function>
+        <resistanceDetails name="Ampicillin" />
+        <markerDetails name="N-Term cleavable His Tag sequence"
+            details="MAHHHHHHSSGLEVLFQ|GP" featureType="Tag" status="not cleaved" />
+    </sampleComponent>
+</vector>

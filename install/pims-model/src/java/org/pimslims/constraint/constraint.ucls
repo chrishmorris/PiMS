@@ -1,0 +1,236 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false"/>    
+    <operations public="true" package="true" protected="true" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <interface language="java" name="org.pimslims.constraint.Constraint" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="834" y="395" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="org.pimslims.constraint.Constraint.And" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="378" y="393" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.constraint.Constraint.Length" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="664" y="134" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.constraint.Constraint.ValueMustBe" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="391" y="535" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.constraint.Constraint.EnumerationConstraint" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="457" y="229" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.constraint.ConstraintFactory" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="1148" y="37" width="124" height="58"/>  
+  </class>  
+  <class language="java" name="org.pimslims.constraint.ConstraintFactory.StringConstraint" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="false"/>    
+    </display>    
+    <position x="874" y="81" width="-1" height="-1"/>  
+  </class>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint.EnumerationConstraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </realization>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint.Length" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="CONTAINS_NO_BACKSLASH"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1068" y="360"/>  
+  </association>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint.EnumerationConstraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </nesting>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="NAME_TYPE_CHARACTERS"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1105" y="525"/>    
+    <bendpoint x="952" y="496"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.Constraint.And" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false">      
+      <attribute name="constraints"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </association>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint.And" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </realization>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint.And" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </nesting>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="SEQ_STRING_CHARACTERS"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1105" y="464"/>    
+    <bendpoint x="1091" y="512"/>    
+    <bendpoint x="1017" y="496"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="NOT_NULL"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1052" y="314"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="VALUE_BETWEEN_0_AND_1_INCL"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1014" y="284"/>  
+  </association>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.ConstraintFactory.StringConstraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false"/>  
+  </nesting>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint.ValueMustBe" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </nesting>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="NO_WHITE_SPACE"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1062" y="486"/>  
+  </association>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.constraint.ConstraintFactory.StringConstraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </realization>  
+  <realization>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint.ValueMustBe" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </realization>  
+  <nesting>    
+    <source project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.constraint.Constraint.Length" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>  
+  </nesting>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="CONSTRAINTS"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1002" y="236"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="CONTAINS_NO_LINEBREAK"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1063" y="413"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.constraint.ConstraintFactory" 
+      file="/pims-model/src/java/org/pimslims/constraint/ConstraintFactory.java" binary="false">      
+      <attribute name="INT_VALUE_GT_0"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.constraint.Constraint" 
+      file="/pims-model/src/java/org/pimslims/constraint/Constraint.java" binary="false"/>    
+    <bendpoint x="1059" y="452"/>  
+  </association>
+</class-diagram>

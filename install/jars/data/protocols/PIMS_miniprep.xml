@@ -1,0 +1,22 @@
+<!-- Generic miniprep protocol xml as flat file -->
+<protocol name="PiMS Miniprep" objective="Purify plasmid from small volume culture" creationDate="14-11-06" remarks="based on use of Qiagen Plasmid mini kit Cat. 12123" details="Use buffers and reagents from Qiagen kit." >
+ <experimentType>Mini prep</experimentType>
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.00000005" unit="L" displayUnit="uL" refSample="Purified plasmid" name="Purified plasmid"/>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="2" name="Kit name" parameterType="String" defaultValue="Qiagen Plasmid midi kit Cat.12123" />
+  <parameterDefinition id="3" name="Yield" parameterType="Float" />
+  <parameterDefinition id="3" name="Concentration ug/ml" parameterType="Float" />
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="0.0050" unit="L" displayUnit="mL" refSample="Luria broth (LB)" name="Culture media" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000005" unit="L" displayUnit="uL" refSample="Kanamycin 30mg/ml" name="Antibiotic" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="0.00001" unit="L" displayUnit="uL" refSample="Transformed cells" name="Cells"/>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solvent" refSample="Isopropanol" amount="0.00056" unit="L" displayUnit="mL" name="Precipitant" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Solvent" refSample="Ethanol 70% v/v in water" amount="0.001" unit="L" displayUnit="mL" name="Wash" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" refSample="TE buffer pH 8.0" amount="0.00005" unit="L" displayUnit="uL" name="Resuspension buffer" />
+ </inputSamples>
+ 
+</protocol>

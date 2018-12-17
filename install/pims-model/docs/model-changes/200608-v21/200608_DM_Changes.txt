@@ -1,0 +1,60 @@
+﻿Changes to package ccp.Experiment:
+- Added attribute name to Experiment
+- Removed role linking Experiment and ccp.Sample.Sample
+- Added attribute name to InputSample
+- Altered multiplicity of role linking InputSample and ccp.Sample.Sample from *-1 to *-[0..1]
+  + Allows InputSample to be created before actual Sample is known
+- Added *-[0..1] role linking InputSample and new class ccp.Protocol.RefInputSample
+- Added new class OutputSample
+  + Has class Experiment as parent
+  + [0..1]-[0..1] link with class ccp.Sample.Sample
+  + *-[0..1] link with new class ccp.Protocol.RefOutputSample
+  + Records how much of the referenced sample came out of the experiment
+  + Note that experiment.getOutputSamples() now returns a list of members of this class
+- Altered multiplicity of role linking Parameter and ccp.Protocol.ParameterDefinition from *-1 to *-[0..1]
+  + Allows Parameter to be created without ccp.Protocol.ProtocolDefinition
+- Added attributes unit, name and paramType to Parameter to allow use without ccp.Protocol.ParameterDefinition
+
+
+Changes to package ccp.Protocol:
+- Added attribute mandatory to ParameterDefinition
+- Removed role linking Protocol with ccp.Sample.SampleCategory
+- Added new class RefInputSample
+  + Has class Protocol as Parent
+  + *-[0..1] role linking RefInputSample with class Step
+  + [0..1]-* role linking RefInputSample with class ccp.Experiment.InputSample
+  + *-[0..1] role linking RefInputSample with class ccp.Sample.RefSample
+  + Use instead of the Material class
+- Added new class RefOutputSample
+  + Has class Protocol as Parent
+  + *-[0..1] role linking RefOutputSample with class Step
+  + [0..1]-* role linking RefOutputSample with class ccp.Experiment.OutputSample
+  + *-[0..1] role linking RefOutputSample with class ccp.Sample.RefSample
+
+
+Changes to package ccp.Sample:
+- Renamed conformsTo/conforming role linking Sample with RefSample back to default
+  + refSample = sample.conformsTo() => refSample = sample.getRefSample()
+  + samples = refSample.conforming() => samples = refSample.getSamples()
+- Renamed experimentInputs role linking Sample with InputSample back to default
+  + inputSamples = sample.experimentInputs() => inputSamples = sample.getInputSamples()
+- Updated code associated with getCreationDate() operation to reflect changed links 
+- Affected by changes to ccp.Experiment package
+  + Removed role linking Sample with ccp.Experiment.Experiment
+  + Added [0..1]-* role linking Sample with new class ccp.Experiment.InputSample
+  + Added [0..1]-[0..1] role linking Sample with new class ccp.Experiment.OutputSample
+- Affected by changes to ccp.Protocol package
+  + Removed role linking SampleCategory with ccp.Protocol.Protocol
+  + Added [0..1]-* role linking RefSample with class ccp.Protocol.RefInputSample
+  + Added [0..1]-* role linking RefSample with class ccp.Protocol.RefOutputSample
+
+
+Updated all model diagrams from Experiment, Protocol and Sample packages
+Added more Experiment diagrams
+
+Minor update to src/python/org/pimslims/makerelease.py to fix revision number
+in tag
+
+More documentation to follow
+
+Jon Diprose 02/08/2006

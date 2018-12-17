@@ -1,0 +1,80 @@
+This is the help file for search API within PIMS by using ReadableVersion, Searcher, Paging and Condition.
+
+1, Simple Search 
+
+-find Sample with certain name:
+        Map<String, Object> sampleCriterials = new HashMap<String, Object>();
+        sampleCriterials.put(Sample.PROP_NAME, sampleName);
+        Collection<Sample> samples=version.findAll(Sample.class, sampleCriterials);
+or
+        Collection<Sample> samples=version.findAll(Sample.class, Sample.PROP_NAME, sampleName);
+or
+        Sample sample=version.findFirst(Sample.class, Sample.PROP_NAME, sampleName);
+        
+-find active sample under certain sample category
+        Map<String, Object> sampleCriterials = new HashMap<String, Object>();
+        sampleCriterials.put(Sample.PROP_SAMPLECATEGORIES, samplecategory);
+        sampleCriterials.put(Sample.PROP_ISACTIVE, true);
+        Collection<Sample> samples=version.findAll(Sample.class, sampleCriterials);
+ 
+ 
+2, Paged Search
+ -find 10 samples started from 20 under certain sample category
+         Map<String, Object> sampleCriterials = new HashMap<String, Object>();
+        sampleCriterials.put(Sample.PROP_SAMPLECATEGORIES, samplecategory);
+        Collection<Sample> samples=version.findAll(Sample.class, sampleCriterials,new Paging(20,10));
+
+- find 10 samples started from 0 under certain sample category ordered by desc name
+ Map<String, Object> sampleCriterials = new HashMap<String, Object>();
+        sampleCriterials.put(Sample.PROP_SAMPLECATEGORIES, samplecategory);
+Collection<Sample> samples=version.findAll(Sample.class, sampleCriterials,new Paging(0,10,Sample.Sample.PROP_NAME,Paging.Order.DESC));
+
+
+3, Advanced Search with condition
+
+we can do search object by ">", "<" , ">=", "<=", "is null", "is not null", "AND", "OR"
+by using org.pimslims.search.Conditions
+
+- Search for experiments do have a creator:
+version.findAll(Experiment.class,Experiment.PROP_CREATOR,Conditions.isNotNull());
+
+- Search for experiments started later than now or is null, no experiment group and with certain experiementType:
+	   Map<String, Object> critials = new HashMap<String, Object>();
+        critials.put(Experiment.PROP_EXPERIMENTTYPE, et);
+        critials.put(Experiment.PROP_EXPERIMENTGROUP, Conditions.isNull());
+        critials.put(Experiment.PROP_STARTDATE, Conditions.or(Conditions.isNull(),Conditions.lessThan(new Timestamp(System
+            .currentTimeMillis()))));
+        Collection<Experiment> exps = wv.findAll(Experiment.class, critials);
+        
+        
+4, Advanced Search with sub criteria
+
+-Search for active sample which has not experimentgroup or experiment group is not certain one
+        Map<String, Object> expCriterials =
+            Conditions.newMap(Experiment.PROP_EXPERIMENTGROUP, Conditions.or(Conditions.isNull(), Conditions
+                .notEquals(experimentGroup)));
+        Map<String, Object> osCriterials = Conditions.newMap(OutputSample.PROP_EXPERIMENT, expCriterials);
+        Map<String, Object> sampleCriterials = new HashMap<String, Object>();
+        sampleCriterials.put(Sample.PROP_ISACTIVE, true);
+        sampleCriterials.put(Sample.PROP_OUTPUTSAMPLE, osCriterials);
+        Collection<Sample> results = wv.findAll(Sample.class, sampleCriterials);
+
+
+5, Searcher (org.pimslims.search.Searcher)
+Searcher can do keyword searching through all string attributes of a PiMS model class
+-search for sample which contains keyword 'abc'
+		Searcher searcher = new Searcher(wv);
+		MetaClass sampleMetaClass = model.getMetaClass(Sample.class.getName());
+        ArrayList<ModelObject> result = searcher.searchAll(sampleMetaClass, "abc");
+
+-search for active sample which contains keyword 'abc'and under certain sample category
+		Map<String, Object> sampleCriterials = new HashMap<String, Object>();
+        sampleCriterials.put(Sample.PROP_SAMPLECATEGORIES, samplecategory);
+        sampleCriterials.put(Sample.PROP_ISACTIVE, true);
+        Searcher searcher = new Searcher(wv);
+		MetaClass sampleMetaClass = model.getMetaClass(Sample.class.getName());
+        ArrayList<ModelObject> result = searcher.searchAll(sampleMetaClass, sampleCriterials, "abc");
+
+
+Please, see more example testcases using above searches in:
+/pims-model/src/test/org/pimslims/search

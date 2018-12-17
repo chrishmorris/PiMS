@@ -1,0 +1,24 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF TrialExpression" objective="Small Scale Expression of Target Protein" creationDate="02-02-07" remarks="Based on Lab activities requirements from OPPF" details="Small Scale Expression of Target Protein">
+ <experimentType>Small scale expression</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Induction Temperature" parameterType="Int" defaultValue="20" />
+  <parameterDefinition id="2" name="Induction time/hr" parameterType="Int" defaultValue="22" />
+  <parameterDefinition id="3" name="__MW" label="Soluble Expression level" parameterType="String" defaultValue="Unscored" possibleValues="Yes+++,Yes++,Yes+,Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="4" name="__IMW" label="InSoluble Expression level" parameterType="String" defaultValue="Unscored" possibleValues="Yes+++,Yes++,Yes+,Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="5" name="Expression Notes" parameterType="String" />
+ </parameterDefinitions>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="Purified plasmid" name="Purified plasmid" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="0.001" unit="L" displayUnit="mL" refSample="Luria broth (LB)" name="Culture media" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000001" unit="L" displayUnit="uL" refSample="Carbenicillin" name="Antibiotic A"/>
+	<inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000001" unit="L" displayUnit="uL" refSample="Chloramphenicol" name="Antibiotic B"/>
+	<inputSample sampleCatNamingSys="default" sampleCatName="Competent cells" amount="" unit="number" displayUnit="colonies" refSample="Competent cells" name="Strain"/>
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="Purified plasmid" name="Purified plasmid" />
+
+</protocol>
+

@@ -1,0 +1,121 @@
+
+table.list { width: 100%; font-size:90%; }
+table.list th { padding: .2em .4em .2em 1.9em; text-align: left; vertical-align: top; color: black; }
+table.list td { padding: .2em .4em .2em 1.3em; text-align: left; vertical-align: top; }
+table.list thead tr { border-bottom:1px solid #999; }
+table.list th.sorted { background-color: #999; }
+table.list th a, th a:visited, th a:active {  }
+table.list th a:hover {  text-decoration: underline; color: #b1d0df; }
+table.list th.sorted a, th.sortable a { 
+    background-position: left;
+    display: block;
+    width: 100%;
+    padding-left: 0px;
+}
+table.list th.sortable a {
+    background-image: url(../../../../images/arrow_off.png);
+    background-repeat: no-repeat;
+}
+table.list th.order1 a {
+    background-image: url(../../../../images/arrow_down.png);
+    background-repeat: no-repeat;
+    color: white;
+}
+table.list th.order1 a:hover {
+    text-decoration: underline; color: #b1d0df;
+}
+table.list th.order2 a {
+    background-image: url(../../../../images/arrow_up.png);
+    background-repeat: no-repeat;
+}
+
+table.list tr.highlighted,
+table.list tr td.highlighted { background-color:yellow; }
+
+table.list tr.odd { }
+table.list tr.tableRowEven, tr.even { }
+
+/* table class active_sample */
+
+table.active_sample { border-collapse: collapse; border:1px solid #999; font-size: 100%;}
+table.active_sample th   { text-align: left; padding-left: 1.9em; padding-bottom: .4em; padding-top: .4em; color: black; border-right:0px solid #999; }
+table.active_sample td   { text-align: left; padding-left: 1.9em; padding-bottom: .4em; padding-top: .4em; border-right:0px solid #999; }
+table.active_sample span.linkwithicon { padding: 0; }
+table.active_sample tr+tr td,
+table.active_sample tr+tr th   { border-top: 1px solid #999; }
+table.active_sample tr th   { border-top: 0px solid #999; }
+table.active_sample td+td,
+table.active_sample th+th,
+table.active_sample th+td      { border-left:1px solid #999; }
+table.active_sample tr.latestMilestone td { font-weight:bold; }
+table.active_sample tr.blastali td, table.active_sample tr.blastali th {border-top:2px solid #999; }
+
+div.exportlinks { border-top:1px solid #999; padding:0.25em 0.5em; }
+
+div.exportlinks a { text-decoration: none; color:#006; font-weight:bold }
+div.exportlinks a:hover { background-color:#999 }
+
+span.export {
+    padding: 0 4px 1px 20px;
+    color:#000;
+    display:inline; 
+    cursor: pointer;
+}
+span.excel {
+    background-image: url(../../../../images/ico_file_excel.png);
+    background-repeat: no-repeat;
+}
+span.csv {
+    background-image: url(../../../../images/ico_file_csv.png);
+    background-repeat: no-repeat;
+}
+span.xml {
+    background-image: url(../../../../images/ico_file_xml.png);
+    background-repeat: no-repeat;
+}
+span.pdf { /* obsolete */
+    background-image: url(../../../../images/ico_file_pdf.png);
+    background-repeat: no-repeat;
+    background-color: red 
+}
+span.fasta {
+	background-image: url(../../../../images/ico_file_fasta.png);
+	background-repeat: no-repeat;
+}
+
+span.pagelinks+table.list { border-top:1px solid #999; }
+span.pagelinks+form table.list { border-top:1px solid #999; }
+
+table.list tr.disabledrow { background-color:#ccc }
+table.list tr.disabledrow td { background-color:#ccc; color:#666; }
+table.list tr.disabledrow a,
+table.list tr.disabledrow label { background-color:#ccc; color:#666; }
+table.list tr.disabledrow img { opacity:0.5 }
+
+table.list th.columnDivider, table.list td.columnDivider { border-right: medium outset; 
+	color:#003; }
+table.list th.columnDivider2{ border-right: medium outset; color:#003; 
+	text-align: center; }
+table.list td.columnDivider3{ border-right: medium outset; color:#003; 
+	text-align: right; }
+table.list th.rowDivider, table.list td.rowDivider {border-bottom-width: medium solid;
+	height: 5px; }
+table.list td.solvedHere { 
+	background-color:#0f6; border: medium solid; 
+	border-color:#0f6; }
+table.list td.solvedElsewhere { 
+	background-color:#f03; border: medium solid;
+	border-color:#f03; }
+
+table.list td.hitUnchanged { 
+	background-color:#f93; }
+table.list td.hitUnchangedplus { 
+	border-right: medium outset; color:#003; background-color:#f93; }
+table.list td.highSim { 
+	background-color:yellow; }
+table.list td.highSimplus { 
+	border-right: medium outset; color:#003; background-color:yellow; }
+table.list td.crystOrLater { 
+	background-color:#f03; }
+	
+table.list tr.highlighted td.highlighted  { background-color:yellow; }

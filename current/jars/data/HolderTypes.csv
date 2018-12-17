@@ -1,0 +1,54 @@
+holderCategory,name,maxRow,maxColumn,maxSubPosition,maxVolume(uL),maxVolumeDisplayUnit,HTPmaxVolume,details,catNum,supplier,pack size,units,,role/category,experiment types
+96 well plate,"CrystalQuick plate, round wells",8,12,3,320,uL,1.9,96 well plate,609120,Greiner,,40,,Crystalliastion plate,Crystallogenesis
+96 well plate,"CrystalQuick plate, square wells",8,12,3,320,uL,1.9,96 well plate,609101,Greiner,,40,,Crystalliastion plate,Crystallogenesis
+96 well plate,"CrystalQuick plate, low profile plate",8,12,1,320,uL,1.9,96 well plate,609171,Greiner,,80,,Crystalliastion plate,Crystallogenesis
+96 well plate,96 well IMP@CT plate for Protein crystallisation,8,12,1,10,uL,,96 well plate,673170,Greiner,,60,,Crystalliastion plate,Crystallogenesis
+96 well plate,"CrystalQuick plate, square wells, Low Birefringence",8,12,3,320,uL,1.9,96 well plate,673801,Greiner,,,,Crystalliastion plate,Crystallogenesis
+24 well plate,Cellstar 24 well plate,4,6,1,1.5,mL,,24-well plate,662160,Greiner,,100,,Crystalliastion plate,Crystallogenesis
+24 well plate,Cryschem plate,4,6,1,1.5,mL,40,24-well plate,HR3-160,Hampton,,100,,Crystalliastion plate,Crystallogenesis
+96 well plate,96 well PCR plate half skirted,8,12,0,200,uL,,"96 Well PCR plate Polystyrene Structure , Flat bottomed , Clear , Sterile , With Lid. Half skirted, FOR ABI",652290,Greiner,,40,,PCR plate,PCR
+96 well plate,Thermo-Fast 96 skirted,8,12,0,200,uL,,"96 Well PCR plate, Low profile, natural",AB-1000,Abgene,,50,http://www.abgene.com/productDetails.asp?prodID=102,PCR plate,PCR
+96 well plate,"0.1ml 96-well, thin wall plates (lower profile, skirted)",8,12,0,100,uL,,"skirted low profile plate, for mixing small samples",B2796-4440,Starlab,,10,,Electrophoresis,"PCR, Gel"
+48 deep well plate,48 well 6.0ml storage plate,8,6,0,6,mL,,for small scale growth,AB-0988,Abgene,,50,http://www.abgene.com/productIndex.asp?catID=101,Culture,"Culture, Expression"
+24 well plate,Falcon Multiwell 24 well plate,4,6,0,3.5,mL,,"transparent, flat bottomed",734-0020,VWR International,,50,,Culture,Plate culture
+24 well plate,CombiClover plate,4,6,4,1.5,mL,50,24 well plate,CPL-102,Jena,,20,http://www.jenabioscience.com/index.php/c72c13bf4d1a40de0d5457db1810d774/1/catalog/302,Crystalliastion plate,Crystallogenesis
+96 well plate,CompactClover plate,8,12,4,250,uL,10,96 well plate,CPL-103,Jena,,20,http://www.jenabioscience.com/index.php/c72c13bf4d1a40de0d5457db1810d774/1/catalog/302,Crystalliastion plate,Crystallogenesis
+24 well plate,CombiClover Junior plate,4,6,4,0.5,mL,10,24 well plate,CPL-105,Jena,,16,http://www.jenabioscience.com/index.php/c72c13bf4d1a40de0d5457db1810d774/1/catalog/303,Crystalliastion plate,Crystallogenesis
+96 well plate,96 round bottom (Crystal Ex),8,12,1,210,uL,7,96 well plate,3785,Corning,,,,,
+96 well plate,96 well rd-bottom,8,12,0,360,uL,,96 well plate,3798,Costar,,,,,
+24 well plate,24-well comboplate ,4,6,0,3.3,mL,,24 well plate,662150,Greiner,,,,,
+96 well plate,Intelliplate,8,12,2,300,uL,4,96 well plate,HR3-297,Hampton,,,,,Crystallogenesis
+96 well plate,96 well hanging drop,8,12,1,,,,97 well plate,CT300L2/5,Neuroprobe,,,http://www.neuroprobe.com/products/crystallography.html,,Crystallogenesis
+24 well plate,24-well vdxm,4,6,0,0.5,mL,,24 well plate,HR3-306,Hampton,,,,,
+48 well plate,48 well vdx,6,8,0,0.3,mL,,48 well plate,HR3-275,Hampton,,,,,
+24 well plate,Linbro,4,6,0,1,mL,,24 well plate,HR3-110,Hampton,,,,,
+96 well plate,Crystal Clear Strips D/1,8,12,1,100,uL,4,96 well plate,HR3-128,Hampton (Douglas),,,,,
+96 well plate,Crystal Clear Strips P/1,8,12,1,100,uL,0.2,96 well plate,HR3-162,Hampton (Douglas),,,,,
+96 deep well plate,96 deep well,8,12,0,2,mL,,for solution making,7701-5200,Fischer,,,https://www1.fishersci.com/Coupon?gid=156493&cid=1340,,
+card,card,10,10,0,100,uL,,Clone saver card,,,,,,,
+Box,81-place storage box,9,9,0,,,,9x9 storage box for 1.2-2ml tubes,I2381-5040,Starlab,,5,,Storage box,"Plasmid stock, Cell stock"
+Box,100-place storage box,10,10,0,,,,10x10 storage box for 1.2-2ml tubes,I2310-5800,Starlab,,5,,Storage box,"Plasmid stock, Cell stock"
+Freezer,New Brunswick Innova Freezer,3,1,0,,,,New Brunswick Innova -80 Ultra-low temperature freezer,U535,New Brunswick,1,,,Freezer,
+Shelf,New Brunswick Innova Freezer Shelf,7,4,4,,,,Shelf in New Brunswick Innova -80 Ultra-low temperature freezer,,New Brunswick,1,,,Freezer shelf,
+96 well plate,Innovadyne SD-2,8,12,2,100,uL,,2-drop-chamber crystallography plate for performing sitting drop protein crystallography screens,11978-1,Innovadyne,,100,http://www.innovadyne.com/products_iplateSD2.html,Crystalliastion plate,Crystallogenesis
+96 well plate,Whatman Deep well 96,8,12,0,2,mL,,,734-2565,Whatman,,10,http://uk.vwr.com/app/catalog/Catalog?parent_class_id=9&parent_class_cd=60924,,
+96 well plate,Laminex,8,12,1,,,,Optimised for Lipidic Cubic Phase experiments for membrane protein crystallization,MD11-55-100,Molecular Dimensions,,100,http://www.moleculardimensions.com/shopexd.asp?id=2845,Crystalliastion plate,Crystallogenesis
+96 well plate,TTP Labtech Hanging Drop,8,12,2,,,,96-well clear polysterene plate for hanging drop (carton/100),4150-05700,TTPLabTech,,100,http://www.ttplabtech.com/products/mosquito/consumables.html,Crystalliastion plate,Crystallogenesis
+96 well plate,TTP Labtech iQ,8,12,2,,,,96-well sitting drop iQ plate (carton/100),4150-05810,TTPLabTech,,100,http://www.ttplabtech.com/products/mosquito/consumables.html,Crystalliastion plate,Crystallogenesis
+96 well plate,CORNING 3553,8,12,3,2,uL,,"96 Well Protein Crystallization Microplate with 3:1, 2�L Conical Flat Bottom Wells (PZero)",HR8-140,Hampton Research,,50,http://hamptonresearch.com/product_detail.aspx?cid=10&sid=182&pid=450,Crystalliastion plate,Crystallogenesis
+Tube,PCR tube,1,,,,,,Contains one liquid sample,,,,,,,
+Tube,Eppendorf Safe-Lock 2mL,1,,,2,mL,,Contains one liquid sample,0030 120.094,Eppendorf,,1000,http://www.eppendorf.com/int/index.php?action=products&catalognode=9775,,
+Tube,BD Falcon Tube 15mL,1,,,15,mL,,Contains one liquid sample,352097,BD Biosciences,,1000,http://www.bdbiosciences.com/ptProduct.jsp?prodId=364269&catyId=745409&page=product&wcm_category=745409,,
+Pin,Pin,1,,,,,,Holds a crystal,,,,,,,
+Puck,Unipuck,16,,,,,,Contains pins,,,,,,,
+Dewar,Dewar,5,,,,,,Contains pucks,,,,,,,
+Box,Cryobox 9x9,9,9,,,,,Contains tubes,,,,,,,
+Shelf,"Freezer Shelf, 7x4",7,4,,,,,,,,,,,,
+Freezer,"Freezer, Chest",,,,,,,,,,,,,,
+Freezer,"Freezer, Upright",,,,,,,Contains shelves,,,,,,,
+Freezer,Fridge,,,,,,,Contains shelves,,,,,,,
+Location,Room,,,,,,,Contains freezers and shelves,,,,,,,
+Box,Rack,4,6,,,,,,,,,,,,
+Location,Tower,,,,,,,,,,,,,,
+Location,Tray,,,,,,,,,,,,,,
+PCR Strip,"PCR Strip, 8 tube",1,8,1,0.2,ml,,,,,,,,,

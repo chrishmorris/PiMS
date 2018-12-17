@@ -1,0 +1,136 @@
+INSTALLATION OF PIMS AS A USER ON Solaris 5.9 sparc >>>FAILED<<<
+
+### JAVA 1.5
+chmod u+x jdk-1_5_0_10-linux-i586.bin
+./jdk-1_5_0_10-linux-i586.bin
+jdk1.7.9/bin/java -version
+setenv JAVA_HOME /data/ccpn/pims/jdk1.7.9/
+
+### POSTGRESQL 8.1
+gunzip postgresql-8.1.6.tar.gz
+tar -xvf downloads/postgresql-8.1.6.tar
+cd postgresql-8.1.6/
+./configure --prefix=/data/ccpn/pims/pgsql --without-readline
+gmake
+gmake install
+gmake check
+cd /data/ccpn/pims/pgsql
+mkdir data
+bin/initdb -D data
+bin/postmaster -D data
+setenv LD_LIBRARY_PATH /data/ccpn/pims/pgsql/lib:$LD_LIBRARY_PATH
+bin/createdb test
+
+to stop postgres:
+pgsql/bin/pg_ctl stop -D pgsql/data/
+to start postgres
+pgsql/bin/pg_ctl start -D pgsql/data/
+
+### GraphViz 2.12
+/people/ccpn/tar -zxvf downloads/graphviz-2.12.tar.gz
+./configure --prefix=/data/ccpn/pims/graphviz-2.12/ CC=/opt/sfw/gcc-3/bin/gcc
+gmake
+gmake install
+
+### TOMCAT 6.0
+gunzip downloads/apache-tomcat-6.0.32.tar.gz
+tar -xvf downloads/apache-tomcat-6.0.32.tar.gzx
+setenv CATALINA_HOME /data/ccpn/pims/apache-tomcat-6.0.32/
+setenv JAVA_OPTS "-server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled"
+$CATALINA_HOME/bin/startup.sh
+http://localhost:8080/
+
+port 8080 in used by zope -> change to 8082
+$CATALINA_HOME/conf/
+server-minimal.xml:    <Connector port="8080" />
+server.xml:    <Connector port="8080" maxHttpHeaderSize="8192"
+port 8005 ins used -> change to 8006
+
+### DEPLOYING PiMS IN TOMCAT
+
+emacs $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+
+### INSTALLATION OF THE PiMS DATABASE
+pgsql/bin/createuser  postgres
+pgsql/bin/createdb -U postgres --encoding UTF-8 pims
+pgsql/bin/createuser -U postgres -P pimsview
+pgsql/bin/createuser -U postgres -P pimsupdate
+pgsql/bin/createuser -U postgres -P pimsadmin
+pgsql/bin/psql -d pims -U postgres -f downloads/install-hb-withrefdata.sql
+
+### CONFIGURATION OF OTHER PIMS PARAMETERS
+emacs $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+
+### DEFINING USERS AND ACCESS RIGHTS
+emacs $CATALINA_HOME/conf/tomcat-users.xml
+
+$CATALINA_HOME/bin/shutdown.sh
+$CATALINA_HOME/bin/startup.sh
+
+http://localhost:8082/pims/
+
+>>>FAILED<<<
+impossible to load pims.
+
+--------------------------------------------------------------------------------
+### TOMCAT DETAILED CONFIG FILES
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+-- $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+--------------------------------------------------------------------------------
+<!--
+
+    Context configuration file for the working copy of PIMS
+
+-->
+
+  <Context docBase="/data/ccpn/pims/pims.war" path="/pims"
+         privileged="true" antiResourceLocking="false" antiJARLocking="false">
+
+  <!-- database connection -->
+  <Environment name="db.className"  value="org.postgresql.Driver" type="java.lang.String" />
+  <Environment name="db.url"        value="jdbc:postgresql://localhost/pims"  type="java.lang.String" />
+  <Environment name="db.username"   value="pimsupdate" type="java.lang.String" />
+  <Environment name="db.password"   value="p1ms!@bioc" type="java.lang.String"/>
+
+  <!-- the directory PiMS is to use for uploaded files. User "tomcat" must have write permission for this -->
+  <Environment name="uploadDirectory" value="/scratch/pims/apache-tomcat-6.0.32/pimsUploads" type="java.lang.String" />
+
+
+  <!-- use this filter for testing securely -->
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127.0.0.1"/>
+</Context>
+
+--------------------------------------------------------------------------------
+-- $CATALINA_HOME/conf/tomcat-users.xml
+--------------------------------------------------------------------------------
+<?xml version='1.0' encoding='utf-8'?>
+<tomcat-users>
+  <role rolename="pims-user"/>
+  <role rolename="pims-administrator"/>
+  <role rolename="pims-view"/>
+
+  <!-- change thse user names to ones you prefer --> 
+  <user username="pims" password="pims" roles="pims-user"/>
+  <user username="administrator" password="secret" roles="pims-administrator,pims-user"/>
+  <user username="guest" password="guest" roles="pims-view"/>
+
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <role rolename="manager"/>
+
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+  <user username="admin" password="secret" roles="manager"/>
+</tomcat-users>
+
+--------------------------------------------------------------------------------
+### ENVIROMENT VARIABLES TO SET
+--------------------------------------------------------------------------------
+setenv JAVA_HOME /data/ccpn/pims/jdk1.7.9/
+setenv PATH /data/ccpn/pims/graphviz-2.12/bin:$PATH
+setenv LD_LIBRARY_PATH /data/ccpn/pims/pgsql/lib:$LD_LIBRARY_PATH
+setenv CATALINA_HOME /data/ccpn/pims/apache-tomcat-6.0.32/
+setenv JAVA_OPTS "-server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled"

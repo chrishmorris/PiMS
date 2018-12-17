@@ -1,0 +1,39 @@
+<form id="ffConstructs" action=""><table class="list" border="0">
+	<tr>
+		<th>Name</th>
+		<td>
+			<input id="ct_name" />
+		</td>
+		<th>Description</th>
+		<td>
+			<input id="ct_description" />
+		</td>
+	</tr>
+	<tr>
+		<th>Owner</th>
+		<td>
+			<input id="ct_owner" />
+		</td>
+		<th>Group</th>
+		<td>
+<div class="yui-skin-sam" id="ct_groupAC" style="position: relative">
+	<input id="ct_group" type="text" style="width: auto; position: relative" />
+	<div id="ct_groupACPopup" style="width:20em"></div>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<th>Number of Rows</th>
+		<td>
+			<select id="ct_numRows" >
+				<option value='10' selected="selected">10</option>
+				<option value='20'>20</option>
+				<option value='30'>30</option>
+				<option value='50'>50</option>
+				<option value='100'>100</option>
+			</select>
+		</td>
+		<th></th>
+		<td><input id="ct_clear" type="button" value="Clear" /></td>
+	</tr>
+</table></form>

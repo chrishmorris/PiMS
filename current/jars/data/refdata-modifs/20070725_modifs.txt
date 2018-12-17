@@ -1,0 +1,46 @@
+StatusToExperimentType.csv
+  Removed: Plasmid prep -> Purified, still have Plasmid prep -> Cloned
+  Changed: Native optimization -> In Crystallization, was Crystallized
+  Changed: Selmet optimization -> In Crystallization, was Crystallized
+  Changed: Small scale trials  -> Small Scale expression, was Expressed
+  Changed: Large Scale Expression -> Large Scale expression to Production scale expression -> Production scale expression
+  Removed: "Cell Free Expression"
+  Removed: "IPTG Native scale-up"
+  Removed: "IPTG selmet scale-up"
+  Removed: "Auto selemet scale-up"
+ 
+StatusToScoreboard.csv
+  Added: Small Scale Expression
+  Changed: Large Scale Expression to Production Scale Expression 
+
+HolderCats.csv
+  Added: "card"
+
+ExperimentTypes.csv
+  Removed: duplicate "Deep-Frozen culture"
+  Removed: "Cell Free Expression"
+  Removed: "IPTG Native scale-up"
+  Removed: "IPTG selmet scale-up"
+  Removed: "Large scale expression"
+  Removed: "Small scale trials"
+  Removed: "Auto selemet scale-up"
+  Added: "Production scale expression"
+  Added: "Small scale expression" 
+  Modified: description for "Selmet trials" -changed from "Small scale expression trials" to "Crystallization trials with native protein" 
+  Modified: description for "Native trials: -changed from "Small scale expression trials in presence of Seleneomethionine" to "Crystallization trials in presence of Seleneomethionine"
+
+Protocols
+  Changed ExperimentType for:
+    /protocols/PIMS_TrialExpression.xml from Small scale trials to Small scale expression
+    /YSBL/protocols/YSBL_TrialExpression.xml from Small scale trials to Small scale expression
+    /YSBL/protocols/HiTel_TrialExpression.xml from Small scale trials to Small scale expression
+    /YSBL/protocols/YSBL_Large_Scale_Expression1.xml from Expression to Production scale expression
+    /SSPF/protocols/SSPF_Large_Scale_Expression1.xml from Expression to Production scale expression
+    protocols/SSPF_Large_Scale_Expression1.xml from Expression to Production scale expression
+  Added:
+    /SSPF/protocols/SSPF_AutoInduction_Trial_Expression.xml
+    /SSPF/protocols/SSPF_Inducible_Trial_Expression.xml
+    /SSPF/protocols/SSPF_Large_Scale_Auto_Expression.xml
+    /SSPF/protocols/SSPF_Large_Scale_Inducible_Expression.xml
+  Removed:
+    /SSPF/protocols/SSPF_Large_Scale_Expression1.xml

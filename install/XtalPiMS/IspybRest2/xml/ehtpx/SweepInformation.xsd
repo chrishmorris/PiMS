@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Exposure.xsd"/>
+	<xs:element name="sweepInformation" type="tns:SweepInformation">
+		<xs:annotation>
+			<xs:documentation>Strategy</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="SweepInformation">
+		<xs:annotation>
+			<xs:documentation>Strategy</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="priority" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Priority of this Exposure for the specified Crystal.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phiStart" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The rotation used for the first frame in a sweep. (degrees)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phiEnd" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The end of rotation. (degrees)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phiRange" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The range of rotation. (degrees)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="oscillationRange" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The range of oscillation for a single frame. (degrees)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exposure" type="tns:Exposure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of the Exposures for this Crystal.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="distance" type="xs:double">
+					<xs:annotation>
+						<xs:documentation>Crystal to Detector distance. (mm)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="resolution" type="xs:double">
+					<xs:annotation>
+						<xs:documentation>The resolution to set the inscribed circle of the Detector to. (A)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="wavelength" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The wavelength, in Angstrom.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

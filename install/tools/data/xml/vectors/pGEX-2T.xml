@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pGEX-2T Vector</name>
+    <details>N-terminal thrombin cleavable GST-Tag</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="27-4801-01"
+        dataPageUrl="http://www4.gelifesciences.com/aptrix/upp01077.nsf/Content/Products?OpenDocument&amp;moduleid=38859"
+        supplier="GE Healthcare UK Limited" />
+    <sampleComponent name="pGEX-2T" componentCategory="Vector"
+        details="4948bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryote Expression Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="1356"
+            endSeq="2216" />
+        <promoterDetails name="Tac Promoter" startSeq="184"
+            endSeq="212" />
+        <markerDetails name="N-term GST-Tag coding sequence"
+            startSeq="258" endSeq="917" featureType="Tag" />
+        <markerDetails name="Multiple Cloning sites BamHI-EcoRI"
+            details="BamHI-SmaI-EcoRI"
+            startSeq="930" endSeq="945" featureType="MCS" />
+        <markerDetails name="Thrombin cleavage site"
+            details="LVPA|GS" featureType="cleavage site" status="not cleaved" />
+        <markerDetails name="pBR322 origin" startSeq="2371"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression: JM105; Expression: BL21, XL1-Blue"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

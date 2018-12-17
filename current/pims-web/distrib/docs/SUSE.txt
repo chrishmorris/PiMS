@@ -1,0 +1,187 @@
+SOME HINTS FOR INSTALLING ON SUSE
+
+TOMCAT
+    Service Commands: rctomcat6 start/stop/restart
+    Configuration Location: /etc/tomcat6, especially /etc/tomcat6/tomcat6.conf
+    Logs Location: /var/log/tomcat6
+    Webapps Location: /srv/tomcat6/webapps/
+    Workspace Cache Location: /var/cache/tomcat6 
+
+If postgres does not start, you may need to do
+   sudo -u postgres initdb -D /usr/local/pgsql/data
+   
+
+POSTGRESQL
+You will need to edit
+   /var/lib/pgsql/data/pg_hba.conf
+   
+If you want to allow access from another machine, you will also have to edit 
+    /etc/sysconfig/SuSEfirewall2
+and then
+     sudo /etc/init.d/SuSEfirewall2_setup start
+   
+Linux:
+If you get error like following, you need to:
+Choice1: by running in server mode, (run it with the -server flag.)
+Choice2: apply a patch at:http://opensource.atlassian.com/projects/hibernate/secure/attachment/12693/patch.CGLIBLazyInitializer.java 
+
+(there is an issue about this error at http://opensource.atlassian.com/projects/hibernate/browse/HHH-1293 )
+
+java.lang.NoSuchMethodError: org.pimslims.pojo.refSampleComponent.MolComponent.getHibernateLazyInitializer()Lorg/hibernate/proxy/LazyInitializer;
+at org.pimslims.pojo.refSampleComponent.MolComponent$$EnhancerByCGLIB$$d3841fd8.getHibernateLazyInitializer(<generated>)
+at org.hibernate.type.EntityType.resolveIdentifier(EntityType.java:274)
+at org.hibernate.type.EntityType.resolve(EntityType.java:303)
+at org.hibernate.engine.TwoPhaseLoad.initializeEntity(TwoPhaseLoad.java:113)
+at org.hibernate.loader.Loader.initializeEntitiesAndCollections(Loader.java:842)
+at org.hibernate.loader.Loader.doQuery(Loader.java:717)
+at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:224)
+at org.hibernate.loader.Loader.doList(Loader.java:2145)
+at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2029)
+at org.hibernate.loader.Loader.list(Loader.java:2024)
+at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:375)
+at org.hibernate.hql.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:308)
+at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:153)
+at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1129)
+at org.hibernate.impl.QueryImpl.list(QueryImpl.java:79)
+at org.pimslims.hibernate.ReadableVersionImpl.findAll(ReadableVersionImpl.java:277)
+at org.pimslims.hibernate.ReadableVersionImpl.findAll(ReadableVersionImpl.java:227)
+at org.pimslims.hibernate.ReadableVersionImpl.getAll(ReadableVersionImpl.java:243)
+...
+at java.lang.Thread.run(Thread.java:595)
+
+
+INSTALLATION OF PIMS AS A USER ON SUSE Linux (2.6.16.21-0.8-smp)
+
+### JAVA 1.5
+chmod u+x jdk-1_5_0_10-linux-i586.bin
+downloads/jdk-1_5_0_10-linux-i586.bin
+jdk1.7.9/bin/java -version
+setenv JAVA_HOME /home/ap372/pims/jdk1.7.9/
+
+### POSTGRESQL 8.1
+tar -zxvf downloads/postgresql-8.1.6.tar.gz
+cd postgresql-8.1.6/
+./configure --prefix=/home/ap372/pims/pgsql   
+gmake
+gmake install
+gmake check
+mkdir data
+bin/initdb -D data
+pgsql/bin/pg_ctl start -D pgsql/data/
+pgsql/bin/createdb test
+
+to stop postgres:
+pgsql/bin/pg_ctl stop -D pgsql/data/
+
+### GraphViz 
+ wget http://download.opensuse.org/distribution/10.2/repo/oss/suse/x86_64/graphviz-2.6-44.x86_64.rpm
+ rpm --nodeps -i graphviz-2.6-44.x86_64.rpm
+ dot -V ## to check it is installed 
+ 
+ or:
+ 
+tar -zxvf downloads/graphviz-2.12.tar.gz
+./configure --prefix=/home/ap372/pims/graphviz-2.12/
+make
+make install
+setenv PATH /home/ap372/pims/graphviz-2.12/bin:$PATH
+
+### TOMCAT 6.0
+See http://linux-sxs.org/internet_serving/c140.html#DOWNLOAD
+setenv JAVA_OPTS "-server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled"
+$CATALINA_HOME/bin/startup.sh
+
+### DEPLOYING PiMS IN TOMCAT
+
+### INSTALLATION OF THE PiMS DATABASE
+
+pgsql/bin/createuser  postgres
+pgsql/bin/createdb -U postgres --encoding UTF-8 pims
+pgsql/bin/createuser -U postgres -P pimsview
+pgsql/bin/createuser -U postgres -P pimsupdate
+pgsql/bin/createuser -U postgres -P pimsadmin
+pgsql/bin/psql -d pims -U postgres -f install-hb-withrefdata.sql
+
+### CONFIGURATION OF OTHER PIMS PARAMETERS
+mkdir $CATALINA_HOME/pimsUploads
+emacs $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+$CATALINA_HOME/bin/shutdown.sh
+$CATALINA_HOME/bin/startup.sh
+
+### DEFINING USERS AND ACCESS RIGHTS
+emacs $CATALINA_HOME/conf/tomcat-users.xml
+$CATALINA_HOME/bin/shutdown.sh
+$CATALINA_HOME/bin/startup.sh
+
+http://localhost:8080/pims/
+
+
+--------------------------------------------------------------------------------
+### ENVIROMENT VARIABLES TO SET
+--------------------------------------------------------------------------------
+setenv JAVA_HOME /home/ap372/pims/jdk1.7.9/
+setenv JRE_HOME /home/ap372/pims/jdk1.7.9/jre/
+setenv CATALINA_HOME /home/ap372/pims/apache-tomcat-6.0.32/
+setenv JAVA_OPTS "-server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled"
+setenv PATH /home/ap372/pims/graphviz-2.12/bin:$PATH
+
+
+--------------------------------------------------------------------------------
+### TOMCAT DETAILED CONFIG FILES
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+-- $CATALINA_HOME/conf/Catalina/localhost/pims.xml
+--------------------------------------------------------------------------------
+<!--
+
+    Context configuration file for the working copy of PIMS
+    
+    Configure: (1) docBase path
+               (2) database password for pimsupdate user
+  	           (3) path to uploadDirectory
+
+-->
+
+<Context docBase="/home/ap372/pims/pims.war" path="/pims"
+         privileged="true" antiResourceLocking="false" antiJARLocking="false">
+
+  <!-- database connection -->
+  <Environment name="db.className"  value="org.postgresql.Driver"             type="java.lang.String" />
+  <Environment name="db.url"        value="jdbc:postgresql://localhost/pims"  type="java.lang.String" />
+  <Environment name="db.username"   value="pimsupdate"                        type="java.lang.String" />
+  <Environment name="db.password"   value=""                                  type="java.lang.String"/>
+
+  <!-- the directory PiMS is to use for uploaded files. User "tomcat" must have write permission for this -->
+  <Environment name="uploadDirectory" value="/home/ap372/pims/apache-tomcat-6.0.32/pimsUploads" type="java.lang.String" />
+
+
+  <!-- use this filter for testing securely -->
+  <!--Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127.0.0.1"/-->
+</Context>
+
+
+--------------------------------------------------------------------------------
+-- $CATALINA_HOME/conf/tomcat-users.xml
+--------------------------------------------------------------------------------
+<?xml version='1.0' encoding='utf-8'?>
+<tomcat-users>
+  <role rolename="pims-user"/>
+  <role rolename="pims-administrator"/>
+  <role rolename="pims-view"/>
+
+  <!-- change thse user names to ones you prefer --> 
+  <user username="pims" password="pims" roles="pims-user"/>
+  <user username="administrator" password="secret" roles="pims-administrator,pims-user"/>
+  <user username="guest" password="guest" roles="pims-view"/>
+
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <role rolename="manager"/>
+
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+  <user username="admin" password="secret" roles="manager"/>
+</tomcat-users>
+

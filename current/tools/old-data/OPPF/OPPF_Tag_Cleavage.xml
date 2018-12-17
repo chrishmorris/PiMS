@@ -1,0 +1,21 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF Tag Cleavage" objective="Removal of Tag peptides" creationDate="23-05-08" remarks="Based on Lab activities requirements from OPPF" details="Removal of Tag peptides">
+ <experimentType>Cleavage</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Incubation temperature" parameterType="Int" />
+  <parameterDefinition id="2" name="Incubation time" parameterType="Int" />
+  <parameterDefinition id="3" name="Yield" parameterType="Int" />
+  <parameterDefinition id="4" name="% Cleavage" parameterType="Int" />
+  <parameterDefinition id="5" name="Cleavage Notes" parameterType="String" />
+ </parameterDefinitions>
+
+<inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" unit="L" displayUnit="" refSample="Buffer" name="Cleavage Buffer" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -protease" unit="L" displayUnit="" refSample="Buffer" name="Protease" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" unit="L" displayUnit="mL" refSample="Purified Protein" name="Purified Protein"/>
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" unit="L" displayUnit="uL" refSample="Cleaved Protein" name="Cleaved Protein"/>
+<outputSample sampleCatNamingSys="default" sampleCatName="Target -containing sample" unit="L" displayUnit="uL" refSample="Uncleaved Protein" name="Uncleaved Protein"/>
+</protocol>

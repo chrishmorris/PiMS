@@ -1,0 +1,2 @@
+<div style="position:absolute;z-index:109;display:none;font-size:70%;background-color:white;" id="sh_dateStartContainer" ></div>
+<div style="position:absolute;z-index:110;display:none;font-size:70%;background-color:white;" id="sh_dateEndContainer"></div>

@@ -1,0 +1,28 @@
+##############################################################
+# Formulatrix settings - database connection and image sizes #
+##############################################################
+
+fx.formulatrixPathPrefix=//ROCKMAKERMACHINE/RockMakerStorage
+fx.RMurl = jdbc:jtds:sqlserver://ROCKMAKERMACHINE/RockMaker
+fx.RIurl = jdbc:jtds:sqlserver://ROCKMAKERMACHINE/RockImager
+fx.className = net.sourceforge.jtds.jdbc.Driver
+fx.username = xtalpims
+fx.password = xtalpims
+fx.imageSizeX=1280
+fx.imageSizeY=960
+fx.imageXlengthPerPixel=2.630432417f
+fx.imageYlengthPerPixel=2.630432417f
+
+
+#########################################################
+# PiMS settings - database connection and image storage #
+#########################################################
+
+db.className = org.postgresql.Driver
+db.url = jdbc:postgresql://localhost/pims
+db.name = pims
+db.username = postgres
+db.password = postgres
+fx.pimsUsername = formulatrix
+fx.pimsPathPrefix=C:/FormulatrixImages
+fx.pimsUrlPrefix=http://localhost

@@ -1,0 +1,19 @@
+<!-- PiMS Cell stock protocol as flat file -->
+<protocol name="PiMS Cell Stock" objective="Record the details of a frozen Cell stock for inclusion in a stock list" creationDate="02-12-09" remarks="Default set of protocols for PiMS" 
+details="Strain: detail of the cell strain e.g. DH5alpha">
+ <experimentType>Cell stock</experimentType>
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Strain" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Antibiotic Res. (strain)" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="" unit="L" displayUnit="uL" refSample="Plasmid" name="Plasmid" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Competent cells" amount="" unit="L" displayUnit="uL" refSample="Cell" name="Cell" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Cell" name="Cell stock" />
+
+</protocol>

@@ -1,0 +1,23 @@
+<!-- The order for the sequencing facility xml as flat file 
+
+must_be_one_of(Float,Int,String,Boolean,DateTime,Interval)
+
+-->
+<!-- For an alternative way to look at Leeds sequence setup see ...Sequence_Prep1.xml  -->
+<protocol name="Leeds sequencing setup" objective="Prepare sample for sequencing on the robot" creationDate="02-10-08" remarks="Used by specific UI for sequencing"  >
+ <experimentType>Sequencing</experimentType>
+ 
+ <!-- There has to be an outputsample to position experiments in appropriate wells-->
+ <outputSample sampleCatName="Nucleic acid" amount="0.00000002" unit="L" displayUnit="uL" refSample="Template" name="DNA" sampleCatNamingSys="default" />
+ 
+ <inputSamples>
+	 	<!-- This is coming from Sequencing Order experiment --> 
+ 		<!-- This is an input from sequencing order experiment for which this was an output sample. Template=Sample here -->
+      <inputSample sampleCatName="Nucleic acid" amount="0.00000002" unit="L" displayUnit="uL" refSample="Template" name="Template" sampleCatNamingSys="default" />
+    <!-- The rest are recorded here -->
+      <inputSample sampleCatName="Primer" amount="0.00000002" unit="L" displayUnit="uL" refSample="Primer" name="Primer" sampleCatNamingSys="default" />
+      <inputSample sampleCatName="Solvent" amount="0.00000002" unit="L" displayUnit="uL" refSample="Additive" name="Water" sampleCatNamingSys="default" />
+      <inputSample sampleCatName="Kit" amount="0.00000002" unit="L" displayUnit="uL" refSample="Additive" name="Premix" sampleCatNamingSys="default" />
+	</inputSamples>
+	
+</protocol>

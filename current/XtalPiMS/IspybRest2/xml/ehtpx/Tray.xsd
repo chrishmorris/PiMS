@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="Well.xsd"/>
+    <xs:element name="tray" type="tns:Tray"/>
+    
+    <xs:complexType name="Tray">
+        <xs:sequence>
+            <xs:element name="trayId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="createDate" type="xs:date" minOccurs="0"/>
+            <xs:element name="trayType" type="xs:string" minOccurs="0"/>
+            <xs:element name="rows" type="xs:int" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="cols" type="xs:int" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="subPositions" type="xs:int" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="temperature" type="xs:float" minOccurs="0"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="well" type="tns:Well"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

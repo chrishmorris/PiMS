@@ -1,0 +1,404 @@
+<!-- Imports data model jar, runs test cases, and exports jars if successful
+
+The "install" tasks install a new database.
+To use these, the database user name you supply in the Properties file
+must be trusted. This means having an entry in the pg_hba.conf like:
+
+local   all         pimsadmin                         trust
+
+-->
+<project default="test" name="pims-web" basedir="."
+	>
+
+    <!-- Properties -->
+    <property file="${basedir}/conf/Properties" />
+
+    <!-- log -->
+    <property name="log.dir" location="${basedir}/log" />
+    <!-- work directory -->
+    <property name="build" location="${basedir}/build" />
+
+    <!-- jars directory -->
+    <property name="jars" value="../jars" />
+
+    <!-- ref data -->
+    <property name="data.src" location="${basedir}/data" />
+
+    <!-- web -->
+    <property name="lib.web.path" location="${basedir}/WebContent/WEB-INF/lib/" />
+    <property name="propertiesfile" value="${basedir}/WebContent/WEB-INF/conf/Properties" />
+    <property name="jsp.src" location="${basedir}/WebContent/WEB-INF/src" />
+    <property name="classes" location="${basedir}/WebContent/WEB-INF/classes" />
+	
+	<property name="keystore" value="${basedir}/conf/.keystore" />
+
+    <!-- java -->
+    <property name="test.src" location="${basedir}/TestSource" />
+    <property name="testClasses" location="${basedir}/testClasses" />
+    <property name="resources" location="${basedir}/resources" />
+    <property name="lib.path" location="${basedir}/lib" />
+    <property name="checkstyle" location="${basedir}/conf/checkstyle-duplicate-code.xml" />
+    <taskdef resource="checkstyletask.properties" classpath="${lib.path}/checkstyle-all-4.3.jar"/>
+
+    <!-- directory which emma report will be written to -->
+    <property name="instr.dir" value="${basedir}/emmainstr" />
+
+    <!-- config files TODO put these in WEB-INF/conf/ --><property name="InvitrogenPrimerPlateOrderProperties" value="org/pimslims/command/leeds/primerOrder/InvitrogenPrimerPlateOrder.properties" />
+	<property name="ErrorMessagesProperties" value="/org/pimslims/presentation/servlet/utils/Properties" />
+    
+	<property name="applicationResources" value="ApplicationResources.properties" />
+    
+	<!-- obsolete
+	<property name="EntryCloneProperties" value="org/pimslims/presentation/leeds/EntryClone_en.properties" />
+    <property name="DeepFrozenCultureProperties" value="org/pimslims/presentation/leeds/DeepFrozenCulture_en.properties" />
+    <property name="ForwardPrimerProperties" value="org/pimslims/presentation/leeds/ForwardPrimer_en.properties" />
+    <property name="PrimerFormProperties" value="org/pimslims/presentation/leeds/PrimerForm_en.properties" />
+    <property name="ReversePrimerProperties" value="org/pimslims/presentation/leeds/ReversePrimer_en.properties" />
+
+    <property name="InvitrogenPrimerPlateOrderProperties" value="org/pimslims/command/leeds/primerOrder/InvitrogenPrimerPlateOrder.properties" />
+    <property name="LeedsPrimerPlateOrderProperties" value="org/pimslims/command/leeds/primerOrder/LeedsPrimerPlateOrder.properties" />
+	<property name="matrices" value="org/pimslims/bioinf/util/matrices" />
+    <property name="LeedsPrimerPlateOrderProperties" value="org/pimslims/command/leeds/primerOrder/LeedsPrimerPlateOrder.properties" /> -->
+
+	
+	<!-- <property name="primerOrderTemplate" value="PrimerOrderTemplate.xlt" /> -->
+
+    <!-- sql -->
+    <property name="sql.path" value="${jars}" />
+    <property name="sql.file.name" value="pims-database.sql" />
+    <property name="sql.file" value="${sql.path}/${sql.file.name}" />
+    <property name="sql.data.file.name" value="pims-db-withrefdata.sql" />
+    <property name="sql.data.file" value="${sql.path}/${sql.data.file.name}" />
+    <property name="sql.data.example.file.name" value="install-example.sql" />
+    <property name="sql.data.example.file" value="${sql.path}/${sql.data.example.file.name}" />
+	
+    <!-- pwebjar.file -->
+    <property name="pwebjar.filename" value="pims-web.jar" />
+    <property name="pwebjar.file" value="${build}/${pwebjar.filename}" />
+
+    <!-- ............................................................ -->
+    <!-- java classpaths.                                             -->
+    <!-- ............................................................ -->
+
+    <!-- First, the classes from JavaSource that Emma will instrument -->
+    <path id="instrument.classpath">
+        <pathelement location="${classes}" />
+    </path>
+
+    <!-- add libraries -->
+    <path id="project.classpath">
+        <path refid="instrument.classpath" />
+        <fileset dir="${lib.path}">
+            <include name="*.jar" />
+        </fileset>
+        <fileset dir="${lib.web.path}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <!-- add test classes -->
+    <path id="test.classpath">
+        <path refid="project.classpath" />
+        <pathelement location="${testClasses}" />
+    </path>
+
+    <!-- emma -->
+    <path id="emma.lib">
+        <pathelement location="${basedir}/lib/emma.jar" />
+        <pathelement location="${basedir}/lib/emma_ant.jar" />
+    </path>
+    <taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+
+
+    <!-- ============================================================ -->
+    <!-- Java tasks.                                                  -->
+    <!-- ============================================================ -->
+    <!-- Compile web application -->
+    <target name="compile" depends="clean">
+        
+        <!-- now all the middle layers, but no servlets -->
+        <javac srcdir="${basedir}/src/presentation" destdir="${classes}" target="1.5" source="1.5" debug="on" encoding="UTF-8"
+            sourcepath="" nowarn="true"
+        >
+            <classpath refid="project.classpath" />
+        </javac>
+        <!-- Compile the servlets -->
+        <javac srcdir="${basedir}/src/servlet" destdir="${classes}" target="1.5" source="1.5" debug="on" encoding="UTF-8"
+        >
+            <classpath refid="project.classpath" />
+        </javac>
+
+        <!-- copy some config files TODO put these in WEB-INF/conf/ -->
+        <copy file="${basedir}/src/presentation/${applicationResources}" tofile="${classes}/${applicationResources}" />
+        <copy file="${basedir}/src/presentation/${ErrorMessagesProperties}" tofile="${classes}/${ErrorMessagesProperties}" />
+    	<!--
+        <copy file="${basedir}/src/presentation/${EntryCloneProperties}" tofile="${classes}/${EntryCloneProperties}" />
+        <copy file="${basedir}/src/presentation/${DeepFrozenCultureProperties}" tofile="${classes}/${DeepFrozenCultureProperties}" />
+        <copy file="${basedir}/src/presentation/${PrimerFormProperties}" tofile="${classes}/${PrimerFormProperties}" />
+        <copy file="${basedir}/src/presentation/${LeedsPrimerPlateOrderProperties}" tofile="${classes}/${LeedsPrimerPlateOrderProperties}" /> 
+        <copy file="${basedir}/src/presentation/${ForwardPrimerProperties}" tofile="${classes}/${ForwardPrimerProperties}" />
+        <copy file="${basedir}/src/presentation/${ReversePrimerProperties}" tofile="${classes}/${ReversePrimerProperties}" />
+      
+    	<copy file="${basedir}/src/presentation/${InvitrogenPrimerPlateOrderProperties}" tofile="${classes}/${InvitrogenPrimerPlateOrderProperties}" />
+-->
+    	<copy file="${basedir}/conf/displaytag.properties" tofile="${classes}/displaytag.properties" />
+    	<!-- <copy file="${basedir}/conf/PrimerOrderTemplate.xlt" tofile="${classes}/${primerOrderTemplate}" /> -->
+
+    </target>
+	<!-- TODO
+    <target name="checkstyle" >
+	    <checkstyle config="${checkstyle}"
+	    	maxErrors="15" maxWarnings="1000"
+	    	>
+	    	<fileset dir="${java.src}" includes="**/*.java" excludes="uk/ac/ebi/**" />
+            <classpath refid="project.classpath" />
+	    	<formatter toFile="${instr.dir}/duplicates.txt" />
+	    </checkstyle>
+    </target> -->
+
+    <!-- Build the JSPs -->
+    <target name="jspc" description="Build the JSPs">
+    	<dirname property="pwd" file="." />
+    	<echo>Present working directory: ${pwd}</echo>
+        <delete dir="${classes}/org/apache" />
+        <delete dir="${jsp.src}" />
+    	<taskdef classname="org.apache.jasper.JspC" name="jasper2" >
+            <classpath refid="project.classpath" />
+        </taskdef>
+    	<jasper2 
+    	             validateXml="false" 
+    	             uriroot="${basedir}/WebContent/" 
+    	             webXmlFragment="${basedir}/WebContent/WEB-INF/pims-jsps.xml" 
+    	             outputDir="${jsp.src}"
+    	/> 
+    	
+        <javac srcdir="${jsp.src}" destdir="${classes}" target="1.5" source="1.5" 
+        	debug="no" encoding="UTF-8" memoryMaximumSize="1024m" 
+        	excludes="**/*.smap"
+        	>
+            <classpath refid="project.classpath" /> 
+        	   
+            <include name="**" />
+            <exclude name="tags/**" />
+        	
+        </javac>
+    	<!-- see http://tomcat.apache.org/tomcat-6.0-doc/jasper-howto.html -->
+    </target>
+	
+
+    <!-- Export the war file -->
+    <!-- TODO could jar up the servlets to keep this neater -->
+    <!-- must compile first, in case emma has modified the class files -->
+	<!-- TODO depends="compile,jspc" -->
+    <target name="war" depends="compile" description="make the war file">
+        <jar index="true" destfile="${jars}/pims.war" basedir="${basedir}/WebContent" manifest="conf/pims-war.mf"
+            excludes="mockups/**,WEB-INF/conf/Properties,**/Test*.class,**/AbstractTest*.class"
+        />
+        <!-- TODO exclude help/**,WEB-INF/JSP/** -->
+        <!-- <jar index="true" destfile="${jars}/pims-api.jar" basedir="${classes}"
+            manifest="conf/pims-api.mf"
+            excludes="**/Test*.class,**/AbstractTest*.class"
+        /> -->
+    </target>
+
+	<!-- It would be nice to make this include the compiled jsps, 
+         but there are two problems.
+         Firstly, pages with custom tags don't work, for reasons I cant understand (Chris)
+         Secondly, the results are specific to Tomcat, and may not work in other containers.
+	-->
+    <target name="jar" depends="compile" description="Make the jar file for pims-web">
+    	<copy overwrite="true" verbose="false"  todir="${build}/resources/" >
+    	  <fileset dir="${basedir}/WebContent/" >
+            <include name="skins/**" /> 
+            <include name="javascript/**" /> 
+            <include name="images/**" /> 
+    	  </fileset>
+    	</copy>
+        <echo>tar file: ${pwebjar.file}</echo>
+        <jar index="true" indexMetaInf="true" destfile="${pwebjar.file}">
+            <fileset dir="${classes}" />
+        	<metainf dir="${build}" includes="resources/**" />
+        </jar>
+        <!-- now in ../build.xml
+      <copy overwrite="true" verbose="true" file="${pwebjar.file}" tofile="../tools/lib/${pwebjar.filename}" />
+    	-->
+        
+    </target>
+    
+    
+    <!-- ============================================================ -->
+    <!-- Test case tasks.                                             -->
+    <!-- ============================================================ -->
+    <target name="compileTest" depends="compile">
+        <javac srcdir="${test.src}" destdir="${testClasses}" target="1.5" source="1.5" deprecation="false" debug="on" encoding="UTF-8">
+            <classpath refid="test.classpath" />
+        </javac>
+    </target>
+
+    <target name="test" ><!-- depends="compileTest" -->
+        <emma enabled="true">
+            <instr instrpathref="instrument.classpath" mode="overwrite" metadatafile="${instr.dir}/metadata.emma" merge="true">
+                <!--
+
+                    Could have <filter value="${emma.filter}" />
+                -->
+            </instr>
+        </emma>
+        <junit haltonfailure="true" haltonerror="true" fork="true" dir="${basedir}" forkmode="once">
+            <!-- <jvmarg value="-server" /> -->
+            <jvmarg value="-enableassertions" />
+            <jvmarg value="-Xms512m" />
+            <jvmarg value="-Xmx512m" />
+            <jvmarg value="-Demma.coverage.out.file=${instr.dir}/coverage.emma" />
+            <jvmarg value="-Demma.coverage.out.merge=false" />
+            <classpath refid="test.classpath" />
+            <formatter type="brief" usefile="false" />
+            <test name="org.pimslims.AllWebTests" />
+            <sysproperty key="TestingDataPath" value="${data.src}"/>
+        </junit>
+        <!-- TODO <emma enabled="true">
+            <report sourcepath="${java.src}" sort="-block,-name,-method,-class" metrics="method:10,block:50,line:50,class:10">
+                <infileset dir="${instr.dir}" includes="*.em, *.ec, *.emma" />
+                <txt outfile="${instr.dir}/coverage.txt" depth="all" columns="line,name,class,method,block" metrics="method:0,block:0,line:0,class:0" />
+                <html outfile="${instr.dir}/coverage.html" depth="method" columns="name,class,method,block,line" />
+            </report>
+        </emma> -->
+    </target>
+
+    <!-- ============================================================ -->
+    <!-- Database tasks                                               -->
+    <!-- ============================================================ -->
+    <target name="createdb" description="Creates the database.">
+        <exec failOnError="true" executable="createdb"><arg line="--encoding UTF8 -U ${db.username} '${db.name}' " /></exec>
+    </target>
+
+    <target name="dropdb" description="Drops the database.">
+        <echo>dropdb -U ${db.username} '${db.name}'</echo>
+        <exec failOnError="false" executable="dropdb"><arg line="-U ${db.username} '${db.name}'" /></exec>
+    </target>
+
+    <target name="install-emptydb" description="Create new empty db by loading schema.">
+        <antcall target="dropdb"/>
+        <antcall target="createdb"/>
+        <antcall target="cleanLog"/>
+        <echo>Installing database with ${sql.file}, see ${log.dir}/install-emptydb.out</echo>
+        <exec output="${log.dir}/install-emptydb.out" failOnError="true" executable="psql"><arg line="-q -U ${db.username} -d ${db.name} -f ${sql.file}"/></exec>
+        <echo> >>> ${sql.file} loaded into DB ${db.name}</echo>
+    </target>
+
+    <target name="install-refdatadb" description="Install db with ref data." depends="">
+        <antcall target="dropdb" />
+        <antcall target="createdb" />
+        <mkdir dir="${log.dir}" />
+        <echo>Installing database with ${sql.data.file}, see ${log.dir}/install-refdatadb.out</echo>
+        <exec output="${log.dir}/install-refdatadb.out" failOnError="true" executable="psql">
+            <arg line="-q -U ${db.username} -d ${db.name} -f ${sql.data.file}" />
+        </exec>
+    </target>
+
+    <target name="installdbexample" description="Install example db." depends="">
+        <antcall target="dropdb" />
+        <antcall target="createdb" />
+        <mkdir dir="${log.dir}" />
+        <echo>Installing database with ${sql.data.example.file}, see ${log.dir}/install-db-example.out</echo>
+        <exec output="${log.dir}/install-db-example.out" failOnError="true" executable="psql">
+            <arg line="-q -U ${db.username} -d ${db.name} -f ${sql.data.example.file}" />
+        </exec>
+    </target>
+
+    <target name="dump-db" description="Dump db into install-hb-withrefdata.sql." depends="">
+        <exec failOnError="true" executable="pg_dump"><arg line="-U ${db.username} --no-owner -f ${sql.data.file} ${db.name}"/></exec>
+        <echo> >>> Database ${db.name} exported into ${sql.data.file}</echo>
+        <antcall target="install-refdatadb" />
+    </target>
+
+    <target name="dumpdbexample" description="Dump db into install-example.sql." depends="">
+        <exec failOnError="true" executable="pg_dump">
+            <arg line="-U ${db.username} --no-owner -f ${sql.data.example.file} ${db.name}" />
+        </exec>
+        <antcall target="installdbexample" />
+    </target>
+    
+    <!-- ============================================================ -->
+    <!-- Clean tasks                                                  -->
+    <!-- ============================================================ -->
+    <!-- Clean temp directories -->
+    <target name="clean">
+        <delete dir="${classes}" />
+        <mkdir dir="${classes}" />
+        <delete dir="${testClasses}" />
+        <mkdir dir="${testClasses}" />
+        <delete dir="${jsp.src}" />
+        <mkdir dir="${jsp.src}" />
+        <delete dir="${instr.dir}" />
+        <mkdir dir="${instr.dir}" /> 
+        <delete dir="${build}" />
+        <mkdir dir="${build}" /> 
+    </target>
+
+    <target name="cleanLog" description="Clean log dirrectory.">
+        <delete dir="${log.dir}" />
+        <mkdir dir="${log.dir}" />
+    </target>
+
+    <!-- ============================================================ -->
+    <!-- PIMS other tasks                                             -->
+    <!-- ============================================================ -->
+    <!-- optional: import current jars from other projects -->
+    <target name="import">
+        <copy file="${jars}/pims-model.jar" tofile="${lib.web.path}/pims-model.jar" />
+    </target>
+
+    <!-- optional: PIMS-25 construct a pims-web.jar for use by -->
+    <!--                   pims-dependent but non-webapp code -->
+    <target name="pimswebjar">
+        <jar index="true" destfile="${jars}/pims-web.jar" basedir="${classes}" excludes="" />
+    </target>
+
+	<target name="genkeystore" description="generate a keystore">
+		<delete file="${keystore}" />
+		<genkey alias="pims" storepass="secret" keystore="${keystore}">
+		  <dname>
+		    <param name="CN" value="PiMS"/>
+		    <param name="OU" value="PiMS Development Team"/>
+		    <param name="O"  value="PiMS"/>
+		    <param name="C"  value="UK"/>
+		  </dname>
+		</genkey>
+	</target>
+
+	
+	
+	<target name="pims-lib.jar" description="generate a single jar file containing all the third party libraries that will be part of the deliverable">
+	    <!-- first make a temporary jar with all the files in it -->    
+		<jar index="true" jarfile="${build}/pims-lib.jar"  >                    
+              <zipgroupfileset dir="${lib.web.path}" >
+                <include name="*.jar" />
+              </zipgroupfileset> 
+	    </jar>
+		<!-- then exclude the signature files, you can't merge two signed jars -->
+		<jar jarfile="${jars}/pims-lib.jar"   
+            index="true" 
+			filesetmanifest="skip"
+		>
+		    <zipfileset src="${build}/pims-lib.jar">
+		        <exclude name="META-INF/*.SF"/>         
+		    </zipfileset>
+		</jar>
+
+
+<!-- could 
+	        <signjar destdir="${jars}/signed"
+	            alias="pims"
+	            keystore="${keystore}"
+	            storepass="secret">
+	          <path>
+	            <fileset dir="${jars}" includes="pims-lib.jar" />
+	          </path>
+	          <flattenmapper />
+	        </signjar> -->
+
+	    </target>
+
+    <!-- TODO commit, deploy, install conf/Properties  -->
+</project>

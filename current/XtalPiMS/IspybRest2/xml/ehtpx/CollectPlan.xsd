@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="SweepInformation.xsd"/>
+	<xs:element name="collectPlan" type="tns:CollectPlan">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="CollectPlan">
+		<xs:sequence>
+			<xs:element name="experimentType">
+				<xs:annotation>
+					<xs:documentation>The type of the experiment: anomalous (MAD,SAD) or fixed wavelength.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="MAD"/>
+						<xs:enumeration value="SAD"/>
+						<xs:enumeration value="MR"/>
+						<xs:enumeration value="Ligand binding"/>
+						<xs:enumeration value="Refinement"/>
+						<xs:enumeration value="OSC"/>
+						<xs:enumeration value="SAD - Inverse Beam"/>
+						<xs:enumeration value="MAD - Inverse Beam"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="anneal" type="xs:boolean" />
+			<xs:element name="anomalousScattererElement" type="xs:string" minOccurs="0"/>
+			<xs:element name="temperature">
+				<xs:annotation>
+					<xs:documentation>Room temperature or 100K.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Room temperature"/>
+						<xs:enumeration value="100K"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="processingLevel">
+				<xs:annotation>
+					<xs:documentation>Collect only or collect and process.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Collect only"/>
+						<xs:enumeration value="Collect and process"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="collectTwinnedData" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="oscillationAnglePerImage" type="xs:double" minOccurs="0"/>
+			<xs:element name="notesComments" type="xs:string" minOccurs="0"/>
+			<xs:sequence maxOccurs="unbounded" minOccurs="0" >
+				<xs:element ref="tns:sweepInformation" />
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,17 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF Sequencing" objective="Sequence target DNA" creationDate="02-02-07" remarks="Based on Lab activities requirements from OPPF" details="Sequence target DNA">
+ <experimentType>Characterisation</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="Sequencing Product" name="Sequencing product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="__SEQUENCE" label="Sequencing Result" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+  <parameterDefinition id="2" name="Sequencing Notes" parameterType="String" />
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="Purified plasmid" name="Purified plasmid" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Sequencing Primer" name="Sequencing Primer" />
+ </inputSamples>
+
+</protocol>

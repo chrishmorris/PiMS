@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="OPPFImagingConfig" targetNamespace="http://www.oppf.ox.ac.uk/xsd/RI/Config.xsd"
+	elementFormDefault="qualified" xmlns="http://www.oppf.ox.ac.uk/xsd/RI/Config.xsd" xmlns:mstns="http://www.oppf.ox.ac.uk/xsd/RI/Config.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+
+  <xs:element name="Config" type="Config" />
+	<xs:complexType name="Config">
+		<xs:all>
+			<xs:element name="LoggerConfig" type="xs:string" />
+      <xs:element name="ArchiveDir" type="xs:string" />
+      <xs:element name="WebDir" type="xs:string" />
+      <xs:element name="XmlDir" type="xs:string" />
+      <xs:element name="DoneDir" type="xs:string" />
+      <xs:element name="WsPlateEndpoint" type="xs:string" />
+      <xs:element name="Username" type="xs:string" />
+      <xs:element name="Password" type="xs:string" />
+      <xs:element name="ImageBaseUrl" type="xs:string" />
+    </xs:all>
+	</xs:complexType>
+</xs:schema>

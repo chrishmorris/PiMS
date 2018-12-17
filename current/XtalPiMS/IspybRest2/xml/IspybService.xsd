@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+        xmlns:pims="http://www.pims-lims.org/services/ispyb" 
+        attributeFormDefault="qualified" 
+        elementFormDefault="qualified" 
+        targetNamespace="http://www.pims-lims.org/services/ispyb"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+ >
+   
+            <xs:include schemaLocation="ehtpx/CrystalShipping.xsd"></xs:include>
+            <xs:include schemaLocation="ehtpx/BeamlineExportedInformation.xsd"></xs:include>
+    <!-- TYPES  --> 
+       
+         <!-- Exceptions -->
+            <xs:complexType name="Exception">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:anyType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="IllegalStateException">
+                <xs:complexContent>
+                    <xs:extension base="pims:Exception" />
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="BadDataException">
+                <xs:complexContent>
+                    <xs:extension base="pims:Exception" />
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="NotFoundException">
+                <xs:complexContent>
+                    <xs:extension base="pims:Exception" />
+                </xs:complexContent>
+            </xs:complexType>
+            
+            
+            <xs:simpleType name="ShipmentId">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            
+          <!-- responses -->  
+            <xs:simpleType name="Confirmation">
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="OK"/>
+                <xs:enumeration value="Pending"/>
+                <xs:enumeration value="Failed"/>
+              </xs:restriction>
+            </xs:simpleType>            
+            
+            
+             
+            
+            
+            
+        <!-- ELEMENTS -->
+          
+          <!-- exceptions-->  
+            <xs:element name="IllegalStateException" type="pims:IllegalStateException"/>
+            <xs:element name="BadDataException" type="pims:BadDataException" />
+            <xs:element name="NotFoundException" type="pims:NotFoundException" />
+            
+          <!-- Message and response for each operation -->
+             
+            <xs:element name="crystalShippingResponse" type="xs:string">
+                <!-- TODO change this to in only. All errors are indicated by exceptions -->
+            </xs:element>
+            
+            <!-- LATER <xs:element name="getShipments">
+                <xs:complexType>
+                    <xs:sequence>
+                        LATER definition of query terms here
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getShipmentsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="pims:Shipment"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element> -->
+            
+            <xs:element name="getDeliveryStatus" type="pims:ShipmentId"/>
+            <xs:element name="getDeliveryStatusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="status" type="pims:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>            
+            
+            
+            <xs:element name="getResults" type="pims:ShipmentId"/>
+            
+            <!--  was <xs:element name="getResultsResponse" type="xs:string" />  -->
+            
+            <xs:element name="getReturnShipment" type="pims:ShipmentId"/>
+            <xs:element name="getReturnShipmentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="status" type="pims:Confirmation"/>
+                        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            
+            <!-- LATER <xs:element name="deleteShipment" type="pims:ShipmentId"/>  -->
+            
+
+</xs:schema>

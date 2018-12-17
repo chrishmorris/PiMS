@@ -1,0 +1,57 @@
+DATA MODEL CHANGES 24
+
+x PIMS-301: add one-to-many link between Protocol and Annotation to associate files to a Protocol
+x change attr ParameterDefinition.paramType to mandatory
+x change role TargetStatus.code to unchangeable
+x change attribute MolComponent.molType to mandatory
+x PIMS-390: change mandatory link between Sample/SampleCategory to non-mandatory
+x rename Target.TargetStatus to Target.Milestone
+x add new class WorkflowItem with links *---0..1 to Status, *---1..1 to ExperimentType and 2 *---* links to SampleCategory
+x delete many-to-many link between SampleCategory and ExperimentType
+x PIMS-79: TargetStatus/Experiment link
+    x delete BlueprintStatus 
+    x rename TargetStatus to Milestone
+    x add a one-to-many link between ExpBlueprint and Milestone
+    x add a many-to-one link between Milestone and Experiment
+x PIMS-250: add constraint *either* a title *or* (a year and at least one author) in Citation
+xx change AbstractHolderType.name type from Word to Line
+*** For Paris ***
+x add attr rotorType in CentrifugationStep
+x add attr columnType in FlowStep
+x add new subclass of Step called CrunchingStep
+    x add attr revolutionPerMinute
+    x add attr ballDiameterSize
+    x add attr ballVolume
+x add attr isFlashFrozen in WaitStep
+*** End for Paris ***
+
+
+### Need further discussions - after 1.0
+- change role Target.protein to unchangeable: no otherwise setProtein() does not exist if link unchangeable.
+
+- PIMS-258: replace all Target name attributes: commonName, systematicName, localName by name?
+     - remove serial
+     - remove commonName, systematicName and localName
+     - remove proteinName
+     - replace commonName by name and make it a unique key: Uniprot entry name, e.g. CAIC_ECOLI
+     - add attr aliases: list of other names
+
+commonName 1..1 The common name of the target is the name used to identify the target e.g. 'Endonuclease IV'.
+systematicName 0..1 The systematic name of the target is the 'proper' scientific name e.g. 'Endodeoxyribonuclease IV'.
+localName 0..1 Local name is what the target is known as in the lab e.g. 'A6'.
+
+geneName 0..1 The official name of the gene for this target. e.g. 'fcy1'.
+
+proteinName 0..1 The official name of the protein for this target. By default: 'theoretical protein'. e.g. 'Cytosine deaminase'.
+protein.name 1..1 The name of the MolComponent used to describe the Target protein
+
+replaced by
+
+name 1..1 The name of the target used to uniquely identify the target. It is its uniprot entry name, e.g. CAIC_ECOLI.
+aliases 0..* The list of the other target names: localName, proteinName,...
+
+geneName 0..1 The official name of the gene for this target. e.g. 'fcy1'.
+
+
+
+    

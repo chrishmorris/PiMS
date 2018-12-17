@@ -1,0 +1,41 @@
+<form id="ffSchedules" action="" ><table class="list" border="0">
+	<tr>
+		<th>Barcode</th>
+		<td>
+			<input id="sh_barcode" />
+		</td>
+		<th>Inspection Date</th>
+		<td>
+			<input readonly="readonly" size="10" id="sh_dateStart"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="sh_dateStart_show" />
+			<input readonly="readonly" size="10" id="sh_dateEnd"/><img src="${pageContext.request['contextPath']}/xtal/images/16x16/date.png" alt="Date" id="sh_dateEnd_show" />
+		</td>
+	</tr>
+	<tr>
+		<th>Imager</th>
+		<td>
+			<select id="sh_imager">
+				<option value="all" selected="selected">All</option>
+			</select>
+		</td>
+		<th>Temperature</th>
+		<td>
+			<select id="sh_temperature">
+				<option value="all" selected="selected">All</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th>Number of Rows</th>
+		<td>
+			<select id="sh_numRows" >
+				<option value='10' selected="selected">10</option>
+				<option value='20'>20</option>
+				<option value='30'>30</option>
+				<option value='50'>50</option>
+				<option value='100'>100</option>
+			</select>
+		</td>
+		<th></th>
+		<td><input id="sh_clear" type="button" value="Clear" /></td>
+	</tr>
+</table></form>

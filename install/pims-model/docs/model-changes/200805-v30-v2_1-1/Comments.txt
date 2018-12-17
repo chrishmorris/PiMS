@@ -1,0 +1,19 @@
+Comments (2)
+
+Anne PAJON - May 6, 2008 5:55 PM - Remove
+
+1. Complexity of data checks) I think that splitting the functionality into holder-is-contained-by-holder, refholder-is-contained-by-refholder and holder-conforms-to-refholder would simplify the implementation of the data checks. It would also make it easier to find the appropriate modelobject, as the contains and conforms relationships are very different concepts.
+
+2. HolderType v HolderCategory) I don't know. My gut feeling is that they represent different concepts, that both concepts are useful and that we should keep the current arrangement. For me, the question is actually whether holdertype should be refactored into refholder. However, I don't know how we would then deal with the existing subclasses of abstractholder.
+
+3. HolderTypePosition) From reading the attributes it looks like its purpose is to allow independent assignment of the maxvolume of each {row, col, sub}position for a specific holdertype. Crystallization trial plates are perhaps the best example of why this might be important - the trial subpositions have significantly smaller maxvolume than the reservoir subposition. Is this important? Maybe. Particularly for robot integration it might be used to prevent a robot from doing something stupid. However, I can't see us using it.
+
+*** posted by Jon Diprose on 15/02/2008
+
+
+Anne PAJON - May 6, 2008 5:56 PM - Remove
+
+I think we might need to use HolderTypePosition for describing the EM grid holders.
+See Petr's email 'Grids in use at the University Sheffield (MPSI)' from 20th Feb.
+
+*** posted by Susy Griffiths on 21/02/2008

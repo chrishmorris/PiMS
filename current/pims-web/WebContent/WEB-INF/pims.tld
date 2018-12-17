@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+  <description>Custom JSP tags for the Protein Information Management System</description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>pims</short-name>
+  <uri>http://www.pims-lims.org</uri>
+  
+  <!-- Import tag, widely used -->
+  <tag>
+    <name>import</name>
+    <tag-class>org.pimslims.servlet.tag.Import</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+        <name>className</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+  
+  
+  <tag>
+    <name>list</name><!-- now only used in Leeds pages -->
+    <tag-class>org.pimslims.servlet.tag.List</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>version</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>org.pimslims.dao.ReadableVersion</type>
+    </attribute>
+    <attribute>
+      <name>metaClassName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>attributes</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>delimiter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>controls</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>emptyValue</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.Boolean</type>
+    </attribute>
+     <attribute>
+      <name>selected</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+     <attribute>
+      <name>objectList</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.util.Collection</type>
+    </attribute>
+  </tag>
+  
+   <!-- used in Leeds pages -->
+  <tag>
+    <name>isHookValid</name>
+    <tag-class>org.pimslims.servlet.tag.ValidateHook</tag-class>
+    <body-content>JSP</body-content>
+    <attribute>
+      <name>version</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>org.pimslims.dao.ReadableVersion</type>
+    </attribute>
+     <attribute>
+      <name>hook</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+   </tag>
+   
+   <!-- used in sequencing -->
+   <tag>
+    <name>form</name>
+    <tag-class>org.pimslims.servlet.tag.Form</tag-class>
+    <body-content>JSP</body-content>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+     <attribute>
+      <name>action</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>method</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>style</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+     <attribute>
+      <name>clas</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+   </tag>
+
+   <!-- used in sequencing -->
+   <tag>
+    <name>validate</name>
+    <tag-class>org.pimslims.servlet.tag.Validate</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+     <attribute>
+      <name>alias</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>methods</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+   </tag>
+   
+   <!-- used in Leeds pages -->
+   <tag>
+    <name>getter</name>
+    <tag-class>org.pimslims.servlet.tag.ValueGetter</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>version</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>org.pimslims.dao.ReadableVersion</type>
+    </attribute>
+    <attribute>
+      <name>hook</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>attributes</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>delimiter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+	</tag>
+   <!-- used in Leeds pages -->
+  <tag>
+    <name>input</name>
+    <tag-class>org.pimslims.servlet.tag.Input</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>org.pimslims.metamodel.MetaAttribute</type>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.Object</type>
+    </attribute>
+    <attribute>
+      <name>name</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+  
+   <!-- obsolete
+  <tag>
+    <name>inputAmount</name>
+    <tag-class>org.pimslims.servlet.tag.InputAmount</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>prop</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>name</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag> -->
+  
+   <!-- obsolete -->
+  <tag>
+    <name>viewbutton</name>
+    <tag-class>org.pimslims.servlet.tag.ViewButton</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>modelObject</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>org.pimslims.metamodel.ModelObject</type>
+    </attribute>
+  </tag>
+  
+  
+   <!-- widely used  -->
+	<tag>
+    <name>sequence</name>
+    <tag-class>org.pimslims.servlet.tag.Sequence</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>sequence</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>format</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>escapeStyle</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+  
+    
+ <function>
+    <description>Capitalise the first letter of the given String</description>
+    <name>capitalise</name>
+    <function-class>org.pimslims.presentation.ModelObjectView</function-class>
+    <function-signature>java.lang.String capitaliseFirstLetter(java.lang.String)</function-signature>
+  </function>
+
+<function>
+    <description>Static factory for making objects of type NoteManager</description>
+    <name>toNote</name>
+    <function-class>org.pimslims.utils.sequenator.NoteManager</function-class>
+    <function-signature>org.pimslims.utils.sequenator.NoteManager getNew(org.pimslims.model.experiment.Experiment)</function-signature>
+  </function>
+
+    <function>
+    <description>Method to determine whether user has confirmed a plate completion</description>
+    <name>isPlateCompletionConfirmed</name>
+    <function-class>org.pimslims.utils.sequenator.SOrdersManager</function-class>
+    <function-signature>java.lang.Boolean isPlateCompletionConfirmed(org.pimslims.model.experiment.ExperimentGroup)</function-signature>
+  </function>
+
+ <function>
+    <description>Return the list of the names of the standard primers</description>
+    <name>getPrimerList</name>
+    <function-class>org.pimslims.utils.sequenator.StandardPrimerUtil</function-class>
+    <function-signature>java.util.TreeSet getPrimerList(org.pimslims.dao.ReadableVersion)</function-signature>
+  </function>
+  
+  <function>
+    <description>Return the list of the names of the standard primers</description>
+    <name>arrayValues</name>
+    <function-class>org.pimslims.utils.sequenator.StandardPrimerUtil</function-class>
+    <function-signature>java.lang.String getPrimerListforJSArray(org.pimslims.dao.ReadableVersion)</function-signature>
+  </function>
+
+ <function>
+    <description>Return reaction (true) or instrument (false) controls for sequencing orders</description>
+    <name>getRefControls</name>
+    <function-class>org.pimslims.utils.sequenator.SOrdersManager</function-class>
+    <function-signature>org.pimslims.utils.sequenator.SequencingOrder getRefControls(org.pimslims.dao.ReadableVersion, boolean)</function-signature>
+  </function>
+    
+ <function>
+        <description>Return File attached to the ModelObject. Before use ensure that only one File is attached</description>
+    <name>getFile</name>
+    <function-class>org.pimslims.presentation.ServletUtil</function-class>
+    <function-signature>org.pimslims.metamodel.File getFile(org.pimslims.metamodel.ModelObject)</function-signature>
+ </function>
+
+ <function>
+        <description>Return File attached to the ModelObject. Before use ensure that only one File is attached</description>
+    <name>getFileByName</name>
+    <function-class>org.pimslims.presentation.ServletUtil</function-class>
+    <function-signature>org.pimslims.metamodel.File getFile(org.pimslims.metamodel.ModelObject, java.lang.String)</function-signature>
+ </function>
+ 
+ <function>
+        <description>Return File attached to the ModelObject. Before use ensure that only one File is attached</description>
+    <name>getFileByTitle</name>
+    <function-class>org.pimslims.presentation.ServletUtil</function-class>
+    <function-signature>org.pimslims.metamodel.File getFileByTitle(org.pimslims.metamodel.ModelObject, java.lang.String)</function-signature>
+ </function>
+ 
+   <!-- used in Leeds pages -->
+ <function>
+        <description>Get standard PIMS representation of Date is no date supplied as parameter returns current date</description>
+    <name>getDate</name>
+    <function-class>org.pimslims.presentation.AttributeToHTML</function-class>
+    <function-signature>java.lang.String getDate(java.util.Calendar)</function-signature>
+ </function>
+ 
+ <function>
+        <description>Parse standard String PIMS representation of Date to Calendar Object</description>
+    <name>getCalendar</name>
+    <function-class>org.pimslims.lab.Utils</function-class>
+    <function-signature>java.util.Calendar getCalendar(java.lang.String)</function-signature>
+ </function> 
+
+ <function>
+    <description>Get Class name for plate well based on sequencing order Experiment properties</description>
+    <name>getStyle</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.String getStyle(org.pimslims.model.experiment.Experiment, java.util.HashMap)</function-signature>
+ </function> 
+ 
+<function>
+    <description>Get standard PIMS representation of Date one month from today</description>
+    <name>getMonthAgoDate</name>
+    <function-class>org.pimslims.presentation.AttributeToHTML</function-class>
+    <function-signature>java.lang.String getMonthAgoDate()</function-signature>
+ </function>
+ 
+<function>
+    <description>Calculate the percentage of the required sequence length read</description>
+    <name>percentRead</name>
+    <function-class>org.pimslims.utils.sequenator.SequencingOrder</function-class>
+    <function-signature>java.lang.String percentRead(org.pimslims.model.experiment.Experiment)</function-signature>
+ </function>
+
+<function>
+        <description>Calculate the percentage of the required sequence length read</description>
+    <name>getNewOrdersTotalSampleNumber</name>
+    <function-class>org.pimslims.utils.sequenator.SOrdersManager</function-class>
+    <function-signature>int getNewOrdersTotalSampleNumber(java.lang.String)</function-signature>
+ </function>
+
+<function>
+        <description>Change sequnce order numbers to hyperlinks</description>
+    <name>addHyperlinkToOrder</name>
+    <function-class>org.pimslims.utils.sequenator.NoteManager</function-class>
+    <function-signature>java.lang.String addHyperlinkToOrder(java.lang.String, java.lang.String)</function-signature>
+ </function>
+
+<function>
+        <description>Calculate the percentage of the required sequence length read</description>
+    <name>ambiguousLettersPercentage</name>
+    <function-class>org.pimslims.utils.sequenator.SequencingOrder</function-class>
+    <function-signature>java.lang.String ambiguousLettersPercentage(org.pimslims.model.experiment.Experiment)</function-signature>
+ </function>
+
+<function>
+    <description>Return the Sample from OutpuSample from Experiment. Assume only one OutputSample exist!</description>
+    <name>getSample</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>org.pimslims.model.sample.Sample getSampleFromOutput(org.pimslims.model.experiment.Experiment)</function-signature>
+ </function>
+
+ <function>
+        <description>Return Files attached to the Experiment which are not .seq, .ab1, .scf</description>
+    <name>getOtherFiles</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.util.Collection getOtherFiles(org.pimslims.model.experiment.Experiment)</function-signature>
+ </function>
+ 
+<function>
+        <description>Check if an order has experiments marked for Reprocession and failed</description>
+    <name>validForCopying</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.Boolean hasValidExpForCopying(java.util.Collection)</function-signature>
+ </function>
+
+<function>
+    <description>Check if an order has failed experiments </description>
+    <name>hasFailedExperiments</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.Boolean hasFailedExperiments(java.util.Collection)</function-signature>
+ </function>
+ 
+ <function>
+    <description>Get Sequencing Prep (Setup) plate from Sequencing Order plate</description>
+    <name>getSeqPrepPlate</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>org.pimslims.model.experiment.ExperimentGroup getSeqPrepPlate(org.pimslims.model.experiment.ExperimentGroup)</function-signature>
+ </function>
+  
+   <!-- used  -->
+ <function>
+        <description>Represent ModelObject as a ShortBean</description>
+    <name>asShortBean</name>
+    <function-class>org.pimslims.presentation.ServletUtil</function-class>
+    <function-signature>org.pimslims.presentation.ModelObjectShortBean getShortBean(org.pimslims.metamodel.ModelObject)</function-signature>
+  </function>
+
+ <function>
+    <name>fieldName</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.String getFieldName(org.pimslims.model.experiment.Experiment, java.lang.String)</function-signature>
+  </function>
+  
+  <function>
+        <description>Return the Parameter value</description>
+    <name>pvalue</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.String getWizardParameterValue(org.pimslims.model.experiment.Experiment, java.lang.String)</function-signature>
+  </function>
+  
+    <function>
+    <description>Return the value of a single named property of a ModelObject</description>
+    <name>value</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.String getObjectSimpleProperty(java.lang.String, org.pimslims.metamodel.ModelObject)</function-signature>
+  </function>
+  
+   <function>
+        <description>Return the first ModelObject from the Collection</description>
+    <name>first</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>org.pimslims.metamodel.ModelObject getFirstRecord(java.util.List)</function-signature>
+  </function>
+ 
+  <function>
+        <description>Get position of experiment in a holder if any</description>
+    <name>getWell</name>
+    <function-class>org.pimslims.lab.experiment.HolderFactory</function-class>
+    <function-signature>java.lang.String getPositionInHolder(org.pimslims.model.experiment.Experiment)</function-signature>
+  </function>
+
+   <function>
+    <name>formatDate</name>
+    <function-class>org.pimslims.presentation.AttributeToHTML</function-class>
+    <function-signature>java.lang.String getDate(java.util.Calendar)</function-signature>
+  </function>
+  
+  <function>
+    <description>Check whether Sequencing Order can be modified e.g. not yet been through the processing pipeline</description>
+    <name>canModifyOrder</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.boolean canModifyOrder(java.util.List)</function-signature>
+  </function>
+  <!-- This function expects either Collection, Array or String as input -->
+  <function>
+    <description>Return the size of a Collection, Array of the length of String</description>
+    <name>size</name>
+    <function-class>org.pimslims.utils.experiment.Utils</function-class>
+    <function-signature>java.lang.Integer getSize(java.lang.Object)</function-signature>
+  </function>
+  
+
+</taglib>

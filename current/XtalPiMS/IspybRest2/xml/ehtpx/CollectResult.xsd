@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Bugs Bunny (Cartoon) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="DataRecorded.xsd"/>
+	<xs:element name="collectResult" type="tns:CollectResult">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="CollectResult">
+		<xs:sequence>
+			<xs:element name="crystalUUID" type="xs:string" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The universally unique identifier of the Crystal for this diffraction plan.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="status">
+				<xs:annotation>
+					<xs:documentation>The perceived status</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="OK"/>
+						<xs:enumeration value="FAULT"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="comments" type="xs:string" minOccurs="0"/>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="tns:dataRecorded" />
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

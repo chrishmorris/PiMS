@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pET-26b Vector</name>
+    <details>N-terminal pelB signal sequence for potential
+        periplasmic localization, plus optional C-terminal His-Tag
+    </details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="69862-3"
+        dataPageUrl="http://www.merck-chemicals.com/life-science-research/EMD_BIO-69862/p_uuid"
+        supplier="Novagen" />
+    <sampleComponent name="pET26b" componentCategory="Vector"
+        details="5360bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Expression Vector</function>
+        <resistanceDetails name="Kanamycin" startSeq="3986"
+            endSeq="4798" />
+        <promoterDetails name="T7 Promoter" startSeq="361"
+            endSeq="377" />
+        <markerDetails name="pelB coding sequence"
+            startSeq="224" endSeq="289" details="MKYLLPTAAAGLLLLAAQPAMA|"
+            featureType="Leader sequence" status="not cleaved" />
+        <markerDetails name="Multiple Cloning sites NcoI-XhoI"
+            details="NcoI-BamHI-EcoRI-SacI-SalI-HindIII-NotI-XhoI"
+            startSeq="158" endSeq="225" featureType="MCS" />
+        <markerDetails name="NcoI cloning site for adding N-term pelB tag"
+            details="C|CATGG" startSeq="220" endSeq="225" featureType="Cloning site" />
+        <markerDetails name="NdeI cloning site for native expression -no tag"
+            details="CA|TATG" startSeq="282" endSeq="287" featureType="Cloning site" />
+        <markerDetails name="C-Term His Tag coding sequence"
+            startSeq="140" endSeq="157" featureType="Tag" details="HHHHHH" />
+        <markerDetails name="pBR322 origin" startSeq="3277"
+            featureType="ori" />
+        <markerDetails name="Recommended Hosts"
+            details="Non-expression: NovaBlue[TM], JM109, DH5alpha; Expression: BL21(DE3), and BL21(DE3)pLysS"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector>
+    <name>pUC57 Vector</name>
+    <details>Cloning and expression vector, Ampicillin resistance</details>
+    <sampleCategory>Vector</sampleCategory>
+    <refSampleSource catalogNum="SD1176-50"
+        dataPageUrl="http://www.genscript.com/product_001/marker/code/SD1176/Vector/pUC57_plasmid_DNA/SD1176.html"
+        supplier="GenScript" />
+    <sampleComponent name="pUC57" componentCategory="Vector"
+        details="2710bp" molType="DNA" constructStatus="empty"
+        sequenceType="DNA">
+        <function>Prokaryotic Cloning Vector</function>
+        <resistanceDetails name="Ampicillin" startSeq="1650"
+            endSeq="2510" />
+        <promoterDetails name="Lac Promoter" />
+        <markerDetails name="LacZ_a" startSeq="493" endSeq="146"
+            featureType="Reporter gene" />
+        <markerDetails name="Multiple Cloning sites EcoRII-HindIII"
+            details="EcoRI/XapI-SacI/Ecl136II-KpnI/Acc65I-Bsp68I-Mva1269I-Mph1103I-XbaI-EcoRV-BamHI-SmaI/Cfr9I/Eco88I-ApaI/Bsp120I-HincII/SalI/XmiI-PstI-Eco147I-PaeI-HindIII"
+            startSeq="396" endSeq="476"
+            featureType="MCS" />
+        <markerDetails name="Recommended Hosts"
+            details="JM83, DH5 alpha"
+            featureType="Hosts" />
+    </sampleComponent>
+</vector>

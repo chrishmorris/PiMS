@@ -1,0 +1,27 @@
+<!-- PIMS Tryptophan Fluorescence Quenching protocol xml as flat file -->
+<protocol name="PiMS Tryptophan Fluorescence Quenching" objective="Determine Kd for ligand binding" creationDate="11-05-10" remarks="Default set of protocols for PiMS" details="Characterisation of Target Protein" >
+ <experimentType>Characterisation</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Output Sample" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Attached data files?" label="Are data files attached to this Experiment record?" parameterType="Boolean" defaultValue="false" isMandatory="false" />
+  <parameterDefinition id="2" name="Buffer conditions" label="Details of the buffer system" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="3" name="Concentration range in titration" label="Range of ligand concentration used in titration" parameterType="String" defaultValue="0-50uM" isMandatory="false" />
+  <parameterDefinition id="4" name="Cuvette Path length" label="Path length of the cuvette" parameterType="Int" defaultValue="5" displayUnit="mm" isMandatory="false" />
+  <parameterDefinition id="5" name="Emission Wavelength" label="Wavelength of measured emmitted fluorescence" parameterType="Int" defaultValue="340" displayUnit="nm" isMandatory="false" />
+  <parameterDefinition id="6" name="Estimated Kds (uM)" label="Estimated Kd values" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="7" name="Excitation Wavelength" label="Wavelength of light from excitation source" parameterType="Int" defaultValue="295" displayUnit="nm" isMandatory="false" />
+  <parameterDefinition id="8" name="Ligand Stock Concentration" label="Concentration of the stock ligand" parameterType="Float" displayUnit="mM" isMandatory="false" />
+  <parameterDefinition id="9" name="Ligand used" label="Name of the Ligand used in the Experiment" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="10" name="Protein Concentration" label="Concentration of the protein" parameterType="Float" defaultValue="1" displayUnit="uM" isMandatory="false" />
+  <parameterDefinition id="11" name="Resulting curve attached?" label="Is the resulting curve attached to this Experiment record?" parameterType="Boolean" defaultValue="false" isMandatory="false" />
+  <parameterDefinition id="12" name="Volume per injection" label="Volume of each injection" parameterType="Float" defaultValue="5" displayUnit="uL" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>
+

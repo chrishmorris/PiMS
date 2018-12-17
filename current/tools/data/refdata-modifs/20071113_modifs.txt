@@ -1,0 +1,38 @@
+Protocols
+Changed:
+refSample from "Kannamycin 30mg/ml" to "Kanamycin 30mg/ml"
+/PIMS_Culture.xml
+Old: <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000025" unit="L" displayUnit="uL" refSample="Kannamycin 30mg/ml" name="Antibiotic"/>
+New: <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000025" unit="L" displayUnit="uL" refSample="Kanamycin 30mg/ml" name="Antibiotic"/>
+
+/PIMS_miniprep.xml
+Old: <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000005" unit="L" displayUnit="uL" refSample="Kannamycin 30mg/ml" name="Antibiotic" />
+New: <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000005" unit="L" displayUnit="uL" refSample="Kanamycin 30mg/ml" name="Antibiotic" />
+
+/PIMS_PlasmidPrep.xml
+Old: <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000025" unit="L" displayUnit="uL" refSample="Kannamycin 30mg/ml" name="Antibiotic" />
+New: <inputSample sampleCatNamingSys="default" sampleCatName="Solution" amount="0.000025" unit="L" displayUnit="uL" refSample="Kanamycin 30mg/ml" name="Antibiotic" />
+
+/PIMS_TrialExpression.xml
+Old: <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000001" unit="L" displayUnit="uL" refSample="Kannamycin 30mg/ml" name="Antibiotic"/>
+New: <inputSample sampleCatNamingSys="default" sampleCatName="Antibiotic" amount="0.000001" unit="L" displayUnit="uL" refSample="Kanamycin 30mg/ml" name="Antibiotic"/>
+
+Changed: defaultValue from 
+/PIMS_LIC_PlateCulture.xml
+Old:  <parameterDefinition id="3" name="C. Plate type" parameterType="String" defaultValue="LB agar plus 30ug/ml kannamycin" /> 
+New:  <parameterDefinition id="3" name="C. Plate type" parameterType="String" defaultValue="LB agar plus 30ug/ml kanamycin" /> 
+
+Data
+Chemicals.csv
+Added: carbenicillin
+carbenicillin disodium salt,alpha-Carboxybenzylpenicillin disodium salt;Geopen;Pyopen;Carindapen;Fugacillin;Microcillin;Anabactyl;Carbecin;Gripenin;Pyocianil;Pyoclox,Antibiotic,C17H16N2Na2O6S,4800-94-6,422.36,MolComp,other,Y,,Y,,42/43,"22,36/37",Xn,Carbenicillin disodium salt,Antibiotic,Chemical/Biochemical
+
+Reagents.csv
+Changed: from Kannamycin 30mg/ml to Kanamycin 30mg/ml
+Old: Kannamycin 30mg/ml,,Solution,Culture / Dish culture / Miniprep / Expression,,,
+New: Kanamycin 30mg/ml,,Solution,Culture / Dish culture / Miniprep / Expression,,,
+
+HolderCats.csv
+Added: Box and Clone saver card
+default,Box,PIMS default category
+default,Clone saver card,PIMS default category

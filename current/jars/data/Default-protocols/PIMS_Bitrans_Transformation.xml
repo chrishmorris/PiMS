@@ -1,0 +1,26 @@
+<!-- PIMS Bitrans Transformation protocol xml as flat file -->
+<protocol name="PIMS Bitrans Transformation" objective="Transform E.coli with plasmid, generic heat shock protocol" creationDate="02-02-07" remarks="Default set of protocols for PiMS" details="Transform E.coli with plasmid, generic heat shock protocol">
+ <experimentType>Transformation</experimentType>
+
+  <outputSample sampleCatNamingSys="default" sampleCatName="Transformed cells" amount="" unit="L" displayUnit="mL" refSample="Transformed cells" name="Cells" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Volume of cells plated out" parameterType="Float" /> 
+  <parameterDefinition id="2" name="DNA Incubation conditions" parameterType="String" defaultValue="Incubate 30 min on ice,
+  Heat shock 30 sec,
+  Incubate a further 2 min on ice" />
+  <parameterDefinition id="3" name="Heat shock temperature" parameterType="Float" defaultValue="42" /> 
+  <parameterDefinition id="4" name="Culture conditions" parameterType="String" defaultValue="Incubate 60 min at 37C"/>
+  <parameterDefinition id="5" name="Is the culture shaken?" parameterType="Boolean" defaultValue="true" />
+  <parameterDefinition id="6" name="Transformation Result" parameterType="Int" />
+  <parameterDefinition id="7" name="Transformation Notes" parameterType="String" />
+ </parameterDefinitions>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Competent cells" amount="0.00005" unit="L" displayUnit="uL" refSample="Competent cells" name="Competent cells" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.000002" unit="L" displayUnit="uL" refSample="Expression Vector" name="Expression Vector A" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Plasmid" amount="0.000002" unit="L" displayUnit="uL" refSample="Expression Vector" name="Expression Vector B" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Culture media" amount="0.0003" unit="L" displayUnit="uL" refSample="Culture media" name="Culture media" />
+ </inputSamples>
+ 
+</protocol>

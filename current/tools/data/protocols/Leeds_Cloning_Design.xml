@@ -1,0 +1,21 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="Cloning design" objective="Design a cloning plan" creationDate="07-02-07" remarks="Used in Leeds primer management"  >
+ <experimentType>Cloning design</experimentType>
+
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Gene Length" parameterType="Int" defaultValue="0" />
+  <parameterDefinition id="2" name="From" parameterType="Int" defaultValue="0" />
+  <parameterDefinition id="3" name="To" parameterType="Int" defaultValue="0" />
+  <parameterDefinition id="4" name="PCR Product Length" parameterType="Int" defaultValue="0" />
+  <parameterDefinition id="5" name="Plasmid" parameterType="String" defaultValue="" />
+  <parameterDefinition id="6" name="Modifications" parameterType="String" defaultValue="" />
+ </parameterDefinitions>
+
+<inputSamples>
+	<inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="" unit="L" displayUnit="uL" refSample="Forward primer" name="Forward primer" />
+	<inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="" unit="L" displayUnit="uL" refSample="Reverse primer" name="Reverse primer" />
+</inputSamples>
+
+
+</protocol>

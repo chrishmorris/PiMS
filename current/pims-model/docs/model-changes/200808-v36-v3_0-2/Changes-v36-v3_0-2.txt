@@ -1,0 +1,132 @@
+================================================================================
+PiMS RELEASE v3.0-2
+DATABASE REVISION NUMBER 36.
+PURPOSE: Changes related to re-design work
+================================================================================
+
+Package.
+- rename implementation to core & rename tables IMPL_XXX to CORE_XXX
+- rm ApplicationData & subclasses
+- rm ContentStored, DataLocation, Storage, NormalStorage, ContentStorage
+- rm AbstractStorage & Project
+- rm all project property in subclasses of BaseClass
+- rm Url
+
+BaseClass.
+- rename MemopsBaseClass to BaseClass & rename MEMOPSBASECLASSID to BASECLASSID & rename CORE_MEMOPSBASECLASS to CORE_BASECLASS & remove memops everywhere else
+- add property details in BaseClass and remove it from all subclasses
+
+LabBookEntry.
+- create LabBookEntry in core
+- change extends BaseClass to LabBookEntry for most of the classes (except future reference classes)
+- add link between User & LabBookEntry called author & add creationDate
+- add link between User & LabBookEntry called lastEditor & add lastEditedDate
+- rm links Experiment.creator, Protocol.creator, DropAnnotation.annotator, Image.creator, Target.creator
+- rm Protocol.lastEditor, Protocol.lastEditedDate, Experiment.lastEditor, Experiment.lastEditedDate
+
+Attachment.
+- create Attachment with date and author property as subclass of BaseClass
+- add one-to-many parent link between LabBookEntry and Attachment.
+
+Annotation.
+- mv Annotation to core - extends Attachment & remove pkg annotation
+- rm Annotation.date & Annotation.author
+- rm Annotation links to ExperimentGroup, Experiment, TargetGroup, TargetProject, Target, Protocol. Replaced by link to LabBookEntry
+
+DbRef.
+- mv DbRef to core and rename to ExternalDbLink - extends Attachment
+- rm ExternalDbLink links to TargetGroup, Target. Replaced by link to LabBookEntry
+
+Note.
+- create Note class with relatedEnties link to LabBookEntry - extends Attachment
+
+Citation.
+- mv Citation to core & subclasses - extends Attachment
+- rm Citation links to Person (change to String), Method, Protocol, Software, Target. Replace by link to LabBookEntry
+- rm in Citation attr casAbstractCode, doi, medlineUiCode, pubMedId.
+- rm Citation.keywords
+
+LabBookEntry.
+- add extra methods in LabBookEntry for getAnnotations(), getNotes(), getCitations() & getExternalDbLinks()
+
+Primer.
+- add extra property in Primer [meltingTemperatureGene, meltingTemperatureSeller, gcGene, lengthOnGene, opticalDensity, particularity, restrictionSite]
+
+Annotation.
+- change column definition of description to TEXT in order to be able to store legend of image with line breaks.
+
+Reference changes.
+- create package reference
+- mv DbName to reference
+- mv HolderCategory, InstrumentType, ComponentCategory, ExperimentType, WorkflowItem, HazardPhrase, SampleCategory, Scoreboard, Status, NaturalSource, AbstractHolderType, PinType, HolderType, CrystalType into reference
+- rename NaturalSource to Organism
+- rename Status to TargetStatus
+- create PublicEntry in reference
+- change prefix of table names to REF_
+- rm unique key namingSystem in subclasses of PublicEntry (keep name in subclasses otherwise problem with unique key)
+- refactor Organism.organismName to .name
+- rm namingSystem attribute (not normalised) in reference package and put getter/setter @Deprecated
+- make one-to-many links to reference classes only one way (no need to getSamples from SampleCategory)
+- rm dbRef, riskAssessment, taxonomy packages
+
+- rm description field in AccessObject, Annotation & SchedulePlan
+
+Annotation.
+- add mimeType attribute
+- add title & legend attribute
+
+Access.
+- mv AccessObject link from BaseClass to LabBookEntry
+
+Reference.
+- rm Scoreboard
+
+Other changes.
+- mv Instrument to experiment
+- mv Method to experiment
+- rename package refSampleComponent to Molecule
+- rename MolCompFeature into MoleculeFeature
+- rm in protocol pkg Procedure, Step, WaitStep, TemperatureStep
+- merge target & expBlueprint packages
+- rename TargetProject into Project
+- rename ExpBlueprint into ResearchObjective
+
+Bug Fixes
+- PIMS-2039 ExpBlueprint.whyChosen should be optional
+>>> change not-null="true" to not-null="false" for expBlueprint.ExpBlueprint.whyChosen
+
+Experiment pkg
+- PIMS-1278 Separate parameters to two categories - Setup parameters + Result parameters
+>>> add extra attribute isResult in ParameterDefinition
+>>> add helper methods getResultParameters() and getSetupParameters() by a search, using the value of isResult
+>>> (later) add another link between ParameterDefinition and Parameter, rename existing one to setupParameters and called the new one resultParameters
+
+Protocol Constraints
+- PIMS-1876 Protocol editor allow duplication of input and output samples. Such protocol, if made, cannot be used for making new experiments.
+>>> add uniqueness constraint on RefInputSample and RefOutputSample (protocolId, name)
+
+Target link to Status
+- PIMS-385 The links of ccp.Target.Status are called 'code'
+>>> rename the link called code to status between Milestone and Status in target package
+- PIMS-419 the role status(code) for targetStatus should be unchangeable
+>>> check that the role from Milestone to Status is unchangeable
+
+Target pkg
+- PIMS-1030 in simple experiment, once the milestone is added to a construct/target, it is always linked to this construct
+>>> remove link between Milestone and ExpBlueprint and create an helper method getMilestones in ExpBlueprint
+
+Holder pkg
+- PIMS-386 ccp.Holder.HolderCategories
+>>> links AbstractHolder/HolderCategory and AbstractHolderType/HolderCategory should not be mandatory
+>>> rename link AbstractHolderType/HolderCategory to defaultHolderCategories
+
+ApplicationData
+- put back with modifications
+- merge all subclasses of ApplicationData into ApplicationData: ApplicationData extends Attachment with attributes {application: String, keyword: String, value: String, type: String}
+
+Reference
+- mark problem many-to-many methods as deprecated
+
+Protocol
+- create helper methods based on ParameterDefinition.isResult() in Protocol getResultParamDefinitions() and getSetupParamDefinitions()
+- remove links called setupDefinitions and resultDefinitions

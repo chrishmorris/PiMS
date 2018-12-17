@@ -1,0 +1,219 @@
+To Install PiMS On Mac OSX Using Fink
+
+--- You need admin access, either via 'root' or via 'sudo'.
+--- You need Fink installed: http://www.finkproject.org/
+--- If you are reinstalling PiMS fresh, please do this first:
+    sudo rm -fr /sw/var/tomcat6/work/Catalina/localhost/*
+    dropdb -U postgres pims
+
+cd $HOME
+mkdir pims
+cd pims/
+
+# ----------------------------------------------------------
+#  TOMCAT
+# ----------------------------------------------------------
+
+fink install tomcat-webapps # tomcat6-6.0.20-1
+
+ Usage Notes:
+
+ To start, stop, or restart Tomcat, do:
+
+   tomcat6 <command> #start, stop, restart (it already will call 'tomcat' user)
+
+ To enable Tomcat to start upon bootup, issue the command:
+
+   sudo daemonic enable tomcat6
+
+ Web site: http://jakarta.apache.org/tomcat/index.html
+
+Fink Tomcat Maintainer: elcepi <elcepi@users.sourceforge.net>
+
+Stop tomcat for the moment:
+
+tomcat6 stop # you may be asked for your 'sudo' password
+
+--- To deploy Tomcat ---
+    wget -c /root/pims.war http://pims.structuralbiology.eu/pims.zip
+    unzip pims.zip
+    cd jars
+    wget -c http://pims.structuralbiology.eu/docs/distrib/context.xml.example -O pims.xml
+    sudo mkdir -p /var/pims/uploads; sudo chown tomcat /var/pims/uploads
+
+Edit 'pims.xml':
+
+    <Context docBase="_path_to_/pims.war"
+    ...
+    <Environment name="db.password"   value="_your_password"
+
+Copy 'pims.xml' to:
+    sudo -u tomcat cp pims.xml /sw/var/tomcat6/conf/Catalina/localhost/
+
+--- Defining Users and Access Rights ---
+Edit "/sw/var/tomcat6/conf/tomcat-users.xml", adding something like this. 
+You can choose the user names:
+  <role rolename="pims-user"/>
+  <role rolename="pims-administrator"/>
+  <role rolename="pims-view"/>
+  <user username="pims" password="pims" roles="pims-user"/>
+  <user username="guest" password="guest" roles="pims-view"/>
+  <user username="administrator" password="admin" roles="pims-administrator,pims-user"/>
+
+Start and stop Tomcat. This procedure is to uncompress pims.war in the right folder.
+
+    tomcat6 start
+    tomcat6 stop
+
+--- Using Security Manager mode in Tomcat and Tweaking Tomcat for PiMS ---
+
+Add in /sw/etc/tomcat6/tomcat.conf:
+
+    CATALINA_OPTS="-DTOMCAT5LAUNCH=true -Djava.security.manager -Djava.security.policy==$CATALINA_HOME/conf/catalina.policy" export CATALINA_OPTS
+
+The tools that PiMS uses can fill up Java's "Permanent Generation" of memory. To prevent this, add in /sw/etc/tomcat6/tomcat.conf:
+
+    JAVA_OPTS="-Xmx1024m -enableassertions -server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true" export JAVA_OPTS
+
+Tomcat has a memory leak where large JSP page requests can fill up memory. To avoid this, add this in /sw/etc/tomcat6/tomcat.conf:
+
+    CATALINA_OPTS="-DTOMCAT5LAUNCH=true -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/catalina.policy -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true" export CATALINA_OPTS
+
+So your /sw/etc/tomcat6/tomcat.conf should look like this:
+    JAVA_HOME=/Library/Java/Home            export JAVA_HOME
+    JSSE_HOME=$JAVA_HOME/lib/ext            export JSSE_HOME
+    CATALINA_HOME=/sw/var/tomcat6      export CATALINA_HOME
+    CATALINA_OPTS="-DTOMCAT5LAUNCH=true -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/catalina.policy -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true" export CATALINA_OPTS
+    JAVA_OPTS="-Xmx1024m -enableassertions -server -XX:MaxPermSize=512m -XX:+CMSPermGenSweepingEnabled -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true" export JAVA_OPTS
+
+Yet to setup Security Mode, edit /sw/var/tomcat6/conf/catalina.policy:
+
+change:
+    grant codeBase "file:${catalina.home}/bin/tomcat-juli.jar" {
+                permission java.util.PropertyPermission "java.util.logging.config.class", "read";
+to:
+    grant codeBase "file:${catalina.home}/bin/tomcat-juli.jar" {
+                permission java.lang.RuntimePermission "setContextClassLoader";
+                permission java.util.PropertyPermission "java.util.logging.config.class", "read";
+
+Add below line:
+    // permission java.io.FilePermission "${catalina.base}${file.separator}webapps${file.separator}examples${file.separator}WEB-INF${file.separator}classes${file.separator}logging.properties", "read";
+
+lines (needed case you have tomcat6-webapps package installed):
+        permission java.io.FilePermission "${catalina.base}${file.separator}webapps${file.separator}jsp-examples${file.separator}WEB-INF${file.separator}classes${file.separator}logging.properties", "read";
+        permission java.io.FilePermission "${catalina.base}${file.separator}webapps${file.separator}servlets-examples${file.separator}WEB-INF${file.separator}classes${file.separator}logging.properties", "read";
+
+All these above granted security measures for tomcat-webapps examples.
+
+For PiMS, you'll need to do this:
+
+Have to put 'pims_log4j.properties' in $HOME/pims/conf, by:
+    mkdir -p $HOME/pims/conf; sudo chown tomcat $HOME/pims/conf; sudo chmod aou+rw $HOME/pims/conf
+    sudo -u tomcat cp /sw/share/webapps/pims/WEB-INF/conf/pims_log4j.properties $HOME/pims/conf
+
+And take 'ParamProperties.sample' and put in $HOME/pims/conf as 'ParamProperties', by:
+    sudo -u tomcat cp /sw/share/webapps/pims/WEB-INF/conf/ParamProperties.sample $HOME/pims/conf/ParamProperties
+
+Have to add in '/sw/var/tomcat6/conf/catalina.policy':
+
+// These permissions apply to JULI
+grant codeBase "file:${catalina.home}/bin/tomcat-juli.jar" {
+    [snip]
+    //Added for PiMS
+    permission java.io.FilePermission "${catalina.base}${file.separator}webapps${file.separator}pims${file.separator}WEB-INF${file.separator}classes${file.separator}logging.properties", "read";
+};
+
+* Don't know why but the permission above need to be granted although the file not even exist.
+
+and:
+
+    //Added for PiMS
+    grant codeBase "file:${catalina.home}/webapps/pims/-" {
+        permission java.io.FilePermission ".${file.separator}conf${file.separator}*", "read, write, delete";
+        permission java.io.FilePermission ".${file.separator}conf${file.separator}Hibernate.log.txt", "read, write";
+        permission java.io.FilePermission ".${file.separator}conf${file.separator}pims_log4j.properties", "read";
+        // /var/pims/uploads is the folder defined in pims.xml for 'uploadDirectory'
+        permission java.io.FilePermission "/var/pims/uploads", "read, write";
+        permission java.io.FilePermission "/var/pims/uploads/*", "read, write";
+        permission java.io.FilePermission "<<ALL FILES>>", "execute";
+        permission java.io.FilePermission "${catalina.base}${file.separator}temp${file.separator}*", "read, write";
+        permission java.io.FilePermission "client-config.wsdd", "read, write";
+        permission java.lang.reflect.ReflectPermission "suppressAccessChecks","";
+        permission java.lang.RuntimePermission "accessClassInPackage.org.apache.coyote";
+        permission java.lang.RuntimePermission "accessClassInPackage.org.apache.jasper";
+        permission java.lang.RuntimePermission "accessClassInPackage.sun.net.www";
+        permission java.lang.RuntimePermission "accessDeclaredMembers";
+        permission java.lang.RuntimePermission "getClassLoader";
+        permission java.lang.RuntimePermission "getProtectionDomain";
+        permission java.net.SocketPermission "127.0.0.1:5432", "connect, resolve";
+        permission java.util.PropertyPermission "*", "read, write";
+        permission java.util.PropertyPermission "cglib.debugLocation", "read";
+        permission java.util.PropertyPermission "java.io.tmpdir", "read, write";
+        permission java.util.PropertyPermission "net.sf.ehcache.*", "read";
+        permission javax.management.MBeanPermission "*", "*";
+        permission javax.management.MBeanServerPermission "createMBeanServer";
+        permission javax.management.MBeanTrustPermission "register";
+    };
+
+--- To setup Tomcat as a Production Server, in order to avoid message in /sw/var/tomcat6/logs/catalina.out:
+    "INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path:"
+do this:
+    Edit Tomcat '/sw/var/tomcat6/conf/server.xml'.  Remove or comment out the line:
+        <Listener className="org.apache.catalina.core.AprLifecycleListener" />
+
+# ----------------------------------------------------------
+# POSTGRESQL
+# ----------------------------------------------------------
+
+fink install postgresql84 # postgresql84
+
+    sudo pgsql.sh start # start, stop, restart
+
+ To enable Postgresql to start upon bootup, issue the command:
+
+    sudo daemonic enable postgresql84
+
+--- To setup postgresql for PiMS:
+
+ Create the database and database users:
+    createdb -U postgres --encoding UTF-8 pims
+    createuser -U postgres -P pimsview
+    createuser -U postgres -P pimsupdate
+    createuser -U postgres -P pimsadmin
+
+  All three users only need the default privileges - answer no the three questions asked by createuser (superuser, create databases and create roles).
+
+  Install the database schema:
+        psql -d pims -U pimsadmin -f pims-database.sql
+
+  Load the reference data. 
+       You need to provide the database connection information, in a file called Properties. 
+       You can do this by editing the file conf/Properties to add the password for your database. Then:
+           java -jar -Xms64m -Xmx256m RefDataLoader.jar loadRefData
+           
+
+
+# ----------------------------------------------------------
+# GRAPHVIZ
+# ----------------------------------------------------------
+
+fink install graphviz
+
+#################################
+# STARTING PiMS
+#################################
+Restart tomcat:
+    cd $HOME/pims/
+    tomcat6 stop
+    tomcat6 start
+
+NOTE: due to some idiosyncrasy of tomcat for Fink, the folder where one starts
+'Tomcat' (i.e., the folder where one enters the command 'tomcat6 start') is taken
+for '$TOMCAT_HOME' and so that's why it's important to start tomcat in the folder
+that contains 'conf/pims_log4j.properties'.
+
+and go to http://localhost:8080/pims
+Login as administrator, and create user 'pims'
+Password for user 'pims' (and everyone else) is set in tomcat-users.xml
+
+Done!

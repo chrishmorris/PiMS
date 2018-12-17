@@ -1,0 +1,115 @@
+name,details,category,expTypes,catNum,supplier,dpURL
+Fetal Bovine Serum,,Culture media,Expression / Culture,10091-148,Invitrogen/Life Technologies,http://products.invitrogen.com/ivgn/product/10091148
+KOD DNA Polymerase,Formerly KOD HiFi DNA Polymerase -includes buffers & dNTPs,Enzyme -polymerase,PCR,71085,Novagen,http://www.merckbiosciences.co.uk/product/71085
+KOD Hot Start DNA Polymerase,includes buffers & dNTPs,Enzyme -polymerase,PCR,71086,Novagen,http://www.merckbiosciences.co.uk/product/71086
+KOD XL DNA Polymerase,includes buffers & dNTPs,Enzyme -polymerase,PCR,71087,Novagen,http://www.merckbiosciences.co.uk/product/71087
+LIC qualfied T4 Polymerase,,Enzyme -polymerase,LIC polymerase reaction,70099,Novagen,http://www.emdbiosciences.com/product/70099
+Taq Polymerase,,Enzyme -polymerase,PCR,M0373,New England Biolabs (UK) Ltd,http://www.neb.com/nebecomm/products_Intl/productM0273.asp
+VentR DNA Polymerase,,Enzyme -polymerase,PCR,M0254,New England Biolabs (UK) Ltd,http://www.neb.com/nebecomm/products_Intl/productM0254.asp
+Vent (exo-) DNA Polymerase,,Enzyme -polymerase,PCR,M0257,New England Biolabs (UK) Ltd,http://www.neb.com/nebecomm/products_Intl/productM0257.asp
+Deep VentR DNA Polymerase,,Enzyme -polymerase,PCR,M0258,New England Biolabs (UK) Ltd,http://www.neb.com/nebecomm/products_Intl/productM0258.asp
+Pfu Polymerase,,Enzyme -polymerase,PCR,M7741,Promega,http://www.promega.com/tbs/9pim210/9pim210.html
+T4 DNA Ligase,,Enzyme -ligase,Ligation,M1801,Promega,http://www.promega.com/tbs/9pim774/9pim774.html
+Pfu Polymerase,,Enzyme -polymerase,PCR,600136,Stratagene,http://search.stratagene.com/?index=19012&lastq=&doc0=0&sortsel=rel&opt=ANY&query=600136
+Pfu Turbo Polymerase,,Enzyme -polymerase,PCR,600250,Stratagene,http://search.stratagene.com/?index=19012&lastq=&doc0=0&sortsel=rel&opt=ANY&query=600250
+Pfu Turbo Cx Polymerase,,Enzyme -polymerase,PCR,600410,Stratagene,http://search.stratagene.com/?index=19012&lastq=&doc0=0&sortsel=rel&opt=ANY&query=600410
+Pfu Ultra,,Enzyme -polymerase,PCR,600380,Stratagene,http://search.stratagene.com/?index=19012&lastq=&doc0=0&sortsel=rel&opt=ANY&query=600380
+BIO-X-ACT Short Mix,,Enzyme -polymerase,PCR,BIO-25025,Bioline Ltd,http://www.bioline.com/h_prod_detail.asp?user_prodname=BIO%2DX%2DACT%99+Short+Mix
+BseRI,,Enzyme -restriction,LIC vector preparation,R0581S,New England Biolabs (UK) Ltd,http://www.neb.uk.com/frameset.asp?searchType=products&yider=BseRI&submit.x=0&submit.y=0
+,,,,,,
+10x PCR buffer,,Buffer,PCR,,,
+NEBuffer 2,,Buffer,LIC vector preparation,R0581S,New England Biolabs (UK) Ltd,http://www.neb.uk.com/frameset.asp?searchType=products&yider=BseRI&submit.x=0&submit.y=0
+KOD Reaction Buffer 1,included in KOD HiFi Kit,Buffer,PCR,71085,Novagen,http://www.merckbiosciences.co.uk/product/71085
+KOD Reaction Buffer 2,included in KOD HiFi Kit,Buffer,PCR,71085,Novagen,http://www.merckbiosciences.co.uk/product/71085
+KOD Hot Start Buffer,included in KOD Hot Start Kit,Buffer,PCR,71086,Novagen,http://www.merckbiosciences.co.uk/product/71086
+BIO-X-ACT Buffer,,Buffer,PCR,BIO-25025,Bioline Ltd,http://www.bioline.com/h_prod_detail.asp?user_prodname=BIO%2DX%2DACT%99+Short+Mix
+,,,,,,
+HyperLadder I,,Marker,Gel,BIO-33025,Bioline Ltd,http://www.bioline.com/n_uk.htm
+HyperLadder II,,Marker,Gel,BIO-33039,Bioline Ltd,http://www.bioline.com/n_uk.htm
+1kbp ladder,,Marker,Gel,G5711,Promega,http://www.promega.com/techserv/apps/cloning/cloning4.htm
+100bp ladder,,Marker,Gel,G2101,Promega,http://www.promega.com/techserv/apps/cloning/cloning4.htm
+,,,,,,
+dATP 25umol,,Nucleotide,PCR,BIO-39036,Bioline Ltd,http://www.bioline.com/n_uk.htm
+dCTP 25umol,,Nucleotide,PCR,BIO-39038,Bioline Ltd,http://www.bioline.com/n_uk.htm
+dGTP 25umol,,Nucleotide,PCR,BIO-39037,Bioline Ltd,http://www.bioline.com/n_uk.htm
+dTTP 25umol,,Nucleotide,PCR,BIO-39039,Bioline Ltd,http://www.bioline.com/n_uk.htm
+dNTP mix 10mM,,Nucleotide,PCR,U1511,Promega,http://www.promega.com/search/Default.aspx?indexes=0&page=1&query=U1511
+dATP 25 mM,,Nucleotide,LIC polymerase reaction,,,
+dTTP 25 mM,,Nucleotide,LIC vector preparation,,,
+KOD dNTP Mix,included in KOD HiFi Kit,Nucleotide,PCR,71086,Novagen,http://www.merckbiosciences.co.uk/product/71086
+BIO-X-ACT dNTP Mix,,Nucleotide,PCR,BIO-39028,Bioline Ltd,http://www.bioline.com/h_prod_detail.asp?user_prodname=dNTP+Mix
+,,,,,,
+,,,,,,
+pET Duet,,Vector,Cloning / Ligation,71146,Novagen,http://www.emdbiosciences.com/product/71146
+,,,,,,
+PCR Cloning kit with Gateway technology,,Cloning kit,Cloning / Ligation,12535,Invitrogen/Life Technologies,http://www.invitrogen.com/search.cfm?category=&searchterm=12535
+Zero Blunt PCR Cloning Kit,,Cloning kit,Cloning / Ligation,K2700,Invitrogen/Life Technologies,http://www.invitrogen.com/search.cfm?category=&searchterm=K2700
+Topo TA,,Cloning kit,Cloning / Ligation,K4500,Invitrogen/Life Technologies,http://www.invitrogen.com/search.cfm?category=&searchterm=K4500
+Zero Blunt TOPO PCR Cloning Kit,,Cloning kit,Cloning / Ligation,K2800,Invitrogen/Life Technologies,http://www.invitrogen.com/search.cfm?category=&searchterm=K2800
+In-Fusion CF Dry-Down PCR Cloning Kit,,Cloning kit,Cloning / Ligation,639605,Clontech,http://www.clontech.com/products/detail.asp?product_id=10406&tabno=2
+Quick Change SDM kit,,Kit,PCR / SDM,200518,Stratagene,http://search.stratagene.com/?index=19012&lastq=&doc0=0&sortsel=rel&opt=ANY&query=200518
+,,,,,,
+Nova Blue Singles,,Competent cells,Transformation,70181,Novagen,http://www.emdbiosciences.com/product/70181
+Nova Blue Giga Singles,,Competent cells,Transformation,71227,Novagen,http://www.emdbiosciences.com/product/71227
+HT96 BL21(DE3),,Competent cells,Transformation,71012,Novagen,http://www.emdbiosciences.com/product/71012
+HT96 NovaBlue,,Competent cells,Transformation,71011,Novagen,http://www.emdbiosciences.com/product/71011
+Rosetta 2(DE3) Singles,,Competent cells,Transformation,71400,Novagen,http://www.emdbiosciences.com/product/71400
+Origami (DE3) Singles,,Competent cells,Transformation,70630,Novagen,http://www.emdbiosciences.com/product/70630
+Rosetta-gami 2,,Competent cells,Transformation,71350,Novagen,http://www.emdbiosciences.com/product/71350
+BL21,,Competent cells,Transformation,69449,Novagen,http://www.emdbiosciences.com/product/69449
+DE3 Competent cell set,,Competent cells,Transformation,71207,Novagen,http://www.emdbiosciences.com/product/71207
+B834(DE3),,Competent cells,Transformation,69041,Novagen,http://www.emdbiosciences.com/product/69041
+XL1 Blue Competent Cells,,Competent cells,Transformation,200249,Stratagene,http://www.stratagene.com/manuals/200314.pdf
+Xl10 Gold Ultracompetent cells,,Competent cells,Transformation,200315,Stratagene,http://www.stratagene.com/manuals/200314.pdf
+BL21-Gold Competent cells,,Competent cells,Transformation,230130,Stratagene,http://www.stratagene.com/manuals/230130.pdf
+BL21 CodonPlus -RIL Competent cells,,Competent cells,Transformation,230240,Stratagene,http://www.stratagene.com/manuals/230240.pdf
+One Shot TOP10,,Competent cells,Transformation,C4040,Invitrogen/Life Technologies,http://www.invitrogen.com/search.cfm?category=&searchterm=C4040
+MAX Efficiency DH5a TI Phage-Resistant Competent cells,,Competent cells,Transformation,12034-013,Invitrogen/Life Technologies,http://www.invitrogen.com/search.cfm?category=&searchterm=12034
+TAM1 Competent E.Coli,,Competent cells,Transformation,11596,ActiveMotif,http://www.activemotif.com/catalog/transfect_expr/rapidtrans
+Multishot Stripwell OmniMAX,,Competent cells,Transformation,440011,Invitrogen/Life Technologies,http://www.invitrogen.com
+,,,,,,
+,,,,,,
+Qiagen PCR clean up,,Nucleic acid purification kit,DNA purification,28104,Qiagen Ltd,http://www1.qiagen.com/Search/search.aspx?category=1&SearchTerm=28104
+Qiagen Plasmid mini kit (25),,Nucleic acid purification kit,DNA purification / Miniprep,12123,Qiagen Ltd,http://www1.qiagen.com/Search/search.aspx?category=1&SearchTerm=12123
+Qiagen Plasmid midi kit (25),,Nucleic acid purification kit,DNA purification / Midiprep,12143,Qiagen Ltd,http://www1.qiagen.com/Search/search.aspx?category=1&SearchTerm=12143
+Qiaquick 96 plates,,Nucleic acid purification kit,DNA purification,28181,Qiagen Ltd,http://www1.qiagen.com/Search/search.aspx?category=1&SearchTerm=28181
+Agencourt AMPure 60ml Kit,,Nucleic acid purification kit,DNA purification,130,Agencourt Bioscience Corporation,http://www.agencourt.com/products/spri_reagents/ampure/
+,,,,,,
+,,,,,,
+GS96 medium,,Culture media,Culture,3101,Qbiogene,http://www.qbiogene.com/search/index.shtml
+SOC medium,,Culture media,Culture,3031,Qbiogene,http://www.qbiogene.com/search/index.shtml
+Luria broth (LB),,Culture media,Culture / Miniprep,,,
+Overnight Express Autoinduction System,,Culture media,Expression / Culture,71300,Novagen,http://www.emdbiosciences.com/product/71300
+SelenoMet Medium Base plus Nutrient Mix,,Culture media,Expression / Culture,MD12-501,Molecular Dimensions,http://www.moleculardimensions.com/uk/search.ihtml
+SelenoMethionine solution,,Culture media,Expression / Culture,MD12-503,Molecular Dimensions,http://www.moleculardimensions.com/uk/search.ihtml
+Methionine solution,,Culture media,,MD12-504,Molecular Dimensions,http://www.moleculardimensions.com/uk/search.ihtml
+Power Broth,,Culture media,Culture,MD12-106-6,Molecular Dimensions,http://www.moleculardimensions.com
+,,,,,,
+IPTG 1M,,Solution,Expression,,,
+DMSO,,Solvent,PCR,,,
+Betaine,,Chemical/Biochemical,PCR,,,
+DTT 100mM,,Solution,LIC polymerase reaction,,,
+EDTA 25mM,,Solution,LIC annealing,,,
+10x T4 polymerase buffer,,Buffer,LIC polymerase reaction,,,
+,,,,,,
+Kanamycin 30mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+Tetracycline 12mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+Chloramphenicol 34mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+Carbenicillin 50mg/ml,,Antibiotic,Culture / Dish culture / Miniprep / Expression,,,
+,,,,,,
+Ethanol,,Solvent,Miniprep,,,
+Water,,Solvent,PCR / LIC polymerase reaction,,,
+Isopropanol,,Solvent,Miniprep,,,
+Ethanol 70% v/v in water,,Solvent,Miniprep,,,
+,,,,,,
+TE buffer pH 8.0,,Buffer,Miniprep,,,
+,,,,,,
+Invitrogen Primer,PCR Primer from Invitrogen,Primer,PCR,,Invitrogen/Life Technologies,http://www.invitrogen.com/content.cfm?pageid=9714&CID=TN-Prods-Oligos
+Invitrogen / Life Technologies Primer,PCR Primer from Invitrogen,Primer,PCR,,Invitrogen/Life Technologies,http://www.invitrogen.com/content.cfm?pageid=9714&CID=TN-Prods-Oligos
+Operon Primer,PCR Primer from Operon Biotechnologies GmbH,Primer,PCR,,Operon Biotechnologies GmbH,https://www.operon.com/products_main.php
+MWG Primer,PCR Primer from MWG Biotech,Primer,PCR,,MWG Biotech,http://www.mwg-biotech.com/html/s_synthesis/s_overview.shtml
+,,,,,,
+Forward Primer,,Forward Primer,PCR,,,
+Reverse Primer,,Reverse Primer,PCR,,,
+Purified Protein,,Purified protein,Trials,,,
+Plasmid,,Plasmid,Transformation,,,

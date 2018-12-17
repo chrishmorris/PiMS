@@ -1,0 +1,18 @@
+<!-- PiMS PCR clone verification protocol xml as flat file -->
+<protocol name="PiMS Clone verification" objective="Check cloned insert by PCR" creationDate="04-03-09" remarks="Default set of protocols for PiMS" details="Use high fidelity enzymes" >
+ <experimentType>PCR</experimentType>
+
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.0000005" unit="L" displayUnit="uL" refSample="Plasmid" name="Template" />
+ </inputSamples>
+
+  <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Comments" label="Any comments about the PCR product" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Forward primer" label="Forward primer" parameterType="String" defaultValue="Gene-specific" possibleValues="Gene-specific;Vector-specific" />
+  <parameterDefinition id="3" name="Reverse primer" label="Reverse primer" parameterType="String" defaultValue="Vector-specific" possibleValues="Gene-specific;Vector-specific" />
+  <parameterDefinition id="4" name="__SCORE" label="Correct size PCR product?" parameterType="String" defaultValue="Unscored" possibleValues="Unscored,No,Maybe,Yes" />
+ </parameterDefinitions>
+ 
+</protocol>

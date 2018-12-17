@@ -1,0 +1,99 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.location.Location" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="120" y="244" width="117" height="167"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.people.Organisation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/people/Organisation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="532" y="344" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.HolderLocation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/HolderLocation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="88" y="111" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.experiment.Instrument" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="356" y="69" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.location.Location" 
+      file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false">      
+      <attribute name="instruments"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.experiment.Instrument" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false">      
+      <attribute name="location"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.HolderLocation" 
+      file="/pims-model/src/java/org/pimslims/model/holder/HolderLocation.java" binary="false">      
+      <attribute name="location"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.location.Location" 
+      file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false">      
+      <attribute name="holderLocations"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.experiment.Instrument" 
+      file="/pims-model/src/java/org/pimslims/model/experiment/Instrument.java" binary="false">      
+      <attribute name="manufacturer"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Organisation" 
+      file="/pims-model/src/java/org/pimslims/model/people/Organisation.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.location.Location" 
+      file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false">      
+      <attribute name="location"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.location.Location" 
+      file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false">      
+      <attribute name="contents"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.location.Location" 
+      file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false">      
+      <attribute name="organisation"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.people.Organisation" 
+      file="/pims-model/src/java/org/pimslims/model/people/Organisation.java" binary="false"/>  
+  </association>
+</class-diagram>

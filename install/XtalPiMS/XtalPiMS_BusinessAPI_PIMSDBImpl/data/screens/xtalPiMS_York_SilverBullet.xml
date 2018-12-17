@@ -1,0 +1,1141 @@
+<screen>
+ <screenName>Silver Bullets HT</screenName>
+ <screenSupplier>Hampton research</screenSupplier>
+ <screenCatNum>HR2-096</screenCatNum>
+ <screenDetails>Silver Bullets is a library of small molecules that have been shown to promote crystal lattice formation. Each reagent is a mixture of small molecules or macromolecular digest in 0.02 M HEPES sodium pH 6.8 buffer. Each solution contains between 2 and 20 small molecules.</screenDetails>
+ <screenReference>Searching for silver bullets: An alternative strategy for crystallizing macromolecules. Alexander McPherson and Bob Cudney. Journal of Structural Biology 156 (2006) 387-406.</screenReference>
+ <screenNumberOfSolutions>96</screenNumberOfSolutions>
+  <solutions>
+   <solution>
+   <solutionId>1</solutionId>
+   <localNum>A01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,5-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="2,5-Pyridinedicarboxylic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="3,5-Dinitrosalicylic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>2</solutionId>
+    <localNum>A02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Benzidine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Nicotinamide" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Pyromellitic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sulfaguanidine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>3</solutionId>
+    <localNum>A03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Gly-gly" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Gly-gly-gly" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Gly-gly-gly-gly" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Pentaglycine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>4</solutionId>
+    <localNum>A04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="3,5-Dinitrosalicylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="4-Aminobenzoic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Salicylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Trimesic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>5</solutionId>
+    <localNum>A05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="4-Nitrobenzoic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="5-Sulfosalicylic acid dihydrate" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Naphthalene-1,3,6-trisulfonic acid trisodium salt hydrate" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>6</solutionId>
+    <localNum>A06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="2,6-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="2,7-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Anthraquinone-2,6-disulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>7</solutionId>
+    <localNum>A07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,5-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="33" concentrationUnits="Percent w/v" />
+     <component name="Naphthalene-1,3,6-trisulfonic acid trisodium salt hydrate" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="PIPES" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>8</solutionId>
+    <localNum>A08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="3,5-Dinitrosalicylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sodium 1-pentanesulfonate monohydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="3-Aminosalicylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Salicylamide" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>9</solutionId>
+    <localNum>A09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="L-Histidine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="L-Isoleucine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="L-Leucine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="L-Phenylalanine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="L-Tryptophan" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="L-Tyrosine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>10</solutionId>
+    <localNum>A10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="D-(+)-Trehalose dihydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Guanidine hydrochloride" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Phenol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Trimethylamine N-oxide dihydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Urea" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>11</solutionId>
+    <localNum>A11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="2,5-Pyridinedicarboxylic acid" type="additive" concentration="33" concentrationUnits="Percent w/v" />
+     <component name="4-Nitrobenzoic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Mellitic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>12</solutionId>
+    <localNum>A12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Benzidine" type="additive" concentration="25.0" concentrationUnits="Percent w/v" />
+     <component name="Sulfaguanidine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Phenylglyoxal monohydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sulfanilamide" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>13</solutionId>
+    <localNum>B01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Anthrone" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Congo Red" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="N-(2-Acetamido)-2-aminoethanesulfonic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>14</solutionId>
+    <localNum>B02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Trimesic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="5-Sulfosalicylic acid dihydrate" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="1,3,5-Pentanetricarboxylic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>15</solutionId>
+    <localNum>B03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="5-Sulfoisophthalic acid monosodium salt" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Cystathionine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Dithioerythritol" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="L-Citrulline" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>16</solutionId>
+    <localNum>B04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="3,5-Dinitrosalicylic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="5-Sulfosalicylic acid dihydrate" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="3-Aminobenzenesulfonic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>17</solutionId>
+    <localNum>B05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="2,7-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Azelaic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="trans-Cinnamic acid" type="additive" concentration="0.33" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>18</solutionId>
+    <localNum>B06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="2,6-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="2-Aminobenzenesulfonic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="m-Benzenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>19</solutionId>
+    <localNum>B07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="5-Sulfoisophthalic acid monosodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="1,4-Cyclohexanedicarboxylic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="2,2'-Thiodiglycolic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>20</solutionId>
+    <localNum>B08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Salicylic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="3-Aminosalicylic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="3-Aminobenzoic acid" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>21</solutionId>
+    <localNum>B09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Salicylamide" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sulfanilamide" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Hexamminecobalt(III) chloride" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Vanillic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>22</solutionId>
+    <localNum>B10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Sulfaguanidine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="p-Coumaric acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Phenylurea" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Poly(3-hydroxybutyric acid)" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>23</solutionId>
+    <localNum>B11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,4-Cyclohexanedicarboxylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="1,2-Diaminocyclohexane sulfate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Methylenediphosphonic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sulfanilic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>24</solutionId>
+    <localNum>B12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="D-Fructose 1,6-diphosphate trisodium salt octahydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="D-Glucose 6-phosphate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="L-O-Phosphoserine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="O-Phospho-L-tyrosine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>25</solutionId>
+    <localNum>C01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Benzamidine hydrochloride" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="L-Carnitine hydrochloride" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="L-Cystine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="L-Ornithine hydrochloride" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>26</solutionId>
+    <localNum>C02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Dithioerythritol" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Caffeine" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="L-Methionine" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>27</solutionId>
+    <localNum>C03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Gly-gly-gly-gly" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Ala-ala" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Ala-gly" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Leu-gly-gly" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>28</solutionId>
+    <localNum>C04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Aspartame" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Gly-asp" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Gly-ser" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Ser-tyr" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Tyr-phe" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>29</solutionId>
+    <localNum>C05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Ala-ala" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Leu-gly-gly" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Aspartame" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Gly-tyr" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Ser-Glu" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Tyr-ala" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />    </components>
+   </solution>
+   <solution>
+   <solutionId>30</solutionId>
+    <localNum>C06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Leu-gly-gly" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Gly-tyr" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Gly-phe" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>31</solutionId>
+    <localNum>C07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Gly-gly" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Ala-ala" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Gly-asp" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Gly-ser" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Ser-tyr" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Gly-phe" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>32</solutionId>
+    <localNum>C08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Glycine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-(-)-Threonine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-(+)-Lysine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Alanine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Arginine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Asparagine monohydrate" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Aspartic acid" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Glutamic acid" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Glutamine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Proline" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Serine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Valine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Histidine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Isoleucine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Leucine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Phenylalanine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Tryptophan" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Tyrosine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Methionine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>33</solutionId>
+    <localNum>C09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="D-(+)-Trehalose dihydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="D-(+)-Maltose monohydrate" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="D-(+)-Melibiose monohydrate" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="D-(+)-Raffinose pentahydrate" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="Stachyose hydrate" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>34</solutionId>
+    <localNum>C10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="D-(+)-Raffinose pentahydrate" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+     <component name="Stachyose hydrate" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+     <component name="beta-Cyclodextrin" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+     <component name="D-(+)-Cellobiose" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+     <component name="D-(+)-Maltotriose" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+     <component name="D-(+)-Melezitose hydrate" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>35</solutionId>
+    <localNum>C11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Pyromellitic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Mellitic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Azelaic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="trans-Cinnamic acid" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+     <component name="m-Benzenedisulfonic acid disodium salt" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Pimelic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>36</solutionId>
+    <localNum>C12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Anthraquinone-2,6-disulfonic acid disodium salt" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="N-(2-Acetamido)-2-aminoethanesulfonic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="5-Sulfoisophthalic acid monosodium salt" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Tetrahydroxy-1,4-benzoquinone hydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>37</solutionId>
+    <localNum>D01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="5-Sulfosalicylic acid dihydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="1,3,5-Pentanetricarboxylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="o-Sulfobenzoic acid monoammonium salt" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sodium 4-aminosalicylate dihydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>38</solutionId>
+    <localNum>D02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Hexamminecobalt(III) chloride" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="CHAPS" type="additive" concentration="0.06" concentrationUnits="M" />
+     <component name="HEPES" type="additive" concentration="0.06" concentrationUnits="M" />
+     <component name="Tris" type="additive" concentration="0.06" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>39</solutionId>
+    <localNum>D03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="PIPES" type="additive" concentration="0.06" concentrationUnits="M" />
+     <component name="Hexamminecobalt(III) chloride" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="MES monohydrate" type="additive" concentration="0.06" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>40</solutionId>
+    <localNum>D04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Benzamidine hydrochloride" type="additive" concentration="0.05" concentrationUnits="M" />
+     <component name="Gadolinium(III) chloride hexahydrate" type="additive" concentration="0.005" concentrationUnits="M" />
+     <component name="Samarium(III) chloride hexahydrate" type="additive" concentration="0.005" concentrationUnits="M" />
+     <component name="Salicin" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>41</solutionId>
+    <localNum>D05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Calcium chloride dihydrate" type="additive" concentration="0.004" concentrationUnits="M" />
+     <component name="Magnesium chloride hexahydrate" type="additive" concentration="0.004" concentrationUnits="M" />
+     <component name="Manganese(II) chloride tetrahydrate" type="additive" concentration="0.004" concentrationUnits="M" />
+     <component name="Zinc chloride" type="additive" concentration="0.004" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>42</solutionId>
+    <localNum>D06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Cadmium chloride hydrate" type="additive" concentration="0.004" concentrationUnits="M" />
+     <component name="Cobalt(II) chloride hexahydrate" type="additive" concentration="0.004" concentrationUnits="M" />
+     <component name="Copper(II) chloride dihydrate" type="additive" concentration="0.004" concentrationUnits="M" />
+     <component name="Nickel(II) chloride hexahydrate" type="additive" concentration="0.004" concentrationUnits="M" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>43</solutionId>
+    <localNum>D07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="3,5-Dinitrosalicylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Naphthalene-1,3,6-trisulfonic acid trisodium salt hydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="3-Indolebutyric acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="trans-1,2-Cyclohexanedicarboxylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>44</solutionId>
+    <localNum>D08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Trimethylamine N-oxide dihydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="L-Glutamic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="L-Proline" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Betaine anhydrous" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Taurine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>45</solutionId>
+    <localNum>D09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="4-Nitrobenzoic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="1,2-Diaminocyclohexane sulfate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Cystamine dihydrochloride" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Spermine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>46</solutionId>
+    <localNum>D10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,5-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="2,7-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="5-Sulfoisophthalic acid monosodium salt" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sulfanilic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>47</solutionId>
+    <localNum>D11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="4-Aminobenzoic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="5-Sulfosalicylic acid dihydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Naphthalene-1,3,6-trisulfonic acid trisodium salt hydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="2,6-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>48</solutionId>
+    <localNum>D12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Rhenium(IV) oxide" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="Sodium bromide" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="Sodium nitrate" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="Sodium phosphate dibasic dihydrate" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="Sodium tetraborate decahydrate" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>49</solutionId>
+    <localNum>E01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Nicotinamide" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Caffeine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Cytosine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Gallic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Sodium pyrophosphate tetrabasic decahydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>50</solutionId>
+    <localNum>E02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Dextran sulfate sodium salt" type="additive" concentration="1.0" concentrationUnits="Percent w/v" />
+     <component name="Dextranase" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="alpha-Amylase" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>51</solutionId>
+    <localNum>E03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Tryptone" type="additive" concentration="1.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>52</solutionId>
+    <localNum>E04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Protamine sulfate" type="additive" concentration="1.0" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>53</solutionId>
+    <localNum>E05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Deoxyribonuclease I" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="Deoxyribonucleic acid" type="additive" concentration="0.5" concentrationUnits="Percent w/v" />
+     <component name="Ribonuclease A" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="Ribonucleic acid" type="additive" concentration="0.5" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>54</solutionId>
+    <localNum>E06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Casein" type="additive" concentration="0.5" concentrationUnits="Percent w/v" />
+     <component name="Hemoglobin" type="additive" concentration="0.5" concentrationUnits="Percent w/v" />
+     <component name="Pepsin" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="Protease" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="Proteinase K" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="Trypsin" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>55</solutionId>
+    <localNum>E07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Ovalbumin" type="additive" concentration="1.0" concentrationUnits="Percent w/v" />
+     <component name="Pepsin" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="Proteinase K" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+     <component name="Trypsin" type="additive" concentration="0.005" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>56</solutionId>
+    <localNum>E08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Glycine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="D-Sorbitol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="myo-Inositol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Sarcosine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>57</solutionId>
+    <localNum>E09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Cystamine dihydrochloride" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Spermine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Sarcosine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,4-Diaminobutane" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Diloxanide furoate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     </components>
+   </solution>
+   <solution>
+   <solutionId>58</solutionId>
+    <localNum>E10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,2-Diaminocyclohexane sulfate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Spermine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="1,8-Diaminooctane" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Cadaverine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>59</solutionId>
+    <localNum>E11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Sulfaguanidine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,2-Diaminocyclohexane sulfate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Spermine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Diloxanide furoate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Fumaric acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>60</solutionId>
+    <localNum>E12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Cystamine dihydrochloride" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="1,4-Diaminobutane" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,8-Diaminooctane" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Cadaverine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Spermidine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>61</solutionId>
+    <localNum>F01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Methylenediphosphonic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sodium pyrophosphate tetrabasic decahydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Phytic acid sodium salt hydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Sodium triphosphate pentabasic" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>62</solutionId>
+    <localNum>F02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Phytic acid sodium salt hydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="D-Fructose 1,6-diphosphate trisodium salt octahydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="L-O-Phosphoserine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="O-Phospho-L-tyrosine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Glycerol phosphate disodium salt hydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>63</solutionId>
+    <localNum>F03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="L-Ornithine hydrochloride" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="L-(+)-Lysine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Taurine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="4-Aminobutyric acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="6-Aminohexanoic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="beta-Alanine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>64</solutionId>
+    <localNum>F04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="L-Citrulline" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="L-Carnitine hydrochloride" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="L-Arginine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Taurine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="L-Canavanine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>65</solutionId>
+    <localNum>F05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,2,3-Heptanetriol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,3-Propanediol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,6-Hexanediol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Resorcinol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>66</solutionId>
+    <localNum>F06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="D-Sorbitol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Glycerol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,2,3-Heptanetriol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="(+/-)-2-Methyl-2,4-pentanediol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Diethylenetriaminepentakis(methylphosphonic acid)" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>67</solutionId>
+    <localNum>F07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Tetrahydroxy-1,4-benzoquinone hydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Betaine anhydrous" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Barbituric acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Phloroglucinol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>68</solutionId>
+    <localNum>F08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="myo-Inositol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,4-Butanediol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,6-Hexanediol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Diethylenetriaminepentakis(methylphosphonic acid)" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Phloroglucinol" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>69</solutionId>
+    <localNum>F09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Nicotinamide" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Benzamidine hydrochloride" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Salicin" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Congo Red" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="6-Aminohexanoic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>70</solutionId>
+    <localNum>F10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Anthrone" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Phenylurea" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="N-(2-Acetamido)-2-aminoethanesulfonic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Benzidine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="beta-Alanine" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>71</solutionId>
+    <localNum>F11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Sodium 1-pentanesulfonate monohydrate" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Salicylamide" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Cytosine" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="4-Aminobutyric acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>72</solutionId>
+    <localNum>F12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Pimelic acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Fumaric acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Dodecanedioic acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Glutaric acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Hexadecanedioic acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Maleic acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Oxamic acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Sebacic acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+     <component name="Suberic acid" type="additive" concentration="0.11" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>73</solutionId>
+    <localNum>G01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="5-Sulfosalicylic acid dihydrate" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Mellitic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Suberic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Dodecanedioic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Hippuric acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Oxalacetic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>74</solutionId>
+    <localNum>G02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="2,2'-Thiodiglycolic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Adipic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Benzoic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Oxalic acid anhydrous" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Terephthalic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>75</solutionId>
+    <localNum>G03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Mellitic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Azelaic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="2,2'-Thiodiglycolic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="trans-Aconitic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>76</solutionId>
+    <localNum>G04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Pyromellitic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="3-Indolebutyric acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Hexadecanedioic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Oxamic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Sebacic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Suberic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>77</solutionId>
+    <localNum>G05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,3,5-Pentanetricarboxylic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Poly(3-hydroxybutyric acid)" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="Benzoic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+     <component name="4-Hydroxyphenylacetic acid" type="additive" concentration="0.25" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>78</solutionId>
+    <localNum>G06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Mellitic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="trans-Cinnamic acid" type="additive" concentration="0.16" concentrationUnits="Percent v/v" />
+     <component name="Pimelic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Glutaric acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    <component name="Sebacic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Oxalic acid anhydrous" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>79</solutionId>
+    <localNum>G07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="4-Aminobenzoic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Azelaic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="p-Coumaric acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="o-Sulfobenzoic acid monoammonium salt" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Sodium 4-aminosalicylate dihydrate" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>80</solutionId>
+    <localNum>G08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Salicylic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Trimesic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="3-Aminobenzenesulfonic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="3-Aminobenzoic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Hippuric acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Oxalacetic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>81</solutionId>
+    <localNum>G09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="3-Aminobenzenesulfonic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="3-Indolebutyric acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Barbituric acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Terephthalic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="4-Hydroxyphenylacetic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>82</solutionId>
+    <localNum>G10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="2,5-Pyridinedicarboxylic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="1,4-Cyclohexanedicarboxylic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="trans-1,2-Cyclohexanedicarboxylic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Glutaric acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="trans-Aconitic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>83</solutionId>
+    <localNum>G11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Tacsimate" type="additive" concentration="10" concentrationUnits="Percent v/v" pH="7" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>84</solutionId>
+    <localNum>G12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Gallic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Benzenephosphonic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Melatonin" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="N-(2-carboxyethyl)-iminodiacetic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Trimellitic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>85</solutionId>
+    <localNum>H01</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="L-Alanine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Arginine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Asparagine monohydrate" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Aspartic acid" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Glutamic acid" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Glutamine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="Glycine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Histidine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Isoleucine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Leucine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-(+)-Lysine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Methionine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Phenylalanine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Proline" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Serine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-(-)-Threonine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Tryptophan" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Tyrosine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+     <component name="L-Valine" type="additive" concentration="0.05" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>86</solutionId>
+    <localNum>H02</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Ala-ala" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Ala-gly" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Gly-asp" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Ser-Glu" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Gly-phe" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>87</solutionId>
+    <localNum>H03</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="3,5-Dinitrosalicylic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="4-Aminobenzoic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Mellitic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Hexamminecobalt(III) chloride" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Benzamidine hydrochloride" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>88</solutionId>
+    <localNum>H04</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Cystamine dihydrochloride" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Spermine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Spermidine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="1,4-Diaminobutane" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="1,8-Diaminooctane" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Cadaverine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>89</solutionId>
+    <localNum>H05</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Trimesic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Sulfanilic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="4-Aminobutyric acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="6-Aminohexanoic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="beta-Alanine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Oxamic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>90</solutionId>
+    <localNum>H06</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="D-3-Phosphoglyceric acid disodium salt" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="D-Fructose 1,6-diphosphate trisodium salt octahydrate" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="D-Glucose 6-phosphate" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="L-O-Phosphoserine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="O-Phospho-L-tyrosine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Phytic acid sodium salt hydrate" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>91</solutionId>
+    <localNum>H07</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="1,3,5-Pentanetricarboxylic acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+     <component name="Azelaic acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+     <component name="Pimelic acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+     <component name="Sebacic acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+     <component name="Suberic acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+     <component name="Dodecanedioic acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+     <component name="Glutaric acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+     <component name="Hexadecanedioic acid" type="additive" concentration="0.0625" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>92</solutionId>
+    <localNum>H08</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="4-Nitrobenzoic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="1,5-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.33" concentrationUnits="Percent w/v" />
+     <component name="Naphthalene-1,3,6-trisulfonic acid trisodium salt hydrate" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="2,6-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="2,7-Naphthalenedisulfonic acid disodium salt" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="m-Benzenedisulfonic acid disodium salt" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>93</solutionId>
+    <localNum>H09</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="2,5-Pyridinedicarboxylic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Pyromellitic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="Salicylic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+     <component name="trans-Cinnamic acid" type="additive" concentration="0.2" concentrationUnits="Percent v/v" />
+     <component name="trans-1,2-Cyclohexanedicarboxylic acid" type="additive" concentration="0.2" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>94</solutionId>
+    <localNum>H10</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="5-Sulfosalicylic acid dihydrate" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="PIPES" type="additive" concentration="0.16" concentrationUnits="M" />
+     <component name="3-Aminobenzenesulfonic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Vanillic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="p-Coumaric acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Terephthalic acid" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>95</solutionId>
+    <localNum>H11</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Benzidine" type="additive" concentration="0.07" concentrationUnits="Percent w/v" />
+     <component name="Mellitic acid" type="additive" concentration="0.07" concentrationUnits="Percent w/v" />
+     <component name="Cystathionine" type="additive" concentration="0.07" concentrationUnits="Percent w/v" />
+     <component name="L-Carnitine hydrochloride" type="additive" concentration="0.07" concentrationUnits="Percent w/v" />
+     <component name="L-Cystine" type="additive" concentration="0.07" concentrationUnits="Percent w/v" />
+     <component name="L-Canavanine" type="additive" concentration="0.07" concentrationUnits="Percent w/v" />
+     <component name="Barbituric acid" type="additive" concentration="0.07" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+   <solution>
+   <solutionId>96</solutionId>
+    <localNum>H12</localNum>
+    <components>
+     <component name="HEPES-Na" type="buffer" concentration="0.02" concentrationUnits="M" pH="6.8" />
+     <component name="Gly-gly-gly" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Pentaglycine" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Leu-gly-gly" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Aspartame" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Tyr-phe" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+     <component name="Tyr-ala" type="additive" concentration="0.16" concentrationUnits="Percent w/v" />
+    </components>
+   </solution>
+  </solutions>
+ </screen> 

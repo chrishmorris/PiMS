@@ -1,0 +1,36 @@
+/* TODO make this svn:external */
+/*
+ * Styles for "View Protocol" - for v0.5
+ */
+#prot_description { border:1px solid #666; background-color:white; color:#006;  padding:0.5em;  }
+.prot_dummyform { background:transparent;display:inline; }
+.prot_desc_line   {  }
+div.prot_desc_indent { margin-left:2.5em; }
+.prot_desc_stepmarker { width:auto; float:left; clear:left; font-weight:bold; padding: 0 2px; }
+.prot_desc_bulletmarker { width:auto; float:left;clear:left;  font-weight:bold; padding: 0 2px; }
+#prot_params_notindesc { border-bottom:1px solid #006; }
+span.prot_desc_param { background-color:#ff6; padding: 0 2px; }
+span.prot_desc_unknownparam { background-color:#f99; color:#300; padding:0 2px; }
+div.prot_param { font-size:10pt; font-family:arial,helvetica,sans-serif;background-color:#ccf; color:#003; padding:0.2em; border-top:1px solid #006; }
+div.prot_unknownparam { font-size:10pt; font-family:arial,helvetica,sans-serif;background-color:#f99; color:#300; padding:0.3em 0.2em; border-top:1px solid #006; }
+img.prot_param_icon { float:left; position:relative; top:0 }
+img.prot_inlineparam_icon { position:relative; top:2px }
+div.prot_param_details { margin-left:20px; }
+.prot_param_name { font-weight:bold; }
+div#prot_basicdetails { background-color:#ccf; color:#006; padding:0.2em 0.5em; margin-bottom:0.2em; margin-top:0.2em; }
+div#prot_descandparams { background-color:#ccf; color:#006; padding:0.2em 0.5em; margin-bottom:0.2em; }
+div#prot_paramlist { float:right; width:30%; }
+div#prot_descriptionwrapper { margin-right:31% } 
+div#prot_params_indesc { border-bottom:1px solid #006; margin-bottom:0.5em; }
+
+/*
+ * Action bar (view and edit) styles
+ */
+a.prot_actionbar_actionlink:link,a.prot_actionbar_actionlink:visited { height:100%;width:100%; display:block; background-color:#006; color:white; text-decoration:none; font-weight:bold; text-align:center;}
+a.prot_actionbar_actionlink:hover,a.prot_actionbar_actionlink:active { background-color:#ccf; color:#006; }
+div#prot_actionbar {  background-color:#006; padding:0; text-align:center; font-family:arial,helvetica,sans-serif; font-size:85%; height:2.5em; text-align:left }
+div#prot_actionbar ul.prot_actionbar_viewmenu { margin:0 0.5% 0 1%; list-style-type:none; color:#006; }
+div#prot_actionbar ul.prot_actionbar_viewmenu li {float:left; width:19%; height:2.5em; list-style-type:none; list-style-position:outside;color:#f99;
+                          border-left:1px solid white; border-right:1px solid white; text-align:center }
+div.prot_actionbar_editerror { background-color:#f99; color:#300; line-height:2.5em; font-weight:bold; text-align:center; font-family:arial,helvetica,sans-serif;font-size:85%; }
+div.prot_actionbar_edit { line-height:2.5em; font-weight:bold; text-align:center; }

@@ -1,0 +1,180 @@
+INSTALLING PIMS FOR DEVELOPMENT.
+
+================================================================================
+SOURCE CODE.
+================================================================================
+PiMS source code is in a Subversion repository at
+   https://www.pims-lims.org/svn/pims/
+You can browse this with any web browser.
+
+================================================================================
+SUBVERSION CLIENT.
+================================================================================
+If your HTTP access is through a proxy,
+note that then the proxy must support the WebDAV extensions to HTTP,
+including the REPORT and PROPFIND requests.
+
+For Windows users, we recommend tortoisesvn:
+   http://tortoisesvn.tigris.org/
+This provides all the facilities of Subversion.
+The eclipse plug-in offers only a subset.
+For Linux users, you can install Subversion and use the command line.
+
+Reference material on Subversion is at
+   http://svnbook.red-bean.com/en/1.2/svn-book.html
+The commands are a superset to CVS commands.
+
+Check out
+   https://www.pims-lims.org/svn/pims/current
+e.g. to
+   C:\current
+
+================================================================================
+GIT CLIENT.
+================================================================================
+
+For Windows users, we recommend tortoisegit.
+This provides all the facilities of Git.
+The eclipse plug-in offers only a subset.
+For Linux users, you can install Git and use the command line.
+
+Reference material on Git is at
+   *
+
+Clone:
+   *
+
+================================================================================
+ECLIPSE.
+================================================================================
+>>> download version.
+Eclipse IDE for Java EE Developers Indigo. 
+
+>>> If you are behind an HTTP Proxy then add to eclipse.ini:
+
+-Dorg.eclipse.ecf.provider.filetransfer.excludeContributors=org.eclipse.ecf.provider.filetransfer.httpclient
+-Dhttp.proxyPort=8080
+-Dhttp.proxyHost=myproxy
+-Dhttp.proxyUser=mydomain\myusername
+-Dhttp.proxyPassword=mypassword
+-Dhttp.nonProxyHosts=localhost|127.0.0.1
+
+and go to:
+Window > Preferences ... General > Network Connections (configure HTTP Proxy)
+You may need to try each of Manual, Direct, and Native settings.
+Also 
+
+>>> Install these plugins:
+- subclipse [http://subclipse.tigris.org/]
+- EGit [http://download.eclipse.org/egit/updates]
+- emma [http://update.eclemma.org/]
+- checkstyle [http://eclipse-cs.sourceforge.net/update/]
+- jshint [jshint - http://github.eclipsesource.com/jshint-eclipse/updates/]
+To do this, go to Help > Software Updates ..., choose the tab "Available Software". 
+Three times, click the button "Add Site" so you can enter each of the URLs above.
+Tick the checkboxes to indicate that you want the software, and click Install.
+
+In case of 64 bit machine, the subclipse needs to be installed in a slightly different way. 
+To do this, go to Help > Install New Software 
+in the Work with column, provide http://subclipse.tigris.org/update_1.8.x as the link 
+Click on Add > Provide Name as Subclipse 1.8.x. Click on OK.
+Once this is done, a selection of Subclipse and SVNKit checkboxes will appear.
+Select Subclipse, Click Next > Accept the terms of the licence aggreement, Click Finish.
+
+
+>>> configure for PiMS. in eclipse: Window > Preferences ...
+Window > Preferences ... General > Editors > Text Editors
+   tick "Insert spaces for tabs"
+Window > Preferences ... General > Network Connections (configure HTTP Proxy)
+Window > Preferences ... General > Network Connections > SSH2 
+   set SSH2 Home to C:\Users\${userid}\.ssh
+Window > Preferences ... General > Workspace
+   set "Text file encoding" to UTF-8
+
+Window > Preferences ... Ant > Runtime
+   select "Ant Home Entries (Default)" and click on "Add External Jar"
+   navigate to the plugins directory in your eclipse installation,
+   and select org.junit4/junit.jar (or similar).
+
+Window > Preferences ... Checkstyle
+   click New...,
+      Type: External Configuration File
+      Name: PiMS
+      Location: current/pims-web/conf/checkstyle.xml
+   select & click Set as Default
+
+Window > Preferences ... Java > Code Style
+   tick all the boxes, especially:
+   "Enable project Specific Properties"
+   "Automatically add comments for new methods and types"
+   
+   
+
+Window > Preferences ... Java > Installed JREs
+   add your JDK and click edit: "Default VM Arguments", type -enableassertions
+Window > Preferences ... Server > Runtime Environments
+   add your Tomcat instance. This is required for xtalPiMS to compile.
+
+
+>>> import PiMS into workspace.
+File > Import ... General > Existing Projects into Workspace
+   click "Next >" and navigate to C:\current\pims-web
+
+At first, you may not have the toolbar on the screen. To see it, change into
+the "Java EE" perspective, then back into the "Java" perspective.
+
+The files you have checked out include current/.classpath which sets the
+properties in Project > Properties > Java Build Path. If you check in any
+changes to these properties, please ensure that file paths are relative.
+
+================================================================================
+POSTGTRES DATABASE.
+================================================================================
+To initialise the database, please See:
+   "INSTALLATION OF THE PIMS DATABASE",in README.txt
+
+================================================================================
+TOMCAT.
+================================================================================
+When you finish work, you will want to package a release as a war file. See release.txt.
+While developing, you want a faster way to run your code. 
+See RunningFromSource.txt.
+
+================================================================================
+DOCUMENTATION.
+================================================================================
+This release contains the data model for protein production,
+represented by Java classes. It also has an API on top of it, in package
+org.pimslims.metamodel, which will allow extensions to support user roles
+(access rights), transactional safety, etc.
+
+Javadoc is available at:
+    	http://www.pims-lims.org/api/
+    	http://www.pims-lims.org/model/javadoc/
+
+PiMS includes JUnit tests. See the TestSource folders, and the "test" and targets.
+
+================================================================================
+PiMS CODE TEMPLATES.
+================================================================================
+
+In Window>Preferences..., go to Java>Editor>Templates and click "Import".
+    Choose conf/editortemplates.xml.
+Window > Preferences ... Java > Code Style > Code Templates
+   click Import... & choose: current/pims-web/conf/codetemplates.xml
+Window > Preferences ... Java > Code Style > Formatter
+   click Import... & choose: current/pims-web/conf/PiMSCodeConventions.xml
+Window > Preferences ... Web > JSP Files > Editor > Templates
+   click "New..."
+      Name: PiMS JSP
+      Context: "New JSP"
+      Pattern: paste from current/pims-web/conf/pims_JSP_template.txt
+
+These code templates include the statement:
+    "The copyright holder has licenced the STFC to redistribute this software."
+By submitting code to the PiMS code repository, you are agreeing the
+the PiMS Contributor Licence Agreement. Please contact
+    pims-defects@dl.ac.uk
+for a copy.
+
+

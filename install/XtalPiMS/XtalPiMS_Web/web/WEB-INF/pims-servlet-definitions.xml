@@ -1,0 +1,1027 @@
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Generic servlets
+...................................................
+
+The expert perspective.
+They work for any class in the data model.
+They can be overridden with custom behaviour
+to provide a better user interface, specific to the class concerned.
+ -->
+
+
+<!-- TODO Leeds  
+    <servlet>
+        <description>JAX-WS endpoint - fileUpload</description>
+        <servlet-name>FileUpload</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    </servlet>
+   <servlet>
+        <servlet-name>FileUploadBackToReferer</servlet-name>
+        <servlet-class>org.pimslims.servlet.sequencing.FileUploadBackToReferer</servlet-class>
+   </servlet>
+   
+    <servlet>
+        <servlet-name>AjaxFileUpload</servlet-name>
+        <servlet-class>org.pimslims.servlet.AjaxFileUpload</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>FileUploadStatus</servlet-name>
+        <servlet-class>org.pimslims.servlet.FileUploadStatus</servlet-class>
+    </servlet> -->
+    <servlet>
+        <servlet-name>Create</servlet-name>
+        <servlet-class>org.pimslims.servlet.Create</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>CreateDNA</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.CreateDNA</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AjaxCreate</servlet-name>
+        <servlet-class>org.pimslims.servlet.AjaxCreate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AjaxRemove</servlet-name>
+        <servlet-class>org.pimslims.servlet.ajax.AjaxRemove</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AjaxExists</servlet-name>
+        <servlet-class>org.pimslims.servlet.AjaxExists</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AjaxValidate</servlet-name>
+        <servlet-class>org.pimslims.servlet.AjaxValidate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>View</servlet-name>
+        <servlet-class>org.pimslims.servlet.View</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Export</servlet-name>
+        <servlet-class>org.pimslims.servlet.Export</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DayServlet</servlet-name>
+        <servlet-class>org.pimslims.servlet.DayServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WeekServlet</servlet-name>
+        <servlet-class>org.pimslims.servlet.WeekServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TaroListener</servlet-name>
+        <servlet-class>org.pimslims.servlet.tarointegration.TaroListener</servlet-class>
+    </servlet>
+    
+    <!-- obsolete 
+    <servlet>
+        <servlet-name>SetupPlate</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.SetupPlate</servlet-class>
+    </servlet>  -->
+    <servlet>
+        <servlet-name>ExpertView</servlet-name>
+        <servlet-class>org.pimslims.servlet.expert.View</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Delete</servlet-name>
+        <servlet-class>org.pimslims.servlet.Delete</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>DeleteAndBackToReferer</servlet-name>
+        <servlet-class>org.pimslims.servlet.DeleteAndBackToReferer</servlet-class>
+    </servlet>
+    <servlet> <!-- obsolete -->
+        <servlet-name>TargetProgress</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.TargetProgress</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>LocalSW</servlet-name>
+        <servlet-class>org.pimslims.servlet.Blast.LocalSW</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Update</servlet-name>
+        <servlet-class>org.pimslims.servlet.Update</servlet-class>
+    </servlet>
+    
+    <!-- obsolete, now in annotation -->
+    <servlet>
+        <servlet-name>Notes</servlet-name>
+        <servlet-class>org.pimslims.servlet.Notes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExternalDbLinks</servlet-name>
+        <servlet-class>org.pimslims.servlet.ExternalDbLinks</servlet-class>
+    </servlet>
+
+    
+    <!-- obsolete  
+     <servlet>
+        <servlet-name>ExperimentWizardCreate</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.ExperimentWizardCreate</servlet-class>
+    </servlet> -->
+    
+    <servlet>
+        <servlet-name>UpdateInputSamples</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.UpdateInputSamples</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateOutputSamples</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.UpdateOutputSamples</servlet-class>
+    </servlet>
+    
+    <!-- Searvlets for Search -->
+    <servlet>
+        <servlet-name>SearchConstruct</servlet-name>
+        <servlet-class>org.pimslims.servlet.construct.SearchConstruct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchExperiment</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.SearchExperiment</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchExperimentGroup</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.SearchPlate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchProtocol</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.SearchProtocol</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchTarget</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.SearchTarget</servlet-class>
+    </servlet>
+    
+    
+<!-- TODO Leeds -->
+    <servlet>
+        <servlet-name>SearchPrimers</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.SearchPrimers</servlet-class>
+    </servlet>
+ 
+    <servlet>
+        <servlet-name>SearchSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.SearchSample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuickSearch</servlet-name>
+        <servlet-class>org.pimslims.servlet.QuickSearch</servlet-class>
+    </servlet>
+    
+
+
+
+    <!--  now in annotation  -->
+    <servlet>
+        <servlet-name>ListFiles</servlet-name>
+        <servlet-class>org.pimslims.servlet.ListFiles</servlet-class>
+    </servlet>
+    
+    <!-- obsolete -->
+    <servlet>
+        <servlet-name>ImportFiles</servlet-name>
+        <servlet-class>org.pimslims.servlet.ImportFiles</servlet-class>
+    </servlet>
+    
+    <!--  now in annotation  -->
+    <servlet>
+        <servlet-name>DoListFiles</servlet-name>
+        <servlet-class>org.pimslims.servlet.DoListFiles</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>EditRole</servlet-name>
+        <servlet-class>org.pimslims.servlet.EditRole</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListRole</servlet-name>
+        <servlet-class>org.pimslims.servlet.ListRole</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChooseComponentForRecipe</servlet-name>
+        <servlet-class>org.pimslims.servlet.ChooseComponentForRecipe</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    <servlet>
+        <servlet-name>ChooseForCreate</servlet-name>
+        <servlet-class>org.pimslims.servlet.ChooseForCreate</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    
+    <!-- now annotation -->
+    <servlet>
+        <servlet-name>ViewFile</servlet-name>
+        <servlet-class>org.pimslims.servlet.ViewFile</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    <servlet>
+        <servlet-name>Copy</servlet-name>
+        <servlet-class>org.pimslims.servlet.Copy</servlet-class>
+    </servlet>
+    
+    <!-- obsolete -->
+    <servlet>
+        <servlet-name>CopyRecipe</servlet-name>
+        <servlet-class>org.pimslims.servlet.recipe.CopyRecipe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Barcode</servlet-name>
+        <servlet-class>org.pimslims.servlet.Barcode</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+
+
+
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Standard perspective
+...................................................
+ -->
+
+    <servlet><!-- obsolete -->
+        <servlet-name>ViewProject</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.ViewProject</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewUser</servlet-name>
+        <servlet-class>org.pimslims.servlet.access.ViewUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserGroupPermissions</servlet-name>
+        <servlet-class>org.pimslims.servlet.access.UserGroups</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewHolder</servlet-name>
+        <servlet-class>org.pimslims.servlet.holder.ViewHolder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewHolderContents</servlet-name>
+        <servlet-class>org.pimslims.servlet.holder.ViewHolderContents</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.ViewSample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewExpressionObjective</servlet-name>
+        <servlet-class>org.pimslims.servlet.construct.ViewExpressionObjective</servlet-class>
+    </servlet>
+    <servlet><!--  obsolete -->
+        <servlet-name>MoveLocation</servlet-name>
+        <servlet-class>org.pimslims.servlet.location.MoveObject</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Move</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.Move</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DivideSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.DivideSample</servlet-class>
+    </servlet>
+    <!-- obsolete <servlet>
+        <servlet-name>UpdateSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.UpdateSample</servlet-class>
+    </servlet> -->
+    
+    <servlet>
+        <servlet-name>AddSampleCategory</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.AddSampleCategory</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewRefSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.ViewRefSample</servlet-class>
+    </servlet>
+    
+    <servlet><!-- obsolete -->
+        <servlet-name>ViewLocation</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.ViewLocation</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ViewExtension</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.ViewExtension</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewHost</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.ViewHost</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HostList</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.HostList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PlasmidStockList</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.PlasmidStockList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CellStockList</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.CellStockList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VectorList</servlet-name>
+        <servlet-class>org.pimslims.servlet.construct.VectorList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewParent</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.ViewParent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewExperiment</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.ViewExperiment</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExperimentUpdate</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.ExperimentUpdate</servlet-class>
+    </servlet>
+    
+    <servlet><!-- obsolete -->
+        <servlet-name>UserGroupUpdate</servlet-name>
+        <servlet-class>org.pimslims.servlet.usergroup.UpdateUserGroup</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SampleProgress</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.SampleProgress</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WeekOldSamples</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.WeekOldSamples</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewSamples</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.NewSamples</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AssignedSamples</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.AssignedSamples</servlet-class>
+    </servlet>
+    <!-- obsolete -->
+    <servlet>
+        <servlet-name>WeekOldConstructs</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.WeekOldConstructs</servlet-class>
+    </servlet>
+<!--
+...................................................
+SERVLET DEFINITIONS - Framework
+...................................................
+
+These provide the skeleton of the web application:
+logging in, logging out, a front page, error pages,
+and test facilities
+ -->
+   
+    <!-- 
+    <servlet>
+        <servlet-name>Index</servlet-name>
+        <jsp-file>/JSP/core/Index.jsp</jsp-file>
+    </servlet> -->
+    <servlet>
+        <servlet-name>Bookmark</servlet-name>
+        <servlet-class>org.pimslims.servlet.Bookmark</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>PasswordChange</servlet-name>
+        <servlet-class>org.pimslims.servlet.PasswordChange</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>org.pimslims.servlet.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>org.pimslims.servlet.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Denied</servlet-name>
+        <servlet-class>org.pimslims.servlet.Denied</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ErrorPage</servlet-name>
+        <servlet-class>org.pimslims.servlet.ErrorPage</servlet-class>
+    </servlet>
+    <!-- obsolete -->
+    <servlet>
+        <servlet-name>ConstraintErrorPage</servlet-name>
+        <servlet-class>org.pimslims.servlet.ConstraintErrorPage</servlet-class>
+    </servlet>
+    
+    
+    
+    
+    <servlet>
+        <servlet-name>FindJsp</servlet-name>
+        <servlet-class>org.pimslims.servlet.FindJsp</servlet-class>
+    </servlet>
+    
+    
+   
+
+    
+    <!-- TODO obsolete -->
+     <servlet>
+        <servlet-name>Display</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.DisplaySessionData</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    <servlet>
+        <servlet-name>Crash</servlet-name>
+        <servlet-class>org.pimslims.servlet.Crash</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    <servlet>
+        <servlet-name>Example</servlet-name>
+        <servlet-class>org.pimslims.servlet.Example</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>Installation</servlet-name>
+        <servlet-class>org.pimslims.servlet.Installation</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>DiagramServlet</servlet-name>
+        <servlet-class>org.pimslims.servlet.DiagramServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>DotServlet</servlet-name>
+        <servlet-class>org.pimslims.servlet.DotServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BarcodeServlet</servlet-name>
+        <servlet-class>net.sourceforge.barbecue.BarcodeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BarcodeGraphServlet</servlet-name>
+        <servlet-class>org.pimslims.servlet.BarcodeGraphServlet</servlet-class>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Reports
+...................................................
+
+ -->
+    <servlet>
+        <servlet-name>ReportExperimentParameters</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.ReportExperimentParameters</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SelectTargetParameters</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.SelectTargetParameters</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReportTargetParameters</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.ReportTargetParameters</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TargetsReportAction</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.TargetsReportAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReportConstructsSummary</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.ReportConstructsSummary</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>T2CReport</servlet-name>
+        <servlet-class>org.pimslims.servlet.report.T2CReport</servlet-class>
+    </servlet>
+
+
+
+
+    <servlet>
+        <servlet-name>TargetGroupReport</servlet-name>
+        <servlet-class>org.pimslims.servlet.report.TargetGroupReport</servlet-class>
+    </servlet>
+    
+    <!-- obsolete -->
+    <servlet>
+        <servlet-name>TargetExperimentReport</servlet-name>
+        <servlet-class>org.pimslims.servlet.report.TargetExperimentReport</servlet-class>
+    </servlet>
+
+
+
+<!--
+...................................................
+SERVLET DEFINITIONS - ex SPOT
+...................................................
+
+PiMS custom UI for targets and constructs
+ -->
+
+    <servlet>
+        <servlet-name>SpotTarget</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotTarget</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SpotConstructMilestone</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotConstructMilestone</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SpotNewTarget</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotNewTarget</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateTargetsForGroup</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.CreateTargetsForGroup</servlet-class>
+    </servlet>
+    
+
+    <servlet>
+        <servlet-name>SpotReports</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotReports</servlet-class>
+    </servlet>
+    
+
+
+    <servlet>
+        <servlet-name>SpotConstructDetail</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotConstructDetail</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SpotConstructMilestoneDetail</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotConstructMilestoneDetail</servlet-class>
+    </servlet>
+
+<!-- obsolete -->
+    <servlet>
+        <servlet-name>SpotNewConstructWizard</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotNewConstructWizard</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AddPrimers</servlet-name>
+        <servlet-class>org.pimslims.servlet.construct.AddPrimers</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateExpressionObjective</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.CreateExpressionObjective</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateMutatedObjective</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.CreateMutatedObjective</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SpotTargetExperiments</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.SpotTargetExperiments</servlet-class>
+    </servlet>
+
+
+
+<!--
+...................................................
+SERVLET DEFINITIONS - DNA Targets
+...................................................
+
+Custom UI for Non-protein targets
+ -->
+
+    <servlet>
+        <servlet-name>NewDnaTarget</servlet-name>
+        <servlet-class>org.pimslims.servlet.dnatarget.NewDnaTarget</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewNaturalSourceTarget</servlet-name>
+        <servlet-class>org.pimslims.servlet.naturalsourcetarget.NewNaturalSourceTarget</servlet-class>
+    </servlet>
+    <servlet>
+        <description>
+        To display DNA Target</description>
+        <display-name>DnaTarget</display-name>
+        <servlet-name>DnaTarget</servlet-name>
+        <servlet-class>org.pimslims.servlet.dnatarget.DnaTarget</servlet-class>
+    </servlet>
+    <servlet>
+        <description>
+        Creates Construct for DNA Target</description>
+        <display-name>
+        DNAConstructWizard</display-name>
+        <servlet-name>DNAConstructWizard</servlet-name>
+        <servlet-class>
+        org.pimslims.servlet.dnatarget.DNAConstructWizard</servlet-class>
+    </servlet>
+    <servlet>
+        <description>
+        To view and update a list of Extensions for Forward and reverse primers</description>
+        <display-name>ExtensionsList</display-name>
+        <servlet-name>ExtensionsList</servlet-name>
+        <servlet-class>org.pimslims.servlet.dnatarget.ExtensionsList</servlet-class>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Targets
+...................................................
+
+Custom UI for targets
+ -->
+
+    
+    <servlet>
+        <servlet-name>TargetScoreboard</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.TargetScoreboard</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+        </security-role-ref>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>TargetGroupCsv</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.TargetGroupCsv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PlateExperimentCsv</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.PlateExperimentCsv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateExperimentGroupCsv</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.CreateExperimentGroupCsv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OutcomesCsv</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.OutcomesCsv</servlet-class>
+    </servlet>
+    
+
+    
+    <servlet>
+        <servlet-name>RetrieveDBRecord</servlet-name>
+        <servlet-class>org.pimslims.servlet.recordfetch.RetrieveDBRecord</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>DisplayBioEntry</servlet-name>
+        <servlet-class>org.pimslims.servlet.recordfetch.DisplayBioEntry</servlet-class>
+    </servlet>
+       <servlet>
+        <servlet-name>TargetRecorder</servlet-name>
+        <servlet-class>org.pimslims.servlet.recordfetch.TargetRecorder</servlet-class>
+    </servlet>
+    
+    
+    
+    <servlet>
+        <servlet-name>DeleteCollection</servlet-name>
+        <servlet-class>org.pimslims.servlet.DeleteCollection</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CompareTargetSequences</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.CompareTargetSequences</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReverseComplementPopup</servlet-name>
+        <servlet-class>org.pimslims.servlet.target.ReverseComplementPopup</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DNAandProtSeqPopup</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.DNAandProtSeqPopup</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FastaSequencePopup</servlet-name>
+        <servlet-class>org.pimslims.servlet.spot.FastaSequencePopup</servlet-class>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Experiments
+...................................................
+
+
+ -->
+
+    <servlet>
+        <servlet-name>CreateExperiment</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.CreateExperiment</servlet-class> 
+    </servlet>
+    <servlet>
+        <servlet-name>CreateExperimentGroup</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.CreateExperimentGroup</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateContainer</servlet-name>
+        <servlet-class>org.pimslims.servlet.holder.CreateContainer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SetProtocol</servlet-name>
+        <servlet-class>org.pimslims.servlet.experiment.SetProtocol</servlet-class>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Plate Experiments
+...................................................
+ -->
+ 
+    <servlet>
+        <servlet-name>CreateOrderPlate</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.CreateOrderPlate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderPlate</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.OrderPlate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddExperimentToGroup</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.AddExperimentToGroup</servlet-class>
+    </servlet>
+    
+    <servlet><!-- used for editing basic details -->
+        <servlet-name>BasicUpdatePlateExperiment</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.BasicPlateExperimentUpdate</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>AjaxUpdate</servlet-name>
+        <servlet-class>org.pimslims.servlet.ajax.AjaxUpdate</servlet-class>
+    </servlet>  
+    
+    <servlet>
+        <servlet-name>AjaxUpdatePlateExperiment</servlet-name>
+        <servlet-class>org.pimslims.servlet.ajax.AjaxUpdatePlateExperiment</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdvancedFillOptionsServlet</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.AdvancedFillOptionsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdatePlateFromSpreadsheet</servlet-name>
+        <servlet-class>org.pimslims.servlet.plateExperiment.UpdatePlateFromSpreadsheet</servlet-class>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Samples
+...................................................
+
+ -->
+
+    <servlet>
+        <servlet-name>CreateSampleFromRefSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.NewSampleFromRefSample</servlet-class>
+    </servlet>
+    
+    <!-- obsolete -->
+    <servlet>
+        <servlet-name>CreateLocation</servlet-name>
+        <servlet-class>org.pimslims.servlet.location.CreateLocation</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>CreateSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.CreateSample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImportSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.sample.ImportSample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateExtension</servlet-name>
+        <servlet-class>org.pimslims.servlet.standard.CreateExtension</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SyntheticGene</servlet-name>
+        <servlet-class>org.pimslims.servlet.construct.SyntheticGene</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateSyntheticGene</servlet-name>
+        <servlet-class>org.pimslims.servlet.construct.CreateSyntheticGene</servlet-class>
+    </servlet>
+    
+<!--
+...................................................
+SERVLET DEFINITIONS - Access Rights
+...................................................
+
+ -->
+ 
+ <!-- obsolete,  annotations -->
+    <servlet>
+        <servlet-name>CreateUser</servlet-name>
+        <servlet-class>org.pimslims.servlet.access.CreateUser</servlet-class>
+    </servlet><servlet>
+        <servlet-name>CreateLabNotebook</servlet-name>
+        <servlet-class>org.pimslims.servlet.access.CreateLabNotebook</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>ToggleActive</servlet-name>
+        <servlet-class>org.pimslims.servlet.access.ToggleActive</servlet-class>
+        <security-role-ref>
+        <!-- can also be used by group leaders -->
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>Permission</servlet-name>
+        <servlet-class>org.pimslims.servlet.access.Permission</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Protocols
+...................................................
+
+Custom UI for protocols
+ -->
+
+    <servlet>
+        <servlet-name>ViewProtocol</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.ViewProtocol</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateRefInputSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.CreateRefInputSample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateRefOutputSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.CreateRefOutputSample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateParameterDefinition</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.CreateParameterDefinition</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateProtocol</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.CreateProtocol</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditParameterDefinition</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.EditParameterDefinition</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditRefInputSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.EditRefInputSample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditRefOutputSample</servlet-name>
+        <servlet-class>org.pimslims.servlet.protocol.EditRefOutputSample</servlet-class>
+    </servlet>
+
+    <!-- /protocols -->
+
+<!--
+...................................................
+SERVLET DEFINITIONS - Bioinformatics
+...................................................
+-->
+    <servlet>
+        <servlet-name>PDBBlast</servlet-name>
+        <servlet-class>org.pimslims.servlet.Blast.PDBBlast</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlastWeekly</servlet-name>
+        <servlet-class>org.pimslims.servlet.Blast.BlastWeekly</servlet-class>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - COMPLEXES
+...................................................
+ -->
+     <servlet>
+        <servlet-name>BrowseComplex</servlet-name>
+        <servlet-class>org.pimslims.servlet.complex.BrowseComplexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewComplex</servlet-name>
+        <servlet-class>org.pimslims.servlet.complex.NewComplexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewComplex</servlet-name>
+        <servlet-class>org.pimslims.servlet.complex.ViewComplexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditComplexRole</servlet-name>
+        <servlet-class>org.pimslims.servlet.complex.EditComplexRole</servlet-class>
+        <security-role-ref>
+            <role-name>pims-administrator</role-name>
+            <role-link>pims-administrator</role-link>
+         </security-role-ref>
+    </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - OPPF PERSPECTIVE
+...................................................
+
+Custom UI for OPPF Constructs
+ -->
+
+    <servlet>
+        <servlet-name>OpticImporter</servlet-name>
+        <servlet-class>org.pimslims.servlet.importer.OpticImporter</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OppfPrimerOrder</servlet-name>
+        <servlet-class>org.pimslims.servlet.orders.OrderPrimers</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlignSequence</servlet-name>
+        <servlet-class>org.pimslims.servlet.oppf.AlignSequenceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SequenceResult</servlet-name>
+        <servlet-class>org.pimslims.servlet.oppf.SequenceResultServlet</servlet-class>
+    </servlet>
+
+
+<!--
+
+ 
+        <servlet>
+            <servlet-name>Error404.jsp</servlet-name>
+            <jsp-file>/JSP/Error404.jsp</jsp-file>
+        </servlet> -->
+
+
+        
+        
+
+       
+        <servlet>
+            <description>
+            Plate experiment servlet make a new plate</description>
+            <display-name>CreatePlate</display-name>
+            <servlet-name>CreatePlate</servlet-name>
+            <servlet-class>org.pimslims.servlet.plateExperiment.CreatePlate</servlet-class>
+        </servlet>
+        
+        
+        <servlet>
+            <servlet-name>ViewExperimentGroup</servlet-name>
+            <servlet-class>org.pimslims.servlet.plateExperiment.EditPlate</servlet-class>
+        </servlet>
+
+        <servlet>
+            <description>
+            Plate experiment servlet to copy between plates for multiline pipette</description>
+            <display-name>CopyFromPlate</display-name>
+            <servlet-name>CopyFromPlate</servlet-name>
+            <servlet-class>org.pimslims.servlet.plateExperiment.CopyFromPlate</servlet-class>
+        </servlet>
+		<servlet>
+            <description>
+            Plate experiment servlet to facilitate merge plates by result score</description>
+            <display-name>MergeByScore</display-name>
+            <servlet-name>MergeByScore</servlet-name>
+            <servlet-class>org.pimslims.servlet.plateExperiment.MergeByScore</servlet-class>
+        </servlet>
+
+<!--
+...................................................
+SERVLET DEFINITIONS - BARCODES
+...................................................
+
+Servlets generating barcode images
+ -->
+
+
+    <servlet>
+        <servlet-name>QRCodeServlet</servlet-name><!-- obsolete, now an annotation -->
+        <servlet-class>org.pimslims.servlet.barcode.QRCodeServlet</servlet-class>
+    </servlet>

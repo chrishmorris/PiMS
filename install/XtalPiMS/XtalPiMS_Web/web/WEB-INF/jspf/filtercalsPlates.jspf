@@ -1,0 +1,4 @@
+<div style="position:absolute;z-index:99;display:none;font-size:70%;background-color:white;" id="p_createDateStartContainer"></div>
+<div style="position:absolute;z-index:100;display:none;font-size:70%;background-color:white;" id="p_createDateEndContainer"></div>
+<div style="position:absolute;z-index:101;display:none;font-size:70%;background-color:white;" id="p_lastImageDateStartContainer" ></div>
+<div style="position:absolute;z-index:102;display:none;font-size:70%;background-color:white;" id="p_lastImageDateEndContainer"></div>

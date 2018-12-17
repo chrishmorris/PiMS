@@ -1,0 +1,17 @@
+<!-- CS Complexation protocol xml as flat file -->
+<protocol name="CS Complexation" objective="Combination of Protein Samples" creationDate="23-05-08" remarks="Based on Lab activities requirements from OPPF" details="Purification of Target Protein">
+ <experimentType>Complexation</experimentType>
+ 
+ <inputSamples>
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample 1" />
+    <inputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Input Sample 2" />
+</inputSamples>
+
+<outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Output Sample" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Complex Protocol" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Cofactors" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+
+</protocol>

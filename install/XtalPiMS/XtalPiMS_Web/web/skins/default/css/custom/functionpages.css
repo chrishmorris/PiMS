@@ -1,0 +1,35 @@
+
+/******************************************************************************** 
+ * Display boxes into three columns
+ ******************************************************************************** */
+/* Keep the boxes away from the edges */
+div.functionblocks { margin:0 10%; }
+
+/* Three columns layout */
+div.functionblocks div.leftcolumn   { float:left; width:32%; margin-top: 0em; }
+div.functionblocks div.centercolumn   { width:32%; margin: auto; margin-top: 0em; }
+div.functionblocks div.rightcolumn  { float:right; width:32%; margin-top: 0em; }
+
+/* Force following content to be below columns, regardless of which
+ * is longer. Set font-size to 0 so it's effectively invisible 
+div.functionblocks div.shim { font-size:0; clear:both; }
+*/
+
+
+/* Boxes special style */
+div.functionblocks h4 { display:inline; padding:0; }
+div.functionblocks ul { margin:0; padding: 1em 1.75em; list-style-type:none; }
+div.functionblocks ul.list { margin:0; padding:0.8em 1.6em; list-style-type:disc; }
+div.functionblocks li { margin-bottom: .3em; padding:0; color: #A20000;}
+div.functionblocks p  { color:#d8d8d8; display:inline; margin:0em; }
+/*div.functionblocks .breadcrumbs a { color: white; }*/
+div.functionblocks .actions a { color: white; font-weight: lighter; }
+/*div.functionblocks .boxheader { padding-top: 0.2em; padding-bottom: 0.1em; }*/
+
+/* Calendar from Target Pagetitle 
+div.pagetitle table.cal td,
+table.cal th { color:white; }
+div.pagetitle table.cal td a { width:1.5em; color:white; display:block; text-decoration:none;}
+div.pagetitle table.cal td.today a { background-color:yellow; color: black; }
+div.pagetitle table.cal td.weekend a,
+table.cal th.weekend { color:red; }*/

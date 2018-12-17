@@ -1,0 +1,34 @@
+<!-- OPPF PCR protocol xml as flat file -->
+<protocol name="OPPF PCR" objective="Amplify target DNA" creationDate="02-02-07" remarks="Based on Lab activities requirements from OPPF" details="PCR performed using high-fidelity enzymes">
+ <experimentType>PCR</experimentType>
+
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="HOT start /min" parameterType="Int" defaultValue="2" />
+  <parameterDefinition id="2" name="Denat/oC" parameterType="Int" defaultValue="94" />
+  <parameterDefinition id="3" name="Denat/s" parameterType="Int" defaultValue="30" />
+  <parameterDefinition id="4" name="Anneal/oC" parameterType="Int" defaultValue="60" />
+  <parameterDefinition id="5" name="Anneal time/s" parameterType="Int" defaultValue="30" />
+  <parameterDefinition id="6" name="Extension/oC" parameterType="Int" defaultValue="72" />
+  <parameterDefinition id="7" name="Extension/min" parameterType="Int" defaultValue="2" />
+  <parameterDefinition id="8" name="Final extension/oC" parameterType="Int" defaultValue="68" />
+  <parameterDefinition id="9" name="Final extension/min" parameterType="Int" defaultValue="2" />
+  <parameterDefinition id="10" name="No. Cycles" parameterType="Int" defaultValue="30" />
+  <parameterDefinition id="12" name="PCR's Notes" parameterType="String" />
+  <parameterDefinition id="13" name="Original plate position" parameterType="String" />
+  <parameterDefinition id="14" name="__SCORE" label="PCR Product" parameterType="String" defaultValue="Unscored" possibleValues="Yes,No,Maybe,Unscored"/>
+ </parameterDefinitions>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="0.000002" unit="L" displayUnit="uL" refSample="Template DNA" name="Template" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Buffer" unit="L" displayUnit="uL" refSample="Buffer" name="Buffer-type" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Enzyme -polymerase" amount="0.0000004" unit="L" displayUnit="uL" refSample="Enzyme -polymerase" name="Enzyme" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Forward Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Forward Primer" name="Forward Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Reverse Primer" amount="0.000003" unit="L" displayUnit="uL" refSample="Reverse Primer" name="Reverse Primer" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Chemical/Biochemical"  unit="L" displayUnit="uL" refSample="Solvent" name="Additive" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Nucleotide"  unit="L" displayUnit="uL" refSample="Nucleotide" name="Nucleotide" />
+  <inputSample sampleCatNamingSys="default" sampleCatName="Chemical/Biochemical"  unit="L" displayUnit="uL" refSample="Salt" name="Salt" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Nucleic acid" amount="" unit="L" displayUnit="uL" refSample="PCR Product" name="PCR product" />
+
+</protocol>

@@ -1,0 +1,383 @@
+<class-diagram icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="true" signature="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="org.pimslims.model.holder.AbstractHolder" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/AbstractHolder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="872" y="37" width="117" height="151"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.AbstractHolderType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="454" y="268" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.CrystalType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/CrystalType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="108" y="687" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.Holder" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="872" y="248" width="117" height="87"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.HolderLocation" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/HolderLocation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1129" y="472" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HolderType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="41" y="391" width="141" height="167"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.HolderTypePosition" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/HolderTypePosition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="283" y="682" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.PinType" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/PinType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="316" y="468" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.RefHolder" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1384" y="742" width="308" height="71"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.RefHolderOffset" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/RefHolderOffset.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1227" y="391" width="117" height="103"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.holder.RefSamplePosition" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/holder/RefSamplePosition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1384" y="391" width="117" height="119"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.location.Location" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1073" y="754" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.Sample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="612" y="513" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.RefSample" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/RefSample.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1342" y="290" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.sample.RefSampleSource" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/sample/RefSampleSource.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="1296" y="756" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.schedule.SchedulePlan" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="195" y="140" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.reference.HolderCategory" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/reference/HolderCategory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="623" y="82" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="org.pimslims.model.schedule.ScheduledTask" project="pims-model" 
+    file="/pims-model/src/java/org/pimslims/model/schedule/ScheduledTask.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>    
+    <position x="920" y="529" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.AbstractHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/AbstractHolder.java" binary="false">      
+      <attribute name="supHolder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.AbstractHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/AbstractHolder.java" binary="false">      
+      <attribute name="subHolders"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.holder.RefHolderOffset" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolderOffset.java" binary="false">      
+      <attribute name="refHolder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.holder.AbstractHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/AbstractHolder.java" binary="false">      
+      <attribute name="holderType"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.HolderCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderCategory.java" binary="false"/>    
+    <target navigable="false" project="pims-model" name="org.pimslims.model.holder.AbstractHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/AbstractHolder.java" binary="false">      
+      <attribute name="holderCategories"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.holder.AbstractHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/AbstractHolder.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false">      
+      <attribute name="holderLocations"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.HolderLocation" 
+      file="/pims-model/src/java/org/pimslims/model/holder/HolderLocation.java" binary="false">      
+      <attribute name="holder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.HolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false">      
+      <attribute name="holderTypePositions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.HolderTypePosition" 
+      file="/pims-model/src/java/org/pimslims/model/holder/HolderTypePosition.java" binary="false">      
+      <attribute name="holderType"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.CrystalType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/CrystalType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.HolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false">      
+      <attribute name="lastTask"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.schedule.ScheduledTask" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/ScheduledTask.java" binary="false"/>    
+    <bendpoint x="857" y="395"/>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.HolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.schedule.SchedulePlan" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/SchedulePlan.java" binary="false">      
+      <attribute name="holderTypes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.HolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderType.java" binary="false">      
+      <attribute name="defaultSchedulePlan"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false">      
+      <attribute name="scheduledTasks"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.schedule.ScheduledTask" 
+      file="/pims-model/src/java/org/pimslims/model/schedule/ScheduledTask.java" binary="false">      
+      <attribute name="holder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>    
+    <bendpoint x="977" y="395"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false">      
+      <attribute name="samples"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.sample.Sample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/Sample.java" binary="false">      
+      <attribute name="holder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false">      
+      <attribute name="defaultHolderCategories"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.reference.HolderCategory" 
+      file="/pims-model/src/java/org/pimslims/model/reference/HolderCategory.java" binary="false">      
+      <attribute name="abstractHolderTypes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.holder.RefHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.holder.AbstractHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/AbstractHolder.java" binary="false"/>    
+    <bendpoint x="1531" y="391"/>    
+    <bendpoint x="1531" y="248"/>  
+  </generalization>  
+  <generalization>    
+    <source project="pims-model" name="org.pimslims.model.reference.PinType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/PinType.java" binary="false"/>    
+    <target project="pims-model" name="org.pimslims.model.reference.AbstractHolderType" 
+      file="/pims-model/src/java/org/pimslims/model/reference/AbstractHolderType.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.RefSample" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSample.java" binary="false">      
+      <attribute name="refSamplePositions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefSamplePosition" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefSamplePosition.java" binary="false">      
+      <attribute name="refSample"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.RefSamplePosition" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefSamplePosition.java" binary="false">      
+      <attribute name="refHolder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false">      
+      <attribute name="refSamplePositions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.sample.RefSampleSource" 
+      file="/pims-model/src/java/org/pimslims/model/sample/RefSampleSource.java" binary="false">      
+      <attribute name="refHolder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefHolder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolder.java" binary="false">      
+      <attribute name="refSampleSources"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.HolderLocation" 
+      file="/pims-model/src/java/org/pimslims/model/holder/HolderLocation.java" binary="false">      
+      <attribute name="location"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.location.Location" 
+      file="/pims-model/src/java/org/pimslims/model/location/Location.java" binary="false">      
+      <attribute name="holderLocations"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </target>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="true" project="pims-model" name="org.pimslims.model.holder.Holder" 
+      file="/pims-model/src/java/org/pimslims/model/holder/Holder.java" binary="false">      
+      <attribute name="refHolderOffsets"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="pims-model" name="org.pimslims.model.holder.RefHolderOffset" 
+      file="/pims-model/src/java/org/pimslims/model/holder/RefHolderOffset.java" binary="false">      
+      <attribute name="holder"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </target>  
+  </association>
+</class-diagram>

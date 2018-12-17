@@ -1,0 +1,16 @@
+<!-- PiMS Solubilisation protocol xml as flat file -->
+<protocol name="PiMS Solubilisation" objective="Solubilisation of Target Protein" creationDate="16-03-05" remarks="Default set of protocols for PiMS" details="Purification of Target Protein" >
+ <experimentType>Refold</experimentType>
+ 
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="InSoluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="InSoluble Protein" name="Eukaryotic Pellet" />
+ </inputSamples>
+ 
+ <outputSample sampleCatNamingSys="default" sampleCatName="Soluble Protein Sample" amount="0.0" unit="L" displayUnit="uL" refSample="Soluble Protein" name="Eukaryotic Supernatant" />
+ 
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Refold Buffer details" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="Refold incubation details" parameterType="String" isMandatory="false" />
+ </parameterDefinitions>
+ 
+</protocol>

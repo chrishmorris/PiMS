@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="$Id: SafetyHazards.xsd,v 1.4 2006/11/02 08:34:59 lxl Exp $">
+	<xs:complexType name="SafetyHazards">
+		<xs:annotation>
+			<xs:documentation>Information about the Safety Hazards of a Protein.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sourceOrganism">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Plant"/>
+						<xs:enumeration value="Animal"/>
+						<xs:enumeration value="Human"/>
+						<xs:enumeration value="Bacteria"/>
+						<xs:enumeration value="Fungi"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="expressionSystem">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Plant"/>
+						<xs:enumeration value="Animal Tissue"/>
+						<xs:enumeration value="Human Tissue"/>
+						<xs:enumeration value="Bacteria"/>
+						<xs:enumeration value="Fungi"/>
+						<xs:enumeration value="Insect Cells"/>
+						<xs:enumeration value="Other Animal Cells"/>
+						<xs:enumeration value="Human Cells"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="isRadioactive" type="xs:boolean"/>
+			<xs:element name="isContaminant" type="xs:boolean"/>
+			<xs:element name="isToxic" type="xs:boolean"/>
+			<xs:element name="isCorrosive" type="xs:boolean"/>
+			<xs:element name="isOxidizing" type="xs:boolean"/>
+			<xs:element name="isExplosive" type="xs:boolean"/>
+			<xs:element name="isInflammable" type="xs:boolean"/>
+			<xs:element name="isBiologicalHazard" type="xs:boolean"/>
+			<xs:element name="isWithoutAnyRisk" type="xs:boolean"/>
+			<xs:element name="isThereDanger">
+				<xs:annotation>
+					<xs:documentation>Is there any danger associated with
+          the proposed protein (reception, preparation, use and
+          disposal of the sample) or with sample equipment</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Yes"/>
+						<xs:enumeration value="Uncertain"/>
+						<xs:enumeration value="No"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dangerDetails" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>If &quot;Yes&quot; or
+          &quot;Uncertain&quot;, please give details of
+          the associated risks</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sampleAfterExperiment">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Removed by user"/>
+						<xs:enumeration value="Stored at the synchrotron"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="isCoolerRequired4C" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

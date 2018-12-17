@@ -1,0 +1,14 @@
+Data/ Default-protocols
+
+Parameter definitions:
+Added:
+  <parameterDefinition id="1" name="3'-Restriction site" label="Restriction site at the 3'-end" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="2" name="5'-Restriction site" label="Restriction site at the 5'-end" parameterType="String" isMandatory="false" />
+  <parameterDefinition id="3" name="Expression host" label="Host cells for expression" parameterType="String" isMandatory="false" />
+
+  Input Samples:
+  Added:
+ <inputSamples>
+  <inputSample sampleCatNamingSys="default" sampleCatName="Vector" amount="0.0" unit="L" displayUnit="uL" refSample="Vector" name="Vector" />
+ </inputSamples>
+  

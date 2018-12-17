@@ -1,0 +1,20 @@
+<!-- Generic Culture protocol xml as flat file -->
+<protocol name="Primer design" objective="Design a primer" creationDate="07-02-07" remarks="Used in Leeds primer management"  >
+ <experimentType>Primer design</experimentType>
+
+ <outputSample sampleCatNamingSys="default" sampleCatName="Primer" amount="" unit="L" displayUnit="uL" refSample="Forward/Reverse primer" name="Forward/Reverse primer"/>
+
+  
+ <parameterDefinitions>
+  <parameterDefinition id="1" name="Restriction sites" parameterType="String" defaultValue="" />
+  <parameterDefinition id="2" name="Tm seller" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="3" name="Tm full" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="4" name="Tm gene" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="5" name="GC gene" parameterType="Float" defaultValue="0.0" />
+  <parameterDefinition id="6" name="Particularity" parameterType="Float" defaultValue="0" />
+  <parameterDefinition id="7" name="OD" parameterType="Float" defaultValue="0" />
+  <parameterDefinition id="8" name="Length on the gene" parameterType="Int" defaultValue="0" />
+ </parameterDefinitions>
+
+
+</protocol>

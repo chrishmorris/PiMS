@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SomeOne (SomeWhere) -->
+<xs:schema targetNamespace="http://www.pims-lims.org/services/ispyb"    xmlns:tns="http://www.pims-lims.org/services/ispyb" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="CrystalIdentifier">
+		<xs:annotation>
+			<xs:documentation>Add means to uniquely identify a Crystal and its associated Protein</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="crystalUUID" type="xs:string" nillable="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The globally unique code of the Crystal ensures a correct identification between the different partners. It could be defined by the crystallisation centre. Thus, contrary to a Polymer 'id' for instance, this code is not only unique within this XML file !</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:sequence>
+				<xs:element name="spacegroup">
+					<xs:annotation>
+						<xs:documentation>The spacegroup number. Symmetry operator
+          information can be looked up from this number</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Undefined"/>
+							<xs:enumeration value="P1"/>
+							<xs:enumeration value="P2"/>
+							<xs:enumeration value="P21"/>
+							<xs:enumeration value="C2"/>
+							<xs:enumeration value="P222"/>
+							<xs:enumeration value="P2221"/>
+							<xs:enumeration value="P21212"/>
+							<xs:enumeration value="P212121"/>
+							<xs:enumeration value="C222"/>
+							<xs:enumeration value="C2221"/>
+							<xs:enumeration value="F222"/>
+							<xs:enumeration value="I222"/>
+							<xs:enumeration value="I212121"/>
+							<xs:enumeration value="P4"/>
+							<xs:enumeration value="P41"/>
+							<xs:enumeration value="P42"/>
+							<xs:enumeration value="P43"/>
+							<xs:enumeration value="P422"/>
+							<xs:enumeration value="P4212"/>
+							<xs:enumeration value="P4122"/>
+							<xs:enumeration value="P41212"/>
+							<xs:enumeration value="P4222"/>
+							<xs:enumeration value="P42212"/>
+							<xs:enumeration value="P4322"/>
+							<xs:enumeration value="P43212"/>
+							<xs:enumeration value="I4"/>
+							<xs:enumeration value="I41"/>
+							<xs:enumeration value="I422"/>
+							<xs:enumeration value="I4122"/>
+							<xs:enumeration value="P3"/>
+							<xs:enumeration value="P31"/>
+							<xs:enumeration value="P32"/>
+							<xs:enumeration value="P312"/>
+							<xs:enumeration value="P321"/>
+							<xs:enumeration value="P3112"/>
+							<xs:enumeration value="P3121"/>
+							<xs:enumeration value="P3212"/>
+							<xs:enumeration value="P3221"/>
+							<xs:enumeration value="P6"/>
+							<xs:enumeration value="P61"/>
+							<xs:enumeration value="P65"/>
+							<xs:enumeration value="P62"/>
+							<xs:enumeration value="P64"/>
+							<xs:enumeration value="P63"/>
+							<xs:enumeration value="P622"/>
+							<xs:enumeration value="P6122"/>
+							<xs:enumeration value="P6522"/>
+							<xs:enumeration value="P6222"/>
+							<xs:enumeration value="P6422"/>
+							<xs:enumeration value="P6322"/>
+							<xs:enumeration value="R3"/>
+							<xs:enumeration value="R32"/>
+							<xs:enumeration value="P23"/>
+							<xs:enumeration value="P213"/>
+							<xs:enumeration value="P432"/>
+							<xs:enumeration value="P4232"/>
+							<xs:enumeration value="P4332"/>
+							<xs:enumeration value="P4132"/>
+							<xs:enumeration value="F23"/>
+							<xs:enumeration value="F432"/>
+							<xs:enumeration value="F4132"/>
+							<xs:enumeration value="I23"/>
+							<xs:enumeration value="I213"/>
+							<xs:enumeration value="I432"/>
+							<xs:enumeration value="I4132"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="proteinAcronym" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>An acronym for the protein e.g. 'FCY1'.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:choice>
+	</xs:complexType>
+</xs:schema>
